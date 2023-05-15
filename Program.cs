@@ -6,7 +6,4 @@ var scraper = new Scraper();
 var links = scraper.GetNewsLinks();
 var rankingsLinks = scraper.FindRankingsLink(links);
 
-foreach (var link in rankingsLinks)
-{
-    Console.WriteLine(link);
-}
+foreach (var link in rankingsLinks) Console.WriteLine(link);
