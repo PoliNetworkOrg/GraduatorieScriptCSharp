@@ -10,8 +10,8 @@ namespace GraduatorieScript.Utils
 
     public class Scraper
     {
-        HtmlWeb web = new HtmlWeb();
-        string NewsUrl = "https://www.polimi.it/in-evidenza";
+        private readonly HtmlWeb _web = new();
+        private const string NewsUrl = "https://www.polimi.it/in-evidenza";
 
         private string[] _newsTesters = {
             "graduatorie", "graduatoria", "punteggi", "tol",
@@ -24,19 +24,19 @@ namespace GraduatorieScript.Utils
 
         public IEnumerable<string> GetNewsLinks()
         {
-            var htmlDoc = web.Load(NewsUrl);
+            var htmlDoc = _web.Load(NewsUrl);
 
-            var AnchorElements = htmlDoc.DocumentNode
+            var anchorElements = htmlDoc.DocumentNode
                 .SelectNodes("//*[@id=\"c42275\"]/ul/li/h3/a")
                 .Select(element =>
                 {
-                    string href = element.Attributes["href"].Value;
-                    string url = UrlifyLocalHref(href);
+                    var href = element.Attributes["href"].Value;
+                    var url = UrlifyLocalHref(href);
                     return new AnchorElement { Name = element.InnerText, Url = url };
                 })
                 .ToList();
 
-            var filteredLinks = AnchorElements
+            var filteredLinks = anchorElements
                 /* .Where(anchor => NewsTesters.Contains(anchor.Name.ToLower())) */
                 .Select(anchor => anchor.Url)
                 .ToList();
@@ -54,7 +54,7 @@ namespace GraduatorieScript.Utils
 
         private void FindSingleRankingLink(List<string> rankingsList, string currentLink)
         {
-            var htmlDoc = web.Load(currentLink);
+            var htmlDoc = _web.Load(currentLink);
             var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
                 .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
                 .Where(url => url.Contains("risultati-ammissione.polimi.it"))

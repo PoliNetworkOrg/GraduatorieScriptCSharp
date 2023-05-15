@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using GraduatorieScript;
 using GraduatorieScript.Utils;
 
 var scraper = new Scraper();
