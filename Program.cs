@@ -2,11 +2,11 @@
 
 using GraduatorieScript;
 
-Scraper scraper = new Scraper();
-List<string> links = scraper.GetNewsLinks();
-List<string> rankingsLinks = scraper.FindRankingsLink(links);
+var scraper = new Scraper();
+var links = scraper.GetNewsLinks();
+var rankingsLinks = scraper.FindRankingsLink(links);
 
-foreach (string link in rankingsLinks)
+foreach (var link in rankingsLinks)
 {
     Console.WriteLine(link);
 }

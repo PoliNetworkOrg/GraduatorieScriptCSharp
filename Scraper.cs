@@ -3,7 +3,7 @@ using HtmlAgilityPack;
 
 namespace GraduatorieScript
 {
-    struct AnchorElement
+    internal struct AnchorElement
     {
         public string Name;
         public string Url;
@@ -13,20 +13,21 @@ namespace GraduatorieScript
     {
         HtmlWeb web = new HtmlWeb();
         string NewsUrl = "https://www.polimi.it/in-evidenza";
-        string[] NewsTesters = {
+
+        private string[] _newsTesters = {
             "graduatorie", "graduatoria", "punteggi", "tol",
             "immatricolazioni", "immatricolazione", "punteggio",
             "matricola", "merito", "nuovi studenti" };
 
-        static string UrlifyLocalHref(string href) {
+        private static string UrlifyLocalHref(string href) {
             return href.StartsWith("/") ? "https://polimi.it" + href : href;
         }
 
-        public List<string> GetNewsLinks()
+        public IEnumerable<string> GetNewsLinks()
         {
-            HtmlDocument htmlDoc = web.Load(NewsUrl);
+            var htmlDoc = web.Load(NewsUrl);
 
-            List<AnchorElement> AnchorElements = htmlDoc.DocumentNode
+            var AnchorElements = htmlDoc.DocumentNode
                 .SelectNodes("//*[@id=\"c42275\"]/ul/li/h3/a")
                 .Select(element =>
                 {
@@ -36,39 +37,34 @@ namespace GraduatorieScript
                 })
                 .ToList();
 
-            List<string> FilteredLinks = AnchorElements
+            var filteredLinks = AnchorElements
                 /* .Where(anchor => NewsTesters.Contains(anchor.Name.ToLower())) */
                 .Select(anchor => anchor.Url)
                 .ToList();
 
-            return FilteredLinks;
+            return filteredLinks;
         }
 
-        public List<string> FindRankingsLink(List<string> NewsLink)
+        public List<string> FindRankingsLink(IEnumerable<string> newsLink)
         {
-            List<string> RankingsList = new List<string>();
-            List<Action> checkNewsLinks = new List<Action>();
+            var rankingsList = new List<string>();
 
-            foreach (string Link in NewsLink)
+            Parallel.Invoke(newsLink.Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); })).ToArray());
+            return rankingsList.Distinct().ToList();
+        }
+
+        private void FindSingleRankingLink(List<string> rankingsList, string currentLink)
+        {
+            var htmlDoc = web.Load(currentLink);
+            var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
+                .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
+                .Where(url => url.Contains("risultati-ammissione.polimi.it"))
+                .ToList();
+
+            lock (rankingsList)
             {
-                string currentLink = Link; // Create a local variable to capture the correct value in the lambda expression
-                checkNewsLinks.Add(() =>
-                {
-                    HtmlDocument htmlDoc = web.Load(NewsUrl);
-                    List<string> links = htmlDoc.DocumentNode
-                    .GetElementsByTagName("a")
-                    .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
-                    .Where(url => url.Contains("risultati-ammissione.polimi.it"))
-                    .ToList();
-
-                    lock (RankingsList) {
-                        RankingsList.AddRange(links);
-                    }
-                });
+                rankingsList.AddRange(links);
             }
-
-            Parallel.Invoke(checkNewsLinks.ToArray());
-            return RankingsList.Distinct().ToList();
         }
     }
 }
