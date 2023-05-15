@@ -1,7 +1,6 @@
-using GraduatorieScript.Utils;
 using HtmlAgilityPack;
 
-namespace GraduatorieScript
+namespace GraduatorieScript.Utils
 {
     internal struct AnchorElement
     {
