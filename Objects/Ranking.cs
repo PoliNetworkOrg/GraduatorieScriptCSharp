@@ -15,4 +15,13 @@ public class Ranking
     private Dictionary<string, List<StudentResult>> byDegree;
     private string url;
     private DateTime lastUpdate;
+
+    public bool IsSimilarTo(Ranking ranking)
+    {
+        return this.year == ranking.year && 
+               this.school == ranking.school && 
+               this.phase == ranking.phase &&
+               this.extra == ranking.extra &&
+               this.url == ranking.url;
+    }
 }

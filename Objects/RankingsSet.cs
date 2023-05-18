@@ -36,6 +36,6 @@ public class RankingsSet
 
     private static bool CheckIfAlreadyPresent(List<Ranking> rankingsResult, Ranking ranking)
     {
-        throw new NotImplementedException();
+        return rankingsResult.Any(v => v.IsSimilarTo(ranking));
     }
 }
