@@ -1,6 +1,6 @@
 ﻿namespace GraduatorieScript.Utils.Path;
 
-public class FileUtil
+public static class FileUtil
 {
     public static void TryDelete(string path)
     {
