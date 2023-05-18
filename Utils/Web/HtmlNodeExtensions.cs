@@ -1,6 +1,6 @@
 ﻿using HtmlAgilityPack;
 
-namespace GraduatorieScript.Utils;
+namespace GraduatorieScript.Utils.Web;
 
 public static class HtmlNodeExtensions
 {
