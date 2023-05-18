@@ -10,7 +10,32 @@ public class RankingsSet
 
     public static RankingsSet Merge(List<RankingsSet?> list)
     {
-        //todo: unire una lista di liste di graduatorie
+        var rankingsResult = new List<Ranking>();
+
+        foreach (var rankingsSet in list)
+        {
+            var rankingsSetRankings = rankingsSet?.Rankings;
+            if (rankingsSetRankings == null) continue;
+            foreach (var ranking in rankingsSetRankings)
+            {
+                var alreadyPresent = CheckIfAlreadyPresent(rankingsResult, ranking);
+                if (!alreadyPresent)
+                {
+                    rankingsResult.Add(ranking);
+                }
+            }
+        }
+        
+        RankingsSet result = new RankingsSet
+        {
+            lastUpdate = list.Max(x => x?.lastUpdate ?? DateTime.Now),
+            Rankings = rankingsResult
+        };
+        return result;
+    }
+
+    private static bool CheckIfAlreadyPresent(List<Ranking> rankingsResult, Ranking ranking)
+    {
         throw new NotImplementedException();
     }
 }
