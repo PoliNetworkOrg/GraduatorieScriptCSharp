@@ -14,4 +14,5 @@ public class Ranking
     private List<StudentResult> byId;
     private Dictionary<string, List<StudentResult>> byDegree;
     private string url;
+    private DateTime lastUpdate;
 }
