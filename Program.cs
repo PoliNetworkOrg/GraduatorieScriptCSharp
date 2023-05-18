@@ -14,13 +14,16 @@ Console.WriteLine($"{baseFolder} baseFolder");
 var jJsonPath = baseFolder + "\\" + "j.json";
 
 //nella cartella trovata, leggere e analizzare gli eventuali file .html
-TransformerResult transformerResult = GraduatorieScript.Utils.Transformer.Parser.ParseHtmlFiles(baseFolder);
+var transformerResult = GraduatorieScript.Utils.Transformer.Parser.ParseHtmlFiles(baseFolder);
 
-RankingsSet rankingsSetFromWeb = GraduatorieScript.Utils.Transformer.Parser.ParseWeb(rankingsLinks);
-RankingsSet? rankingsSetFromLocalJson = GraduatorieScript.Utils.Transformer.Parser.ParseLocalJson(jJsonPath);
+//estraiamo i risultati dal web
+var rankingsSetFromWeb = GraduatorieScript.Utils.Transformer.Parser.ParseWeb(rankingsLinks);
+
+//estraiamo i risultati da un eventuale json locale
+var rankingsSetFromLocalJson = GraduatorieScript.Utils.Transformer.Parser.ParseLocalJson(jJsonPath);
 
 //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
-var rankingsSets = new List<RankingsSet?> (){ transformerResult.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson};
+var rankingsSets = new List<RankingsSet?> { transformerResult.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson};
 var rankingsSet = RankingsSet.Merge( rankingsSets);
 
 //ottenere un json 

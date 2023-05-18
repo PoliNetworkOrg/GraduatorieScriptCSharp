@@ -10,7 +10,7 @@ public static class FileUtil
         }
         catch
         {
-            ;
+            // ignored
         }
     }
 }
