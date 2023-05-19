@@ -30,6 +30,7 @@ public static class LinksFind
 
     private static HashSet<string> FindLinksFromCombinationsSingleYear(int i)
     {
+        //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
         throw new NotImplementedException();
     }
 
