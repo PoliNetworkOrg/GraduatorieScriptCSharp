@@ -11,6 +11,9 @@ internal struct AnchorElement
 public class Scraper
 {
     private const string NewsUrl = "https://www.polimi.it/in-evidenza";
+    private const string RisultatiAmmissionePolimiIt = "risultati-ammissione.polimi.it";
+
+    
     private readonly HtmlWeb _web = new();
 
     private string[] _newsTesters =
@@ -61,7 +64,7 @@ public class Scraper
         var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
             .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
-            .Where(url => url.Contains("risultati-ammissione.polimi.it"))
+            .Where(url => url.Contains(RisultatiAmmissionePolimiIt))
             .ToList();
 
         lock (rankingsList)
