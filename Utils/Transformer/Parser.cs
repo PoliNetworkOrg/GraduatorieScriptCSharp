@@ -30,10 +30,12 @@ public static class Parser
             LastUpdate = DateTime.Now,
             Rankings = new List<Ranking>()
         };
-        foreach (var link in rankingsLinks.Where(link => !string.IsNullOrEmpty(link)))
+
+        var enumerable = rankingsLinks.Where(link => !string.IsNullOrEmpty(link));
+        foreach (var link in enumerable)
         {
-     
-            rankingsSet.Rankings.Add(Web.Scraper.Download(link));
+            var download = Web.Scraper.Download(link);
+            if (download != null) rankingsSet.Rankings.Add(download);
         }
         return rankingsSet;
     }

@@ -74,8 +74,17 @@ public class Scraper
         }
     }
 
-    public static Ranking Download(string? variable)
+    public static Ranking? Download(string? url)
     {
-        throw new NotImplementedException();
+        using var client = new HttpClient();
+        var  response = client.GetAsync(url);
+        response.Wait();
+        var content = response.Result.Content;
+        var result = content.ReadAsStringAsync().Result;
+
+        var rankingsSet = new RankingsSet();
+        rankingsSet.AddFileRead(result);
+        var download = rankingsSet.Rankings?.Count > 0 ? rankingsSet.Rankings?.First() : null;
+        return download;
     }
 }
