@@ -23,8 +23,8 @@ var rankingsSetFromWeb = GraduatorieScript.Utils.Transformer.Parser.ParseWeb(ran
 var rankingsSetFromLocalJson = GraduatorieScript.Utils.Transformer.Parser.ParseLocalJson(jJsonPath);
 
 //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
-var rankingsSets = new List<RankingsSet?> { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson};
-var rankingsSet = RankingsSet.Merge( rankingsSets);
+var rankingsSets = new List<RankingsSet?> { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson };
+var rankingsSet = RankingsSet.Merge(rankingsSets);
 
 //ottenere un json 
 var stringJson = Newtonsoft.Json.JsonConvert.SerializeObject(rankingsSet);

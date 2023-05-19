@@ -8,7 +8,7 @@ public static class LinksFind
         var linksFromCombinations = FindLinksFromCombinations();
 
         //merge results links
-        var listOfListOfLinks = new List<HashSet<string>> { findRankingsLink , linksFromCombinations};
+        var listOfListOfLinks = new List<HashSet<string>> { findRankingsLink, linksFromCombinations };
         var rankingsLinks = Strings.StringUtil.Merge(listOfListOfLinks);
         return rankingsLinks;
     }
@@ -36,6 +36,7 @@ public static class LinksFind
     /// <exception cref="NotImplementedException"></exception>
     private static HashSet<string> FindLinksFromCombinationsSingleYear(int i)
     {
+        //     kl = [2, 5, 6, 7, 8, 40, 41, 42, 45, 54, 60, 64, 69, 91, 102, 103, 104]
         //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
         throw new NotImplementedException();
     }

@@ -53,6 +53,8 @@ public class RankingsSet
     {
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
+
+        // check if exists page
         throw new NotImplementedException();
     }
 }

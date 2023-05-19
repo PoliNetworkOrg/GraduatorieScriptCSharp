@@ -15,5 +15,5 @@ public class StudentResult
     private Dictionary<string, decimal>? partialResults;
     private bool canEnroll;
     private string? canEnrollInto;
-    private Dictionary<string, bool>? ofa;
+    private Dictionary<string, bool>? ofa; // maybe change it
 }
