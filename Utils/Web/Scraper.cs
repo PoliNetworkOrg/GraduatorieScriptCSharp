@@ -51,16 +51,16 @@ public class Scraper
         return filteredLinks;
     }
 
-    public List<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public HashSet<string> FindRankingsLink(IEnumerable<string> newsLink)
     {
-        var rankingsList = new List<string>();
+        var rankingsList = new HashSet<string>();
 
         Parallel.Invoke(newsLink
             .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); })).ToArray());
-        return rankingsList.Distinct().ToList();
+        return rankingsList;
     }
 
-    private void FindSingleRankingLink(List<string> rankingsList, string currentLink)
+    private void FindSingleRankingLink(HashSet<string> rankingsList, string currentLink)
     {
         var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
@@ -70,7 +70,10 @@ public class Scraper
 
         lock (rankingsList)
         {
-            rankingsList.AddRange(links);
+            foreach (var variable in links)
+            {
+                rankingsList.Add(variable);
+            }
         }
     }
 

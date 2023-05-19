@@ -8,17 +8,32 @@ public static class LinksFind
         var linksFromCombinations = FindLinksFromCombinations();
 
         //merge results links
-        var listOfListOfLinks = new List<List<string>> { findRankingsLink , linksFromCombinations};
+        var listOfListOfLinks = new List<HashSet<string>> { findRankingsLink , linksFromCombinations};
         var rankingsLinks = Strings.StringUtil.Merge(listOfListOfLinks);
         return rankingsLinks;
     }
 
-    private static List<string> FindLinksFromCombinations()
+    private static HashSet<string> FindLinksFromCombinations()
+    {
+        HashSet<string> r = new HashSet<string>();
+        for (int i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++)
+        {
+            HashSet<string> r2 = FindLinksFromCombinationsSingleYear(i);
+            foreach (var VARIABLE in r2)
+            {
+                r.Add(VARIABLE);
+            }
+        }
+
+        return r;
+    }
+
+    private static HashSet<string> FindLinksFromCombinationsSingleYear(int i)
     {
         throw new NotImplementedException();
     }
 
-    private static List<string> FindLinksFromPolimiNews()
+    private static HashSet<string> FindLinksFromPolimiNews()
     {
         //scrape links from polimi news
         var scraper = new Scraper();
