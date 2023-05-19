@@ -1,3 +1,4 @@
+using GraduatorieScript.Objects;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
@@ -71,5 +72,10 @@ public class Scraper
         {
             rankingsList.AddRange(links);
         }
+    }
+
+    public static Ranking Download(string variable)
+    {
+        throw new NotImplementedException();
     }
 }

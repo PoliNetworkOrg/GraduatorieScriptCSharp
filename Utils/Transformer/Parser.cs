@@ -10,10 +10,20 @@ public static class Parser
         throw new NotImplementedException();
     }
 
-    public static RankingsSet ParseWeb(List<string> rankingsLinks)
+    public static RankingsSet ParseWeb(IEnumerable<string> rankingsLinks)
     {
-        //todo: download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
-        throw new NotImplementedException();
+        //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
+        var rankingsSet = new RankingsSet
+        {
+            lastUpdate = DateTime.Now,
+            Rankings = new List<Ranking>()
+        };
+        foreach (var link in rankingsLinks.Where(link => !string.IsNullOrEmpty(link)))
+        {
+     
+            rankingsSet.Rankings.Add(Web.Scraper.Download(link));
+        }
+        return rankingsSet;
     }
 
     public static RankingsSet? ParseLocalJson(string jJsonPath)

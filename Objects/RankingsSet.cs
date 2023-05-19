@@ -5,8 +5,8 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class RankingsSet
 {
-    private List<Ranking> Rankings;
-    private DateTime lastUpdate;
+    public List<Ranking>? Rankings;
+    public DateTime? lastUpdate;
 
     public static RankingsSet Merge(List<RankingsSet?> list)
     {
