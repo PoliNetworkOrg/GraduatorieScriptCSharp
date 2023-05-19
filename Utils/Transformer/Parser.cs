@@ -10,7 +10,7 @@ public static class Parser
         throw new NotImplementedException();
     }
 
-    public static RankingsSet ParseWeb(IEnumerable<string> rankingsLinks)
+    public static RankingsSet ParseWeb(IEnumerable<string?> rankingsLinks)
     {
         //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
         var rankingsSet = new RankingsSet

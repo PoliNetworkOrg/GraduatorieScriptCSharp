@@ -5,7 +5,8 @@ using GraduatorieScript.Utils.Web;
 
 var scraper = new Scraper();
 var links = scraper.GetNewsLinks();
-var rankingsLinks = scraper.FindRankingsLink(links);
+var enumerable = new List<List<string>> () { scraper.FindRankingsLink(links) };
+var rankingsLinks = GraduatorieScript.Utils.Strings.StringUtil.Merge(enumerable);
 
 foreach (var link in rankingsLinks) Console.WriteLine(link);
 

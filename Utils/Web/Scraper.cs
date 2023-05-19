@@ -74,7 +74,7 @@ public class Scraper
         }
     }
 
-    public static Ranking Download(string variable)
+    public static Ranking Download(string? variable)
     {
         throw new NotImplementedException();
     }
