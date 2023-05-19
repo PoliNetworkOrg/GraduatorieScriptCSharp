@@ -34,8 +34,9 @@ var stringJson = Newtonsoft.Json.JsonConvert.SerializeObject(rankingsSet);
 File.WriteAllText(jJsonPath, stringJson);
 
 //eliminare i suddetti file html
-foreach (var toDelete in transformerResult.pathFound)
-{
-    GraduatorieScript.Utils.Path.FileUtil.TryDelete(toDelete);
-}
+if (transformerResult.pathFound != null)
+    foreach (var toDelete in transformerResult.pathFound)
+    {
+        GraduatorieScript.Utils.Path.FileUtil.TryDelete(toDelete);
+    }
 

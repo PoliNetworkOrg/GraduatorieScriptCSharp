@@ -6,6 +6,6 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class TransformerResult
 {
-    public List<string> pathFound;
-    public RankingsSet RankingsSet;
+    public List<string>? pathFound;
+    public RankingsSet? RankingsSet;
 }
