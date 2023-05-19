@@ -4,10 +4,22 @@ namespace GraduatorieScript.Utils.Transformer;
 
 public static class Parser
 {
-    public static TransformerResult ParseHtmlFiles(string? baseFolder)
+    public static TransformerResult? ParseHtmlFiles(string? baseFolder)
     {
+        if (string.IsNullOrEmpty(baseFolder))
+            return null;
+
+        var transformerResult = new TransformerResult();
+        
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
-        throw new NotImplementedException();
+        var files = Directory.GetFiles(baseFolder, "*.*", SearchOption.AllDirectories);
+        foreach (var file in files)
+        {
+            var fileContent = File.ReadAllText(file);
+            transformerResult.AddFileRead(fileContent, file);
+        }
+
+        return transformerResult;
     }
 
     public static RankingsSet ParseWeb(IEnumerable<string?> rankingsLinks)

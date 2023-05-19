@@ -48,4 +48,11 @@ public class RankingsSet
     {
         return rankingsResult.Any(v => v.IsSimilarTo(ranking));
     }
+
+    public void AddFileRead(string fileContent)
+    {
+        //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
+        //e aggiungerla alla classe attuale, evitando ripetizioni
+        throw new NotImplementedException();
+    }
 }

@@ -2,11 +2,12 @@
 
 public static class FileUtil
 {
-    public static void TryDelete(string path)
+    public static void TryDelete(string? path)
     {
         try
         {
-            File.Delete(path);
+            if (path != null) 
+                File.Delete(path);
         }
         catch
         {
@@ -14,7 +15,7 @@ public static class FileUtil
         }
     }
 
-    public static void DeleteFiles(List<string>? transformerResultPathFound)
+    public static void DeleteFiles(HashSet<string?>? transformerResultPathFound)
     {
         if (transformerResultPathFound == null) return;
         foreach (var toDelete in transformerResultPathFound)
