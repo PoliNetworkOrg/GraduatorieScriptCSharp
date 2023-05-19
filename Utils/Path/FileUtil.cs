@@ -13,4 +13,13 @@ public static class FileUtil
             // ignored
         }
     }
+
+    public static void DeleteFiles(List<string>? transformerResultPathFound)
+    {
+        if (transformerResultPathFound == null) return;
+        foreach (var toDelete in transformerResultPathFound)
+        {
+            TryDelete(toDelete);
+        }
+    }
 }

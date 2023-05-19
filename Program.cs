@@ -3,11 +3,10 @@
 using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Web;
 
-var scraper = new Scraper();
-var links = scraper.GetNewsLinks();
-var enumerable = new List<List<string>> () { scraper.FindRankingsLink(links) };
-var rankingsLinks = GraduatorieScript.Utils.Strings.StringUtil.Merge(enumerable);
+//find links from web
+var rankingsLinks = LinksFind.FindLinksFromWeb();
 
+//print links found
 foreach (var link in rankingsLinks) Console.WriteLine(link);
 
 var baseFolder = GraduatorieScript.Utils.Path.PathUtil.FindDocsFolder();
@@ -34,9 +33,5 @@ var stringJson = Newtonsoft.Json.JsonConvert.SerializeObject(rankingsSet);
 File.WriteAllText(jJsonPath, stringJson);
 
 //eliminare i suddetti file html
-if (transformerResult.pathFound != null)
-    foreach (var toDelete in transformerResult.pathFound)
-    {
-        GraduatorieScript.Utils.Path.FileUtil.TryDelete(toDelete);
-    }
+GraduatorieScript.Utils.Path.FileUtil.DeleteFiles(transformerResult.pathFound);
 
