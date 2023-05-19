@@ -24,6 +24,12 @@ public class Scraper
         "matricola", "merito", "nuovi studenti"
     };
 
+    /// <summary>
+    ///   Taken an href from the a tag which could be either an internal link or an 
+    ///   external one, this method returns the full url using the polimi domain
+    /// </summary>
+    /// <param name="href">The href from the html anchor tag taken from the news content.</param>
+    /// <returns>The full url</returns>
     private static string UrlifyLocalHref(string href)
     {
         return href.StartsWith("/") ? "https://polimi.it" + href : href;
