@@ -6,7 +6,7 @@ namespace GraduatorieScript.Objects;
 public class RankingsSet
 {
     public List<Ranking>? Rankings;
-    public DateTime? lastUpdate;
+    public DateTime? LastUpdate;
 
     public static RankingsSet Merge(List<RankingsSet?> list)
     {
@@ -14,27 +14,37 @@ public class RankingsSet
 
         foreach (var rankingsSet in list)
         {
-            var rankingsSetRankings = rankingsSet?.Rankings;
-            if (rankingsSetRankings == null) continue;
-            foreach (var ranking in rankingsSetRankings)
-            {
-                var alreadyPresent = CheckIfAlreadyPresent(rankingsResult, ranking);
-                if (!alreadyPresent)
-                {
-                    rankingsResult.Add(ranking);
-                }
-            }
+            MergeSingleList(rankingsSet, rankingsResult);
         }
         
-        RankingsSet result = new RankingsSet
+        var result = new RankingsSet
         {
-            lastUpdate = list.Max(x => x?.lastUpdate ?? DateTime.Now),
+            LastUpdate = list.Max(x => x?.LastUpdate ?? DateTime.Now),
             Rankings = rankingsResult
         };
         return result;
     }
 
-    private static bool CheckIfAlreadyPresent(List<Ranking> rankingsResult, Ranking ranking)
+    private static void MergeSingleList(RankingsSet? rankingsSet, List<Ranking> rankingsResult)
+    {
+        var rankingsSetRankings = rankingsSet?.Rankings;
+        if (rankingsSetRankings == null) return;
+        foreach (var ranking in rankingsSetRankings)
+        {
+            MergeSingleRanking(rankingsResult, ranking);
+        }
+    }
+
+    private static void MergeSingleRanking(ICollection<Ranking> rankingsResult, Ranking ranking)
+    {
+        var alreadyPresent = CheckIfAlreadyPresent(rankingsResult, ranking);
+        if (!alreadyPresent)
+        {
+            rankingsResult.Add(ranking);
+        }
+    }
+
+    private static bool CheckIfAlreadyPresent(IEnumerable<Ranking> rankingsResult, Ranking ranking)
     {
         return rankingsResult.Any(v => v.IsSimilarTo(ranking));
     }

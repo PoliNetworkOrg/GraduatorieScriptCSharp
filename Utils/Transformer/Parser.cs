@@ -15,7 +15,7 @@ public static class Parser
         //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
         var rankingsSet = new RankingsSet
         {
-            lastUpdate = DateTime.Now,
+            LastUpdate = DateTime.Now,
             Rankings = new List<Ranking>()
         };
         foreach (var link in rankingsLinks.Where(link => !string.IsNullOrEmpty(link)))
