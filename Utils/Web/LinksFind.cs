@@ -2,23 +2,23 @@
 
 public static class LinksFind
 {
-    public static HashSet<string?> FindLinksFromWeb()
+    public static HashSet<string> GetAll()
     {
-        var findRankingsLink = FindLinksFromPolimiNews();
-        var linksFromCombinations = FindLinksFromCombinations();
+        var polimiNewsLinks = GetPolimiNewsLink();
+        var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var listOfListOfLinks = new List<HashSet<string>> { findRankingsLink, linksFromCombinations };
-        var rankingsLinks = Strings.StringUtil.Merge(listOfListOfLinks);
+        var joinedList = new List<HashSet<string>> { polimiNewsLinks, combinationLinks };
+        var rankingsLinks = Strings.StringUtil.Merge(joinedList);
         return rankingsLinks;
     }
 
-    private static HashSet<string> FindLinksFromCombinations()
+    private static HashSet<string> GetCombinationLinks()
     {
         HashSet<string> r = new HashSet<string>();
         for (int i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++)
         {
-            HashSet<string> r2 = FindLinksFromCombinationsSingleYear(i);
+            HashSet<string> r2 = GetYearCominationLinks(i);
             foreach (var VARIABLE in r2)
             {
                 r.Add(VARIABLE);
@@ -28,25 +28,30 @@ public static class LinksFind
         return r;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="i"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    private static HashSet<string> FindLinksFromCombinationsSingleYear(int i)
+    private static HashSet<string> GetYearCominationLinks(int year)
     {
-        //     kl = [2, 5, 6, 7, 8, 40, 41, 42, 45, 54, 60, 64, 69, 91, 102, 103, 104]
-        //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
-        throw new NotImplementedException();
+        // partial implemented: polimi has recently added 4 hex chars in the first part 
+        // of the path (2022_20064_XXXX_html/) which would require 65k combinations for each 
+        // key (2, 5, 6, ...), so 1.1 million links to check 
+        // TBD whether or not to implement it 
+        // 
+        // The following code only create combinations with the old method
+        int[] keys = { 2, 5, 6, 7, 8, 40, 41, 42, 45, 54, 60, 64, 69, 91, 102, 103, 104 };
+        string[] ids = keys.Select(k => $"20{k.ToString("D3")}").ToArray(); // 20002, 20005, ...
+        string[] yearIds = ids.Select(i => $"{year}_{i}").ToArray(); // 2022_20002, 2022_20005, ...
+        HashSet<string> links = yearIds
+          //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
+          .Select(id => $"http://{Data.Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
+          .ToHashSet();
+        return links;
     }
 
-    private static HashSet<string> FindLinksFromPolimiNews()
+    private static HashSet<string> GetPolimiNewsLink()
     {
         //scrape links from polimi news
         var scraper = new Scraper();
-        var links = scraper.GetNewsLinks();
-        var findRankingsLink = scraper.FindRankingsLink(links);
+        var newsLinks = scraper.GetNewsLinks();
+        var findRankingsLink = scraper.FindRankingsLink(newsLinks);
         return findRankingsLink;
     }
 }

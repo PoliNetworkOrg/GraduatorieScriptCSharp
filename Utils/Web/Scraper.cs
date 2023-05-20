@@ -12,11 +12,7 @@ internal struct AnchorElement
 public class Scraper
 {
     private const string NewsUrl = "https://www.polimi.it/in-evidenza";
-  
-
-    
     private readonly HtmlWeb _web = new();
-
     private string[] _newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
@@ -53,7 +49,6 @@ public class Scraper
             /* .Where(anchor => NewsTesters.Contains(anchor.Name.ToLower())) */
             .Select(anchor => anchor.Url)
             .ToList();
-
         return filteredLinks;
     }
 

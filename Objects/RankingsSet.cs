@@ -5,48 +5,50 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class RankingsSet
 {
-    public List<Ranking>? Rankings;
+    public List<Ranking> Rankings;
     public DateTime? LastUpdate;
+
+    public RankingsSet() {
+      Rankings = new List<Ranking>();
+      LastUpdate = DateTime.Now;
+    }
 
     public static RankingsSet Merge(List<RankingsSet?> list)
     {
-        var rankingsResult = new List<Ranking>();
-
-        foreach (var rankingsSet in list)
-        {
-            MergeSingleList(rankingsSet, rankingsResult);
-        }
-        
-        var result = new RankingsSet
+        var rankingsSet = new RankingsSet
         {
             LastUpdate = list.Max(x => x?.LastUpdate ?? DateTime.Now),
-            Rankings = rankingsResult
+            Rankings = new List<Ranking>()
         };
-        return result;
+
+        foreach (var set in list)
+        {
+          if(set != null) rankingsSet.MergeSet(set);
+        }
+
+        return rankingsSet;
     }
 
-    private static void MergeSingleList(RankingsSet? rankingsSet, List<Ranking> rankingsResult)
+    private void MergeSet(RankingsSet rankingsSet)
     {
-        var rankingsSetRankings = rankingsSet?.Rankings;
-        if (rankingsSetRankings == null) return;
-        foreach (var ranking in rankingsSetRankings)
+        foreach (var ranking in rankingsSet.Rankings)
         {
-            MergeSingleRanking(rankingsResult, ranking);
+            this.AddRanking(ranking);
         }
     }
 
-    private static void MergeSingleRanking(ICollection<Ranking> rankingsResult, Ranking ranking)
+    private void AddRanking(Ranking ranking)
     {
-        var alreadyPresent = CheckIfAlreadyPresent(rankingsResult, ranking);
+        var alreadyPresent = this.Contains(ranking);
         if (!alreadyPresent)
         {
-            rankingsResult.Add(ranking);
+            this.Rankings.Add(ranking);
         }
     }
 
-    private static bool CheckIfAlreadyPresent(IEnumerable<Ranking> rankingsResult, Ranking ranking)
+    private bool Contains(Ranking ranking)
     {
-        return rankingsResult.Any(v => v.IsSimilarTo(ranking));
+        return this.Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 
     public void AddFileRead(string fileContent)

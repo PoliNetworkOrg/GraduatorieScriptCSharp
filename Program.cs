@@ -2,9 +2,10 @@
 
 using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Web;
+using GraduatorieScript.Utils.Transformer;
 
 //find links from web
-var rankingsLinks = LinksFind.FindLinksFromWeb();
+var rankingsLinks = LinksFind.GetAll();
 
 //print links found
 foreach (var link in rankingsLinks) Console.WriteLine(link);
@@ -14,13 +15,13 @@ Console.WriteLine($"{baseFolder} baseFolder");
 var jJsonPath = baseFolder + "\\" + "j.json";
 
 //nella cartella trovata, leggere e analizzare gli eventuali file .html
-var transformerResult = GraduatorieScript.Utils.Transformer.Parser.ParseHtmlFiles(baseFolder);
+var transformerResult = Parser.ParseHtmlFiles(baseFolder);
 
 //estraiamo i risultati dal web
-var rankingsSetFromWeb = GraduatorieScript.Utils.Transformer.Parser.ParseWeb(rankingsLinks);
+var rankingsSetFromWeb = Parser.ParseWeb(rankingsLinks);
 
 //estraiamo i risultati da un eventuale json locale
-var rankingsSetFromLocalJson = GraduatorieScript.Utils.Transformer.Parser.ParseLocalJson(jJsonPath);
+var rankingsSetFromLocalJson = Parser.ParseLocalJson(jJsonPath);
 
 //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
 var rankingsSets = new List<RankingsSet?> { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson };
