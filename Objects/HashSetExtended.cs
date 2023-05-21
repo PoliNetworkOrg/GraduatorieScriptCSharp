@@ -1,9 +1,13 @@
-﻿namespace GraduatorieScript.Objects;
+﻿using Newtonsoft.Json;
+
+namespace GraduatorieScript.Objects;
 
 /// <summary>
 ///     Extension of Hashset in order to implement some methods like AddRange
 /// </summary>
 /// <typeparam name="T"></typeparam>
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class HashSetExtended<T> : HashSet<T>
 {
     /// <summary>
