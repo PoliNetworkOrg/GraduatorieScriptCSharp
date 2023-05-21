@@ -1,5 +1,5 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Objects;
+using GraduatorieScript.Extensions;
 using GraduatorieScript.Utils.Strings;
 
 namespace GraduatorieScript.Utils.Web;
@@ -12,19 +12,19 @@ public static class LinksFind
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var joinedList = new List<HashSetExtended<string>> { polimiNewsLinks, combinationLinks };
+        var joinedList = new List<HashSet<string>> { polimiNewsLinks, combinationLinks };
         var rankingsLinks = StringUtil.Merge(joinedList);
         return rankingsLinks;
     }
 
-    private static HashSetExtended<string> GetCombinationLinks()
+    private static HashSet<string> GetCombinationLinks()
     {
-        var r = new HashSetExtended<string>();
+        var r = new HashSet<string>();
         for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 
-    private static HashSetExtended<string> GetYearCominationLinks(int year)
+    private static HashSet<string> GetYearCominationLinks(int year)
     {
         // partial implemented: polimi has recently added 4 hex chars in the first part 
         // of the path (2022_20064_XXXX_html/) which would require 65k combinations for each 
@@ -39,12 +39,12 @@ public static class LinksFind
             //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
             .Select(id => $"http://{Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
             .ToHashSet();
-        var r = new HashSetExtended<string>();
+        var r = new HashSet<string>();
         r.AddRange(links);
         return r;
     }
 
-    private static HashSetExtended<string> GetPolimiNewsLink()
+    private static HashSet<string> GetPolimiNewsLink()
     {
         //scrape links from polimi news
         var scraper = new Scraper();

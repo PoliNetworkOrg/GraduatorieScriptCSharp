@@ -1,5 +1,6 @@
 using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
+using GraduatorieScript.Extensions;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
@@ -54,9 +55,9 @@ public class Scraper
         return filteredLinks;
     }
 
-    public HashSetExtended<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public HashSet<string> FindRankingsLink(IEnumerable<string> newsLink)
     {
-        var rankingsList = new HashSetExtended<string>();
+        var rankingsList = new HashSet<string>();
 
         Parallel.Invoke(newsLink
             .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); })).ToArray());
@@ -73,7 +74,7 @@ public class Scraper
 
         lock (rankingsList)
         {
-            foreach (var variable in links) rankingsList.Add(variable);
+            rankingsList.AddRange(links);
         }
     }
 
