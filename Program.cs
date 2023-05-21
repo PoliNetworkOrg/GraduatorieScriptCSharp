@@ -4,6 +4,9 @@ using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Web;
 using GraduatorieScript.Utils.Transformer;
 
+//costanti
+const string jJson = "j.json";
+
 //find links from web
 var rankingsLinks = LinksFind.GetAll();
 
@@ -12,7 +15,7 @@ foreach (var link in rankingsLinks) Console.WriteLine(link);
 
 var baseFolder = GraduatorieScript.Utils.Path.PathUtil.FindDocsFolder();
 Console.WriteLine($"{baseFolder} baseFolder");
-var jJsonPath = baseFolder + "\\" + "j.json";
+var jJsonPath = baseFolder + "\\" + jJson;
 
 //nella cartella trovata, leggere e analizzare gli eventuali file .html
 var transformerResult = Parser.ParseHtmlFiles(baseFolder);
@@ -34,6 +37,5 @@ var stringJson = Newtonsoft.Json.JsonConvert.SerializeObject(rankingsSet);
 File.WriteAllText(jJsonPath, stringJson);
 
 //eliminare i suddetti file html
-var transformerResultPathFound = transformerResult?.pathFound;
-GraduatorieScript.Utils.Path.FileUtil.DeleteFiles(transformerResultPathFound);
+GraduatorieScript.Utils.Path.FileUtil.DeleteFiles(transformerResult?.pathFound);
 

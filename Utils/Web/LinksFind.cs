@@ -1,4 +1,6 @@
-﻿namespace GraduatorieScript.Utils.Web;
+﻿using GraduatorieScript.Objects;
+
+namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
@@ -8,27 +10,22 @@ public static class LinksFind
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var joinedList = new List<HashSet<string>> { polimiNewsLinks, combinationLinks };
+        var joinedList = new List<HashSetExtended<string>> { polimiNewsLinks, combinationLinks };
         var rankingsLinks = Strings.StringUtil.Merge(joinedList);
         return rankingsLinks;
     }
 
-    private static HashSet<string> GetCombinationLinks()
+    private static HashSetExtended<string> GetCombinationLinks()
     {
-        HashSet<string> r = new HashSet<string>();
-        for (int i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++)
+        var r = new HashSetExtended<string>();
+        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++)
         {
-            HashSet<string> r2 = GetYearCominationLinks(i);
-            foreach (var VARIABLE in r2)
-            {
-                r.Add(VARIABLE);
-            }
+            r.AddRange(GetYearCominationLinks(i));
         }
-
         return r;
     }
 
-    private static HashSet<string> GetYearCominationLinks(int year)
+    private static HashSetExtended<string> GetYearCominationLinks(int year)
     {
         // partial implemented: polimi has recently added 4 hex chars in the first part 
         // of the path (2022_20064_XXXX_html/) which would require 65k combinations for each 
@@ -37,16 +34,18 @@ public static class LinksFind
         // 
         // The following code only create combinations with the old method
         int[] keys = { 2, 5, 6, 7, 8, 40, 41, 42, 45, 54, 60, 64, 69, 91, 102, 103, 104 };
-        string[] ids = keys.Select(k => $"20{k.ToString("D3")}").ToArray(); // 20002, 20005, ...
-        string[] yearIds = ids.Select(i => $"{year}_{i}").ToArray(); // 2022_20002, 2022_20005, ...
-        HashSet<string> links = yearIds
+        var ids = keys.Select(k => $"20{k:D3}").ToArray(); // 20002, 20005, ...
+        var yearIds = ids.Select(i => $"{year}_{i}").ToArray(); // 2022_20002, 2022_20005, ...
+        var links = yearIds
           //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
           .Select(id => $"http://{Data.Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
           .ToHashSet();
-        return links;
+        var r = new HashSetExtended<string>();
+        r.AddRange(links);
+        return r;
     }
 
-    private static HashSet<string> GetPolimiNewsLink()
+    private static HashSetExtended<string> GetPolimiNewsLink()
     {
         //scrape links from polimi news
         var scraper = new Scraper();

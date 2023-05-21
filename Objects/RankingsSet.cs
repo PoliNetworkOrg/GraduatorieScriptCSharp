@@ -22,8 +22,8 @@ public class RankingsSet
         };
 
         foreach (var set in list)
-        {
-          if(set != null) rankingsSet.MergeSet(set);
+        { 
+            if(set != null) rankingsSet.MergeSet(set);
         }
 
         return rankingsSet;
@@ -53,10 +53,13 @@ public class RankingsSet
 
     public void AddFileRead(string fileContent)
     {
+        if (string.IsNullOrEmpty(fileContent))
+            return;
+        
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
 
-        // check if exists page
+        // check if exists page (controllare se il file html in ingresso abbia un senso o sia inutile)
         throw new NotImplementedException();
     }
 }
