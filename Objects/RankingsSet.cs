@@ -1,16 +1,18 @@
 ﻿using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
+
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
 public class RankingsSet
 {
-    public List<Ranking> Rankings;
     public DateTime? LastUpdate;
+    public List<Ranking> Rankings;
 
-    public RankingsSet() {
-      Rankings = new List<Ranking>();
-      LastUpdate = DateTime.Now;
+    public RankingsSet()
+    {
+        Rankings = new List<Ranking>();
+        LastUpdate = DateTime.Now;
     }
 
     public static RankingsSet Merge(List<RankingsSet?> list)
@@ -22,40 +24,33 @@ public class RankingsSet
         };
 
         foreach (var set in list)
-        { 
-            if(set != null) rankingsSet.MergeSet(set);
-        }
+            if (set != null)
+                rankingsSet.MergeSet(set);
 
         return rankingsSet;
     }
 
     private void MergeSet(RankingsSet rankingsSet)
     {
-        foreach (var ranking in rankingsSet.Rankings)
-        {
-            this.AddRanking(ranking);
-        }
+        foreach (var ranking in rankingsSet.Rankings) AddRanking(ranking);
     }
 
     private void AddRanking(Ranking ranking)
     {
-        var alreadyPresent = this.Contains(ranking);
-        if (!alreadyPresent)
-        {
-            this.Rankings.Add(ranking);
-        }
+        var alreadyPresent = Contains(ranking);
+        if (!alreadyPresent) Rankings.Add(ranking);
     }
 
     private bool Contains(Ranking ranking)
     {
-        return this.Rankings.Any(v => v.IsSimilarTo(ranking));
+        return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 
     public void AddFileRead(string fileContent)
     {
         if (string.IsNullOrEmpty(fileContent))
             return;
-        
+
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
 

@@ -1,4 +1,6 @@
-﻿using GraduatorieScript.Objects;
+﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects;
+using GraduatorieScript.Utils.Strings;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -11,17 +13,14 @@ public static class LinksFind
 
         //merge results links
         var joinedList = new List<HashSetExtended<string>> { polimiNewsLinks, combinationLinks };
-        var rankingsLinks = Strings.StringUtil.Merge(joinedList);
+        var rankingsLinks = StringUtil.Merge(joinedList);
         return rankingsLinks;
     }
 
     private static HashSetExtended<string> GetCombinationLinks()
     {
         var r = new HashSetExtended<string>();
-        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++)
-        {
-            r.AddRange(GetYearCominationLinks(i));
-        }
+        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 
@@ -37,9 +36,9 @@ public static class LinksFind
         var ids = keys.Select(k => $"20{k:D3}").ToArray(); // 20002, 20005, ...
         var yearIds = ids.Select(i => $"{year}_{i}").ToArray(); // 2022_20002, 2022_20005, ...
         var links = yearIds
-          //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
-          .Select(id => $"http://{Data.Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
-          .ToHashSet();
+            //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
+            .Select(id => $"http://{Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
+            .ToHashSet();
         var r = new HashSetExtended<string>();
         r.AddRange(links);
         return r;

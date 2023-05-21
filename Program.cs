@@ -1,8 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using GraduatorieScript.Objects;
-using GraduatorieScript.Utils.Web;
+using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
+using GraduatorieScript.Utils.Web;
+using Newtonsoft.Json;
 
 //costanti
 const string jJson = "j.json";
@@ -13,7 +15,7 @@ var rankingsLinks = LinksFind.GetAll();
 //print links found
 foreach (var link in rankingsLinks) Console.WriteLine(link);
 
-var baseFolder = GraduatorieScript.Utils.Path.PathUtil.FindDocsFolder();
+var baseFolder = PathUtil.FindDocsFolder();
 Console.WriteLine($"{baseFolder} baseFolder");
 var jJsonPath = baseFolder + "\\" + jJson;
 
@@ -27,15 +29,15 @@ var rankingsSetFromWeb = Parser.ParseWeb(rankingsLinks);
 var rankingsSetFromLocalJson = Parser.ParseLocalJson(jJsonPath);
 
 //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
-var rankingsSets = new List<RankingsSet?> { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson };
+var rankingsSets = new List<RankingsSet?>
+    { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson };
 var rankingsSet = RankingsSet.Merge(rankingsSets);
 
 //ottenere un json 
-var stringJson = Newtonsoft.Json.JsonConvert.SerializeObject(rankingsSet);
+var stringJson = JsonConvert.SerializeObject(rankingsSet);
 
 //scriviamolo su disco
 File.WriteAllText(jJsonPath, stringJson);
 
 //eliminare i suddetti file html
-GraduatorieScript.Utils.Path.FileUtil.DeleteFiles(transformerResult?.pathFound);
-
+FileUtil.DeleteFiles(transformerResult?.pathFound);

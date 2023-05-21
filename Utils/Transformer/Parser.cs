@@ -1,4 +1,6 @@
 ﻿using GraduatorieScript.Objects;
+using GraduatorieScript.Utils.Web;
+using Newtonsoft.Json;
 
 namespace GraduatorieScript.Utils.Transformer;
 
@@ -10,7 +12,7 @@ public static class Parser
             return null;
 
         var transformerResult = new TransformerResult();
-        
+
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
         var files = Directory.GetFiles(baseFolder, "*.*", SearchOption.AllDirectories);
         foreach (var file in files)
@@ -34,9 +36,10 @@ public static class Parser
         var enumerable = rankingsLinks.Where(link => !string.IsNullOrEmpty(link));
         foreach (var link in enumerable)
         {
-            var download = Web.Scraper.Download(link);
+            var download = Scraper.Download(link);
             if (download != null) rankingsSet.Rankings.Add(download);
         }
+
         return rankingsSet;
     }
 
@@ -52,7 +55,7 @@ public static class Parser
         if (string.IsNullOrEmpty(fileContent))
             return null;
 
-        var rankingsSet = Newtonsoft.Json.JsonConvert.DeserializeObject<RankingsSet>(fileContent);
+        var rankingsSet = JsonConvert.DeserializeObject<RankingsSet>(fileContent);
         return rankingsSet;
     }
 }

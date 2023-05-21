@@ -6,7 +6,7 @@ public static class FileUtil
     {
         try
         {
-            if (path != null) 
+            if (path != null)
                 File.Delete(path);
         }
         catch
@@ -18,9 +18,6 @@ public static class FileUtil
     public static void DeleteFiles(HashSet<string?>? transformerResultPathFound)
     {
         if (transformerResultPathFound == null) return;
-        foreach (var toDelete in transformerResultPathFound)
-        {
-            TryDelete(toDelete);
-        }
+        foreach (var toDelete in transformerResultPathFound) TryDelete(toDelete);
     }
 }
