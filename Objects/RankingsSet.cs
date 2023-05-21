@@ -1,60 +1,60 @@
 ﻿using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
+
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
 public class RankingsSet
 {
-    public List<Ranking>? Rankings;
     public DateTime? LastUpdate;
+    public List<Ranking> Rankings;
+
+    public RankingsSet()
+    {
+        Rankings = new List<Ranking>();
+        LastUpdate = DateTime.Now;
+    }
 
     public static RankingsSet Merge(List<RankingsSet?> list)
     {
-        var rankingsResult = new List<Ranking>();
-
-        foreach (var rankingsSet in list)
-        {
-            MergeSingleList(rankingsSet, rankingsResult);
-        }
-        
-        var result = new RankingsSet
+        var rankingsSet = new RankingsSet
         {
             LastUpdate = list.Max(x => x?.LastUpdate ?? DateTime.Now),
-            Rankings = rankingsResult
+            Rankings = new List<Ranking>()
         };
-        return result;
+
+        foreach (var set in list)
+            if (set != null)
+                rankingsSet.MergeSet(set);
+
+        return rankingsSet;
     }
 
-    private static void MergeSingleList(RankingsSet? rankingsSet, List<Ranking> rankingsResult)
+    private void MergeSet(RankingsSet rankingsSet)
     {
-        var rankingsSetRankings = rankingsSet?.Rankings;
-        if (rankingsSetRankings == null) return;
-        foreach (var ranking in rankingsSetRankings)
-        {
-            MergeSingleRanking(rankingsResult, ranking);
-        }
+        foreach (var ranking in rankingsSet.Rankings) AddRanking(ranking);
     }
 
-    private static void MergeSingleRanking(ICollection<Ranking> rankingsResult, Ranking ranking)
+    private void AddRanking(Ranking ranking)
     {
-        var alreadyPresent = CheckIfAlreadyPresent(rankingsResult, ranking);
-        if (!alreadyPresent)
-        {
-            rankingsResult.Add(ranking);
-        }
+        var alreadyPresent = Contains(ranking);
+        if (!alreadyPresent) Rankings.Add(ranking);
     }
 
-    private static bool CheckIfAlreadyPresent(IEnumerable<Ranking> rankingsResult, Ranking ranking)
+    private bool Contains(Ranking ranking)
     {
-        return rankingsResult.Any(v => v.IsSimilarTo(ranking));
+        return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 
     public void AddFileRead(string fileContent)
     {
+        if (string.IsNullOrEmpty(fileContent))
+            return;
+
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
 
-        // check if exists page
+        // check if exists page (controllare se il file html in ingresso abbia un senso o sia inutile)
         throw new NotImplementedException();
     }
 }

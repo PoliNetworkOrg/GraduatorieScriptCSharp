@@ -1,3 +1,4 @@
+using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
 using HtmlAgilityPack;
 
@@ -12,9 +13,6 @@ internal struct AnchorElement
 public class Scraper
 {
     private const string NewsUrl = "https://www.polimi.it/in-evidenza";
-  
-
-    
     private readonly HtmlWeb _web = new();
 
     private string[] _newsTesters =
@@ -25,8 +23,8 @@ public class Scraper
     };
 
     /// <summary>
-    ///   Taken an href from the a tag which could be either an internal link or an 
-    ///   external one, this method returns the full url using the polimi domain
+    ///     Taken an href from the a tag which could be either an internal link or an
+    ///     external one, this method returns the full url using the polimi domain
     /// </summary>
     /// <param name="href">The href from the html anchor tag taken from the news content.</param>
     /// <returns>The full url</returns>
@@ -53,13 +51,12 @@ public class Scraper
             /* .Where(anchor => NewsTesters.Contains(anchor.Name.ToLower())) */
             .Select(anchor => anchor.Url)
             .ToList();
-
         return filteredLinks;
     }
 
-    public HashSet<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public HashSetExtended<string> FindRankingsLink(IEnumerable<string> newsLink)
     {
-        var rankingsList = new HashSet<string>();
+        var rankingsList = new HashSetExtended<string>();
 
         Parallel.Invoke(newsLink
             .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); })).ToArray());
@@ -71,29 +68,26 @@ public class Scraper
         var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
             .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
-            .Where(url => url.Contains(Data.Constants.RisultatiAmmissionePolimiIt))
+            .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
             .ToList();
 
         lock (rankingsList)
         {
-            foreach (var variable in links)
-            {
-                rankingsList.Add(variable);
-            }
+            foreach (var variable in links) rankingsList.Add(variable);
         }
     }
 
     public static Ranking? Download(string? url)
     {
         using var client = new HttpClient();
-        var  response = client.GetAsync(url);
+        var response = client.GetAsync(url);
         response.Wait();
         var content = response.Result.Content;
         var result = content.ReadAsStringAsync().Result;
 
         var rankingsSet = new RankingsSet();
         rankingsSet.AddFileRead(result);
-        var download = rankingsSet.Rankings?.Count > 0 ? rankingsSet.Rankings?.First() : null;
+        var download = rankingsSet.Rankings.Count > 0 ? rankingsSet.Rankings.First() : null;
         return download;
     }
 }

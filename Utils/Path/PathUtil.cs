@@ -6,26 +6,24 @@ public static class PathUtil
     {
         return FindDocsFolder(Directory.GetCurrentDirectory(), true);
     }
-    
+
     private static string? FindDocsFolder(string? startingFolder, bool callingForExploringUp)
     {
         while (true)
         {
             if (string.IsNullOrEmpty(startingFolder))
                 return null;
-            
+
             // Constants
             const string folderToFind = "docs";
             const string rankings = "rankings";
-            
+
             // Check if the starting folder itself is the "docs" folder
             var findDocsFolder = System.IO.Path.Combine(startingFolder, folderToFind);
-           
+
             if (Directory.Exists(findDocsFolder))
-            {
                 if (findDocsFolder.ToLower().Contains(rankings))
                     return findDocsFolder;
-            }
 
             // Get the subdirectories in the starting folder
             string?[] subdirectories = Directory.GetDirectories(startingFolder);
@@ -54,8 +52,6 @@ public static class PathUtil
                 // If the "docs" folder is not found in the starting folder or any of its parent folders, return null
                 return null;
             }
-
-           
         }
     }
 }
