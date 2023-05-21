@@ -14,8 +14,9 @@ public static class HashSetExtensions
     ///     Add a list of objects to the hashset
     /// </summary>
     /// <param name="list">list to add</param>
-    public static void AddRange<T>(this HashSet<T> hashSet, IEnumerable<T> list)
+    public static void AddRange<T>(this HashSet<T> hashSet, params IEnumerable<T>[] lists)
     {
-        foreach (var item in list) hashSet.Add(item);
+        foreach (var list in lists)
+            foreach (var item in list) hashSet.Add(item);
     }
 }

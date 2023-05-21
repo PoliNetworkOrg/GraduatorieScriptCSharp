@@ -1,6 +1,5 @@
 ﻿using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
-using GraduatorieScript.Utils.Strings;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -12,8 +11,8 @@ public static class LinksFind
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var joinedList = new List<HashSet<string>> { polimiNewsLinks, combinationLinks };
-        var rankingsLinks = StringUtil.Merge(joinedList);
+        var rankingsLinks = new HashSet<string>();
+        rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
         return rankingsLinks;
     }
 
