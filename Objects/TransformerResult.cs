@@ -6,12 +6,12 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class TransformerResult
 {
-    public HashSet<string?>? pathFound;
+    public HashSet<string>? pathFound;
     public RankingsSet? RankingsSet;
 
     public void AddFileRead(string fileContent, string filePath)
     {
-        pathFound ??= new HashSet<string?>();
+        pathFound ??= new HashSet<string>();
         pathFound.Add(filePath);
 
         RankingsSet ??= new RankingsSet { LastUpdate = DateTime.Now };

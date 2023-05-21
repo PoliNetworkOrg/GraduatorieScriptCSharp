@@ -1,6 +1,6 @@
 ﻿namespace GraduatorieScript.Utils.Path;
 
-public static class PathUtil
+public static class PathUtils
 {
     public static string? FindDocsFolder()
     {
