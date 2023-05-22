@@ -14,7 +14,7 @@ internal struct AnchorElement
 public class Scraper
 {
     private const string NewsUrl = "https://www.polimi.it/in-evidenza";
-    const string httpsPolimiIt = "https://polimi.it";
+    private const string HttpsPolimiIt = "https://polimi.it";
     private readonly HtmlWeb _web = new();
 
     private string[] _newsTesters =
@@ -34,7 +34,7 @@ public class Scraper
             {
                 var href = element.Attributes["href"].Value;
        
-                var url = UrlUtils.UrlifyLocalHref(href, httpsPolimiIt);
+                var url = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt);
                 return new AnchorElement { Name = element.InnerText, Url = url };
             })
             .ToList();
@@ -59,7 +59,7 @@ public class Scraper
     {
         var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
-            .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), httpsPolimiIt))
+            .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt))
             .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
             .ToList();
 
