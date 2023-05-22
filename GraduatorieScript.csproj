@@ -13,4 +13,16 @@
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="docs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="docs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="docs\**" />
+    </ItemGroup>
+
 </Project>
