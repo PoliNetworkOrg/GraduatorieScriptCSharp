@@ -14,6 +14,6 @@ public class StudentResult
     private Dictionary<string, bool>? ofa; // maybe change it
     private Dictionary<string, decimal>? partialResults;
     private int positionMeritAbsolute;
-    private int positionMeritInDegree;
+    private int positionMeritInCourse;
     private decimal result;
 }

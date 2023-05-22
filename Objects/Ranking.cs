@@ -6,7 +6,7 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class Ranking
 {
-    private Dictionary<string, List<StudentResult>>? byDegree;
+    private Dictionary<string, List<StudentResult>>? byCourse;
     private List<StudentResult>? byId;
     private List<StudentResult>? byMerit;
     private string? extra;
