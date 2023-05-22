@@ -13,4 +13,9 @@ public static class HtmlNodeExtensions
     {
         return parent.Descendants(name);
     }
+
+    public static IEnumerable<HtmlNode> GetElementsByClassName(this HtmlNode parent, string className)
+    {
+        return parent.Descendants().Where(node => node.HasClass(className));
+    }
 }
