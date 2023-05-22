@@ -1,6 +1,6 @@
 using GraduatorieScript.Data;
-using GraduatorieScript.Objects;
 using GraduatorieScript.Extensions;
+using GraduatorieScript.Objects;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
@@ -33,7 +33,7 @@ public class Scraper
             .Select(element =>
             {
                 var href = element.Attributes["href"].Value;
-       
+
                 var url = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt);
                 return new AnchorElement { Name = element.InnerText, Url = url };
             })

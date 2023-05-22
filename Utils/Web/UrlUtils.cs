@@ -16,11 +16,11 @@ public class UrlUtils
 
     public static bool CheckUrl(string url)
     {
-        using (HttpClient client = new HttpClient())
+        using (var client = new HttpClient())
         {
             try
             {
-                HttpResponseMessage response = client.GetAsync(url).Result;
+                var response = client.GetAsync(url).Result;
                 return response.StatusCode == HttpStatusCode.OK;
             }
             catch (HttpRequestException)

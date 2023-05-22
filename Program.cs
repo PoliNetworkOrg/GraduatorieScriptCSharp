@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using GraduatorieScript.Objects;
 using GraduatorieScript.Data;
+using GraduatorieScript.Objects;
 using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;

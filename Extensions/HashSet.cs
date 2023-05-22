@@ -17,6 +17,7 @@ public static class HashSetExtensions
     public static void AddRange<T>(this HashSet<T> hashSet, params IEnumerable<T>[] lists)
     {
         foreach (var list in lists)
-            foreach (var item in list) hashSet.Add(item);
+        foreach (var item in list)
+            hashSet.Add(item);
     }
 }

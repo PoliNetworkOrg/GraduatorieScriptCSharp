@@ -23,7 +23,7 @@ public static class Parser
             // ignore because this is the file built 
             // by previous script which is useless for this one
             // (and it also breaks our logic)
-            if(fileRelativePath == "index.html") continue; 
+            if (fileRelativePath == "index.html") continue;
 
             var html = File.ReadAllText(file);
             var url = $"http://{Constants.RisultatiAmmissionePolimiIt}{fileRelativePath}";

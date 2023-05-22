@@ -4,8 +4,9 @@ namespace GraduatorieScript.Utils;
 
 public class Metrics
 {
-    Stopwatch sw;
-    bool stdout = true;
+    private readonly bool stdout = true;
+    private readonly Stopwatch sw;
+
     public Metrics()
     {
         sw = new Stopwatch();
@@ -27,6 +28,7 @@ public class Metrics
             Console.WriteLine($"[Metrics]{helperMsg} {ms}ms");
             Console.ResetColor();
         }
+
         sw.Reset();
     }
 

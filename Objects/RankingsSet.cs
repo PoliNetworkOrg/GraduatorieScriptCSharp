@@ -1,10 +1,9 @@
 ﻿using GraduatorieScript.Enums;
-using Newtonsoft.Json;
-using HtmlAgilityPack;
 using GraduatorieScript.Extensions;
+using HtmlAgilityPack;
+using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
-
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
@@ -68,8 +67,8 @@ public class RankingsSet
             .Select(el => el.InnerText)
             .First(text => text.Contains("Politecnico"));
 
-        if(string.IsNullOrEmpty(intestazione)) return;
-        
+        if (string.IsNullOrEmpty(intestazione)) return;
+
         Console.WriteLine($"{url.url} {url.page} valid");
 
         throw new NotImplementedException(); // just as a reminder
