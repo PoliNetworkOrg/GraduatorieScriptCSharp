@@ -23,17 +23,6 @@ public class Scraper
         "matricola", "merito", "nuovi studenti"
     };
 
-    /// <summary>
-    ///     Taken an href from the a tag which could be either an internal link or an
-    ///     external one, this method returns the full url using the polimi domain
-    /// </summary>
-    /// <param name="href">The href from the html anchor tag taken from the news content.</param>
-    /// <returns>The full url</returns>
-    private static string UrlifyLocalHref(string href)
-    {
-        return href.StartsWith("/") ? "https://polimi.it" + href : href;
-    }
-
     public IEnumerable<string> GetNewsLinks()
     {
         var htmlDoc = _web.Load(NewsUrl);
@@ -43,7 +32,7 @@ public class Scraper
             .Select(element =>
             {
                 var href = element.Attributes["href"].Value;
-                var url = UrlifyLocalHref(href);
+                var url = UrlUtils.UrlifyLocalHref(href, "https://polimi.it");
                 return new AnchorElement { Name = element.InnerText, Url = url };
             })
             .ToList();
@@ -68,7 +57,7 @@ public class Scraper
     {
         var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
-            .Select(element => UrlifyLocalHref(element.GetAttributeValue("href", string.Empty)))
+            .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), "https://polimi.it"))
             .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
             .ToList();
 
@@ -78,7 +67,7 @@ public class Scraper
         }
     }
 
-    public static Ranking? Download(string? url)
+    public static Ranking? Download(string url)
     {
         using var client = new HttpClient();
         var response = client.GetAsync(url);
@@ -87,7 +76,7 @@ public class Scraper
         var result = content.ReadAsStringAsync().Result;
 
         var rankingsSet = new RankingsSet();
-        rankingsSet.AddFileRead(result);
+        rankingsSet.ParseHtml(result, RankingUrl.From(url));
         var download = rankingsSet.Rankings.Count > 0 ? rankingsSet.Rankings.First() : null;
         return download;
     }
