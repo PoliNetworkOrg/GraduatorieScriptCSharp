@@ -17,17 +17,26 @@ public class RankingUrl
     public Page page = Page.Unknown;
     public string url = "";
 
-    public static RankingUrl From(string urlOrPath) {
-        var r = new RankingUrl { url = urlOrPath, page = Page.Unknown };
-        var url = urlOrPath.EndsWith(".html") ? urlOrPath.Remove(urlOrPath.Length - 5) : urlOrPath;
+    /// <summary>
+    ///     It creates a RankingUrl instance starting from the url
+    /// </summary>
+    /// <param name="url">
+    ///     The full url string 
+    ///     prefered input -> http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
+    ///     valid case -> /2022_20064_html/2022_20064_generale.html
+    /// </param>
+    /// <returns>RankingUrl</returns>
+    public static RankingUrl From(string url) {
+        var r = new RankingUrl { url = url, page = Page.Unknown };
+        var cleanUrl = url.EndsWith(".html") ? url.Remove(url.Length - 5) : url;
 
-        if (url.EndsWith("generale")) r.page = Page.Index;
-        else if (url.EndsWith("indice")) r.page = Page.IndexById;
-        else if (url.EndsWith("indice_M")) r.page = Page.IndexByMerit;
-        else if (url.EndsWith("sotto_indice")) r.page = Page.IndexByCourse;
+        if (cleanUrl.EndsWith("generale")) r.page = Page.Index;
+        else if (cleanUrl.EndsWith("indice")) r.page = Page.IndexById;
+        else if (cleanUrl.EndsWith("indice_M")) r.page = Page.IndexByMerit;
+        else if (cleanUrl.EndsWith("sotto_indice")) r.page = Page.IndexByCourse;
         else 
         {
-            var last = url.Split("/").Last();
+            var last = cleanUrl.Split("/").Last();
             var splitByUnderscore = last.Split("_");
             var reversed = splitByUnderscore.Reverse().ToArray();
 
