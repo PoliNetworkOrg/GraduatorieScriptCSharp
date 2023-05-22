@@ -78,7 +78,7 @@ public class Scraper
         var result = content.ReadAsStringAsync().Result;
 
         var rankingsSet = new RankingsSet();
-        rankingsSet.ParseHtml(result, RankingUrl.From(url));
+        RankingsSet.ParseHtml(result, RankingUrl.From(url));
         var download = rankingsSet.Rankings.Count > 0 ? rankingsSet.Rankings.First() : null;
         return download;
     }

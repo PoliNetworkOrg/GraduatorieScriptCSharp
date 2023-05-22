@@ -1,16 +1,8 @@
+using GraduatorieScript.Enums;
+
 namespace GraduatorieScript.Objects;
 
-public enum Page
-{
-    Index,
-    IndexById,
-    IndexByMerit,
-    IndexByCourse,
-    TableById,
-    TableByMerit,
-    TableByCourse,
-    Unknown
-}
+
 
 public class RankingUrl
 {

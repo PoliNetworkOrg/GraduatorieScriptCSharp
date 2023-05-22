@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GraduatorieScript.Enums;
+using Newtonsoft.Json;
 using HtmlAgilityPack;
 using GraduatorieScript.Extensions;
 
@@ -20,13 +21,14 @@ public class RankingsSet
 
     public static RankingsSet Merge(IEnumerable<RankingsSet?> list)
     {
+        var rankingsSets = list.ToList();
         var rankingsSet = new RankingsSet
         {
-            LastUpdate = list.Max(x => x?.LastUpdate ?? DateTime.Now),
+            LastUpdate = rankingsSets.Max(x => x?.LastUpdate ?? DateTime.Now),
             Rankings = new List<Ranking>()
         };
 
-        foreach (var set in list)
+        foreach (var set in rankingsSets)
             if (set != null)
                 rankingsSet.MergeSet(set);
 
@@ -49,7 +51,7 @@ public class RankingsSet
         return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 
-    public void ParseHtml(string html, RankingUrl url)
+    public static void ParseHtml(string html, RankingUrl url)
     {
         if (string.IsNullOrEmpty(html) || url.page == Page.Unknown)
             return;
@@ -61,10 +63,10 @@ public class RankingsSet
         page.LoadHtml(html);
         var doc = page.DocumentNode;
 
-        var intestazione = doc.GetElementsByClassName("intestazione")
+        var intestazione = doc
+            .GetElementsByClassName("intestazione")
             .Select(el => el.InnerText)
-            .Where(text => text.Contains("Politecnico"))
-            .First();
+            .First(text => text.Contains("Politecnico"));
 
         if(string.IsNullOrEmpty(intestazione)) return;
         

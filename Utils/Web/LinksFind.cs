@@ -1,5 +1,6 @@
 ﻿using GraduatorieScript.Objects;
 using GraduatorieScript.Data;
+using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using HtmlAgilityPack;
 
@@ -21,7 +22,7 @@ public static class LinksFind
         
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
-            .Select(url => RankingUrl.From(url))
+            .Select(RankingUrl.From)
             .Where(r => r.page == Page.Index)
             .Where(r => UrlUtils.CheckUrl(r.url))
             .ToHashSet();
