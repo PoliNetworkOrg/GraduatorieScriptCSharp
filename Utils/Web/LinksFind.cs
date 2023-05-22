@@ -33,14 +33,14 @@ public static class LinksFind
     }
 
 
-    private static HashSet<string> GetCombinationLinks()
+    private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
         for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 
-    private static HashSet<string> GetYearCominationLinks(int year)
+    private static IEnumerable<string> GetYearCominationLinks(int year)
     {
         // partial implemented: polimi has recently added 4 hex chars in the first part 
         // of the path (2022_20064_XXXX_html/) which would require 65k combinations for each 
@@ -60,7 +60,7 @@ public static class LinksFind
         return r;
     }
 
-    private static HashSet<string> GetPolimiNewsLink()
+    private static IEnumerable<string> GetPolimiNewsLink()
     {
         //scrape links from polimi news
         var scraper = new Scraper();
