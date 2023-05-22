@@ -1,4 +1,5 @@
-﻿using GraduatorieScript.Objects;
+﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Web;
 using Newtonsoft.Json;
 
@@ -14,17 +15,28 @@ public static class Parser
         var transformerResult = new TransformerResult();
 
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
-        var files = Directory.GetFiles(baseFolder, "*.*", SearchOption.AllDirectories);
+        var files = Directory.GetFiles(baseFolder, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var fileContent = File.ReadAllText(file);
-            transformerResult.AddFileRead(fileContent, file);
+            var fileRelativePath = file.Split(baseFolder)[1];
+
+            // ignore because this is the file built 
+            // by previous script which is useless for this one
+            // (and it also breaks our logic)
+            if(fileRelativePath == "index.html") continue; 
+
+            var html = File.ReadAllText(file);
+            var url = $"http://{Constants.RisultatiAmmissionePolimiIt}{fileRelativePath}";
+            // no need to check if url is online
+            // because the html is already stored
+
+            transformerResult.AddFileRead(html, url);
         }
 
         return transformerResult;
     }
 
-    public static RankingsSet ParseWeb(IEnumerable<string?> rankingsLinks)
+    public static RankingsSet ParseWeb(IEnumerable<RankingUrl> rankingsUrls)
     {
         //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
         var rankingsSet = new RankingsSet
@@ -33,25 +45,21 @@ public static class Parser
             Rankings = new List<Ranking>()
         };
 
-        var enumerable = rankingsLinks.Where(link => !string.IsNullOrEmpty(link));
-        foreach (var link in enumerable)
+        foreach (var r in rankingsUrls)
         {
-            var download = Scraper.Download(link);
+            var download = Scraper.Download(r.url);
             if (download != null) rankingsSet.Rankings.Add(download);
         }
 
         return rankingsSet;
     }
 
-    public static RankingsSet? ParseLocalJson(string jJsonPath)
+    public static RankingsSet? ParseLocalJson(string jsonPath)
     {
-        if (string.IsNullOrEmpty(jJsonPath))
+        if (string.IsNullOrEmpty(jsonPath) || !File.Exists(jsonPath))
             return null;
 
-        if (File.Exists(jJsonPath) == false)
-            return null;
-
-        var fileContent = File.ReadAllText(jJsonPath);
+        var fileContent = File.ReadAllText(jsonPath);
         if (string.IsNullOrEmpty(fileContent))
             return null;
 

@@ -15,6 +15,6 @@ public class TransformerResult
         pathFound.Add(filePath);
 
         RankingsSet ??= new RankingsSet { LastUpdate = DateTime.Now };
-        RankingsSet.AddFileRead(fileContent);
+        RankingsSet.ParseHtml(fileContent, RankingUrl.From(filePath));
     }
 }

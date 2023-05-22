@@ -13,4 +13,20 @@ public class UrlUtils
     {
         return href.StartsWith("/") ? domain + href : href;
     }
+
+    public static bool CheckUrl(string url)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            try
+            {
+                HttpResponseMessage response = client.GetAsync(url).Result;
+                return response.StatusCode == HttpStatusCode.OK;
+            }
+            catch (HttpRequestException)
+            {
+                return false;
+            }
+        }
+    }
 }

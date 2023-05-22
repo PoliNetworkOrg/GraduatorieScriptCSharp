@@ -1,6 +1,9 @@
 ﻿using Newtonsoft.Json;
+using HtmlAgilityPack;
+using GraduatorieScript.Extensions;
 
 namespace GraduatorieScript.Objects;
+
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
@@ -15,7 +18,7 @@ public class RankingsSet
         LastUpdate = DateTime.Now;
     }
 
-    public static RankingsSet Merge(List<RankingsSet?> list)
+    public static RankingsSet Merge(IEnumerable<RankingsSet?> list)
     {
         var rankingsSet = new RankingsSet
         {
@@ -46,15 +49,27 @@ public class RankingsSet
         return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 
-    public void AddFileRead(string fileContent)
+    public void ParseHtml(string html, RankingUrl url)
     {
-        if (string.IsNullOrEmpty(fileContent))
+        if (string.IsNullOrEmpty(html) || url.page == Page.Unknown)
             return;
 
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
 
-        // check if exists page (controllare se il file html in ingresso abbia un senso o sia inutile)
-        throw new NotImplementedException();
+        var page = new HtmlDocument();
+        page.LoadHtml(html);
+        var doc = page.DocumentNode;
+
+        var intestazione = doc.GetElementsByClassName("intestazione")
+            .Select(el => el.InnerText)
+            .Where(text => text.Contains("Politecnico"))
+            .First();
+
+        if(string.IsNullOrEmpty(intestazione)) return;
+        
+        Console.WriteLine($"{url.url} {url.page} valid");
+
+        throw new NotImplementedException(); // just as a reminder
     }
 }

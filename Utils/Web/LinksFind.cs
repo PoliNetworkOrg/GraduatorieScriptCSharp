@@ -1,11 +1,14 @@
-﻿using GraduatorieScript.Data;
+﻿using GraduatorieScript.Objects;
+using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
+using HtmlAgilityPack;
+
 
 namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
-    public static HashSet<string> GetAll()
+    public static HashSet<RankingUrl> GetAll()
     {
         var polimiNewsLinks = GetPolimiNewsLink();
         var combinationLinks = GetCombinationLinks();
@@ -13,8 +16,21 @@ public static class LinksFind
         //merge results links
         var rankingsLinks = new HashSet<string>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
-        return rankingsLinks;
+
+        var web = new HtmlWeb();
+        
+        var rankingsUrls = rankingsLinks
+            .AsParallel() // from 500ms to 86ms 
+            .Select(url => RankingUrl.From(url))
+            .Where(r => r.page == Page.Index)
+            .Where(r => UrlUtils.CheckUrl(r.url))
+            .ToHashSet();
+
+        var len = rankingsLinks.ToArray().Length;
+
+        return rankingsUrls;
     }
+
 
     private static HashSet<string> GetCombinationLinks()
     {

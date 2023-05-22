@@ -2,27 +2,31 @@
 
 using GraduatorieScript.Objects;
 using GraduatorieScript.Data;
+using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
 using Newtonsoft.Json;
 
-//find links from web
-var rankingsLinks = LinksFind.GetAll();
-
-//print links found
-foreach (var link in rankingsLinks) Console.WriteLine(link);
+var mt = new Metrics();
 
 var baseFolder = PathUtils.FindDocsFolder();
-Console.WriteLine($"{baseFolder} baseFolder");
+Console.WriteLine($"[INFO] baseFolder: {baseFolder}");
+
+//find links from web
+var rankingsUrls = mt.Execute(LinksFind.GetAll);
+
+//print links found
+foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.url}");
+
 // todo: handle when baseFolder is null 
-var outputJsonPath = baseFolder + "\\" + Constants.OutputJsonFilename;
+var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
 //nella cartella trovata, leggere e analizzare gli eventuali file .html
 var transformerResult = Parser.ParseHtmlFiles(baseFolder);
 
 //estraiamo i risultati dal web
-var rankingsSetFromWeb = Parser.ParseWeb(rankingsLinks);
+var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls);
 
 //estraiamo i risultati da un eventuale json locale
 var rankingsSetFromLocalJson = Parser.ParseLocalJson(outputJsonPath);
@@ -39,5 +43,6 @@ var stringJson = JsonConvert.SerializeObject(rankingsSet);
 File.WriteAllText(outputJsonPath, stringJson);
 
 //eliminare i suddetti file html
-if (transformerResult?.pathFound != null) 
-    FileUtils.TryBulkDelete(transformerResult.pathFound);
+/* if (transformerResult?.pathFound != null) */
+/*     FileUtils.TryBulkDelete(transformerResult.pathFound); */
+// ^^ this must be wrong
