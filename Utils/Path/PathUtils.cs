@@ -4,10 +4,10 @@ public static class PathUtils
 {
     public static string? FindDocsFolder()
     {
-        return FindDocsFolder(Directory.GetCurrentDirectory(), true);
+        return FindDocsFolder(Directory.GetCurrentDirectory());
     }
 
-    private static string? FindDocsFolder(string? startingFolder, bool callingForExploringUp)
+    private static string? FindDocsFolder(string? startingFolder)
     {
         while (true)
         {
@@ -16,14 +16,11 @@ public static class PathUtils
 
             // Constants
             const string folderToFind = "docs";
-            const string rankings = "rankings";
 
             // Check if the starting folder itself is the "docs" folder
             var findDocsFolder = System.IO.Path.Combine(startingFolder, folderToFind);
 
-            if (Directory.Exists(findDocsFolder))
-                if (findDocsFolder.ToLower().Contains(rankings))
-                    return findDocsFolder;
+            if (Directory.Exists(findDocsFolder)) return findDocsFolder;
 
             // Get the subdirectories in the starting folder
             string?[] subdirectories = Directory.GetDirectories(startingFolder);
@@ -32,26 +29,13 @@ public static class PathUtils
             foreach (var subdirectory in subdirectories)
             {
                 // Recursively search for the "docs" folder
-                var docsFolder = FindDocsFolder(subdirectory, false);
+                var docsFolder = FindDocsFolder(subdirectory);
                 if (string.IsNullOrEmpty(docsFolder)) continue;
-                if (docsFolder.ToLower().Contains(rankings))
-                    return docsFolder;
+                return docsFolder;
             }
 
-            if (callingForExploringUp)
-            {
-                // If the "docs" folder is not found in the starting folder or its subdirectories,
-                // go one level up and try again
-                var parentFolder = Directory.GetParent(startingFolder)?.FullName;
-                if (string.IsNullOrEmpty(parentFolder)) return null;
-                if (parentFolder == startingFolder) return null;
-                startingFolder = parentFolder;
-            }
-            else
-            {
-                // If the "docs" folder is not found in the starting folder or any of its parent folders, return null
-                return null;
-            }
+            // If the "docs" folder is not found in the starting folder return null
+            return null;
         }
     }
 }
