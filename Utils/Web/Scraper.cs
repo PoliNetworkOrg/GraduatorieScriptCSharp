@@ -1,6 +1,7 @@
 using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
+using GraduatorieScript.Utils.Transformer;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
@@ -77,9 +78,7 @@ public class Scraper
         var content = response.Result.Content;
         var result = content.ReadAsStringAsync().Result;
 
-        var rankingsSet = new RankingsSet();
-        RankingsSet.ParseHtml(result, RankingUrl.From(url));
-        var download = rankingsSet.Rankings.Count > 0 ? rankingsSet.Rankings.First() : null;
-        return download;
+        var ranking = Parser.ParseHtml(result, RankingUrl.From(url));
+        return ranking;
     }
 }

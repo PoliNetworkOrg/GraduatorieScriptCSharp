@@ -23,7 +23,7 @@ foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.
 var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
 //nella cartella trovata, leggere e analizzare gli eventuali file .html
-var transformerResult = Parser.ParseHtmlFiles(baseFolder);
+var rankingsSetFromHtmls = Parser.FindParseHtmls(baseFolder);
 
 //estraiamo i risultati dal web
 var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls);
@@ -32,12 +32,10 @@ var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls);
 var rankingsSetFromLocalJson = Parser.ParseLocalJson(outputJsonPath);
 
 //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
-var rankingsSets = new List<RankingsSet?>
-    { transformerResult?.RankingsSet, rankingsSetFromWeb, rankingsSetFromLocalJson };
-var rankingsSet = RankingsSet.Merge(rankingsSets);
+var fullRankingsSet = RankingsSet.Merge(rankingsSetFromHtmls, rankingsSetFromWeb, rankingsSetFromLocalJson);
 
 //ottenere un json 
-var stringJson = JsonConvert.SerializeObject(rankingsSet);
+var stringJson = JsonConvert.SerializeObject(fullRankingsSet);
 
 //scriviamolo su disco
 File.WriteAllText(outputJsonPath, stringJson);
