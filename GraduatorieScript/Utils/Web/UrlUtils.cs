@@ -1,5 +1,7 @@
 using System.Net;
 
+namespace GraduatorieScript.Utils.Web;
+
 public class UrlUtils
 {
     /// <summary>

@@ -58,7 +58,7 @@ public static class Parser
 
         if (string.IsNullOrEmpty(intestazione)) return null;
 
-        Console.WriteLine($"{url.url} {url.PageEnum} valid");
+        Console.WriteLine($"{url.Url} {url.PageEnum} valid");
 
         return null;
         //TODO: throw new NotImplementedException(); // just as a reminder
@@ -75,7 +75,7 @@ public static class Parser
 
         foreach (var r in rankingsUrls)
         {
-            var download = Scraper.Download(r.url);
+            var download = Scraper.Download(r.Url);
             if (download != null) rankingsSet.Rankings.Add(download);
         }
 

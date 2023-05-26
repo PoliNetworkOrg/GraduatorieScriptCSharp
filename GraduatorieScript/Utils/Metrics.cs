@@ -4,7 +4,7 @@ namespace GraduatorieScript.Utils;
 
 public class Metrics
 {
-    private readonly bool stdout = true;
+    private const bool Stdout = true;
     private readonly Stopwatch sw;
 
     public Metrics()
@@ -12,15 +12,15 @@ public class Metrics
         sw = new Stopwatch();
     }
 
-    public void Start()
+    private void Start()
     {
         sw.Start();
     }
 
-    public void Stop(string helper = "")
+    private void Stop(string helper = "")
     {
         sw.Stop();
-        if (stdout)
+        if (Stdout)
         {
             var ms = sw.ElapsedMilliseconds;
             var helperMsg = helper == "" ? "" : $" {helper}:";

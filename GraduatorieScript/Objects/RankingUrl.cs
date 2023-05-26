@@ -5,7 +5,7 @@ namespace GraduatorieScript.Objects;
 public class RankingUrl
 {
     public PageEnum PageEnum = PageEnum.Unknown;
-    public string url = "";
+    public string Url = "";
 
     /// <summary>
     ///     It creates a RankingUrl instance starting from the url
@@ -20,7 +20,7 @@ public class RankingUrl
     {
         const string value = ".html";
         var cleanUrl = url.EndsWith(value) ? url.Remove(url.Length - value.Length) : url;
-        return new RankingUrl { url = url, PageEnum = GetPageEnum(cleanUrl) };
+        return new RankingUrl { Url = url, PageEnum = GetPageEnum(cleanUrl) };
     }
 
     private static PageEnum GetPageEnum(string cleanUrl)

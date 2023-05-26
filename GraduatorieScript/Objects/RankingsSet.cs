@@ -40,7 +40,7 @@ public class RankingsSet
         var alreadyPresent = Contains(ranking);
         if (alreadyPresent)
             Rankings.Add(ranking);
-        if (LastUpdate == null || ranking.lastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.lastUpdate;
+        if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
     }
 
     public bool Contains(Ranking ranking)
