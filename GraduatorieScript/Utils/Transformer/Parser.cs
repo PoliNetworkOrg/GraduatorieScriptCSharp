@@ -42,7 +42,7 @@ public static class Parser
 
     public static Ranking? ParseHtml(string html, RankingUrl url)
     {
-        if (string.IsNullOrEmpty(html) || url.page == Page.Unknown) return null;
+        if (string.IsNullOrEmpty(html) || url.PageEnum == PageEnum.Unknown) return null;
 
         //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione 
         //e aggiungerla alla classe attuale, evitando ripetizioni
@@ -58,7 +58,7 @@ public static class Parser
 
         if (string.IsNullOrEmpty(intestazione)) return null;
 
-        Console.WriteLine($"{url.url} {url.page} valid");
+        Console.WriteLine($"{url.url} {url.PageEnum} valid");
 
         return null;
         //TODO: throw new NotImplementedException(); // just as a reminder
