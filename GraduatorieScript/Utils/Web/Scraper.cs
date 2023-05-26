@@ -47,7 +47,7 @@ public class Scraper
         return filteredLinks;
     }
 
-    public HashSet<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public IEnumerable<string> FindRankingsLink(IEnumerable<string> newsLink)
     {
         var rankingsList = new HashSet<string>();
 
