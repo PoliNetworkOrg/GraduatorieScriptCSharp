@@ -23,7 +23,7 @@ public static class Program
 
         if (string.IsNullOrEmpty(baseFolder))
         {
-            Console.WriteLine($"[INFO] baseFolder is null. Abort.");
+            Console.WriteLine("[INFO] baseFolder is null. Abort.");
             return;
         }
 
