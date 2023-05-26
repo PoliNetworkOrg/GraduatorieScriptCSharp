@@ -25,25 +25,13 @@ public class RankingUrl
 
     private static PageEnum GetPageEnum(string cleanUrl)
     {
-        if (cleanUrl.EndsWith("generale"))
-        {
-            return PageEnum.Index;
-        }
+        if (cleanUrl.EndsWith("generale")) return PageEnum.Index;
 
-        if (cleanUrl.EndsWith("indice"))
-        {
-            return PageEnum.IndexById;
-        }
+        if (cleanUrl.EndsWith("indice")) return PageEnum.IndexById;
 
-        if (cleanUrl.EndsWith("indice_M"))
-        {
-            return PageEnum.IndexByMerit;
-        }
+        if (cleanUrl.EndsWith("indice_M")) return PageEnum.IndexByMerit;
 
-        if (cleanUrl.EndsWith("sotto_indice"))
-        {
-            return PageEnum.IndexByCourse;
-        }
+        if (cleanUrl.EndsWith("sotto_indice")) return PageEnum.IndexByCourse;
 
         var last = cleanUrl.Split("/").Last();
         var splitByUnderscore = last.Split("_");

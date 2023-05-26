@@ -3,7 +3,7 @@
 public static class PathUtils
 {
     private const string FolderToFind = "docs";
-    
+
     public static string? FindDocsFolder()
     {
         return FindDocsFolder(Directory.GetCurrentDirectory());
@@ -28,7 +28,8 @@ public static class PathUtils
             string?[] subdirectories = Directory.GetDirectories(startingFolder);
 
             // Iterate through the subdirectories
-            return subdirectories.Select(FindDocsFolder).FirstOrDefault(docsFolder => !string.IsNullOrEmpty(docsFolder));
+            return subdirectories.Select(FindDocsFolder)
+                .FirstOrDefault(docsFolder => !string.IsNullOrEmpty(docsFolder));
         }
     }
 
