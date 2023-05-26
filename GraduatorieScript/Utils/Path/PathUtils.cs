@@ -2,6 +2,8 @@
 
 public static class PathUtils
 {
+    private const string FolderToFind = "docs";
+    
     public static string? FindDocsFolder()
     {
         return FindDocsFolder(Directory.GetCurrentDirectory());
@@ -15,10 +17,10 @@ public static class PathUtils
                 return null;
 
             // Constants
-            const string folderToFind = "docs";
+
 
             // Check if the starting folder itself is the "docs" folder
-            var findDocsFolder = System.IO.Path.Combine(startingFolder, folderToFind);
+            var findDocsFolder = System.IO.Path.Combine(startingFolder, FolderToFind);
 
             if (Directory.Exists(findDocsFolder)) return findDocsFolder;
 
@@ -37,5 +39,13 @@ public static class PathUtils
             // If the "docs" folder is not found in the starting folder return null
             return null;
         }
+    }
+
+    public static string CreateAndReturnDocsFolder()
+    {
+        var s = Directory.GetCurrentDirectory();
+        var andReturnDocsFolder = System.IO.Path.Join(s, FolderToFind);
+        Directory.CreateDirectory(andReturnDocsFolder);
+        return andReturnDocsFolder;
     }
 }
