@@ -1,7 +1,7 @@
 ﻿namespace GraduatorieScript.Enums;
 
 [Serializable]
-public enum Page
+public enum PageEnum
 {
     Index = 1,
     IndexById = 2,

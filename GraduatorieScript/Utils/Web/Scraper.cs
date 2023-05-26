@@ -16,9 +16,9 @@ public class Scraper
 {
     private const string NewsUrl = "https://www.polimi.it/in-evidenza";
     private const string HttpsPolimiIt = "https://polimi.it";
-    private readonly HtmlWeb _web = new();
+    private readonly HtmlWeb web = new();
 
-    private string[] _newsTesters =
+    private string[] newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
@@ -27,7 +27,7 @@ public class Scraper
 
     public IEnumerable<string> GetNewsLinks()
     {
-        var htmlDoc = _web.Load(NewsUrl);
+        var htmlDoc = web.Load(NewsUrl);
 
         var anchorElements = htmlDoc.DocumentNode
             .SelectNodes("//*[@id=\"c42275\"]/ul/li/h3/a")
@@ -47,7 +47,7 @@ public class Scraper
         return filteredLinks;
     }
 
-    public HashSet<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public IEnumerable<string> FindRankingsLink(IEnumerable<string> newsLink)
     {
         var rankingsList = new HashSet<string>();
 
@@ -58,7 +58,7 @@ public class Scraper
 
     private void FindSingleRankingLink(HashSet<string> rankingsList, string currentLink)
     {
-        var htmlDoc = _web.Load(currentLink);
+        var htmlDoc = web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
             .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt))
             .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))

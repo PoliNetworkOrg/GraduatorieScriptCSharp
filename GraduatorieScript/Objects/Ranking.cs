@@ -10,7 +10,7 @@ public class Ranking
     private List<StudentResult>? byId;
     private List<StudentResult>? byMerit;
     private string? extra;
-    public DateTime lastUpdate;
+    public DateTime LastUpdate;
     private string? phase;
     private string? school;
     private string? url;
