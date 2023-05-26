@@ -1,8 +1,8 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Objects;
-using GraduatorieScript.Utils.Web;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
+using GraduatorieScript.Objects;
+using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 
@@ -31,7 +31,6 @@ public static class Parser
             var url = $"http://{Constants.RisultatiAmmissionePolimiIt}{fileRelativePath}";
             // no need to check if url is online
             // because the html is already stored
-
 
 
             var ranking = ParseHtml(html, RankingUrl.From(url));
