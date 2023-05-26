@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace GraduatorieScript.Main;
 
-public class Program
+public static class Program
 {
 // See https://aka.ms/new-console-template for more information
 
