@@ -21,13 +21,18 @@ public static class Program
             baseFolder = PathUtils.CreateAndReturnDocsFolder();
         Console.WriteLine($"[INFO] baseFolder [2]: {baseFolder}");
 
+        if (string.IsNullOrEmpty(baseFolder))
+        {
+            Console.WriteLine($"[INFO] baseFolder is null. Abort.");
+            return;
+        }
+
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll);
 
         //print links found
         foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.url}");
 
-        // todo: handle when baseFolder is null 
         var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
