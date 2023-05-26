@@ -10,11 +10,11 @@ namespace GraduatorieScript.Main;
 
 public static class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         var mt = new Metrics();
 
-        var baseFolder = PathUtils.FindDocsFolder();
+        var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0]) ? args[0] : PathUtils.FindDocsFolder();
         Console.WriteLine($"[INFO] baseFolder: {baseFolder}");
 
         //find links from web
