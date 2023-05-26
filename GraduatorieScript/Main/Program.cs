@@ -15,10 +15,11 @@ public static class Program
         var mt = new Metrics();
 
         var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0]) ? args[0] : PathUtils.FindDocsFolder();
-        Console.WriteLine($"[INFO] baseFolder: {baseFolder}");
+        Console.WriteLine($"[INFO] baseFolder [1]: {baseFolder}");
 
         if (string.IsNullOrEmpty(baseFolder))
             baseFolder = PathUtils.CreateAndReturnDocsFolder();
+        Console.WriteLine($"[INFO] baseFolder [2]: {baseFolder}");
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll);
