@@ -61,7 +61,7 @@ public static class Parser
         Console.WriteLine($"{url.url} {url.page} valid");
 
         return null;
-        throw new NotImplementedException(); // just as a reminder
+        //TODO: throw new NotImplementedException(); // just as a reminder
     }
 
     public static RankingsSet ParseWeb(IEnumerable<RankingUrl> rankingsUrls)
