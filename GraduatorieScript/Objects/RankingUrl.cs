@@ -18,36 +18,41 @@ public class RankingUrl
     /// <returns>RankingUrl</returns>
     public static RankingUrl From(string url)
     {
-        var r = new RankingUrl { url = url, PageEnum = PageEnum.Unknown };
-        var cleanUrl = url.EndsWith(".html") ? url.Remove(url.Length - 5) : url;
+        const string value = ".html";
+        var cleanUrl = url.EndsWith(value) ? url.Remove(url.Length - value.Length) : url;
+        return new RankingUrl { url = url, PageEnum = GetPageEnum(cleanUrl) };
+    }
 
+    private static PageEnum GetPageEnum(string cleanUrl)
+    {
         if (cleanUrl.EndsWith("generale"))
         {
-            r.PageEnum = PageEnum.Index;
-        }
-        else if (cleanUrl.EndsWith("indice"))
-        {
-            r.PageEnum = PageEnum.IndexById;
-        }
-        else if (cleanUrl.EndsWith("indice_M"))
-        {
-            r.PageEnum = PageEnum.IndexByMerit;
-        }
-        else if (cleanUrl.EndsWith("sotto_indice"))
-        {
-            r.PageEnum = PageEnum.IndexByCourse;
-        }
-        else
-        {
-            var last = cleanUrl.Split("/").Last();
-            var splitByUnderscore = last.Split("_");
-            var reversed = splitByUnderscore.Reverse().ToArray();
-
-            if (reversed.First() == "M") r.PageEnum = PageEnum.TableByMerit;
-            else if (reversed[1] == "sotto") r.PageEnum = PageEnum.TableByCourse;
-            else if (reversed[1] == "grad") r.PageEnum = PageEnum.TableById;
+            return PageEnum.Index;
         }
 
-        return r;
+        if (cleanUrl.EndsWith("indice"))
+        {
+            return PageEnum.IndexById;
+        }
+
+        if (cleanUrl.EndsWith("indice_M"))
+        {
+            return PageEnum.IndexByMerit;
+        }
+
+        if (cleanUrl.EndsWith("sotto_indice"))
+        {
+            return PageEnum.IndexByCourse;
+        }
+
+        var last = cleanUrl.Split("/").Last();
+        var splitByUnderscore = last.Split("_");
+        var reversed = splitByUnderscore.Reverse().ToArray();
+
+        if (reversed.First() == "M") return PageEnum.TableByMerit;
+        if (reversed[1] == "sotto") return PageEnum.TableByCourse;
+        if (reversed[1] == "grad") return PageEnum.TableById;
+
+        return PageEnum.Unknown;
     }
 }
