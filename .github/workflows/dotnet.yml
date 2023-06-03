@@ -21,6 +21,10 @@ jobs:
       with:
         submodules: true
         dotnet-version: 7.0.x
+    
+    - name: ls
+      run: ls -l
+        
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
