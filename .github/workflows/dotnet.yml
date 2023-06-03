@@ -22,12 +22,21 @@ jobs:
         submodules: true
         dotnet-version: 7.0.x
     
-    - name: ls
+    - name: Extract branch name
+      shell: bash
+      run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+      id: extract_branch
+      
+    # Update references
+    - name: Git Sumbodule Update
       run: |
-        ls -l
-        cd TestNugetPackage
-        ls -l
+        git config --global user.email "polinetwork@outlook.com"
+        git config --global user.name "PoliNetwork"
+        git config --global pull.rebase false --allow-unrelated-histories
+        git pull origin   ${{ steps.extract_branch.outputs.branch }} --recurse-submodules --allow-unrelated-histories
+        git submodule update --remote --recursive  
         
+      
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
