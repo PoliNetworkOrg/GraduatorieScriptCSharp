@@ -14,11 +14,11 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0]) ? args[0] : PathUtils.FindDocsFolder();
+        var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0]) ? args[0] : PathUtils.FindFolder(Constants.FolderToFind);
         Console.WriteLine($"[INFO] baseFolder [1]: {baseFolder}");
 
         if (string.IsNullOrEmpty(baseFolder))
-            baseFolder = PathUtils.CreateAndReturnDocsFolder();
+            baseFolder = PathUtils.CreateAndReturnDocsFolder(Constants.FolderToFind);
         Console.WriteLine($"[INFO] baseFolder [2]: {baseFolder}");
 
         if (string.IsNullOrEmpty(baseFolder))
