@@ -23,7 +23,10 @@ jobs:
         dotnet-version: 7.0.x
     
     - name: ls
-      run: ls -l
+      run: |
+        ls -l
+        cd TestNugetPackage
+        ls -l
         
     - name: Restore dependencies
       run: dotnet restore
