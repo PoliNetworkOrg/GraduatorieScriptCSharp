@@ -19,7 +19,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        submodule: recursive
+        submodules: recursive
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
