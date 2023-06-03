@@ -25,4 +25,8 @@
         <None Remove="docs\**" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TestNugetPackage\SampleNuGet\SampleNuGet.csproj" />
+    </ItemGroup>
+
 </Project>
