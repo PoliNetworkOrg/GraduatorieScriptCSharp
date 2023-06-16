@@ -44,31 +44,50 @@ public class Scraper
     {
         var htmlDoc = web.Load(variable);
 
-        GetNewsLinks4(result, htmlDoc, variable);
+        GetNewsLinks4(result, htmlDoc, variable, 0);
         GetNewsLinks5(result, htmlDoc);
         
     }
 
-    private void GetNewsLinks4(List<string?> result, HtmlDocument htmlDoc, string startWebsite)
+    private void GetNewsLinks4(List<string?> result, HtmlDocument htmlDoc, string startWebsite, int depth)
     {
         var htmlNodeCollection = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
 
-        foreach (var htmlNode in htmlNodeCollection)
+        List<HtmlNode?> list = new List<HtmlNode?>();
+        foreach (HtmlNode? htmlNode in htmlNodeCollection)
         {
-            
-            var x = GetNewsLinks6(htmlNode, startWebsite);
-            if (x == null) continue;
-            foreach (var variable in x)
-            {
-                if (!string.IsNullOrEmpty(variable))
-                    result.Add(variable);
-            }
+            list.Add(htmlNode);
         }
- 
+
+        List<Action> actions = new List<Action>();
+        foreach (var htmlNode in list)
+        {
+            actions.Add(() =>
+            {
+                var x = GetNewsLinks6(htmlNode, startWebsite, depth);
+                if (x == null) return;
+                foreach (var variable in x)
+                {
+                    if (!string.IsNullOrEmpty(variable))
+                    {
+                        lock(result)
+                            result.Add(variable);
+                    }
+                }
+            });
+        }
+        Parallel.Invoke(actions.ToArray());
+        ;
+
+
+
     }
 
-    private List<string?>? GetNewsLinks6(HtmlNode arg, string startWebsite)
+    private List<string?>? GetNewsLinks6(HtmlNode? arg, string startWebsite, int depth)
     {
+        if (arg == null)
+            return null;
+        
         var href = arg.Attributes.Contains("href") ? arg.Attributes["href"].Value : null;
         if (string.IsNullOrEmpty(href))
             return null;
@@ -87,13 +106,21 @@ public class Scraper
             return new List<string?>(){href};
         
         ;
+
+        const int depthMax = 3;
+        if (depth >= depthMax)
+            return null;
+        
         href =  UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
         ;
+        
+        
+        
         if (href != startWebsite && href.StartsWith(startWebsite))
         {
             var htmlDoc = web.Load(href);
             List<string?> result = new List<string?>();
-            GetNewsLinks4(result, htmlDoc, href);
+            GetNewsLinks4(result, htmlDoc, href, depth+1);
             return result;
         }
 
