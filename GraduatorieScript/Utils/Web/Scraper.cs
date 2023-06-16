@@ -14,8 +14,9 @@ internal struct AnchorElement
 
 public class Scraper
 {
- private const string HttpsPolimiIt = "https://polimi.it";
-    private readonly List<string> newsUrl = new(){ "https://polimi.it", "https://www.polimi.it/futuri-studenti"};
+ 
+ private static readonly List<string> HttpsPolimiIt = new(){ "https://www.polimi.it", "https://polimi.it"};
+    private readonly List<string> newsUrl = new(){ "https://www.polimi.it", "https://www.polimi.it/futuri-studenti"};
     private const string targetUrl = "http://www.risultati-ammissione.polimi.it";
     private readonly HtmlWeb web = new();
 
@@ -33,6 +34,9 @@ public class Scraper
         {
             GetNewsLinks2(variable, result);
         }
+
+        result = result.Distinct().ToList();
+        ;
         return result;
     }
 
@@ -48,17 +52,19 @@ public class Scraper
     private void GetNewsLinks4(List<string?> result, HtmlDocument htmlDoc, string startWebsite)
     {
         var htmlNodeCollection = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
-        
-        List<string?>? links = htmlNodeCollection?
-            .SelectMany(x => GetNewsLinks6(x, startWebsite) ?? new List<string?>())
-            .ToList();
-        
-        if (links == null) return;
-        foreach (var variable in links)
+
+        foreach (var htmlNode in htmlNodeCollection)
         {
-            if (!string.IsNullOrEmpty(variable))
-                result.Add(variable);
+            
+            var x = GetNewsLinks6(htmlNode, startWebsite);
+            if (x == null) continue;
+            foreach (var variable in x)
+            {
+                if (!string.IsNullOrEmpty(variable))
+                    result.Add(variable);
+            }
         }
+ 
     }
 
     private List<string?>? GetNewsLinks6(HtmlNode arg, string startWebsite)
@@ -72,9 +78,16 @@ public class Scraper
         if (href.StartsWith("#"))
             return null;
 
+        if (href.Contains("dettaglio-news"))
+        {
+            ;
+        }
+
         if (href.StartsWith(targetUrl))
             return new List<string?>(){href};
         
+        ;
+        href =  UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
         ;
         if (href != startWebsite && href.StartsWith(startWebsite))
         {
@@ -107,11 +120,11 @@ public class Scraper
     {
         var href = element.Attributes["href"].Value;
 
-        var url = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt);
+        var url = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
         return new AnchorElement { Name = element.InnerText, Url = url };
     }
 
-    public IEnumerable<string> FindRankingsLink(IEnumerable<string> newsLink)
+    public IEnumerable<string> FindRankingsLink(IEnumerable<string?> newsLink)
     {
         var rankingsList = new HashSet<string>();
 
@@ -120,11 +133,20 @@ public class Scraper
         return rankingsList;
     }
 
-    private void FindSingleRankingLink(HashSet<string> rankingsList, string currentLink)
+    private void FindSingleRankingLink(HashSet<string> rankingsList, string? currentLink)
     {
+        if (string.IsNullOrEmpty(currentLink))
+            return;
+
+        if (currentLink.Contains(Constants.RisultatiAmmissionePolimiIt))
+        {
+            rankingsList.Add(currentLink);
+            return;
+        }
+        
         var htmlDoc = web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
-            .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt))
+            .Select(element => UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt.First()))
             .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
             .ToList();
 
