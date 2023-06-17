@@ -2,14 +2,13 @@
 
 public static class PathUtils
 {
-    private const string FolderToFind = "docs";
 
-    public static string? FindDocsFolder()
+    public static string? FindFolder(string folderToFind)
     {
-        return FindDocsFolder(Directory.GetCurrentDirectory());
+        return FindFolder(Directory.GetCurrentDirectory(), folderToFind);
     }
 
-    private static string? FindDocsFolder(string? startingFolder)
+    private static string? FindFolder(string? startingFolder, string folderToFind)
     {
         while (true)
         {
@@ -20,7 +19,7 @@ public static class PathUtils
 
 
             // Check if the starting folder itself is the "docs" folder
-            var findDocsFolder = System.IO.Path.Combine(startingFolder, FolderToFind);
+            var findDocsFolder = System.IO.Path.Combine(startingFolder, folderToFind);
 
             if (Directory.Exists(findDocsFolder)) return findDocsFolder;
 
@@ -28,15 +27,15 @@ public static class PathUtils
             string?[] subdirectories = Directory.GetDirectories(startingFolder);
 
             // Iterate through the subdirectories
-            return subdirectories.Select(FindDocsFolder)
+            return subdirectories.Select(x => FindFolder(x, folderToFind))
                 .FirstOrDefault(docsFolder => !string.IsNullOrEmpty(docsFolder));
         }
     }
 
-    public static string CreateAndReturnDocsFolder()
+    public static string CreateAndReturnDocsFolder(string folderToFind)
     {
         var s = Directory.GetCurrentDirectory();
-        var andReturnDocsFolder = System.IO.Path.Join(s, FolderToFind);
+        var andReturnDocsFolder = System.IO.Path.Join(s, folderToFind);
         Directory.CreateDirectory(andReturnDocsFolder);
         return andReturnDocsFolder;
     }
