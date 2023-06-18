@@ -16,8 +16,11 @@ public class UrlUtils
         return href.StartsWith("/") ? domain + href : href;
     }
 
-    public static bool CheckUrl(string url)
+    public static bool CheckUrl(string? url)
     {
+        if (string.IsNullOrEmpty(url))
+            return false;
+        
         using var client = new HttpClient();
         try
         {

@@ -64,19 +64,24 @@ public static class Parser
         //TODO: throw new NotImplementedException(); // just as a reminder
     }
 
-    public static RankingsSet ParseWeb(IEnumerable<RankingUrl> rankingsUrls)
+    public static RankingsSet ParseWeb(HashSet<RankingUrl?>? rankingsUrls)
     {
         //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
         var rankingsSet = new RankingsSet
         {
             LastUpdate = DateTime.Now,
-            Rankings = new List<Ranking>()
+            Rankings = new List<Ranking?>()
         };
 
-        foreach (var r in rankingsUrls)
+        if (rankingsUrls == null) return rankingsSet;
+        
+        ScraperOutput.Write(rankingsUrls);
+
+     
+        foreach (var download in rankingsUrls.Select(r => Scraper.Download(r?.Url))
+                     .Where(download => download != null))
         {
-            var download = Scraper.Download(r.Url);
-            if (download != null) rankingsSet.Rankings.Add(download);
+            rankingsSet.Rankings.Add(download);
         }
 
         return rankingsSet;

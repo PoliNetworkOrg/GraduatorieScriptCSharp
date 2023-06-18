@@ -31,7 +31,10 @@ public static class Program
         var rankingsUrls = mt.Execute(LinksFind.GetAll);
 
         //print links found
-        foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
+        if (rankingsUrls == null) return;
+        foreach (var r in rankingsUrls)
+            if (r != null)
+                Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 

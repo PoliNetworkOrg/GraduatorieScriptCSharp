@@ -17,7 +17,7 @@ public class Scraper
  
  private static readonly List<string> HttpsPolimiIt = new(){ "https://www.polimi.it", "https://polimi.it"};
     private readonly List<string> newsUrl = new(){ "https://www.polimi.it", "https://www.polimi.it/futuri-studenti"};
-    private const string targetUrl = "http://www.risultati-ammissione.polimi.it";
+    private const string TargetUrl = "http://www.risultati-ammissione.polimi.it";
     private readonly HtmlWeb web = new();
 
     private string[] newsTesters =
@@ -36,7 +36,6 @@ public class Scraper
         }
 
         result = result.Distinct().ToList();
-        ;
         return result;
     }
 
@@ -77,10 +76,6 @@ public class Scraper
             });
         }
         Parallel.Invoke(actions.ToArray());
-        ;
-
-
-
     }
 
     private List<string?>? GetNewsLinks6(HtmlNode? arg, string startWebsite, int depth)
@@ -102,29 +97,23 @@ public class Scraper
             ;
         }
 
-        if (href.StartsWith(targetUrl))
+        if (href.StartsWith(TargetUrl))
             return new List<string?>(){href};
-        
-        ;
 
         const int depthMax = 3;
         if (depth >= depthMax)
             return null;
         
         href =  UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
-        ;
-        
-        
-        
-        if (href != startWebsite && href.StartsWith(startWebsite))
-        {
-            var htmlDoc = web.Load(href);
-            List<string?> result = new List<string?>();
-            GetNewsLinks4(result, htmlDoc, href, depth+1);
-            return result;
-        }
 
-        return null;
+
+        if (href == startWebsite || !href.StartsWith(startWebsite)) return null;
+        
+        var htmlDoc = web.Load(href);
+        List<string?> result = new List<string?>();
+        GetNewsLinks4(result, htmlDoc, href, depth+1);
+        return result;
+
     }
 
     private static void GetNewsLinks5(List<string?> result, HtmlDocument htmlDoc)
@@ -183,8 +172,11 @@ public class Scraper
         }
     }
 
-    public static Ranking? Download(string url)
+    public static Ranking? Download(string? url)
     {
+        if (string.IsNullOrEmpty(url))
+            return null;
+        
         using var client = new HttpClient();
         var response = client.GetAsync(url);
         response.Wait();

@@ -8,27 +8,32 @@ namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
-    public static HashSet<RankingUrl> GetAll()
+    public static HashSet<RankingUrl?> GetAll()
     {
         var polimiNewsLinks = GetPolimiNewsLink();
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var rankingsLinks = new HashSet<string>();
+        var rankingsLinks = new HashSet<string?>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
         var web = new HtmlWeb();
 
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
-            .Select(RankingUrl.From)
-            .Where(r => r.PageEnum == PageEnum.Index)
-            .Where(r => UrlUtils.CheckUrl(r.Url))
+            .Select(GetRanking)
+            .Where(r => r?.PageEnum == PageEnum.Index)
+            .Where(r => UrlUtils.CheckUrl(r?.Url))
             .ToHashSet();
 
         var len = rankingsLinks.ToArray().Length;
 
         return rankingsUrls;
+    }
+
+    private static RankingUrl? GetRanking(string? s)
+    {
+        return string.IsNullOrEmpty(s) ? null : RankingUrl.From(s);
     }
 
 
