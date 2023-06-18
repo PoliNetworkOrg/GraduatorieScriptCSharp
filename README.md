@@ -23,5 +23,5 @@ dotnet restore
 ```
 3. run
 ```sh
-dotnet run
+dotnet run --project GraduatorieScript
 ```
