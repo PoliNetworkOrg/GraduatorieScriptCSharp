@@ -20,7 +20,7 @@ public class UrlUtils
     {
         if (string.IsNullOrEmpty(url))
             return false;
-        
+
         using var client = new HttpClient();
         try
         {

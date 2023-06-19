@@ -39,7 +39,7 @@ public class RankingsSet
     {
         if (ranking == null)
             return;
-        
+
         var alreadyPresent = Contains(ranking);
         if (alreadyPresent)
             Rankings.Add(ranking);

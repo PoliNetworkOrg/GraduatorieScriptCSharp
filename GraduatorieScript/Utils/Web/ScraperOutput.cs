@@ -7,18 +7,14 @@ public static class ScraperOutput
 {
     private const string FilePath = "links.txt";
 
-    public static void Write(HashSet<RankingUrl?>? rankingsUrls)
+    public static void Write(HashSet<RankingUrl?>? rankingsUrls, string docFolder)
     {
-        var dir = Directory.GetCurrentDirectory();
-
-        var filePath = dir + "\\" + FilePath;
-        if (File.Exists(filePath))
-        {
-            AddFromFile(rankingsUrls);
-        }
+        var filePath = docFolder + "/" + FilePath;
+        if (File.Exists(filePath)) AddFromFile(rankingsUrls);
 
         var s = "";
-        var variableUrls = rankingsUrls?.Select(variable => variable?.Url).Where(variableUrl => !string.IsNullOrEmpty(variableUrl));
+        var variableUrls = rankingsUrls?.Select(variable => variable?.Url)
+            .Where(variableUrl => !string.IsNullOrEmpty(variableUrl));
         if (variableUrls != null)
             foreach (var variableUrl in variableUrls)
             {
@@ -26,9 +22,9 @@ public static class ScraperOutput
                 s += "\n";
             }
 
-        
+
         Console.WriteLine($"Writing links to folder {filePath} at {DateTime.Now}");
-        File.WriteAllText(filePath, s );
+        File.WriteAllText(filePath, s);
     }
 
     private static void AddFromFile(ICollection<RankingUrl?>? rankingsUrls)
@@ -38,12 +34,8 @@ public static class ScraperOutput
         {
             var x = File.ReadAllLines(dir + "\\" + FilePath);
             foreach (var variable in x)
-            {
                 if (!string.IsNullOrEmpty(variable))
-                {
                     AddToList(rankingsUrls, variable);
-                }
-            }
         }
         catch
         {
@@ -55,7 +47,7 @@ public static class ScraperOutput
     {
         var isPresent = FindIfPresent(rankingsUrls, variable);
         if (isPresent) return;
-        rankingsUrls?.Add(new RankingUrl(){ PageEnum =  PageEnum.Index, Url = variable});
+        rankingsUrls?.Add(new RankingUrl { PageEnum = PageEnum.Index, Url = variable });
     }
 
     private static bool FindIfPresent(IEnumerable<RankingUrl?>? rankingsUrls, string variable)

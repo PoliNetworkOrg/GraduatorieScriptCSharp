@@ -64,7 +64,7 @@ public static class Parser
         //TODO: throw new NotImplementedException(); // just as a reminder
     }
 
-    public static RankingsSet ParseWeb(HashSet<RankingUrl?>? rankingsUrls)
+    public static RankingsSet ParseWeb(HashSet<RankingUrl?>? rankingsUrls, string docFolder)
     {
         //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
         var rankingsSet = new RankingsSet
@@ -74,15 +74,13 @@ public static class Parser
         };
 
         if (rankingsUrls == null) return rankingsSet;
-        
-        ScraperOutput.Write(rankingsUrls);
 
-     
+        ScraperOutput.Write(rankingsUrls, docFolder);
+
+
         foreach (var download in rankingsUrls.Select(r => Scraper.Download(r?.Url))
                      .Where(download => download != null))
-        {
             rankingsSet.Rankings.Add(download);
-        }
 
         return rankingsSet;
     }
