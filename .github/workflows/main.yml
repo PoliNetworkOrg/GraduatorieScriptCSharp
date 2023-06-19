@@ -36,3 +36,13 @@ jobs:
         run: dotnet build --configuration Release --no-restore
       - name: Run
         run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj
+
+
+      - name: git push
+        run: |
+          git add --force /home/runner/work/GraduatorieScriptCSharp/GraduatorieScriptCSharp\links.txt
+          git config --global user.email "polinetwork@outlook.com"
+          git config --global user.name "PoliNetwork"
+          git commit -m 'update links.txt'
+          git push origin scraper-output --force
+          
