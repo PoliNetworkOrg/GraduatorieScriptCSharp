@@ -16,6 +16,20 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
+          
+         
+         # Update references
+      - name: Git Sumbodule Update
+        run: |
+          git config --global user.email "polinetwork@outlook.com"
+          git config --global user.name "PoliNetwork"
+          git config --global pull.rebase false --allow-unrelated-histories
+          git pull origin   ${{ steps.extract_branch.outputs.branch }} --recurse-submodules --allow-unrelated-histories
+          git submodule init  
+          git submodule update --remote --recursive  
+          git submodule update
+        
+          
       - name: Install dependencies
         run: dotnet restore
       - name: Build
