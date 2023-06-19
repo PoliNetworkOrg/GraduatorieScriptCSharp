@@ -63,15 +63,19 @@ public class Scraper
         {
             actions.Add(() =>
             {
-                var x = GetNewsLinks6(htmlNode, startWebsite, depth);
-                if (x == null) return;
-                foreach (var variable in x)
+                try
                 {
-                    if (!string.IsNullOrEmpty(variable))
+                    var x = GetNewsLinks6(htmlNode, startWebsite, depth);
+                    if (x == null) return;
+                    foreach (var variable in x.Where(variable => !string.IsNullOrEmpty(variable)))
                     {
-                        lock(result)
+                        lock (result)
                             result.Add(variable);
                     }
+                }
+                catch
+                {
+                    // ignored
                 }
             });
         }
