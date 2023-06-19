@@ -26,6 +26,8 @@ public static class ScraperOutput
                 s += "\n";
             }
 
+        
+        Console.WriteLine($"Writing links to folder {filePath} at {DateTime.Now}");
         File.WriteAllText(filePath, s );
     }
 
