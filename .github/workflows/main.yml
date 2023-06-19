@@ -34,5 +34,5 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
-      - name: Test
-        run: dotnet run 
+      - name: Run
+        run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj
