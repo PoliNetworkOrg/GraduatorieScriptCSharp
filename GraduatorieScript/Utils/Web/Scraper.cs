@@ -3,7 +3,6 @@ using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Transformer;
 using HtmlAgilityPack;
-using MySqlX.XDevAPI.Common;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -18,12 +17,16 @@ public class Scraper
     private const string TargetUrl = "http://www.risultati-ammissione.polimi.it";
 
     private static readonly List<string> HttpsPolimiIt = new() { "https://www.polimi.it", "https://polimi.it" };
+
+    private static readonly HashSet<string> Navigated = new();
+
     private readonly List<string> newsUrl = new()
     {
-        "https://www.polimi.it", 
+        "https://www.polimi.it",
         "https://www.polimi.it/futuri-studenti",
         "https://www.poliorientami.polimi.it/come-si-accede/design/punteggi-esiti-e-graduatorie/"
     };
+
     private readonly HtmlWeb web = new();
 
     private string[] newsTesters =
@@ -33,12 +36,10 @@ public class Scraper
         "matricola", "merito", "nuovi studenti"
     };
 
-    private static readonly HashSet<string> Navigated = new HashSet<string>();
-
     public IEnumerable<string?>? GetNewsLinks()
     {
         var result = new WrapperList<string?>();
-        List<Action> actions = new List<Action>();
+        var actions = new List<Action>();
         foreach (var variable in newsUrl)
         {
             var result1 = result;
@@ -48,14 +49,13 @@ public class Scraper
 
                 var enumerable = result2.Where(value => !string.IsNullOrEmpty(value));
                 foreach (var value in enumerable)
-                {
                     lock (result1)
                     {
                         result1.Add(value);
                     }
-                }
             });
         }
+
         Parallel.Invoke(actions.ToArray());
 
 
@@ -63,9 +63,9 @@ public class Scraper
         return newsLinks;
     }
 
-    private List<string?> GetNewsLinks2(string variable )
+    private List<string?> GetNewsLinks2(string variable)
     {
-        List<string?> result = new List<string?>();
+        var result = new List<string?>();
         var htmlDoc = web.Load(variable);
 
         GetNewsLinks4(result, htmlDoc, variable, 0);
@@ -107,22 +107,19 @@ public class Scraper
     {
         var list = SplitIntoChunks(action.ToList(), 10);
         var actionsEnumerable = list.Select(variable => variable.ToArray());
-        foreach (var actions in actionsEnumerable)
-        {
-            Parallel.Invoke(actions);
-        }
+        foreach (var actions in actionsEnumerable) Parallel.Invoke(actions);
     }
 
     private static List<List<T>> SplitIntoChunks<T>(List<T> list, int chunkSize)
     {
         var chunks = new List<List<T>>();
-        
+
         for (var i = 0; i < list.Count; i += chunkSize)
         {
             var chunk = list.Skip(i).Take(chunkSize).ToList();
             chunks.Add(chunk);
         }
-        
+
         return chunks;
     }
 
@@ -156,10 +153,10 @@ public class Scraper
 
         if (Navigated.Contains(href))
             return null;
-        
+
         var htmlDoc = web.Load(href);
         Navigated.Add(href);
-        
+
         var result = new List<string?>();
         GetNewsLinks4(result, htmlDoc, href, depth + 1);
         return result;

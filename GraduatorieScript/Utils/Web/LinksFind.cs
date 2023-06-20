@@ -23,7 +23,7 @@ public static class LinksFind
             .Where(r => UrlUtils.CheckUrl(r?.Url))
             .ToHashSet();
 
-   
+
         var len = rankingsLinks.ToArray().Length;
         Console.WriteLine($"len {len}");
         return rankingsUrls;

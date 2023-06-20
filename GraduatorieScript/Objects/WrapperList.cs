@@ -1,19 +1,18 @@
 ﻿namespace GraduatorieScript.Objects;
 
-public class WrapperList<T> 
+public class WrapperList<T>
 {
     private List<T?>? items;
+
     public void Add(T? value)
     {
-        this.items ??= new List<T?>();
-        this.items?.Add(value);
+        items ??= new List<T?>();
+        items?.Add(value);
     }
 
     public List<T?>? Distinct()
     {
-        var list = this.items;
+        var list = items;
         return list?.Distinct().ToList();
     }
-
- 
 }
