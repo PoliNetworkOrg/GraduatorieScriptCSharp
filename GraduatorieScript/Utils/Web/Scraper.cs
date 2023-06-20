@@ -63,7 +63,7 @@ public class Scraper
         return newsLinks;
     }
 
-    private List<string?> GetNewsLinks2(string variable)
+    private IEnumerable<string?> GetNewsLinks2(string variable)
     {
         var result = new List<string?>();
         var htmlDoc = web.Load(variable);
@@ -77,12 +77,10 @@ public class Scraper
     {
         var htmlNodeCollection = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
 
-        var list = new List<HtmlNode?>();
-        foreach (var htmlNode in htmlNodeCollection) list.Add(htmlNode);
+        var list = htmlNodeCollection.ToList();
 
-        var actions = new List<Action>();
-        foreach (var htmlNode in list)
-            actions.Add(() =>
+        Action Selector(HtmlNode htmlNode) =>
+            () =>
             {
                 try
                 {
@@ -98,8 +96,9 @@ public class Scraper
                 {
                     // ignored
                 }
-            });
-        var action = actions.ToArray();
+            };
+
+        var action = list.Select((Func<HtmlNode, Action>)Selector).ToArray();
         InvokeSplit(action);
     }
 
@@ -110,7 +109,7 @@ public class Scraper
         foreach (var actions in actionsEnumerable) Parallel.Invoke(actions);
     }
 
-    private static List<List<T>> SplitIntoChunks<T>(List<T> list, int chunkSize)
+    private static List<List<T>> SplitIntoChunks<T>(IReadOnlyCollection<T> list, int chunkSize)
     {
         var chunks = new List<List<T>>();
 
