@@ -79,8 +79,9 @@ public class Scraper
 
         var list = htmlNodeCollection.ToList();
 
-        Action Selector(HtmlNode htmlNode) =>
-            () =>
+        Action Selector(HtmlNode htmlNode)
+        {
+            return () =>
             {
                 try
                 {
@@ -97,6 +98,7 @@ public class Scraper
                     // ignored
                 }
             };
+        }
 
         var action = list.Select((Func<HtmlNode, Action>)Selector).ToArray();
         InvokeSplit(action);
