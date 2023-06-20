@@ -99,7 +99,31 @@ public class Scraper
                     // ignored
                 }
             });
-        Parallel.Invoke(actions.ToArray());
+        var action = actions.ToArray();
+        InvokeSplit(action);
+    }
+
+    private static void InvokeSplit(IEnumerable<Action> action)
+    {
+        var list = SplitIntoChunks(action.ToList(), 10);
+        var actionsEnumerable = list.Select(variable => variable.ToArray());
+        foreach (var actions in actionsEnumerable)
+        {
+            Parallel.Invoke(actions);
+        }
+    }
+
+    private static List<List<T>> SplitIntoChunks<T>(List<T> list, int chunkSize)
+    {
+        var chunks = new List<List<T>>();
+        
+        for (var i = 0; i < list.Count; i += chunkSize)
+        {
+            var chunk = list.Skip(i).Take(chunkSize).ToList();
+            chunks.Add(chunk);
+        }
+        
+        return chunks;
     }
 
     private List<string?>? GetNewsLinks6(HtmlNode? arg, string startWebsite, int depth)
