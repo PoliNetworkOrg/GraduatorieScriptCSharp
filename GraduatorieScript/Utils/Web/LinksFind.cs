@@ -38,7 +38,8 @@ public static class LinksFind
     private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
-        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
+        var nowYear = DateTime.Now.Year;
+        for (var i = nowYear - 1; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 

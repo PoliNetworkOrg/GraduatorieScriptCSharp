@@ -17,7 +17,12 @@ public class Scraper
     private const string TargetUrl = "http://www.risultati-ammissione.polimi.it";
 
     private static readonly List<string> HttpsPolimiIt = new() { "https://www.polimi.it", "https://polimi.it" };
-    private readonly List<string> newsUrl = new() { "https://www.polimi.it", "https://www.polimi.it/futuri-studenti" };
+    private readonly List<string> newsUrl = new()
+    {
+        "https://www.polimi.it", 
+        "https://www.polimi.it/futuri-studenti",
+        "https://www.poliorientami.polimi.it/come-si-accede/design/punteggi-esiti-e-graduatorie/"
+    };
     private readonly HtmlWeb web = new();
 
     private string[] newsTesters =
@@ -27,21 +32,42 @@ public class Scraper
         "matricola", "merito", "nuovi studenti"
     };
 
-    public IEnumerable<string?> GetNewsLinks()
+    public List<string?>? GetNewsLinks()
     {
-        var result = new List<string?>();
-        foreach (var variable in newsUrl) GetNewsLinks2(variable, result);
+        var result = new WrapperList<string?>();
+        List<Action> actions = new List<Action>();
+        foreach (var variable in newsUrl)
+        {
+            var result1 = result;
+            actions.Add(() =>
+            {
+                var result2 = GetNewsLinks2(variable);
 
-        result = result.Distinct().ToList();
-        return result;
+                var enumerable = result2.Where(value => !string.IsNullOrEmpty(value));
+                foreach (var value in enumerable)
+                {
+                    lock (result1)
+                    {
+                        result1.Add(value);
+                    }
+                }
+            });
+        }
+        Parallel.Invoke(actions.ToArray());
+
+
+        var newsLinks = result.Distinct();
+        return newsLinks;
     }
 
-    private void GetNewsLinks2(string variable, List<string?> result)
+    private List<string?> GetNewsLinks2(string variable )
     {
+        List<string?> result = new List<string?>();
         var htmlDoc = web.Load(variable);
 
         GetNewsLinks4(result, htmlDoc, variable, 0);
         GetNewsLinks5(result, htmlDoc);
+        return result;
     }
 
     private void GetNewsLinks4(List<string?> result, HtmlDocument htmlDoc, string startWebsite, int depth)
@@ -131,12 +157,14 @@ public class Scraper
         return new AnchorElement { Name = element.InnerText, Url = url };
     }
 
-    public IEnumerable<string> FindRankingsLink(IEnumerable<string?> newsLink)
+    public IEnumerable<string> FindRankingsLink(IEnumerable<string?>? newsLink)
     {
         var rankingsList = new HashSet<string>();
 
-        Parallel.Invoke(newsLink
-            .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); })).ToArray());
+        if (newsLink != null)
+            Parallel.Invoke(newsLink
+                .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); }))
+                .ToArray());
         return rankingsList;
     }
 

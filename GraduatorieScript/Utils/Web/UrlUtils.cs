@@ -2,7 +2,7 @@ using System.Net;
 
 namespace GraduatorieScript.Utils.Web;
 
-public class UrlUtils
+public static class UrlUtils
 {
     /// <summary>
     ///     Taken an href from the a tag which could be either an internal link or an
