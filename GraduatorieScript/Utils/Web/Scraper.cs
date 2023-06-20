@@ -32,7 +32,7 @@ public class Scraper
         "matricola", "merito", "nuovi studenti"
     };
 
-    public List<string?>? GetNewsLinks()
+    public IEnumerable<string?>? GetNewsLinks()
     {
         var result = new WrapperList<string?>();
         List<Action> actions = new List<Action>();
