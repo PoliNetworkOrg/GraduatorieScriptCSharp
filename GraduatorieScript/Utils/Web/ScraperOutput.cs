@@ -14,14 +14,16 @@ public static class ScraperOutput
 
         var s = "";
         var variableUrls = rankingsUrls?.Select(variable => variable?.Url)
-            .Where(variableUrl => !string.IsNullOrEmpty(variableUrl));
+            .Where(variableUrl => !string.IsNullOrEmpty(variableUrl)).ToList();
         if (variableUrls != null)
+        {
+            variableUrls.Sort();
             foreach (var variableUrl in variableUrls)
             {
                 s += variableUrl;
                 s += "\n";
             }
-
+        }
 
         Console.WriteLine($"Writing links to folder {filePath} at {DateTime.Now}");
         File.WriteAllText(filePath, s);
