@@ -44,9 +44,9 @@ jobs:
           pwd
           ls -l GraduatorieScript
           ls -l docs
-          git add --force docs/links.txt
+          (git add --force docs/links.txt) || true
           git config --global user.email "polinetwork@outlook.com"
           git config --global user.name "PoliNetwork"
-          git commit -m 'update links.txt'
-          git push origin scraper-output --force
+          (git commit -m 'update links.txt') || true
+          (git push origin scraper-output --force) || true
           
