@@ -2,7 +2,6 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
-using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -17,8 +16,6 @@ public static class LinksFind
         var rankingsLinks = new HashSet<string?>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
-        var web = new HtmlWeb();
-
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
             .Select(GetRanking)
@@ -26,8 +23,9 @@ public static class LinksFind
             .Where(r => UrlUtils.CheckUrl(r?.Url))
             .ToHashSet();
 
+   
         var len = rankingsLinks.ToArray().Length;
-
+        Console.WriteLine($"len {len}");
         return rankingsUrls;
     }
 
