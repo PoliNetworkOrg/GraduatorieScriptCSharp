@@ -3,6 +3,7 @@ using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Transformer;
 using HtmlAgilityPack;
+using MySqlX.XDevAPI.Common;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -31,6 +32,8 @@ public class Scraper
         "immatricolazioni", "immatricolazione", "punteggio",
         "matricola", "merito", "nuovi studenti"
     };
+
+    private static readonly HashSet<string> Navigated = new HashSet<string>();
 
     public IEnumerable<string?>? GetNewsLinks()
     {
@@ -127,7 +130,12 @@ public class Scraper
 
         if (href == startWebsite || !href.StartsWith(startWebsite)) return null;
 
+        if (Navigated.Contains(href))
+            return null;
+        
         var htmlDoc = web.Load(href);
+        Navigated.Add(href);
+        
         var result = new List<string?>();
         GetNewsLinks4(result, htmlDoc, href, depth + 1);
         return result;
