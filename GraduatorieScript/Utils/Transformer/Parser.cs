@@ -498,12 +498,11 @@ public static class Parser
             return null;
 
         Console.WriteLine($"{url?.Url} {url?.PageEnum} valid");
-        
-        
+
+
         //TODO: throw new NotImplementedException(); // just as a reminder
-        
-        return new Ranking(){Url = url};
- 
+
+        return new Ranking { Url = url };
     }
 
     public static RankingsSet? ParseLocalJson(string jsonPath)
@@ -537,11 +536,8 @@ public static class Parser
             .Select(r => Scraper.Download(r?.Url));
         var enumerable = select
             .Where(download => download != null);
-        
-        foreach (var download in enumerable)
-        {
-            AddToList(rankingsSet, download);
-        }
+
+        foreach (var download in enumerable) AddToList(rankingsSet, download);
 
         return rankingsSet;
     }
@@ -550,7 +546,7 @@ public static class Parser
     {
         if (download?.Item1 == null)
             return;
-        
+
         rankingsSet.Rankings.Add(download.Item1);
     }
 }

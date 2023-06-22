@@ -31,7 +31,6 @@ public static class ScraperOutput
 
     private static void AddFromFile(ICollection<RankingUrl?>? rankingsUrls, string filePath)
     {
-
         try
         {
             var x = File.ReadAllLines(filePath);
