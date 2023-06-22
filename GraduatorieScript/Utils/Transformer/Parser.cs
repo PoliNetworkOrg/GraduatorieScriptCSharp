@@ -503,7 +503,7 @@ public static class Parser
         //TODO: throw new NotImplementedException(); // just as a reminder
     }
 
-    private static RankingsSet? ParseLocalJson(string jsonPath)
+    public static RankingsSet? ParseLocalJson(string jsonPath)
     {
         if (string.IsNullOrEmpty(jsonPath) || !File.Exists(jsonPath))
             return null;
@@ -514,5 +514,39 @@ public static class Parser
 
         var rankingsSet = JsonConvert.DeserializeObject<RankingsSet>(fileContent);
         return rankingsSet;
+    }
+
+    public static RankingsSet ParseWeb(List<RankingUrl?>? rankingsUrls, string docFolder)
+    {
+        //download delle graduatorie, ricorsivamente, e inserimento nel rankingsSet
+        var rankingsSet = new RankingsSet
+        {
+            LastUpdate = DateTime.Now,
+            Rankings = new List<Ranking?>()
+        };
+
+        if (rankingsUrls == null) return rankingsSet;
+
+        ScraperOutput.Write(rankingsUrls, docFolder);
+
+
+        var enumerable = rankingsUrls
+            .Select(r => Scraper.Download(r?.Url))
+            .Where(download => download != null);
+        
+        foreach (var download in enumerable)
+        {
+            AddToList(rankingsSet, download);
+        }
+
+        return rankingsSet;
+    }
+
+    private static void AddToList(RankingsSet rankingsSet, Tuple<Ranking?, HttpContent>? download)
+    {
+        if (download?.Item1 == null)
+            return;
+        
+        rankingsSet.Rankings.Add(download.Item1);
     }
 }

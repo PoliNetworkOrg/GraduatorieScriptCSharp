@@ -7,7 +7,7 @@ public static class ScraperOutput
 {
     private const string FilePath = "links.txt";
 
-    public static void Write(HashSet<RankingUrl?>? rankingsUrls, string docFolder)
+    public static void Write(List<RankingUrl?>? rankingsUrls, string docFolder)
     {
         var filePath = docFolder + "/" + FilePath;
         if (File.Exists(filePath)) AddFromFile(rankingsUrls);

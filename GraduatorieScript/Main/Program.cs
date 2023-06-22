@@ -44,22 +44,22 @@ public static class Program
 
         var rankings = Parser.GetRankings(baseFolder, outputJsonPath, rankingsUrls);
 
-        /*
+        
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
         var rankingsSetFromHtmls = Parser.FindParseHtmls(baseFolder);
 
         //estraiamo i risultati dal web
-        var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls, baseFolder);
+        var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls.ToList(), baseFolder);
 
         //estraiamo i risultati da un eventuale json locale
         var rankingsSetFromLocalJson = Parser.ParseLocalJson(outputJsonPath);
 
         //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
         var fullRankingsSet = RankingsSet.Merge(rankingsSetFromHtmls, rankingsSetFromWeb, rankingsSetFromLocalJson);
-        */
+        
 
         //ottenere un json 
-        var stringJson = JsonConvert.SerializeObject(rankings);
+        var stringJson = JsonConvert.SerializeObject(fullRankingsSet);
 
         //scriviamolo su disco
         File.WriteAllText(outputJsonPath, stringJson);
