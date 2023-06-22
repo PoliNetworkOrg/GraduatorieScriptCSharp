@@ -4,6 +4,7 @@ using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
 using Newtonsoft.Json;
+using SampleNuGet.Utils;
 
 namespace GraduatorieScript.Main;
 
@@ -11,9 +12,11 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var mt = new SampleNuGet.Utils.Metrics();
+        var mt = new Metrics();
 
-        var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0]) ? args[0] : PathUtils.FindFolder(Constants.FolderToFind);
+        var baseFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0])
+            ? args[0]
+            : PathUtils.FindFolder(Constants.FolderToFind);
         Console.WriteLine($"[INFO] baseFolder [1]: {baseFolder}");
 
         if (string.IsNullOrEmpty(baseFolder))
@@ -31,7 +34,10 @@ public static class Program
         RankingUrl[] rankingsUrls = { RankingUrl.From("http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html") };
 
         //print links found
-        foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
+        if (rankingsUrls == null) return;
+        foreach (var r in rankingsUrls)
+            if (r != null)
+                Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
@@ -42,7 +48,7 @@ public static class Program
         var rankingsSetFromHtmls = Parser.FindParseHtmls(baseFolder);
 
         //estraiamo i risultati dal web
-        var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls);
+        var rankingsSetFromWeb = Parser.ParseWeb(rankingsUrls, baseFolder);
 
         //estraiamo i risultati da un eventuale json locale
         var rankingsSetFromLocalJson = Parser.ParseLocalJson(outputJsonPath);

@@ -2,40 +2,44 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
-using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
-    public static HashSet<RankingUrl> GetAll()
+    public static HashSet<RankingUrl?> GetAll()
     {
         var polimiNewsLinks = GetPolimiNewsLink();
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var rankingsLinks = new HashSet<string>();
+        var rankingsLinks = new HashSet<string?>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
-
-        var web = new HtmlWeb();
 
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
-            .Select(RankingUrl.From)
-            .Where(r => r.PageEnum == PageEnum.Index)
-            .Where(r => UrlUtils.CheckUrl(r.Url))
+            .Select(GetRanking)
+            .Where(r => r?.PageEnum == PageEnum.Index)
+            .Where(r => UrlUtils.CheckUrl(r?.Url))
             .ToHashSet();
 
-        var len = rankingsLinks.ToArray().Length;
 
+        var len = rankingsLinks.ToArray().Length;
+        Console.WriteLine($"len {len}");
         return rankingsUrls;
+    }
+
+    private static RankingUrl? GetRanking(string? s)
+    {
+        return string.IsNullOrEmpty(s) ? null : RankingUrl.From(s);
     }
 
 
     private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
-        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
+        var nowYear = DateTime.Now.Year;
+        for (var i = nowYear - 1; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 

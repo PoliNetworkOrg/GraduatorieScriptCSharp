@@ -2,7 +2,6 @@
 
 public static class PathUtils
 {
-
     public static string? FindFolder(string folderToFind)
     {
         return FindFolder(Directory.GetCurrentDirectory(), folderToFind);
