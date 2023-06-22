@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
 
-
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
 public class RankingUrl

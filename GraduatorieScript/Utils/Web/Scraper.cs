@@ -230,11 +230,11 @@ public class Scraper
         using var client = new HttpClient();
         var response = client.GetAsync(url);
         response.Wait();
-        HttpContent content = response.Result.Content;
+        var content = response.Result.Content;
         var result = content.ReadAsStringAsync().Result;
 
-        RankingUrl? rankingUrl = RankingUrl.From(url);
+        var rankingUrl = RankingUrl.From(url);
         var ranking = Parser.ParseHtml(result, rankingUrl);
-        return new Tuple<Ranking?,HttpContent>(ranking, content);
+        return new Tuple<Ranking?, HttpContent>(ranking, content);
     }
 }

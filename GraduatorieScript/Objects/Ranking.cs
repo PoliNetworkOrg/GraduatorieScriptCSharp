@@ -7,14 +7,14 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class Ranking
 {
-    private string? school;
-    private string? year;
-    private string? phase;
-    public RankingUrl? Url;
     private Dictionary<string, List<StudentResult>>? byCourse;
     private List<StudentResult>? byMerit;
     private string? extra;
     public DateTime LastUpdate;
+    private string? phase;
+    private string? school;
+    public RankingUrl? Url;
+    private string? year;
 
     public bool IsSimilarTo(Ranking ranking)
     {
