@@ -138,13 +138,19 @@ public static class Parser
 
                 List<HtmlPage> tablePages = new();
 
-                Action Selector(RankingUrl url) =>
-                    () =>
+                Action Selector(RankingUrl url)
+                {
+                    return () =>
                     {
-                        bool Predicate(HtmlPage h) => h?.Url?.Url == url?.Url;
+                        bool Predicate(HtmlPage h)
+                        {
+                            return h?.Url?.Url == url?.Url;
+                        }
+
                         var htmlPage = newHtmls.ToList().Find(Predicate) ?? HtmlPage.FromUrl(url);
                         if (htmlPage != null) tablePages.Add(htmlPage);
                     };
+                }
 
                 Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
                 switch (html.Url?.PageEnum)
