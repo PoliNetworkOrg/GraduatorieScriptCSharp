@@ -1,6 +1,5 @@
 ﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
-using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
@@ -28,13 +27,17 @@ public static class Program
         }
 
         //find links from web
-        var rankingsUrls = mt.Execute(LinksFind.GetAll);
+//        var rankingsUrls = mt.Execute(LinksFind.GetAll);
+        RankingUrl[] rankingsUrls = { RankingUrl.From("http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html") };
 
         //print links found
         foreach (var r in rankingsUrls) Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
+        var rankings = Parser.GetRankings(baseFolder, outputJsonPath, rankingsUrls);
+
+        /*
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
         var rankingsSetFromHtmls = Parser.FindParseHtmls(baseFolder);
 
@@ -46,9 +49,10 @@ public static class Program
 
         //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
         var fullRankingsSet = RankingsSet.Merge(rankingsSetFromHtmls, rankingsSetFromWeb, rankingsSetFromLocalJson);
+        */
 
         //ottenere un json 
-        var stringJson = JsonConvert.SerializeObject(fullRankingsSet);
+        var stringJson = JsonConvert.SerializeObject(rankings);
 
         //scriviamolo su disco
         File.WriteAllText(outputJsonPath, stringJson);

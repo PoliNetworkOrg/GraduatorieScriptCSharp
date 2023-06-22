@@ -13,7 +13,7 @@ public class UrlUtils
     /// <returns>The full url</returns>
     public static string UrlifyLocalHref(string href, string domain)
     {
-        return href.StartsWith("/") ? domain + href : href;
+        return !href.Contains(domain) ? domain + href : href;
     }
 
     public static bool CheckUrl(string url)
