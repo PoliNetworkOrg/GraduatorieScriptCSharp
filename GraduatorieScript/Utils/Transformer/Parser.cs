@@ -21,14 +21,13 @@ public class HtmlPage
         Url = url;
     }
 
- 
 
     private HtmlPage(Tuple<Ranking?, HttpContent> html)
     {
         var result = html.Item2.ReadAsStringAsync().Result;
-        HtmlDocument htmlDocument = new HtmlDocument();
+        var htmlDocument = new HtmlDocument();
         htmlDocument.LoadHtml(result);
-        this.Html = htmlDocument;
+        Html = htmlDocument;
     }
 
     public static HtmlPage? FromUrl(RankingUrl? url)
@@ -36,7 +35,7 @@ public class HtmlPage
         var html = Scraper.Download(url?.Url);
         if (html == null || string.IsNullOrEmpty(html.ToString()))
             return null;
-        if (html.Item1 != null) 
+        if (html.Item1 != null)
             html.Item1.Url = url;
         return new HtmlPage(html);
     }
@@ -53,7 +52,7 @@ public static class Parser
         var rankingsSet = new RankingsSet { LastUpdate = DateTime.Now };
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
         var newUrls = urls.Where(u => savedHtmls.All(s => s.Url?.Url != u?.Url));
-        List<HtmlPage> newHtmls = newUrls
+        var newHtmls = newUrls
             .Where(url => url != null)
             .Select(HtmlPage.FromUrl)
             .Where(h => h != null)
@@ -70,8 +69,8 @@ public static class Parser
 
             // get ranking info
             var intestazioni = doc.GetElementsByClassName("intestazione").ToList();
-            string schoolStr = intestazioni[2].InnerText.Split("\n")[0].ToLower();
-            SchoolEnum school = GetSchoolEnum(schoolStr);
+            var schoolStr = intestazioni[2].InnerText.Split("\n")[0].ToLower();
+            var school = GetSchoolEnum(schoolStr);
             var urlUrl = index.Url?.Url;
             if (school == SchoolEnum.Unknown)
             {
@@ -80,19 +79,20 @@ public static class Parser
                 );
                 continue;
             }
+
             int year = Convert.ToInt16(intestazioni[1].InnerText.Split("Year ")[1].Split("/")[0]);
-            string phase = intestazioni[3].InnerText.Split("\n")[0].Split("- ")[1];
-            string notes = intestazioni[4].InnerText.Split("\n")[0];
+            var phase = intestazioni[3].InnerText.Split("\n")[0].Split("- ")[1];
+            var notes = intestazioni[4].InnerText.Split("\n")[0];
 
             var aTags = doc.GetElementsByClassName("titolo")
                 .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
                 .Where(a => !a.InnerText.Contains("matricola"))
                 .ToList(); // filter out id ranking
 
-            int lastUrlIndex = urlUrl?.LastIndexOf('/') ?? -1;
-            string baseDomain = urlUrl?[..lastUrlIndex] + "/";
+            var lastUrlIndex = urlUrl?.LastIndexOf('/') ?? -1;
+            var baseDomain = urlUrl?[..lastUrlIndex] + "/";
 
-            List<RankingUrl> subUrls = aTags
+            var subUrls = aTags
                 .Select(a => a.GetAttributeValue("href", null))
                 .Where(href => href != null)
                 .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
@@ -110,11 +110,9 @@ public static class Parser
                 if (subIndex == null)
                 {
                     var html = HtmlPage.FromUrl(url);
-                    if (html != null)
-                    {
-                        subIndex = html;
-                    }
+                    if (html != null) subIndex = html;
                 }
+
                 if (subIndex != null)
                     subIndexes.Add(subIndex);
             }
@@ -144,7 +142,6 @@ public static class Parser
                     var htmlPage = newHtmls.ToList().Find(h => h?.Url?.Url == url?.Url) ?? HtmlPage.FromUrl(url);
                     if (htmlPage != null)
                         tablePages.Add(htmlPage);
-                    
                 };
                 Parallel.Invoke(tablesLinks.Select(selector).ToArray());
                 switch (html.Url?.PageEnum)
@@ -172,6 +169,7 @@ public static class Parser
             Console.WriteLine($"{meritTable.Count} {courseTables.Count}");
             // TODO: join rows into rankings
         }
+
         return rankingsSet;
     }
 
@@ -181,7 +179,8 @@ public static class Parser
             .Select(page =>
             {
                 var doc = page.Html.DocumentNode;
-                var header = doc.SelectNodes("//table[contains(@class, 'TableDati')]/thead/tr/td/"); // da aggiustare e usare
+                var header =
+                    doc.SelectNodes("//table[contains(@class, 'TableDati')]/thead/tr/td/"); // da aggiustare e usare
                 var rows = doc.SelectNodes("//table[contains(@class, 'TableDati')]/tbody/tr")
                     .ToList();
                 var rowsData = rows.Select(
@@ -216,10 +215,10 @@ public static class Parser
                 case SchoolEnum.Urbanistica:
                 {
                     // no ofa
-                    bool hasId = colsNum == 4;
-                    int o = hasId ? 1 : 0;
+                    var hasId = colsNum == 4;
+                    var o = hasId ? 1 : 0;
 
-                    string? id = hasId ? row[0] : null;
+                    var id = hasId ? row[0] : null;
                     var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
                     var posAbs = Convert.ToInt16(row[1 + o]);
                     var enrollCourse = row[2 + o];
@@ -242,13 +241,13 @@ public static class Parser
                 case SchoolEnum.Design:
                 {
                     // solo ofa inglese
-                    bool hasId = colsNum == 5;
-                    int o = hasId ? 1 : 0;
-                    string? id = hasId ? row[0] : null;
+                    var hasId = colsNum == 5;
+                    var o = hasId ? 1 : 0;
+                    var id = hasId ? row[0] : null;
                     var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
                     var ofaDict = new Dictionary<string, bool>();
-                    bool hasOfaEng = row[1 + o].ToLower().Contains("si");
+                    var hasOfaEng = row[1 + o].ToLower().Contains("si");
                     ofaDict["ENG"] = hasOfaEng;
 
                     var posAbs = Convert.ToInt16(row[2 + o]);
@@ -271,16 +270,16 @@ public static class Parser
                 case SchoolEnum.Ingegneria:
                 {
                     // has ofa test and ofa eng
-                    bool hasId = colsNum == 6;
-                    int o = hasId ? 1 : 0;
+                    var hasId = colsNum == 6;
+                    var o = hasId ? 1 : 0;
 
-                    string? id = hasId ? row[0] : null;
+                    var id = hasId ? row[0] : null;
                     var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
                     var ofaDict = new Dictionary<string, bool>();
-                    bool hasOfaTest = row[1 + o].ToLower().Contains("si");
+                    var hasOfaTest = row[1 + o].ToLower().Contains("si");
                     ofaDict["TEST"] = hasOfaTest;
-                    bool hasOfaEng = row[2 + o].ToLower().Contains("si");
+                    var hasOfaEng = row[2 + o].ToLower().Contains("si");
                     ofaDict["ENG"] = hasOfaEng;
 
                     var posAbs = Convert.ToInt16(row[3 + o]);
@@ -303,6 +302,7 @@ public static class Parser
                 }
             }
         }
+
         return rows;
     }
 
@@ -318,17 +318,17 @@ public static class Parser
             if (school == SchoolEnum.Urbanistica)
             {
                 // no ofa
-                bool hasId = colsNum == 4;
-                int o = hasId ? 1 : 0;
+                var hasId = colsNum == 4;
+                var o = hasId ? 1 : 0;
 
-                string? id = hasId ? row[0] : null;
+                var id = hasId ? row[0] : null;
                 var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
                 var posAbs = Convert.ToInt16(row[1 + o]);
                 var enrollCourse = row[2 + o];
                 var enrollAllowed = !enrollCourse
                     .ToLower()
                     .Contains("immatricolazione non consentita");
-                
+
                 //todo
                 /*
                 rows.Add(
@@ -338,13 +338,13 @@ public static class Parser
             else if (school == SchoolEnum.Architettura || school == SchoolEnum.Design)
             {
                 // solo ofa inglese
-                bool hasId = colsNum == 13;
-                int o = hasId ? 1 : 0;
-                string? id = hasId ? row[0] : null;
+                var hasId = colsNum == 13;
+                var o = hasId ? 1 : 0;
+                var id = hasId ? row[0] : null;
                 var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
                 var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaEng = row[1 + o].ToLower().Contains("si");
+                var hasOfaEng = row[1 + o].ToLower().Contains("si");
                 ofaDict["ENG"] = hasOfaEng;
 
                 var posAbs = Convert.ToInt16(row[2 + o]);
@@ -352,23 +352,23 @@ public static class Parser
                 var enrollAllowed = !enrollCourse
                     .ToLower()
                     .Contains("immatricolazione non consentita");
-                
+
                 //todo
                 //rows.Add(tRow);
             }
             else if (school == SchoolEnum.Ingegneria)
             {
                 // has ofa test and ofa eng
-                bool hasId = colsNum == 6;
-                int o = hasId ? 1 : 0;
+                var hasId = colsNum == 6;
+                var o = hasId ? 1 : 0;
 
-                string? id = hasId ? row[0] : null;
+                var id = hasId ? row[0] : null;
                 var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
                 var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaTest = row[1 + o].ToLower().Contains("si");
+                var hasOfaTest = row[1 + o].ToLower().Contains("si");
                 ofaDict["TEST"] = hasOfaTest;
-                bool hasOfaEng = row[2 + o].ToLower().Contains("si");
+                var hasOfaEng = row[2 + o].ToLower().Contains("si");
                 ofaDict["ENG"] = hasOfaEng;
 
                 var posAbs = Convert.ToInt16(row[3 + o]);
@@ -376,8 +376,8 @@ public static class Parser
                 var enrollAllowed = !enrollCourse
                     .ToLower()
                     .Contains("immatricolazione non consentita");
-                
-                
+
+
                 //todo
                 /*
                 rows.Add(
@@ -385,6 +385,7 @@ public static class Parser
                 */
             }
         }
+
         return rows;
     }
 
@@ -392,14 +393,13 @@ public static class Parser
     {
         if (schoolStr.Contains("design"))
             return SchoolEnum.Design;
-        else if (schoolStr.Contains("ingegneria"))
+        if (schoolStr.Contains("ingegneria"))
             return SchoolEnum.Ingegneria;
-        else if (schoolStr.Contains("architettura"))
+        if (schoolStr.Contains("architettura"))
             return SchoolEnum.Architettura;
-        else if (schoolStr.Contains("urbanistica"))
+        if (schoolStr.Contains("urbanistica"))
             return SchoolEnum.Urbanistica;
-        else
-            return SchoolEnum.Unknown;
+        return SchoolEnum.Unknown;
     }
 
     private static HashSet<HtmlPage> ParseLocalHtmlFiles(string path)
@@ -407,7 +407,7 @@ public static class Parser
         var elements = new HashSet<HtmlPage>();
         if (string.IsNullOrEmpty(path))
             return elements;
-        
+
         var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
