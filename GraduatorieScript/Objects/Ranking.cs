@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HtmlAgilityPack;
+using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
 
@@ -9,7 +10,7 @@ public class Ranking
     private string? school;
     private string? year;
     private string? phase;
-    private string? url;
+    public RankingUrl? Url;
     private Dictionary<string, List<StudentResult>>? byCourse;
     private List<StudentResult>? byMerit;
     private string? extra;
@@ -21,6 +22,11 @@ public class Ranking
                school == ranking.school &&
                phase == ranking.phase &&
                extra == ranking.extra &&
-               url == ranking.url;
+               Url == ranking.Url;
+    }
+
+    public HtmlDocument GetHtml()
+    {
+        throw new NotImplementedException();
     }
 }

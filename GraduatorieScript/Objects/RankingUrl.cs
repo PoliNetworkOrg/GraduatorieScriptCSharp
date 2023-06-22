@@ -1,7 +1,11 @@
 using GraduatorieScript.Enums;
+using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
 
+
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class RankingUrl
 {
     public PageEnum PageEnum = PageEnum.Unknown;
