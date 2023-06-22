@@ -41,7 +41,7 @@ public class RankingsSet
             return;
 
         var alreadyPresent = Contains(ranking);
-        if (alreadyPresent)
+        if (!alreadyPresent)
             Rankings.Add(ranking);
         if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
     }
