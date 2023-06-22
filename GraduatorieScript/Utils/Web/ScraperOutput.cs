@@ -10,7 +10,7 @@ public static class ScraperOutput
     public static void Write(List<RankingUrl?>? rankingsUrls, string docFolder)
     {
         var filePath = docFolder + "/" + FilePath;
-        if (File.Exists(filePath)) AddFromFile(rankingsUrls);
+        if (File.Exists(filePath)) AddFromFile(rankingsUrls, filePath);
 
         var s = "";
         var variableUrls = rankingsUrls?.Select(variable => variable?.Url)
@@ -29,12 +29,12 @@ public static class ScraperOutput
         File.WriteAllText(filePath, s);
     }
 
-    private static void AddFromFile(ICollection<RankingUrl?>? rankingsUrls)
+    private static void AddFromFile(ICollection<RankingUrl?>? rankingsUrls, string filePath)
     {
-        var dir = Directory.GetCurrentDirectory();
+
         try
         {
-            var x = File.ReadAllLines(dir + "\\" + FilePath);
+            var x = File.ReadAllLines(filePath);
             foreach (var variable in x)
                 if (!string.IsNullOrEmpty(variable))
                     AddToList(rankingsUrls, variable);

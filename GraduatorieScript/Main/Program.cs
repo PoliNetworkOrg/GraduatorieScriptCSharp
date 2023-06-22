@@ -42,7 +42,7 @@ public static class Program
 
         var outputJsonPath = Path.Join(baseFolder, Constants.OutputJsonFilename);
 
-        var rankings = Parser.GetRankings(baseFolder, outputJsonPath, rankingsUrls);
+        RankingsSet rankings = Parser.GetRankings(baseFolder, outputJsonPath, rankingsUrls);
 
         
         //nella cartella trovata, leggere e analizzare gli eventuali file .html
@@ -55,7 +55,7 @@ public static class Program
         var rankingsSetFromLocalJson = Parser.ParseLocalJson(outputJsonPath);
 
         //uniamo i dataset (quello dall'html, quello dal json locale, quello dal web)
-        var fullRankingsSet = RankingsSet.Merge(rankingsSetFromHtmls, rankingsSetFromWeb, rankingsSetFromLocalJson);
+        var fullRankingsSet = RankingsSet.Merge(rankingsSetFromHtmls, rankingsSetFromWeb, rankingsSetFromLocalJson, rankings);
         
 
         //ottenere un json 
