@@ -36,7 +36,6 @@ public static class Program
         };
 
         //print links found
-        if (rankingsUrls == null) return;
         foreach (var r in rankingsUrls)
             if (r != null)
                 Console.WriteLine($"[DEBUG] valid url found: {r.Url}");

@@ -41,10 +41,17 @@ public class RankingUrl
         var splitByUnderscore = last.Split("_");
         var reversed = splitByUnderscore.Reverse().ToArray();
 
-        if (reversed.First() == "M") return PageEnum.TableByMerit;
-        if (reversed[1] == "sotto") return PageEnum.TableByCourse;
-        if (reversed[1] == "grad") return PageEnum.TableById;
+        return TableByCourse(reversed);
+    }
 
-        return PageEnum.Unknown;
+    private static PageEnum TableByCourse(IReadOnlyList<string> reversed)
+    {
+        if (reversed[0] == "M") return PageEnum.TableByMerit;
+        return reversed[1] switch
+        {
+            "sotto" => PageEnum.TableByCourse,
+            "grad" => PageEnum.TableById,
+            _ => PageEnum.Unknown
+        };
     }
 }

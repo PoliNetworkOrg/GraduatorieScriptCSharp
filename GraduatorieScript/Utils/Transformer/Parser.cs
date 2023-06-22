@@ -99,14 +99,14 @@ public static class Parser
                 .Select(RankingUrl.From)
                 .Where(
                     url =>
-                        url?.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse
+                        url.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse
                 )
                 .ToList();
 
             List<HtmlPage> subIndexes = new();
             foreach (var url in subUrls)
             {
-                var subIndex = newHtmls.ToList().Find(h => h.Url?.Url == url?.Url);
+                var subIndex = newHtmls.ToList().Find(h => h.Url?.Url == url.Url);
                 if (subIndex == null)
                 {
                     var html = HtmlPage.FromUrl(url);
@@ -132,18 +132,21 @@ public static class Parser
                     .Select(a => a.GetAttributeValue("href", null))
                     .Where(href => href != null)
                     .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-                    .Select(href => RankingUrl.From(href))
+                    .Select(RankingUrl.From)
                     .AsParallel()
                     .ToList();
 
                 List<HtmlPage> tablePages = new();
-                Func<RankingUrl?, Action> selector = url => () =>
-                {
-                    var htmlPage = newHtmls.ToList().Find(h => h?.Url?.Url == url?.Url) ?? HtmlPage.FromUrl(url);
-                    if (htmlPage != null)
-                        tablePages.Add(htmlPage);
-                };
-                Parallel.Invoke(tablesLinks.Select(selector).ToArray());
+
+                Action Selector(RankingUrl url) =>
+                    () =>
+                    {
+                        bool Predicate(HtmlPage h) => h?.Url?.Url == url?.Url;
+                        var htmlPage = newHtmls.ToList().Find(Predicate) ?? HtmlPage.FromUrl(url);
+                        if (htmlPage != null) tablePages.Add(htmlPage);
+                    };
+
+                Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
                 switch (html.Url?.PageEnum)
                 {
                     case PageEnum.IndexByMerit:
@@ -173,7 +176,7 @@ public static class Parser
         return rankingsSet;
     }
 
-    private static List<List<List<string>>> GetTables(List<HtmlPage> pages)
+    private static IEnumerable<List<List<string>>> GetTables(IEnumerable<HtmlPage> pages)
     {
         var table = pages
             .Select(page =>
@@ -315,74 +318,81 @@ public static class Parser
         foreach (var row in table)
         {
             var colsNum = row.Count;
-            if (school == SchoolEnum.Urbanistica)
+            switch (school)
             {
-                // no ofa
-                var hasId = colsNum == 4;
-                var o = hasId ? 1 : 0;
+                case SchoolEnum.Urbanistica:
+                {
+                    // no ofa
+                    var hasId = colsNum == 4;
+                    var o = hasId ? 1 : 0;
 
-                var id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-                var posAbs = Convert.ToInt16(row[1 + o]);
-                var enrollCourse = row[2 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
+                    var id = hasId ? row[0] : null;
+                    var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
+                    var posAbs = Convert.ToInt16(row[1 + o]);
+                    var enrollCourse = row[2 + o];
+                    var enrollAllowed = !enrollCourse
+                        .ToLower()
+                        .Contains("immatricolazione non consentita");
 
-                //todo
-                /*
+                    //todo
+                    /*
                 rows.Add(
                 );
                 */
-            }
-            else if (school == SchoolEnum.Architettura || school == SchoolEnum.Design)
-            {
-                // solo ofa inglese
-                var hasId = colsNum == 13;
-                var o = hasId ? 1 : 0;
-                var id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
+                    break;
+                }
+                case SchoolEnum.Architettura:
+                case SchoolEnum.Design:
+                {
+                    // solo ofa inglese
+                    var hasId = colsNum == 13;
+                    var o = hasId ? 1 : 0;
+                    var id = hasId ? row[0] : null;
+                    var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
-                var ofaDict = new Dictionary<string, bool>();
-                var hasOfaEng = row[1 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
+                    var ofaDict = new Dictionary<string, bool>();
+                    var hasOfaEng = row[1 + o].ToLower().Contains("si");
+                    ofaDict["ENG"] = hasOfaEng;
 
-                var posAbs = Convert.ToInt16(row[2 + o]);
-                var enrollCourse = row[3 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
+                    var posAbs = Convert.ToInt16(row[2 + o]);
+                    var enrollCourse = row[3 + o];
+                    var enrollAllowed = !enrollCourse
+                        .ToLower()
+                        .Contains("immatricolazione non consentita");
 
-                //todo
-                //rows.Add(tRow);
-            }
-            else if (school == SchoolEnum.Ingegneria)
-            {
-                // has ofa test and ofa eng
-                var hasId = colsNum == 6;
-                var o = hasId ? 1 : 0;
+                    //todo
+                    //rows.Add(tRow);
+                    break;
+                }
+                case SchoolEnum.Ingegneria:
+                {
+                    // has ofa test and ofa eng
+                    var hasId = colsNum == 6;
+                    var o = hasId ? 1 : 0;
 
-                var id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
+                    var id = hasId ? row[0] : null;
+                    var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
 
-                var ofaDict = new Dictionary<string, bool>();
-                var hasOfaTest = row[1 + o].ToLower().Contains("si");
-                ofaDict["TEST"] = hasOfaTest;
-                var hasOfaEng = row[2 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
+                    var ofaDict = new Dictionary<string, bool>();
+                    var hasOfaTest = row[1 + o].ToLower().Contains("si");
+                    ofaDict["TEST"] = hasOfaTest;
+                    var hasOfaEng = row[2 + o].ToLower().Contains("si");
+                    ofaDict["ENG"] = hasOfaEng;
 
-                var posAbs = Convert.ToInt16(row[3 + o]);
-                var enrollCourse = row[4 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
+                    var posAbs = Convert.ToInt16(row[3 + o]);
+                    var enrollCourse = row[4 + o];
+                    var enrollAllowed = !enrollCourse
+                        .ToLower()
+                        .Contains("immatricolazione non consentita");
 
 
-                //todo
-                /*
+                    //todo
+                    /*
                 rows.Add(
                 );
                 */
+                    break;
+                }
             }
         }
 

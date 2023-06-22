@@ -43,17 +43,15 @@ public class Scraper
         foreach (var variable in newsUrl)
         {
             var result1 = result;
-            actions.Add(() =>
+
+            void Action()
             {
                 var result2 = GetNewsLinks2(variable);
-
                 var enumerable = result2.Where(value => !string.IsNullOrEmpty(value));
-                foreach (var value in enumerable)
-                    lock (result1)
-                    {
-                        result1.Add(value);
-                    }
-            });
+                AddWithLock(enumerable, result1);
+            }
+
+            actions.Add(Action);
         }
 
         Parallel.Invoke(actions.ToArray());
@@ -61,6 +59,15 @@ public class Scraper
 
         var newsLinks = result.Distinct();
         return newsLinks;
+    }
+
+    private static void AddWithLock(IEnumerable<string?> enumerable, WrapperList<string?> result1)
+    {
+        foreach (var value in enumerable)
+            lock (result1)
+            {
+                result1.Add(value);
+            }
     }
 
     private IEnumerable<string?> GetNewsLinks2(string variable)
