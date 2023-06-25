@@ -43,7 +43,7 @@ public static class Program
         var rankingsSet = Parser.GetRankings(docsFolder, outputJsonPath, rankingsUrls);
 
         //ottenere un json 
-        var stringJson = JsonConvert.SerializeObject(rankingsSet, Formatting.Indented);
+        var stringJson = JsonConvert.SerializeObject(rankingsSet);
 
         //scriviamolo su disco
         File.WriteAllText(outputJsonPath, stringJson);

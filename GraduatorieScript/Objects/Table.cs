@@ -27,6 +27,7 @@ public class Table<T>
     public static string? GetFieldByIndex(List<string> row, int index)
     {
         if (index == -1 || index >= row.Count) return null;
+        if (string.IsNullOrEmpty(row[index])) return null;
         return row[index];
     }
 

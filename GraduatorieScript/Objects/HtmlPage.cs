@@ -7,6 +7,7 @@ namespace GraduatorieScript.Utils.Transformer;
 public class HtmlPage
 {
     public readonly HtmlDocument Html;
+    private readonly string HtmlString;
     public readonly RankingUrl Url;
 
     public HtmlPage(string html, RankingUrl url)
@@ -14,7 +15,12 @@ public class HtmlPage
         var page = new HtmlDocument();
         page.LoadHtml(html);
         Html = page;
+        HtmlString = html;
         Url = url;
+    }
+
+    new public string ToString() {
+        return HtmlString;
     }
 
     public static HtmlPage? FromUrl(RankingUrl url)
