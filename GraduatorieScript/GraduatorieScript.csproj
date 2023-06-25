@@ -9,24 +9,24 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="HtmlAgilityPack" Version="1.11.46"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="docs\**"/>
+        <Compile Remove="docs\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Remove="docs\**"/>
+        <EmbeddedResource Remove="docs\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="docs\**"/>
+        <None Remove="docs\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\TestNugetPackage\SampleNuGet\SampleNuGet.csproj"/>
+        <ProjectReference Include="..\TestNugetPackage\SampleNuGet\SampleNuGet.csproj" />
     </ItemGroup>
 
 </Project>
