@@ -250,7 +250,7 @@ public static class Parser
     }
 
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
-        List<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
+        ICollection<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
     {
         var page = html.Html.DocumentNode;
         var url = html.Url;
@@ -305,7 +305,7 @@ public static class Parser
         }
     }
 
-    private static HtmlPage? SubIndex(List<HtmlPage> allHtmls, RankingUrl url)
+    private static HtmlPage? SubIndex(IEnumerable<HtmlPage> allHtmls, RankingUrl url)
     {
         bool Predicate(HtmlPage h)
         {
@@ -324,7 +324,7 @@ public static class Parser
         a = a.Replace('\\', '/');
         b = b.Replace('\\', '/');
 
-        if (!a.Contains("/") || !b.Contains("/"))
+        if (!a.Contains('/') || !b.Contains('/'))
         {
             return false;
         }
@@ -333,8 +333,8 @@ public static class Parser
         var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
 
         var min = Math.Min(aStrings.Count, bStrings.Count);
-        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count() - min)).ToList();
-        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count() - min)).ToList();
+        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count - min)).ToList();
+        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count - min)).ToList();
 
         for (var i = 0; i < min; i++)
         {
@@ -510,7 +510,7 @@ public static class Parser
 
     private static void ParseRow(List<string> row, int idIndex, int votoTestIndex, int posIndex, int birthDateIndex,
         int enrollAllowedIndex, int englishCorrectAnswersIndex, int ofaEngIndex, int ofaTestIndex,
-        Dictionary<string, int>? sectionsIndex, List<CourseTableRow> parsedRows)
+        Dictionary<string, int>? sectionsIndex, ICollection<CourseTableRow> parsedRows)
     {
         var id = Table.GetFieldByIndex(row, idIndex);
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");

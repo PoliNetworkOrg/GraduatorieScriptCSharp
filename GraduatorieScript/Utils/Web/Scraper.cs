@@ -245,7 +245,7 @@ public class Scraper
         }
         catch
         {
-            ;
+            // ignored
         }
 
         return null;
