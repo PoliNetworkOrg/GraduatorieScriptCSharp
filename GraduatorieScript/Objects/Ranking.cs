@@ -45,7 +45,7 @@ public class Ranking
 
     public string ConvertPhaseToFilename()
     {
-        var s = DateTime.Now.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture)  + "Z";
+        var s = DateTime.Now.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
         var phase1 = phase ?? s;
         return $"{phase1}.json".Replace(" ", "_");
     }
