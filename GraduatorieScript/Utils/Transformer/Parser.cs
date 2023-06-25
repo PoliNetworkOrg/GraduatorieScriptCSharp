@@ -108,10 +108,7 @@ public static class Parser
         Table<MeritTableRow> meritTable = new();
         List<Table<CourseTableRow>> courseTables = new();
 
-        foreach (var html in subIndexes)
-        {
-            GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
-        }
+        foreach (var html in subIndexes) GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
 
         var ranking = new Ranking
         {
@@ -126,7 +123,7 @@ public static class Parser
 
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
-        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null; 
+        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null;
         if (meritTableData[0].id is not null && courseTableRow?.id is not null)
         {
             foreach (var course in courseTables)
@@ -250,7 +247,7 @@ public static class Parser
     }
 
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
-        ICollection<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
+        ICollection<Table<CourseTableRow>> courseTables, IEnumerable<HtmlPage> allHtmls)
     {
         var page = html.Html.DocumentNode;
         var url = html.Url;
@@ -324,10 +321,7 @@ public static class Parser
         a = a.Replace('\\', '/');
         b = b.Replace('\\', '/');
 
-        if (!a.Contains('/') || !b.Contains('/'))
-        {
-            return false;
-        }
+        if (!a.Contains('/') || !b.Contains('/')) return false;
 
         var aStrings = a.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
         var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
@@ -337,11 +331,9 @@ public static class Parser
         bStrings = bStrings.Skip(Math.Max(0, bStrings.Count - min)).ToList();
 
         for (var i = 0; i < min; i++)
-        {
             if (aStrings[i] != bStrings[i])
                 return false;
-        }
-        
+
         return true;
     }
 
