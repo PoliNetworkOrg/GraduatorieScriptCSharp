@@ -1,5 +1,4 @@
 ﻿using GraduatorieScript.Enums;
-using HtmlAgilityPack;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -13,6 +12,7 @@ public class Ranking
     public string? extra;
     public DateTime LastUpdate;
     public string? phase;
+    public RankingSummary? RankingSummary;
     public SchoolEnum? school;
     public RankingUrl? Url;
     public int? year;
@@ -26,23 +26,19 @@ public class Ranking
                Url?.Url == ranking.Url?.Url;
     }
 
-    public HtmlDocument GetHtml()
+
+    public void Merge(Ranking ranking)
     {
-        throw new NotImplementedException();
+        //todo: unire i campi correnti con quello ricevuto
+
+
+        LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
+        year ??= ranking.year;
+        extra ??= ranking.extra;
+        school ??= ranking.school;
+        phase ??= ranking.phase;
+        byCourse ??= ranking.byCourse;
+        byMerit ??= ranking.byMerit;
+        Url ??= ranking.Url;
     }
-}
-
-[Serializable]
-[JsonObject(MemberSerialization.Fields)]
-public class MeritTable {
-    public List<string>? Headers;
-    public List<StudentResult>? Rows;
-}
-
-[Serializable]
-[JsonObject(MemberSerialization.Fields)]
-public class CourseTable : MeritTable{
-    public string? Title;
-    public string? Location;
-    public List<string>? Sections;
 }
