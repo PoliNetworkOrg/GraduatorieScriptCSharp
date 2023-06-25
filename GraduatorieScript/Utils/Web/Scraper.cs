@@ -1,30 +1,17 @@
 using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
-using GraduatorieScript.Objects;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 
-internal struct AnchorElement
-{
-    public string Name;
-    public string Url;
-}
-
 public class Scraper
 {
-    private const string TargetUrl = "http://www.risultati-ammissione.polimi.it";
+    private const string TargetUrl = Constants.RisultatiAmmissionePolimiIt;
+    private const string HomepageUrl = "https://www.polimi.it";
+    private const string FuturiStudentiUrl = "https://www.polimi.it/futuri-studenti";
+    private const string InEvidenzaUrl = "https://www.polimi.it/in-evidenza";
 
-    private static readonly List<string> HttpsPolimiIt = new() { "https://www.polimi.it", "https://polimi.it" };
-
-    private static readonly HashSet<string> Navigated = new();
-
-    private readonly List<string> _newsUrl = new()
-    {
-        "https://www.polimi.it",
-        "https://www.polimi.it/futuri-studenti",
-        "https://www.poliorientami.polimi.it/come-si-accede/design/punteggi-esiti-e-graduatorie/"
-    };
+    private HashSet<string> AlreadyVisited = new();
 
     private readonly HtmlWeb _web = new();
 
@@ -32,201 +19,144 @@ public class Scraper
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
-        "matricola", "merito", "nuovi studenti"
+        "matricola", "nuovi studenti"
     };
 
-    public IEnumerable<string?> GetNewsLinks()
+    public HashSet<string> GetRankingsLinks()
     {
-        var result = new WrapperList<string?>();
-        var actions = new List<Action>();
-        foreach (var variable in _newsUrl)
-        {
-            var result1 = result;
+        HashSet<string> links = new();
 
-            void Action()
+        var l1 = ScrapeHomepage();
+        var l2 = ScrapeFuturiStudenti();
+        var l3 = ScrapeInEvidenza();
+
+        links.AddRange(l1, l2, l3);
+        return links;
+    }
+
+    private HashSet<string> ScrapeHomepage()
+    {
+        HashSet<string> links = new();
+        var page = _web.Load(HomepageUrl).DocumentNode;
+        var slides = page.SelectNodes("//section[@id='copertina']//div[contains(@class, 'sp-slides')]/div");
+        foreach (var slide in slides)
+        {
+            var h1 = slide.Descendants("h1");
+            if (h1 == null) continue;
+            var text = h1.First().InnerText;
+            if (IsValidText(text))
             {
-                var result2 = GetNewsLinks2(variable);
-                var enumerable = result2.Where(value => !string.IsNullOrEmpty(value));
-                AddWithLock(enumerable, result1);
+                var a = slide.Descendants("a");
+                var href = GetHref(a.First());
+                links.AddRange(UseHref(href));
             }
-
-            actions.Add(Action);
         }
-
-        Parallel.Invoke(actions.ToArray());
-
-
-        var newsLinks = result.Distinct();
-        return newsLinks;
+        return links;
     }
 
-    private static void AddWithLock(IEnumerable<string?> enumerable, WrapperList<string?> result1)
+    private HashSet<string> ScrapeFuturiStudenti()
     {
-        foreach (var value in enumerable)
-            lock (result1)
+        HashSet<string> links = new();
+        var page = _web.Load(FuturiStudentiUrl).DocumentNode;
+        var slides = page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
+        foreach (var slide in slides)
+        {
+            var h1 = slide.Descendants("h1");
+            var h1Valid = h1 != null && IsValidText(h1.First().InnerText);
+
+            var p = slide.Descendants("p");
+            var pValid = p != null && IsValidText(p.First().InnerText);
+
+
+            if (h1Valid || pValid)
             {
-                result1.Add(value);
+                var aTags = slide.Descendants("a");
+                foreach (var a in aTags)
+                {
+                    var href = GetHref(a);
+                    links.AddRange(UseHref(href));
+
+                }
             }
+        }
+        return links;
     }
 
-    private IEnumerable<string?> GetNewsLinks2(string variable)
+    private HashSet<string> ScrapeInEvidenza()
     {
-        var result = new List<string?>();
-        var htmlDoc = _web.Load(variable);
-
-        GetNewsLinks4(result, htmlDoc, variable, 0);
-        GetNewsLinks5(result, htmlDoc);
-        return result;
-    }
-
-    private void GetNewsLinks4(List<string?> result, HtmlDocument htmlDoc, string startWebsite, int depth)
-    {
-        var htmlNodeCollection = htmlDoc.DocumentNode.SelectNodes("//a[@href]");
-
-        var list = htmlNodeCollection.ToList();
-
-        Action Selector(HtmlNode htmlNode)
+        HashSet<string> links = new();
+        var page = _web.Load(InEvidenzaUrl).DocumentNode;
+        var liTags = page.SelectNodes("//div[@id='content']//li");
+        foreach (var li in liTags)
         {
-            return () =>
+            var h3 = li.GetElementsByTagName("h3");
+            if(h3 == null) continue;
+
+            var a = h3.First().ChildNodes[0];
+            var aValid = a != null && IsValidText(a.InnerText);
+
+            var p = li.Descendants("p");
+            var pValid = p != null && IsValidText(p.First().InnerText);
+
+            if (aValid || pValid)
             {
-                try
-                {
-                    var x = GetNewsLinks6(htmlNode, startWebsite, depth);
-                    if (x == null) return;
-                    foreach (var variable in x.Where(variable => !string.IsNullOrEmpty(variable)))
-                        lock (result)
-                        {
-                            result.Add(variable);
-                        }
-                }
-                catch
-                {
-                    // ignored
-                }
-            };
+                var href = GetHref(a);
+                links.AddRange(UseHref(href));
+
+            }
         }
-
-        var action = list.Select((Func<HtmlNode, Action>)Selector).ToArray();
-        InvokeSplit(action);
+        return links;
     }
 
-    private static void InvokeSplit(IEnumerable<Action> action)
+    private HashSet<string> UseHref(string? href)
     {
-        var list = SplitIntoChunks(action.ToList(), 10);
-        var actionsEnumerable = list.Select(variable => variable.ToArray());
-        foreach (var actions in actionsEnumerable) Parallel.Invoke(actions);
-    }
+        HashSet<string> links = new();
+        if (string.IsNullOrEmpty(href)) return links;
 
-    private static List<List<T>> SplitIntoChunks<T>(IReadOnlyCollection<T> list, int chunkSize)
-    {
-        var chunks = new List<List<T>>();
-
-        for (var i = 0; i < list.Count; i += chunkSize)
+        if (href.Contains(TargetUrl)) links.Add(href);
+        else
         {
-            var chunk = list.Skip(i).Take(chunkSize).ToList();
-            chunks.Add(chunk);
+            var url = UrlUtils.UrlifyLocalHref(href, HomepageUrl);
+            links.AddRange(ParseNewsPage(url));
         }
 
-        return chunks;
+        return links;
     }
 
-    private List<string?>? GetNewsLinks6(HtmlNode? arg, string startWebsite, int depth)
+    private HashSet<string> ParseNewsPage(string url)
     {
-        if (arg == null)
-            return null;
+        HashSet<string> links = new();
+        if (AlreadyVisited.Contains(url)) return links;
 
-        var href = arg.Attributes.Contains("href") ? arg.Attributes["href"].Value : null;
-        if (string.IsNullOrEmpty(href))
-            return null;
+        var page = _web.Load(url).DocumentNode;
 
-        href = href.Trim();
+        var aTags = page.SelectNodes("//div[@id='content']//a[@href]");
+        if (aTags == null) return links;
 
-        if (href.StartsWith("#"))
-            return null;
-
-        //if (href.Contains("dettaglio-news")) ;
-
-        if (href.StartsWith(TargetUrl))
-            return new List<string?> { href };
-
-        const int depthMax = 3;
-        if (depth >= depthMax)
-            return null;
-
-        href = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
-
-
-        if (href == startWebsite || !href.StartsWith(startWebsite)) return null;
-
-        if (Navigated.Contains(href))
-            return null;
-
-        var htmlDoc = _web.Load(href);
-        Navigated.Add(href);
-
-        var result = new List<string?>();
-        GetNewsLinks4(result, htmlDoc, href, depth + 1);
-        return result;
-    }
-
-    private static void GetNewsLinks5(List<string?> result, HtmlDocument htmlDoc)
-    {
-        var htmlNodeCollection = htmlDoc.DocumentNode
-            .SelectNodes("//*[@id=\"c42275\"]/ul/li/h3/a");
-        var anchorElements = htmlNodeCollection?
-            .Select(GetNewsLinks3)
-            .ToList();
-
-        if (anchorElements == null) return;
-        var filteredLinks = anchorElements
-            /* .Where(anchor => NewsTesters.Contains(anchor.Name.ToLower())) */
-            .Select(anchor => anchor.Url)
-            .ToList();
-        result.AddRange(filteredLinks);
-    }
-
-    private static AnchorElement GetNewsLinks3(HtmlNode element)
-    {
-        var href = element.Attributes["href"].Value;
-
-        var url = UrlUtils.UrlifyLocalHref(href, HttpsPolimiIt.First());
-        return new AnchorElement { Name = element.InnerText, Url = url };
-    }
-
-    public IEnumerable<string> FindRankingsLink(IEnumerable<string?>? newsLink)
-    {
-        var rankingsList = new HashSet<string>();
-
-        if (newsLink != null)
-            Parallel.Invoke(newsLink
-                .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); }))
-                .ToArray());
-        return rankingsList;
-    }
-
-    private void FindSingleRankingLink(HashSet<string> rankingsList, string? currentLink)
-    {
-        if (string.IsNullOrEmpty(currentLink))
-            return;
-
-        if (currentLink.Contains(Constants.RisultatiAmmissionePolimiIt))
+        foreach (var a in aTags)
         {
-            rankingsList.Add(currentLink);
-            return;
+            var href = GetHref(a);
+            if (href != null && href.Contains(TargetUrl))
+            {
+                links.Add(href);
+            }
         }
 
-        var htmlDoc = _web.Load(currentLink);
-        var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
-            .Select(element =>
-                UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt.First()))
-            .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
-            .ToList();
 
-        lock (rankingsList)
-        {
-            rankingsList.AddRange(links);
-        }
+        return links;
     }
+
+    private bool IsValidText(string text)
+    {
+        var lower = text.ToLower();
+        return _newsTesters.Any(test => lower.Contains(test));
+    }
+
+    private string? GetHref(HtmlNode? a)
+    {
+        return a?.GetAttributeValue("href", String.Empty).Replace("amp;", "");
+    }
+    
 
     public static string? Download(string url)
     {
