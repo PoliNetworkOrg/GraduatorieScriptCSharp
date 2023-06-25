@@ -69,7 +69,7 @@ public class MainJson
             var schoolKey = school.Key.ToString();
             var path = Path.Join(outFolder, yearKey, schoolKey, filename);
             var ranking = Parser.ParseJson<Ranking>(path);
-            if (ranking is Ranking) rankings.Add(ranking);
+            if (ranking != null) rankings.Add(ranking);
         }
 
         return new RankingsSet
