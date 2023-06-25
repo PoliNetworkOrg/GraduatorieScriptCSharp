@@ -39,7 +39,7 @@ public static class Parser
         return rankingsSet;
     }
 
-    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, List<HtmlPage> allHtmls)
+    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls)
     {
         Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
         var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
@@ -128,25 +128,7 @@ public static class Parser
         {
             foreach (var course in courseTables)
             {
-                var courseStudents = new List<StudentResult>();
-                foreach (var row in course.Data)
-                {
-                    var absolute = meritTableData.Find(r => r.id == row.id);
-                    var student = new StudentResult
-                    {
-                        id = row.id,
-                        ofa = row.ofa,
-                        result = row.result,
-                        birthDate = row.birthDate,
-                        canEnroll = row.canEnroll,
-                        canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
-                        positionAbsolute = absolute?.position,
-                        positionCourse = row.position,
-                        sectionsResults = row.sectionsResults,
-                        englishCorrectAnswers = row.englishCorrectAnswers
-                    };
-                    courseStudents.Add(student);
-                }
+                var courseStudents = GetCourseStudents(course, meritTableData);
 
                 ranking.byCourse.Add(new CourseTable
                 {
@@ -244,6 +226,32 @@ public static class Parser
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
         AddRankingAndMerge(rankingsSet, ranking);
+    }
+
+    private static IEnumerable<StudentResult> GetCourseStudents(Table<CourseTableRow> course,
+        List<MeritTableRow> meritTableData)
+    {
+        var courseStudents = new List<StudentResult>();
+        foreach (var row in course.Data)
+        {
+            var absolute = meritTableData.Find(r => r.id == row.id);
+            var student = new StudentResult
+            {
+                id = row.id,
+                ofa = row.ofa,
+                result = row.result,
+                birthDate = row.birthDate,
+                canEnroll = row.canEnroll,
+                canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
+                positionAbsolute = absolute?.position,
+                positionCourse = row.position,
+                sectionsResults = row.sectionsResults,
+                englishCorrectAnswers = row.englishCorrectAnswers
+            };
+            courseStudents.Add(student);
+        }
+
+        return courseStudents;
     }
 
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,

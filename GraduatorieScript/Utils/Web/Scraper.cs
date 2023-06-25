@@ -144,7 +144,7 @@ public class Scraper
         if (href.StartsWith("#"))
             return null;
 
-        if (href.Contains("dettaglio-news")) ;
+        //if (href.Contains("dettaglio-news")) ;
 
         if (href.StartsWith(TargetUrl))
             return new List<string?> { href };
