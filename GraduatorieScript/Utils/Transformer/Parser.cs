@@ -339,7 +339,7 @@ public static class Parser
                     .ToList();
                 var fullTitle = isCourse ? doc.GetElementsByClassName("titolo").ToList()[0].InnerText : null;
                 var title = isCourse ? fullTitle?.Split(" (")[0] : null;
-                var location = isCourse ? fullTitle?.Split("(")[1].Split(")")[0] : null;
+                var location = isCourse ? GetLocation(fullTitle) : null;
                 var rowsData = rows.Select(
                         row =>
                             row.Descendants("td")
@@ -353,6 +353,14 @@ public static class Parser
             .ToList();
 
         return tables;
+    }
+
+    private static string? GetLocation(string? fullTitle)
+    {
+        var strings = fullTitle?.Split("(");
+        var s = strings?[1];
+        var split = s?.Split(")");
+        return split?[0];
     }
 
     private static (List<string>, List<string>?) GetTableHeader(HtmlNode doc)
