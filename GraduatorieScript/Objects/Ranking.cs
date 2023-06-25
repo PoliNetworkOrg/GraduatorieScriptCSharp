@@ -16,6 +16,7 @@ public class Ranking
     public SchoolEnum? school;
     public RankingUrl? Url;
     public int? year;
+    public RankingSummary? RankingSummary;
 
     public bool IsSimilarTo(Ranking ranking)
     {
@@ -45,21 +46,4 @@ public class Ranking
         byMerit ??= ranking.byMerit;
         Url ??= ranking.Url;
     }
-}
-
-[Serializable]
-[JsonObject(MemberSerialization.Fields)]
-public class MeritTable
-{
-    public List<string>? Headers;
-    public List<StudentResult>? Rows;
-}
-
-[Serializable]
-[JsonObject(MemberSerialization.Fields)]
-public class CourseTable : MeritTable
-{
-    public string? Location;
-    public List<string>? Sections;
-    public string? Title;
 }
