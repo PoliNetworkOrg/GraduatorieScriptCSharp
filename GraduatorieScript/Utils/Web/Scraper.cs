@@ -233,12 +233,21 @@ public class Scraper
         if (string.IsNullOrEmpty(url))
             return null;
 
-        using var client = new HttpClient();
-        var response = client.GetAsync(url);
-        response.Wait();
-        var content = response.Result.Content;
-        var result = content.ReadAsStringAsync().Result;
+        try
+        {
+            using var client = new HttpClient();
+            var response = client.GetAsync(url);
+            response.Wait();
+            var content = response.Result.Content;
+            var result = content.ReadAsStringAsync().Result;
 
-        return result;
+            return result;
+        }
+        catch
+        {
+            ;
+        }
+
+        return null;
     }
 }

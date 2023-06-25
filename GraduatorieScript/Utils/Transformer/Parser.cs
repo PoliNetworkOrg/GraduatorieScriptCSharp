@@ -126,7 +126,8 @@ public static class Parser
 
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
-        if (meritTableData[0].id is not null && courseTableRows[0].id is not null)
+        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null; 
+        if (meritTableData[0].id is not null && courseTableRow?.id is not null)
         {
             foreach (var course in courseTables)
             {
