@@ -1,7 +1,13 @@
-﻿namespace GraduatorieScript.Utils.Transformer;
+﻿using Newtonsoft.Json;
 
+namespace GraduatorieScript.Objects;
+
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public abstract class Table : Table<List<string>> { }
 
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class Table<T>
 {
     public List<string> Headers = new();

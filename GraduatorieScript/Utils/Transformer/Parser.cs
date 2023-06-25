@@ -19,7 +19,7 @@ public static class Parser
         var rankingsSet = ParseLocalJson(jsonPath) ?? new RankingsSet();
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
-        var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url));
+        var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
         foreach (var url in newUrls)
         {
             Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
@@ -107,7 +107,8 @@ public static class Parser
             var subIndex = allHtmls.ToList().Find(h => h.Url.Url == url.Url) ?? HtmlPage.FromUrl(url);
             if (subIndex is not null)
                 subIndexes.Add(subIndex);
-                allHtmls.Remove(subIndex!);
+            if (subIndex != null) 
+                allHtmls.Remove(subIndex);
         }
 
         Table<MeritTableRow> meritTable = new();
@@ -363,7 +364,7 @@ public static class Parser
             return null;
         if (strings.Length < 2)
             return null;
-        var s = strings?[1];
+        var s = strings[1];
         var split = s?.Split(")");
         return split?[0];
     }

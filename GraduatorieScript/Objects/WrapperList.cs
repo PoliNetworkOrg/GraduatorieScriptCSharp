@@ -1,5 +1,9 @@
-﻿namespace GraduatorieScript.Objects;
+﻿using Newtonsoft.Json;
 
+namespace GraduatorieScript.Objects;
+
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class WrapperList<T>
 {
     private List<T> items = new();
