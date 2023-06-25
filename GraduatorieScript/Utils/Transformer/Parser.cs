@@ -11,7 +11,7 @@ namespace GraduatorieScript.Utils.Transformer;
 public static class Parser
 {
     public static RankingsSet GetRankings(
-        string htmlFolder,
+        string? htmlFolder,
         string jsonPath,
         IEnumerable<RankingUrl> urls
     )
@@ -522,7 +522,7 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string path)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string? path)
     {
         HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(path))

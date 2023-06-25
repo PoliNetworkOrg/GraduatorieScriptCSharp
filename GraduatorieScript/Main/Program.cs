@@ -13,14 +13,8 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var docsFolder = args.Length > 0 && !string.IsNullOrEmpty(args[0])
-            ? args[0]
-            : PathUtils.FindFolder(Constants.FolderToFind);
-        Console.WriteLine($"[INFO] baseFolder [1]: {docsFolder}");
-
-        if (string.IsNullOrEmpty(docsFolder))
-            docsFolder = PathUtils.CreateAndReturnDocsFolder(Constants.FolderToFind);
-        Console.WriteLine($"[INFO] baseFolder [2]: {docsFolder}");
+        var docsFolder = GetDocsFolder(args);
+        Console.WriteLine($"[INFO] baseFolder: {docsFolder}");
 
         if (string.IsNullOrEmpty(docsFolder))
         {
@@ -52,5 +46,18 @@ public static class Program
         /* if (transformerResult?.pathFound != null) */
         /*     FileUtils.TryBulkDelete(transformerResult.pathFound); */
         // ^^ this must be wrong
+    }
+
+    private static string GetDocsFolder(IReadOnlyList<string> args)
+    {
+        var folder = args.Count > 0 ? args[0] : null;
+        var b = args.Count > 0 && !string.IsNullOrEmpty(folder);
+        var docsFolder = b
+            ? folder
+            : PathUtils.FindFolder(Constants.FolderToFind);
+
+        return !string.IsNullOrEmpty(docsFolder)
+            ? docsFolder
+            : PathUtils.CreateAndReturnDocsFolder(Constants.FolderToFind);
     }
 }

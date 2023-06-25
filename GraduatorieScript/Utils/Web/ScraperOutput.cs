@@ -5,12 +5,12 @@ namespace GraduatorieScript.Utils.Web;
 
 public static class ScraperOutput
 {
-    private static string GetFilePath(string docFolder)
+    private static string GetFilePath(string? docFolder)
     {
         return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
-    public static void Write(IEnumerable<RankingUrl> urls, string docFolder)
+    public static void Write(IEnumerable<RankingUrl> urls, string? docFolder)
     {
         var filePath = GetFilePath(docFolder);
         var links = GetSaved(docFolder);
@@ -35,7 +35,7 @@ public static class ScraperOutput
         File.WriteAllText(filePath, output);
     }
 
-    private static List<RankingUrl> GetSaved(string docFolder)
+    private static List<RankingUrl> GetSaved(string? docFolder)
     {
         List<RankingUrl> list = new();
         var filePath = GetFilePath(docFolder);
