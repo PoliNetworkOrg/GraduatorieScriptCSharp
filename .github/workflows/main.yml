@@ -1,0 +1,52 @@
+name: dotnet package
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '6.0.x' ]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+          
+         
+         # Update references
+      - name: Git Sumbodule Update
+        run: |
+          git config --global user.email "polinetwork@outlook.com"
+          git config --global user.name "PoliNetwork"
+          git config --global pull.rebase false --allow-unrelated-histories
+          git pull origin   ${{ steps.extract_branch.outputs.branch }} --recurse-submodules --allow-unrelated-histories
+          git submodule init  
+          git submodule update --remote --recursive  
+          git submodule update
+        
+          
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Run
+        run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj
+
+
+      - name: git push
+        run: |
+          ls -l
+          pwd
+          ls -l GraduatorieScript
+          ls -l docs
+          (git add --force docs/links.txt) || true
+          git config --global user.email "polinetwork@outlook.com"
+          git config --global user.name "PoliNetwork"
+          (git commit -m 'update links.txt') || true
+          (git push origin scraper-output --force) || true
+          
