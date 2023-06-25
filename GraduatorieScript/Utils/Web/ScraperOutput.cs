@@ -18,7 +18,7 @@ public static class ScraperOutput
 
         var online = links
             .Select(url => url.Url)
-            .Where(url => UrlUtils.CheckUrl(url))
+            .Where(UrlUtils.CheckUrl)
             .Distinct()
             .ToList();
 
