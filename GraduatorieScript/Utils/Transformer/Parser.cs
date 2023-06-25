@@ -11,13 +11,15 @@ namespace GraduatorieScript.Utils.Transformer;
 public static class Parser
 {
     public static RankingsSet GetRankings(
-        string? htmlFolder,
-        string jsonPath,
+        string docsFolder,
         IEnumerable<RankingUrl> urls
     )
     {
-        var rankingsSet = ParseLocalJson(jsonPath) ?? new RankingsSet();
-        var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
+        var rankingsSet = MainJson.Parse(docsFolder) ?? new RankingsSet();
+        var restoredRankings = rankingsSet.Rankings.Count;
+        if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
+
+        var savedHtmls = ParseLocalHtmlFiles(docsFolder);
 
         var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
         foreach (var url in newUrls) Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
@@ -73,7 +75,7 @@ public static class Parser
         }
 
         int year = Convert.ToInt16(intestazioni[1].Split("Year ")[1].Split("/")[0]);
-        var phase = intestazioni[3].Split("- ")[1];
+        var phase = string.Join(" ", intestazioni[3].Split(" - ")[1..]);
         var notes = intestazioni[4];
 
         var aTags = doc.GetElementsByClassName("titolo")
@@ -567,16 +569,16 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string? path)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string docsFolder)
     {
         HashSet<HtmlPage> elements = new();
-        if (string.IsNullOrEmpty(path))
+        if (string.IsNullOrEmpty(docsFolder))
             return elements;
 
-        var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
+        var files = Directory.GetFiles(docsFolder, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var fileRelativePath = file.Split(path)[1];
+            var fileRelativePath = file.Split(docsFolder)[1];
 
             // ignore because this is the file built
             // by previous script which is useless for this one
@@ -595,16 +597,16 @@ public static class Parser
         return elements;
     }
 
-    private static RankingsSet? ParseLocalJson(string jsonPath)
+    public static T? ParseJson<T>(string path)
     {
-        if (string.IsNullOrEmpty(jsonPath) || !File.Exists(jsonPath))
-            return null;
+        if (string.IsNullOrEmpty(path) || !File.Exists(path))
+            return default;
 
-        var fileContent = File.ReadAllText(jsonPath);
+        var fileContent = File.ReadAllText(path);
         if (string.IsNullOrEmpty(fileContent))
-            return null;
+            return default;
 
-        var rankingsSet = JsonConvert.DeserializeObject<RankingsSet>(fileContent);
-        return rankingsSet;
+        var obj = JsonConvert.DeserializeObject<T>(fileContent);
+        return obj;
     }
 }

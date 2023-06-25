@@ -1,4 +1,5 @@
-﻿using GraduatorieScript.Enums;
+﻿using System.Globalization;
+using GraduatorieScript.Enums;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -40,5 +41,12 @@ public class Ranking
         byCourse ??= ranking.byCourse;
         byMerit ??= ranking.byMerit;
         Url ??= ranking.Url;
+    }
+
+    public string ConvertPhaseToFilename()
+    {
+        var s = DateTime.Now.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
+        var phase1 = phase ?? s;
+        return $"{phase1}.json".Replace(" ", "_");
     }
 }
