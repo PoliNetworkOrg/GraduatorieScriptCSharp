@@ -98,7 +98,7 @@ public static class Parser
         List<HtmlPage> subIndexes = new();
         foreach (var url in subUrls)
         {
-            var subIndex = allHtmls.ToList().Find(h => h.Url.Url == url.Url) ?? HtmlPage.FromUrl(url);
+            var subIndex = SubIndex(allHtmls, url);
             if (subIndex is not null)
                 subIndexes.Add(subIndex);
             if (subIndex != null)
@@ -301,6 +301,18 @@ public static class Parser
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
         AddRankingAndMerge(rankingsSet, ranking);
+    }
+
+    private static HtmlPage? SubIndex(List<HtmlPage> allHtmls, RankingUrl url)
+    {
+        bool Predicate(HtmlPage h)
+        {
+            ;
+            return h.Url.Url == url.Url;
+        }
+
+        var subIndex = allHtmls.ToList().Find(Predicate);
+        return subIndex ?? HtmlPage.FromUrl(url);
     }
 
     private static void AddRankingAndMerge(RankingsSet rankingsSet, Ranking ranking)
