@@ -11,13 +11,15 @@ namespace GraduatorieScript.Utils.Transformer;
 public static class Parser
 {
     public static RankingsSet GetRankings(
-        string? htmlFolder,
-        string jsonPath,
+        string docsFolder,
         IEnumerable<RankingUrl> urls
     )
     {
-        var rankingsSet = ParseLocalJson(jsonPath) ?? new RankingsSet();
-        var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
+        var rankingsSet = MainJson.Parse(docsFolder) ?? new RankingsSet();
+        var restoredRankings = rankingsSet.Rankings.Count;
+        if(restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
+
+        var savedHtmls = ParseLocalHtmlFiles(docsFolder);
 
         var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
         foreach (var url in newUrls) Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
@@ -73,7 +75,7 @@ public static class Parser
         }
 
         int year = Convert.ToInt16(intestazioni[1].Split("Year ")[1].Split("/")[0]);
-        var phase = intestazioni[3].Split("- ")[1];
+        var phase = string.Join(" ", intestazioni[3].Split(" - ")[1..]);
         var notes = intestazioni[4];
 
         var aTags = doc.GetElementsByClassName("titolo")
@@ -126,7 +128,7 @@ public static class Parser
 
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
-        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null; 
+        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null;
         if (meritTableData[0].id is not null && courseTableRow?.id is not null)
         {
             foreach (var course in courseTables)
@@ -279,24 +281,24 @@ public static class Parser
         switch (urlPageEnum)
         {
             case PageEnum.IndexByMerit:
-            {
-                var table = JoinTables(tablePages);
-                meritTable =
-                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
-                break;
-            }
-            case PageEnum.IndexByCourse:
-            {
-                var tables = GetTables(tablePages);
-                foreach (var table in tables)
                 {
-                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
-                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
-                    courseTables.Add(courseTable);
+                    var table = JoinTables(tablePages);
+                    meritTable =
+                        Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                    break;
                 }
+            case PageEnum.IndexByCourse:
+                {
+                    var tables = GetTables(tablePages);
+                    foreach (var table in tables)
+                    {
+                        var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                            ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                        courseTables.Add(courseTable);
+                    }
 
-                break;
-            }
+                    break;
+                }
             default:
                 Console.WriteLine(
                     $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
@@ -341,7 +343,7 @@ public static class Parser
             if (aStrings[i] != bStrings[i])
                 return false;
         }
-        
+
         return true;
     }
 
@@ -564,16 +566,16 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string? path)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string docsFolder)
     {
         HashSet<HtmlPage> elements = new();
-        if (string.IsNullOrEmpty(path))
+        if (string.IsNullOrEmpty(docsFolder))
             return elements;
 
-        var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
+        var files = Directory.GetFiles(docsFolder, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var fileRelativePath = file.Split(path)[1];
+            var fileRelativePath = file.Split(docsFolder)[1];
 
             // ignore because this is the file built
             // by previous script which is useless for this one
@@ -592,16 +594,16 @@ public static class Parser
         return elements;
     }
 
-    private static RankingsSet? ParseLocalJson(string jsonPath)
+    public static T? ParseJson<T>(string path)
     {
-        if (string.IsNullOrEmpty(jsonPath) || !File.Exists(jsonPath))
-            return null;
+        if (string.IsNullOrEmpty(path) || !File.Exists(path))
+            return default(T);
 
-        var fileContent = File.ReadAllText(jsonPath);
+        var fileContent = File.ReadAllText(path);
         if (string.IsNullOrEmpty(fileContent))
-            return null;
+            return default(T);
 
-        var rankingsSet = JsonConvert.DeserializeObject<RankingsSet>(fileContent);
-        return rankingsSet;
+        var obj = JsonConvert.DeserializeObject<T>(fileContent);
+        return obj;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
@@ -30,17 +31,10 @@ public static class Program
         foreach (var r in rankingsUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
-        var outputJsonPath = Path.Join(docsFolder, Constants.OutputJsonFilename);
-
         // ricava un unico set partendo dai file html salvati, dagli url trovati e
         // dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(docsFolder, outputJsonPath, rankingsUrls);
-
-        //ottenere un json 
-        var stringJson = JsonConvert.SerializeObject(rankingsSet);
-
-        //scriviamolo su disco
-        File.WriteAllText(outputJsonPath, stringJson);
+        var rankingsSet = Parser.GetRankings(docsFolder, rankingsUrls);
+        MainJson.Write(docsFolder, rankingsSet);
 
         //eliminare i suddetti file html
         /* if (transformerResult?.pathFound != null) */

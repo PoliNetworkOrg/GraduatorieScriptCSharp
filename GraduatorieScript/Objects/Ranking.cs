@@ -41,4 +41,9 @@ public class Ranking
         byMerit ??= ranking.byMerit;
         Url ??= ranking.Url;
     }
+
+    public string ConvertPhaseToFilename()
+    {
+        return $"{phase ?? DateTime.Now.ToString()}.json".Replace(" ", "_");
+    }
 }
