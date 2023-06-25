@@ -3,7 +3,6 @@ using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
-using Newtonsoft.Json;
 using SampleNuGet.Utils;
 
 namespace GraduatorieScript.Main;

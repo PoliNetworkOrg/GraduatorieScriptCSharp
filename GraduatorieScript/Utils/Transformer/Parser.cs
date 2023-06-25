@@ -17,7 +17,7 @@ public static class Parser
     {
         var rankingsSet = MainJson.Parse(docsFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
-        if(restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
+        if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
         var savedHtmls = ParseLocalHtmlFiles(docsFolder);
 
@@ -289,24 +289,24 @@ public static class Parser
         switch (urlPageEnum)
         {
             case PageEnum.IndexByMerit:
-                {
-                    var table = JoinTables(tablePages);
-                    meritTable =
-                        Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
-                    break;
-                }
+            {
+                var table = JoinTables(tablePages);
+                meritTable =
+                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                break;
+            }
             case PageEnum.IndexByCourse:
+            {
+                var tables = GetTables(tablePages);
+                foreach (var table in tables)
                 {
-                    var tables = GetTables(tablePages);
-                    foreach (var table in tables)
-                    {
-                        var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
-                            ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
-                        courseTables.Add(courseTable);
-                    }
-
-                    break;
+                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                    courseTables.Add(courseTable);
                 }
+
+                break;
+            }
             default:
                 Console.WriteLine(
                     $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
@@ -600,11 +600,11 @@ public static class Parser
     public static T? ParseJson<T>(string path)
     {
         if (string.IsNullOrEmpty(path) || !File.Exists(path))
-            return default(T);
+            return default;
 
         var fileContent = File.ReadAllText(path);
         if (string.IsNullOrEmpty(fileContent))
-            return default(T);
+            return default;
 
         var obj = JsonConvert.DeserializeObject<T>(fileContent);
         return obj;
