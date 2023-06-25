@@ -229,7 +229,7 @@ public class Scraper
         }
     }
 
-    public static Tuple<Ranking?, HttpContent>? Download(string? url)
+    public static string? Download(string url)
     {
         if (string.IsNullOrEmpty(url))
             return null;
@@ -240,8 +240,6 @@ public class Scraper
         var content = response.Result.Content;
         var result = content.ReadAsStringAsync().Result;
 
-        var rankingUrl = RankingUrl.From(url);
-        var ranking = Parser.ParseHtml(result, rankingUrl);
-        return new Tuple<Ranking?, HttpContent>(ranking, content);
+        return result;
     }
 }

@@ -1,4 +1,5 @@
-﻿using HtmlAgilityPack;
+﻿using GraduatorieScript.Enums;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -7,14 +8,14 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class Ranking
 {
-    private Dictionary<string, List<StudentResult>>? byCourse;
-    private List<StudentResult>? byMerit;
-    private string? extra;
+    public List<CourseTable>? byCourse;
+    public MeritTable? byMerit;
+    public string? extra;
     public DateTime LastUpdate;
-    private string? phase;
-    private string? school;
+    public string? phase;
+    public SchoolEnum? school;
     public RankingUrl? Url;
-    private string? year;
+    public int? year;
 
     public bool IsSimilarTo(Ranking ranking)
     {
@@ -22,11 +23,26 @@ public class Ranking
                school == ranking.school &&
                phase == ranking.phase &&
                extra == ranking.extra &&
-               Url == ranking.Url;
+               Url?.Url == ranking.Url?.Url;
     }
 
     public HtmlDocument GetHtml()
     {
         throw new NotImplementedException();
     }
+}
+
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
+public class MeritTable {
+    public List<string>? Headers;
+    public List<StudentResult>? Rows;
+}
+
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
+public class CourseTable : MeritTable{
+    public string? Title;
+    public string? Location;
+    public List<string>? Sections;
 }

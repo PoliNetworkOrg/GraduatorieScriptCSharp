@@ -7,33 +7,26 @@ namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
-    public static HashSet<RankingUrl?> GetAll()
+    public static IEnumerable<RankingUrl> GetAll()
     {
         var polimiNewsLinks = GetPolimiNewsLink();
         var combinationLinks = GetCombinationLinks();
 
         //merge results links
-        var rankingsLinks = new HashSet<string?>();
+        var rankingsLinks = new HashSet<string>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
-            .Select(GetRanking)
-            .Where(r => r?.PageEnum == PageEnum.Index)
-            .Where(r => UrlUtils.CheckUrl(r?.Url))
+            .Select(RankingUrl.From)
+            .Where(r => r.PageEnum == PageEnum.Index)
+            .Where(r => UrlUtils.CheckUrl(r.Url))
             .ToHashSet();
 
-
-        var len = rankingsLinks.ToArray().Length;
-        Console.WriteLine($"len {len}");
+        var len = rankingsUrls.ToArray().Length;
+        Console.WriteLine($"[INFO] LinksFind.GetAll found {len} links");
         return rankingsUrls;
     }
-
-    private static RankingUrl? GetRanking(string? s)
-    {
-        return string.IsNullOrEmpty(s) ? null : RankingUrl.From(s);
-    }
-
 
     private static IEnumerable<string> GetCombinationLinks()
     {
