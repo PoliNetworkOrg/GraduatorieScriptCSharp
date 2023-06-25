@@ -1,11 +1,14 @@
-﻿using GraduatorieScript.Objects;
-using GraduatorieScript.Utils.Web;
+﻿using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
+using Newtonsoft.Json;
 
-namespace GraduatorieScript.Utils.Transformer;
+namespace GraduatorieScript.Objects;
 
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class HtmlPage
 {
+    private readonly string _htmlString;
     public readonly HtmlDocument Html;
     public readonly RankingUrl Url;
 
@@ -14,7 +17,13 @@ public class HtmlPage
         var page = new HtmlDocument();
         page.LoadHtml(html);
         Html = page;
+        _htmlString = html;
         Url = url;
+    }
+
+    public override string ToString()
+    {
+        return _htmlString;
     }
 
     public static HtmlPage? FromUrl(RankingUrl url)

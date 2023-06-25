@@ -19,27 +19,27 @@ public class Scraper
 
     private static readonly HashSet<string> Navigated = new();
 
-    private readonly List<string> newsUrl = new()
+    private readonly List<string> _newsUrl = new()
     {
         "https://www.polimi.it",
         "https://www.polimi.it/futuri-studenti",
         "https://www.poliorientami.polimi.it/come-si-accede/design/punteggi-esiti-e-graduatorie/"
     };
 
-    private readonly HtmlWeb web = new();
+    private readonly HtmlWeb _web = new();
 
-    private string[] newsTesters =
+    private string[] _newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
         "matricola", "merito", "nuovi studenti"
     };
 
-    public IEnumerable<string?>? GetNewsLinks()
+    public IEnumerable<string?> GetNewsLinks()
     {
         var result = new WrapperList<string?>();
         var actions = new List<Action>();
-        foreach (var variable in newsUrl)
+        foreach (var variable in _newsUrl)
         {
             var result1 = result;
 
@@ -72,7 +72,7 @@ public class Scraper
     private IEnumerable<string?> GetNewsLinks2(string variable)
     {
         var result = new List<string?>();
-        var htmlDoc = web.Load(variable);
+        var htmlDoc = _web.Load(variable);
 
         GetNewsLinks4(result, htmlDoc, variable, 0);
         GetNewsLinks5(result, htmlDoc);
@@ -161,7 +161,7 @@ public class Scraper
         if (Navigated.Contains(href))
             return null;
 
-        var htmlDoc = web.Load(href);
+        var htmlDoc = _web.Load(href);
         Navigated.Add(href);
 
         var result = new List<string?>();
@@ -215,7 +215,7 @@ public class Scraper
             return;
         }
 
-        var htmlDoc = web.Load(currentLink);
+        var htmlDoc = _web.Load(currentLink);
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
             .Select(element =>
                 UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt.First()))
@@ -233,12 +233,21 @@ public class Scraper
         if (string.IsNullOrEmpty(url))
             return null;
 
-        using var client = new HttpClient();
-        var response = client.GetAsync(url);
-        response.Wait();
-        var content = response.Result.Content;
-        var result = content.ReadAsStringAsync().Result;
+        try
+        {
+            using var client = new HttpClient();
+            var response = client.GetAsync(url);
+            response.Wait();
+            var content = response.Result.Content;
+            var result = content.ReadAsStringAsync().Result;
 
-        return result;
+            return result;
+        }
+        catch
+        {
+            ;
+        }
+
+        return null;
     }
 }
