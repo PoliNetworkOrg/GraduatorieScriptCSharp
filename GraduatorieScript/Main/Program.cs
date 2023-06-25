@@ -1,5 +1,4 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Objects;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
