@@ -187,14 +187,16 @@ public static class Parser
             byCourse = new List<CourseTable>(),
         };
 
-        if (meritTable.Data[0].id is not null && courseTables[0].Data[0].id is not null)
+        var meritTableData = meritTable.Data;
+        var courseTableRows = courseTables[0].Data;
+        if (meritTableData[0].id is not null && courseTableRows[0].id is not null)
         {
             foreach (var course in courseTables)
             {
                 var courseStudents = new List<StudentResult>();
                 foreach (var row in course.Data)
                 {
-                    var absolute = meritTable.Data.Find(r => r.id == row.id);
+                    var absolute = meritTableData.Find(r => r.id == row.id);
                     var student = new StudentResult
                     {
                         id = row.id,
@@ -224,7 +226,7 @@ public static class Parser
             ranking.byMerit = new MeritTable
             {
                 Headers = meritTable.Headers,
-                Rows = meritTable.Data.Select(row =>
+                Rows = meritTableData.Select(row =>
                 {
                     var findInCourse = ranking.byCourse
                         .Select(course => course.Rows?.Find(r => r.id == row.id))
@@ -287,7 +289,7 @@ public static class Parser
             ranking.byMerit = new MeritTable
             {
                 Headers = meritTable.Headers,
-                Rows = meritTable.Data.Select(row => new StudentResult
+                Rows = meritTableData.Select(row => new StudentResult
                 {
                     canEnroll = row.canEnroll,
                     canEnrollInto = row.canEnroll ? row.canEnrollInto : null,
