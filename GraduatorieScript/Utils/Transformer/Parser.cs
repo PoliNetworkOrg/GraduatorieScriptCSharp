@@ -110,62 +110,7 @@ public static class Parser
 
         foreach (var html in subIndexes)
         {
-            var page = html.Html.DocumentNode;
-            var url = html.Url;
-            var tablesLinks = page.SelectNodes("//td/a")
-                .ToList()
-                .Select(a => a.GetAttributeValue("href", null))
-                .Where(href => href != null)
-                .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-                .Select(RankingUrl.From)
-                .AsParallel()
-                .ToList();
-
-            List<HtmlPage> tablePages = new();
-
-            Action Selector(RankingUrl urlSingle)
-            {
-                return () =>
-                {
-                    bool Predicate(HtmlPage h)
-                    {
-                        return h.Url.Url == urlSingle.Url;
-                    }
-
-                    var htmlPage = allHtmls.ToList().Find(Predicate) ?? HtmlPage.FromUrl(urlSingle);
-                    if (htmlPage != null) tablePages.Add(htmlPage);
-                };
-            }
-
-            Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
-            var urlPageEnum = url.PageEnum;
-            switch (urlPageEnum)
-            {
-                case PageEnum.IndexByMerit:
-                {
-                    var table = JoinTables(tablePages);
-                    meritTable =
-                        Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
-                    break;
-                }
-                case PageEnum.IndexByCourse:
-                {
-                    var tables = GetTables(tablePages);
-                    foreach (var table in tables)
-                    {
-                        var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
-                            ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
-                        courseTables.Add(courseTable);
-                    }
-
-                    break;
-                }
-                default:
-                    Console.WriteLine(
-                        $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
-                    );
-                    break;
-            }
+            GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
         }
 
         var ranking = new Ranking
@@ -303,16 +248,100 @@ public static class Parser
         AddRankingAndMerge(rankingsSet, ranking);
     }
 
+    private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
+        List<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
+    {
+        var page = html.Html.DocumentNode;
+        var url = html.Url;
+        var tablesLinks = page.SelectNodes("//td/a")
+            .ToList()
+            .Select(a => a.GetAttributeValue("href", null))
+            .Where(href => href != null)
+            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
+            .Select(RankingUrl.From)
+            .AsParallel()
+            .ToList();
+
+        List<HtmlPage> tablePages = new();
+
+        Action Selector(RankingUrl urlSingle)
+        {
+            return () =>
+            {
+                var htmlPage = SubIndex(allHtmls, urlSingle);
+                if (htmlPage != null) tablePages.Add(htmlPage);
+            };
+        }
+
+        Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
+        var urlPageEnum = url.PageEnum;
+        switch (urlPageEnum)
+        {
+            case PageEnum.IndexByMerit:
+            {
+                var table = JoinTables(tablePages);
+                meritTable =
+                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                break;
+            }
+            case PageEnum.IndexByCourse:
+            {
+                var tables = GetTables(tablePages);
+                foreach (var table in tables)
+                {
+                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                    courseTables.Add(courseTable);
+                }
+
+                break;
+            }
+            default:
+                Console.WriteLine(
+                    $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
+                );
+                break;
+        }
+    }
+
     private static HtmlPage? SubIndex(List<HtmlPage> allHtmls, RankingUrl url)
     {
         bool Predicate(HtmlPage h)
         {
-            ;
-            return h.Url.Url == url.Url;
+            var urlUrl = h.Url.Url;
+            var s = url.Url;
+
+            return CheckIfSimilar(urlUrl, s);
         }
 
         var subIndex = allHtmls.ToList().Find(Predicate);
         return subIndex ?? HtmlPage.FromUrl(url);
+    }
+
+    private static bool CheckIfSimilar(string a, string b)
+    {
+        a = a.Replace('\\', '/');
+        b = b.Replace('\\', '/');
+
+        if (!a.Contains("/") || !b.Contains("/"))
+        {
+            return false;
+        }
+
+        var aStrings = a.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+        var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+
+        var min = Math.Min(aStrings.Count, bStrings.Count);
+        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count() - min)).ToList();
+        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count() - min)).ToList();
+
+        for (var i = 0; i < min; i++)
+        {
+            if (aStrings[i] != bStrings[i])
+                return false;
+        }
+        
+        return true;
     }
 
     private static void AddRankingAndMerge(RankingsSet rankingsSet, Ranking ranking)
@@ -377,8 +406,8 @@ public static class Parser
         if (strings.Length < 2)
             return null;
         var s = strings[1];
-        var split = s?.Split(")");
-        return split?[0];
+        var split = s.Split(")");
+        return split[0];
     }
 
     private static (List<string>?, List<string>?) GetTableHeader(HtmlNode doc)
