@@ -6,6 +6,7 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class RankingSummary
 {
-    public int? howManyEnrolled;
-    public int? howManyStudents;
+    public int? HowManyCanEnroll;
+    public int? HowManyStudents;
+    public Dictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
 }

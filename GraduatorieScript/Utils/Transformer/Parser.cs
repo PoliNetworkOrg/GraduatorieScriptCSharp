@@ -39,7 +39,7 @@ public static class Parser
         return rankingsSet;
     }
 
-    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, List<HtmlPage> allHtmls)
+    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls)
     {
         Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
         var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
@@ -96,22 +96,18 @@ public static class Parser
             .ToList();
 
         List<HtmlPage> subIndexes = new();
-        foreach (var url in subUrls)
+        var subIndices = subUrls.Select(url => SubIndex(allHtmls, url));
+        foreach (var subIndex in subIndices)
         {
-            var subIndex = SubIndex(allHtmls, url);
-            if (subIndex is not null)
-                subIndexes.Add(subIndex);
-            if (subIndex != null)
-                allHtmls.Remove(subIndex);
+            if (subIndex == null) continue;
+            subIndexes.Add(subIndex);
+            allHtmls.Remove(subIndex);
         }
 
         Table<MeritTableRow> meritTable = new();
         List<Table<CourseTableRow>> courseTables = new();
 
-        foreach (var html in subIndexes)
-        {
-            GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
-        }
+        foreach (var html in subIndexes) GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
 
         var ranking = new Ranking
         {
@@ -126,30 +122,12 @@ public static class Parser
 
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
-        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null; 
+        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null;
         if (meritTableData[0].id is not null && courseTableRow?.id is not null)
         {
             foreach (var course in courseTables)
             {
-                var courseStudents = new List<StudentResult>();
-                foreach (var row in course.Data)
-                {
-                    var absolute = meritTableData.Find(r => r.id == row.id);
-                    var student = new StudentResult
-                    {
-                        id = row.id,
-                        ofa = row.ofa,
-                        result = row.result,
-                        birthDate = row.birthDate,
-                        canEnroll = row.canEnroll,
-                        canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
-                        positionAbsolute = absolute?.position,
-                        positionCourse = row.position,
-                        sectionsResults = row.sectionsResults,
-                        englishCorrectAnswers = row.englishCorrectAnswers
-                    };
-                    courseStudents.Add(student);
-                }
+                var courseStudents = GetCourseStudents(course, meritTableData);
 
                 ranking.byCourse.Add(new CourseTable
                 {
@@ -245,12 +223,42 @@ public static class Parser
             };
         }
 
+        StatsCalculate.CalculateStats(ranking);
+
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
+
         AddRankingAndMerge(rankingsSet, ranking);
     }
 
+
+    private static IEnumerable<StudentResult> GetCourseStudents(Table<CourseTableRow> course,
+        List<MeritTableRow> meritTableData)
+    {
+        var courseStudents = new List<StudentResult>();
+        foreach (var row in course.Data)
+        {
+            var absolute = meritTableData.Find(r => r.id == row.id);
+            var student = new StudentResult
+            {
+                id = row.id,
+                ofa = row.ofa,
+                result = row.result,
+                birthDate = row.birthDate,
+                canEnroll = row.canEnroll,
+                canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
+                positionAbsolute = absolute?.position,
+                positionCourse = row.position,
+                sectionsResults = row.sectionsResults,
+                englishCorrectAnswers = row.englishCorrectAnswers
+            };
+            courseStudents.Add(student);
+        }
+
+        return courseStudents;
+    }
+
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
-        List<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
+        ICollection<Table<CourseTableRow>> courseTables, IEnumerable<HtmlPage> allHtmls)
     {
         var page = html.Html.DocumentNode;
         var url = html.Url;
@@ -305,7 +313,7 @@ public static class Parser
         }
     }
 
-    private static HtmlPage? SubIndex(List<HtmlPage> allHtmls, RankingUrl url)
+    private static HtmlPage? SubIndex(IEnumerable<HtmlPage> allHtmls, RankingUrl url)
     {
         bool Predicate(HtmlPage h)
         {
@@ -324,24 +332,19 @@ public static class Parser
         a = a.Replace('\\', '/');
         b = b.Replace('\\', '/');
 
-        if (!a.Contains("/") || !b.Contains("/"))
-        {
-            return false;
-        }
+        if (!a.Contains('/') || !b.Contains('/')) return false;
 
         var aStrings = a.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
         var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
 
         var min = Math.Min(aStrings.Count, bStrings.Count);
-        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count() - min)).ToList();
-        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count() - min)).ToList();
+        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count - min)).ToList();
+        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count - min)).ToList();
 
         for (var i = 0; i < min; i++)
-        {
             if (aStrings[i] != bStrings[i])
                 return false;
-        }
-        
+
         return true;
     }
 
@@ -510,7 +513,7 @@ public static class Parser
 
     private static void ParseRow(List<string> row, int idIndex, int votoTestIndex, int posIndex, int birthDateIndex,
         int enrollAllowedIndex, int englishCorrectAnswersIndex, int ofaEngIndex, int ofaTestIndex,
-        Dictionary<string, int>? sectionsIndex, List<CourseTableRow> parsedRows)
+        Dictionary<string, int>? sectionsIndex, ICollection<CourseTableRow> parsedRows)
     {
         var id = Table.GetFieldByIndex(row, idIndex);
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
