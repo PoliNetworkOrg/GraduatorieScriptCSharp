@@ -225,13 +225,12 @@ public static class Parser
         }
 
         StatsCalculate.CalculateStats(ranking);
-        
+
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
-        
+
         AddRankingAndMerge(rankingsSet, ranking);
     }
 
- 
 
     private static IEnumerable<StudentResult> GetCourseStudents(Table<CourseTableRow> course,
         List<MeritTableRow> meritTableData)

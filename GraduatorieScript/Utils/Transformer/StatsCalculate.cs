@@ -13,13 +13,13 @@ public static class StatsCalculate
     {
         var byMeritRows = ranking.byMerit?.Rows;
         var results = CalculateResultsScores(byMeritRows);
-        
-        var rankingSummary = new RankingSummary()
-            {
-                HowManyCanEnroll = byMeritRows?.Count(x => x.canEnroll),
-                HowManyStudents = byMeritRows?.Count,
-                ResultsSummarized = results
-            };
+
+        var rankingSummary = new RankingSummary
+        {
+            HowManyCanEnroll = byMeritRows?.Count(x => x.canEnroll),
+            HowManyStudents = byMeritRows?.Count,
+            ResultsSummarized = results
+        };
 
         return rankingSummary;
     }
@@ -27,7 +27,7 @@ public static class StatsCalculate
     private static Dictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)
     {
         if (byMeritRows == null) return null;
-        
+
         var results = new Dictionary<int, int>();
         var enumerable = byMeritRows.Select(variable => (int)Math.Round(variable.result));
         foreach (var score in enumerable)
