@@ -555,7 +555,7 @@ public static class Parser
     {
         if (schoolStr.Contains("design"))
             return SchoolEnum.Design;
-        if (schoolStr.Contains("ingegneria"))
+        if (schoolStr.Contains("ingegneria") && !schoolStr.Contains("architettura"))
             return SchoolEnum.Ingegneria;
         if (schoolStr.Contains("architettura"))
             return SchoolEnum.Architettura;
