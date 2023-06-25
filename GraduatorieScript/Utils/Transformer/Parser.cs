@@ -465,7 +465,8 @@ public static class Parser
     {
         var id = Table.GetFieldByIndex(row, idIndex);
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
-        var position = Convert.ToInt16(Table.GetFieldByIndex(row, posIndex) ?? "-1");
+        var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
+        var position = Convert.ToInt16(fieldByIndex);
         var birthDate = DateOnly.ParseExact(Table.GetFieldByIndex(row, birthDateIndex) ?? "", "dd/MM/yyyy");
         var enrollAllowed = Table.GetFieldByIndex(row, enrollAllowedIndex)?.ToLower().Contains("si") ?? false;
         var englishCorrectAnswers = Convert.ToInt16(Table.GetFieldByIndex(row, englishCorrectAnswersIndex) ?? "0");
