@@ -1,7 +1,6 @@
 using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
-using GraduatorieScript.Utils.Transformer;
 using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;

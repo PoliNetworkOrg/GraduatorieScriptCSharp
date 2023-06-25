@@ -8,70 +8,7 @@ using Newtonsoft.Json;
 
 namespace GraduatorieScript.Utils.Transformer;
 
-public class HtmlPage
-{
-    public readonly HtmlDocument Html;
-    public readonly RankingUrl Url;
 
-    public HtmlPage(string html, RankingUrl url)
-    {
-        var page = new HtmlDocument();
-        page.LoadHtml(html);
-        Html = page;
-        Url = url;
-    }
-
-    public static HtmlPage? FromUrl(RankingUrl url)
-    {
-        var html = Scraper.Download(url.Url);
-        if (html is null || string.IsNullOrEmpty(html))
-            return null;
-        return new HtmlPage(html, url);
-    }
-}
-
-public class Table<T>
-{
-    public List<string> Headers = new();
-    public List<string>? Sections;
-    public List<T> Data = new();
-    public string? CourseTitle;
-    public string? CourseLocation;
-
-    public Table() { }
-
-    public static Table<T> Create(List<string> headers, List<string>? sections, List<T> data, string? courseTitle, string? courseLocation)
-    {
-        return new Table<T>
-        {
-            Headers = headers,
-            Sections = sections,
-            Data = data,
-            CourseTitle = courseTitle,
-            CourseLocation = courseLocation
-        };
-    }
-
-    public static string? GetFieldByIndex(List<string> row, int index)
-    {
-        if (index == -1 || index >= row.Count) return null;
-        return row[index];
-    }
-
-    public Dictionary<string, int>? GetSectionsIndex()
-    {
-        if (Sections is null) return null;
-        var dict = new Dictionary<string, int>();
-        foreach (var section in Sections)
-        {
-            var index = Headers.FindIndex(h => h == section);
-            if (index != -1) dict.Add(section, index);
-        }
-        return dict;
-    }
-}
-
-public class Table : Table<List<string>> { }
 
 public static class Parser
 {
@@ -194,7 +131,7 @@ public static class Parser
                 }
 
                 Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
-                switch (url?.PageEnum)
+                switch (url.PageEnum)
                 {
                     case PageEnum.IndexByMerit:
                         {
@@ -214,7 +151,7 @@ public static class Parser
                         }
                     default:
                         Console.WriteLine(
-                            $"[ERROR] Unhandled sub index (url: {url?.Url}, type: {html.Url?.PageEnum})"
+                            $"[ERROR] Unhandled sub index (url: {url?.Url}, type: {html.Url.PageEnum})"
                         );
                         break;
                 }
@@ -228,7 +165,7 @@ public static class Parser
                 Url = index.Url,
                 school = school,
                 LastUpdate = DateTime.Now,
-                byCourse = new(),
+                byCourse = new List<CourseTable>(),
             };
 
             if (meritTable.Data[0].id is not null && courseTables[0].Data[0].id is not null)
@@ -395,7 +332,7 @@ public static class Parser
         return (goodHeaders, sections);
     }
 
-    private static Table<List<string>> JoinTables(List<HtmlPage> pages)
+    private static Table<List<string>> JoinTables(IEnumerable<HtmlPage> pages)
     {
         var tables = GetTables(pages).ToList();
         var headers = tables[0].Headers;
@@ -441,7 +378,7 @@ public static class Parser
                 result = Convert.ToDecimal(votoTest.Replace(",", ".")),
                 ofa = ofa,
                 canEnrollInto = enrollAllowed ? enrollCourse : null,
-                canEnroll = enrollAllowed,
+                canEnroll = enrollAllowed
             };
             parsedRows.Add(parsedRow);
         }
@@ -547,7 +484,7 @@ public static class Parser
         return elements;
     }
 
-    public static RankingsSet? ParseLocalJson(string jsonPath)
+    private static RankingsSet? ParseLocalJson(string jsonPath)
     {
         if (string.IsNullOrEmpty(jsonPath) || !File.Exists(jsonPath))
             return null;
