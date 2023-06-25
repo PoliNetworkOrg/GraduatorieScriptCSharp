@@ -96,13 +96,12 @@ public static class Parser
             .ToList();
 
         List<HtmlPage> subIndexes = new();
-        foreach (var url in subUrls)
+        var subIndices = subUrls.Select(url => SubIndex(allHtmls, url));
+        foreach (var subIndex in subIndices)
         {
-            var subIndex = SubIndex(allHtmls, url);
-            if (subIndex is not null)
-                subIndexes.Add(subIndex);
-            if (subIndex != null)
-                allHtmls.Remove(subIndex);
+            if (subIndex == null) continue;
+            subIndexes.Add(subIndex);
+            allHtmls.Remove(subIndex);
         }
 
         Table<MeritTableRow> meritTable = new();
