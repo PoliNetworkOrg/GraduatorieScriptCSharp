@@ -27,10 +27,7 @@ public class Ranking
                Url?.Url == ranking.Url?.Url;
     }
 
-    public HtmlDocument GetHtml()
-    {
-        throw new NotImplementedException();
-    }
+
 
     public void Merge(Ranking ranking)
     {
