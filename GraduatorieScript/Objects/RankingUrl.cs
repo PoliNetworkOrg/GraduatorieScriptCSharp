@@ -1,7 +1,10 @@
 using GraduatorieScript.Enums;
+using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
 
+[Serializable]
+[JsonObject(MemberSerialization.Fields)]
 public class RankingUrl
 {
     public PageEnum PageEnum = PageEnum.Unknown;
@@ -25,6 +28,7 @@ public class RankingUrl
 
     private static PageEnum GetPageEnum(string cleanUrl)
     {
+        // Console.WriteLine($"[DEBUG] calculate PageEnum of {cleanUrl}");
         if (cleanUrl.EndsWith("generale")) return PageEnum.Index;
 
         if (cleanUrl.EndsWith("sotto_indice")) return PageEnum.IndexByCourse;
@@ -38,10 +42,17 @@ public class RankingUrl
         var splitByUnderscore = last.Split("_");
         var reversed = splitByUnderscore.Reverse().ToArray();
 
-        if (reversed.First() == "M") return PageEnum.TableByMerit;
-        if (reversed[1] == "sotto") return PageEnum.TableByCourse;
-        if (reversed[1] == "grad") return PageEnum.TableById;
+        return TableByCourse(reversed);
+    }
 
-        return PageEnum.Unknown;
+    private static PageEnum TableByCourse(IReadOnlyList<string> reversed)
+    {
+        if (reversed[0] == "M") return PageEnum.TableByMerit;
+        return reversed[1] switch
+        {
+            "sotto" => PageEnum.TableByCourse,
+            "grad" => PageEnum.TableById,
+            _ => PageEnum.Unknown
+        };
     }
 }

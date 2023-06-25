@@ -17,9 +17,10 @@ public class RankingsSet
 
     public static RankingsSet Merge(params RankingsSet?[] sets)
     {
+        var fixedSets = sets.Where(set => set is not null);
         var rankingsSet = new RankingsSet
         {
-            LastUpdate = sets.Max(x => x?.LastUpdate ?? DateTime.Now),
+            LastUpdate = fixedSets.Max(x => x!.LastUpdate ?? DateTime.Now),
             Rankings = new List<Ranking>()
         };
 
@@ -38,8 +39,9 @@ public class RankingsSet
     public void AddRanking(Ranking ranking)
     {
         var alreadyPresent = Contains(ranking);
-        if (alreadyPresent)
+        if (!alreadyPresent)
             Rankings.Add(ranking);
+
         if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
     }
 

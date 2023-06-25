@@ -8,409 +8,569 @@ using Newtonsoft.Json;
 
 namespace GraduatorieScript.Utils.Transformer;
 
-public class HtmlPage
-{
-    public readonly HtmlDocument Html;
-    public readonly RankingUrl Url;
-
-    public HtmlPage(string html, RankingUrl url)
-    {
-        var page = new HtmlDocument();
-        page.LoadHtml(html);
-        Html = page;
-        Url = url;
-    }
-
-    public static HtmlPage? FromUrl(RankingUrl url)
-    {
-        var html = Scraper.Download(url.Url);
-        if (String.IsNullOrEmpty(html))
-            return null;
-        return new HtmlPage(html, url);
-    }
-}
-
 public static class Parser
 {
-    public static RankingsSet? GetRankings(
-        string htmlFolder,
+    public static RankingsSet GetRankings(
+        string? htmlFolder,
         string jsonPath,
         IEnumerable<RankingUrl> urls
     )
     {
-        var rankingsSet = new RankingsSet { LastUpdate = DateTime.Now };
+        var rankingsSet = ParseLocalJson(jsonPath) ?? new RankingsSet();
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
-        var newUrls = urls.Where(u => !savedHtmls.Any(s => s.Url.Url == u.Url));
-        List<HtmlPage> newHtmls = newUrls
-            .Where(url => url != null)
-            .Select(url => HtmlPage.FromUrl(url))
+
+        var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
+        foreach (var url in newUrls) Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
+
+        var newHtmls = newUrls
+            .Select(HtmlPage.FromUrl)
             .Where(h => h != null)
             .Select(h => h!) // for some reasons it still infered as null
             .ToList();
 
-        var web = new HtmlWeb();
-        var indexes = newHtmls.Where(h => h.Url.PageEnum == PageEnum.Index).ToList();
-        newHtmls.RemoveAll(h => h.Url.PageEnum == PageEnum.Index);
 
-        foreach (var index in indexes)
-        {
-            var doc = index.Html.DocumentNode;
+        var allHtmls = savedHtmls.Concat(newHtmls).ToList();
 
-            // get ranking info
-            var intestazioni = doc.GetElementsByClassName("intestazione").ToList();
-            string schoolStr = intestazioni[2].InnerText.Split("\n")[0].ToLower();
-            SchoolEnum school = GetSchoolEnum(schoolStr);
-            if (school == SchoolEnum.Unknown)
-            {
-                Console.WriteLine(
-                    $"[ERROR] School '{schoolStr}' not recognized (index: {index.Url.Url}); skipped"
-                );
-                continue;
-            }
-            int year = Convert.ToInt16(intestazioni[1].InnerText.Split("Year ")[1].Split("/")[0]);
-            string phase = intestazioni[3].InnerText.Split("\n")[0].Split("- ")[1];
-            string notes = intestazioni[4].InnerText.Split("\n")[0];
+        var indexes = allHtmls.Where(h => h.Url.PageEnum == PageEnum.Index).ToList();
+        allHtmls.RemoveAll(h => h.Url.PageEnum == PageEnum.Index);
 
-            var aTags = doc.GetElementsByClassName("titolo")
-                .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
-                .Where(a => !a.InnerText.Contains("matricola"))
-                .ToList(); // filter out id ranking
+        foreach (var index in indexes) GetRankingsSingle(index, rankingsSet, allHtmls);
 
-            int lastUrlIndex = index.Url.Url.LastIndexOf('/');
-            string baseDomain = index.Url.Url.Substring(0, lastUrlIndex) + "/";
-
-            List<RankingUrl> subUrls = aTags
-                .Select(a => a.GetAttributeValue("href", null))
-                .Where(href => href != null)
-                .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-                .Select(href => RankingUrl.From(href))
-                .Where(
-                    url =>
-                        url.PageEnum == PageEnum.IndexByMerit
-                        || url.PageEnum == PageEnum.IndexByCourse
-                )
-                .ToList();
-
-            List<HtmlPage> subIndexes = new();
-            foreach (var url in subUrls)
-            {
-                var subIndex = newHtmls.ToList().Find(h => h.Url.Url == url.Url);
-                if (subIndex == null)
-                {
-                    var html = HtmlPage.FromUrl(url);
-                    if (html != null)
-                    {
-                        subIndex = html;
-                    }
-                }
-                if (subIndex != null)
-                    subIndexes.Add(subIndex);
-            }
-
-            newHtmls.RemoveAll(
-                h =>
-                    h.Url.PageEnum == PageEnum.IndexByMerit
-                    || h.Url.PageEnum == PageEnum.IndexByCourse
-            );
-
-            List<MeritTableRow> meritTable = new();
-            List<List<CourseTableRow>> courseTables = new();
-
-            foreach (var html in subIndexes)
-            {
-                var page = html.Html.DocumentNode;
-                var tablesLinks = page.SelectNodes("//td/a")
-                    .Select(a => a.GetAttributeValue("href", null))
-                    .Where(href => href != null)
-                    .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-                    .Select(href => RankingUrl.From(href))
-                    .AsParallel()
-                    .ToList();
-
-                List<HtmlPage> tablePages = new();
-                List<Action> actions = new();
-                foreach (var url in tablesLinks)
-                {
-                    actions.Add(() =>
-                    {
-                        var page = newHtmls.ToList().Find(h => h.Url.Url == url.Url);
-                        if (page == null)
-                            page = HtmlPage.FromUrl(url);
-                        if (page != null)
-                            tablePages.Add(page);
-                    });
-                }
-                Parallel.Invoke(actions.ToArray());
-                if (html.Url.PageEnum == PageEnum.IndexByMerit)
-                {
-                    var table = JoinTables(tablePages);
-                    meritTable = ParseMeritTable(school, table);
-                }
-                else if (html.Url.PageEnum == PageEnum.IndexByCourse)
-                {
-                    var tables = GetTables(tablePages);
-                    foreach (var table in tables)
-                        courseTables.Add(ParseCourseTable(school, table));
-                }
-                else
-                {
-                    Console.WriteLine(
-                        $"[ERROR] Unhandled sub index (url: {html.Url.Url}, type: {html.Url.PageEnum})"
-                    );
-                }
-            }
-
-            Console.WriteLine($"{meritTable.Count} {courseTables.Count}");
-            // TODO: join rows into rankings
-        }
         return rankingsSet;
     }
 
-    private static List<List<List<string>>> GetTables(List<HtmlPage> pages)
+    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, List<HtmlPage> allHtmls)
     {
-        var table = pages
+        Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
+        var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
+        var b1 = findIndex >= 0;
+
+        if (b1)
+        {
+            var b2 = rankingsSet.Rankings[findIndex];
+            if (b2 is { byMerit: not null, byCourse: not null })
+            {
+                Console.WriteLine($"[DEBUG] skipping index {index.Url.Url}: already parsed");
+                return;
+            }
+        }
+
+        var doc = index.Html.DocumentNode;
+
+        // get ranking info
+        var intestazioni = doc.GetElementsByClassName("intestazione").ToList().Select(i =>
+            i.Descendants("#text").ToList()[0].InnerText
+        ).ToList();
+        var schoolStr = intestazioni[2].Split("\n")[0].ToLower();
+        var school = GetSchoolEnum(schoolStr);
+        var urlUrl = index.Url.Url;
+        if (school == SchoolEnum.Unknown)
+        {
+            Console.WriteLine(
+                $"[ERROR] School '{schoolStr}' not recognized (index: {urlUrl}); skipped"
+            );
+            return;
+        }
+
+        int year = Convert.ToInt16(intestazioni[1].Split("Year ")[1].Split("/")[0]);
+        var phase = intestazioni[3].Split("- ")[1];
+        var notes = intestazioni[4];
+
+        var aTags = doc.GetElementsByClassName("titolo")
+            .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
+            .Where(a => !a.InnerText.Contains("matricola"))
+            .ToList(); // filter out id ranking
+
+        var lastUrlIndex = urlUrl.LastIndexOf('/');
+        var baseDomain = urlUrl[..lastUrlIndex] + "/";
+
+        var subUrls = aTags
+            .Select(a => a.GetAttributeValue("href", null))
+            .Where(href => href != null)
+            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
+            .Select(RankingUrl.From)
+            .Where(
+                url =>
+                    url.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse
+            )
+            .ToList();
+
+        List<HtmlPage> subIndexes = new();
+        foreach (var url in subUrls)
+        {
+            var subIndex = SubIndex(allHtmls, url);
+            if (subIndex is not null)
+                subIndexes.Add(subIndex);
+            if (subIndex != null)
+                allHtmls.Remove(subIndex);
+        }
+
+        Table<MeritTableRow> meritTable = new();
+        List<Table<CourseTableRow>> courseTables = new();
+
+        foreach (var html in subIndexes)
+        {
+            GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
+        }
+
+        var ranking = new Ranking
+        {
+            year = year,
+            phase = phase,
+            extra = notes,
+            Url = index.Url,
+            school = school,
+            LastUpdate = DateTime.Now,
+            byCourse = new List<CourseTable>()
+        };
+
+        var meritTableData = meritTable.Data;
+        var courseTableRows = courseTables[0].Data;
+        var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null; 
+        if (meritTableData[0].id is not null && courseTableRow?.id is not null)
+        {
+            foreach (var course in courseTables)
+            {
+                var courseStudents = new List<StudentResult>();
+                foreach (var row in course.Data)
+                {
+                    var absolute = meritTableData.Find(r => r.id == row.id);
+                    var student = new StudentResult
+                    {
+                        id = row.id,
+                        ofa = row.ofa,
+                        result = row.result,
+                        birthDate = row.birthDate,
+                        canEnroll = row.canEnroll,
+                        canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
+                        positionAbsolute = absolute?.position,
+                        positionCourse = row.position,
+                        sectionsResults = row.sectionsResults,
+                        englishCorrectAnswers = row.englishCorrectAnswers
+                    };
+                    courseStudents.Add(student);
+                }
+
+                ranking.byCourse.Add(new CourseTable
+                {
+                    Title = course.CourseTitle,
+                    Location = course.CourseLocation,
+                    Sections = course.Sections,
+                    Headers = course.Headers,
+                    Rows = courseStudents.OrderBy(s => s.positionCourse).ToList()
+                });
+            }
+
+            ranking.byMerit = new MeritTable
+            {
+                Headers = meritTable.Headers,
+                Rows = meritTableData.Select(row =>
+                {
+                    var findInCourse = ranking.byCourse
+                        .Select(course => course.Rows?.Find(r => r.id == row.id))
+                        .Where(rowSingle => rowSingle is not null)
+                        .ToList();
+
+                    var withEnroll = findInCourse.Count > 0 ? findInCourse.Find(c => c!.canEnroll) : null;
+                    var withMaxPoints = findInCourse.Count > 0
+                        ? findInCourse.OrderBy(c => c!.positionCourse).First()
+                        : null;
+                    var courseData = withEnroll ?? withMaxPoints;
+
+                    return new StudentResult
+                    {
+                        canEnroll = row.canEnroll,
+                        canEnrollInto = row.canEnroll ? row.canEnrollInto : null,
+                        id = row.id,
+                        positionAbsolute = row.position,
+                        result = row.result,
+                        ofa = row.ofa,
+                        positionCourse = courseData?.positionCourse,
+                        englishCorrectAnswers = courseData?.englishCorrectAnswers,
+                        sectionsResults = courseData?.sectionsResults,
+                        birthDate = courseData?.birthDate
+                    };
+                }).OrderBy(s => s.positionAbsolute).ToList()
+            };
+        }
+        else
+        {
+            foreach (var course in courseTables)
+            {
+                var courseStudents = new List<StudentResult>();
+                foreach (var row in course.Data)
+                {
+                    var student = new StudentResult
+                    {
+                        id = row.id,
+                        ofa = row.ofa,
+                        result = row.result,
+                        birthDate = row.birthDate,
+                        canEnroll = row.canEnroll,
+                        canEnrollInto = row.canEnroll ? course.CourseTitle : null,
+                        positionAbsolute = null,
+                        positionCourse = row.position,
+                        sectionsResults = row.sectionsResults,
+                        englishCorrectAnswers = row.englishCorrectAnswers
+                    };
+                    courseStudents.Add(student);
+                }
+
+                ranking.byCourse.Add(new CourseTable
+                {
+                    Title = course.CourseTitle,
+                    Location = course.CourseLocation,
+                    Sections = course.Sections,
+                    Headers = course.Headers,
+                    Rows = courseStudents.OrderBy(s => s.positionCourse).ToList()
+                });
+            }
+
+            ranking.byMerit = new MeritTable
+            {
+                Headers = meritTable.Headers,
+                Rows = meritTableData.Select(row => new StudentResult
+                {
+                    canEnroll = row.canEnroll,
+                    canEnrollInto = row.canEnroll ? row.canEnrollInto : null,
+                    id = row.id,
+                    positionAbsolute = row.position,
+                    result = row.result,
+                    ofa = row.ofa,
+                    positionCourse = null,
+                    englishCorrectAnswers = null,
+                    sectionsResults = null,
+                    birthDate = null
+                }).OrderBy(s => s.positionAbsolute).ToList()
+            };
+        }
+
+        Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
+        AddRankingAndMerge(rankingsSet, ranking);
+    }
+
+    private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
+        List<Table<CourseTableRow>> courseTables, List<HtmlPage> allHtmls)
+    {
+        var page = html.Html.DocumentNode;
+        var url = html.Url;
+        var tablesLinks = page.SelectNodes("//td/a")
+            .ToList()
+            .Select(a => a.GetAttributeValue("href", null))
+            .Where(href => href != null)
+            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
+            .Select(RankingUrl.From)
+            .AsParallel()
+            .ToList();
+
+        List<HtmlPage> tablePages = new();
+
+        Action Selector(RankingUrl urlSingle)
+        {
+            return () =>
+            {
+                var htmlPage = SubIndex(allHtmls, urlSingle);
+                if (htmlPage != null) tablePages.Add(htmlPage);
+            };
+        }
+
+        Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
+        var urlPageEnum = url.PageEnum;
+        switch (urlPageEnum)
+        {
+            case PageEnum.IndexByMerit:
+            {
+                var table = JoinTables(tablePages);
+                meritTable =
+                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                break;
+            }
+            case PageEnum.IndexByCourse:
+            {
+                var tables = GetTables(tablePages);
+                foreach (var table in tables)
+                {
+                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                    courseTables.Add(courseTable);
+                }
+
+                break;
+            }
+            default:
+                Console.WriteLine(
+                    $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
+                );
+                break;
+        }
+    }
+
+    private static HtmlPage? SubIndex(List<HtmlPage> allHtmls, RankingUrl url)
+    {
+        bool Predicate(HtmlPage h)
+        {
+            var urlUrl = h.Url.Url;
+            var s = url.Url;
+
+            return CheckIfSimilar(urlUrl, s);
+        }
+
+        var subIndex = allHtmls.ToList().Find(Predicate);
+        return subIndex ?? HtmlPage.FromUrl(url);
+    }
+
+    private static bool CheckIfSimilar(string a, string b)
+    {
+        a = a.Replace('\\', '/');
+        b = b.Replace('\\', '/');
+
+        if (!a.Contains("/") || !b.Contains("/"))
+        {
+            return false;
+        }
+
+        var aStrings = a.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+        var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+
+        var min = Math.Min(aStrings.Count, bStrings.Count);
+        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count() - min)).ToList();
+        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count() - min)).ToList();
+
+        for (var i = 0; i < min; i++)
+        {
+            if (aStrings[i] != bStrings[i])
+                return false;
+        }
+        
+        return true;
+    }
+
+    private static void AddRankingAndMerge(RankingsSet rankingsSet, Ranking ranking)
+    {
+        bool Predicate(Ranking x)
+        {
+            return x.Url?.Url == ranking.Url?.Url;
+        }
+
+        var isPresent = rankingsSet.Rankings.Any(Predicate);
+        if (!isPresent)
+        {
+            rankingsSet.AddRanking(ranking);
+            return;
+        }
+
+        var r = rankingsSet.Rankings.FirstOrDefault((Func<Ranking, bool>)Predicate);
+        if (r == null)
+        {
+            rankingsSet.AddRanking(ranking);
+            return;
+        }
+
+        r.Merge(ranking);
+    }
+
+    private static IEnumerable<Table<List<string>>> GetTables(IEnumerable<HtmlPage> pages)
+    {
+        var tables = pages
             .Select(page =>
             {
+                var isCourse = page.Url.PageEnum == PageEnum.TableByCourse;
                 var doc = page.Html.DocumentNode;
-                var header = doc.SelectNodes("//table[contains(@class, 'TableDati')]/thead/tr/td/"); // da aggiustare e usare
+                var header = GetTableHeader(doc);
+                if (header is (null, null)) return null;
+
                 var rows = doc.SelectNodes("//table[contains(@class, 'TableDati')]/tbody/tr")
                     .ToList();
+                var fullTitle = isCourse ? doc.GetElementsByClassName("titolo").ToList()[0].InnerText : null;
+                var title = isCourse ? fullTitle?.Split(" (")[0] : null;
+                var location = isCourse ? GetLocation(fullTitle) : null;
                 var rowsData = rows.Select(
                         row =>
                             row.Descendants("td")
                                 .Select(node => node.InnerText)
-                                .Where(text => !String.IsNullOrEmpty(text))
                                 .ToList()
                     )
                     .ToList();
-                return rowsData;
+                return Table.Create(header.Item1!, header.Item2, rowsData, title, location);
             })
+            .Where(el => el is not null)
             .ToList();
 
-        return table;
+        return tables!;
     }
 
-    private static List<List<string>> JoinTables(List<HtmlPage> pages)
+    private static string? GetLocation(string? fullTitle)
     {
-        var table = GetTables(pages).SelectMany(list => list).ToList();
-        return table;
+        var strings = fullTitle?.Split("(");
+        if (strings == null)
+            return null;
+        if (strings.Length < 2)
+            return null;
+        var s = strings[1];
+        var split = s.Split(")");
+        return split[0];
     }
 
-    private static List<MeritTableRow> ParseMeritTable(SchoolEnum school, List<List<string>> table)
+    private static (List<string>?, List<string>?) GetTableHeader(HtmlNode doc)
     {
-        List<MeritTableRow> rows = new();
-        foreach (var row in table)
+        var rows = doc.SelectNodes("//table[contains(@class, 'TableDati')]/thead/tr");
+        if (rows is null) return (null, null); // page invalid
+
+        var badIndex = rows[0].Descendants("th").ToList().FindIndex(node => node.GetAttributeValue("colSpan", 1) > 1);
+        var rowsText = rows.Select(row =>
+            row.Descendants("th").Select(th => th.Descendants("#text").ToList()[0].InnerText).ToList()).ToList();
+        if (rows.Count == 1 || badIndex == -1) return (rowsText[0], null);
+
+        // course table, need to build correct headers
+        var headers = rowsText[0];
+        var sections = rowsText[1];
+        var goodHeaders = new List<string>();
+        goodHeaders.AddRange(headers.GetRange(0, badIndex));
+        goodHeaders.AddRange(sections);
+        goodHeaders.AddRange(headers.GetRange(badIndex + 1, headers.Count - (badIndex + 1)));
+        return (goodHeaders, sections);
+    }
+
+    private static Table<List<string>> JoinTables(IEnumerable<HtmlPage> pages)
+    {
+        var tables = GetTables(pages).ToList();
+        var headers = tables[0].Headers;
+        var sections = tables[0].Sections;
+        var data = tables.SelectMany(table => table.Data).ToList();
+        return Table.Create(headers, sections, data, null, null);
+    }
+
+    private static List<MeritTableRow> ParseMeritTable(Table<List<string>> table)
+    {
+        List<MeritTableRow> parsedRows = new();
+        var headers = table.Headers.Select(h => h.ToLower()).ToList();
+
+        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
+        var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
+        var posIndex = headers.FindIndex(t => t.Contains("posizione"));
+        var corsoIndex = headers.FindIndex(t => t.Contains("corso"));
+        var ofaEngIndex = headers.FindIndex(t => t.Contains("ofa inglese"));
+        var ofaTestIndex = headers.FindIndex(t => t.Contains("ofa test"));
+
+        foreach (var row in table.Data)
         {
-            var colsNum = row.Count;
-            if (school == SchoolEnum.Urbanistica)
+            var id = Table.GetFieldByIndex(row, idIndex);
+            var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
+            var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
+            var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
+            var enrollAllowed = !enrollCourse
+                .ToLower()
+                .Contains("immatricolazione non consentita");
+
+            var ofa = new Dictionary<string, bool>();
+
+            var ofaEng = Table.GetFieldByIndex(row, ofaEngIndex);
+            if (ofaEng is not null) ofa.Add("ENG", ofaEng.ToLower().Contains("si"));
+
+            var ofaTest = Table.GetFieldByIndex(row, ofaTestIndex);
+            if (ofaTest is not null) ofa.Add("TEST", ofaTest.ToLower().Contains("si"));
+
+            var parsedRow = new MeritTableRow
             {
-                // no ofa
-                bool hasId = colsNum == 4;
-                int o = hasId ? 1 : 0;
-
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-                var posAbs = Convert.ToInt16(row[1 + o]);
-                var enrollCourse = row[2 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                rows.Add(
-                    new MeritTableRow
-                    {
-                        id = id,
-                        result = votoTest,
-                        position = posAbs,
-                        canEnroll = enrollAllowed,
-                        canEnrollInto = enrollAllowed ? enrollCourse : null
-                    }
-                );
-            }
-            else if (school == SchoolEnum.Architettura || school == SchoolEnum.Design)
-            {
-                // solo ofa inglese
-                bool hasId = colsNum == 5;
-                int o = hasId ? 1 : 0;
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-
-                var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaEng = row[1 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
-
-                var posAbs = Convert.ToInt16(row[2 + o]);
-                var enrollCourse = row[3 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                var tRow = new MeritTableRow
-                {
-                    id = id,
-                    result = votoTest,
-                    position = posAbs,
-                    ofa = ofaDict,
-                    canEnroll = enrollAllowed,
-                    canEnrollInto = enrollAllowed ? enrollCourse : null
-                };
-                rows.Add(tRow);
-            }
-            else if (school == SchoolEnum.Ingegneria)
-            {
-                // has ofa test and ofa eng
-                bool hasId = colsNum == 6;
-                int o = hasId ? 1 : 0;
-
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-
-                var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaTest = row[1 + o].ToLower().Contains("si");
-                ofaDict["TEST"] = hasOfaTest;
-                bool hasOfaEng = row[2 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
-
-                var posAbs = Convert.ToInt16(row[3 + o]);
-                var enrollCourse = row[4 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                rows.Add(
-                    new MeritTableRow
-                    {
-                        id = id,
-                        result = votoTest,
-                        position = posAbs,
-                        ofa = ofaDict,
-                        canEnroll = enrollAllowed,
-                        canEnrollInto = enrollAllowed ? enrollCourse : null
-                    }
-                );
-            }
+                id = id,
+                position = Convert.ToInt16(position),
+                result = Convert.ToDecimal(votoTest.Replace(",", ".")),
+                ofa = ofa,
+                canEnrollInto = enrollAllowed ? enrollCourse : null,
+                canEnroll = enrollAllowed
+            };
+            parsedRows.Add(parsedRow);
         }
-        return rows;
+
+        return parsedRows;
     }
 
-    private static List<CourseTableRow> ParseCourseTable(
-        SchoolEnum school,
-        List<List<string>> table
-    )
+    private static List<CourseTableRow> ParseCourseTable(Table<List<string>> table)
     {
-        List<CourseTableRow> rows = new();
-        foreach (var row in table)
+        List<CourseTableRow> parsedRows = new();
+        var headers = table.Headers.Select(h => h.ToLower()).ToList();
+        /* foreach (var h in headers) Console.Write($"{h};"); */
+
+        var posIndex = headers.FindIndex(t => t.Contains("posizione"));
+        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
+        var birthDateIndex = headers.FindIndex(t => t.Contains("nascita"));
+        var enrollAllowedIndex = headers.FindIndex(t => t.Contains("consentita"));
+        var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
+        var ofaEngIndex = headers.FindIndex(t => t.Contains("ofa inglese"));
+        var ofaTestIndex = headers.FindIndex(t => t.Contains("ofa test"));
+        var englishCorrectAnswersIndex = headers.FindIndex(t => t.Contains("risposte esatte inglese"));
+
+        var sectionsIndex = table.GetSectionsIndex();
+
+        foreach (var row in table.Data)
+            ParseRow(row, idIndex, votoTestIndex, posIndex, birthDateIndex, enrollAllowedIndex,
+                englishCorrectAnswersIndex, ofaEngIndex, ofaTestIndex, sectionsIndex, parsedRows);
+        return parsedRows;
+    }
+
+    private static void ParseRow(List<string> row, int idIndex, int votoTestIndex, int posIndex, int birthDateIndex,
+        int enrollAllowedIndex, int englishCorrectAnswersIndex, int ofaEngIndex, int ofaTestIndex,
+        Dictionary<string, int>? sectionsIndex, List<CourseTableRow> parsedRows)
+    {
+        var id = Table.GetFieldByIndex(row, idIndex);
+        var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
+        var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
+        if (fieldByIndex.ToLower().Contains("nessun"))
+            return;
+
+        var position = Convert.ToInt16(fieldByIndex);
+        var birthDate = DateOnly.ParseExact(Table.GetFieldByIndex(row, birthDateIndex) ?? "", "dd/MM/yyyy");
+        var enrollAllowed = Table.GetFieldByIndex(row, enrollAllowedIndex)?.ToLower().Contains("si") ?? false;
+        var englishCorrectAnswersValue = Table.GetFieldByIndex(row, englishCorrectAnswersIndex);
+        int? englishCorrectAnswers =
+            englishCorrectAnswersValue is not null ? Convert.ToInt16(englishCorrectAnswersValue) : null;
+        var ofa = new Dictionary<string, bool>();
+
+        var ofaEng = Table.GetFieldByIndex(row, ofaEngIndex);
+        if (ofaEng is not null) ofa.Add("ENG", ofaEng.ToLower().Contains("si"));
+
+        var ofaTest = Table.GetFieldByIndex(row, ofaTestIndex);
+        if (ofaTest is not null) ofa.Add("TEST", ofaTest.ToLower().Contains("si"));
+
+        var sectionsResults = new Dictionary<string, decimal>();
+        if (sectionsIndex is not null)
+            foreach (var section in sectionsIndex)
+                sectionsResults.Add(section.Key, Convert.ToDecimal(row[section.Value].Replace(",", ".")));
+
+        var parsedRow = new CourseTableRow
         {
-            var colsNum = row.Count;
-            if (school == SchoolEnum.Urbanistica)
-            {
-                // no ofa
-                bool hasId = colsNum == 4;
-                int o = hasId ? 1 : 0;
-
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-                var posAbs = Convert.ToInt16(row[1 + o]);
-                var enrollCourse = row[2 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                rows.Add(
-                );
-            }
-            else if (school == SchoolEnum.Architettura || school == SchoolEnum.Design)
-            {
-                // solo ofa inglese
-                bool hasId = colsNum == 13;
-                int o = hasId ? 1 : 0;
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-
-                var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaEng = row[1 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
-
-                var posAbs = Convert.ToInt16(row[2 + o]);
-                var enrollCourse = row[3 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                rows.Add(tRow);
-            }
-            else if (school == SchoolEnum.Ingegneria)
-            {
-                // has ofa test and ofa eng
-                bool hasId = colsNum == 6;
-                int o = hasId ? 1 : 0;
-
-                string? id = hasId ? row[0] : null;
-                var votoTest = Convert.ToDecimal(row[0 + o].Replace(",", "."));
-
-                var ofaDict = new Dictionary<string, bool>();
-                bool hasOfaTest = row[1 + o].ToLower().Contains("si");
-                ofaDict["TEST"] = hasOfaTest;
-                bool hasOfaEng = row[2 + o].ToLower().Contains("si");
-                ofaDict["ENG"] = hasOfaEng;
-
-                var posAbs = Convert.ToInt16(row[3 + o]);
-                var enrollCourse = row[4 + o];
-                var enrollAllowed = !enrollCourse
-                    .ToLower()
-                    .Contains("immatricolazione non consentita");
-                rows.Add(
-                );
-            }
-        }
-        return rows;
+            id = id,
+            position = position,
+            result = votoTest,
+            ofa = ofa,
+            canEnroll = enrollAllowed,
+            englishCorrectAnswers = englishCorrectAnswers,
+            birthDate = birthDate,
+            sectionsResults = sectionsResults
+        };
+        parsedRows.Add(parsedRow);
     }
 
     private static SchoolEnum GetSchoolEnum(string schoolStr)
     {
         if (schoolStr.Contains("design"))
             return SchoolEnum.Design;
-        else if (schoolStr.Contains("ingegneria"))
+        if (schoolStr.Contains("ingegneria") && !schoolStr.Contains("architettura"))
             return SchoolEnum.Ingegneria;
-        else if (schoolStr.Contains("architettura"))
+        if (schoolStr.Contains("architettura"))
             return SchoolEnum.Architettura;
-        else if (schoolStr.Contains("urbanistica"))
+        if (schoolStr.Contains("urbanistica"))
             return SchoolEnum.Urbanistica;
-        else
-            return SchoolEnum.Unknown;
+        return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string path)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string? path)
     {
-        var elements = new HashSet<HtmlPage>();
-        if (!string.IsNullOrEmpty(path))
-        {
-            var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
-            foreach (var file in files)
-            {
-                var fileRelativePath = file.Split(path)[1];
-
-                // ignore because this is the file built
-                // by previous script which is useless for this one
-                // (and it also breaks our logic)
-                if (fileRelativePath == "index.html")
-                    continue;
-
-                var html = File.ReadAllText(file);
-                var url = $"http://{Constants.RisultatiAmmissionePolimiIt}{fileRelativePath}";
-                // no need to check if url is online
-                // because the html is already stored
-
-                elements.Add(new HtmlPage(html, RankingUrl.From(url)));
-            }
-        }
-
-        return elements;
-    }
-
-    public static RankingsSet? FindParseHtmls(string? path)
-    {
+        HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(path))
-            return null;
+            return elements;
 
-        //nella cartella trovata, leggere e analizzare gli eventuali file .html
         var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
-        var rankingsSet = new RankingsSet { LastUpdate = DateTime.Now };
         foreach (var file in files)
         {
             var fileRelativePath = file.Split(path)[1];
@@ -418,7 +578,7 @@ public static class Parser
             // ignore because this is the file built
             // by previous script which is useless for this one
             // (and it also breaks our logic)
-            if (fileRelativePath == "index.html")
+            if (fileRelativePath.Contains("index.html"))
                 continue;
 
             var html = File.ReadAllText(file);
@@ -426,38 +586,10 @@ public static class Parser
             // no need to check if url is online
             // because the html is already stored
 
-
-            var ranking = ParseHtml(html, RankingUrl.From(url));
-            if (ranking != null)
-                rankingsSet.AddRanking(ranking);
+            elements.Add(new HtmlPage(html, RankingUrl.From(url)));
         }
 
-        return rankingsSet;
-    }
-
-    public static Ranking? ParseHtml(string html, RankingUrl url)
-    {
-        if (string.IsNullOrEmpty(html) || url.PageEnum == PageEnum.Unknown)
-            return null;
-
-        //todo: da un testo formattato in html, ottenere la graduatoria o ogni altra informazione
-        //e aggiungerla alla classe attuale, evitando ripetizioni
-
-        var page = new HtmlDocument();
-        page.LoadHtml(html);
-        var doc = page.DocumentNode;
-
-        var intestazione = doc.GetElementsByClassName("intestazione")
-            .Select(el => el.InnerText)
-            .First(text => text.Contains("Politecnico"));
-
-        if (string.IsNullOrEmpty(intestazione))
-            return null;
-
-        Console.WriteLine($"{url.Url} {url.PageEnum} valid");
-
-        return null;
-        //TODO: throw new NotImplementedException(); // just as a reminder
+        return elements;
     }
 
     private static RankingsSet? ParseLocalJson(string jsonPath)

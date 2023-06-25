@@ -2,7 +2,7 @@ using System.Net;
 
 namespace GraduatorieScript.Utils.Web;
 
-public class UrlUtils
+public static class UrlUtils
 {
     /// <summary>
     ///     Taken an href from the a tag which could be either an internal link or an
@@ -16,8 +16,11 @@ public class UrlUtils
         return !href.Contains(domain) ? domain + href : href;
     }
 
-    public static bool CheckUrl(string url)
+    public static bool CheckUrl(string? url)
     {
+        if (string.IsNullOrEmpty(url))
+            return false;
+
         using var client = new HttpClient();
         try
         {

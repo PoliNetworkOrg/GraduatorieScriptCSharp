@@ -2,13 +2,12 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
-using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind
 {
-    public static HashSet<RankingUrl> GetAll()
+    public static IEnumerable<RankingUrl> GetAll()
     {
         var polimiNewsLinks = GetPolimiNewsLink();
         var combinationLinks = GetCombinationLinks();
@@ -17,8 +16,6 @@ public static class LinksFind
         var rankingsLinks = new HashSet<string>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
-        var web = new HtmlWeb();
-
         var rankingsUrls = rankingsLinks
             .AsParallel() // from 500ms to 86ms 
             .Select(RankingUrl.From)
@@ -26,16 +23,16 @@ public static class LinksFind
             .Where(r => UrlUtils.CheckUrl(r.Url))
             .ToHashSet();
 
-        var len = rankingsLinks.ToArray().Length;
-
+        var len = rankingsUrls.ToArray().Length;
+        Console.WriteLine($"[INFO] LinksFind.GetAll found {len} links");
         return rankingsUrls;
     }
-
 
     private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
-        for (var i = DateTime.Now.Year - 1; i <= DateTime.Now.Year; i++) r.AddRange(GetYearCominationLinks(i));
+        var nowYear = DateTime.Now.Year;
+        for (var i = nowYear - 1; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 
