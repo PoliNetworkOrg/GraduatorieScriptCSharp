@@ -358,6 +358,10 @@ public static class Parser
     private static string? GetLocation(string? fullTitle)
     {
         var strings = fullTitle?.Split("(");
+        if (strings == null)
+            return null;
+        if (strings.Length < 2)
+            return null;
         var s = strings?[1];
         var split = s?.Split(")");
         return split?[0];
@@ -466,6 +470,9 @@ public static class Parser
         var id = Table.GetFieldByIndex(row, idIndex);
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
         var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
+        if (fieldByIndex.ToLower().Contains("nessun"))
+            return;
+        
         var position = Convert.ToInt16(fieldByIndex);
         var birthDate = DateOnly.ParseExact(Table.GetFieldByIndex(row, birthDateIndex) ?? "", "dd/MM/yyyy");
         var enrollAllowed = Table.GetFieldByIndex(row, enrollAllowedIndex)?.ToLower().Contains("si") ?? false;
