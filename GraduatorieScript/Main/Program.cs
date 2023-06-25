@@ -33,7 +33,7 @@ public static class Program
         ScraperOutput.Write(rankingsUrls, docsFolder);
 
         //print links found
-        foreach (var r in rankingsUrls) 
+        foreach (var r in rankingsUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         var outputJsonPath = Path.Join(docsFolder, Constants.OutputJsonFilename);

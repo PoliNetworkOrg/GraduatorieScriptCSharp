@@ -8,8 +8,8 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class HtmlPage
 {
-    public readonly HtmlDocument Html;
     private readonly string _htmlString;
+    public readonly HtmlDocument Html;
     public readonly RankingUrl Url;
 
     public HtmlPage(string html, RankingUrl url)
@@ -21,7 +21,8 @@ public class HtmlPage
         Url = url;
     }
 
-    public override string ToString() {
+    public override string ToString()
+    {
         return _htmlString;
     }
 

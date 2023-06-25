@@ -35,29 +35,31 @@ public class Ranking
     {
         //todo: unire i campi correnti con quello ricevuto
 
-        
-        this.LastUpdate = this.LastUpdate > ranking.LastUpdate ? this.LastUpdate : ranking.LastUpdate;
-        this.year ??= ranking.year;
-        this.extra ??= ranking.extra;
-        this.school ??= ranking.school;
-        this.phase ??= ranking.phase;
-        this.byCourse ??= ranking.byCourse;
-        this.byMerit ??= ranking.byMerit;
-        this.Url ??= ranking.Url;
+
+        LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
+        year ??= ranking.year;
+        extra ??= ranking.extra;
+        school ??= ranking.school;
+        phase ??= ranking.phase;
+        byCourse ??= ranking.byCourse;
+        byMerit ??= ranking.byMerit;
+        Url ??= ranking.Url;
     }
 }
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
-public class MeritTable {
+public class MeritTable
+{
     public List<string>? Headers;
     public List<StudentResult>? Rows;
 }
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
-public class CourseTable : MeritTable{
-    public string? Title;
+public class CourseTable : MeritTable
+{
     public string? Location;
     public List<string>? Sections;
+    public string? Title;
 }

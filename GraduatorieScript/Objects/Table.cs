@@ -4,21 +4,22 @@ namespace GraduatorieScript.Objects;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
-public abstract class Table : Table<List<string>> { }
+public abstract class Table : Table<List<string>>
+{
+}
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
 public class Table<T>
 {
+    public string? CourseLocation;
+    public string? CourseTitle;
+    public List<T> Data = new();
     public List<string> Headers = new();
     public List<string>? Sections;
-    public List<T> Data = new();
-    public string? CourseTitle;
-    public string? CourseLocation;
 
-    public Table() { }
-
-    public static Table<T> Create(List<string> headers, List<string>? sections, List<T> data, string? courseTitle, string? courseLocation)
+    public static Table<T> Create(List<string> headers, List<string>? sections, List<T> data, string? courseTitle,
+        string? courseLocation)
     {
         return new Table<T>
         {
@@ -46,6 +47,7 @@ public class Table<T>
             var index = Headers.FindIndex(h => h == section);
             if (index != -1) dict.Add(section, index);
         }
+
         return dict;
     }
 }

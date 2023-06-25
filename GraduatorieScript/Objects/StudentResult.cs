@@ -12,8 +12,8 @@ public class StudentResult
     public int? englishCorrectAnswers;
     public string? id;
     public Dictionary<string, bool>? ofa; // maybe change it
-    public Dictionary<string, decimal>? sectionsResults;
     public int? positionAbsolute;
     public int? positionCourse;
     public decimal result;
+    public Dictionary<string, decimal>? sectionsResults;
 }
