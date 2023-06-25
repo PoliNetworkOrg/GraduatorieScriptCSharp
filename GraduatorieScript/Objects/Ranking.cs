@@ -1,5 +1,4 @@
 ﻿using GraduatorieScript.Enums;
-using HtmlAgilityPack;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -13,10 +12,10 @@ public class Ranking
     public string? extra;
     public DateTime LastUpdate;
     public string? phase;
+    public RankingSummary? RankingSummary;
     public SchoolEnum? school;
     public RankingUrl? Url;
     public int? year;
-    public RankingSummary? RankingSummary;
 
     public bool IsSimilarTo(Ranking ranking)
     {
@@ -26,7 +25,6 @@ public class Ranking
                extra == ranking.extra &&
                Url?.Url == ranking.Url?.Url;
     }
-
 
 
     public void Merge(Ranking ranking)
