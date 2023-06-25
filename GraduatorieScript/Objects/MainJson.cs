@@ -36,7 +36,6 @@ public class MainJson
 
                 foreach (var ranking in schoolGroup)
                 {
-                    if (ranking is null) continue;
                     var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
                     var rankingJsonString = JsonConvert.SerializeObject(ranking);
                     File.WriteAllText(path, rankingJsonString);
