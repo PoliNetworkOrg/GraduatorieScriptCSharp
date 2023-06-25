@@ -30,12 +30,7 @@ public static class Program
         }
 
         //find links from web
-        // var rankingsUrls = mt.Execute(LinksFind.GetAll) ?? new List<RankingUrl>();
-        //
-        RankingUrl[] rankingsUrls =
-        {
-            RankingUrl.From("http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html")
-        };
+        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
         ScraperOutput.Write(rankingsUrls, docsFolder);
 
         //print links found

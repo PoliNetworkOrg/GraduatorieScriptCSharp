@@ -30,6 +30,21 @@ public class Ranking
     {
         throw new NotImplementedException();
     }
+
+    public void Merge(Ranking ranking)
+    {
+        //todo: unire i campi correnti con quello ricevuto
+
+        
+        this.LastUpdate = this.LastUpdate > ranking.LastUpdate ? this.LastUpdate : ranking.LastUpdate;
+        this.year ??= ranking.year;
+        this.extra ??= ranking.extra;
+        this.school ??= ranking.school;
+        this.phase ??= ranking.phase;
+        this.byCourse ??= ranking.byCourse;
+        this.byMerit ??= ranking.byMerit;
+        this.Url ??= ranking.Url;
+    }
 }
 
 [Serializable]
