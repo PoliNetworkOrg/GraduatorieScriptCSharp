@@ -1,4 +1,4 @@
-﻿using HtmlAgilityPack;
+﻿using GraduatorieScript.Enums;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -7,14 +7,15 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class Ranking
 {
-    private Dictionary<string, List<StudentResult>>? byCourse;
-    private List<StudentResult>? byMerit;
-    private string? extra;
+    public List<CourseTable>? byCourse;
+    public MeritTable? byMerit;
+    public string? extra;
     public DateTime LastUpdate;
-    private string? phase;
-    private string? school;
+    public string? phase;
+    public RankingSummary? RankingSummary;
+    public SchoolEnum? school;
     public RankingUrl? Url;
-    private string? year;
+    public int? year;
 
     public bool IsSimilarTo(Ranking ranking)
     {
@@ -22,11 +23,22 @@ public class Ranking
                school == ranking.school &&
                phase == ranking.phase &&
                extra == ranking.extra &&
-               Url == ranking.Url;
+               Url?.Url == ranking.Url?.Url;
     }
 
-    public HtmlDocument GetHtml()
+
+    public void Merge(Ranking ranking)
     {
-        throw new NotImplementedException();
+        //todo: unire i campi correnti con quello ricevuto
+
+
+        LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
+        year ??= ranking.year;
+        extra ??= ranking.extra;
+        school ??= ranking.school;
+        phase ??= ranking.phase;
+        byCourse ??= ranking.byCourse;
+        byMerit ??= ranking.byMerit;
+        Url ??= ranking.Url;
     }
 }

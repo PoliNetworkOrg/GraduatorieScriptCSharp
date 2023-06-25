@@ -7,20 +7,21 @@ namespace GraduatorieScript.Objects;
 public class RankingsSet
 {
     public DateTime? LastUpdate;
-    public List<Ranking?> Rankings;
+    public List<Ranking> Rankings;
 
     public RankingsSet()
     {
-        Rankings = new List<Ranking?>();
+        Rankings = new List<Ranking>();
         LastUpdate = DateTime.Now;
     }
 
     public static RankingsSet Merge(params RankingsSet?[] sets)
     {
+        var fixedSets = sets.Where(set => set is not null);
         var rankingsSet = new RankingsSet
         {
-            LastUpdate = sets.Max(x => x?.LastUpdate ?? DateTime.Now),
-            Rankings = new List<Ranking?>()
+            LastUpdate = fixedSets.Max(x => x!.LastUpdate ?? DateTime.Now),
+            Rankings = new List<Ranking>()
         };
 
         foreach (var set in sets)
@@ -35,19 +36,17 @@ public class RankingsSet
         foreach (var ranking in rankingsSet.Rankings) AddRanking(ranking);
     }
 
-    public void AddRanking(Ranking? ranking)
+    public void AddRanking(Ranking ranking)
     {
-        if (ranking == null)
-            return;
-
         var alreadyPresent = Contains(ranking);
         if (!alreadyPresent)
             Rankings.Add(ranking);
+
         if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
     }
 
     public bool Contains(Ranking ranking)
     {
-        return Rankings.Any(v => v?.IsSimilarTo(ranking) ?? false);
+        return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
 }

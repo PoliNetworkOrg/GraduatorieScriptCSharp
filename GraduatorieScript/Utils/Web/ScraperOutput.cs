@@ -1,58 +1,59 @@
-﻿using GraduatorieScript.Enums;
+﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
 
 namespace GraduatorieScript.Utils.Web;
 
 public static class ScraperOutput
 {
-    private const string FilePath = "links.txt";
-
-    public static void Write(List<RankingUrl?>? rankingsUrls, string docFolder)
+    private static string GetFilePath(string? docFolder)
     {
-        var filePath = docFolder + "/" + FilePath;
-        if (File.Exists(filePath)) AddFromFile(rankingsUrls, filePath);
-
-        var s = "";
-        var variableUrls = rankingsUrls?.Select(variable => variable?.Url)
-            .Where(variableUrl => !string.IsNullOrEmpty(variableUrl)).ToList();
-        if (variableUrls != null)
-        {
-            variableUrls.Sort();
-            foreach (var variableUrl in variableUrls)
-            {
-                s += variableUrl;
-                s += "\n";
-            }
-        }
-
-        Console.WriteLine($"Writing links to folder {filePath} at {DateTime.Now}");
-        File.WriteAllText(filePath, s);
+        return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
-    private static void AddFromFile(ICollection<RankingUrl?>? rankingsUrls, string filePath)
+    public static void Write(IEnumerable<RankingUrl> urls, string? docFolder)
     {
+        var filePath = GetFilePath(docFolder);
+        var links = GetSaved(docFolder);
+        links.AddRange(urls);
+
+        var online = links
+            .Select(url => url.Url)
+            .Where(url => UrlUtils.CheckUrl(url))
+            .Distinct()
+            .ToList();
+
+        online.Sort();
+
+        var output = "";
+        foreach (var link in online)
+        {
+            output += link;
+            output += "\n";
+        }
+
+        Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {online.Count} links");
+        File.WriteAllText(filePath, output);
+    }
+
+    private static List<RankingUrl> GetSaved(string? docFolder)
+    {
+        List<RankingUrl> list = new();
+        var filePath = GetFilePath(docFolder);
+        if (!File.Exists(filePath)) return list;
         try
         {
-            var x = File.ReadAllLines(filePath);
-            foreach (var variable in x)
-                if (!string.IsNullOrEmpty(variable))
-                    AddToList(rankingsUrls, variable);
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
+                if (!string.IsNullOrEmpty(line))
+                    list.Add(RankingUrl.From(line));
+
+            return list;
         }
         catch
         {
-            // ignored
+            // consider to handle them
+            Console.WriteLine($"[ERROR] Can't read the ScraperOutput file ({filePath})");
+            return list;
         }
-    }
-
-    private static void AddToList(ICollection<RankingUrl?>? rankingsUrls, string variable)
-    {
-        var isPresent = FindIfPresent(rankingsUrls, variable);
-        if (isPresent) return;
-        rankingsUrls?.Add(new RankingUrl { PageEnum = PageEnum.Index, Url = variable });
-    }
-
-    private static bool FindIfPresent(IEnumerable<RankingUrl?>? rankingsUrls, string variable)
-    {
-        return rankingsUrls != null && rankingsUrls.Any(rankingUrl => variable == rankingUrl?.Url);
     }
 }

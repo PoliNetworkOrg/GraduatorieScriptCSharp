@@ -28,6 +28,7 @@ public class RankingUrl
 
     private static PageEnum GetPageEnum(string cleanUrl)
     {
+        // Console.WriteLine($"[DEBUG] calculate PageEnum of {cleanUrl}");
         if (cleanUrl.EndsWith("generale")) return PageEnum.Index;
 
         if (cleanUrl.EndsWith("sotto_indice")) return PageEnum.IndexByCourse;
