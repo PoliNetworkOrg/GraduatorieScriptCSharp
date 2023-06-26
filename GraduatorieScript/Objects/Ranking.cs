@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using GraduatorieScript.Enums;
+using GraduatorieScript.Objects.Json;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects;
@@ -8,22 +9,22 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class Ranking
 {
-    public List<CourseTable>? byCourse;
-    public MeritTable? byMerit;
-    public string? extra;
+    public List<CourseTable>? ByCourse;
+    public MeritTable? ByMerit;
+    public string? Extra;
     public DateTime LastUpdate;
-    public string? phase;
+    public string? Phase;
     public RankingSummary? RankingSummary;
-    public SchoolEnum? school;
+    public SchoolEnum? School;
     public RankingUrl? Url;
-    public int? year;
+    public int? Year;
 
     public bool IsSimilarTo(Ranking ranking)
     {
-        return year == ranking.year &&
-               school == ranking.school &&
-               phase == ranking.phase &&
-               extra == ranking.extra &&
+        return Year == ranking.Year &&
+               School == ranking.School &&
+               Phase == ranking.Phase &&
+               Extra == ranking.Extra &&
                Url?.Url == ranking.Url?.Url;
     }
 
@@ -34,19 +35,31 @@ public class Ranking
 
 
         LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
-        year ??= ranking.year;
-        extra ??= ranking.extra;
-        school ??= ranking.school;
-        phase ??= ranking.phase;
-        byCourse ??= ranking.byCourse;
-        byMerit ??= ranking.byMerit;
+        Year ??= ranking.Year;
+        Extra ??= ranking.Extra;
+        School ??= ranking.School;
+        Phase ??= ranking.Phase;
+        ByCourse ??= ranking.ByCourse;
+        ByMerit ??= ranking.ByMerit;
         Url ??= ranking.Url;
     }
 
     public string ConvertPhaseToFilename()
     {
         var s = DateTime.Now.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
-        var phase1 = phase ?? s;
+        var phase1 = Phase ?? s;
         return $"{phase1}.json".Replace(" ", "_");
+    }
+
+    public SingleCourseJson ConvertToSingleSource() =>
+        new()
+        {
+            Link = ConvertPhaseToFilename(),
+            Name = Phase
+        };
+
+    public StatsSingleJson ToStats()
+    {
+        return StatsSingleJson.From(this);
     }
 }
