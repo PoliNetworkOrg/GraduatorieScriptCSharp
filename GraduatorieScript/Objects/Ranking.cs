@@ -57,8 +57,8 @@ public class Ranking
         };
     }
 
-    public StatsSingleJson ToStats()
+    public StatsSingleCourseJson ToStats()
     {
-        return StatsSingleJson.From(this);
+        return StatsSingleCourseJson.From(this);
     }
 }

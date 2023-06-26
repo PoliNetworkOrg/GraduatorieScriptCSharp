@@ -1,5 +1,4 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Enums;
 using Newtonsoft.Json;
 
 namespace GraduatorieScript.Objects.Json;
@@ -8,8 +7,8 @@ namespace GraduatorieScript.Objects.Json;
 [JsonObject(MemberSerialization.Fields)]
 public class StatsJson
 {
-    public DateTime? LastUpdate;
-    public Dictionary<int, StatsYear>? Stats;
+    public DateTime LastUpdate = DateTime.Now;
+    public Dictionary<int, StatsYear> Stats = new();
 
     public static void Write(string outFolder, RankingsSet rankingsSet)
     {
@@ -20,39 +19,33 @@ public class StatsJson
     private static StatsJson Generate(RankingsSet rankingsSet)
     {
         var statsJson = new StatsJson();
-        statsJson.Stats ??= new Dictionary<int, StatsYear>();
-        foreach (var variable in rankingsSet.Rankings)
+        foreach (var ranking in rankingsSet.Rankings)
         {
-            if (variable.Year == null)
-                continue;
-            if (!statsJson.Stats.ContainsKey(variable.Year.Value))
+            if (ranking.Year == null) continue;
+            if (!statsJson.Stats.ContainsKey(ranking.Year.Value))
             {
                 var statsJsonStat = new StatsYear
                 {
-                    NumStudents = rankingsSet.Rankings.Where(x => x.Year == variable.Year)
+                    NumStudents = rankingsSet.Rankings.Where(x => x.Year == ranking.Year)
                         .Select(x => x.RankingSummary?.HowManyStudents).Sum()
                 };
-                statsJson.Stats[variable.Year.Value] = statsJsonStat;
+                statsJson.Stats[ranking.Year.Value] = statsJsonStat;
             }
 
-            if (variable.School == null)
-                continue;
-            statsJson.Stats[variable.Year.Value].Dict ??= new Dictionary<SchoolEnum, StatsSchool>();
-            var statsSchools = statsJson.Stats[variable.Year.Value].Dict!;
-            var containsKey = statsSchools?.ContainsKey(variable.School.Value) ?? false;
-            if (!containsKey)
-                if (statsSchools != null)
+            if (ranking.School == null) continue;
+            var schools = statsJson.Stats[ranking.Year.Value].Schools;
+            if (!schools.ContainsKey(ranking.School.Value))
+            {
+                var statsSchool = new StatsSchool
                 {
-                    var statsSchool = new StatsSchool
-                    {
-                        NumStudents = rankingsSet.Rankings
-                            .Where(x => x.Year == variable.Year && x.School == variable.School)
-                            .Select(x => x.RankingSummary?.HowManyStudents).Sum()
-                    };
-                    statsSchools[variable.School.Value] = statsSchool;
-                }
+                    NumStudents = rankingsSet.Rankings
+                        .Where(x => x.Year == ranking.Year && x.School == ranking.School)
+                        .Select(x => x.RankingSummary?.HowManyStudents).Sum()
+                };
+                schools[ranking.School.Value] = statsSchool;
+            }
 
-            statsSchools?[variable.School.Value].List?.Add(variable.ToStats());
+            schools[ranking.School.Value].List.Add(ranking.ToStats());
         }
 
         return statsJson;

@@ -6,11 +6,6 @@ namespace GraduatorieScript.Objects.Json;
 [JsonObject(MemberSerialization.Fields)]
 public class StatsSchool
 {
-    public List<StatsSingleJson>? List;
+    public List<StatsSingleCourseJson> List = new();
     public int? NumStudents;
-
-    public StatsSchool()
-    {
-        List = new List<StatsSingleJson>();
-    }
 }
