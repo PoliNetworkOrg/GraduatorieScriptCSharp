@@ -138,7 +138,7 @@ public static class Parser
                     Location = course.CourseLocation,
                     Sections = course.Sections,
                     Headers = course.Headers,
-                    Rows = courseStudents.OrderBy(s => s.positionCourse).ToList()
+                    Rows = courseStudents.OrderBy(s => s.PositionCourse).ToList()
                 });
             }
 
@@ -148,30 +148,30 @@ public static class Parser
                 Rows = meritTableData.Select(row =>
                 {
                     var findInCourse = ranking.ByCourse
-                        .Select(course => course.Rows?.Find(r => r.id == row.id))
+                        .Select(course => course.Rows?.Find(r => r.Id == row.id))
                         .Where(rowSingle => rowSingle is not null)
                         .ToList();
 
-                    var withEnroll = findInCourse.Count > 0 ? findInCourse.Find(c => c!.canEnroll) : null;
+                    var withEnroll = findInCourse.Count > 0 ? findInCourse.Find(c => c!.CanEnroll) : null;
                     var withMaxPoints = findInCourse.Count > 0
-                        ? findInCourse.OrderBy(c => c!.positionCourse).First()
+                        ? findInCourse.OrderBy(c => c!.PositionCourse).First()
                         : null;
                     var courseData = withEnroll ?? withMaxPoints;
 
                     return new StudentResult
                     {
-                        canEnroll = row.canEnroll,
-                        canEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                        id = row.id,
-                        positionAbsolute = row.position,
-                        result = row.result,
-                        ofa = row.ofa,
-                        positionCourse = courseData?.positionCourse,
-                        englishCorrectAnswers = courseData?.englishCorrectAnswers,
-                        sectionsResults = courseData?.sectionsResults,
-                        birthDate = courseData?.birthDate
+                        CanEnroll = row.canEnroll,
+                        CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
+                        Id = row.id,
+                        PositionAbsolute = row.position,
+                        Result = row.result,
+                        Ofa = row.ofa,
+                        PositionCourse = courseData?.PositionCourse,
+                        EnglishCorrectAnswers = courseData?.EnglishCorrectAnswers,
+                        SectionsResults = courseData?.SectionsResults,
+                        BirthDate = courseData?.BirthDate
                     };
-                }).OrderBy(s => s.positionAbsolute).ToList()
+                }).OrderBy(s => s.PositionAbsolute).ToList()
             };
         }
         else
@@ -183,16 +183,16 @@ public static class Parser
                 {
                     var student = new StudentResult
                     {
-                        id = row.id,
-                        ofa = row.ofa,
-                        result = row.result,
-                        birthDate = row.birthDate,
-                        canEnroll = row.canEnroll,
-                        canEnrollInto = row.canEnroll ? course.CourseTitle : null,
-                        positionAbsolute = null,
-                        positionCourse = row.position,
-                        sectionsResults = row.sectionsResults,
-                        englishCorrectAnswers = row.englishCorrectAnswers
+                        Id = row.id,
+                        Ofa = row.ofa,
+                        Result = row.result,
+                        BirthDate = row.birthDate,
+                        CanEnroll = row.canEnroll,
+                        CanEnrollInto = row.canEnroll ? course.CourseTitle : null,
+                        PositionAbsolute = null,
+                        PositionCourse = row.position,
+                        SectionsResults = row.sectionsResults,
+                        EnglishCorrectAnswers = row.englishCorrectAnswers
                     };
                     courseStudents.Add(student);
                 }
@@ -203,7 +203,7 @@ public static class Parser
                     Location = course.CourseLocation,
                     Sections = course.Sections,
                     Headers = course.Headers,
-                    Rows = courseStudents.OrderBy(s => s.positionCourse).ToList()
+                    Rows = courseStudents.OrderBy(s => s.PositionCourse).ToList()
                 });
             }
 
@@ -212,17 +212,17 @@ public static class Parser
                 Headers = meritTable.Headers,
                 Rows = meritTableData.Select(row => new StudentResult
                 {
-                    canEnroll = row.canEnroll,
-                    canEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                    id = row.id,
-                    positionAbsolute = row.position,
-                    result = row.result,
-                    ofa = row.ofa,
-                    positionCourse = null,
-                    englishCorrectAnswers = null,
-                    sectionsResults = null,
-                    birthDate = null
-                }).OrderBy(s => s.positionAbsolute).ToList()
+                    CanEnroll = row.canEnroll,
+                    CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
+                    Id = row.id,
+                    PositionAbsolute = row.position,
+                    Result = row.result,
+                    Ofa = row.ofa,
+                    PositionCourse = null,
+                    EnglishCorrectAnswers = null,
+                    SectionsResults = null,
+                    BirthDate = null
+                }).OrderBy(s => s.PositionAbsolute).ToList()
             };
         }
 
@@ -243,16 +243,16 @@ public static class Parser
             var absolute = meritTableData.Find(r => r.id == row.id);
             var student = new StudentResult
             {
-                id = row.id,
-                ofa = row.ofa,
-                result = row.result,
-                birthDate = row.birthDate,
-                canEnroll = row.canEnroll,
-                canEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
-                positionAbsolute = absolute?.position,
-                positionCourse = row.position,
-                sectionsResults = row.sectionsResults,
-                englishCorrectAnswers = row.englishCorrectAnswers
+                Id = row.id,
+                Ofa = row.ofa,
+                Result = row.result,
+                BirthDate = row.birthDate,
+                CanEnroll = row.canEnroll,
+                CanEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
+                PositionAbsolute = absolute?.position,
+                PositionCourse = row.position,
+                SectionsResults = row.sectionsResults,
+                EnglishCorrectAnswers = row.englishCorrectAnswers
             };
             courseStudents.Add(student);
         }

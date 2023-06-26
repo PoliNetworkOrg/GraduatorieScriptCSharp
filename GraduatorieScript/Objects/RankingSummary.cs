@@ -18,7 +18,7 @@ public class RankingSummary
 
         var rankingSummary = new RankingSummary
         {
-            HowManyCanEnroll = byMeritRows?.Count(x => x.canEnroll),
+            HowManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll),
             HowManyStudents = byMeritRows?.Count,
             ResultsSummarized = results,
             CourseSummarized = ranking.ByCourse?.Select(x => x.GetStats()).ToList()
@@ -31,7 +31,7 @@ public class RankingSummary
         if (byMeritRows == null) return null;
 
         var results = new Dictionary<int, int>();
-        var enumerable = byMeritRows.Select(variable => (int)Math.Round(variable.result));
+        var enumerable = byMeritRows.Select(variable => (int)Math.Round(variable.Result));
         foreach (var score in enumerable)
         {
             results.TryAdd(score, 0);

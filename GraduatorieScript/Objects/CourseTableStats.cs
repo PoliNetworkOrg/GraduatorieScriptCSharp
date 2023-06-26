@@ -22,23 +22,23 @@ public class CourseTableStats
         {
             Location = courseTable.Location,
             Title = courseTable.Title,
-            AverageScoresOfAllStudents = courseTableRows?.Select(x => x.result).Average(),
-            AverageOfWhoPassed = courseTableRows?.Where(x => x.canEnroll).Select(x => x.result).Average(),
-            AverageBirthYear = courseTableRows?.Select(x => x.birthDate?.Year).Average(),
-            AverageEnglishCorrectAnswers = courseTableRows?.Select(x => x.englishCorrectAnswers).Average(),
+            AverageScoresOfAllStudents = courseTableRows?.Select(x => x.Result).Average(),
+            AverageOfWhoPassed = courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average(),
+            AverageBirthYear = courseTableRows?.Select(x => x.BirthDate?.Year).Average(),
+            AverageEnglishCorrectAnswers = courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average(),
             AveragePartialScores = AveragePartialScoresCalculate(courseTableRows),
             AverageOfa = AverageOfaCalculate(courseTableRows)
         };
     }
 
-    private static Dictionary<string,int?> AverageOfaCalculate(List<StudentResult>? courseTableRows)
+    private static Dictionary<string,int?> AverageOfaCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
     {
         var result = new Dictionary<string, int?>();
-        var keys = courseTableRows?.Select(x => x.sectionsResults?.Keys);
+        var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys);
         var distinctKeys = Distinct(keys);
         foreach (var key in distinctKeys)
         {
-            result[key] = courseTableRows?.Select(x => x.ofa).Select(x => x?[key]).Count(x => x ?? false);
+            result[key] = courseTableRows?.Select(x => x.Ofa).Select(x => x?[key]).Count(x => x ?? false);
         }
 
         return result;
@@ -64,7 +64,7 @@ public class CourseTableStats
     {
         var scores = new Dictionary<string, decimal?>();
 
-        var keys = courseTableRows?.Select(x => x.sectionsResults?.Keys).ToList();
+        var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys).ToList();
         var keysDistinct = Distinct(keys);
 
         foreach (var key in keysDistinct)
@@ -77,7 +77,7 @@ public class CourseTableStats
 
     private static decimal? AveragePartialScoresOfASingleKey(IEnumerable<StudentResult>? courseTableRows, string key)
     {
-        return courseTableRows?.Select(x => x.sectionsResults?[key]).Average();
+        return courseTableRows?.Select(x => x.SectionsResults?[key]).Average();
     }
 
     private static HashSet<string> Distinct(List<Dictionary<string, decimal>.KeyCollection?>? keys)
