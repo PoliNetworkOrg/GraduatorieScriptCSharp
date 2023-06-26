@@ -18,15 +18,16 @@ public static class Program
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll);
-        ScraperOutput.Write(rankingsUrls, dataFolder);
+        var rankingUrls = rankingsUrls.ToList();
+        ScraperOutput.Write(rankingUrls, dataFolder);
 
         //print links found
-        foreach (var r in rankingsUrls)
+        foreach (var r in rankingUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(dataFolder, rankingsUrls);
+        var rankingsSet = Parser.GetRankings(dataFolder, rankingUrls);
 
         // salvare il set
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);

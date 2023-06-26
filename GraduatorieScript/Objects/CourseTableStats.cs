@@ -17,7 +17,7 @@ public class CourseTableStats
     public static CourseTableStats From(CourseTable courseTable)
     {
         var courseTableRows = courseTable.Rows;
-        return new CourseTableStats()
+        return new CourseTableStats
         {
             Location = courseTable.Location,
             Title = courseTable.Title,
@@ -29,7 +29,7 @@ public class CourseTableStats
         };
     }
 
-    private static Dictionary<string, decimal?> AveragePartialScoresCalculate(List<StudentResult>? courseTableRows)
+    private static Dictionary<string, decimal?> AveragePartialScoresCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
     {
         var scores = new Dictionary<string, decimal?>();
 
@@ -44,7 +44,7 @@ public class CourseTableStats
         return scores;
     }
 
-    private static decimal? AveragePartialScoresOfASingleKey(List<StudentResult>? courseTableRows, string key)
+    private static decimal? AveragePartialScoresOfASingleKey(IEnumerable<StudentResult>? courseTableRows, string key)
     {
         return courseTableRows?.Select(x => x.sectionsResults?[key]).Average();
     }

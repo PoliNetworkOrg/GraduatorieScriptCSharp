@@ -5,12 +5,6 @@ using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 
-internal struct AnchorElement
-{
-    public string Name;
-    public string Url;
-}
-
 public class OldScraper
 {
     private const string TargetUrl = "http://www.risultati-ammissione.polimi.it";
@@ -22,7 +16,7 @@ public class OldScraper
     private readonly List<string> _newsUrls = new()
     {
         "https://www.polimi.it",
-        "https://www.polimi.it/futuri-studenti",
+        "https://www.polimi.it/futuri-studenti"
     };
 
     private readonly HtmlWeb _web = new();
@@ -60,7 +54,7 @@ public class OldScraper
 
 
         var newsLinks = result.Distinct();
-        Console.WriteLine(newsLinks.Count());
+        Console.WriteLine(newsLinks.Count);
         return newsLinks;
     }
 
