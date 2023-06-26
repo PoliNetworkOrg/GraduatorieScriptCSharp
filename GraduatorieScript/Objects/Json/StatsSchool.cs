@@ -11,6 +11,6 @@ public class StatsSchool
 
     public StatsSchool()
     {
-        this.List = new List<StatsSingleJson>();
+        List = new List<StatsSingleJson>();
     }
 }

@@ -6,6 +6,6 @@ namespace GraduatorieScript.Objects.Json;
 [JsonObject(MemberSerialization.Fields)]
 public class SingleCourseJson
 {
-    public string? Name;
     public string? Link;
+    public string? Name;
 }

@@ -12,6 +12,6 @@ public class StatsYear
 
     public StatsYear()
     {
-        this.Dict = new Dictionary<SchoolEnum, StatsSchool>();
+        Dict = new Dictionary<SchoolEnum, StatsSchool>();
     }
 }

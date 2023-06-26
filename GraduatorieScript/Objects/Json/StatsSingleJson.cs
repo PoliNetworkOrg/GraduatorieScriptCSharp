@@ -16,6 +16,5 @@ public class StatsSingleJson
             SingleCourseJson = ranking.ConvertToSingleSource(),
             Stats = ranking.RankingSummary
         };
-
     }
 }

@@ -19,7 +19,7 @@ public class StatsJson
 
     private static StatsJson Generate(RankingsSet rankingsSet)
     {
-        StatsJson statsJson = new StatsJson();
+        var statsJson = new StatsJson();
         statsJson.Stats ??= new Dictionary<int, StatsYear>();
         foreach (var variable in rankingsSet.Rankings)
         {
@@ -34,6 +34,7 @@ public class StatsJson
                 };
                 statsJson.Stats[variable.Year.Value] = statsJsonStat;
             }
+
             if (variable.School == null)
                 continue;
             statsJson.Stats[variable.Year.Value].Dict ??= new Dictionary<SchoolEnum, StatsSchool>();
@@ -50,8 +51,10 @@ public class StatsJson
                     };
                     statsSchools[variable.School.Value] = statsSchool;
                 }
+
             statsSchools?[variable.School.Value].List?.Add(variable.ToStats());
         }
+
         return statsJson;
     }
 

@@ -51,12 +51,14 @@ public class Ranking
         return $"{phase1}.json".Replace(" ", "_");
     }
 
-    public SingleCourseJson ConvertToSingleSource() =>
-        new()
+    public SingleCourseJson ConvertToSingleSource()
+    {
+        return new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
             Name = Phase
         };
+    }
 
     public StatsSingleJson ToStats()
     {
