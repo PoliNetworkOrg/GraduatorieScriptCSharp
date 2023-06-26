@@ -39,8 +39,8 @@ jobs:
           ls -l
           pwd
           ls -l GraduatorieScript
-          ls -l docs
-          (git add --force docs/links.txt) || true
+          ls -l data
+          (git add --force data/links.txt) || true
           git config --global user.email "polinetwork@outlook.com"
           git config --global user.name "PoliNetwork"
           (git commit -m 'update links.txt') || true
