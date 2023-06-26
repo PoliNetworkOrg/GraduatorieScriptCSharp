@@ -31,9 +31,6 @@ public class Ranking
 
     public void Merge(Ranking ranking)
     {
-        //todo: unire i campi correnti con quello ricevuto
-
-
         LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
         Year ??= ranking.Year;
         Extra ??= ranking.Extra;
