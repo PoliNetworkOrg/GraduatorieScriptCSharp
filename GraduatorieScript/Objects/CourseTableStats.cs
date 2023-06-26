@@ -18,17 +18,19 @@ public class CourseTableStats
     public static CourseTableStats From(CourseTable courseTable)
     {
         var courseTableRows = courseTable.Rows;
-        var averageScoresOfAllStudents = courseTableRows?.Count > 0 ? courseTableRows?.Select(x => x.Result).Average() : null;
+        var averageScoresOfAllStudents =
+            courseTableRows?.Count > 0 ? courseTableRows.Select(x => x.Result).Average() : (decimal?)null;
         var averageOfWhoPassed = courseTableRows?.Count > 0
-            ? courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average()
-            : null;
+            ? courseTableRows.Where(x => x.CanEnroll).Select(x => x.Result).Average()
+            : (decimal?)null;
         var averageBirthYear = courseTableRows?.Count > 0
-            ? courseTableRows?.Select(x => x.BirthDate?.Year).Average()
+            ? courseTableRows.Select(x => x.BirthDate?.Year).Average()
             : null;
         var averageEnglishCorrectAnswers = courseTableRows?.Count > 0
-            ? courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average()
+            ? courseTableRows.Select(x => x.EnglishCorrectAnswers).Average()
             : null;
-        var averagePartialScoresCalculate = courseTableRows?.Count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
+        var averagePartialScoresCalculate =
+            courseTableRows?.Count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
         var averageOfaCalculate = courseTableRows?.Count > 0 ? AverageOfaCalculate(courseTableRows) : null;
         return new CourseTableStats
         {
