@@ -44,7 +44,11 @@ public class CourseTableStats
         var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys);
         var distinctKeys = Distinct(keys);
         foreach (var key in distinctKeys)
-            result[key] = courseTableRows?.Select(x => x.Ofa).Select(x => x?[key]).Count(x => x ?? false);
+            result[key] = courseTableRows?.Select(x => x.Ofa).Select(x =>
+            {
+                var containsKey = x?.ContainsKey(key) ?? false;
+                return containsKey ? x?[key] : null;
+            }).Count(x => x ?? false);
 
         return result;
     }
