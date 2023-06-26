@@ -13,6 +13,7 @@ public class CourseTableStats
     public double? AverageBirthYear;
     public double? AverageEnglishCorrectAnswers;
     public Dictionary<string, decimal?>? AveragePartialScores;
+    public Dictionary<string, int?>? AverageOfa;
 
     public static CourseTableStats From(CourseTable courseTable)
     {
@@ -25,8 +26,38 @@ public class CourseTableStats
             AverageOfWhoPassed = courseTableRows?.Where(x => x.canEnroll).Select(x => x.result).Average(),
             AverageBirthYear = courseTableRows?.Select(x => x.birthDate?.Year).Average(),
             AverageEnglishCorrectAnswers = courseTableRows?.Select(x => x.englishCorrectAnswers).Average(),
-            AveragePartialScores = AveragePartialScoresCalculate(courseTableRows)
+            AveragePartialScores = AveragePartialScoresCalculate(courseTableRows),
+            AverageOfa = AverageOfaCalculate(courseTableRows)
         };
+    }
+
+    private static Dictionary<string,int?> AverageOfaCalculate(List<StudentResult>? courseTableRows)
+    {
+        var result = new Dictionary<string, int?>();
+        var keys = courseTableRows?.Select(x => x.sectionsResults?.Keys);
+        var distinctKeys = Distinct(keys);
+        foreach (var key in distinctKeys)
+        {
+            result[key] = courseTableRows?.Select(x => x.ofa).Select(x => x?[key]).Count(x => x ?? false);
+        }
+
+        return result;
+    }
+
+    private static HashSet<string> Distinct(IEnumerable<Dictionary<string, decimal>.KeyCollection?>? keys)
+    {
+        var result = new HashSet<string>();
+        if (keys == null) return result;
+        foreach (var v1 in keys)
+        {
+            if (v1 == null) continue;
+            foreach (var v2 in v1)
+            {
+                result.Add(v2);
+            }
+        }
+
+        return result;
     }
 
     private static Dictionary<string, decimal?> AveragePartialScoresCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
