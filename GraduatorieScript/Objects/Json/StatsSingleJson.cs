@@ -4,16 +4,16 @@ namespace GraduatorieScript.Objects.Json;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields)]
-public class StatsSingleJson
+public class StatsSingleCourseJson
 {
     public SingleCourseJson? SingleCourseJson;
     public RankingSummary? Stats;
 
-    public static StatsSingleJson From(Ranking ranking)
+    public static StatsSingleCourseJson From(Ranking ranking)
     {
-        return new StatsSingleJson
+        return new StatsSingleCourseJson
         {
-            SingleCourseJson = ranking.ConvertToSingleSource(),
+            SingleCourseJson = ranking.ToSingleCourseJson(),
             Stats = ranking.RankingSummary
         };
     }

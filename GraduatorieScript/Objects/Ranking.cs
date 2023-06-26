@@ -31,9 +31,6 @@ public class Ranking
 
     public void Merge(Ranking ranking)
     {
-        //todo: unire i campi correnti con quello ricevuto
-
-
         LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
         Year ??= ranking.Year;
         Extra ??= ranking.Extra;
@@ -51,7 +48,7 @@ public class Ranking
         return $"{phase1}.json".Replace(" ", "_");
     }
 
-    public SingleCourseJson ConvertToSingleSource()
+    public SingleCourseJson ToSingleCourseJson()
     {
         return new SingleCourseJson
         {
@@ -60,8 +57,8 @@ public class Ranking
         };
     }
 
-    public StatsSingleJson ToStats()
+    public StatsSingleCourseJson ToStats()
     {
-        return StatsSingleJson.From(this);
+        return StatsSingleCourseJson.From(this);
     }
 }

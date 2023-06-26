@@ -6,6 +6,7 @@ public static class Constants
     public const string MainJsonFilename = "main.json";
     public const string StatsJsonFilename = "stats.json";
     public const string OutputFolder = "output";
+    public const string HtmlFolder = "html";
     public const string OutputLinksFilename = "links.txt";
-    public const string FolderToFind = "docs";
+    public const string DataFolder = "data";
 }

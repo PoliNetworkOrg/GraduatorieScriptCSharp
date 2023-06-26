@@ -13,47 +13,44 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var docsFolder = GetDocsFolder(args);
-        Console.WriteLine($"[INFO] baseFolder: {docsFolder}");
-
-        if (string.IsNullOrEmpty(docsFolder))
-        {
-            Console.WriteLine("[INFO] baseFolder is null. Abort.");
-            return;
-        }
+        var dataFolder = GetDataFolder(args);
+        Console.WriteLine($"[INFO] dataFolder: {dataFolder}");
 
         //find links from web
-        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
-        ScraperOutput.Write(rankingsUrls, docsFolder);
+        var rankingsUrls = mt.Execute(LinksFind.GetAll);
+        ScraperOutput.Write(rankingsUrls, dataFolder);
 
         //print links found
         foreach (var r in rankingsUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
-        // ricava un unico set partendo dai file html salvati, dagli url trovati e
-        // dal precedente set salvato nel .json
-        var outFolder = Path.Join(docsFolder, Constants.OutputFolder);
-        var rankingsSet = Parser.GetRankings(docsFolder, rankingsUrls);
+        // ricava un unico set partendo dai file html salvati, dagli url 
+        // trovati e dal precedente set salvato nel .json
+        var rankingsSet = Parser.GetRankings(dataFolder, rankingsUrls);
+
+        // salvare il set
+        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         MainJson.Write(outFolder, rankingsSet);
         StatsJson.Write(outFolder, rankingsSet);
-
-
-        //eliminare i suddetti file html
-        /* if (transformerResult?.pathFound != null) */
-        /*     FileUtils.TryBulkDelete(transformerResult.pathFound); */
-        // ^^ this must be wrong
     }
 
-    private static string GetDocsFolder(IReadOnlyList<string> args)
+    private static string GetDataFolder(IReadOnlyList<string> args)
     {
-        var folder = args.Count > 0 ? args[0] : null;
-        var b = args.Count > 0 && !string.IsNullOrEmpty(folder);
-        var docsFolder = b
-            ? folder
-            : PathUtils.FindFolder(Constants.FolderToFind);
+        // check if dataFolder passed in args
+        var argsFolder = args.Count > 0 ? args[0] : null;
 
-        return !string.IsNullOrEmpty(docsFolder)
-            ? docsFolder
-            : PathUtils.CreateAndReturnDocsFolder(Constants.FolderToFind);
+        // use it if passed or search the default
+        var dataFolder = !string.IsNullOrEmpty(argsFolder)
+            ? argsFolder
+            : PathUtils.FindFolder(Constants.DataFolder);
+
+        // if not found, create it
+        if (string.IsNullOrEmpty(dataFolder))
+        {
+            Console.WriteLine("[WARNING] dataFolder not found, creating it");
+            return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
+        }
+
+        return dataFolder;
     }
 }

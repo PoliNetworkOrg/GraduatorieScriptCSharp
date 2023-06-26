@@ -48,7 +48,7 @@ public class MainJson
                     File.WriteAllText(path, rankingJsonString);
                 }
 
-                var filenames = schoolGroup.Select(ranking => ranking.ConvertToSingleSource());
+                var filenames = schoolGroup.Select(ranking => ranking.ToSingleCourseJson());
                 yearDict.Add(school, filenames);
             }
 
@@ -65,9 +65,9 @@ public class MainJson
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
 
-    public static RankingsSet? Parse(string docsFolder)
+    public static RankingsSet? Parse(string dataFolder)
     {
-        var outFolder = Path.Join(docsFolder, Constants.OutputFolder);
+        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
         try
         {

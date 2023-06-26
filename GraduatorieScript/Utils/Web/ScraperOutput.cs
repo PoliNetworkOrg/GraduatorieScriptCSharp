@@ -10,10 +10,10 @@ public static class ScraperOutput
         return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
-    public static void Write(IEnumerable<RankingUrl> urls, string? docFolder)
+    public static void Write(IEnumerable<RankingUrl> urls, string? dataFolder)
     {
-        var filePath = GetFilePath(docFolder);
-        var links = GetSaved(docFolder);
+        var filePath = GetFilePath(dataFolder);
+        var links = GetSaved(dataFolder);
         links.AddRange(urls);
 
         var online = links
@@ -35,10 +35,10 @@ public static class ScraperOutput
         File.WriteAllText(filePath, output);
     }
 
-    private static List<RankingUrl> GetSaved(string? docFolder)
+    private static List<RankingUrl> GetSaved(string? dataFolder)
     {
         List<RankingUrl> list = new();
-        var filePath = GetFilePath(docFolder);
+        var filePath = GetFilePath(dataFolder);
         if (!File.Exists(filePath)) return list;
         try
         {
