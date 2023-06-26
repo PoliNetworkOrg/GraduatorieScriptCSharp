@@ -2,6 +2,7 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
+using SampleNuGet.Utils;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -9,8 +10,9 @@ public static class LinksFind
 {
     public static IEnumerable<RankingUrl> GetAll()
     {
-        var polimiNewsLinks = GetPolimiNewsLink();
-        var combinationLinks = GetCombinationLinks();
+        var mt = new Metrics();
+        var polimiNewsLinks = mt.Execute(GetPolimiNewsLink);
+        var combinationLinks = mt.Execute(GetCombinationLinks);
 
         //merge results links
         var rankingsLinks = new HashSet<string>();
@@ -60,8 +62,7 @@ public static class LinksFind
     {
         //scrape links from polimi news
         var scraper = new Scraper();
-        var newsLinks = scraper.GetNewsLinks();
-        var findRankingsLink = scraper.FindRankingsLink(newsLinks);
+        var findRankingsLink = scraper.GetRankingsLinks();
         return findRankingsLink;
     }
 }
