@@ -11,18 +11,18 @@ public class Scraper
     private const string FuturiStudentiUrl = "https://www.polimi.it/futuri-studenti";
     private const string InEvidenzaUrl = "https://www.polimi.it/in-evidenza";
 
-    private HashSet<string> AlreadyVisited = new();
+    private readonly HashSet<string> alreadyVisited = new();
 
-    private readonly HtmlWeb _web = new();
+    private readonly HtmlWeb web = new();
 
-    private string[] _newsTesters =
+    private readonly string[] newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
         "matricola", "nuovi studenti"
     };
 
-    public HashSet<string> GetRankingsLinks()
+    public IEnumerable<string> GetRankingsLinks()
     {
         HashSet<string> links = new();
 
@@ -34,30 +34,28 @@ public class Scraper
         return links;
     }
 
-    private HashSet<string> ScrapeHomepage()
+    private IEnumerable<string> ScrapeHomepage()
     {
         HashSet<string> links = new();
-        var page = _web.Load(HomepageUrl).DocumentNode;
+        var page = web.Load(HomepageUrl).DocumentNode;
         var slides = page.SelectNodes("//section[@id='copertina']//div[contains(@class, 'sp-slides')]/div");
         foreach (var slide in slides)
         {
             var h1 = slide.Descendants("h1");
             if (h1 == null) continue;
             var text = h1.First().InnerText;
-            if (IsValidText(text))
-            {
-                var a = slide.Descendants("a");
-                var href = GetHref(a.First());
-                links.AddRange(UseHref(href));
-            }
+            if (!IsValidText(text)) continue;
+            var a = slide.Descendants("a");
+            var href = GetHref(a.First());
+            links.AddRange(UseHref(href));
         }
         return links;
     }
 
-    private HashSet<string> ScrapeFuturiStudenti()
+    private IEnumerable<string> ScrapeFuturiStudenti()
     {
         HashSet<string> links = new();
-        var page = _web.Load(FuturiStudentiUrl).DocumentNode;
+        var page = web.Load(FuturiStudentiUrl).DocumentNode;
         var slides = page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
         foreach (var slide in slides)
         {
@@ -68,37 +66,9 @@ public class Scraper
             var pValid = p != null && IsValidText(p.First().InnerText);
 
 
-            if (h1Valid || pValid)
-            {
-                var aTags = slide.Descendants("a");
-                foreach (var a in aTags)
-                {
-                    var href = GetHref(a);
-                    links.AddRange(UseHref(href));
-
-                }
-            }
-        }
-        return links;
-    }
-
-    private HashSet<string> ScrapeInEvidenza()
-    {
-        HashSet<string> links = new();
-        var page = _web.Load(InEvidenzaUrl).DocumentNode;
-        var liTags = page.SelectNodes("//div[@id='content']//li");
-        foreach (var li in liTags)
-        {
-            var h3 = li.GetElementsByTagName("h3");
-            if(h3 == null) continue;
-
-            var a = h3.First().ChildNodes[0];
-            var aValid = a != null && IsValidText(a.InnerText);
-
-            var p = li.Descendants("p");
-            var pValid = p != null && IsValidText(p.First().InnerText);
-
-            if (aValid || pValid)
+            if (!h1Valid && !pValid) continue;
+            var aTags = slide.Descendants("a");
+            foreach (var a in aTags)
             {
                 var href = GetHref(a);
                 links.AddRange(UseHref(href));
@@ -108,7 +78,30 @@ public class Scraper
         return links;
     }
 
-    private HashSet<string> UseHref(string? href)
+    private IEnumerable<string> ScrapeInEvidenza()
+    {
+        HashSet<string> links = new();
+        var page = web.Load(InEvidenzaUrl).DocumentNode;
+        var liTags = page.SelectNodes("//div[@id='content']//li");
+        foreach (var li in liTags)
+        {
+            var h3 = li.GetElementsByTagName("h3");
+
+            var a = h3.First().ChildNodes[0];
+            var aValid = a != null && IsValidText(a.InnerText);
+
+            var p = li.Descendants("p");
+            var pValid = p != null && IsValidText(p.First().InnerText);
+
+            if (!aValid && !pValid) continue;
+            
+            var href = GetHref(a);
+            links.AddRange(UseHref(href));
+        }
+        return links;
+    }
+
+    private IEnumerable<string> UseHref(string? href)
     {
         HashSet<string> links = new();
         if (string.IsNullOrEmpty(href)) return links;
@@ -123,12 +116,13 @@ public class Scraper
         return links;
     }
 
-    private HashSet<string> ParseNewsPage(string url)
+    private IEnumerable<string> ParseNewsPage(string url)
     {
         HashSet<string> links = new();
-        if (AlreadyVisited.Contains(url)) return links;
+        if (alreadyVisited.Contains(url)) return links;
+        alreadyVisited.Add(url);
 
-        var page = _web.Load(url).DocumentNode;
+        var page = web.Load(url).DocumentNode;
 
         var aTags = page.SelectNodes("//div[@id='content']//a[@href]");
         if (aTags == null) return links;
@@ -149,12 +143,12 @@ public class Scraper
     private bool IsValidText(string text)
     {
         var lower = text.ToLower();
-        return _newsTesters.Any(test => lower.Contains(test));
+        return newsTesters.Any(test => lower.Contains(test));
     }
 
-    private string? GetHref(HtmlNode? a)
+    private static string? GetHref(HtmlNode? a)
     {
-        return a?.GetAttributeValue("href", String.Empty).Replace("amp;", "");
+        return a?.GetAttributeValue("href", string.Empty).Replace("amp;", "");
     }
     
 
