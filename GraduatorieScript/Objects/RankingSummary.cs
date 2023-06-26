@@ -6,10 +6,10 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class RankingSummary
 {
+    public List<CourseTableStats>? CourseSummarized;
     public int? HowManyCanEnroll;
     public int? HowManyStudents;
     public Dictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
-    public List<CourseTableStats>? CourseSummarized;
 
     public static RankingSummary From(Ranking ranking)
     {
@@ -26,6 +26,7 @@ public class RankingSummary
 
         return rankingSummary;
     }
+
     private static Dictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)
     {
         if (byMeritRows == null) return null;

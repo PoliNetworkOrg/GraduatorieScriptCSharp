@@ -13,14 +13,14 @@ public class Scraper
 
     private readonly HashSet<string> alreadyVisited = new();
 
-    private readonly HtmlWeb web = new();
-
     private readonly string[] newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
         "matricola", "nuovi studenti"
     };
+
+    private readonly HtmlWeb web = new();
 
     public IEnumerable<string> GetRankingsLinks()
     {
@@ -49,6 +49,7 @@ public class Scraper
             var href = GetHref(a.First());
             links.AddRange(UseHref(href));
         }
+
         return links;
     }
 
@@ -56,7 +57,8 @@ public class Scraper
     {
         HashSet<string> links = new();
         var page = web.Load(FuturiStudentiUrl).DocumentNode;
-        var slides = page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
+        var slides =
+            page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
         foreach (var slide in slides)
         {
             var h1 = slide.Descendants("h1");
@@ -72,9 +74,9 @@ public class Scraper
             {
                 var href = GetHref(a);
                 links.AddRange(UseHref(href));
-
             }
         }
+
         return links;
     }
 
@@ -94,10 +96,11 @@ public class Scraper
             var pValid = p != null && IsValidText(p.First().InnerText);
 
             if (!aValid && !pValid) continue;
-            
+
             var href = GetHref(a);
             links.AddRange(UseHref(href));
         }
+
         return links;
     }
 
@@ -106,7 +109,10 @@ public class Scraper
         HashSet<string> links = new();
         if (string.IsNullOrEmpty(href)) return links;
 
-        if (href.Contains(TargetUrl)) links.Add(href);
+        if (href.Contains(TargetUrl))
+        {
+            links.Add(href);
+        }
         else
         {
             var url = UrlUtils.UrlifyLocalHref(href, HomepageUrl);
@@ -130,10 +136,7 @@ public class Scraper
         foreach (var a in aTags)
         {
             var href = GetHref(a);
-            if (href != null && href.Contains(TargetUrl))
-            {
-                links.Add(href);
-            }
+            if (href != null && href.Contains(TargetUrl)) links.Add(href);
         }
 
 
@@ -150,7 +153,7 @@ public class Scraper
     {
         return a?.GetAttributeValue("href", string.Empty).Replace("amp;", "");
     }
-    
+
 
     public static string? Download(string url)
     {

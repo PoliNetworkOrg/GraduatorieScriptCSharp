@@ -6,14 +6,14 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class CourseTableStats
 {
-    public string? Location;
-    public string? Title;
-    public decimal? AverageScoresOfAllStudents;
-    public decimal? AverageOfWhoPassed;
     public double? AverageBirthYear;
     public double? AverageEnglishCorrectAnswers;
-    public Dictionary<string, decimal?>? AveragePartialScores;
     public Dictionary<string, int?>? AverageOfa;
+    public decimal? AverageOfWhoPassed;
+    public Dictionary<string, decimal?>? AveragePartialScores;
+    public decimal? AverageScoresOfAllStudents;
+    public string? Location;
+    public string? Title;
 
     public static CourseTableStats From(CourseTable courseTable)
     {
@@ -22,24 +22,29 @@ public class CourseTableStats
         {
             Location = courseTable.Location,
             Title = courseTable.Title,
-            AverageScoresOfAllStudents = courseTableRows?.Select(x => x.Result).Average(),
-            AverageOfWhoPassed = courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average(),
-            AverageBirthYear = courseTableRows?.Select(x => x.BirthDate?.Year).Average(),
-            AverageEnglishCorrectAnswers = courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average(),
-            AveragePartialScores = AveragePartialScoresCalculate(courseTableRows),
-            AverageOfa = AverageOfaCalculate(courseTableRows)
+            AverageScoresOfAllStudents =
+                courseTableRows?.Count > 0 ? courseTableRows?.Select(x => x.Result).Average() : null,
+            AverageOfWhoPassed = courseTableRows?.Count > 0
+                ? courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average()
+                : null,
+            AverageBirthYear = courseTableRows?.Count > 0
+                ? courseTableRows?.Select(x => x.BirthDate?.Year).Average()
+                : null,
+            AverageEnglishCorrectAnswers = courseTableRows?.Count > 0
+                ? courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average()
+                : null,
+            AveragePartialScores = courseTableRows?.Count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null,
+            AverageOfa = courseTableRows?.Count > 0 ? AverageOfaCalculate(courseTableRows) : null
         };
     }
 
-    private static Dictionary<string,int?> AverageOfaCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
+    private static Dictionary<string, int?> AverageOfaCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
     {
         var result = new Dictionary<string, int?>();
         var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys);
         var distinctKeys = Distinct(keys);
         foreach (var key in distinctKeys)
-        {
             result[key] = courseTableRows?.Select(x => x.Ofa).Select(x => x?[key]).Count(x => x ?? false);
-        }
 
         return result;
     }
@@ -51,26 +56,21 @@ public class CourseTableStats
         foreach (var v1 in keys)
         {
             if (v1 == null) continue;
-            foreach (var v2 in v1)
-            {
-                result.Add(v2);
-            }
+            foreach (var v2 in v1) result.Add(v2);
         }
 
         return result;
     }
 
-    private static Dictionary<string, decimal?> AveragePartialScoresCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
+    private static Dictionary<string, decimal?> AveragePartialScoresCalculate(
+        IReadOnlyCollection<StudentResult>? courseTableRows)
     {
         var scores = new Dictionary<string, decimal?>();
 
         var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys).ToList();
         var keysDistinct = Distinct(keys);
 
-        foreach (var key in keysDistinct)
-        {
-            scores[key] = AveragePartialScoresOfASingleKey(courseTableRows, key);
-        }
+        foreach (var key in keysDistinct) scores[key] = AveragePartialScoresOfASingleKey(courseTableRows, key);
 
         return scores;
     }
@@ -87,10 +87,7 @@ public class CourseTableStats
         foreach (var v1 in keys)
         {
             if (v1 == null) continue;
-            foreach (var v2 in v1)
-            {
-                hashSet.Add(v2);
-            }
+            foreach (var v2 in v1) hashSet.Add(v2);
         }
 
         return hashSet;
