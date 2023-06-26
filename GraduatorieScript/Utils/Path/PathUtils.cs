@@ -17,25 +17,25 @@ public static class PathUtils
             // Constants
 
 
-            // Check if the starting folder itself is the "docs" folder
-            var findDocsFolder = System.IO.Path.Combine(startingFolder, folderToFind);
+            // Check if the starting folder itself is the data folder
+            var findDataFolder = System.IO.Path.Combine(startingFolder, folderToFind);
 
-            if (Directory.Exists(findDocsFolder)) return findDocsFolder;
+            if (Directory.Exists(findDataFolder)) return findDataFolder;
 
             // Get the subdirectories in the starting folder
             string?[] subdirectories = Directory.GetDirectories(startingFolder);
 
             // Iterate through the subdirectories
             return subdirectories.Select(x => FindFolder(x, folderToFind))
-                .FirstOrDefault(docsFolder => !string.IsNullOrEmpty(docsFolder));
+                .FirstOrDefault(dataFolder => !string.IsNullOrEmpty(dataFolder));
         }
     }
 
-    public static string CreateAndReturnDocsFolder(string folderToFind)
+    public static string CreateAndReturnDataFolder(string folderName)
     {
-        var s = Directory.GetCurrentDirectory();
-        var andReturnDocsFolder = System.IO.Path.Join(s, folderToFind);
-        Directory.CreateDirectory(andReturnDocsFolder);
-        return andReturnDocsFolder;
+        var pwd = Directory.GetCurrentDirectory();
+        var dataFolderPath = System.IO.Path.Join(pwd, folderName);
+        Directory.CreateDirectory(dataFolderPath);
+        return dataFolderPath;
     }
 }

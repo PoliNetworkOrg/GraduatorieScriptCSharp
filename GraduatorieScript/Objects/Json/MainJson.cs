@@ -65,9 +65,9 @@ public class MainJson
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
 
-    public static RankingsSet? Parse(string docsFolder)
+    public static RankingsSet? Parse(string dataFolder)
     {
-        var outFolder = Path.Join(docsFolder, Constants.OutputFolder);
+        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
         try
         {

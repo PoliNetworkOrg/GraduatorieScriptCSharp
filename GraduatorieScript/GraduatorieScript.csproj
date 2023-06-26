@@ -14,15 +14,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="docs\**" />
+        <Compile Remove="..\data\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Remove="docs\**" />
+        <EmbeddedResource Remove="..\data\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="docs\**" />
+        <None Remove="..\data\**" />
     </ItemGroup>
 
     <ItemGroup>

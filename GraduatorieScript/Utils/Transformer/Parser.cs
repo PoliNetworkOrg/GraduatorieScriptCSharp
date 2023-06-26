@@ -12,15 +12,15 @@ namespace GraduatorieScript.Utils.Transformer;
 public static class Parser
 {
     public static RankingsSet GetRankings(
-        string docsFolder,
+        string dataFolder,
         IEnumerable<RankingUrl> urls
     )
     {
-        var rankingsSet = MainJson.Parse(docsFolder) ?? new RankingsSet();
+        var rankingsSet = MainJson.Parse(dataFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
-        var savedHtmls = ParseLocalHtmlFiles(docsFolder);
+        var savedHtmls = ParseLocalHtmlFiles(dataFolder);
 
         var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
         foreach (var url in newUrls) Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
@@ -570,16 +570,19 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string docsFolder)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string dataFolder)
     {
         HashSet<HtmlPage> elements = new();
-        if (string.IsNullOrEmpty(docsFolder))
+        if (string.IsNullOrEmpty(dataFolder))
             return elements;
 
-        var files = Directory.GetFiles(docsFolder, "*.html", SearchOption.AllDirectories);
+        var htmlFolder = System.IO.Path.Join(dataFolder, Constants.HtmlFolder);
+        if (!Directory.Exists(htmlFolder)) return elements;
+
+        var files = Directory.GetFiles(htmlFolder, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var fileRelativePath = file.Split(docsFolder)[1];
+            var fileRelativePath = file.Split(dataFolder)[1];
 
             // ignore because this is the file built
             // by previous script which is useless for this one
