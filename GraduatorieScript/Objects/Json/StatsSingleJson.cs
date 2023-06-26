@@ -13,7 +13,7 @@ public class StatsSingleJson
     {
         return new StatsSingleJson
         {
-            SingleCourseJson = ranking.ConvertToSingleSource(),
+            SingleCourseJson = ranking.ToSingleCourseJson(),
             Stats = ranking.RankingSummary
         };
     }
