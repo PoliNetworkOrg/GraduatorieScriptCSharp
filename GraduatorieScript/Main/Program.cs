@@ -1,5 +1,5 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Objects;
+using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
@@ -32,8 +32,11 @@ public static class Program
 
         // ricava un unico set partendo dai file html salvati, dagli url trovati e
         // dal precedente set salvato nel .json
+        var outFolder = Path.Join(docsFolder, Constants.OutputFolder);
         var rankingsSet = Parser.GetRankings(docsFolder, rankingsUrls);
-        MainJson.Write(docsFolder, rankingsSet);
+        MainJson.Write(outFolder, rankingsSet);
+        StatsJson.Write(outFolder, rankingsSet);
+
 
         //eliminare i suddetti file html
         /* if (transformerResult?.pathFound != null) */

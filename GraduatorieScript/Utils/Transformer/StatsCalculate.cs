@@ -11,7 +11,7 @@ public static class StatsCalculate
 
     private static RankingSummary CalculateStatsSingle(Ranking ranking)
     {
-        var byMeritRows = ranking.byMerit?.Rows;
+        var byMeritRows = ranking.ByMerit?.Rows;
         var results = CalculateResultsScores(byMeritRows);
 
         var rankingSummary = new RankingSummary

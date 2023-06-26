@@ -2,6 +2,7 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
+using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
@@ -50,7 +51,7 @@ public static class Parser
         if (b1)
         {
             var b2 = rankingsSet.Rankings[findIndex];
-            if (b2 is { byMerit: not null, byCourse: not null })
+            if (b2 is { ByMerit: not null, ByCourse: not null })
             {
                 Console.WriteLine($"[DEBUG] skipping index {index.Url.Url}: already parsed");
                 return;
@@ -113,13 +114,13 @@ public static class Parser
 
         var ranking = new Ranking
         {
-            year = year,
-            phase = phase,
-            extra = notes,
+            Year = year,
+            Phase = phase,
+            Extra = notes,
             Url = index.Url,
-            school = school,
+            School = school,
             LastUpdate = DateTime.Now,
-            byCourse = new List<CourseTable>()
+            ByCourse = new List<CourseTable>()
         };
 
         var meritTableData = meritTable.Data;
@@ -131,7 +132,7 @@ public static class Parser
             {
                 var courseStudents = GetCourseStudents(course, meritTableData);
 
-                ranking.byCourse.Add(new CourseTable
+                ranking.ByCourse.Add(new CourseTable
                 {
                     Title = course.CourseTitle,
                     Location = course.CourseLocation,
@@ -141,12 +142,12 @@ public static class Parser
                 });
             }
 
-            ranking.byMerit = new MeritTable
+            ranking.ByMerit = new MeritTable
             {
                 Headers = meritTable.Headers,
                 Rows = meritTableData.Select(row =>
                 {
-                    var findInCourse = ranking.byCourse
+                    var findInCourse = ranking.ByCourse
                         .Select(course => course.Rows?.Find(r => r.id == row.id))
                         .Where(rowSingle => rowSingle is not null)
                         .ToList();
@@ -196,7 +197,7 @@ public static class Parser
                     courseStudents.Add(student);
                 }
 
-                ranking.byCourse.Add(new CourseTable
+                ranking.ByCourse.Add(new CourseTable
                 {
                     Title = course.CourseTitle,
                     Location = course.CourseLocation,
@@ -206,7 +207,7 @@ public static class Parser
                 });
             }
 
-            ranking.byMerit = new MeritTable
+            ranking.ByMerit = new MeritTable
             {
                 Headers = meritTable.Headers,
                 Rows = meritTableData.Select(row => new StudentResult
