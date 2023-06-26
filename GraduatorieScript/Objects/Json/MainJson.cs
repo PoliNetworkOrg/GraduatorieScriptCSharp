@@ -69,25 +69,34 @@ public class MainJson
     {
         var outFolder = Path.Join(docsFolder, Constants.OutputFolder);
         var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
-        var mainJson = Parser.ParseJson<MainJson>(mainJsonPath);
-        if (mainJson is null) return null;
-
-        List<Ranking> rankings = new();
-        foreach (var year in mainJson.Years)
-        foreach (var school in year.Value)
-        foreach (var filename in school.Value)
+        try
         {
-            var yearKey = year.Key.ToString();
-            var schoolKey = school.Key.ToString();
-            var path = Path.Join(outFolder, yearKey, schoolKey, filename.Link);
-            var ranking = Parser.ParseJson<Ranking>(path);
-            if (ranking != null) rankings.Add(ranking);
+            var mainJson = Parser.ParseJson<MainJson>(mainJsonPath);
+            if (mainJson is null) return null;
+
+            List<Ranking> rankings = new();
+            foreach (var year in mainJson.Years)
+            foreach (var school in year.Value)
+            foreach (var filename in school.Value)
+            {
+                var yearKey = year.Key.ToString();
+                var schoolKey = school.Key.ToString();
+                var path = Path.Join(outFolder, yearKey, schoolKey, filename.Link);
+                var ranking = Parser.ParseJson<Ranking>(path);
+                if (ranking != null) rankings.Add(ranking);
+            }
+
+            return new RankingsSet
+            {
+                LastUpdate = mainJson.LastUpdate,
+                Rankings = rankings
+            };
+        }
+        catch
+        {
+            // ignored
         }
 
-        return new RankingsSet
-        {
-            LastUpdate = mainJson.LastUpdate,
-            Rankings = rankings
-        };
+        return null;
     }
 }
