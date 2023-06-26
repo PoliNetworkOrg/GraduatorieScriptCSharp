@@ -18,23 +18,29 @@ public class CourseTableStats
     public static CourseTableStats From(CourseTable courseTable)
     {
         var courseTableRows = courseTable.Rows;
+        var averageScoresOfAllStudents = courseTableRows?.Count > 0 ? courseTableRows?.Select(x => x.Result).Average() : null;
+        var averageOfWhoPassed = courseTableRows?.Count > 0
+            ? courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average()
+            : null;
+        var averageBirthYear = courseTableRows?.Count > 0
+            ? courseTableRows?.Select(x => x.BirthDate?.Year).Average()
+            : null;
+        var averageEnglishCorrectAnswers = courseTableRows?.Count > 0
+            ? courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average()
+            : null;
+        var averagePartialScoresCalculate = courseTableRows?.Count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
+        var averageOfaCalculate = courseTableRows?.Count > 0 ? AverageOfaCalculate(courseTableRows) : null;
         return new CourseTableStats
         {
             Location = courseTable.Location,
             Title = courseTable.Title,
             AverageScoresOfAllStudents =
-                courseTableRows?.Count > 0 ? courseTableRows?.Select(x => x.Result).Average() : null,
-            AverageOfWhoPassed = courseTableRows?.Count > 0
-                ? courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result).Average()
-                : null,
-            AverageBirthYear = courseTableRows?.Count > 0
-                ? courseTableRows?.Select(x => x.BirthDate?.Year).Average()
-                : null,
-            AverageEnglishCorrectAnswers = courseTableRows?.Count > 0
-                ? courseTableRows?.Select(x => x.EnglishCorrectAnswers).Average()
-                : null,
-            AveragePartialScores = courseTableRows?.Count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null,
-            AverageOfa = courseTableRows?.Count > 0 ? AverageOfaCalculate(courseTableRows) : null
+                averageScoresOfAllStudents,
+            AverageOfWhoPassed = averageOfWhoPassed,
+            AverageBirthYear = averageBirthYear,
+            AverageEnglishCorrectAnswers = averageEnglishCorrectAnswers,
+            AveragePartialScores = averagePartialScoresCalculate,
+            AverageOfa = averageOfaCalculate
         };
     }
 
