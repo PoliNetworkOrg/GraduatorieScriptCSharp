@@ -17,7 +17,7 @@ public static class Program
         Console.WriteLine($"[INFO] dataFolder: {dataFolder}");
 
         //find links from web
-        var rankingsUrls = mt.Execute(LinksFind.GetAll);
+        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
         ScraperOutput.Write(rankingsUrls, dataFolder);
 
         //print links found

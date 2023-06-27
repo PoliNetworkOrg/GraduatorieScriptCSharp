@@ -61,4 +61,9 @@ public class Ranking
     {
         return StatsSingleCourseJson.From(this);
     }
+
+    public RankingSummary CreateSummary()
+    {
+        return RankingSummary.From(this);
+    }
 }
