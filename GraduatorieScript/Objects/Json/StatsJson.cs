@@ -49,6 +49,12 @@ public class StatsJson
             schools[ranking.School.Value].List.Add(ranking.ToStats());
         }
 
+        foreach(var year in statsJson.Stats.Keys)
+        foreach(var school in statsJson.Stats[year].Schools.Keys)
+        {
+            statsJson.Stats[year].Schools[school].List.Sort();
+        }
+
         return statsJson;
     }
 
