@@ -583,7 +583,7 @@ public static class Parser
         foreach (var file in files)
         {
             var fileSplit = file.Split(dataFolder);
-            if(fileSplit.Count() < 2) continue;
+            if(fileSplit.Count() < 3) continue;
             
             var fileRelativePath = fileSplit[2];
 
