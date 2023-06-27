@@ -10,7 +10,7 @@ namespace GraduatorieScript.Objects.Json;
 public class MainJson
 {
     public DateTime? LastUpdate;
-    public Dictionary<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
+    public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
 
     public static void Write(string outFolder, RankingsSet set)
     {
@@ -20,39 +20,38 @@ public class MainJson
 
     private static MainJson Generate(RankingsSet set, string outFolder)
     {
-        var mainJson = new MainJson
-        {
-            LastUpdate = set.LastUpdate
-        };
+        var mainJson = new MainJson { LastUpdate = set.LastUpdate };
         // group rankings by year
-        var byYears = set.Rankings.GroupBy(r => r.Year);
-        foreach (var yearGroup in byYears)
+        var bySchool = set.Rankings.GroupBy(r => r.School);
+        foreach (var schoolGroup in bySchool)
         {
-            if (yearGroup.Key is null) continue;
-            var year = yearGroup.Key.Value;
-            var bySchool = yearGroup.GroupBy(r => r.School);
+            if (schoolGroup.Key is null)
+                continue;
+            var school = schoolGroup.Key.Value;
 
-            var yearDict = new Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>();
+            var schoolDict = new Dictionary<int, IEnumerable<SingleCourseJson>>();
 
-            foreach (var schoolGroup in bySchool)
+            var byYears = schoolGroup.GroupBy(r => r.Year);
+            foreach (var yearGroup in byYears)
             {
-                if (schoolGroup.Key is null) continue;
-                var school = schoolGroup.Key.Value;
-                var folder = Path.Join(outFolder, year.ToString(), school.ToString());
+                if (yearGroup.Key is null)
+                    continue;
+                var year = yearGroup.Key.Value;
+                var folder = Path.Join(outFolder, school.ToString(), year.ToString());
                 Directory.CreateDirectory(folder);
 
-                foreach (var ranking in schoolGroup)
+                foreach (var ranking in yearGroup)
                 {
                     var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
                     var rankingJsonString = JsonConvert.SerializeObject(ranking);
                     File.WriteAllText(path, rankingJsonString);
                 }
 
-                var filenames = schoolGroup.Select(ranking => ranking.ToSingleCourseJson());
-                yearDict.Add(school, filenames);
+                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson());
+                schoolDict.Add(year, filenames);
             }
 
-            mainJson.Years.Add(year, yearDict);
+            mainJson.Schools.Add(school, schoolDict);
         }
 
         return mainJson;
@@ -72,25 +71,23 @@ public class MainJson
         try
         {
             var mainJson = Parser.ParseJson<MainJson>(mainJsonPath);
-            if (mainJson is null) return null;
+            if (mainJson is null)
+                return null;
 
             List<Ranking> rankings = new();
-            foreach (var year in mainJson.Years)
-            foreach (var school in year.Value)
-            foreach (var filename in school.Value)
-            {
-                var yearKey = year.Key.ToString();
-                var schoolKey = school.Key.ToString();
-                var path = Path.Join(outFolder, yearKey, schoolKey, filename.Link);
-                var ranking = Parser.ParseJson<Ranking>(path);
-                if (ranking != null) rankings.Add(ranking);
-            }
+            foreach (var school in mainJson.Schools)
+                foreach (var year in school.Value)
+                    foreach (var filename in year.Value)
+                    {
+                        var schoolKey = school.Key.ToString();
+                        var yearKey = year.Key.ToString();
+                        var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
+                        var ranking = Parser.ParseJson<Ranking>(path);
+                        if (ranking != null)
+                            rankings.Add(ranking);
+                    }
 
-            return new RankingsSet
-            {
-                LastUpdate = mainJson.LastUpdate,
-                Rankings = rankings
-            };
+            return new RankingsSet { LastUpdate = mainJson.LastUpdate, Rankings = rankings };
         }
         catch
         {
