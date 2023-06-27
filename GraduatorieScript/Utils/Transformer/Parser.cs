@@ -582,10 +582,9 @@ public static class Parser
         var files = Directory.GetFiles(htmlFolder, "*.html", SearchOption.AllDirectories);
         foreach (var file in files)
         {
-            var fileSplit = file.Split(dataFolder);
-            if(fileSplit.Count() < 3) continue;
+            var fileSplit = file.Split(htmlFolder);
             
-            var fileRelativePath = fileSplit[2];
+            var fileRelativePath = fileSplit[1];
 
             // ignore because this is the file built
             // by previous script which is useless for this one
