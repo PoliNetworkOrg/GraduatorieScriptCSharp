@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Extensions;
 
@@ -6,7 +7,7 @@ namespace GraduatorieScript.Extensions;
 ///     Extension of Hashset in order to implement some methods like AddRange
 /// </summary>
 [Serializable]
-[JsonObject(MemberSerialization.Fields)]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public static class HashSetExtensions
 {
     /// <summary>
