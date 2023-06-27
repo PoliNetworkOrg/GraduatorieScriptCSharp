@@ -17,17 +17,16 @@ public static class Program
         Console.WriteLine($"[INFO] dataFolder: {dataFolder}");
 
         //find links from web
-        var rankingsUrls = mt.Execute(LinksFind.GetAll);
-        var rankingUrls = rankingsUrls.ToList();
-        ScraperOutput.Write(rankingUrls, dataFolder);
+        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
+        ScraperOutput.Write(rankingsUrls, dataFolder);
 
         //print links found
-        foreach (var r in rankingUrls)
+        foreach (var r in rankingsUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(dataFolder, rankingUrls);
+        var rankingsSet = Parser.GetRankings(dataFolder, rankingsUrls);
 
         // salvare il set
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
