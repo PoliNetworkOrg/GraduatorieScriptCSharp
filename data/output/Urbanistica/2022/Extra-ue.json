@@ -1,0 +1,95 @@
+{
+  "byCourse": [
+    {
+      "location": null,
+      "sections": [
+        "Colloquio",
+        "Elaborato",
+        "Lettera Motivazionale"
+      ],
+      "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Colloquio",
+        "Elaborato",
+        "Lettera Motivazionale"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-05-31",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": "BU5010 (Contingente Marco Polo) ",
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 60.00,
+          "sectionsResults": {
+            "Colloquio": 23.00,
+            "Elaborato": 20.00,
+            "Lettera Motivazionale": 17.00
+          }
+        }
+      ]
+    }
+  ],
+  "byMerit": {
+    "headers": [
+      "Matricola",
+      "Voto Test",
+      "Posizione Assoluta",
+      "Corso di Studi per il quale è consentita l'immatricolazione"
+    ],
+    "rows": [
+      {
+        "birthDate": null,
+        "canEnroll": true,
+        "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+        "englishCorrectAnswers": null,
+        "id": "BU5010",
+        "ofa": {},
+        "positionAbsolute": 1,
+        "positionCourse": null,
+        "result": 60.00,
+        "sectionsResults": null
+      }
+    ]
+  },
+  "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
+  "lastUpdate": "2023-06-27T22:27:58.5170949+00:00",
+  "phase": "Extra-ue",
+  "rankingSummary": {
+    "courseSummarized": [
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": {},
+        "averageOfWhoPassed": 60.00,
+        "averagePartialScores": {
+          "Colloquio": 23.00,
+          "Elaborato": 20.00,
+          "Lettera Motivazionale": 17.00
+        },
+        "averageScoresOfAllStudents": 60.00,
+        "location": null,
+        "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+      }
+    ],
+    "howManyCanEnroll": 1,
+    "howManyStudents": 1,
+    "resultsSummarized": {
+      "60": 1
+    }
+  },
+  "school": "Urbanistica",
+  "url": {
+    "pageEnum": 1,
+    "url": "http://www.risultati-ammissione.polimi.it/2022_20007_html/2022_20007_generale.html"
+  },
+  "year": 2022
+}
