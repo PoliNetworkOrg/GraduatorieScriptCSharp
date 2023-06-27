@@ -8,117 +8,105 @@ public class CourseTableStats
 {
     public double? AverageBirthYear;
     public double? AverageEnglishCorrectAnswers;
-    public Dictionary<string, int?>? AverageOfa;
+    public Dictionary<string, int>? AverageOfa;
     public decimal? AverageOfWhoPassed;
-    public Dictionary<string, decimal?>? AveragePartialScores;
+    public Dictionary<string, decimal>? AveragePartialScores;
     public decimal? AverageScoresOfAllStudents;
     public string? Location;
     public string? Title;
 
     public static CourseTableStats From(CourseTable courseTable)
     {
-        var courseTableRows = courseTable.Rows;
-        var count = courseTableRows?.Count ?? 0;
-        var enumerable = courseTableRows?.Select(x => x.Result);
-        var decimals = enumerable?.ToList();
-        var averageScoresOfAllStudents =
-            count > 0 && decimals?.Count > 0 ? decimals.Average() : (decimal?)null;
-        var select = courseTableRows?.Where(x => x.CanEnroll).Select(x => x.Result);
-        var enumerable1 = select?.ToList();
-        var averageOfWhoPassed = count > 0 && enumerable1?.Count > 0
-            ? enumerable1.Average()
-            : (decimal?)null;
-        var ints = courseTableRows?.Select(x => x.BirthDate?.Year);
-        var ints1 = ints?.ToList();
-        var averageBirthYear = count > 0 && ints1?.Count > 0
-            ? ints1.Average()
-            : null;
-        var select1 = courseTableRows?.Select(x => x.EnglishCorrectAnswers);
-        var select2 = select1?.ToList();
-        var averageEnglishCorrectAnswers = count > 0 && select2?.Count > 0
-            ? select2.Average()
-            : null;
-        var averagePartialScoresCalculate =
-            count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
-        var averageOfaCalculate = count > 0 ? AverageOfaCalculate(courseTableRows) : null;
-        return new CourseTableStats
+        var stats = new CourseTableStats
         {
             Location = courseTable.Location,
             Title = courseTable.Title,
-            AverageScoresOfAllStudents =
-                averageScoresOfAllStudents,
-            AverageOfWhoPassed = averageOfWhoPassed,
-            AverageBirthYear = averageBirthYear,
-            AverageEnglishCorrectAnswers = averageEnglishCorrectAnswers,
-            AveragePartialScores = averagePartialScoresCalculate,
-            AverageOfa = averageOfaCalculate
         };
+
+        var courseTableRows = courseTable.Rows;
+        var count = courseTableRows?.Count ?? 0;
+        if (count == 0 || courseTableRows is null)
+            return stats;
+
+        var testResults = courseTableRows.Select(x => x.Result).ToList();
+        stats.AverageScoresOfAllStudents = testResults.Count > 0 ? testResults.Average() : null;
+
+        var passedTestResults = courseTableRows
+            .Where(x => x.CanEnroll)
+            .Select(x => x.Result)
+            .ToList();
+        stats.AverageOfWhoPassed = passedTestResults.Count > 0 ? passedTestResults.Average() : null;
+
+        var birthYears = courseTableRows.Select(x => x.BirthDate?.Year).ToList();
+        stats.AverageBirthYear = birthYears.Count > 0 ? birthYears.Average() : null;
+
+        var engCorrAnswers = courseTableRows.Select(x => x.EnglishCorrectAnswers).ToList();
+        stats.AverageEnglishCorrectAnswers =
+            engCorrAnswers.Count > 0 ? engCorrAnswers.Average() : null;
+
+        stats.AveragePartialScores =
+            count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
+        stats.AverageOfa = count > 0 ? AverageOfaCalculate(courseTableRows) : null;
+        return stats;
     }
 
-    private static Dictionary<string, int?> AverageOfaCalculate(IReadOnlyCollection<StudentResult>? courseTableRows)
+    private static Dictionary<string, int> AverageOfaCalculate(
+        IReadOnlyCollection<StudentResult> courseTableRows
+    )
     {
-        var result = new Dictionary<string, int?>();
-        var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys);
-        var distinctKeys = Distinct(keys);
+        var result = new Dictionary<string, int>();
+        if (courseTableRows is null)
+            return result;
+
+        var keys = courseTableRows.Select(x => x.Ofa?.Keys);
+        var distinctKeys = DistinctKeys(keys);
         foreach (var key in distinctKeys)
-            result[key] = courseTableRows?.Select(x => x.Ofa).Select(x =>
-            {
-                var containsKey = x?.ContainsKey(key) ?? false;
-                return containsKey ? x?[key] : null;
-            }).Count(x => x ?? false);
+            result[key] = courseTableRows
+                .Select(x => x.Ofa)
+                .Where(x => x?.ContainsKey(key) ?? false)
+                .Select(x => x?[key])
+                .Count(x => x ?? false);
 
         return result;
     }
 
-    private static HashSet<string> Distinct(IEnumerable<Dictionary<string, decimal>.KeyCollection?>? keys)
+    private static Dictionary<string, decimal> AveragePartialScoresCalculate(
+        IReadOnlyCollection<StudentResult> courseTableRows
+    )
     {
-        var result = new HashSet<string>();
-        if (keys == null) return result;
-        foreach (var v1 in keys)
+        var scores = new Dictionary<string, decimal>();
+
+        var keys = courseTableRows.Select(x => x.SectionsResults?.Keys).ToList();
+        var keysDistinct = DistinctKeys(keys);
+
+        foreach (var key in keysDistinct)
         {
-            if (v1 == null) continue;
-            foreach (var v2 in v1) result.Add(v2);
+            var avg = courseTableRows
+                .Select(x => x.SectionsResults)
+                .Where(x => x?.ContainsKey(key) ?? false)
+                .Select(x => x?[key])
+                .Average();
+            if (avg is decimal) scores[key] = (decimal)avg;
         }
-
-        return result;
-    }
-
-    private static Dictionary<string, decimal?> AveragePartialScoresCalculate(
-        IReadOnlyCollection<StudentResult>? courseTableRows)
-    {
-        var scores = new Dictionary<string, decimal?>();
-
-        var keys = courseTableRows?.Select(x => x.SectionsResults?.Keys).ToList();
-        var keysDistinct = Distinct(keys);
-
-        foreach (var key in keysDistinct) scores[key] = AveragePartialScoresOfASingleKey(courseTableRows, key);
-
         return scores;
     }
 
-    private static decimal? AveragePartialScoresOfASingleKey(IEnumerable<StudentResult>? courseTableRows, string key)
-    {
-        var enumerable = courseTableRows?.Select(x =>
-        {
-            var containsKey = x.SectionsResults?.ContainsKey(key) ?? false;
-            return containsKey ? x.SectionsResults?[key] : null;
-        });
-        var decimals = enumerable?.ToList();
-        return decimals?.Count > 0
-            ? decimals.Average()
-            : null;
-    }
 
-    private static HashSet<string> Distinct(List<Dictionary<string, decimal>.KeyCollection?>? keys)
+    private static HashSet<string> DistinctKeys<T>(
+        IEnumerable<Dictionary<string, T>.KeyCollection?>? keysList
+    )
     {
-        var hashSet = new HashSet<string>();
-        if (keys == null) return hashSet;
-        foreach (var v1 in keys)
+        var result = new HashSet<string>();
+        if (keysList == null)
+            return result;
+        foreach (var keys in keysList)
         {
-            if (v1 == null) continue;
-            foreach (var v2 in v1) hashSet.Add(v2);
+            if (keys == null)
+                continue;
+            foreach (var key in keys)
+                result.Add(key);
         }
 
-        return hashSet;
+        return result;
     }
 }
