@@ -1,15 +1,16 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects;
 
 [Serializable]
-[JsonObject(MemberSerialization.Fields)]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public abstract class Table : Table<List<string>>
 {
 }
 
 [Serializable]
-[JsonObject(MemberSerialization.Fields)]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class Table<T>
 {
     public string? CourseLocation;

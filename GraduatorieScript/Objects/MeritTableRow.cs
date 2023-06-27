@@ -1,9 +1,10 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects;
 
 [Serializable]
-[JsonObject(MemberSerialization.Fields)]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class MeritTableRow
 {
     public bool canEnroll;

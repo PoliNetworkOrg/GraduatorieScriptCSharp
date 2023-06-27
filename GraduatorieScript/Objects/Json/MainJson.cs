@@ -2,11 +2,12 @@ using GraduatorieScript.Data;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects.Json;
 
 [Serializable]
-[JsonObject(MemberSerialization.Fields)]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class MainJson
 {
     public DateTime? LastUpdate;
