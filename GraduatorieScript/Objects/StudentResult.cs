@@ -6,14 +6,14 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields)]
 public class StudentResult
 {
-    public DateOnly? birthDate;
-    public bool canEnroll;
-    public string? canEnrollInto;
-    public int? englishCorrectAnswers;
-    public string? id;
-    public Dictionary<string, bool>? ofa; // maybe change it
-    public int? positionAbsolute;
-    public int? positionCourse;
-    public decimal result;
-    public Dictionary<string, decimal>? sectionsResults;
+    public DateOnly? BirthDate;
+    public bool CanEnroll;
+    public string? CanEnrollInto;
+    public int? EnglishCorrectAnswers;
+    public string? Id;
+    public Dictionary<string, bool>? Ofa; // maybe change it
+    public int? PositionAbsolute;
+    public int? PositionCourse;
+    public decimal Result;
+    public Dictionary<string, decimal>? SectionsResults;
 }

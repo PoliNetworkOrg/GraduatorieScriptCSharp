@@ -7,6 +7,6 @@ namespace GraduatorieScript.Objects.Json;
 [JsonObject(MemberSerialization.Fields)]
 public class StatsYear
 {
-    public Dictionary<SchoolEnum, StatsSchool> Schools = new();
     public int? NumStudents;
+    public Dictionary<SchoolEnum, StatsSchool> Schools = new();
 }

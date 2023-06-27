@@ -9,4 +9,9 @@ public class CourseTable : MeritTable
     public string? Location;
     public List<string>? Sections;
     public string? Title;
+
+    public CourseTableStats GetStats()
+    {
+        return CourseTableStats.From(this);
+    }
 }
