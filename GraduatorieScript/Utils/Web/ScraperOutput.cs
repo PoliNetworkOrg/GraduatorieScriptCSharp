@@ -10,29 +10,28 @@ public static class ScraperOutput
         return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
-    public static void Write(IEnumerable<RankingUrl> urls, string? dataFolder)
+    public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)
     {
-        var filePath = GetFilePath(dataFolder);
+
         var links = GetSaved(dataFolder);
         links.AddRange(urls);
 
-        var online = links
-            .Select(url => url.Url)
-            .Where(UrlUtils.CheckUrl)
-            .Distinct()
-            .ToList();
+        links = Distinct(links);
+        
+        return links;
 
-        online.Sort();
 
-        var output = "";
-        foreach (var link in online)
+    }
+
+    private static List<RankingUrl> Distinct(List<RankingUrl> links)
+    {
+        List<RankingUrl> list = new List<RankingUrl>();
+        foreach (var variable in links)
         {
-            output += link;
-            output += "\n";
+            if (list.All(x => x.Url != variable.Url))
+                list.Add(variable);
         }
-
-        Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {online.Count} links");
-        File.WriteAllText(filePath, output);
+        return list;
     }
 
     private static List<RankingUrl> GetSaved(string? dataFolder)
@@ -55,5 +54,20 @@ public static class ScraperOutput
             Console.WriteLine($"[ERROR] Can't read the ScraperOutput file ({filePath})");
             return list;
         }
+    }
+
+    public static void Write(List<RankingUrl> rankingsUrls, string dataFolder)
+    {
+        var filePath = GetFilePath(dataFolder);
+        var output = "";
+        var rankingUrls = rankingsUrls.Where(UrlUtils.CheckUrl);
+        foreach (var link in rankingUrls)
+        {
+            output += link.Url;
+            output += "\n";
+        }
+
+        Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {rankingsUrls.Count} links");
+        File.WriteAllText(filePath, output);
     }
 }

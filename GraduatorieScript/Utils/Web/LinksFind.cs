@@ -22,7 +22,7 @@ public static class LinksFind
             .AsParallel() // from 500ms to 86ms 
             .Select(RankingUrl.From)
             .Where(r => r.PageEnum == PageEnum.Index)
-            .Where(r => UrlUtils.CheckUrl(r.Url))
+            .Where(UrlUtils.CheckUrl)
             .ToHashSet();
 
         var len = rankingsUrls.ToArray().Length;

@@ -18,6 +18,7 @@ public static class Program
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
+        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, dataFolder);
         ScraperOutput.Write(rankingsUrls, dataFolder);
 
         //print links found

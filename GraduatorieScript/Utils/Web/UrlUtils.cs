@@ -1,4 +1,5 @@
 using System.Net;
+using GraduatorieScript.Objects;
 
 namespace GraduatorieScript.Utils.Web;
 
@@ -16,15 +17,15 @@ public static class UrlUtils
         return !href.Contains(domain) ? domain + href : href;
     }
 
-    public static bool CheckUrl(string? url)
+    public static bool CheckUrl(RankingUrl? url)
     {
-        if (string.IsNullOrEmpty(url))
+        if (string.IsNullOrEmpty(url?.Url))
             return false;
 
         using var client = new HttpClient();
         try
         {
-            var response = client.GetAsync(url).Result;
+            var response = client.GetAsync(url.Url).Result;
             return response.StatusCode == HttpStatusCode.OK;
         }
         catch (HttpRequestException)
