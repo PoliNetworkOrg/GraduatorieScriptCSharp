@@ -598,7 +598,6 @@ public static class Parser
             // because the html is already stored
 
             elements.Add(new HtmlPage(html, RankingUrl.From(url)));
-            
         }
 
         return elements;
