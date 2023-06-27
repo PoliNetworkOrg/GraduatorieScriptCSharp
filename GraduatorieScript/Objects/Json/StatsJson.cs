@@ -55,7 +55,7 @@ public class StatsJson
     private void WriteToFile(string outFolder)
     {
         var mainJsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this);
+        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
 }

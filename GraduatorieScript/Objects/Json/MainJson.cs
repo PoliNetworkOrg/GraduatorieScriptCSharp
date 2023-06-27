@@ -44,7 +44,7 @@ public class MainJson
                 foreach (var ranking in yearGroup)
                 {
                     var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
-                    var rankingJsonString = JsonConvert.SerializeObject(ranking);
+                    var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
                     File.WriteAllText(path, rankingJsonString);
                 }
 
@@ -61,7 +61,7 @@ public class MainJson
     private void WriteToFile(string outFolder)
     {
         var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this);
+        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
 
