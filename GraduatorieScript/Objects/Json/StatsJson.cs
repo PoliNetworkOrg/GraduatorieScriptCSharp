@@ -52,7 +52,8 @@ public class StatsJson
         foreach(var year in statsJson.Stats.Keys)
         foreach(var school in statsJson.Stats[year].Schools.Keys)
         {
-            statsJson.Stats[year].Schools[school].List.Sort();
+            var statsSingleCourseJsons = statsJson.Stats[year].Schools[school].List.OrderBy(x => x.SingleCourseJson?.Link);
+            statsJson.Stats[year].Schools[school].List = statsSingleCourseJsons.ToList();
         }
 
         return statsJson;
