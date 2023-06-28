@@ -1741,332 +1741,6 @@
         "Logica",
         "Cultura Generale"
       ],
-      "title": "DESIGN DELLA COMUNICAZIONE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale",
-        "Risposte Esatte Inglese",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2001-09-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 46.67,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.25,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 3.25,
-            "Logica": 3.75,
-            "Cultura Generale": 12.00
-          }
-        },
-        {
-          "birthDate": "2000-04-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 40.42,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.75,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 6.25,
-            "Logica": 4.00,
-            "Cultura Generale": 4.50
-          }
-        },
-        {
-          "birthDate": "1999-11-21",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 27.50,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.25,
-            "Comprensione Verbale": 1.50,
-            "Storia del Design, Storia dell'Arte": 1.50,
-            "Logica": 1.25,
-            "Cultura Generale": 7.00
-          }
-        },
-        {
-          "birthDate": "2000-01-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 27.50,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 2.00,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 3.25,
-            "Logica": 2.25,
-            "Cultura Generale": 9.25
-          }
-        },
-        {
-          "birthDate": "1994-06-04",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 25.83,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.75,
-            "Comprensione Verbale": 0.25,
-            "Storia del Design, Storia dell'Arte": 8.25,
-            "Logica": 1.25,
-            "Cultura Generale": 5.00
-          }
-        },
-        {
-          "birthDate": "2001-02-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 22,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 25.42,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 6.50,
-            "Comprensione Verbale": 0.75,
-            "Storia del Design, Storia dell'Arte": 1.75,
-            "Logica": 1.50,
-            "Cultura Generale": 4.75
-          }
-        },
-        {
-          "birthDate": "1999-01-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 19.58,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 2.00,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 3.25,
-            "Logica": -0.25,
-            "Cultura Generale": 7.00
-          }
-        },
-        {
-          "birthDate": "2000-10-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 18.33,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.25,
-            "Comprensione Verbale": 0.75,
-            "Storia del Design, Storia dell'Arte": 3.25,
-            "Logica": 0.50,
-            "Cultura Generale": 1.25
-          }
-        },
-        {
-          "birthDate": "1998-02-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 15,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 17.08,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 3.50,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 4.75,
-            "Logica": 0.00,
-            "Cultura Generale": 2.00
-          }
-        },
-        {
-          "birthDate": "2001-09-13",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 14.17,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": -0.50,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 3.75,
-            "Logica": 0.25,
-            "Cultura Generale": 3.25
-          }
-        },
-        {
-          "birthDate": "1993-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 10,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 13.75,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.75,
-            "Comprensione Verbale": 0.75,
-            "Storia del Design, Storia dell'Arte": 3.75,
-            "Logica": 0.50,
-            "Cultura Generale": 2.50
-          }
-        },
-        {
-          "birthDate": "1998-06-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 12.50,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.50,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 3.00,
-            "Logica": 0.50,
-            "Cultura Generale": 3.50
-          }
-        },
-        {
-          "birthDate": "1999-11-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 0,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 6.67,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 4.00,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 0.00,
-            "Logica": 0.00,
-            "Cultura Generale": 0.00
-          }
-        },
-        {
-          "birthDate": "1998-10-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 8,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 2.08,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 1.50,
-            "Comprensione Verbale": -0.75,
-            "Storia del Design, Storia dell'Arte": -0.50,
-            "Logica": -0.50,
-            "Cultura Generale": 1.50
-          }
-        },
-        {
-          "birthDate": "2000-10-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 0,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": -0.42,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.00,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 0.00,
-            "Logica": -0.25,
-            "Cultura Generale": 0.00
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO BOVISA",
-      "sections": [
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale"
-      ],
       "title": "DESIGN DELLA MODA",
       "headers": [
         "Posizione",
@@ -2660,6 +2334,332 @@
             "Storia del Design, Storia dell'Arte": -0.50,
             "Logica": -0.50,
             "Cultura Generale": -0.75
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO BOVISA",
+      "sections": [
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale"
+      ],
+      "title": "DESIGN DELLA COMUNICAZIONE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale",
+        "Risposte Esatte Inglese",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2001-09-19",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 46.67,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.25,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 3.25,
+            "Logica": 3.75,
+            "Cultura Generale": 12.00
+          }
+        },
+        {
+          "birthDate": "2000-04-06",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 40.42,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.75,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 6.25,
+            "Logica": 4.00,
+            "Cultura Generale": 4.50
+          }
+        },
+        {
+          "birthDate": "1999-11-21",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 27.50,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.25,
+            "Comprensione Verbale": 1.50,
+            "Storia del Design, Storia dell'Arte": 1.50,
+            "Logica": 1.25,
+            "Cultura Generale": 7.00
+          }
+        },
+        {
+          "birthDate": "2000-01-12",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 23,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 27.50,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 2.00,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 3.25,
+            "Logica": 2.25,
+            "Cultura Generale": 9.25
+          }
+        },
+        {
+          "birthDate": "1994-06-04",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 25.83,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.75,
+            "Comprensione Verbale": 0.25,
+            "Storia del Design, Storia dell'Arte": 8.25,
+            "Logica": 1.25,
+            "Cultura Generale": 5.00
+          }
+        },
+        {
+          "birthDate": "2001-02-05",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 22,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 25.42,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.50,
+            "Comprensione Verbale": 0.75,
+            "Storia del Design, Storia dell'Arte": 1.75,
+            "Logica": 1.50,
+            "Cultura Generale": 4.75
+          }
+        },
+        {
+          "birthDate": "1999-01-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 19.58,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 2.00,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 3.25,
+            "Logica": -0.25,
+            "Cultura Generale": 7.00
+          }
+        },
+        {
+          "birthDate": "2000-10-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 18.33,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.25,
+            "Comprensione Verbale": 0.75,
+            "Storia del Design, Storia dell'Arte": 3.25,
+            "Logica": 0.50,
+            "Cultura Generale": 1.25
+          }
+        },
+        {
+          "birthDate": "1998-02-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 15,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 17.08,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 3.50,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 4.75,
+            "Logica": 0.00,
+            "Cultura Generale": 2.00
+          }
+        },
+        {
+          "birthDate": "2001-09-13",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 14.17,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": -0.50,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 3.75,
+            "Logica": 0.25,
+            "Cultura Generale": 3.25
+          }
+        },
+        {
+          "birthDate": "1993-09-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 10,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 13.75,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.75,
+            "Comprensione Verbale": 0.75,
+            "Storia del Design, Storia dell'Arte": 3.75,
+            "Logica": 0.50,
+            "Cultura Generale": 2.50
+          }
+        },
+        {
+          "birthDate": "1998-06-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 12.50,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.50,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 3.00,
+            "Logica": 0.50,
+            "Cultura Generale": 3.50
+          }
+        },
+        {
+          "birthDate": "1999-11-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 0,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 6.67,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 4.00,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 0.00,
+            "Logica": 0.00,
+            "Cultura Generale": 0.00
+          }
+        },
+        {
+          "birthDate": "1998-10-26",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 8,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 2.08,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 1.50,
+            "Comprensione Verbale": -0.75,
+            "Storia del Design, Storia dell'Arte": -0.50,
+            "Logica": -0.50,
+            "Cultura Generale": 1.50
+          }
+        },
+        {
+          "birthDate": "2000-10-27",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 0,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": -0.42,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.00,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 0.00,
+            "Logica": -0.25,
+            "Cultura Generale": 0.00
           }
         }
       ]
@@ -4468,10 +4468,83 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-27T13:34:50.4378384+00:00",
+  "lastUpdate": "2023-06-27T23:01:14.2846347+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
-    "courseSummarized": null,
+    "courseSummarized": [
+      {
+        "averageBirthYear": 1999.5294117647059,
+        "averageEnglishCorrectAnswers": 22.3265306122449,
+        "averageOfa": {
+          "ENG": 24
+        },
+        "averageOfWhoPassed": 51.8335,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 5.0490196078431372549019607843,
+          "Comprensione Verbale": 0.5735294117647058823529411765,
+          "Storia del Design, Storia dell'Arte": 6.5588235294117647058823529412,
+          "Logica": 1.2205882352941176470588235294,
+          "Cultura Generale": 7.3529411764705882352941176471
+        },
+        "averageScoresOfAllStudents": 34.591568627450980392156862745,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+      },
+      {
+        "averageBirthYear": 1999.3030303030303,
+        "averageEnglishCorrectAnswers": 19.875,
+        "averageOfa": {
+          "ENG": 21
+        },
+        "averageOfWhoPassed": 45.50,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 4.1136363636363636363636363636,
+          "Comprensione Verbale": 0.3409090909090909090909090909,
+          "Storia del Design, Storia dell'Arte": 5.1287878787878787878787878788,
+          "Logica": 0.9318181818181818181818181818,
+          "Cultura Generale": 5.8560606060606060606060606061
+        },
+        "averageScoresOfAllStudents": 27.284545454545454545454545455,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DEGLI INTERNI"
+      },
+      {
+        "averageBirthYear": 1999.103448275862,
+        "averageEnglishCorrectAnswers": 21.857142857142858,
+        "averageOfa": {
+          "ENG": 14
+        },
+        "averageOfWhoPassed": 58.748,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 4.2931034482758620689655172414,
+          "Comprensione Verbale": 0.5258620689655172413793103448,
+          "Storia del Design, Storia dell'Arte": 5.8275862068965517241379310345,
+          "Logica": 0.7586206896551724137931034483,
+          "Cultura Generale": 7.3189655172413793103448275862
+        },
+        "averageScoresOfAllStudents": 31.206551724137931034482758621,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DELLA MODA"
+      },
+      {
+        "averageBirthYear": 1998.7333333333333,
+        "averageEnglishCorrectAnswers": 19.0,
+        "averageOfa": {
+          "ENG": 7
+        },
+        "averageOfWhoPassed": 33.584,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 3.10,
+          "Comprensione Verbale": 0.5333333333333333333333333333,
+          "Storia del Design, Storia dell'Arte": 3.0333333333333333333333333333,
+          "Logica": 0.9833333333333333333333333333,
+          "Cultura Generale": 4.2333333333333333333333333333
+        },
+        "averageScoresOfAllStudents": 19.805333333333333333333333333,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DELLA COMUNICAZIONE"
+      }
+    ],
     "howManyCanEnroll": 79,
     "howManyStudents": 128,
     "resultsSummarized": {
@@ -4540,7 +4613,7 @@
   "school": "Design",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/html/2020_20045_html/2020_20045_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html"
   },
   "year": 2020
 }

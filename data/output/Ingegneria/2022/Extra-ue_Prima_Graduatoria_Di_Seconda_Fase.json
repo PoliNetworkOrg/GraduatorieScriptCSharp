@@ -8,143 +8,6 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": []
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA CIVILE",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "1995-10-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE",
-          "englishCorrectAnswers": 28,
-          "id": "VM0843",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 71.92,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 42.25,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA FISICA",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2004-06-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA FISICA",
-          "englishCorrectAnswers": 27,
-          "id": "BU9308",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 41.25,
-          "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 16.25,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2003-01-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA FISICA",
-          "englishCorrectAnswers": 21,
-          "id": "BT0895",
-          "ofa": {
-            "ENG": true,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 26.45,
-          "sectionsResults": {
-            "Inglese": 6.25,
-            "Matematica": 5.20,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 0.00
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
       "title": "INGEGNERIA CHIMICA",
       "headers": [
         "Posizione",
@@ -164,7 +27,7 @@
         {
           "birthDate": "2002-12-08",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
           "id": "BU0987 (Contingente Marco Polo) ",
           "ofa": {
@@ -179,152 +42,6 @@
             "Matematica": 45.50,
             "Comprensione Verbale": 7.50,
             "Fisica": 2.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA BIOMEDICA",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2002-12-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 28,
-          "id": "BU5683",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 76.02,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 48.10,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 7.50
-          }
-        },
-        {
-          "birthDate": "2003-09-15",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 23,
-          "id": "BU3477 (Contingente Marco Polo) ",
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 59.73,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 39.65,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "1999-02-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 29,
-          "id": "BK4536",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 53.83,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 29.25,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 0.00
-          }
-        },
-        {
-          "birthDate": "2003-03-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 23,
-          "id": "BR7639 (Contingente Marco Polo) ",
-          "ofa": {
-            "ENG": true,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 42.33,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 35.75,
-            "Comprensione Verbale": 0.00,
-            "Fisica": -0.50
-          }
-        },
-        {
-          "birthDate": "2002-04-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 0,
-          "id": "BT2814",
-          "ofa": {
-            "ENG": true,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 37.75,
-          "sectionsResults": {
-            "Inglese": 0.00,
-            "Matematica": 22.75,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 7.50
-          }
-        },
-        {
-          "birthDate": "2004-02-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA",
-          "englishCorrectAnswers": 29,
-          "id": "BT6772",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 24.67,
-          "sectionsResults": {
-            "Inglese": 9.67,
-            "Matematica": 9.75,
-            "Comprensione Verbale": 5.25,
-            "Fisica": 0.00
           }
         }
       ]
@@ -356,14 +73,14 @@
         {
           "birthDate": "2003-01-20",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE",
+          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
           "id": "BG7157",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 1,
           "positionCourse": 1,
           "result": 82.42,
           "sectionsResults": {
@@ -376,14 +93,14 @@
         {
           "birthDate": "1998-05-22",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE",
+          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
           "id": "BS9166",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 7,
           "positionCourse": 2,
           "result": 69.92,
           "sectionsResults": {
@@ -396,14 +113,14 @@
         {
           "birthDate": "2003-08-04",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE",
+          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
           "id": "BS4462",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 11,
           "positionCourse": 3,
           "result": 63.98,
           "sectionsResults": {
@@ -416,14 +133,14 @@
         {
           "birthDate": "2004-09-19",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE",
+          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
           "id": "BO1002",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 16,
           "positionCourse": 4,
           "result": 60.13,
           "sectionsResults": {
@@ -436,14 +153,14 @@
         {
           "birthDate": "2002-02-15",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE",
+          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 21,
           "id": "BK7206",
           "ofa": {
             "ENG": true,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 38,
           "positionCourse": 5,
           "result": 32.15,
           "sectionsResults": {
@@ -463,7 +180,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA ELETTRONICA",
+      "title": "INGEGNERIA BIOMEDICA",
       "headers": [
         "Posizione",
         "Matricola",
@@ -480,22 +197,122 @@
       ],
       "rows": [
         {
-          "birthDate": "2002-11-18",
+          "birthDate": "2002-12-26",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRONICA",
-          "englishCorrectAnswers": 19,
-          "id": "BQ7326",
+          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 28,
+          "id": "BU5683",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 3,
+          "positionCourse": 1,
+          "result": 76.02,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 48.10,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 7.50
+          }
+        },
+        {
+          "birthDate": "2003-09-15",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 23,
+          "id": "BU3477 (Contingente Marco Polo) ",
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 59.73,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 39.65,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "1999-02-26",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 29,
+          "id": "BK4536",
+          "ofa": {
+            "ENG": false,
+            "TEST": true
+          },
+          "positionAbsolute": 23,
+          "positionCourse": 3,
+          "result": 53.83,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 29.25,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-03-16",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 23,
+          "id": "BR7639 (Contingente Marco Polo) ",
           "ofa": {
             "ENG": true,
             "TEST": true
           },
           "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 22.47,
+          "positionCourse": 4,
+          "result": 42.33,
           "sectionsResults": {
-            "Inglese": 5.42,
-            "Matematica": 20.80,
-            "Comprensione Verbale": -3.75,
+            "Inglese": 7.08,
+            "Matematica": 35.75,
+            "Comprensione Verbale": 0.00,
+            "Fisica": -0.50
+          }
+        },
+        {
+          "birthDate": "2002-04-22",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 0,
+          "id": "BT2814",
+          "ofa": {
+            "ENG": true,
+            "TEST": true
+          },
+          "positionAbsolute": 36,
+          "positionCourse": 5,
+          "result": 37.75,
+          "sectionsResults": {
+            "Inglese": 0.00,
+            "Matematica": 22.75,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 7.50
+          }
+        },
+        {
+          "birthDate": "2004-02-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 29,
+          "id": "BT6772",
+          "ofa": {
+            "ENG": false,
+            "TEST": true
+          },
+          "positionAbsolute": 43,
+          "positionCourse": 6,
+          "result": 24.67,
+          "sectionsResults": {
+            "Inglese": 9.67,
+            "Matematica": 9.75,
+            "Comprensione Verbale": 5.25,
             "Fisica": 0.00
           }
         }
@@ -509,7 +326,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA ELETTRICA",
+      "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
       "headers": [
         "Posizione",
         "Matricola",
@@ -524,94 +341,7 @@
         "OFA Test",
         "OFA Inglese"
       ],
-      "rows": [
-        {
-          "birthDate": "2003-09-07",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA",
-          "englishCorrectAnswers": 30,
-          "id": "BP8753",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 80.25,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 55.25,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 7.50
-          }
-        },
-        {
-          "birthDate": "2004-01-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA",
-          "englishCorrectAnswers": 29,
-          "id": "BT1929",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 70.03,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 5.00
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO BOVISA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA ENERGETICA",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "1994-05-13",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ENERGETICA",
-          "englishCorrectAnswers": 30,
-          "id": "BV1328",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 57.60,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 28.60,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 4.00
-          }
-        }
-      ]
+      "rows": []
     },
     {
       "location": "MILANO LEONARDO",
@@ -640,14 +370,14 @@
         {
           "birthDate": "2003-01-07",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
           "id": "BT9205",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 35,
           "positionCourse": 1,
           "result": 38.13,
           "sectionsResults": {
@@ -692,7 +422,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA MECCANICA",
+      "title": "INGEGNERIA ENERGETICA",
       "headers": [
         "Posizione",
         "Matricola",
@@ -709,83 +439,23 @@
       ],
       "rows": [
         {
-          "birthDate": "2003-04-20",
+          "birthDate": "1994-05-13",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 26,
-          "id": "BT9269",
+          "canEnrollInto": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
+          "englishCorrectAnswers": 30,
+          "id": "BV1328",
           "ofa": {
             "ENG": false,
-            "TEST": false
+            "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 19,
           "positionCourse": 1,
-          "result": 69.13,
+          "result": 57.60,
           "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 40.30,
+            "Inglese": 10.00,
+            "Matematica": 28.60,
             "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2002-10-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 24,
-          "id": "BP4174 (Contingente Marco Polo) ",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 57.07,
-          "sectionsResults": {
-            "Inglese": 7.67,
-            "Matematica": 36.40,
-            "Comprensione Verbale": 9.00,
             "Fisica": 4.00
-          }
-        },
-        {
-          "birthDate": "2002-04-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 23,
-          "id": "BT0456 (Contingente Marco Polo) ",
-          "ofa": {
-            "ENG": true,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 43.68,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 35.10,
-            "Comprensione Verbale": 0.00,
-            "Fisica": 1.50
-          }
-        },
-        {
-          "birthDate": "2001-09-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 16,
-          "id": "BR7638 (Contingente Marco Polo) ",
-          "ofa": {
-            "ENG": true,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 28.32,
-          "sectionsResults": {
-            "Inglese": 4.92,
-            "Matematica": 23.40,
-            "Comprensione Verbale": 0.00,
-            "Fisica": 0.00
           }
         }
       ]
@@ -798,7 +468,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA MATEMATICA",
+      "title": "INGEGNERIA CIVILE",
       "headers": [
         "Posizione",
         "Matricola",
@@ -815,63 +485,89 @@
       ],
       "rows": [
         {
-          "birthDate": "2003-07-18",
+          "birthDate": "1995-10-23",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 29,
-          "id": "BK2395",
+          "canEnrollInto": "INGEGNERIA CIVILE (MILANO LEONARDO)",
+          "englishCorrectAnswers": 28,
+          "id": "VM0843",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 5,
           "positionCourse": 1,
-          "result": 63.03,
+          "result": 71.92,
           "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 34.45,
+            "Inglese": 9.17,
+            "Matematica": 42.25,
             "Comprensione Verbale": 15.00,
-            "Fisica": 4.00
+            "Fisica": 5.50
           }
-        },
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA FISICA",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
         {
-          "birthDate": "2003-12-25",
+          "birthDate": "2004-06-20",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 29,
-          "id": "BI4889",
+          "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 27,
+          "id": "BU9308",
           "ofa": {
             "ENG": false,
-            "TEST": false
+            "TEST": true
           },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 60.63,
+          "positionAbsolute": 33,
+          "positionCourse": 1,
+          "result": 41.25,
           "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 43.55,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 0.00
+            "Inglese": 8.75,
+            "Matematica": 16.25,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 5.00
           }
         },
         {
-          "birthDate": "2002-02-03",
+          "birthDate": "2003-01-23",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 23,
-          "id": "BN6684 (Contingente Marco Polo) ",
+          "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 21,
+          "id": "BT0895",
           "ofa": {
             "ENG": true,
             "TEST": true
           },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 42.08,
+          "positionAbsolute": 42,
+          "positionCourse": 2,
+          "result": 26.45,
           "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 32.50,
-            "Comprensione Verbale": 4.50,
-            "Fisica": -2.00
+            "Inglese": 6.25,
+            "Matematica": 5.20,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 0.00
           }
         }
       ]
@@ -903,14 +599,14 @@
         {
           "birthDate": "2001-12-24",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
           "id": "BF1793",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 24,
           "positionCourse": 1,
           "result": 53.20,
           "sectionsResults": {
@@ -923,14 +619,14 @@
         {
           "birthDate": "2003-06-28",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
           "id": "BU4055",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 37,
           "positionCourse": 2,
           "result": 36.37,
           "sectionsResults": {
@@ -938,6 +634,406 @@
             "Matematica": 21.45,
             "Comprensione Verbale": 2.25,
             "Fisica": 3.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA ELETTRONICA",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2002-11-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 19,
+          "id": "BQ7326",
+          "ofa": {
+            "ENG": true,
+            "TEST": true
+          },
+          "positionAbsolute": 44,
+          "positionCourse": 1,
+          "result": 22.47,
+          "sectionsResults": {
+            "Inglese": 5.42,
+            "Matematica": 20.80,
+            "Comprensione Verbale": -3.75,
+            "Fisica": 0.00
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA ELETTRICA",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-09-07",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 30,
+          "id": "BP8753",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 2,
+          "positionCourse": 1,
+          "result": 80.25,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 55.25,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 7.50
+          }
+        },
+        {
+          "birthDate": "2004-01-26",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 29,
+          "id": "BT1929",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 6,
+          "positionCourse": 2,
+          "result": 70.03,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 5.00
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": []
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA MATEMATICA",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-07-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 29,
+          "id": "BK2395",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 13,
+          "positionCourse": 1,
+          "result": 63.03,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 34.45,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 4.00
+          }
+        },
+        {
+          "birthDate": "2003-12-25",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+          "englishCorrectAnswers": 29,
+          "id": "BI4889",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 15,
+          "positionCourse": 2,
+          "result": 60.63,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 43.55,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2002-02-03",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 23,
+          "id": "BN6684 (Contingente Marco Polo) ",
+          "ofa": {
+            "ENG": true,
+            "TEST": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 42.08,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 32.50,
+            "Comprensione Verbale": 4.50,
+            "Fisica": -2.00
+          }
+        }
+      ]
+    },
+    {
+      "location": "LECCO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-02-08",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
+          "englishCorrectAnswers": 25,
+          "id": "BU4069",
+          "ofa": {
+            "ENG": false,
+            "TEST": true
+          },
+          "positionAbsolute": 18,
+          "positionCourse": 1,
+          "result": 58.82,
+          "sectionsResults": {
+            "Inglese": 8.17,
+            "Matematica": 33.15,
+            "Comprensione Verbale": 12.00,
+            "Fisica": 5.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "CREMONA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA GESTIONALE",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": []
+    },
+    {
+      "location": "MILANO BOVISA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA MECCANICA",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-04-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+          "englishCorrectAnswers": 26,
+          "id": "BT9269",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 8,
+          "positionCourse": 1,
+          "result": 69.13,
+          "sectionsResults": {
+            "Inglese": 8.33,
+            "Matematica": 40.30,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2002-10-03",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 24,
+          "id": "BP4174 (Contingente Marco Polo) ",
+          "ofa": {
+            "ENG": false,
+            "TEST": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 57.07,
+          "sectionsResults": {
+            "Inglese": 7.67,
+            "Matematica": 36.40,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 4.00
+          }
+        },
+        {
+          "birthDate": "2002-04-14",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 23,
+          "id": "BT0456 (Contingente Marco Polo) ",
+          "ofa": {
+            "ENG": true,
+            "TEST": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 43.68,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 35.10,
+            "Comprensione Verbale": 0.00,
+            "Fisica": 1.50
+          }
+        },
+        {
+          "birthDate": "2001-09-08",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 16,
+          "id": "BR7638 (Contingente Marco Polo) ",
+          "ofa": {
+            "ENG": true,
+            "TEST": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 28.32,
+          "sectionsResults": {
+            "Inglese": 4.92,
+            "Matematica": 23.40,
+            "Comprensione Verbale": 0.00,
+            "Fisica": 0.00
           }
         }
       ]
@@ -969,14 +1065,14 @@
         {
           "birthDate": "1997-06-11",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 20,
           "id": "BU0958",
           "ofa": {
             "ENG": true,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 4,
           "positionCourse": 1,
           "result": 73.67,
           "sectionsResults": {
@@ -989,14 +1085,14 @@
         {
           "birthDate": "2003-01-01",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 30,
           "id": "BS1792",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 9,
           "positionCourse": 2,
           "result": 67.15,
           "sectionsResults": {
@@ -1009,14 +1105,14 @@
         {
           "birthDate": "1997-08-22",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
           "id": "BH5338",
           "ofa": {
             "ENG": false,
             "TEST": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 12,
           "positionCourse": 3,
           "result": 63.33,
           "sectionsResults": {
@@ -1029,7 +1125,7 @@
         {
           "birthDate": "2002-09-10",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
           "id": "BP4172 (Contingente Marco Polo) ",
           "ofa": {
@@ -1049,14 +1145,14 @@
         {
           "birthDate": "1996-01-22",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 30,
           "id": "VV1097",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 20,
           "positionCourse": 5,
           "result": 57.30,
           "sectionsResults": {
@@ -1069,7 +1165,7 @@
         {
           "birthDate": "2003-01-03",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
           "id": "BR7636 (Contingente Marco Polo) ",
           "ofa": {
@@ -1089,14 +1185,14 @@
         {
           "birthDate": "2003-05-30",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
           "id": "BU2826",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 25,
           "positionCourse": 7,
           "result": 51.22,
           "sectionsResults": {
@@ -1109,14 +1205,14 @@
         {
           "birthDate": "1995-08-20",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 23,
           "id": "VJ3988",
           "ofa": {
             "ENG": true,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 26,
           "positionCourse": 8,
           "result": 50.17,
           "sectionsResults": {
@@ -1129,14 +1225,14 @@
         {
           "birthDate": "1998-05-28",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
           "id": "BQ9840",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 27,
           "positionCourse": 9,
           "result": 48.03,
           "sectionsResults": {
@@ -1149,14 +1245,14 @@
         {
           "birthDate": "2003-12-11",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
           "id": "BS3370",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 28,
           "positionCourse": 10,
           "result": 44.77,
           "sectionsResults": {
@@ -1169,14 +1265,14 @@
         {
           "birthDate": "2003-06-02",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
           "id": "BO2713",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 29,
           "positionCourse": 11,
           "result": 44.23,
           "sectionsResults": {
@@ -1189,14 +1285,14 @@
         {
           "birthDate": "2002-03-03",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
           "id": "BH7359",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 34,
           "positionCourse": 12,
           "result": 41.13,
           "sectionsResults": {
@@ -1209,14 +1305,14 @@
         {
           "birthDate": "2003-02-07",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 25,
           "id": "BT5134",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 39,
           "positionCourse": 13,
           "result": 30.17,
           "sectionsResults": {
@@ -1229,14 +1325,14 @@
         {
           "birthDate": "2003-01-06",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
           "id": "BQ6936",
           "ofa": {
             "ENG": false,
             "TEST": true
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 40,
           "positionCourse": 14,
           "result": 29.28,
           "sectionsResults": {
@@ -1249,7 +1345,7 @@
         {
           "birthDate": "2002-03-18",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "canEnrollInto": null,
           "englishCorrectAnswers": 13,
           "id": "BT3441 (Contingente Marco Polo) ",
           "ofa": {
@@ -1319,102 +1415,6 @@
       "rows": []
     },
     {
-      "location": "LECCO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-02-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-          "englishCorrectAnswers": 25,
-          "id": "BU4069",
-          "ofa": {
-            "ENG": false,
-            "TEST": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 58.82,
-          "sectionsResults": {
-            "Inglese": 8.17,
-            "Matematica": 33.15,
-            "Comprensione Verbale": 12.00,
-            "Fisica": 5.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": []
-    },
-    {
-      "location": "CREMONA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA GESTIONALE",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": []
-    },
-    {
       "location": "PIACENZA",
       "sections": [
         "Inglese",
@@ -1451,139 +1451,184 @@
     ],
     "rows": [
       {
-        "birthDate": null,
+        "birthDate": "2003-01-20",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BG7157",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 1,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 82.42,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 52.00,
+          "Comprensione Verbale": 11.25,
+          "Fisica": 10.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-09-07",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 30,
         "id": "BP8753",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 2,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 80.25,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 10.00,
+          "Matematica": 55.25,
+          "Comprensione Verbale": 7.50,
+          "Fisica": 7.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-12-26",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BU5683",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 3,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 76.02,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 48.10,
+          "Comprensione Verbale": 11.25,
+          "Fisica": 7.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1997-06-11",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 20,
         "id": "BU0958",
         "ofa": {
           "ENG": true,
           "TEST": false
         },
         "positionAbsolute": 4,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 73.67,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 6.17,
+          "Matematica": 55.25,
+          "Comprensione Verbale": 2.25,
+          "Fisica": 10.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1995-10-23",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA CIVILE (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "VM0843",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 5,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 71.92,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 42.25,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 5.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2004-01-26",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BT1929",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 6,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 70.03,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 44.20,
+          "Comprensione Verbale": 11.25,
+          "Fisica": 5.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1998-05-22",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BS9166",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 7,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 69.92,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 42.25,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 3.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-04-20",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BT9269",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 8,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 69.13,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 40.30,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 5.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-01-01",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 30,
         "id": "BS1792",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 9,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 67.15,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 10.00,
+          "Matematica": 46.15,
+          "Comprensione Verbale": 3.00,
+          "Fisica": 8.00
+        }
       },
       {
         "birthDate": null,
@@ -1601,49 +1646,64 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-08-04",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BS4462",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 11,
-        "positionCourse": null,
+        "positionCourse": 3,
         "result": 63.98,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 33.15,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 7.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1997-08-22",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BH5338",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 12,
-        "positionCourse": null,
+        "positionCourse": 3,
         "result": 63.33,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 42.25,
+          "Comprensione Verbale": 6.00,
+          "Fisica": 5.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-07-18",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BK2395",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 13,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 63.03,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 34.45,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 4.00
+        }
       },
       {
         "birthDate": null,
@@ -1661,34 +1721,44 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-12-25",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BI4889",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 15,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 60.63,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 43.55,
+          "Comprensione Verbale": 7.50,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2004-09-19",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BO1002",
         "ofa": {
           "ENG": false,
           "TEST": false
         },
         "positionAbsolute": 16,
-        "positionCourse": null,
+        "positionCourse": 4,
         "result": 60.13,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 33.80,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 3.00
+        }
       },
       {
         "birthDate": null,
@@ -1706,49 +1776,64 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-02-08",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 25,
         "id": "BU4069",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 18,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 58.82,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.17,
+          "Matematica": 33.15,
+          "Comprensione Verbale": 12.00,
+          "Fisica": 5.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1994-05-13",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 30,
         "id": "BV1328",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 19,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 57.60,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 10.00,
+          "Matematica": 28.60,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 4.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1996-01-22",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 30,
         "id": "VV1097",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 20,
-        "positionCourse": null,
+        "positionCourse": 5,
         "result": 57.30,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 10.00,
+          "Matematica": 33.80,
+          "Comprensione Verbale": 7.50,
+          "Fisica": 6.00
+        }
       },
       {
         "birthDate": null,
@@ -1781,109 +1866,144 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "1999-02-26",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BK4536",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 23,
-        "positionCourse": null,
+        "positionCourse": 3,
         "result": 53.83,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 29.25,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2001-12-24",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 27,
         "id": "BF1793",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 24,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 53.20,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.75,
+          "Matematica": 27.95,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 1.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-05-30",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BU2826",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 25,
-        "positionCourse": null,
+        "positionCourse": 7,
         "result": 51.22,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 33.80,
+          "Comprensione Verbale": 2.25,
+          "Fisica": 6.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1995-08-20",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 23,
         "id": "VJ3988",
         "ofa": {
           "ENG": true,
           "TEST": true
         },
         "positionAbsolute": 26,
-        "positionCourse": null,
+        "positionCourse": 8,
         "result": 50.17,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 7.17,
+          "Matematica": 42.25,
+          "Comprensione Verbale": 0.75,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "1998-05-28",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BQ9840",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 27,
-        "positionCourse": null,
+        "positionCourse": 9,
         "result": 48.03,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 34.45,
+          "Comprensione Verbale": 5.25,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-12-11",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BS3370",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 28,
-        "positionCourse": null,
+        "positionCourse": 10,
         "result": 44.77,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 31.85,
+          "Comprensione Verbale": 3.75,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-06-02",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BO2713",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 29,
-        "positionCourse": null,
+        "positionCourse": 11,
         "result": 44.23,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.58,
+          "Matematica": 26.65,
+          "Comprensione Verbale": 3.00,
+          "Fisica": 5.00
+        }
       },
       {
         "birthDate": null,
@@ -1931,124 +2051,164 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "2004-06-20",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 27,
         "id": "BU9308",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 33,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 41.25,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.75,
+          "Matematica": 16.25,
+          "Comprensione Verbale": 11.25,
+          "Fisica": 5.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-03-03",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BH7359",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 34,
-        "positionCourse": null,
+        "positionCourse": 12,
         "result": 41.13,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 24.05,
+          "Comprensione Verbale": 8.25,
+          "Fisica": 0.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-01-07",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BT9205",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 35,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 38.13,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 27.30,
+          "Comprensione Verbale": 1.50,
+          "Fisica": 1.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-04-22",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 0,
         "id": "BT2814",
         "ofa": {
           "ENG": true,
           "TEST": true
         },
         "positionAbsolute": 36,
-        "positionCourse": null,
+        "positionCourse": 5,
         "result": 37.75,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 0.00,
+          "Matematica": 22.75,
+          "Comprensione Verbale": 7.50,
+          "Fisica": 7.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-06-28",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 28,
         "id": "BU4055",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 37,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 36.37,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.17,
+          "Matematica": 21.45,
+          "Comprensione Verbale": 2.25,
+          "Fisica": 3.50
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-02-15",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 21,
         "id": "BK7206",
         "ofa": {
           "ENG": true,
           "TEST": true
         },
         "positionAbsolute": 38,
-        "positionCourse": null,
+        "positionCourse": 5,
         "result": 32.15,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 6.25,
+          "Matematica": 26.65,
+          "Comprensione Verbale": -3.75,
+          "Fisica": 3.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-02-07",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 25,
         "id": "BT5134",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 39,
-        "positionCourse": null,
+        "positionCourse": 13,
         "result": 30.17,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 7.92,
+          "Matematica": 26.00,
+          "Comprensione Verbale": -3.75,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-01-06",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 26,
         "id": "BQ6936",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 40,
-        "positionCourse": null,
+        "positionCourse": 14,
         "result": 29.28,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 8.33,
+          "Matematica": 11.70,
+          "Comprensione Verbale": 11.25,
+          "Fisica": -2.00
+        }
       },
       {
         "birthDate": null,
@@ -2066,49 +2226,64 @@
         "sectionsResults": null
       },
       {
-        "birthDate": null,
+        "birthDate": "2003-01-23",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 21,
         "id": "BT0895",
         "ofa": {
           "ENG": true,
           "TEST": true
         },
         "positionAbsolute": 42,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 26.45,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 6.25,
+          "Matematica": 5.20,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2004-02-20",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 29,
         "id": "BT6772",
         "ofa": {
           "ENG": false,
           "TEST": true
         },
         "positionAbsolute": 43,
-        "positionCourse": null,
+        "positionCourse": 6,
         "result": 24.67,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 9.67,
+          "Matematica": 9.75,
+          "Comprensione Verbale": 5.25,
+          "Fisica": 0.00
+        }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-11-18",
         "canEnroll": true,
         "canEnrollInto": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 19,
         "id": "BQ7326",
         "ofa": {
           "ENG": true,
           "TEST": true
         },
         "positionAbsolute": 44,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 22.47,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Inglese": 5.42,
+          "Matematica": 20.80,
+          "Comprensione Verbale": -3.75,
+          "Fisica": 0.00
+        }
       },
       {
         "birthDate": null,
@@ -2128,10 +2303,64 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-27T22:08:21.8094211+00:00",
+  "lastUpdate": "2023-06-27T22:28:13.835964+00:00",
   "phase": "Extra-ue Prima Graduatoria Di Seconda Fase",
   "rankingSummary": {
     "courseSummarized": [
+      {
+        "averageBirthYear": 2002.0,
+        "averageEnglishCorrectAnswers": 29.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 65.08,
+        "averagePartialScores": {
+          "Inglese": 9.58,
+          "Matematica": 45.50,
+          "Comprensione Verbale": 7.50,
+          "Fisica": 2.50
+        },
+        "averageScoresOfAllStudents": 65.08,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA CHIMICA"
+      },
+      {
+        "averageBirthYear": 2002.0,
+        "averageEnglishCorrectAnswers": 25.8,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 1
+        },
+        "averageOfWhoPassed": 61.72,
+        "averagePartialScores": {
+          "Inglese": 8.25,
+          "Matematica": 37.57,
+          "Comprensione Verbale": 10.50,
+          "Fisica": 5.40
+        },
+        "averageScoresOfAllStudents": 61.72,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA AEROSPAZIALE"
+      },
+      {
+        "averageBirthYear": 2002.1666666666667,
+        "averageEnglishCorrectAnswers": 22.0,
+        "averageOfa": {
+          "ENG": 3,
+          "TEST": 4
+        },
+        "averageOfWhoPassed": 49.055,
+        "averagePartialScores": {
+          "Inglese": 7.0966666666666666666666666667,
+          "Matematica": 30.875,
+          "Comprensione Verbale": 7.75,
+          "Fisica": 3.3333333333333333333333333333
+        },
+        "averageScoresOfAllStudents": 49.055,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA BIOMEDICA"
+      },
       {
         "averageBirthYear": null,
         "averageEnglishCorrectAnswers": null,
@@ -2141,6 +2370,52 @@
         "averageScoresOfAllStudents": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 26.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 1
+        },
+        "averageOfWhoPassed": 38.13,
+        "averagePartialScores": {
+          "Inglese": 8.33,
+          "Matematica": 27.30,
+          "Comprensione Verbale": 1.50,
+          "Fisica": 1.00
+        },
+        "averageScoresOfAllStudents": 38.13,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA DELL'AUTOMAZIONE"
+      },
+      {
+        "averageBirthYear": null,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": null,
+        "averageOfWhoPassed": null,
+        "averagePartialScores": null,
+        "averageScoresOfAllStudents": null,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+      },
+      {
+        "averageBirthYear": 1994.0,
+        "averageEnglishCorrectAnswers": 30.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 1
+        },
+        "averageOfWhoPassed": 57.60,
+        "averagePartialScores": {
+          "Inglese": 10.00,
+          "Matematica": 28.60,
+          "Comprensione Verbale": 15.00,
+          "Fisica": 4.00
+        },
+        "averageScoresOfAllStudents": 57.60,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA ENERGETICA"
       },
       {
         "averageBirthYear": 1995.0,
@@ -2180,57 +2455,21 @@
       },
       {
         "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 29.0,
+        "averageEnglishCorrectAnswers": 27.5,
         "averageOfa": {
           "ENG": 0,
-          "TEST": 0
+          "TEST": 2
         },
-        "averageOfWhoPassed": 65.08,
+        "averageOfWhoPassed": 44.785,
         "averagePartialScores": {
-          "Inglese": 9.58,
-          "Matematica": 45.50,
-          "Comprensione Verbale": 7.50,
+          "Inglese": 8.96,
+          "Matematica": 24.70,
+          "Comprensione Verbale": 8.625,
           "Fisica": 2.50
         },
-        "averageScoresOfAllStudents": 65.08,
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA CHIMICA"
-      },
-      {
-        "averageBirthYear": 2002.1666666666667,
-        "averageEnglishCorrectAnswers": 22.0,
-        "averageOfa": {
-          "ENG": 3,
-          "TEST": 4
-        },
-        "averageOfWhoPassed": 49.055,
-        "averagePartialScores": {
-          "Inglese": 7.0966666666666666666666666667,
-          "Matematica": 30.875,
-          "Comprensione Verbale": 7.75,
-          "Fisica": 3.3333333333333333333333333333
-        },
-        "averageScoresOfAllStudents": 49.055,
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA BIOMEDICA"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 25.8,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 1
-        },
-        "averageOfWhoPassed": 61.72,
-        "averagePartialScores": {
-          "Inglese": 8.25,
-          "Matematica": 37.57,
-          "Comprensione Verbale": 10.50,
-          "Fisica": 5.40
-        },
-        "averageScoresOfAllStudents": 61.72,
+        "averageScoresOfAllStudents": 44.785,
         "location": "MILANO BOVISA",
-        "title": "INGEGNERIA AEROSPAZIALE"
+        "title": "INGEGNERIA GESTIONALE"
       },
       {
         "averageBirthYear": 2002.0,
@@ -2269,42 +2508,6 @@
         "title": "INGEGNERIA ELETTRICA"
       },
       {
-        "averageBirthYear": 1994.0,
-        "averageEnglishCorrectAnswers": 30.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
-        "averageOfWhoPassed": 57.60,
-        "averagePartialScores": {
-          "Inglese": 10.00,
-          "Matematica": 28.60,
-          "Comprensione Verbale": 15.00,
-          "Fisica": 4.00
-        },
-        "averageScoresOfAllStudents": 57.60,
-        "location": "MILANO BOVISA",
-        "title": "INGEGNERIA ENERGETICA"
-      },
-      {
-        "averageBirthYear": 2003.0,
-        "averageEnglishCorrectAnswers": 26.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
-        "averageOfWhoPassed": 38.13,
-        "averagePartialScores": {
-          "Inglese": 8.33,
-          "Matematica": 27.30,
-          "Comprensione Verbale": 1.50,
-          "Fisica": 1.00
-        },
-        "averageScoresOfAllStudents": 38.13,
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA DELL'AUTOMAZIONE"
-      },
-      {
         "averageBirthYear": null,
         "averageEnglishCorrectAnswers": null,
         "averageOfa": null,
@@ -2312,25 +2515,7 @@
         "averagePartialScores": null,
         "averageScoresOfAllStudents": null,
         "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 22.25,
-        "averageOfa": {
-          "ENG": 2,
-          "TEST": 3
-        },
-        "averageOfWhoPassed": 49.55,
-        "averagePartialScores": {
-          "Inglese": 7.00,
-          "Matematica": 33.80,
-          "Comprensione Verbale": 6.00,
-          "Fisica": 2.75
-        },
-        "averageScoresOfAllStudents": 49.55,
-        "location": "MILANO BOVISA",
-        "title": "INGEGNERIA MECCANICA"
+        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
       },
       {
         "averageBirthYear": 2002.6666666666667,
@@ -2351,22 +2536,50 @@
         "title": "INGEGNERIA MATEMATICA"
       },
       {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 27.5,
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 25.0,
         "averageOfa": {
           "ENG": 0,
-          "TEST": 2
+          "TEST": 1
         },
-        "averageOfWhoPassed": 44.785,
+        "averageOfWhoPassed": 58.82,
         "averagePartialScores": {
-          "Inglese": 8.96,
-          "Matematica": 24.70,
-          "Comprensione Verbale": 8.625,
-          "Fisica": 2.50
+          "Inglese": 8.17,
+          "Matematica": 33.15,
+          "Comprensione Verbale": 12.00,
+          "Fisica": 5.50
         },
-        "averageScoresOfAllStudents": 44.785,
-        "location": "MILANO BOVISA",
+        "averageScoresOfAllStudents": 58.82,
+        "location": "LECCO",
+        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+      },
+      {
+        "averageBirthYear": null,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": null,
+        "averageOfWhoPassed": null,
+        "averagePartialScores": null,
+        "averageScoresOfAllStudents": null,
+        "location": "CREMONA",
         "title": "INGEGNERIA GESTIONALE"
+      },
+      {
+        "averageBirthYear": 2002.0,
+        "averageEnglishCorrectAnswers": 22.25,
+        "averageOfa": {
+          "ENG": 2,
+          "TEST": 3
+        },
+        "averageOfWhoPassed": 49.55,
+        "averagePartialScores": {
+          "Inglese": 7.00,
+          "Matematica": 33.80,
+          "Comprensione Verbale": 6.00,
+          "Fisica": 2.75
+        },
+        "averageScoresOfAllStudents": 49.55,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA MECCANICA"
       },
       {
         "averageBirthYear": 2000.6666666666667,
@@ -2405,44 +2618,6 @@
         "averageScoresOfAllStudents": null,
         "location": "CREMONA",
         "title": "INGEGNERIA INFORMATICA"
-      },
-      {
-        "averageBirthYear": 2003.0,
-        "averageEnglishCorrectAnswers": 25.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
-        "averageOfWhoPassed": 58.82,
-        "averagePartialScores": {
-          "Inglese": 8.17,
-          "Matematica": 33.15,
-          "Comprensione Verbale": 12.00,
-          "Fisica": 5.50
-        },
-        "averageScoresOfAllStudents": 58.82,
-        "location": "LECCO",
-        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
-      },
-      {
-        "averageBirthYear": null,
-        "averageEnglishCorrectAnswers": null,
-        "averageOfa": null,
-        "averageOfWhoPassed": null,
-        "averagePartialScores": null,
-        "averageScoresOfAllStudents": null,
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
-      },
-      {
-        "averageBirthYear": null,
-        "averageEnglishCorrectAnswers": null,
-        "averageOfa": null,
-        "averageOfWhoPassed": null,
-        "averagePartialScores": null,
-        "averageScoresOfAllStudents": null,
-        "location": "CREMONA",
-        "title": "INGEGNERIA GESTIONALE"
       },
       {
         "averageBirthYear": null,

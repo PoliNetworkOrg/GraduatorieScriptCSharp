@@ -1,6 +1,371 @@
 {
   "byCourse": [
     {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA DELL'AUTOMAZIONE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-03-11",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 72.57,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 42.90,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-04-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 65.03,
+          "sectionsResults": {
+            "Inglese": 7.83,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 4.00
+          }
+        },
+        {
+          "birthDate": "2003-10-16",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 63.70,
+          "sectionsResults": {
+            "Inglese": 8.75,
+            "Matematica": 34.45,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-07-10",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 23,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 63.63,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 40.30,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 5.00
+          }
+        },
+        {
+          "birthDate": "2004-04-09",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 63.38,
+          "sectionsResults": {
+            "Inglese": 8.33,
+            "Matematica": 37.05,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 3.00
+          }
+        },
+        {
+          "birthDate": "2003-04-08",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 62.63,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 33.80,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 8.00
+          }
+        },
+        {
+          "birthDate": "2004-01-06",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 62.42,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 35.75,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-09-12",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 62.38,
+          "sectionsResults": {
+            "Inglese": 8.33,
+            "Matematica": 40.30,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-12-22",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 61.27,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 35.10,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-03-06",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 60.97,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 33.80,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 3.00
+          }
+        },
+        {
+          "birthDate": "2003-07-30",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 60.47,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 37.05,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 0.50
+          }
+        },
+        {
+          "birthDate": "2002-08-21",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 22,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 60.28,
+          "sectionsResults": {
+            "Inglese": 6.83,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 1.00
+          }
+        },
+        {
+          "birthDate": "2003-04-11",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 60.08,
+          "sectionsResults": {
+            "Inglese": 7.58,
+            "Matematica": 32.50,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.00
+          }
+        },
+        {
+          "birthDate": "2003-12-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 59.95,
+          "sectionsResults": {
+            "Inglese": 7.50,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-05-17",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 59.90,
+          "sectionsResults": {
+            "Inglese": 7.75,
+            "Matematica": 39.65,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2003-08-01",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 16,
+          "result": 59.72,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 30.55,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.00
+          }
+        },
+        {
+          "birthDate": "2003-11-21",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 17,
+          "result": 59.64,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 35.92,
+            "Comprensione Verbale": 11.42,
+            "Fisica": 2.72
+          }
+        }
+      ]
+    },
+    {
       "location": "MILANO BOVISA",
       "sections": [
         "Inglese",
@@ -793,7 +1158,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA CHIMICA",
+      "title": "INGEGNERIA ELETTRICA",
       "headers": [
         "Posizione",
         "Data di Nascita",
@@ -809,49 +1174,49 @@
       ],
       "rows": [
         {
-          "birthDate": "2003-10-31",
+          "birthDate": "2003-03-18",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 29,
+          "canEnrollInto": "INGEGNERIA ELETTRICA",
+          "englishCorrectAnswers": 22,
           "id": null,
           "ofa": {
-            "ENG": false,
+            "ENG": true,
             "TEST": false
           },
           "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 85.88,
+          "result": 62.98,
           "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 53.30,
+            "Inglese": 6.67,
+            "Matematica": 35.18,
             "Comprensione Verbale": 15.00,
-            "Fisica": 8.00
+            "Fisica": 6.13
           }
         },
         {
-          "birthDate": "2003-09-29",
+          "birthDate": "2003-07-06",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 30,
+          "canEnrollInto": "INGEGNERIA ELETTRICA",
+          "englishCorrectAnswers": 22,
           "id": null,
           "ofa": {
-            "ENG": false,
+            "ENG": true,
             "TEST": false
           },
           "positionAbsolute": null,
           "positionCourse": 2,
-          "result": 78.70,
+          "result": 61.95,
           "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 53.95,
-            "Comprensione Verbale": 11.25,
+            "Inglese": 6.75,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 7.50,
             "Fisica": 3.50
           }
         },
         {
-          "birthDate": "2003-06-29",
+          "birthDate": "2003-12-02",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "canEnrollInto": "INGEGNERIA ELETTRICA",
           "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
@@ -860,19 +1225,104 @@
           },
           "positionAbsolute": null,
           "positionCourse": 3,
-          "result": 61.68,
+          "result": 61.58,
           "sectionsResults": {
             "Inglese": 9.58,
-            "Matematica": 38.35,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 5.50
+            "Matematica": 39.00,
+            "Comprensione Verbale": 12.00,
+            "Fisica": 1.00
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-12-24",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 64.42,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 40.52,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 4.20
           }
         },
         {
-          "birthDate": "2003-11-24",
+          "birthDate": "2003-11-29",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 25,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 61.51,
+          "sectionsResults": {
+            "Inglese": 7.50,
+            "Matematica": 44.85,
+            "Comprensione Verbale": 4.96,
+            "Fisica": 4.20
+          }
+        },
+        {
+          "birthDate": "2003-12-05",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 61.12,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 37.70,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.00
+          }
+        },
+        {
+          "birthDate": "2003-11-27",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 26,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -880,19 +1330,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 4,
-          "result": 61.00,
+          "result": 61.08,
           "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 33.80,
-            "Comprensione Verbale": 12.76,
-            "Fisica": 6.52
+            "Inglese": 8.33,
+            "Matematica": 35.75,
+            "Comprensione Verbale": 12.00,
+            "Fisica": 5.00
           }
         },
         {
-          "birthDate": "2003-04-24",
+          "birthDate": "2003-04-09",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 27,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 24,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -900,19 +1350,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 5,
-          "result": 60.95,
+          "result": 60.80,
           "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 40.95,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 0.00
+            "Inglese": 7.50,
+            "Matematica": 43.55,
+            "Comprensione Verbale": 3.75,
+            "Fisica": 6.00
           }
         },
         {
-          "birthDate": "2003-07-14",
+          "birthDate": "2003-09-28",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 25,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 26,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -920,18 +1370,18 @@
           },
           "positionAbsolute": null,
           "positionCourse": 6,
-          "result": 60.68,
+          "result": 60.62,
           "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 31.85,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
+            "Inglese": 8.42,
+            "Matematica": 40.95,
+            "Comprensione Verbale": 5.25,
+            "Fisica": 6.00
           }
         },
         {
-          "birthDate": "2004-11-24",
+          "birthDate": "2003-05-25",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
           "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
@@ -940,19 +1390,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 7,
-          "result": 60.33,
+          "result": 60.49,
           "sectionsResults": {
             "Inglese": 9.58,
-            "Matematica": 39.00,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 3.50
+            "Matematica": 38.73,
+            "Comprensione Verbale": 7.60,
+            "Fisica": 4.58
           }
         },
         {
-          "birthDate": "2004-03-12",
+          "birthDate": "2003-05-12",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 18,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 23,
           "id": null,
           "ofa": {
             "ENG": true,
@@ -960,18 +1410,18 @@
           },
           "positionAbsolute": null,
           "positionCourse": 8,
-          "result": 60.20,
+          "result": 60.44,
           "sectionsResults": {
-            "Inglese": 5.00,
-            "Matematica": 40.95,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 6.00
+            "Inglese": 7.08,
+            "Matematica": 48.31,
+            "Comprensione Verbale": 4.30,
+            "Fisica": 0.75
           }
         },
         {
-          "birthDate": "2003-07-28",
+          "birthDate": "2003-02-07",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
           "englishCorrectAnswers": 28,
           "id": null,
           "ofa": {
@@ -980,19 +1430,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 9,
-          "result": 59.57,
+          "result": 60.44,
           "sectionsResults": {
             "Inglese": 9.17,
-            "Matematica": 29.90,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
+            "Matematica": 39.66,
+            "Comprensione Verbale": 8.29,
+            "Fisica": 3.32
           }
         },
         {
-          "birthDate": "2003-10-09",
+          "birthDate": "2002-03-24",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA",
-          "englishCorrectAnswers": 25,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 27,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -1000,12 +1450,52 @@
           },
           "positionAbsolute": null,
           "positionCourse": 10,
-          "result": 59.51,
+          "result": 60.08,
           "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 38.33,
-            "Comprensione Verbale": 8.29,
-            "Fisica": 4.97
+            "Inglese": 8.83,
+            "Matematica": 39.00,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 1.00
+          }
+        },
+        {
+          "birthDate": "2003-04-04",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 60.03,
+          "sectionsResults": {
+            "Inglese": 7.58,
+            "Matematica": 37.70,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2003-06-13",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 60.00,
+          "sectionsResults": {
+            "Inglese": 7.75,
+            "Matematica": 35.75,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 1.50
           }
         }
       ]
@@ -2123,7 +2613,7 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA CIVILE",
+      "title": "INGEGNERIA FISICA",
       "headers": [
         "Posizione",
         "Data di Nascita",
@@ -2139,10 +2629,10 @@
       ],
       "rows": [
         {
-          "birthDate": "2003-09-25",
+          "birthDate": "2003-01-20",
           "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE",
-          "englishCorrectAnswers": 27,
+          "canEnrollInto": "INGEGNERIA FISICA",
+          "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2150,413 +2640,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 63.70,
+          "result": 90.08,
           "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 5.25,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-04-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 61.13,
-          "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 33.10,
-            "Comprensione Verbale": 12.76,
-            "Fisica": 6.52
-          }
-        },
-        {
-          "birthDate": "2003-10-25",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 60.44,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 39.66,
-            "Comprensione Verbale": 8.29,
-            "Fisica": 3.32
-          }
-        },
-        {
-          "birthDate": "2003-10-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 60.32,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 36.40,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 3.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-12-24",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 64.42,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 40.52,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 4.20
-          }
-        },
-        {
-          "birthDate": "2003-11-29",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 61.51,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 44.85,
-            "Comprensione Verbale": 4.96,
-            "Fisica": 4.20
-          }
-        },
-        {
-          "birthDate": "2003-12-05",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 61.12,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 37.70,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 3.00
-          }
-        },
-        {
-          "birthDate": "2003-11-27",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 61.08,
-          "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 35.75,
+            "Inglese": 9.58,
+            "Matematica": 58.50,
             "Comprensione Verbale": 12.00,
-            "Fisica": 5.00
+            "Fisica": 10.00
           }
         },
         {
-          "birthDate": "2003-04-09",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 60.80,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 43.55,
-            "Comprensione Verbale": 3.75,
-            "Fisica": 6.00
-          }
-        },
-        {
-          "birthDate": "2003-09-28",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 60.62,
-          "sectionsResults": {
-            "Inglese": 8.42,
-            "Matematica": 40.95,
-            "Comprensione Verbale": 5.25,
-            "Fisica": 6.00
-          }
-        },
-        {
-          "birthDate": "2003-05-25",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 60.49,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 38.73,
-            "Comprensione Verbale": 7.60,
-            "Fisica": 4.58
-          }
-        },
-        {
-          "birthDate": "2003-05-12",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 60.44,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 48.31,
-            "Comprensione Verbale": 4.30,
-            "Fisica": 0.75
-          }
-        },
-        {
-          "birthDate": "2003-02-07",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 60.44,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 39.66,
-            "Comprensione Verbale": 8.29,
-            "Fisica": 3.32
-          }
-        },
-        {
-          "birthDate": "2002-03-24",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+          "birthDate": "2003-12-17",
+          "canEnroll": false,
+          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 60.08,
-          "sectionsResults": {
-            "Inglese": 8.83,
-            "Matematica": 39.00,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 1.00
-          }
-        },
-        {
-          "birthDate": "2003-04-04",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 60.03,
-          "sectionsResults": {
-            "Inglese": 7.58,
-            "Matematica": 37.70,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 3.50
-          }
-        },
-        {
-          "birthDate": "2003-06-13",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 60.00,
-          "sectionsResults": {
-            "Inglese": 7.75,
-            "Matematica": 35.75,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 1.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": []
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA DELL'AUTOMAZIONE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-03-11",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 72.57,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 42.90,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-04-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 24,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2564,19 +2660,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 2,
-          "result": 65.03,
+          "result": 83.77,
           "sectionsResults": {
-            "Inglese": 7.83,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 9.00,
-            "Fisica": 4.00
+            "Inglese": 8.75,
+            "Matematica": 51.57,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 8.45
           }
         },
         {
-          "birthDate": "2003-10-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 27,
+          "birthDate": "2003-09-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 28,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2584,79 +2680,79 @@
           },
           "positionAbsolute": null,
           "positionCourse": 3,
-          "result": 63.70,
+          "result": 79.07,
           "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 34.45,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-07-10",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 63.63,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 40.30,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2004-04-09",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 63.38,
-          "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 37.05,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 3.00
-          }
-        },
-        {
-          "birthDate": "2003-04-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 62.63,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 33.80,
-            "Comprensione Verbale": 11.25,
+            "Inglese": 9.17,
+            "Matematica": 55.90,
+            "Comprensione Verbale": 6.00,
             "Fisica": 8.00
           }
         },
         {
-          "birthDate": "2004-01-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 28,
+          "birthDate": "2003-09-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 78.70,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 53.95,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2003-04-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 76.84,
+          "sectionsResults": {
+            "Inglese": 8.17,
+            "Matematica": 53.68,
+            "Comprensione Verbale": 9.63,
+            "Fisica": 5.36
+          }
+        },
+        {
+          "birthDate": "2003-08-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 76.25,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 48.75,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-06-19",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2664,18 +2760,18 @@
           },
           "positionAbsolute": null,
           "positionCourse": 7,
-          "result": 62.42,
+          "result": 72.33,
           "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 35.75,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 10.00
+            "Inglese": 9.58,
+            "Matematica": 42.25,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
           }
         },
         {
-          "birthDate": "2003-09-12",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "birthDate": "2003-03-06",
+          "canEnroll": false,
+          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
           "id": null,
           "ofa": {
@@ -2684,19 +2780,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 8,
-          "result": 62.38,
+          "result": 66.21,
           "sectionsResults": {
             "Inglese": 8.33,
-            "Matematica": 40.30,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 5.50
+            "Matematica": 35.12,
+            "Comprensione Verbale": 12.76,
+            "Fisica": 10.00
           }
         },
         {
-          "birthDate": "2003-12-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 25,
+          "birthDate": "2003-01-09",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2704,19 +2800,19 @@
           },
           "positionAbsolute": null,
           "positionCourse": 9,
-          "result": 61.27,
+          "result": 61.43,
           "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 35.10,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 10.00
+            "Inglese": 9.58,
+            "Matematica": 31.85,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.00
           }
         },
         {
-          "birthDate": "2003-03-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 28,
+          "birthDate": "2003-09-13",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 29,
           "id": null,
           "ofa": {
             "ENG": false,
@@ -2724,118 +2820,18 @@
           },
           "positionAbsolute": null,
           "positionCourse": 10,
-          "result": 60.97,
+          "result": 61.08,
           "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 33.80,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 3.00
-          }
-        },
-        {
-          "birthDate": "2003-07-30",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 60.47,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 37.05,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 0.50
-          }
-        },
-        {
-          "birthDate": "2002-08-21",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 22,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 60.28,
-          "sectionsResults": {
-            "Inglese": 6.83,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 1.00
-          }
-        },
-        {
-          "birthDate": "2003-04-11",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 60.08,
-          "sectionsResults": {
-            "Inglese": 7.58,
-            "Matematica": 32.50,
-            "Comprensione Verbale": 15.00,
+            "Inglese": 9.58,
+            "Matematica": 39.00,
+            "Comprensione Verbale": 7.50,
             "Fisica": 5.00
           }
         },
         {
-          "birthDate": "2003-12-29",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 59.95,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 0.00
-          }
-        },
-        {
-          "birthDate": "2003-05-17",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 59.90,
-          "sectionsResults": {
-            "Inglese": 7.75,
-            "Matematica": 39.65,
-            "Comprensione Verbale": 9.00,
-            "Fisica": 3.50
-          }
-        },
-        {
-          "birthDate": "2003-08-01",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
+          "birthDate": "2003-07-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
           "id": null,
           "ofa": {
@@ -2843,203 +2839,33 @@
             "TEST": false
           },
           "positionAbsolute": null,
-          "positionCourse": 16,
-          "result": 59.72,
+          "positionCourse": 11,
+          "result": 60.67,
           "sectionsResults": {
             "Inglese": 9.17,
-            "Matematica": 30.55,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.00
+            "Matematica": 32.50,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 10.00
           }
         },
         {
-          "birthDate": "2003-11-21",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE",
-          "englishCorrectAnswers": 29,
+          "birthDate": "2002-07-13",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 28,
           "id": null,
           "ofa": {
             "ENG": false,
             "TEST": false
           },
           "positionAbsolute": null,
-          "positionCourse": 17,
-          "result": 59.64,
+          "positionCourse": 12,
+          "result": 60.57,
           "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 35.92,
-            "Comprensione Verbale": 11.42,
-            "Fisica": 2.72
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA ELETTRICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-03-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA",
-          "englishCorrectAnswers": 22,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 62.98,
-          "sectionsResults": {
-            "Inglese": 6.67,
-            "Matematica": 35.18,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 6.13
-          }
-        },
-        {
-          "birthDate": "2003-07-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA",
-          "englishCorrectAnswers": 22,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 61.95,
-          "sectionsResults": {
-            "Inglese": 6.75,
-            "Matematica": 44.20,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 3.50
-          }
-        },
-        {
-          "birthDate": "2003-12-02",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 61.58,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 39.00,
-            "Comprensione Verbale": 12.00,
-            "Fisica": 1.00
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-01-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 68.57,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 49.40,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 0.00
-          }
-        },
-        {
-          "birthDate": "2003-03-04",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 60.10,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 38.35,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 6.00
-          }
-        },
-        {
-          "birthDate": "2003-02-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
-          "englishCorrectAnswers": 19,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 60.07,
-          "sectionsResults": {
-            "Inglese": 5.42,
-            "Matematica": 42.90,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 0.50
+            "Inglese": 9.17,
+            "Matematica": 38.03,
+            "Comprensione Verbale": 9.38,
+            "Fisica": 4.00
           }
         }
       ]
@@ -3305,6 +3131,360 @@
             "Matematica": 33.15,
             "Comprensione Verbale": 12.00,
             "Fisica": 5.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": []
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA CHIMICA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-10-31",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 85.88,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 53.30,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 8.00
+          }
+        },
+        {
+          "birthDate": "2003-09-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 78.70,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 53.95,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2003-06-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 61.68,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 38.35,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-11-24",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 61.00,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 33.80,
+            "Comprensione Verbale": 12.76,
+            "Fisica": 6.52
+          }
+        },
+        {
+          "birthDate": "2003-04-24",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 60.95,
+          "sectionsResults": {
+            "Inglese": 8.75,
+            "Matematica": 40.95,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-07-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 60.68,
+          "sectionsResults": {
+            "Inglese": 8.33,
+            "Matematica": 31.85,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2004-11-24",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 60.33,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 39.00,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2004-03-12",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 18,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 60.20,
+          "sectionsResults": {
+            "Inglese": 5.00,
+            "Matematica": 40.95,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 6.00
+          }
+        },
+        {
+          "birthDate": "2003-07-28",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 59.57,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 29.90,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-10-09",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CHIMICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 59.51,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 38.33,
+            "Comprensione Verbale": 8.29,
+            "Fisica": 4.97
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA CIVILE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-09-25",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CIVILE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 63.70,
+          "sectionsResults": {
+            "Inglese": 8.75,
+            "Matematica": 44.20,
+            "Comprensione Verbale": 5.25,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-04-16",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CIVILE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 61.13,
+          "sectionsResults": {
+            "Inglese": 8.75,
+            "Matematica": 33.10,
+            "Comprensione Verbale": 12.76,
+            "Fisica": 6.52
+          }
+        },
+        {
+          "birthDate": "2003-10-25",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CIVILE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 60.44,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 39.66,
+            "Comprensione Verbale": 8.29,
+            "Fisica": 3.32
+          }
+        },
+        {
+          "birthDate": "2003-10-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA CIVILE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 60.32,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 36.40,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.50
           }
         }
       ]
@@ -3870,6 +4050,91 @@
             "Matematica": 32.50,
             "Comprensione Verbale": 15.00,
             "Fisica": 3.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-01-23",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 68.57,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 49.40,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-03-04",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 60.10,
+          "sectionsResults": {
+            "Inglese": 7.50,
+            "Matematica": 38.35,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 6.00
+          }
+        },
+        {
+          "birthDate": "2003-02-26",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+          "englishCorrectAnswers": 19,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 60.07,
+          "sectionsResults": {
+            "Inglese": 5.42,
+            "Matematica": 42.90,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 0.50
           }
         }
       ]
@@ -5015,271 +5280,6 @@
             "Matematica": 33.80,
             "Comprensione Verbale": 15.00,
             "Fisica": 5.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA FISICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-01-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA FISICA",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 90.08,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 58.50,
-            "Comprensione Verbale": 12.00,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-12-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 83.77,
-          "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 51.57,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 8.45
-          }
-        },
-        {
-          "birthDate": "2003-09-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 79.07,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 55.90,
-            "Comprensione Verbale": 6.00,
-            "Fisica": 8.00
-          }
-        },
-        {
-          "birthDate": "2003-09-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 78.70,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 53.95,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 3.50
-          }
-        },
-        {
-          "birthDate": "2003-04-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 76.84,
-          "sectionsResults": {
-            "Inglese": 8.17,
-            "Matematica": 53.68,
-            "Comprensione Verbale": 9.63,
-            "Fisica": 5.36
-          }
-        },
-        {
-          "birthDate": "2003-08-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 76.25,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 48.75,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-06-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 72.33,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 42.25,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-03-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 66.21,
-          "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 35.12,
-            "Comprensione Verbale": 12.76,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-01-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 61.43,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 31.85,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2003-09-13",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 61.08,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 39.00,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2003-07-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 60.67,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 32.50,
-            "Comprensione Verbale": 9.00,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2002-07-13",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 60.57,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 38.03,
-            "Comprensione Verbale": 9.38,
-            "Fisica": 4.00
           }
         }
       ]
@@ -6710,14 +6710,14 @@
       ]
     },
     {
-      "location": "MILANO LEONARDO",
+      "location": "LECCO",
       "sections": [
         "Inglese",
         "Matematica",
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA INFORMATICA ONLINE",
+      "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO",
       "headers": [
         "Posizione",
         "Data di Nascita",
@@ -6731,678 +6731,7 @@
         "OFA Test",
         "OFA Inglese"
       ],
-      "rows": [
-        {
-          "birthDate": "2003-10-02",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA ONLINE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 64.37,
-          "sectionsResults": {
-            "Inglese": 7.83,
-            "Matematica": 43.74,
-            "Comprensione Verbale": 6.28,
-            "Fisica": 6.52
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA MATEMATICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-12-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 94.75,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 61.75,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 8.00
-          }
-        },
-        {
-          "birthDate": "2003-01-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 77.14,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 54.49,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 4.20
-          }
-        },
-        {
-          "birthDate": "2003-04-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 75.77,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 51.19,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 6.13
-          }
-        },
-        {
-          "birthDate": "2003-03-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 74.88,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 53.30,
-            "Comprensione Verbale": 9.00,
-            "Fisica": 3.00
-          }
-        },
-        {
-          "birthDate": "2002-07-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 74.61,
-          "sectionsResults": {
-            "Inglese": 8.33,
-            "Matematica": 49.40,
-            "Comprensione Verbale": 10.13,
-            "Fisica": 6.75
-          }
-        },
-        {
-          "birthDate": "2003-02-24",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 74.26,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 49.45,
-            "Comprensione Verbale": 8.74,
-            "Fisica": 6.90
-          }
-        },
-        {
-          "birthDate": "2003-07-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 73.41,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 44.39,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 6.52
-          }
-        },
-        {
-          "birthDate": "2003-07-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 73.23,
-          "sectionsResults": {
-            "Inglese": 9.58,
-            "Matematica": 46.15,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 2.50
-          }
-        },
-        {
-          "birthDate": "2004-01-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 73.22,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 43.55,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-03-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 72.51,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 47.54,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 6.52
-          }
-        },
-        {
-          "birthDate": "2003-12-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 72.22,
-          "sectionsResults": {
-            "Inglese": 8.42,
-            "Matematica": 50.05,
-            "Comprensione Verbale": 8.25,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2003-09-30",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 68.18,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 40.57,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-04-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 20,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 67.80,
-          "sectionsResults": {
-            "Inglese": 5.92,
-            "Matematica": 50.44,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 0.91
-          }
-        },
-        {
-          "birthDate": "2003-08-13",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 67.00,
-          "sectionsResults": {
-            "Inglese": 7.08,
-            "Matematica": 48.31,
-            "Comprensione Verbale": 8.29,
-            "Fisica": 3.32
-          }
-        },
-        {
-          "birthDate": "2002-03-21",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 66.52,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 44.85,
-            "Comprensione Verbale": 3.75,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-03-05",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 16,
-          "result": 66.14,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 45.28,
-            "Comprensione Verbale": 10.53,
-            "Fisica": 2.41
-          }
-        },
-        {
-          "birthDate": "2003-12-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 17,
-          "result": 65.12,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 40.95,
-            "Comprensione Verbale": 7.50,
-            "Fisica": 7.50
-          }
-        },
-        {
-          "birthDate": "2002-11-12",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 18,
-          "result": 64.97,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 40.30,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 5.50
-          }
-        },
-        {
-          "birthDate": "2002-07-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 19,
-          "result": 64.86,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 35.96,
-            "Comprensione Verbale": 13.21,
-            "Fisica": 6.52
-          }
-        },
-        {
-          "birthDate": "2003-02-15",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 20,
-          "result": 64.38,
-          "sectionsResults": {
-            "Inglese": 8.08,
-            "Matematica": 46.80,
-            "Comprensione Verbale": 4.50,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2004-03-29",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 21,
-          "result": 62.85,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 44.85,
-            "Comprensione Verbale": 4.50,
-            "Fisica": 3.50
-          }
-        },
-        {
-          "birthDate": "2003-10-04",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 22,
-          "result": 62.62,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 40.95,
-            "Comprensione Verbale": 12.00,
-            "Fisica": 0.50
-          }
-        },
-        {
-          "birthDate": "2003-08-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 23,
-          "result": 62.55,
-          "sectionsResults": {
-            "Inglese": 8.75,
-            "Matematica": 33.80,
-            "Comprensione Verbale": 15.00,
-            "Fisica": 5.00
-          }
-        },
-        {
-          "birthDate": "2003-06-01",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 23,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 24,
-          "result": 61.62,
-          "sectionsResults": {
-            "Inglese": 7.17,
-            "Matematica": 50.70,
-            "Comprensione Verbale": 3.75,
-            "Fisica": 0.00
-          }
-        },
-        {
-          "birthDate": "2003-11-05",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 25,
-          "result": 60.97,
-          "sectionsResults": {
-            "Inglese": 7.92,
-            "Matematica": 46.80,
-            "Comprensione Verbale": 2.25,
-            "Fisica": 4.00
-          }
-        },
-        {
-          "birthDate": "2003-07-29",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 26,
-          "result": 60.67,
-          "sectionsResults": {
-            "Inglese": 9.17,
-            "Matematica": 32.50,
-            "Comprensione Verbale": 9.00,
-            "Fisica": 10.00
-          }
-        },
-        {
-          "birthDate": "2003-06-09",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 27,
-          "result": 60.48,
-          "sectionsResults": {
-            "Inglese": 8.83,
-            "Matematica": 36.40,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 4.00
-          }
-        },
-        {
-          "birthDate": "2003-04-25",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA",
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 28,
-          "result": 59.95,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 31.20,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 7.50
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-04-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 72.80,
-          "sectionsResults": {
-            "Inglese": 7.50,
-            "Matematica": 53.30,
-            "Comprensione Verbale": 12.00,
-            "Fisica": 0.00
-          }
-        },
-        {
-          "birthDate": "2003-02-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 59.53,
-          "sectionsResults": {
-            "Inglese": 7.58,
-            "Matematica": 37.70,
-            "Comprensione Verbale": 11.25,
-            "Fisica": 3.00
-          }
-        }
-      ]
+      "rows": []
     },
     {
       "location": "MILANO BOVISA",
@@ -8870,6 +8199,701 @@
       ]
     },
     {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA MATEMATICA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-12-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 94.75,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 61.75,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 8.00
+          }
+        },
+        {
+          "birthDate": "2003-01-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 77.14,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 54.49,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 4.20
+          }
+        },
+        {
+          "birthDate": "2003-04-23",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 75.77,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 51.19,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 6.13
+          }
+        },
+        {
+          "birthDate": "2003-03-16",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 74.88,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 53.30,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 3.00
+          }
+        },
+        {
+          "birthDate": "2002-07-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 74.61,
+          "sectionsResults": {
+            "Inglese": 8.33,
+            "Matematica": 49.40,
+            "Comprensione Verbale": 10.13,
+            "Fisica": 6.75
+          }
+        },
+        {
+          "birthDate": "2003-02-24",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 74.26,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 49.45,
+            "Comprensione Verbale": 8.74,
+            "Fisica": 6.90
+          }
+        },
+        {
+          "birthDate": "2003-07-23",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 73.41,
+          "sectionsResults": {
+            "Inglese": 7.50,
+            "Matematica": 44.39,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 6.52
+          }
+        },
+        {
+          "birthDate": "2003-07-03",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 73.23,
+          "sectionsResults": {
+            "Inglese": 9.58,
+            "Matematica": 46.15,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 2.50
+          }
+        },
+        {
+          "birthDate": "2004-01-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 73.22,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 43.55,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-03-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 72.51,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 47.54,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 6.52
+          }
+        },
+        {
+          "birthDate": "2003-12-03",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 72.22,
+          "sectionsResults": {
+            "Inglese": 8.42,
+            "Matematica": 50.05,
+            "Comprensione Verbale": 8.25,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2003-09-30",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 23,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 68.18,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 40.57,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-04-22",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 20,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 67.80,
+          "sectionsResults": {
+            "Inglese": 5.92,
+            "Matematica": 50.44,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 0.91
+          }
+        },
+        {
+          "birthDate": "2003-08-13",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 23,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 67.00,
+          "sectionsResults": {
+            "Inglese": 7.08,
+            "Matematica": 48.31,
+            "Comprensione Verbale": 8.29,
+            "Fisica": 3.32
+          }
+        },
+        {
+          "birthDate": "2002-03-21",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 66.52,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 44.85,
+            "Comprensione Verbale": 3.75,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-03-05",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 16,
+          "result": 66.14,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 45.28,
+            "Comprensione Verbale": 10.53,
+            "Fisica": 2.41
+          }
+        },
+        {
+          "birthDate": "2003-12-06",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 17,
+          "result": 65.12,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 40.95,
+            "Comprensione Verbale": 7.50,
+            "Fisica": 7.50
+          }
+        },
+        {
+          "birthDate": "2002-11-12",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 18,
+          "result": 64.97,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 40.30,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 5.50
+          }
+        },
+        {
+          "birthDate": "2002-07-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 19,
+          "result": 64.86,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 35.96,
+            "Comprensione Verbale": 13.21,
+            "Fisica": 6.52
+          }
+        },
+        {
+          "birthDate": "2003-02-15",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 20,
+          "result": 64.38,
+          "sectionsResults": {
+            "Inglese": 8.08,
+            "Matematica": 46.80,
+            "Comprensione Verbale": 4.50,
+            "Fisica": 5.00
+          }
+        },
+        {
+          "birthDate": "2004-03-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 21,
+          "result": 62.85,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 44.85,
+            "Comprensione Verbale": 4.50,
+            "Fisica": 3.50
+          }
+        },
+        {
+          "birthDate": "2003-10-04",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 22,
+          "result": 62.62,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 40.95,
+            "Comprensione Verbale": 12.00,
+            "Fisica": 0.50
+          }
+        },
+        {
+          "birthDate": "2003-08-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 23,
+          "result": 62.55,
+          "sectionsResults": {
+            "Inglese": 8.75,
+            "Matematica": 33.80,
+            "Comprensione Verbale": 15.00,
+            "Fisica": 5.00
+          }
+        },
+        {
+          "birthDate": "2003-06-01",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 23,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 24,
+          "result": 61.62,
+          "sectionsResults": {
+            "Inglese": 7.17,
+            "Matematica": 50.70,
+            "Comprensione Verbale": 3.75,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-11-05",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 25,
+          "result": 60.97,
+          "sectionsResults": {
+            "Inglese": 7.92,
+            "Matematica": 46.80,
+            "Comprensione Verbale": 2.25,
+            "Fisica": 4.00
+          }
+        },
+        {
+          "birthDate": "2003-07-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 26,
+          "result": 60.67,
+          "sectionsResults": {
+            "Inglese": 9.17,
+            "Matematica": 32.50,
+            "Comprensione Verbale": 9.00,
+            "Fisica": 10.00
+          }
+        },
+        {
+          "birthDate": "2003-06-09",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 27,
+          "result": 60.48,
+          "sectionsResults": {
+            "Inglese": 8.83,
+            "Matematica": 36.40,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 4.00
+          }
+        },
+        {
+          "birthDate": "2003-04-25",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MATEMATICA",
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 28,
+          "result": 59.95,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 31.20,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 7.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-04-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 72.80,
+          "sectionsResults": {
+            "Inglese": 7.50,
+            "Matematica": 53.30,
+            "Comprensione Verbale": 12.00,
+            "Fisica": 0.00
+          }
+        },
+        {
+          "birthDate": "2003-02-14",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 59.53,
+          "sectionsResults": {
+            "Inglese": 7.58,
+            "Matematica": 37.70,
+            "Comprensione Verbale": 11.25,
+            "Fisica": 3.00
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA INFORMATICA ONLINE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-10-02",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA INFORMATICA ONLINE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 64.37,
+          "sectionsResults": {
+            "Inglese": 7.83,
+            "Matematica": 43.74,
+            "Comprensione Verbale": 6.28,
+            "Fisica": 6.52
+          }
+        }
+      ]
+    },
+    {
       "location": "CREMONA",
       "sections": [
         "Inglese",
@@ -8910,6 +8934,51 @@
             "Matematica": 53.95,
             "Comprensione Verbale": 5.25,
             "Fisica": -0.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "PIACENZA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA MECCANICA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-03-11",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MECCANICA",
+          "englishCorrectAnswers": 30,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 60.80,
+          "sectionsResults": {
+            "Inglese": 10.00,
+            "Matematica": 43.28,
+            "Comprensione Verbale": 6.61,
+            "Fisica": 0.91
           }
         }
       ]
@@ -8967,30 +9036,6 @@
         "Comprensione Verbale",
         "Fisica"
       ],
-      "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": []
-    },
-    {
-      "location": "LECCO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
       "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
       "headers": [
         "Posizione",
@@ -9006,51 +9051,6 @@
         "OFA Inglese"
       ],
       "rows": []
-    },
-    {
-      "location": "PIACENZA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA MECCANICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-03-11",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 30,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 60.80,
-          "sectionsResults": {
-            "Inglese": 10.00,
-            "Matematica": 43.28,
-            "Comprensione Verbale": 6.61,
-            "Fisica": 0.91
-          }
-        }
-      ]
     }
   ],
   "byMerit": {
@@ -14420,10 +14420,401 @@
     ]
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-27T13:34:50.4314254+00:00",
+  "lastUpdate": "2023-06-27T23:01:14.8398498+00:00",
   "phase": "Seconda Graduatoria Di Seconda Fase",
   "rankingSummary": {
-    "courseSummarized": null,
+    "courseSummarized": [
+      {
+        "averageBirthYear": 2003.0588235294117,
+        "averageEnglishCorrectAnswers": 25.88235294117647,
+        "averageOfa": {
+          "ENG": 2,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 62.236470588235294117647058824,
+        "averagePartialScores": {
+          "Inglese": 8.332941176470588235294117647,
+          "Matematica": 37.748235294117647058823529412,
+          "Comprensione Verbale": 11.612941176470588235294117647,
+          "Fisica": 4.5423529411764705882352941176
+        },
+        "averageScoresOfAllStudents": 62.236470588235294117647058824,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA DELL'AUTOMAZIONE"
+      },
+      {
+        "averageBirthYear": 2002.7631578947369,
+        "averageEnglishCorrectAnswers": 25.973684210526315,
+        "averageOfa": {
+          "ENG": 4,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 85.8075,
+        "averagePartialScores": {
+          "Inglese": 8.355263157894736842105263158,
+          "Matematica": 43.965526315789473684210526316,
+          "Comprensione Verbale": 10.457631578947368421052631579,
+          "Fisica": 5.7010526315789473684210526316
+        },
+        "averageScoresOfAllStudents": 68.479473684210526315789473684,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA AEROSPAZIALE"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 24.333333333333332,
+        "averageOfa": {
+          "ENG": 2,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 62.17,
+        "averagePartialScores": {
+          "Inglese": 7.6666666666666666666666666667,
+          "Matematica": 39.46,
+          "Comprensione Verbale": 11.50,
+          "Fisica": 3.5433333333333333333333333333
+        },
+        "averageScoresOfAllStudents": 62.17,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA ELETTRICA"
+      },
+      {
+        "averageBirthYear": 2002.9166666666667,
+        "averageEnglishCorrectAnswers": 25.916666666666668,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 60.919166666666666666666666667,
+        "averagePartialScores": {
+          "Inglese": 8.34,
+          "Matematica": 40.205833333333333333333333333,
+          "Comprensione Verbale": 8.785833333333333333333333333,
+          "Fisica": 3.5875
+        },
+        "averageScoresOfAllStudents": 60.919166666666666666666666667,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+      },
+      {
+        "averageBirthYear": 2002.851851851852,
+        "averageEnglishCorrectAnswers": 26.203703703703702,
+        "averageOfa": {
+          "ENG": 9,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 66.367,
+        "averagePartialScores": {
+          "Inglese": 8.457962962962962962962962963,
+          "Matematica": 41.23037037037037037037037037,
+          "Comprensione Verbale": 10.258518518518518518518518519,
+          "Fisica": 4.8283333333333333333333333333
+        },
+        "averageScoresOfAllStudents": 64.774814814814814814814814815,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA BIOMEDICA"
+      },
+      {
+        "averageBirthYear": 2002.9166666666667,
+        "averageEnglishCorrectAnswers": 28.166666666666668,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 90.08,
+        "averagePartialScores": {
+          "Inglese": 9.256666666666666666666666667,
+          "Matematica": 45.091666666666666666666666667,
+          "Comprensione Verbale": 10.835,
+          "Fisica": 7.0675
+        },
+        "averageScoresOfAllStudents": 72.25,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA FISICA"
+      },
+      {
+        "averageBirthYear": 2002.9166666666667,
+        "averageEnglishCorrectAnswers": 27.333333333333332,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 65.6025,
+        "averagePartialScores": {
+          "Inglese": 8.910833333333333333333333333,
+          "Matematica": 44.119166666666666666666666667,
+          "Comprensione Verbale": 7.0316666666666666666666666667,
+          "Fisica": 5.5416666666666666666666666667
+        },
+        "averageScoresOfAllStudents": 65.6025,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA ELETTRONICA"
+      },
+      {
+        "averageBirthYear": null,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": null,
+        "averageOfWhoPassed": null,
+        "averagePartialScores": null,
+        "averageScoresOfAllStudents": null,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+      },
+      {
+        "averageBirthYear": 2003.2,
+        "averageEnglishCorrectAnswers": 26.5,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 64.85,
+        "averagePartialScores": {
+          "Inglese": 8.583,
+          "Matematica": 40.038,
+          "Comprensione Verbale": 11.33,
+          "Fisica": 4.899
+        },
+        "averageScoresOfAllStudents": 64.85,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA CHIMICA"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 27.5,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 61.3975,
+        "averagePartialScores": {
+          "Inglese": 8.96,
+          "Matematica": 38.34,
+          "Comprensione Verbale": 9.3875,
+          "Fisica": 4.71
+        },
+        "averageScoresOfAllStudents": 61.3975,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA CIVILE"
+      },
+      {
+        "averageBirthYear": 2002.4814814814815,
+        "averageEnglishCorrectAnswers": 25.51851851851852,
+        "averageOfa": {
+          "ENG": 5,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 62.117777777777777777777777778,
+        "averagePartialScores": {
+          "Inglese": 8.178888888888888888888888889,
+          "Matematica": 40.173703703703703703703703704,
+          "Comprensione Verbale": 8.873333333333333333333333333,
+          "Fisica": 4.8922222222222222222222222222
+        },
+        "averageScoresOfAllStudents": 62.117777777777777777777777778,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA ENERGETICA"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 22.666666666666668,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 62.913333333333333333333333333,
+        "averagePartialScores": {
+          "Inglese": 6.9466666666666666666666666667,
+          "Matematica": 43.55,
+          "Comprensione Verbale": 10.25,
+          "Fisica": 2.1666666666666666666666666667
+        },
+        "averageScoresOfAllStudents": 62.913333333333333333333333333,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+      },
+      {
+        "averageBirthYear": 2002.857142857143,
+        "averageEnglishCorrectAnswers": 24.982142857142858,
+        "averageOfa": {
+          "ENG": 13,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 64.525178571428571428571428571,
+        "averagePartialScores": {
+          "Inglese": 8.001428571428571428571428571,
+          "Matematica": 42.280178571428571428571428571,
+          "Comprensione Verbale": 10.270535714285714285714285714,
+          "Fisica": 3.9730357142857142857142857143
+        },
+        "averageScoresOfAllStudents": 64.525178571428571428571428571,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA GESTIONALE"
+      },
+      {
+        "averageBirthYear": 2002.7142857142858,
+        "averageEnglishCorrectAnswers": 26.214285714285715,
+        "averageOfa": {
+          "ENG": 14,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 65.497272727272727272727272727,
+        "averagePartialScores": {
+          "Inglese": 8.453142857142857142857142857,
+          "Matematica": 41.898428571428571428571428571,
+          "Comprensione Verbale": 10.585714285714285714285714286,
+          "Fisica": 4.2442857142857142857142857143
+        },
+        "averageScoresOfAllStudents": 65.181571428571428571428571429,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA INFORMATICA"
+      },
+      {
+        "averageBirthYear": null,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": null,
+        "averageOfWhoPassed": null,
+        "averagePartialScores": null,
+        "averageScoresOfAllStudents": null,
+        "location": "LECCO",
+        "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+      },
+      {
+        "averageBirthYear": 2003.0277777777778,
+        "averageEnglishCorrectAnswers": 26.36111111111111,
+        "averageOfa": {
+          "ENG": 9,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 65.888928571428571428571428571,
+        "averagePartialScores": {
+          "Inglese": 8.51625,
+          "Matematica": 40.574583333333333333333333333,
+          "Comprensione Verbale": 10.195277777777777777777777778,
+          "Fisica": 5.3943055555555555555555555556
+        },
+        "averageScoresOfAllStudents": 64.680416666666666666666666667,
+        "location": "MILANO BOVISA",
+        "title": "INGEGNERIA MECCANICA"
+      },
+      {
+        "averageBirthYear": 2002.9285714285713,
+        "averageEnglishCorrectAnswers": 26.25,
+        "averageOfa": {
+          "ENG": 4,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 68.667142857142857142857142857,
+        "averagePartialScores": {
+          "Inglese": 8.456428571428571428571428571,
+          "Matematica": 45.068571428571428571428571429,
+          "Comprensione Verbale": 9.885714285714285714285714286,
+          "Fisica": 5.2564285714285714285714285714
+        },
+        "averageScoresOfAllStudents": 68.667142857142857142857142857,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA MATEMATICA"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 24.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 66.165,
+        "averagePartialScores": {
+          "Inglese": 7.54,
+          "Matematica": 45.50,
+          "Comprensione Verbale": 11.625,
+          "Fisica": 1.50
+        },
+        "averageScoresOfAllStudents": 66.165,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 24.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 64.37,
+        "averagePartialScores": {
+          "Inglese": 7.83,
+          "Matematica": 43.74,
+          "Comprensione Verbale": 6.28,
+          "Fisica": 6.52
+        },
+        "averageScoresOfAllStudents": 64.37,
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA INFORMATICA ONLINE"
+      },
+      {
+        "averageBirthYear": 2001.0,
+        "averageEnglishCorrectAnswers": 20.0,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 64.53,
+        "averagePartialScores": {
+          "Inglese": 5.83,
+          "Matematica": 53.95,
+          "Comprensione Verbale": 5.25,
+          "Fisica": -0.50
+        },
+        "averageScoresOfAllStudents": 64.53,
+        "location": "CREMONA",
+        "title": "INGEGNERIA GESTIONALE"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 30.0,
+        "averageOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 60.80,
+        "averagePartialScores": {
+          "Inglese": 10.00,
+          "Matematica": 43.28,
+          "Comprensione Verbale": 6.61,
+          "Fisica": 0.91
+        },
+        "averageScoresOfAllStudents": 60.80,
+        "location": "PIACENZA",
+        "title": "INGEGNERIA MECCANICA"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 22.0,
+        "averageOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "averageOfWhoPassed": 59.54,
+        "averagePartialScores": {
+          "Inglese": 6.67,
+          "Matematica": 45.77,
+          "Comprensione Verbale": 5.29,
+          "Fisica": 1.81
+        },
+        "averageScoresOfAllStudents": 59.54,
+        "location": "CREMONA",
+        "title": "INGEGNERIA INFORMATICA"
+      },
+      {
+        "averageBirthYear": null,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": null,
+        "averageOfWhoPassed": null,
+        "averagePartialScores": null,
+        "averageScoresOfAllStudents": null,
+        "location": "LECCO",
+        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+      }
+    ],
     "howManyCanEnroll": 345,
     "howManyStudents": 357,
     "resultsSummarized": {
@@ -14461,7 +14852,7 @@
   "school": "Ingegneria",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/html/2022_20102_ab23_html/2022_20102_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it/2022_20102_ab23_html/2022_20102_generale.html"
   },
   "year": 2022
 }

@@ -48,7 +48,7 @@ public class MainJson
                     File.WriteAllText(path, rankingJsonString);
                 }
 
-                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson()).ToList().OrderBy(a => a.Name);
+                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson()).DistinctBy(x => x.Link).ToList().OrderBy(a => a.Name);
                 schoolDict.Add(year, filenames);
             }
 

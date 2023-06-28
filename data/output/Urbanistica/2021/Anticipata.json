@@ -3671,10 +3671,25 @@
     ]
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-27T13:34:51.0494121+00:00",
+  "lastUpdate": "2023-06-27T23:01:15.8652626+00:00",
   "phase": "Anticipata",
   "rankingSummary": {
-    "courseSummarized": null,
+    "courseSummarized": [
+      {
+        "averageBirthYear": 2001.123076923077,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": {},
+        "averageOfWhoPassed": 72.945454545454545454545454545,
+        "averagePartialScores": {
+          "Colloquio": 34.623076923076923076923076923,
+          "Elaborato": 19.407692307692307692307692308,
+          "Lettera Motivazionale": 14.592307692307692307692307692
+        },
+        "averageScoresOfAllStudents": 68.623076923076923076923076923,
+        "location": null,
+        "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+      }
+    ],
     "howManyCanEnroll": 115,
     "howManyStudents": 130,
     "resultsSummarized": {
@@ -3732,7 +3747,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/html/2021_20008_html/2021_20008_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it/2021_20008_html/2021_20008_generale.html"
   },
   "year": 2021
 }

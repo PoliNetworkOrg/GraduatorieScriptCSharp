@@ -1487,10 +1487,25 @@
     ]
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-27T13:34:55.2044094+00:00",
+  "lastUpdate": "2023-06-27T23:01:14.2540515+00:00",
   "phase": "Standard",
   "rankingSummary": {
-    "courseSummarized": null,
+    "courseSummarized": [
+      {
+        "averageBirthYear": 2002.1153846153845,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": {},
+        "averageOfWhoPassed": 71.212765957446808510638297872,
+        "averagePartialScores": {
+          "Colloquio": 34.192307692307692307692307692,
+          "Elaborato": 19.961538461538461538461538462,
+          "Lettera Motivazionale": 14.365384615384615384615384615
+        },
+        "averageScoresOfAllStudents": 68.519230769230769230769230769,
+        "location": null,
+        "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+      }
+    ],
     "howManyCanEnroll": 52,
     "howManyStudents": 52,
     "resultsSummarized": {
@@ -1531,7 +1546,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/html/2022_20006_4fbc_html/2022_20006_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it/2022_20006_4fbc_html/2022_20006_generale.html"
   },
   "year": 2022
 }
