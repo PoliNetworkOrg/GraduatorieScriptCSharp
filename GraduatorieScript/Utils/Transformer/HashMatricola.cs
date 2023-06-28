@@ -7,7 +7,7 @@ public static class HashMatricola
 {
     private const string SaltGlobal = "saltPoliNetwork";
     private const int MaxCharHash = 20;
-    
+
     public static string? HashMatricolaMethod(string? input)
     {
         if (string.IsNullOrEmpty(input))
@@ -31,10 +31,7 @@ public static class HashMatricola
     private static string ByteArrayToHexString(IReadOnlyCollection<byte> bytes)
     {
         var sb = new StringBuilder(bytes.Count * 2);
-        foreach (var b in bytes)
-        {
-            sb.Append(b.ToString("X2"));
-        }
+        foreach (var b in bytes) sb.Append(b.ToString("X2"));
         return sb.ToString();
     }
 }
