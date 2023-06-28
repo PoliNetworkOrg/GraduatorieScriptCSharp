@@ -460,7 +460,7 @@ public static class Parser
 
         foreach (var row in table.Data)
         {
-            var id = Table.GetFieldByIndex(row, idIndex);
+            var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
             var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
@@ -518,7 +518,7 @@ public static class Parser
         int enrollAllowedIndex, int englishCorrectAnswersIndex, int ofaEngIndex, int ofaTestIndex,
         Dictionary<string, int>? sectionsIndex, ICollection<CourseTableRow> parsedRows)
     {
-        var id = Table.GetFieldByIndex(row, idIndex);
+        var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
         var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
         if (fieldByIndex.ToLower().Contains("nessun"))
@@ -583,7 +583,7 @@ public static class Parser
         foreach (var file in files)
         {
             var fileSplit = file.Split(htmlFolder);
-            
+
             var fileRelativePath = fileSplit[1];
 
             // ignore because this is the file built

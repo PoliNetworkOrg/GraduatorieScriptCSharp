@@ -12,25 +12,20 @@ public static class ScraperOutput
 
     public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)
     {
-
         var links = GetSaved(dataFolder);
         links.AddRange(urls);
 
         links = Distinct(links);
-        
+
         return links;
-
-
     }
 
     private static List<RankingUrl> Distinct(List<RankingUrl> links)
     {
-        List<RankingUrl> list = new List<RankingUrl>();
+        var list = new List<RankingUrl>();
         foreach (var variable in links)
-        {
             if (list.All(x => x.Url != variable.Url))
                 list.Add(variable);
-        }
         return list;
     }
 
