@@ -16,7 +16,8 @@ public static class HashMatricola
         var stringInputWithSalt = input + SaltGlobal;
         var hexHash = GetSha256(stringInputWithSalt);
         var hashMatricolaMethod = hexHash[..MaxCharHash];
-        return hashMatricolaMethod;
+        var matricolaMethod = hashMatricolaMethod.ToLower();
+        return matricolaMethod;
     }
 
     private static string GetSha256(string stringInputWithSalt)
