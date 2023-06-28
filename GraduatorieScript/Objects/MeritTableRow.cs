@@ -7,10 +7,10 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class MeritTableRow
 {
-    public bool canEnroll;
-    public string? canEnrollInto;
-    public string? id;
-    public Dictionary<string, bool>? ofa; // maybe change it
-    public int position;
-    public decimal result;
+    public bool CanEnroll;
+    public string? CanEnrollInto;
+    public string? Id;
+    public Dictionary<string, bool>? Ofa; // maybe change it
+    public int Position;
+    public decimal Result;
 }

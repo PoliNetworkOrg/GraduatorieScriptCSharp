@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects;
+namespace GraduatorieScript.Objects.Tables;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -21,7 +21,7 @@ public class CourseTableStats
         var stats = new CourseTableStats
         {
             Location = courseTable.Location,
-            Title = courseTable.Title,
+            Title = courseTable.Title
         };
 
         var courseTableRows = courseTable.Rows;
@@ -56,7 +56,7 @@ public class CourseTableStats
     )
     {
         var result = new Dictionary<string, int>();
-        if (courseTableRows is null)
+        if (courseTableRows.Count == 0)
             return result;
 
         var keys = courseTableRows.Select(x => x.Ofa?.Keys);
@@ -87,8 +87,9 @@ public class CourseTableStats
                 .Where(x => x?.ContainsKey(key) ?? false)
                 .Select(x => x?[key])
                 .Average();
-            if (avg is decimal) scores[key] = (decimal)avg;
+            if (avg != null) scores[key] = (decimal)avg;
         }
+
         return scores;
     }
 

@@ -77,5 +77,4 @@ public class RankingUrl
         var baseDomain = Url[..lastUrlIndex] + "/";
         return baseDomain;
     }
-
 }
