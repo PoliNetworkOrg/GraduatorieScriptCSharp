@@ -498,7 +498,7 @@ public static class Parser
         /* foreach (var h in headers) Console.Write($"{h};"); */
 
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
-        var idIndex =  headers.FindIndex(t => t.Contains("matricola"));
+        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
         var birthDateIndex = headers.FindIndex(t => t.Contains("nascita"));
         var enrollAllowedIndex = headers.FindIndex(t => t.Contains("consentita"));
         var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
@@ -583,7 +583,7 @@ public static class Parser
         foreach (var file in files)
         {
             var fileSplit = file.Split(htmlFolder);
-            
+
             var fileRelativePath = fileSplit[1];
 
             // ignore because this is the file built

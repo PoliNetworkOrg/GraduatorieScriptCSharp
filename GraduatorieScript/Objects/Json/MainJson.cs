@@ -48,7 +48,8 @@ public class MainJson
                     File.WriteAllText(path, rankingJsonString);
                 }
 
-                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson()).DistinctBy(x => x.Link).ToList().OrderBy(a => a.Name);
+                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson()).DistinctBy(x => x.Link)
+                    .ToList().OrderBy(a => a.Name);
                 schoolDict.Add(year, filenames);
             }
 
@@ -77,16 +78,16 @@ public class MainJson
 
             List<Ranking> rankings = new();
             foreach (var school in mainJson.Schools)
-                foreach (var year in school.Value)
-                    foreach (var filename in year.Value)
-                    {
-                        var schoolKey = school.Key.ToString();
-                        var yearKey = year.Key.ToString();
-                        var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-                        var ranking = Parser.ParseJson<Ranking>(path);
-                        if (ranking != null)
-                            rankings.Add(ranking);
-                    }
+            foreach (var year in school.Value)
+            foreach (var filename in year.Value)
+            {
+                var schoolKey = school.Key.ToString();
+                var yearKey = year.Key.ToString();
+                var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
+                var ranking = Parser.ParseJson<Ranking>(path);
+                if (ranking != null)
+                    rankings.Add(ranking);
+            }
 
             return new RankingsSet { LastUpdate = mainJson.LastUpdate, Rankings = rankings };
         }

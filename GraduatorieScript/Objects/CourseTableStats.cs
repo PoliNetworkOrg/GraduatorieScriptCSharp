@@ -21,7 +21,7 @@ public class CourseTableStats
         var stats = new CourseTableStats
         {
             Location = courseTable.Location,
-            Title = courseTable.Title,
+            Title = courseTable.Title
         };
 
         var courseTableRows = courseTable.Rows;
@@ -89,6 +89,7 @@ public class CourseTableStats
                 .Average();
             if (avg is decimal) scores[key] = (decimal)avg;
         }
+
         return scores;
     }
 
