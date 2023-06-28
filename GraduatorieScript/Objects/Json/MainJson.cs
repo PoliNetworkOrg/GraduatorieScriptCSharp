@@ -94,9 +94,7 @@ public class MainJson
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
         foreach (var filename in year.Value)
-        {
             RankingAdd(school, year, outFolder, filename, rankings);
-        }
 
         return rankings;
     }

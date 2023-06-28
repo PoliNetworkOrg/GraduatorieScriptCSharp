@@ -20,10 +20,7 @@ public class StatsJson
     private static StatsJson Generate(RankingsSet rankingsSet)
     {
         var statsJson = new StatsJson();
-        foreach (var ranking in rankingsSet.Rankings)
-        {
-            GenerateSingleRanking(rankingsSet, ranking, statsJson);
-        }
+        foreach (var ranking in rankingsSet.Rankings) GenerateSingleRanking(rankingsSet, ranking, statsJson);
 
         foreach (var year in statsJson.Stats.Keys)
         foreach (var school in statsJson.Stats[year].Schools.Keys)
