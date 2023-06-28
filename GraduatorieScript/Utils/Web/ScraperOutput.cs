@@ -14,18 +14,14 @@ public static class ScraperOutput
     {
         var links = GetSaved(dataFolder);
         links.AddRange(urls);
-
-        links = Distinct(links);
-
-        return links;
+        return Distinct(links);
     }
 
-    private static List<RankingUrl> Distinct(List<RankingUrl> links)
+    private static List<RankingUrl> Distinct(IEnumerable<RankingUrl> links)
     {
         var list = new List<RankingUrl>();
-        foreach (var variable in links)
-            if (list.All(x => x.Url != variable.Url))
-                list.Add(variable);
+        var rankingUrls = links.Where(variable => list.All(x => x.Url != variable.Url));
+        list.AddRange(rankingUrls);
         return list;
     }
 
@@ -37,9 +33,8 @@ public static class ScraperOutput
         try
         {
             var lines = File.ReadAllLines(filePath);
-            foreach (var line in lines)
-                if (!string.IsNullOrEmpty(line))
-                    list.Add(RankingUrl.From(line));
+            var rankingUrls = from line in lines where !string.IsNullOrEmpty(line) select RankingUrl.From(line);
+            list.AddRange(rankingUrls);
 
             return list;
         }

@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.Json;
+using GraduatorieScript.Objects.Tables;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

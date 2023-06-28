@@ -45,13 +45,11 @@ public static class Program
             ? argsFolder
             : PathUtils.FindFolder(Constants.DataFolder);
 
-        // if not found, create it
-        if (string.IsNullOrEmpty(dataFolder))
-        {
-            Console.WriteLine("[WARNING] dataFolder not found, creating it");
-            return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
-        }
 
-        return dataFolder;
+        if (!string.IsNullOrEmpty(dataFolder)) return dataFolder;
+
+        // if not found, create it
+        Console.WriteLine("[WARNING] dataFolder not found, creating it");
+        return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
     }
 }
