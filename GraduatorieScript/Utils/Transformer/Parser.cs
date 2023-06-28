@@ -403,21 +403,31 @@ public static class Parser
             return x.Url?.Url == ranking.Url?.Url;
         }
 
-        var isPresent = rankingsSet.Rankings.Any(Predicate);
-        if (!isPresent)
+        lock (rankingsSet)
         {
-            rankingsSet.AddRanking(ranking);
-            return;
+            var isPresent = rankingsSet.Rankings.Any(Predicate);
+            if (!isPresent)
+            {
+                rankingsSet.AddRanking(ranking);
+                return;
+            }
         }
 
-        var r = rankingsSet.Rankings.FirstOrDefault((Func<Ranking, bool>)Predicate);
-        if (r == null)
+        Ranking? r = null;
+        lock (rankingsSet)
         {
-            rankingsSet.AddRanking(ranking);
-            return;
+            r = rankingsSet.Rankings.FirstOrDefault((Func<Ranking, bool>)Predicate);
+            if (r == null)
+            {
+                rankingsSet.AddRanking(ranking);
+                return;
+            }
         }
 
-        r.Merge(ranking);
+        lock (rankingsSet)
+        {
+            r.Merge(ranking);
+        }
     }
 
     private static IEnumerable<Table<List<string>>> GetTables(IEnumerable<HtmlPage> pages)
