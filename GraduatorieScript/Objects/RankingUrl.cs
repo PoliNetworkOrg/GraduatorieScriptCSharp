@@ -27,6 +27,20 @@ public class RankingUrl
         return new RankingUrl { Url = url, PageEnum = GetPageEnum(cleanUrl) };
     }
 
+    public string GetLocalPath(string htmlFolder)
+    {
+        var local = Url.Split("polimi.it/")[1];
+        var fullPath = Path.Join(htmlFolder, local);
+
+        var split = local.Split("/");
+        var folder = Path.Join(htmlFolder, split[0]);
+        if (!Directory.Exists(folder))
+            try { Directory.CreateDirectory(folder); }
+            catch { Console.WriteLine("[ERROR] Can't create folder for html file: {folder}"); }
+
+        return fullPath;
+    }
+
     private static PageEnum GetPageEnum(string cleanUrl)
     {
         // Console.WriteLine($"[DEBUG] calculate PageEnum of {cleanUrl}");
@@ -56,4 +70,12 @@ public class RankingUrl
             _ => PageEnum.Unknown
         };
     }
+
+    public string GetBaseDomain()
+    {
+        var lastUrlIndex = Url.LastIndexOf('/');
+        var baseDomain = Url[..lastUrlIndex] + "/";
+        return baseDomain;
+    }
+
 }

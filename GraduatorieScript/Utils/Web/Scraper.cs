@@ -165,16 +165,16 @@ public class Scraper
             using var client = new HttpClient();
             var response = client.GetAsync(url);
             response.Wait();
+
+            if (!response.Result.IsSuccessStatusCode) return null;
+
             var content = response.Result.Content;
             var result = content.ReadAsStringAsync().Result;
-
             return result;
         }
         catch
         {
-            // ignored
+            return null;
         }
-
-        return null;
     }
 }
