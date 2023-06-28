@@ -194,7 +194,7 @@ public static class Parser
                         Ofa = row.Ofa,
                         Result = row.Result,
                         BirthDate = row.BirthDate,
-                        CanEnroll = row.CanEnroll,  
+                        CanEnroll = row.CanEnroll,
                         CanEnrollInto = row.CanEnroll ? course.CourseTitle : null,
                         PositionAbsolute = null,
                         PositionCourse = row.Position,
