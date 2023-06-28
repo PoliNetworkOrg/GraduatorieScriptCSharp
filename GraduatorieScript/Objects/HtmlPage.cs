@@ -73,6 +73,7 @@ public class HtmlPage
                 Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
                 File.WriteAllText(localPath, _htmlString);
             }
+
             return true;
         }
         catch

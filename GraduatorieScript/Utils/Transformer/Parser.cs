@@ -96,7 +96,8 @@ public static class Parser
         var subUrls = GetSubUrls(index);
         var subHtmls = subUrls.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
 
-        var actions = subHtmls.Select(subHtml => (Action)(() => { GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls); })).ToArray();
+        var actions = subHtmls
+            .Select(subHtml => (Action)(() => { GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls); })).ToArray();
         Parallel.Invoke(actions);
 
         return newHtmls;
@@ -320,6 +321,7 @@ public static class Parser
         var tableLinks = GetTableLinks(html);
 
         List<HtmlPage> tablePages = new();
+
         Action Selector(RankingUrl urlSingle)
         {
             return () =>
@@ -334,24 +336,24 @@ public static class Parser
         switch (urlPageEnum)
         {
             case PageEnum.IndexByMerit:
-                {
-                    var table = JoinTables(tablePages);
-                    meritTable =
-                        Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
-                    break;
-                }
+            {
+                var table = JoinTables(tablePages);
+                meritTable =
+                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                break;
+            }
             case PageEnum.IndexByCourse:
+            {
+                var tables = GetTables(tablePages);
+                foreach (var table in tables)
                 {
-                    var tables = GetTables(tablePages);
-                    foreach (var table in tables)
-                    {
-                        var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
-                            ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
-                        courseTables.Add(courseTable);
-                    }
-
-                    break;
+                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                    courseTables.Add(courseTable);
                 }
+
+                break;
+            }
             default:
                 Console.WriteLine(
                     $"[ERROR] Unhandled sub index (url: {html.Url.Url}, type: {html.Url.PageEnum})"
