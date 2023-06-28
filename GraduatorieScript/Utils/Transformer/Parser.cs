@@ -46,7 +46,7 @@ public static class Parser
         return rankingsSet;
     }
 
-    private static List<RankingUrl> GetSubUrls(HtmlPage index)
+    private static IEnumerable<RankingUrl> GetSubUrls(HtmlPage index)
     {
         var doc = index.Html.DocumentNode;
         var aTags = doc.GetElementsByClassName("titolo")
@@ -87,7 +87,7 @@ public static class Parser
         return tablesLinks;
     }
 
-    private static List<HtmlPage> GetAndSaveAllHtmls(HtmlPage index, string htmlFolder)
+    private static IEnumerable<HtmlPage> GetAndSaveAllHtmls(HtmlPage index, string htmlFolder)
     {
         List<HtmlPage> newHtmls = new();
         index.SaveLocal(htmlFolder);
@@ -102,7 +102,7 @@ public static class Parser
         return newHtmls;
     }
 
-    private static void GetAndSaveAllHtmls2(string htmlFolder, HtmlPage? subHtml, List<HtmlPage> newHtmls)
+    private static void GetAndSaveAllHtmls2(string htmlFolder, HtmlPage? subHtml, ICollection<HtmlPage> newHtmls)
     {
         if (subHtml is null) return;
         subHtml.SaveLocal(htmlFolder);
@@ -237,10 +237,7 @@ public static class Parser
         {
             foreach (var course in courseTables)
             {
-                var courseStudents = new List<StudentResult>();
-                foreach (var row in course.Data)
-                {
-                    var student = new StudentResult
+                var courseStudents = course.Data.Select(row => new StudentResult
                     {
                         Id = row.Id,
                         Ofa = row.Ofa,
@@ -252,9 +249,8 @@ public static class Parser
                         PositionCourse = row.Position,
                         SectionsResults = row.SectionsResults,
                         EnglishCorrectAnswers = row.EnglishCorrectAnswers
-                    };
-                    courseStudents.Add(student);
-                }
+                    })
+                    .ToList();
 
                 ranking.ByCourse.Add(new CourseTable
                 {
@@ -416,7 +412,7 @@ public static class Parser
             }
         }
 
-        Ranking? r = null;
+        Ranking? r;
         lock (rankingsSet)
         {
             r = rankingsSet.Rankings.FirstOrDefault((Func<Ranking, bool>)Predicate);
@@ -627,7 +623,7 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
+    private static IEnumerable<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
     {
         HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(htmlFolder))
