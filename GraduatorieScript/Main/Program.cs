@@ -1,4 +1,5 @@
 ﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
@@ -22,14 +23,24 @@ public static class Program
         ScraperOutput.Write(rankingsUrls, dataFolder);
 
         //print links found
-        foreach (var r in rankingsUrls)
-            Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
+        PrintLinks(rankingsUrls);
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
         var rankingsSet = Parser.GetRankings(dataFolder, rankingsUrls);
 
         // salvare il set
+        SaveOutputs(dataFolder, rankingsSet);
+    }
+
+    private static void PrintLinks(List<RankingUrl> rankingsUrls)
+    {
+        foreach (var r in rankingsUrls)
+            Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
+    }
+
+    private static void SaveOutputs(string dataFolder, RankingsSet rankingsSet)
+    {
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         MainJson.Write(outFolder, rankingsSet);
         StatsJson.Write(outFolder, rankingsSet);
@@ -45,13 +56,11 @@ public static class Program
             ? argsFolder
             : PathUtils.FindFolder(Constants.DataFolder);
 
-        // if not found, create it
-        if (string.IsNullOrEmpty(dataFolder))
-        {
-            Console.WriteLine("[WARNING] dataFolder not found, creating it");
-            return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
-        }
 
-        return dataFolder;
+        if (!string.IsNullOrEmpty(dataFolder)) return dataFolder;
+
+        // if not found, create it
+        Console.WriteLine("[WARNING] dataFolder not found, creating it");
+        return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
     }
 }

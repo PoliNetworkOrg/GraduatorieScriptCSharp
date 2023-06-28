@@ -76,18 +76,7 @@ public class MainJson
             if (mainJson is null)
                 return null;
 
-            List<Ranking> rankings = new();
-            foreach (var school in mainJson.Schools)
-            foreach (var year in school.Value)
-            foreach (var filename in year.Value)
-            {
-                var schoolKey = school.Key.ToString();
-                var yearKey = year.Key.ToString();
-                var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-                var ranking = Parser.ParseJson<Ranking>(path);
-                if (ranking != null)
-                    rankings.Add(ranking);
-            }
+            var rankings = RankingsAdd(mainJson, outFolder);
 
             return new RankingsSet { LastUpdate = mainJson.LastUpdate, Rankings = rankings };
         }
@@ -97,5 +86,31 @@ public class MainJson
         }
 
         return null;
+    }
+
+    private static List<Ranking> RankingsAdd(MainJson mainJson, string outFolder)
+    {
+        List<Ranking> rankings = new();
+        foreach (var school in mainJson.Schools)
+        foreach (var year in school.Value)
+        foreach (var filename in year.Value)
+            RankingAdd(school, year, outFolder, filename, rankings);
+
+        return rankings;
+    }
+
+    private static void RankingAdd(
+        KeyValuePair<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> school,
+        KeyValuePair<int, IEnumerable<SingleCourseJson>> year,
+        string outFolder,
+        SingleCourseJson filename,
+        ICollection<Ranking> rankings)
+    {
+        var schoolKey = school.Key.ToString();
+        var yearKey = year.Key.ToString();
+        var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
+        var ranking = Parser.ParseJson<Ranking>(path);
+        if (ranking != null)
+            rankings.Add(ranking);
     }
 }

@@ -3,6 +3,7 @@ using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json;
+using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
@@ -132,7 +133,7 @@ public static class Parser
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
         var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null;
-        if (meritTableData[0].id is not null && courseTableRow?.id is not null)
+        if (meritTableData[0].Id is not null && courseTableRow?.Id is not null)
         {
             foreach (var course in courseTables)
             {
@@ -154,7 +155,7 @@ public static class Parser
                 Rows = meritTableData.Select(row =>
                 {
                     var findInCourse = ranking.ByCourse
-                        .Select(course => course.Rows?.Find(r => r.Id == row.id))
+                        .Select(course => course.Rows?.Find(r => r.Id == row.Id))
                         .Where(rowSingle => rowSingle is not null)
                         .ToList();
 
@@ -166,12 +167,12 @@ public static class Parser
 
                     return new StudentResult
                     {
-                        CanEnroll = row.canEnroll,
-                        CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                        Id = row.id,
-                        PositionAbsolute = row.position,
-                        Result = row.result,
-                        Ofa = row.ofa,
+                        CanEnroll = row.CanEnroll,
+                        CanEnrollInto = row.CanEnroll ? row.CanEnrollInto : null,
+                        Id = row.Id,
+                        PositionAbsolute = row.Position,
+                        Result = row.Result,
+                        Ofa = row.Ofa,
                         PositionCourse = courseData?.PositionCourse,
                         EnglishCorrectAnswers = courseData?.EnglishCorrectAnswers,
                         SectionsResults = courseData?.SectionsResults,
@@ -189,16 +190,16 @@ public static class Parser
                 {
                     var student = new StudentResult
                     {
-                        Id = row.id,
-                        Ofa = row.ofa,
-                        Result = row.result,
-                        BirthDate = row.birthDate,
-                        CanEnroll = row.canEnroll,
-                        CanEnrollInto = row.canEnroll ? course.CourseTitle : null,
+                        Id = row.Id,
+                        Ofa = row.Ofa,
+                        Result = row.Result,
+                        BirthDate = row.BirthDate,
+                        CanEnroll = row.CanEnroll,
+                        CanEnrollInto = row.CanEnroll ? course.CourseTitle : null,
                         PositionAbsolute = null,
-                        PositionCourse = row.position,
-                        SectionsResults = row.sectionsResults,
-                        EnglishCorrectAnswers = row.englishCorrectAnswers
+                        PositionCourse = row.Position,
+                        SectionsResults = row.SectionsResults,
+                        EnglishCorrectAnswers = row.EnglishCorrectAnswers
                     };
                     courseStudents.Add(student);
                 }
@@ -218,12 +219,12 @@ public static class Parser
                 Headers = meritTable.Headers,
                 Rows = meritTableData.Select(row => new StudentResult
                 {
-                    CanEnroll = row.canEnroll,
-                    CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                    Id = row.id,
-                    PositionAbsolute = row.position,
-                    Result = row.result,
-                    Ofa = row.ofa,
+                    CanEnroll = row.CanEnroll,
+                    CanEnrollInto = row.CanEnroll ? row.CanEnrollInto : null,
+                    Id = row.Id,
+                    PositionAbsolute = row.Position,
+                    Result = row.Result,
+                    Ofa = row.Ofa,
                     PositionCourse = null,
                     EnglishCorrectAnswers = null,
                     SectionsResults = null,
@@ -243,27 +244,26 @@ public static class Parser
     private static IEnumerable<StudentResult> GetCourseStudents(Table<CourseTableRow> course,
         List<MeritTableRow> meritTableData)
     {
-        var courseStudents = new List<StudentResult>();
-        foreach (var row in course.Data)
-        {
-            var absolute = meritTableData.Find(r => r.id == row.id);
-            var student = new StudentResult
-            {
-                Id = row.id,
-                Ofa = row.ofa,
-                Result = row.result,
-                BirthDate = row.birthDate,
-                CanEnroll = row.canEnroll,
-                CanEnrollInto = row.canEnroll ? absolute?.canEnrollInto : null,
-                PositionAbsolute = absolute?.position,
-                PositionCourse = row.position,
-                SectionsResults = row.sectionsResults,
-                EnglishCorrectAnswers = row.englishCorrectAnswers
-            };
-            courseStudents.Add(student);
-        }
+        return course.Data.Select(row => CourseTableRowToStudentResult(meritTableData, row)).ToList();
+    }
 
-        return courseStudents;
+    private static StudentResult CourseTableRowToStudentResult(List<MeritTableRow> meritTableData, CourseTableRow row)
+    {
+        var absolute = meritTableData.Find(r => r.Id == row.Id);
+        var student = new StudentResult
+        {
+            Id = row.Id,
+            Ofa = row.Ofa,
+            Result = row.Result,
+            BirthDate = row.BirthDate,
+            CanEnroll = row.CanEnroll,
+            CanEnrollInto = row.CanEnroll ? absolute?.CanEnrollInto : null,
+            PositionAbsolute = absolute?.Position,
+            PositionCourse = row.Position,
+            SectionsResults = row.SectionsResults,
+            EnglishCorrectAnswers = row.EnglishCorrectAnswers
+        };
+        return student;
     }
 
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
@@ -484,12 +484,12 @@ public static class Parser
 
             var parsedRow = new MeritTableRow
             {
-                id = id,
-                position = Convert.ToInt16(position),
-                result = Convert.ToDecimal(votoTest.Replace(",", ".")),
-                ofa = ofa,
-                canEnrollInto = enrollAllowed ? enrollCourse : null,
-                canEnroll = enrollAllowed
+                Id = id,
+                Position = Convert.ToInt16(position),
+                Result = Convert.ToDecimal(votoTest.Replace(",", ".")),
+                Ofa = ofa,
+                CanEnrollInto = enrollAllowed ? enrollCourse : null,
+                CanEnroll = enrollAllowed
             };
             parsedRows.Add(parsedRow);
         }
@@ -551,14 +551,14 @@ public static class Parser
 
         var parsedRow = new CourseTableRow
         {
-            id = id,
-            position = position,
-            result = votoTest,
-            ofa = ofa,
-            canEnroll = enrollAllowed,
-            englishCorrectAnswers = englishCorrectAnswers,
-            birthDate = birthDate,
-            sectionsResults = sectionsResults
+            Id = id,
+            Position = position,
+            Result = votoTest,
+            Ofa = ofa,
+            CanEnroll = enrollAllowed,
+            EnglishCorrectAnswers = englishCorrectAnswers,
+            BirthDate = birthDate,
+            SectionsResults = sectionsResults
         };
         parsedRows.Add(parsedRow);
     }

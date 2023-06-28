@@ -7,16 +7,16 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class WrapperList<T>
 {
-    private List<T> items = new();
+    public List<T> Items = new();
 
     public void Add(T value)
     {
-        items.Add(value);
+        Items.Add(value);
     }
 
     public List<T> Distinct()
     {
-        var list = items;
+        var list = Items;
         return list.Distinct().ToList();
     }
 }
