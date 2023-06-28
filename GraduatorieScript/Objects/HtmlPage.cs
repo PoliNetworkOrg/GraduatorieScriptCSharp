@@ -27,11 +27,58 @@ public class HtmlPage
         return _htmlString;
     }
 
-    public static HtmlPage? FromUrl(RankingUrl url)
+    public static HtmlPage? FromUrl(RankingUrl url, string htmlFolder)
     {
+        var saved = GetLocalHtml(url, htmlFolder);
+        if (!string.IsNullOrEmpty(saved)) return new HtmlPage(saved, url);
+
+        // no saved file, need to download
         var html = Scraper.Download(url.Url);
         if (html is null || string.IsNullOrEmpty(html))
             return null;
+
         return new HtmlPage(html, url);
+    }
+
+    private static string? GetLocalHtml(RankingUrl url, string htmlFolder)
+    {
+        try
+        {
+            var localPath = url.GetLocalPath(htmlFolder);
+            if (!File.Exists(localPath)) return null;
+
+            var html = File.ReadAllText(localPath);
+            if (!html.ToLower().Contains("politecnico"))
+            {
+                // saved html is wrong
+                File.Delete(localPath);
+                return null;
+            }
+
+            return html;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    public bool SaveLocal(string htmlFolder, bool force = false)
+    {
+        var localPath = Url.GetLocalPath(htmlFolder);
+        try
+        {
+            if (!File.Exists(localPath) || force)
+            {
+                Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
+                File.WriteAllText(localPath, _htmlString);
+            }
+            return true;
+        }
+        catch
+        {
+            Console.WriteLine($"[ERROR] Can't save HtmlPage with localPath = {localPath}");
+            return false;
+        }
     }
 }

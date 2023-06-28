@@ -10,6 +10,602 @@
         "Cultura Generale",
         "Inglese"
       ],
+      "title": "DESIGN DEL PRODOTTO INDUSTRIALE",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale",
+        "Inglese",
+        "Risposte Esatte Inglese",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "1999-07-18",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 25,
+          "id": "82ed9de6a0ae041d3b9a",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 1,
+          "positionCourse": 1,
+          "result": 80.29,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 9.50,
+            "Comprensione Verbale": 0.50,
+            "Storia del Design, Storia dell'Arte": 10.75,
+            "Logica": 4.75,
+            "Cultura Generale": 22.75,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2003-06-11",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 27,
+          "id": "7e2cb9363c7feda62232",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 79.25,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 12.00,
+            "Comprensione Verbale": 3.50,
+            "Storia del Design, Storia dell'Arte": 12.00,
+            "Logica": 3.75,
+            "Cultura Generale": 15.75,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "1999-11-30",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 29,
+          "id": "52139ba52d411b7321e4",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 3,
+          "positionCourse": 3,
+          "result": 78.96,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.00,
+            "Comprensione Verbale": 3.50,
+            "Storia del Design, Storia dell'Arte": 10.00,
+            "Logica": 6.00,
+            "Cultura Generale": 21.75,
+            "Inglese": 28.75
+          }
+        },
+        {
+          "birthDate": "2002-08-17",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 29,
+          "id": "0d897bfe4f772144aa9b",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 6,
+          "positionCourse": 4,
+          "result": 75.96,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 10.75,
+            "Comprensione Verbale": 2.50,
+            "Storia del Design, Storia dell'Arte": 9.50,
+            "Logica": 2.50,
+            "Cultura Generale": 19.00,
+            "Inglese": 28.75
+          }
+        },
+        {
+          "birthDate": "2002-07-29",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 27,
+          "id": "3927994558b28e72186a",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 7,
+          "positionCourse": 5,
+          "result": 75.13,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 10.00,
+            "Comprensione Verbale": 0.50,
+            "Storia del Design, Storia dell'Arte": 8.00,
+            "Logica": 5.00,
+            "Cultura Generale": 20.75,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "2002-04-07",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 25,
+          "id": "5d138a0a1d98b51a34bc",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 9,
+          "positionCourse": 6,
+          "result": 73.17,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 9.50,
+            "Comprensione Verbale": 4.75,
+            "Storia del Design, Storia dell'Arte": 6.00,
+            "Logica": 3.50,
+            "Cultura Generale": 19.75,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2004-09-09",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 23,
+          "id": "e02e743aeed8681a495b",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 13,
+          "positionCourse": 7,
+          "result": 63.71,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.00,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 7.00,
+            "Logica": 3.75,
+            "Cultura Generale": 19.00,
+            "Inglese": 21.25
+          }
+        },
+        {
+          "birthDate": "2002-09-07",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 30,
+          "id": "d87eb9902c60905fe0cf",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 61.00,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.00,
+            "Comprensione Verbale": 2.25,
+            "Storia del Design, Storia dell'Arte": 8.00,
+            "Logica": 1.75,
+            "Cultura Generale": 16.00,
+            "Inglese": 30.00
+          }
+        },
+        {
+          "birthDate": "2002-08-15",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": "bc3227a3edc8056fc24d",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 60.42,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 9.75,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 7.75,
+            "Logica": 2.75,
+            "Cultura Generale": 13.75,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2002-11-03",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 27,
+          "id": "c9592b232ec0d52eae9d",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 59.75,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.00,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 7.00,
+            "Logica": 5.00,
+            "Cultura Generale": 14.00,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "2002-06-05",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 19,
+          "id": "d5d308cd77a2cd46c16b",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 57.92,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 8.75,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 8.00,
+            "Logica": 4.75,
+            "Cultura Generale": 12.50,
+            "Inglese": 16.25
+          }
+        },
+        {
+          "birthDate": "2003-11-06",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 27,
+          "id": "dba851eb0f4c9a25cb74",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 23,
+          "positionCourse": 12,
+          "result": 57.13,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.25,
+            "Comprensione Verbale": 1.25,
+            "Storia del Design, Storia dell'Arte": 9.00,
+            "Logica": 3.75,
+            "Cultura Generale": 11.00,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "2003-06-25",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 24,
+          "id": "c4ff8d671a6b754b37cf",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 25,
+          "positionCourse": 13,
+          "result": 53.63,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 2.75,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 6.75,
+            "Logica": 2.75,
+            "Cultura Generale": 16.75,
+            "Inglese": 22.50
+          }
+        },
+        {
+          "birthDate": "2002-08-15",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": "de71dbd83883caa8564f",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 53.29,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 8.50,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 8.00,
+            "Logica": 3.00,
+            "Cultura Generale": 9.75,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "1999-02-06",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 16,
+          "id": "a87c4de01c570c41f04b",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 52.33,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 7.00,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 4.50,
+            "Logica": 3.50,
+            "Cultura Generale": 15.25,
+            "Inglese": 13.00
+          }
+        },
+        {
+          "birthDate": "2000-08-22",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 23,
+          "id": "e13d0e8dddce1ced7dce",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 31,
+          "positionCourse": 16,
+          "result": 48.71,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 4.25,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 8.50,
+            "Logica": 2.50,
+            "Cultura Generale": 11.50,
+            "Inglese": 21.25
+          }
+        },
+        {
+          "birthDate": "2002-05-06",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 20,
+          "id": "7d348e3b11d606c89dd4",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 33,
+          "positionCourse": 17,
+          "result": 48.38,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 3.00,
+            "Comprensione Verbale": 3.00,
+            "Storia del Design, Storia dell'Arte": 8.25,
+            "Logica": 2.75,
+            "Cultura Generale": 11.25,
+            "Inglese": 18.00
+          }
+        },
+        {
+          "birthDate": "2003-12-26",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 28,
+          "id": "7113ccbc78b30e37a6fe",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 34,
+          "positionCourse": 18,
+          "result": 48.17,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 3.75,
+            "Comprensione Verbale": 4.75,
+            "Storia del Design, Storia dell'Arte": 5.00,
+            "Logica": 3.50,
+            "Cultura Generale": 9.00,
+            "Inglese": 27.50
+          }
+        },
+        {
+          "birthDate": "2000-05-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 28,
+          "id": "27740d21be037742da18",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 37,
+          "positionCourse": 19,
+          "result": 44.79,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 2.75,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 5.00,
+            "Logica": 2.25,
+            "Cultura Generale": 13.75,
+            "Inglese": 27.50
+          }
+        },
+        {
+          "birthDate": "2001-11-09",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": "6070b61f4c1f384d3b1a",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 43,
+          "positionCourse": 20,
+          "result": 38.29,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.25,
+            "Comprensione Verbale": 0.50,
+            "Storia del Design, Storia dell'Arte": 5.25,
+            "Logica": 2.50,
+            "Cultura Generale": 6.75,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2003-06-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": "103fbe24b3b3858f90ce",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 44,
+          "positionCourse": 21,
+          "result": 36.79,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.50,
+            "Comprensione Verbale": 0.75,
+            "Storia del Design, Storia dell'Arte": 2.25,
+            "Logica": 1.50,
+            "Cultura Generale": 8.25,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2003-05-22",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 27,
+          "id": "f12d2cae5346b3d352f9",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 22,
+          "result": 34.79,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.50,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 2.00,
+            "Logica": -0.25,
+            "Cultura Generale": 9.00,
+            "Inglese": 26.75
+          }
+        },
+        {
+          "birthDate": "1999-07-19",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 23,
+          "id": "f613b3c93c45e17d724a",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 23,
+          "result": 34.54,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.50,
+            "Comprensione Verbale": 2.25,
+            "Storia del Design, Storia dell'Arte": 3.50,
+            "Logica": 1.50,
+            "Cultura Generale": 5.50,
+            "Inglese": 21.50
+          }
+        },
+        {
+          "birthDate": "2001-12-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 24,
+          "id": "4228877951512ee6dbed",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 54,
+          "positionCourse": 24,
+          "result": 28.88,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.25,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 7.50,
+            "Logica": 0.00,
+            "Cultura Generale": 6.50,
+            "Inglese": 22.50
+          }
+        },
+        {
+          "birthDate": "1998-10-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 25,
+          "id": "b4a01b3038d4add68bdd",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 56,
+          "positionCourse": 25,
+          "result": 26.29,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 1.50,
+            "Comprensione Verbale": 1.75,
+            "Storia del Design, Storia dell'Arte": 3.50,
+            "Logica": 0.00,
+            "Cultura Generale": 5.50,
+            "Inglese": 23.75
+          }
+        },
+        {
+          "birthDate": "2002-09-21",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 21,
+          "id": "7f95f860fde287ba1de5",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 57,
+          "positionCourse": 26,
+          "result": 26.13,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.50,
+            "Comprensione Verbale": 1.00,
+            "Storia del Design, Storia dell'Arte": 1.25,
+            "Logica": 2.75,
+            "Cultura Generale": 2.75,
+            "Inglese": 18.75
+          }
+        },
+        {
+          "birthDate": "2004-02-17",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 28,
+          "id": "5a834dd1d1783c9cc6f0",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 61,
+          "positionCourse": 27,
+          "result": 21.54,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 2.25,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 1.25,
+            "Logica": 2.25,
+            "Cultura Generale": 2.75,
+            "Inglese": 27.50
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO BOVISA",
+      "sections": [
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale",
+        "Inglese"
+      ],
       "title": "DESIGN DELLA MODA",
       "headers": [
         "Posizione",
@@ -32,7 +628,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 16,
-          "id": "BP5264",
+          "id": "b328b3db0d968b722ad9",
           "ofa": {
             "ENG": true
           },
@@ -53,7 +649,7 @@
           "canEnroll": true,
           "canEnrollInto": null,
           "englishCorrectAnswers": 28,
-          "id": "BT1452 (Contingente Marco Polo)",
+          "id": "c4cbe900bbea12fd8259",
           "ofa": {
             "ENG": false
           },
@@ -74,7 +670,7 @@
           "canEnroll": true,
           "canEnrollInto": null,
           "englishCorrectAnswers": 30,
-          "id": "BU0842 (Contingente Marco Polo)",
+          "id": "81b91fac1fcfec57410f",
           "ofa": {
             "ENG": false
           },
@@ -95,7 +691,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
-          "id": "BU1340",
+          "id": "24dc9a8f617a97ffbee3",
           "ofa": {
             "ENG": true
           },
@@ -116,7 +712,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
-          "id": "BS7455",
+          "id": "fa90eced848cc6b130db",
           "ofa": {
             "ENG": false
           },
@@ -137,7 +733,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 30,
-          "id": "BP2018",
+          "id": "b7d2e42e6634f719f4eb",
           "ofa": {
             "ENG": false
           },
@@ -158,7 +754,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 19,
-          "id": "BP8811",
+          "id": "7cf61c92f5490efbbd40",
           "ofa": {
             "ENG": true
           },
@@ -179,7 +775,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 24,
-          "id": "BR0925",
+          "id": "6e321638aa402a445562",
           "ofa": {
             "ENG": false
           },
@@ -200,7 +796,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 26,
-          "id": "BP3693 (Contingente Marco Polo)",
+          "id": "12d94da0ab8537081a1b",
           "ofa": {
             "ENG": false
           },
@@ -221,7 +817,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 28,
-          "id": "BU0670",
+          "id": "6f39b52b405c7e5698e9",
           "ofa": {
             "ENG": false
           },
@@ -242,7 +838,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 26,
-          "id": "BL4251 (Contingente Marco Polo)",
+          "id": "6479645934957eafeadf",
           "ofa": {
             "ENG": false
           },
@@ -263,7 +859,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 19,
-          "id": "BU5776",
+          "id": "ee579a0a1c96a973cf2f",
           "ofa": {
             "ENG": true
           },
@@ -284,7 +880,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 24,
-          "id": "BR9408",
+          "id": "050d6965ec35ce89299f",
           "ofa": {
             "ENG": false
           },
@@ -305,7 +901,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 24,
-          "id": "BM7503",
+          "id": "174fa3ff934831f2dfed",
           "ofa": {
             "ENG": false
           },
@@ -319,308 +915,6 @@
             "Logica": 0.50,
             "Cultura Generale": 5.00,
             "Inglese": 22.75
-          }
-        }
-      ]
-    },
-    {
-      "location": "MILANO BOVISA",
-      "sections": [
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale",
-        "Inglese"
-      ],
-      "title": "DESIGN DEGLI INTERNI",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale",
-        "Inglese",
-        "Risposte Esatte Inglese",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2002-03-31",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 26,
-          "id": "BU0723 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 78.83,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.00,
-            "Comprensione Verbale": 2.25,
-            "Storia del Design, Storia dell'Arte": 12.00,
-            "Logica": 4.00,
-            "Cultura Generale": 21.75,
-            "Inglese": 25.00
-          }
-        },
-        {
-          "birthDate": "2002-10-28",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 27,
-          "id": "BU1339 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 70.63,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 12.00,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 12.00,
-            "Logica": 5.00,
-            "Cultura Generale": 12.50,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2000-05-14",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 23,
-          "id": "BS9925",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 11,
-          "positionCourse": 3,
-          "result": 70.58,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.75,
-            "Comprensione Verbale": 0.50,
-            "Storia del Design, Storia dell'Arte": 9.50,
-            "Logica": 4.00,
-            "Cultura Generale": 20.25,
-            "Inglese": 22.75
-          }
-        },
-        {
-          "birthDate": "2002-01-07",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 27,
-          "id": "BR7590",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 14,
-          "positionCourse": 4,
-          "result": 62.75,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.75,
-            "Comprensione Verbale": 3.50,
-            "Storia del Design, Storia dell'Arte": 9.75,
-            "Logica": 2.75,
-            "Cultura Generale": 14.25,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2002-08-10",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 27,
-          "id": "BT2817",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 16,
-          "positionCourse": 5,
-          "result": 61.63,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.50,
-            "Comprensione Verbale": 2.00,
-            "Storia del Design, Storia dell'Arte": 8.75,
-            "Logica": 2.75,
-            "Cultura Generale": 16.25,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2003-03-30",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": "BT2274 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 57.04,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 8.25,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 7.00,
-            "Logica": 3.50,
-            "Cultura Generale": 14.25,
-            "Inglese": 23.75
-          }
-        },
-        {
-          "birthDate": "2002-11-18",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 18,
-          "id": "BU0957",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 32,
-          "positionCourse": 7,
-          "result": 48.58,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 8.25,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 4.50,
-            "Logica": 2.75,
-            "Cultura Generale": 13.75,
-            "Inglese": 15.25
-          }
-        },
-        {
-          "birthDate": "2002-12-23",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 29,
-          "id": "BG4868",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 38,
-          "positionCourse": 8,
-          "result": 42.58,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 6.25,
-            "Comprensione Verbale": 1.50,
-            "Storia del Design, Storia dell'Arte": 8.75,
-            "Logica": 2.75,
-            "Cultura Generale": 2.75,
-            "Inglese": 28.75
-          }
-        },
-        {
-          "birthDate": "2004-04-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
-          "englishCorrectAnswers": 11,
-          "id": "BM7989",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 51,
-          "positionCourse": 9,
-          "result": 33.79,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 6.25,
-            "Comprensione Verbale": 1.50,
-            "Storia del Design, Storia dell'Arte": 3.00,
-            "Logica": 5.00,
-            "Cultura Generale": 5.00,
-            "Inglese": 8.00
-          }
-        },
-        {
-          "birthDate": "2003-05-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 21,
-          "id": "BR5676",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 55,
-          "positionCourse": 10,
-          "result": 28.33,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 4.50,
-            "Comprensione Verbale": 0.25,
-            "Storia del Design, Storia dell'Arte": 2.00,
-            "Logica": 1.75,
-            "Cultura Generale": 6.00,
-            "Inglese": 19.75
-          }
-        },
-        {
-          "birthDate": "2004-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": "BU5806",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 59,
-          "positionCourse": 11,
-          "result": 23.79,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 1.25,
-            "Comprensione Verbale": 1.25,
-            "Storia del Design, Storia dell'Arte": 0.75,
-            "Logica": 2.25,
-            "Cultura Generale": 4.25,
-            "Inglese": 27.50
-          }
-        },
-        {
-          "birthDate": "2002-09-27",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 27,
-          "id": "BU0870 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 23.75,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.75,
-            "Comprensione Verbale": 2.25,
-            "Storia del Design, Storia dell'Arte": 2.00,
-            "Logica": -0.25,
-            "Cultura Generale": 0.25,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2003-11-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": "BS4679",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 62,
-          "positionCourse": 13,
-          "result": 20.42,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.25,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 0.50,
-            "Logica": 1.25,
-            "Cultura Generale": 5.50,
-            "Inglese": 27.50
           }
         }
       ]
@@ -657,7 +951,7 @@
           "canEnroll": true,
           "canEnrollInto": null,
           "englishCorrectAnswers": 27,
-          "id": "BT2275 (Contingente Marco Polo)",
+          "id": "60fe6d8b9dca38fcae7c",
           "ofa": {
             "ENG": false
           },
@@ -678,7 +972,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
-          "id": "BT4420",
+          "id": "8160a51989c849411d96",
           "ofa": {
             "ENG": false
           },
@@ -699,7 +993,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
-          "id": "BS1866",
+          "id": "d4427414f33ac1d737d2",
           "ofa": {
             "ENG": false
           },
@@ -720,7 +1014,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
-          "id": "BU4549",
+          "id": "6feb4e27989552f10a86",
           "ofa": {
             "ENG": false
           },
@@ -741,7 +1035,7 @@
           "canEnroll": true,
           "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
-          "id": "BS1598",
+          "id": "4409dd07c0ad1a70d346",
           "ofa": {
             "ENG": false
           },
@@ -762,7 +1056,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 23,
-          "id": "BT2853",
+          "id": "416bf2d29a3dea118c78",
           "ofa": {
             "ENG": true
           },
@@ -783,7 +1077,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 27,
-          "id": "BS8138",
+          "id": "aaabb7dbac9634d7aa02",
           "ofa": {
             "ENG": false
           },
@@ -804,7 +1098,7 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 22,
-          "id": "BR9075",
+          "id": "038ae0ec50a9cbf36036",
           "ofa": {
             "ENG": true
           },
@@ -832,7 +1126,7 @@
         "Cultura Generale",
         "Inglese"
       ],
-      "title": "DESIGN DEL PRODOTTO INDUSTRIALE",
+      "title": "DESIGN DEGLI INTERNI",
       "headers": [
         "Posizione",
         "Matricola",
@@ -850,569 +1144,275 @@
       ],
       "rows": [
         {
-          "birthDate": "1999-07-18",
+          "birthDate": "2002-03-31",
           "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 25,
-          "id": "BN8962",
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 26,
+          "id": "2c5b9ce17ce12e82924b",
           "ofa": {
             "ENG": false
           },
-          "positionAbsolute": 1,
+          "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 80.29,
+          "result": 78.83,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 9.50,
-            "Comprensione Verbale": 0.50,
-            "Storia del Design, Storia dell'Arte": 10.75,
-            "Logica": 4.75,
-            "Cultura Generale": 22.75,
-            "Inglese": 23.75
+            "Geometria e Rappresentazione": 7.00,
+            "Comprensione Verbale": 2.25,
+            "Storia del Design, Storia dell'Arte": 12.00,
+            "Logica": 4.00,
+            "Cultura Generale": 21.75,
+            "Inglese": 25.00
           }
         },
         {
-          "birthDate": "2003-06-11",
+          "birthDate": "2002-10-28",
           "canEnroll": true,
           "canEnrollInto": null,
           "englishCorrectAnswers": 27,
-          "id": "BT9288 (Contingente Marco Polo)",
+          "id": "d4827beed4ddee19c8fa",
           "ofa": {
             "ENG": false
           },
           "positionAbsolute": null,
           "positionCourse": 2,
-          "result": 79.25,
+          "result": 70.63,
           "sectionsResults": {
             "Geometria e Rappresentazione": 12.00,
-            "Comprensione Verbale": 3.50,
+            "Comprensione Verbale": -0.25,
             "Storia del Design, Storia dell'Arte": 12.00,
-            "Logica": 3.75,
-            "Cultura Generale": 15.75,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "1999-11-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 29,
-          "id": "BU0663",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 3,
-          "positionCourse": 3,
-          "result": 78.96,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.00,
-            "Comprensione Verbale": 3.50,
-            "Storia del Design, Storia dell'Arte": 10.00,
-            "Logica": 6.00,
-            "Cultura Generale": 21.75,
-            "Inglese": 28.75
-          }
-        },
-        {
-          "birthDate": "2002-08-17",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 29,
-          "id": "BU1351",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 6,
-          "positionCourse": 4,
-          "result": 75.96,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 10.75,
-            "Comprensione Verbale": 2.50,
-            "Storia del Design, Storia dell'Arte": 9.50,
-            "Logica": 2.50,
-            "Cultura Generale": 19.00,
-            "Inglese": 28.75
-          }
-        },
-        {
-          "birthDate": "2002-07-29",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 27,
-          "id": "BS8232",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 7,
-          "positionCourse": 5,
-          "result": 75.13,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 10.00,
-            "Comprensione Verbale": 0.50,
-            "Storia del Design, Storia dell'Arte": 8.00,
             "Logica": 5.00,
-            "Cultura Generale": 20.75,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2002-04-07",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 25,
-          "id": "BU1386",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 9,
-          "positionCourse": 6,
-          "result": 73.17,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 9.50,
-            "Comprensione Verbale": 4.75,
-            "Storia del Design, Storia dell'Arte": 6.00,
-            "Logica": 3.50,
-            "Cultura Generale": 19.75,
-            "Inglese": 23.75
-          }
-        },
-        {
-          "birthDate": "2004-09-09",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 23,
-          "id": "BU8912",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 13,
-          "positionCourse": 7,
-          "result": 63.71,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.00,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 7.00,
-            "Logica": 3.75,
-            "Cultura Generale": 19.00,
-            "Inglese": 21.25
-          }
-        },
-        {
-          "birthDate": "2002-09-07",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 30,
-          "id": "BU4684 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 61.00,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 6.00,
-            "Comprensione Verbale": 2.25,
-            "Storia del Design, Storia dell'Arte": 8.00,
-            "Logica": 1.75,
-            "Cultura Generale": 16.00,
-            "Inglese": 30.00
-          }
-        },
-        {
-          "birthDate": "2002-08-15",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": "BS0349 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 60.42,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 9.75,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 7.75,
-            "Logica": 2.75,
-            "Cultura Generale": 13.75,
-            "Inglese": 23.75
-          }
-        },
-        {
-          "birthDate": "2002-11-03",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 27,
-          "id": "BT9289 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 59.75,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.00,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 7.00,
-            "Logica": 5.00,
-            "Cultura Generale": 14.00,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2002-06-05",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 19,
-          "id": "BM5085 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 57.92,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 8.75,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 8.00,
-            "Logica": 4.75,
             "Cultura Generale": 12.50,
-            "Inglese": 16.25
-          }
-        },
-        {
-          "birthDate": "2003-11-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 27,
-          "id": "BU0974",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 23,
-          "positionCourse": 12,
-          "result": 57.13,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.25,
-            "Comprensione Verbale": 1.25,
-            "Storia del Design, Storia dell'Arte": 9.00,
-            "Logica": 3.75,
-            "Cultura Generale": 11.00,
             "Inglese": 26.25
           }
         },
         {
-          "birthDate": "2003-06-25",
+          "birthDate": "2000-05-14",
           "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 24,
-          "id": "BV1145",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 25,
-          "positionCourse": 13,
-          "result": 53.63,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 2.75,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 6.75,
-            "Logica": 2.75,
-            "Cultura Generale": 16.75,
-            "Inglese": 22.50
-          }
-        },
-        {
-          "birthDate": "2002-08-15",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": "BR9868 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 53.29,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 8.50,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 8.00,
-            "Logica": 3.00,
-            "Cultura Generale": 9.75,
-            "Inglese": 23.75
-          }
-        },
-        {
-          "birthDate": "1999-02-06",
-          "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 16,
-          "id": "BM2253 (Contingente Marco Polo)",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 52.33,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 7.00,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 4.50,
-            "Logica": 3.50,
-            "Cultura Generale": 15.25,
-            "Inglese": 13.00
-          }
-        },
-        {
-          "birthDate": "2000-08-22",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
-          "id": "BM4656",
+          "id": "13e36ab9220fdd6844d9",
           "ofa": {
             "ENG": true
           },
-          "positionAbsolute": 31,
-          "positionCourse": 16,
-          "result": 48.71,
+          "positionAbsolute": 11,
+          "positionCourse": 3,
+          "result": 70.58,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 4.25,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 8.50,
-            "Logica": 2.50,
-            "Cultura Generale": 11.50,
-            "Inglese": 21.25
-          }
-        },
-        {
-          "birthDate": "2002-05-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 20,
-          "id": "BO8946",
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": 33,
-          "positionCourse": 17,
-          "result": 48.38,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 3.00,
-            "Comprensione Verbale": 3.00,
-            "Storia del Design, Storia dell'Arte": 8.25,
-            "Logica": 2.75,
-            "Cultura Generale": 11.25,
-            "Inglese": 18.00
-          }
-        },
-        {
-          "birthDate": "2003-12-26",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 28,
-          "id": "BQ9270",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 34,
-          "positionCourse": 18,
-          "result": 48.17,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 3.75,
-            "Comprensione Verbale": 4.75,
-            "Storia del Design, Storia dell'Arte": 5.00,
-            "Logica": 3.50,
-            "Cultura Generale": 9.00,
-            "Inglese": 27.50
-          }
-        },
-        {
-          "birthDate": "2000-05-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 28,
-          "id": "VY1687",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 37,
-          "positionCourse": 19,
-          "result": 44.79,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 2.75,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 5.00,
-            "Logica": 2.25,
-            "Cultura Generale": 13.75,
-            "Inglese": 27.50
-          }
-        },
-        {
-          "birthDate": "2001-11-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": "BR8614",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 43,
-          "positionCourse": 20,
-          "result": 38.29,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 5.25,
+            "Geometria e Rappresentazione": 7.75,
             "Comprensione Verbale": 0.50,
-            "Storia del Design, Storia dell'Arte": 5.25,
-            "Logica": 2.50,
-            "Cultura Generale": 6.75,
-            "Inglese": 23.75
+            "Storia del Design, Storia dell'Arte": 9.50,
+            "Logica": 4.00,
+            "Cultura Generale": 20.25,
+            "Inglese": 22.75
           }
         },
         {
-          "birthDate": "2003-06-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 25,
-          "id": "BQ4961",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 44,
-          "positionCourse": 21,
-          "result": 36.79,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 6.50,
-            "Comprensione Verbale": 0.75,
-            "Storia del Design, Storia dell'Arte": 2.25,
-            "Logica": 1.50,
-            "Cultura Generale": 8.25,
-            "Inglese": 23.75
-          }
-        },
-        {
-          "birthDate": "2003-05-22",
+          "birthDate": "2002-01-07",
           "canEnroll": true,
-          "canEnrollInto": null,
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
-          "id": "BU0761 (Contingente Marco Polo)",
+          "id": "d68dd4dc73b86e2a19db",
           "ofa": {
             "ENG": false
           },
-          "positionAbsolute": null,
-          "positionCourse": 22,
-          "result": 34.79,
+          "positionAbsolute": 14,
+          "positionCourse": 4,
+          "result": 62.75,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 6.50,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 2.00,
-            "Logica": -0.25,
-            "Cultura Generale": 9.00,
-            "Inglese": 26.75
+            "Geometria e Rappresentazione": 5.75,
+            "Comprensione Verbale": 3.50,
+            "Storia del Design, Storia dell'Arte": 9.75,
+            "Logica": 2.75,
+            "Cultura Generale": 14.25,
+            "Inglese": 26.25
           }
         },
         {
-          "birthDate": "1999-07-19",
+          "birthDate": "2002-08-10",
           "canEnroll": true,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 23,
-          "id": "BT8748 (Contingente Marco Polo)",
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "englishCorrectAnswers": 27,
+          "id": "56f98add3bd0be895093",
           "ofa": {
-            "ENG": true
+            "ENG": false
           },
-          "positionAbsolute": null,
-          "positionCourse": 23,
-          "result": 34.54,
+          "positionAbsolute": 16,
+          "positionCourse": 5,
+          "result": 61.63,
           "sectionsResults": {
             "Geometria e Rappresentazione": 5.50,
-            "Comprensione Verbale": 2.25,
-            "Storia del Design, Storia dell'Arte": 3.50,
-            "Logica": 1.50,
-            "Cultura Generale": 5.50,
-            "Inglese": 21.50
+            "Comprensione Verbale": 2.00,
+            "Storia del Design, Storia dell'Arte": 8.75,
+            "Logica": 2.75,
+            "Cultura Generale": 16.25,
+            "Inglese": 26.25
           }
         },
         {
-          "birthDate": "2001-12-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": 24,
-          "id": "BU0351",
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": 54,
-          "positionCourse": 24,
-          "result": 28.88,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.25,
-            "Comprensione Verbale": 0.00,
-            "Storia del Design, Storia dell'Arte": 7.50,
-            "Logica": 0.00,
-            "Cultura Generale": 6.50,
-            "Inglese": 22.50
-          }
-        },
-        {
-          "birthDate": "1998-10-01",
-          "canEnroll": false,
+          "birthDate": "2003-03-30",
+          "canEnroll": true,
           "canEnrollInto": null,
           "englishCorrectAnswers": 25,
-          "id": "B86527",
+          "id": "c151ec6b8110168a38d3",
           "ofa": {
             "ENG": false
           },
-          "positionAbsolute": 56,
-          "positionCourse": 25,
-          "result": 26.29,
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 57.04,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 1.50,
-            "Comprensione Verbale": 1.75,
-            "Storia del Design, Storia dell'Arte": 3.50,
-            "Logica": 0.00,
-            "Cultura Generale": 5.50,
+            "Geometria e Rappresentazione": 8.25,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 7.00,
+            "Logica": 3.50,
+            "Cultura Generale": 14.25,
             "Inglese": 23.75
           }
         },
         {
-          "birthDate": "2002-09-21",
+          "birthDate": "2002-11-18",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "englishCorrectAnswers": 18,
+          "id": "067ffd6bab006c866366",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 32,
+          "positionCourse": 7,
+          "result": 48.58,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 8.25,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 4.50,
+            "Logica": 2.75,
+            "Cultura Generale": 13.75,
+            "Inglese": 15.25
+          }
+        },
+        {
+          "birthDate": "2002-12-23",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "englishCorrectAnswers": 29,
+          "id": "a44c8ed9529fce579132",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 38,
+          "positionCourse": 8,
+          "result": 42.58,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.25,
+            "Comprensione Verbale": 1.50,
+            "Storia del Design, Storia dell'Arte": 8.75,
+            "Logica": 2.75,
+            "Cultura Generale": 2.75,
+            "Inglese": 28.75
+          }
+        },
+        {
+          "birthDate": "2004-04-13",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "englishCorrectAnswers": 11,
+          "id": "f331ae5ae158421f73f4",
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": 51,
+          "positionCourse": 9,
+          "result": 33.79,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 6.25,
+            "Comprensione Verbale": 1.50,
+            "Storia del Design, Storia dell'Arte": 3.00,
+            "Logica": 5.00,
+            "Cultura Generale": 5.00,
+            "Inglese": 8.00
+          }
+        },
+        {
+          "birthDate": "2003-05-14",
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 21,
-          "id": "BU6571",
+          "id": "5afa72ef7f8157d53563",
           "ofa": {
             "ENG": true
           },
-          "positionAbsolute": 57,
-          "positionCourse": 26,
-          "result": 26.13,
+          "positionAbsolute": 55,
+          "positionCourse": 10,
+          "result": 28.33,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 5.50,
-            "Comprensione Verbale": 1.00,
-            "Storia del Design, Storia dell'Arte": 1.25,
-            "Logica": 2.75,
-            "Cultura Generale": 2.75,
-            "Inglese": 18.75
+            "Geometria e Rappresentazione": 4.50,
+            "Comprensione Verbale": 0.25,
+            "Storia del Design, Storia dell'Arte": 2.00,
+            "Logica": 1.75,
+            "Cultura Generale": 6.00,
+            "Inglese": 19.75
           }
         },
         {
-          "birthDate": "2004-02-17",
+          "birthDate": "2004-05-29",
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 28,
-          "id": "BV0972",
+          "id": "90d8365f1029dfa22abd",
           "ofa": {
             "ENG": false
           },
-          "positionAbsolute": 61,
-          "positionCourse": 27,
-          "result": 21.54,
+          "positionAbsolute": 59,
+          "positionCourse": 11,
+          "result": 23.79,
           "sectionsResults": {
-            "Geometria e Rappresentazione": 2.25,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 1.25,
+            "Geometria e Rappresentazione": 1.25,
+            "Comprensione Verbale": 1.25,
+            "Storia del Design, Storia dell'Arte": 0.75,
             "Logica": 2.25,
-            "Cultura Generale": 2.75,
+            "Cultura Generale": 4.25,
+            "Inglese": 27.50
+          }
+        },
+        {
+          "birthDate": "2002-09-27",
+          "canEnroll": true,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 27,
+          "id": "bb60ef882171ba121a23",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 23.75,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 5.75,
+            "Comprensione Verbale": 2.25,
+            "Storia del Design, Storia dell'Arte": 2.00,
+            "Logica": -0.25,
+            "Cultura Generale": 0.25,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "2003-11-22",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": 28,
+          "id": "e2a9a687a6f052dd2b20",
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": 62,
+          "positionCourse": 13,
+          "result": 20.42,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.25,
+            "Comprensione Verbale": 0.00,
+            "Storia del Design, Storia dell'Arte": 0.50,
+            "Logica": 1.25,
+            "Cultura Generale": 5.50,
             "Inglese": 27.50
           }
         }
@@ -1433,7 +1433,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
-        "id": "BN8962",
+        "id": "82ed9de6a0ae041d3b9a",
         "ofa": {
           "ENG": false
         },
@@ -1454,7 +1454,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT9288",
+        "id": "841404869b5d58ddb5a4",
         "ofa": {
           "ENG": false
         },
@@ -1468,7 +1468,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
-        "id": "BU0663",
+        "id": "52139ba52d411b7321e4",
         "ofa": {
           "ENG": false
         },
@@ -1489,7 +1489,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU0723",
+        "id": "9688edd863c24f34bcd5",
         "ofa": {
           "ENG": false
         },
@@ -1503,7 +1503,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 16,
-        "id": "BP5264",
+        "id": "b328b3db0d968b722ad9",
         "ofa": {
           "ENG": true
         },
@@ -1524,7 +1524,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
-        "id": "BU1351",
+        "id": "0d897bfe4f772144aa9b",
         "ofa": {
           "ENG": false
         },
@@ -1545,7 +1545,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BS8232",
+        "id": "3927994558b28e72186a",
         "ofa": {
           "ENG": false
         },
@@ -1566,7 +1566,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT1452",
+        "id": "33dcdbf8d6abd33cc582",
         "ofa": {
           "ENG": false
         },
@@ -1580,7 +1580,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
-        "id": "BU1386",
+        "id": "5d138a0a1d98b51a34bc",
         "ofa": {
           "ENG": false
         },
@@ -1601,7 +1601,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU1339",
+        "id": "0b1cc9222a60eae8da7e",
         "ofa": {
           "ENG": false
         },
@@ -1615,7 +1615,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
-        "id": "BS9925",
+        "id": "13e36ab9220fdd6844d9",
         "ofa": {
           "ENG": true
         },
@@ -1636,7 +1636,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU0842",
+        "id": "2b0acb28660ef83466cb",
         "ofa": {
           "ENG": false
         },
@@ -1650,7 +1650,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
-        "id": "BU8912",
+        "id": "e02e743aeed8681a495b",
         "ofa": {
           "ENG": true
         },
@@ -1671,7 +1671,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BR7590",
+        "id": "d68dd4dc73b86e2a19db",
         "ofa": {
           "ENG": false
         },
@@ -1692,7 +1692,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
-        "id": "BU1340",
+        "id": "24dc9a8f617a97ffbee3",
         "ofa": {
           "ENG": true
         },
@@ -1713,7 +1713,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BT2817",
+        "id": "56f98add3bd0be895093",
         "ofa": {
           "ENG": false
         },
@@ -1734,7 +1734,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU4684",
+        "id": "8f434e2e93acc70f8ff4",
         "ofa": {
           "ENG": false
         },
@@ -1748,7 +1748,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT2275",
+        "id": "7c30bad180da34e19128",
         "ofa": {
           "ENG": false
         },
@@ -1762,7 +1762,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BS0349",
+        "id": "79ffce4188299a14146e",
         "ofa": {
           "ENG": false
         },
@@ -1776,7 +1776,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT9289",
+        "id": "962d7fe74be453ef42e0",
         "ofa": {
           "ENG": false
         },
@@ -1790,7 +1790,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
-        "id": "BT4420",
+        "id": "8160a51989c849411d96",
         "ofa": {
           "ENG": false
         },
@@ -1811,7 +1811,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BM5085",
+        "id": "f230749af7d561cd23b2",
         "ofa": {
           "ENG": true
         },
@@ -1825,7 +1825,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BU0974",
+        "id": "dba851eb0f4c9a25cb74",
         "ofa": {
           "ENG": false
         },
@@ -1846,7 +1846,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT2274",
+        "id": "8a184bd8eb73cc5235e6",
         "ofa": {
           "ENG": false
         },
@@ -1860,7 +1860,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 24,
-        "id": "BV1145",
+        "id": "c4ff8d671a6b754b37cf",
         "ofa": {
           "ENG": false
         },
@@ -1881,7 +1881,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BS1866",
+        "id": "d4427414f33ac1d737d2",
         "ofa": {
           "ENG": false
         },
@@ -1902,7 +1902,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BR9868",
+        "id": "ed65ae91f48b3bd6fb2c",
         "ofa": {
           "ENG": false
         },
@@ -1916,7 +1916,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
-        "id": "BS7455",
+        "id": "fa90eced848cc6b130db",
         "ofa": {
           "ENG": false
         },
@@ -1937,7 +1937,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 30,
-        "id": "BP2018",
+        "id": "b7d2e42e6634f719f4eb",
         "ofa": {
           "ENG": false
         },
@@ -1958,7 +1958,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BM2253",
+        "id": "c1ec2ac4f14fe99bcbe4",
         "ofa": {
           "ENG": true
         },
@@ -1972,7 +1972,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
-        "id": "BM4656",
+        "id": "e13d0e8dddce1ced7dce",
         "ofa": {
           "ENG": true
         },
@@ -1993,7 +1993,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 18,
-        "id": "BU0957",
+        "id": "067ffd6bab006c866366",
         "ofa": {
           "ENG": true
         },
@@ -2014,7 +2014,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 20,
-        "id": "BO8946",
+        "id": "7d348e3b11d606c89dd4",
         "ofa": {
           "ENG": true
         },
@@ -2035,7 +2035,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
-        "id": "BQ9270",
+        "id": "7113ccbc78b30e37a6fe",
         "ofa": {
           "ENG": false
         },
@@ -2056,7 +2056,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 19,
-        "id": "BP8811",
+        "id": "7cf61c92f5490efbbd40",
         "ofa": {
           "ENG": true
         },
@@ -2077,7 +2077,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 24,
-        "id": "BR0925",
+        "id": "6e321638aa402a445562",
         "ofa": {
           "ENG": false
         },
@@ -2098,7 +2098,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 28,
-        "id": "VY1687",
+        "id": "27740d21be037742da18",
         "ofa": {
           "ENG": false
         },
@@ -2119,7 +2119,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
-        "id": "BG4868",
+        "id": "a44c8ed9529fce579132",
         "ofa": {
           "ENG": false
         },
@@ -2140,7 +2140,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
-        "id": "BU4549",
+        "id": "6feb4e27989552f10a86",
         "ofa": {
           "ENG": false
         },
@@ -2161,7 +2161,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
-        "id": "BS1598",
+        "id": "4409dd07c0ad1a70d346",
         "ofa": {
           "ENG": false
         },
@@ -2182,7 +2182,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "BP3693",
+        "id": "b8b5c229a10ff0bba27a",
         "ofa": {
           "ENG": false
         },
@@ -2196,7 +2196,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 28,
-        "id": "BU0670",
+        "id": "6f39b52b405c7e5698e9",
         "ofa": {
           "ENG": false
         },
@@ -2217,7 +2217,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 25,
-        "id": "BR8614",
+        "id": "6070b61f4c1f384d3b1a",
         "ofa": {
           "ENG": false
         },
@@ -2238,7 +2238,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 25,
-        "id": "BQ4961",
+        "id": "103fbe24b3b3858f90ce",
         "ofa": {
           "ENG": false
         },
@@ -2259,7 +2259,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 23,
-        "id": "BT2853",
+        "id": "416bf2d29a3dea118c78",
         "ofa": {
           "ENG": true
         },
@@ -2280,7 +2280,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "BL4251",
+        "id": "ebc1e03bd251b883e1e7",
         "ofa": {
           "ENG": false
         },
@@ -2294,7 +2294,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 27,
-        "id": "BS8138",
+        "id": "aaabb7dbac9634d7aa02",
         "ofa": {
           "ENG": false
         },
@@ -2315,7 +2315,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU0761",
+        "id": "05d1c51b67bd1b79e9a7",
         "ofa": {
           "ENG": false
         },
@@ -2329,7 +2329,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BT8748",
+        "id": "1a0dc7297c4555b29cd5",
         "ofa": {
           "ENG": true
         },
@@ -2343,7 +2343,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 19,
-        "id": "BU5776",
+        "id": "ee579a0a1c96a973cf2f",
         "ofa": {
           "ENG": true
         },
@@ -2364,7 +2364,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 11,
-        "id": "BM7989",
+        "id": "f331ae5ae158421f73f4",
         "ofa": {
           "ENG": true
         },
@@ -2385,7 +2385,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 24,
-        "id": "BR9408",
+        "id": "050d6965ec35ce89299f",
         "ofa": {
           "ENG": false
         },
@@ -2406,7 +2406,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 22,
-        "id": "BR9075",
+        "id": "038ae0ec50a9cbf36036",
         "ofa": {
           "ENG": true
         },
@@ -2427,7 +2427,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 24,
-        "id": "BU0351",
+        "id": "4228877951512ee6dbed",
         "ofa": {
           "ENG": false
         },
@@ -2448,7 +2448,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 21,
-        "id": "BR5676",
+        "id": "5afa72ef7f8157d53563",
         "ofa": {
           "ENG": true
         },
@@ -2469,7 +2469,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 25,
-        "id": "B86527",
+        "id": "b4a01b3038d4add68bdd",
         "ofa": {
           "ENG": false
         },
@@ -2490,7 +2490,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 21,
-        "id": "BU6571",
+        "id": "7f95f860fde287ba1de5",
         "ofa": {
           "ENG": true
         },
@@ -2511,7 +2511,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 24,
-        "id": "BM7503",
+        "id": "174fa3ff934831f2dfed",
         "ofa": {
           "ENG": false
         },
@@ -2532,7 +2532,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 28,
-        "id": "BU5806",
+        "id": "90d8365f1029dfa22abd",
         "ofa": {
           "ENG": false
         },
@@ -2553,7 +2553,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "BU0870",
+        "id": "6397d32e82aedd9d2d74",
         "ofa": {
           "ENG": false
         },
@@ -2567,7 +2567,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 28,
-        "id": "BV0972",
+        "id": "5a834dd1d1783c9cc6f0",
         "ofa": {
           "ENG": false
         },
@@ -2588,7 +2588,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": 28,
-        "id": "BS4679",
+        "id": "e2a9a687a6f052dd2b20",
         "ofa": {
           "ENG": false
         },
@@ -2607,10 +2607,29 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-27T22:28:12.167014+00:00",
+  "lastUpdate": "2023-06-29T00:53:32.8407899+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
+      {
+        "averageBirthYear": 2001.5555555555557,
+        "averageEnglishCorrectAnswers": 25.0,
+        "averageOfa": {
+          "ENG": 7
+        },
+        "averageOfWhoPassed": 59.8265,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 6.212962962962962962962962963,
+          "Comprensione Verbale": 1.5555555555555555555555555556,
+          "Storia del Design, Storia dell'Arte": 6.50,
+          "Logica": 2.8796296296296296296296296296,
+          "Cultura Generale": 12.601851851851851851851851852,
+          "Inglese": 23.814814814814814814814814815
+        },
+        "averageScoresOfAllStudents": 52.564444444444444444444444444,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+      },
       {
         "averageBirthYear": 2001.0714285714287,
         "averageEnglishCorrectAnswers": 24.571428571428573,
@@ -2629,25 +2648,6 @@
         "averageScoresOfAllStudents": 48.726428571428571428571428571,
         "location": "MILANO BOVISA",
         "title": "DESIGN DELLA MODA"
-      },
-      {
-        "averageBirthYear": 2002.3846153846155,
-        "averageEnglishCorrectAnswers": 24.384615384615383,
-        "averageOfa": {
-          "ENG": 4
-        },
-        "averageOfWhoPassed": 55.016,
-        "averagePartialScores": {
-          "Geometria e Rappresentazione": 6.0576923076923076923076923077,
-          "Comprensione Verbale": 1.0961538461538461538461538462,
-          "Storia del Design, Storia dell'Arte": 6.1923076923076923076923076923,
-          "Logica": 2.8846153846153846153846153846,
-          "Cultura Generale": 10.519230769230769230769230769,
-          "Inglese": 23.326923076923076923076923077
-        },
-        "averageScoresOfAllStudents": 47.90,
-        "location": "MILANO BOVISA",
-        "title": "DESIGN DEGLI INTERNI"
       },
       {
         "averageBirthYear": 2001.5,
@@ -2669,23 +2669,23 @@
         "title": "DESIGN DELLA COMUNICAZIONE"
       },
       {
-        "averageBirthYear": 2001.5555555555557,
-        "averageEnglishCorrectAnswers": 25.0,
+        "averageBirthYear": 2002.3846153846155,
+        "averageEnglishCorrectAnswers": 24.384615384615383,
         "averageOfa": {
-          "ENG": 7
+          "ENG": 4
         },
-        "averageOfWhoPassed": 59.8265,
+        "averageOfWhoPassed": 55.016,
         "averagePartialScores": {
-          "Geometria e Rappresentazione": 6.212962962962962962962962963,
-          "Comprensione Verbale": 1.5555555555555555555555555556,
-          "Storia del Design, Storia dell'Arte": 6.50,
-          "Logica": 2.8796296296296296296296296296,
-          "Cultura Generale": 12.601851851851851851851851852,
-          "Inglese": 23.814814814814814814814814815
+          "Geometria e Rappresentazione": 6.0576923076923076923076923077,
+          "Comprensione Verbale": 1.0961538461538461538461538462,
+          "Storia del Design, Storia dell'Arte": 6.1923076923076923076923076923,
+          "Logica": 2.8846153846153846153846153846,
+          "Cultura Generale": 10.519230769230769230769230769,
+          "Inglese": 23.326923076923076923076923077
         },
-        "averageScoresOfAllStudents": 52.564444444444444444444444444,
+        "averageScoresOfAllStudents": 47.90,
         "location": "MILANO BOVISA",
-        "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+        "title": "DESIGN DEGLI INTERNI"
       }
     ],
     "howManyCanEnroll": 40,

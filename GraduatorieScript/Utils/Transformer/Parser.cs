@@ -21,19 +21,16 @@ public static class Parser
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
-        var savedHtmls = ParseLocalHtmlFiles(dataFolder);
+        var htmlFolder = System.IO.Path.Join(dataFolder, Constants.HtmlFolder);
+        var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
-        var newUrls = urls.Where(u => savedHtmls.All(s => s.Url.Url != u.Url)).ToList();
-        foreach (var url in newUrls) Console.WriteLine($"[DEBUG] url with no-saved html: {url.Url}");
+        var recursiveHtmls = urls
+            .Where(url => url.PageEnum == PageEnum.Index)
+            .Select(url => HtmlPage.FromUrl(url, htmlFolder))
+            .Where(h => h is not null)
+            .SelectMany(h => GetAndSaveAllHtmls(h!, htmlFolder));
 
-        var newHtmls = newUrls
-            .Select(HtmlPage.FromUrl)
-            .Where(h => h != null)
-            .Select(h => h!) // for some reasons it still infered as null
-            .ToList();
-
-
-        var allHtmls = savedHtmls.Concat(newHtmls).ToList();
+        var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
 
         var indexes = allHtmls.Where(h => h.Url.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url.PageEnum == PageEnum.Index);
@@ -49,16 +46,85 @@ public static class Parser
         return rankingsSet;
     }
 
+    private static List<RankingUrl> GetSubUrls(HtmlPage index)
+    {
+        var doc = index.Html.DocumentNode;
+        var aTags = doc.GetElementsByClassName("titolo")
+            .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
+            .Where(a => !a.InnerText.Contains("matricola"))
+            .ToList(); // filter out id ranking
+
+        var baseDomain = index.Url.GetBaseDomain();
+
+        var subUrls = aTags
+            .Select(a => a.GetAttributeValue("href", null))
+            .Where(href => href != null)
+            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
+            .Select(RankingUrl.From)
+            .Where(
+                url =>
+                    url.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse
+            )
+            .ToList();
+
+        return subUrls;
+    }
+
+    private static List<RankingUrl> GetTableLinks(HtmlPage html)
+    {
+        var baseDomain = html.Url.GetBaseDomain();
+
+        var page = html.Html.DocumentNode;
+        var url = html.Url;
+        var tablesLinks = page.SelectNodes("//td/a")
+            .ToList()
+            .Select(a => a.GetAttributeValue("href", null))
+            .Where(href => href != null)
+            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
+            .Select(RankingUrl.From)
+            .AsParallel()
+            .ToList();
+
+        return tablesLinks;
+    }
+
+    private static List<HtmlPage> GetAndSaveAllHtmls(HtmlPage index, string htmlFolder)
+    {
+        List<HtmlPage> newHtmls = new();
+        index.SaveLocal(htmlFolder);
+        newHtmls.Add(index);
+
+        var subUrls = GetSubUrls(index);
+        var subHtmls = subUrls.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
+
+        foreach (var subHtml in subHtmls)
+        {
+            if (subHtml is null) continue;
+            subHtml.SaveLocal(htmlFolder);
+            newHtmls.Add(subHtml);
+
+            var tableLinks = GetTableLinks(subHtml);
+            var tableHtmls = tableLinks.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
+
+            foreach (var tableHtml in tableHtmls)
+            {
+                if (tableHtml is null) continue;
+                tableHtml.SaveLocal(htmlFolder);
+                newHtmls.Add(tableHtml);
+            }
+        }
+
+        return newHtmls;
+    }
+
     private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls)
     {
         Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
         var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
-        var b1 = findIndex >= 0;
-
-        if (b1)
+        if (findIndex >= 0)
         {
-            var b2 = rankingsSet.Rankings[findIndex];
-            if (b2 is { ByMerit: not null, ByCourse: not null })
+            var parsed = rankingsSet.Rankings[findIndex];
+            if (parsed is { ByMerit: not null, ByCourse: not null })
             {
                 Console.WriteLine($"[DEBUG] skipping index {index.Url.Url}: already parsed");
                 return;
@@ -86,24 +152,7 @@ public static class Parser
         var phase = string.Join(" ", intestazioni[3].Split(" - ")[1..]);
         var notes = intestazioni[4];
 
-        var aTags = doc.GetElementsByClassName("titolo")
-            .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
-            .Where(a => !a.InnerText.Contains("matricola"))
-            .ToList(); // filter out id ranking
-
-        var lastUrlIndex = urlUrl.LastIndexOf('/');
-        var baseDomain = urlUrl[..lastUrlIndex] + "/";
-
-        var subUrls = aTags
-            .Select(a => a.GetAttributeValue("href", null))
-            .Where(href => href != null)
-            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-            .Select(RankingUrl.From)
-            .Where(
-                url =>
-                    url.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse
-            )
-            .ToList();
+        var subUrls = GetSubUrls(index);
 
         List<HtmlPage> subIndexes = new();
         var subIndices = subUrls.Select(url => SubIndex(allHtmls, url));
@@ -117,7 +166,7 @@ public static class Parser
         Table<MeritTableRow> meritTable = new();
         List<Table<CourseTableRow>> courseTables = new();
 
-        foreach (var html in subIndexes) GetRankingSingleSub(html, baseDomain, ref meritTable, courseTables, allHtmls);
+        foreach (var html in subIndexes) GetRankingSingleSub(html, ref meritTable, courseTables, allHtmls);
 
         var ranking = new Ranking
         {
@@ -266,22 +315,12 @@ public static class Parser
         return student;
     }
 
-    private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
+    private static void GetRankingSingleSub(HtmlPage html, ref Table<MeritTableRow> meritTable,
         ICollection<Table<CourseTableRow>> courseTables, IEnumerable<HtmlPage> allHtmls)
     {
-        var page = html.Html.DocumentNode;
-        var url = html.Url;
-        var tablesLinks = page.SelectNodes("//td/a")
-            .ToList()
-            .Select(a => a.GetAttributeValue("href", null))
-            .Where(href => href != null)
-            .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
-            .Select(RankingUrl.From)
-            .AsParallel()
-            .ToList();
+        var tableLinks = GetTableLinks(html);
 
         List<HtmlPage> tablePages = new();
-
         Action Selector(RankingUrl urlSingle)
         {
             return () =>
@@ -291,32 +330,32 @@ public static class Parser
             };
         }
 
-        Parallel.Invoke(tablesLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
-        var urlPageEnum = url.PageEnum;
+        Parallel.Invoke(tableLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
+        var urlPageEnum = html.Url.PageEnum;
         switch (urlPageEnum)
         {
             case PageEnum.IndexByMerit:
-            {
-                var table = JoinTables(tablePages);
-                meritTable =
-                    Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
-                break;
-            }
-            case PageEnum.IndexByCourse:
-            {
-                var tables = GetTables(tablePages);
-                foreach (var table in tables)
                 {
-                    var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
-                        ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
-                    courseTables.Add(courseTable);
+                    var table = JoinTables(tablePages);
+                    meritTable =
+                        Table<MeritTableRow>.Create(table.Headers, table.Sections, ParseMeritTable(table), null, null);
+                    break;
                 }
+            case PageEnum.IndexByCourse:
+                {
+                    var tables = GetTables(tablePages);
+                    foreach (var table in tables)
+                    {
+                        var courseTable = Table<CourseTableRow>.Create(table.Headers, table.Sections,
+                            ParseCourseTable(table), table.CourseTitle, table.CourseLocation);
+                        courseTables.Add(courseTable);
+                    }
 
-                break;
-            }
+                    break;
+                }
             default:
                 Console.WriteLine(
-                    $"[ERROR] Unhandled sub index (url: {url.Url}, type: {html.Url.PageEnum})"
+                    $"[ERROR] Unhandled sub index (url: {html.Url.Url}, type: {html.Url.PageEnum})"
                 );
                 break;
         }
@@ -333,7 +372,7 @@ public static class Parser
         }
 
         var subIndex = allHtmls.ToList().Find(Predicate);
-        return subIndex ?? HtmlPage.FromUrl(url);
+        return subIndex;
     }
 
     private static bool CheckIfSimilar(string a, string b)
@@ -395,7 +434,7 @@ public static class Parser
                     .ToList();
                 var fullTitle = isCourse ? doc.GetElementsByClassName("titolo").ToList()[0].InnerText : null;
                 var title = isCourse ? fullTitle?.Split(" (")[0] : null;
-                var location = isCourse ? GetLocation(fullTitle) : null;
+                var location = isCourse ? GetCourseLocation(fullTitle) : null;
                 var rowsData = rows.Select(
                         row =>
                             row.Descendants("td")
@@ -411,7 +450,7 @@ public static class Parser
         return tables!;
     }
 
-    private static string? GetLocation(string? fullTitle)
+    private static string? GetCourseLocation(string? fullTitle)
     {
         var strings = fullTitle?.Split("(");
         if (strings == null)
@@ -501,7 +540,6 @@ public static class Parser
     {
         List<CourseTableRow> parsedRows = new();
         var headers = table.Headers.Select(h => h.ToLower()).ToList();
-        /* foreach (var h in headers) Console.Write($"{h};"); */
 
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
         var idIndex = headers.FindIndex(t => t.Contains("matricola"));
@@ -576,13 +614,12 @@ public static class Parser
         return SchoolEnum.Unknown;
     }
 
-    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string dataFolder)
+    private static HashSet<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
     {
         HashSet<HtmlPage> elements = new();
-        if (string.IsNullOrEmpty(dataFolder))
+        if (string.IsNullOrEmpty(htmlFolder))
             return elements;
 
-        var htmlFolder = System.IO.Path.Join(dataFolder, Constants.HtmlFolder);
         if (!Directory.Exists(htmlFolder)) return elements;
 
         var files = Directory.GetFiles(htmlFolder, "*.html", SearchOption.AllDirectories);
