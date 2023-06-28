@@ -106,12 +106,19 @@ public static class Parser
             var tableLinks = GetTableLinks(subHtml);
             var tableHtmls = tableLinks.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
 
+            List<Action> actions = new List<Action>();
             foreach (var tableHtml in tableHtmls)
             {
-                if (tableHtml is null) continue;
-                tableHtml.SaveLocal(htmlFolder);
-                newHtmls.Add(tableHtml);
+                actions.Add(() =>
+                {
+                    if (tableHtml is null) return;
+                    tableHtml.SaveLocal(htmlFolder);
+                    newHtmls.Add(tableHtml);
+                });
             }
+
+            var action = actions.ToArray();
+            Parallel.Invoke(action);
         }
 
         return newHtmls;
