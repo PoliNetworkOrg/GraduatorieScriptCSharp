@@ -133,7 +133,7 @@ public static class Parser
         var meritTableData = meritTable.Data;
         var courseTableRows = courseTables[0].Data;
         var courseTableRow = courseTableRows.Count > 0 ? courseTableRows[0] : null;
-        if (meritTableData[0].id is not null && courseTableRow?.Id is not null)
+        if (meritTableData[0].Id is not null && courseTableRow?.Id is not null)
         {
             foreach (var course in courseTables)
             {
@@ -155,7 +155,7 @@ public static class Parser
                 Rows = meritTableData.Select(row =>
                 {
                     var findInCourse = ranking.ByCourse
-                        .Select(course => course.Rows?.Find(r => r.Id == row.id))
+                        .Select(course => course.Rows?.Find(r => r.Id == row.Id))
                         .Where(rowSingle => rowSingle is not null)
                         .ToList();
 
@@ -167,12 +167,12 @@ public static class Parser
 
                     return new StudentResult
                     {
-                        CanEnroll = row.canEnroll,
-                        CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                        Id = row.id,
-                        PositionAbsolute = row.position,
-                        Result = row.result,
-                        Ofa = row.ofa,
+                        CanEnroll = row.CanEnroll,
+                        CanEnrollInto = row.CanEnroll ? row.CanEnrollInto : null,
+                        Id = row.Id,
+                        PositionAbsolute = row.Position,
+                        Result = row.Result,
+                        Ofa = row.Ofa,
                         PositionCourse = courseData?.PositionCourse,
                         EnglishCorrectAnswers = courseData?.EnglishCorrectAnswers,
                         SectionsResults = courseData?.SectionsResults,
@@ -219,12 +219,12 @@ public static class Parser
                 Headers = meritTable.Headers,
                 Rows = meritTableData.Select(row => new StudentResult
                 {
-                    CanEnroll = row.canEnroll,
-                    CanEnrollInto = row.canEnroll ? row.canEnrollInto : null,
-                    Id = row.id,
-                    PositionAbsolute = row.position,
-                    Result = row.result,
-                    Ofa = row.ofa,
+                    CanEnroll = row.CanEnroll,
+                    CanEnrollInto = row.CanEnroll ? row.CanEnrollInto : null,
+                    Id = row.Id,
+                    PositionAbsolute = row.Position,
+                    Result = row.Result,
+                    Ofa = row.Ofa,
                     PositionCourse = null,
                     EnglishCorrectAnswers = null,
                     SectionsResults = null,
@@ -249,7 +249,7 @@ public static class Parser
 
     private static StudentResult CourseTableRowToStudentResult(List<MeritTableRow> meritTableData, CourseTableRow row)
     {
-        var absolute = meritTableData.Find(r => r.id == row.Id);
+        var absolute = meritTableData.Find(r => r.Id == row.Id);
         var student = new StudentResult
         {
             Id = row.Id,
@@ -257,8 +257,8 @@ public static class Parser
             Result = row.Result,
             BirthDate = row.BirthDate,
             CanEnroll = row.CanEnroll,
-            CanEnrollInto = row.CanEnroll ? absolute?.canEnrollInto : null,
-            PositionAbsolute = absolute?.position,
+            CanEnrollInto = row.CanEnroll ? absolute?.CanEnrollInto : null,
+            PositionAbsolute = absolute?.Position,
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
             EnglishCorrectAnswers = row.EnglishCorrectAnswers
@@ -484,12 +484,12 @@ public static class Parser
 
             var parsedRow = new MeritTableRow
             {
-                id = id,
-                position = Convert.ToInt16(position),
-                result = Convert.ToDecimal(votoTest.Replace(",", ".")),
-                ofa = ofa,
-                canEnrollInto = enrollAllowed ? enrollCourse : null,
-                canEnroll = enrollAllowed
+                Id = id,
+                Position = Convert.ToInt16(position),
+                Result = Convert.ToDecimal(votoTest.Replace(",", ".")),
+                Ofa = ofa,
+                CanEnrollInto = enrollAllowed ? enrollCourse : null,
+                CanEnroll = enrollAllowed
             };
             parsedRows.Add(parsedRow);
         }

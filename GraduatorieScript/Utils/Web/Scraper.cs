@@ -11,16 +11,16 @@ public class Scraper
     private const string FuturiStudentiUrl = "https://www.polimi.it/futuri-studenti";
     private const string InEvidenzaUrl = "https://www.polimi.it/in-evidenza";
 
-    private readonly HashSet<string> alreadyVisited = new();
+    private readonly HashSet<string> _alreadyVisited = new();
 
-    private readonly string[] newsTesters =
+    private readonly string[] _newsTesters =
     {
         "graduatorie", "graduatoria", "punteggi", "tol",
         "immatricolazioni", "immatricolazione", "punteggio",
         "matricola", "nuovi studenti"
     };
 
-    private readonly HtmlWeb web = new();
+    private readonly HtmlWeb _web = new();
 
     public IEnumerable<string> GetRankingsLinks()
     {
@@ -37,7 +37,7 @@ public class Scraper
     private IEnumerable<string> ScrapeHomepage()
     {
         HashSet<string> links = new();
-        var page = web.Load(HomepageUrl).DocumentNode;
+        var page = _web.Load(HomepageUrl).DocumentNode;
         var slides = page.SelectNodes("//section[@id='copertina']//div[contains(@class, 'sp-slides')]/div");
         foreach (var slide in slides)
         {
@@ -56,7 +56,7 @@ public class Scraper
     private IEnumerable<string> ScrapeFuturiStudenti()
     {
         HashSet<string> links = new();
-        var page = web.Load(FuturiStudentiUrl).DocumentNode;
+        var page = _web.Load(FuturiStudentiUrl).DocumentNode;
         var slides =
             page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
         foreach (var slide in slides)
@@ -83,7 +83,7 @@ public class Scraper
     private IEnumerable<string> ScrapeInEvidenza()
     {
         HashSet<string> links = new();
-        var page = web.Load(InEvidenzaUrl).DocumentNode;
+        var page = _web.Load(InEvidenzaUrl).DocumentNode;
         var liTags = page.SelectNodes("//div[@id='content']//li");
         foreach (var li in liTags)
         {
@@ -125,10 +125,10 @@ public class Scraper
     private IEnumerable<string> ParseNewsPage(string url)
     {
         HashSet<string> links = new();
-        if (alreadyVisited.Contains(url)) return links;
-        alreadyVisited.Add(url);
+        if (_alreadyVisited.Contains(url)) return links;
+        _alreadyVisited.Add(url);
 
-        var page = web.Load(url).DocumentNode;
+        var page = _web.Load(url).DocumentNode;
 
         var aTags = page.SelectNodes("//div[@id='content']//a[@href]");
         if (aTags == null) return links;
@@ -146,7 +146,7 @@ public class Scraper
     private bool IsValidText(string text)
     {
         var lower = text.ToLower();
-        return newsTesters.Any(test => lower.Contains(test));
+        return _newsTesters.Any(test => lower.Contains(test));
     }
 
     private static string? GetHref(HtmlNode? a)
