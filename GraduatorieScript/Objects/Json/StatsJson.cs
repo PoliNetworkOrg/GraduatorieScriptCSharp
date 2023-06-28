@@ -22,31 +22,7 @@ public class StatsJson
         var statsJson = new StatsJson();
         foreach (var ranking in rankingsSet.Rankings)
         {
-            if (ranking.Year == null) continue;
-            if (!statsJson.Stats.ContainsKey(ranking.Year.Value))
-            {
-                var statsJsonStat = new StatsYear
-                {
-                    NumStudents = rankingsSet.Rankings.Where(x => x.Year == ranking.Year)
-                        .Select(x => x.RankingSummary?.HowManyStudents).Sum()
-                };
-                statsJson.Stats[ranking.Year.Value] = statsJsonStat;
-            }
-
-            if (ranking.School == null) continue;
-            var schools = statsJson.Stats[ranking.Year.Value].Schools;
-            if (!schools.ContainsKey(ranking.School.Value))
-            {
-                var statsSchool = new StatsSchool
-                {
-                    NumStudents = rankingsSet.Rankings
-                        .Where(x => x.Year == ranking.Year && x.School == ranking.School)
-                        .Select(x => x.RankingSummary?.HowManyStudents).Sum()
-                };
-                schools[ranking.School.Value] = statsSchool;
-            }
-
-            schools[ranking.School.Value].List.Add(ranking.ToStats());
+            GenerateSingleRanking(rankingsSet, ranking, statsJson);
         }
 
         foreach (var year in statsJson.Stats.Keys)
@@ -58,6 +34,35 @@ public class StatsJson
         }
 
         return statsJson;
+    }
+
+    private static void GenerateSingleRanking(RankingsSet rankingsSet, Ranking ranking, StatsJson statsJson)
+    {
+        if (ranking.Year == null) return;
+        if (!statsJson.Stats.ContainsKey(ranking.Year.Value))
+        {
+            var statsJsonStat = new StatsYear
+            {
+                NumStudents = rankingsSet.Rankings.Where(x => x.Year == ranking.Year)
+                    .Select(x => x.RankingSummary?.HowManyStudents).Sum()
+            };
+            statsJson.Stats[ranking.Year.Value] = statsJsonStat;
+        }
+
+        if (ranking.School == null) return;
+        var schools = statsJson.Stats[ranking.Year.Value].Schools;
+        if (!schools.ContainsKey(ranking.School.Value))
+        {
+            var statsSchool = new StatsSchool
+            {
+                NumStudents = rankingsSet.Rankings
+                    .Where(x => x.Year == ranking.Year && x.School == ranking.School)
+                    .Select(x => x.RankingSummary?.HowManyStudents).Sum()
+            };
+            schools[ranking.School.Value] = statsSchool;
+        }
+
+        schools[ranking.School.Value].List.Add(ranking.ToStats());
     }
 
     private void WriteToFile(string outFolder)

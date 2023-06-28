@@ -244,27 +244,26 @@ public static class Parser
     private static IEnumerable<StudentResult> GetCourseStudents(Table<CourseTableRow> course,
         List<MeritTableRow> meritTableData)
     {
-        var courseStudents = new List<StudentResult>();
-        foreach (var row in course.Data)
-        {
-            var absolute = meritTableData.Find(r => r.id == row.Id);
-            var student = new StudentResult
-            {
-                Id = row.Id,
-                Ofa = row.Ofa,
-                Result = row.Result,
-                BirthDate = row.BirthDate,
-                CanEnroll = row.CanEnroll,
-                CanEnrollInto = row.CanEnroll ? absolute?.canEnrollInto : null,
-                PositionAbsolute = absolute?.position,
-                PositionCourse = row.Position,
-                SectionsResults = row.SectionsResults,
-                EnglishCorrectAnswers = row.EnglishCorrectAnswers
-            };
-            courseStudents.Add(student);
-        }
+        return course.Data.Select(row => CourseTableRowToStudentResult(meritTableData, row)).ToList();
+    }
 
-        return courseStudents;
+    private static StudentResult CourseTableRowToStudentResult(List<MeritTableRow> meritTableData, CourseTableRow row)
+    {
+        var absolute = meritTableData.Find(r => r.id == row.Id);
+        var student = new StudentResult
+        {
+            Id = row.Id,
+            Ofa = row.Ofa,
+            Result = row.Result,
+            BirthDate = row.BirthDate,
+            CanEnroll = row.CanEnroll,
+            CanEnrollInto = row.CanEnroll ? absolute?.canEnrollInto : null,
+            PositionAbsolute = absolute?.position,
+            PositionCourse = row.Position,
+            SectionsResults = row.SectionsResults,
+            EnglishCorrectAnswers = row.EnglishCorrectAnswers
+        };
+        return student;
     }
 
     private static void GetRankingSingleSub(HtmlPage html, string baseDomain, ref Table<MeritTableRow> meritTable,
