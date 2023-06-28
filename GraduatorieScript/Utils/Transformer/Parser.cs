@@ -70,12 +70,11 @@ public static class Parser
         return subUrls;
     }
 
-    private static List<RankingUrl> GetTableLinks(HtmlPage html)
+    private static IEnumerable<RankingUrl> GetTableLinks(HtmlPage html)
     {
         var baseDomain = html.Url.GetBaseDomain();
 
         var page = html.Html.DocumentNode;
-        var url = html.Url;
         var tablesLinks = page.SelectNodes("//td/a")
             .ToList()
             .Select(a => a.GetAttributeValue("href", null))
@@ -97,31 +96,28 @@ public static class Parser
         var subUrls = GetSubUrls(index);
         var subHtmls = subUrls.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
 
-        foreach (var subHtml in subHtmls)
-        {
-            if (subHtml is null) continue;
-            subHtml.SaveLocal(htmlFolder);
-            newHtmls.Add(subHtml);
-
-            var tableLinks = GetTableLinks(subHtml);
-            var tableHtmls = tableLinks.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
-
-            List<Action> actions = new List<Action>();
-            foreach (var tableHtml in tableHtmls)
-            {
-                actions.Add(() =>
-                {
-                    if (tableHtml is null) return;
-                    tableHtml.SaveLocal(htmlFolder);
-                    newHtmls.Add(tableHtml);
-                });
-            }
-
-            var action = actions.ToArray();
-            Parallel.Invoke(action);
-        }
+        var actions = subHtmls.Select(subHtml => (Action)(() => { GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls); })).ToArray();
+        Parallel.Invoke(actions);
 
         return newHtmls;
+    }
+
+    private static void GetAndSaveAllHtmls2(string htmlFolder, HtmlPage? subHtml, List<HtmlPage> newHtmls)
+    {
+        if (subHtml is null) return;
+        subHtml.SaveLocal(htmlFolder);
+        newHtmls.Add(subHtml);
+
+        var tableLinks = GetTableLinks(subHtml);
+        var tableHtmls = tableLinks.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
+
+        var action = tableHtmls.Select(tableHtml => (Action)(() =>
+        {
+            if (tableHtml is null) return;
+            tableHtml.SaveLocal(htmlFolder);
+            newHtmls.Add(tableHtml);
+        })).ToArray();
+        Parallel.Invoke(action);
     }
 
     private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls)
