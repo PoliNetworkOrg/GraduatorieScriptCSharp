@@ -37,7 +37,11 @@ public static class Parser
         var indexes = allHtmls.Where(h => h.Url.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url.PageEnum == PageEnum.Index);
 
-        Action Selector(HtmlPage index) => () => { GetRankingsSingle(index, rankingsSet, allHtmls); };
+        Action Selector(HtmlPage index)
+        {
+            return () => { GetRankingsSingle(index, rankingsSet, allHtmls); };
+        }
+
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
         Parallel.Invoke(action);
 
