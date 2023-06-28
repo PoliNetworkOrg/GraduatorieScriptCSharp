@@ -460,7 +460,7 @@ public static class Parser
 
         foreach (var row in table.Data)
         {
-            var id = Table.GetFieldByIndex(row, idIndex);
+            var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
             var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
@@ -498,7 +498,7 @@ public static class Parser
         /* foreach (var h in headers) Console.Write($"{h};"); */
 
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
-        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
+        var idIndex =  headers.FindIndex(t => t.Contains("matricola"));
         var birthDateIndex = headers.FindIndex(t => t.Contains("nascita"));
         var enrollAllowedIndex = headers.FindIndex(t => t.Contains("consentita"));
         var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
@@ -518,7 +518,7 @@ public static class Parser
         int enrollAllowedIndex, int englishCorrectAnswersIndex, int ofaEngIndex, int ofaTestIndex,
         Dictionary<string, int>? sectionsIndex, ICollection<CourseTableRow> parsedRows)
     {
-        var id = Table.GetFieldByIndex(row, idIndex);
+        var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
         var votoTest = Convert.ToDecimal(Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0");
         var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
         if (fieldByIndex.ToLower().Contains("nessun"))
