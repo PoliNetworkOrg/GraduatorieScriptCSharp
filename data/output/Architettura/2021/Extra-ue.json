@@ -1267,6 +1267,714 @@
       ]
     },
     {
+      "location": "LECCO",
+      "sections": [
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "title": "INGEGNERIA EDILE - ARCHITETTURA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "rows": [
+        {
+          "birthDate": "1973-11-01",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA EDILE - ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 30.60,
+          "sectionsResults": {
+            "Cultura Generale": 12.00,
+            "Ragionamento Logico": 4.50,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -0.80
+          }
+        },
+        {
+          "birthDate": "1999-08-04",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA EDILE - ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 27.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 10.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2000-05-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 27.70,
+          "sectionsResults": {
+            "Cultura Generale": 1.10,
+            "Ragionamento Logico": 6.00,
+            "Storia": 4.50,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.10
+          }
+        },
+        {
+          "birthDate": "2002-03-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 26.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.10,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 4.10
+          }
+        },
+        {
+          "birthDate": "2000-01-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 25.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.30,
+            "Storia": 8.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2002-04-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 25.60,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.70,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2001-05-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 25.30,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 2.20,
+            "Storia": 5.20,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2003-09-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 24.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 2.20,
+            "Storia": 8.20,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-06-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 24.80,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 0.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 1.40
+          }
+        },
+        {
+          "birthDate": "2002-03-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 6.60,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2002-10-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 3.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 4.80
+          }
+        },
+        {
+          "birthDate": "1999-03-03",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 24.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 4.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2001-09-19",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 24.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "1998-05-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 22.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 2.60,
+            "Storia": 3.70,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "1993-07-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 21.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2001-03-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 16,
+          "result": 21.20,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 0.70,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 4.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-04-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 17,
+          "result": 21.10,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 5.20,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 4.50
+          }
+        },
+        {
+          "birthDate": "2002-11-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 18,
+          "result": 20.20,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2002-11-26",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 19,
+          "result": 20.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.30,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "1999-07-17",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 20,
+          "result": 19.30,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": -0.80,
+            "Storia": 6.30,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": -0.80
+          }
+        },
+        {
+          "birthDate": "2001-09-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 21,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -1.60,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2003-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 22,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 2.50,
+            "Ragionamento Logico": 0.30,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2000-12-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 23,
+          "result": 17.80,
+          "sectionsResults": {
+            "Cultura Generale": 5.60,
+            "Ragionamento Logico": 2.60,
+            "Storia": 2.90,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "2002-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 24,
+          "result": 17.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": -0.60,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -0.90
+          }
+        },
+        {
+          "birthDate": "1974-06-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 25,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -3.20
+          }
+        },
+        {
+          "birthDate": "2002-04-06",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 26,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": -0.50,
+            "Storia": 2.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2003-08-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 27,
+          "result": 16.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": 1.80
+          }
+        },
+        {
+          "birthDate": "2002-07-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 28,
+          "result": 14.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -0.50,
+            "Storia": 1.70,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "2001-01-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 29,
+          "result": 14.40,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": 0.30,
+            "Storia": 2.20,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 30,
+          "result": 13.40,
+          "sectionsResults": {
+            "Cultura Generale": 0.00,
+            "Ragionamento Logico": 0.30,
+            "Storia": 4.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.00
+          }
+        },
+        {
+          "birthDate": "1993-10-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 31,
+          "result": 13.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2001-11-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 32,
+          "result": 10.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "2002-03-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 33,
+          "result": 10.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 1.40,
+            "Storia": 0.90,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2003-03-31",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 34,
+          "result": 8.70,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.50,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2001-12-14",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 35,
+          "result": 8.60,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2003-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 36,
+          "result": 6.50,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 2.60,
+            "Storia": 1.80,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "2003-12-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 37,
+          "result": 6.40,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.40,
+            "Storia": 1.10,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.30
+          }
+        },
+        {
+          "birthDate": "2003-04-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 38,
+          "result": -0.80,
+          "sectionsResults": {
+            "Cultura Generale": 0.60,
+            "Ragionamento Logico": 1.40,
+            "Storia": -4.80,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -1.30
+          }
+        }
+      ]
+    },
+    {
       "location": "PIACENZA",
       "sections": [
         "Cultura Generale",
@@ -5563,6 +6271,2142 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 238,
+          "result": -0.80,
+          "sectionsResults": {
+            "Cultura Generale": 0.60,
+            "Ragionamento Logico": 1.40,
+            "Storia": -4.80,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -1.30
+          }
+        }
+      ]
+    },
+    {
+      "location": "PIACENZA",
+      "sections": [
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "title": "PROGETTAZIONE DELL'ARCHITETTURA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "rows": [
+        {
+          "birthDate": "1999-04-23",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 35.80,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 4.10,
+            "Storia": 10.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2001-09-15",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 34.70,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 0.70,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2001-09-04",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 32.00,
+          "sectionsResults": {
+            "Cultura Generale": 9.00,
+            "Ragionamento Logico": 3.30,
+            "Storia": 12.30,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2004-07-20",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 1.80,
+            "Storia": 12.70,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2002-11-22",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.30,
+            "Storia": 8.90,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2003-09-21",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 2.50,
+            "Ragionamento Logico": 1.40,
+            "Storia": 16.10,
+            "Disegno e Rappresentazione": 6.00,
+            "Fisica e Matematica": 4.10
+          }
+        },
+        {
+          "birthDate": "1999-07-15",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 29.70,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.00,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2000-05-02",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 29.50,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 2.60,
+            "Storia": 5.60,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 12.00
+          }
+        },
+        {
+          "birthDate": "2002-08-05",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 29.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 2.60,
+            "Storia": 8.60,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "1999-03-07",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 28.30,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 4.50,
+            "Storia": 5.50,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 1.10
+          }
+        },
+        {
+          "birthDate": "2000-02-09",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 28.30,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": 3.70,
+            "Storia": 5.90,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "1999-08-04",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 27.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 10.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2001-02-20",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 27.90,
+          "sectionsResults": {
+            "Cultura Generale": 1.80,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.90,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 9.00
+          }
+        },
+        {
+          "birthDate": "2000-05-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 27.70,
+          "sectionsResults": {
+            "Cultura Generale": 1.10,
+            "Ragionamento Logico": 6.00,
+            "Storia": 4.50,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.10
+          }
+        },
+        {
+          "birthDate": "2002-03-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 26.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.10,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 4.10
+          }
+        },
+        {
+          "birthDate": "2002-04-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 16,
+          "result": 26.40,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": 1.40,
+            "Storia": 6.30,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-01-22",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 17,
+          "result": 26.20,
+          "sectionsResults": {
+            "Cultura Generale": 2.60,
+            "Ragionamento Logico": 3.00,
+            "Storia": 4.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.50
+          }
+        },
+        {
+          "birthDate": "2000-01-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 18,
+          "result": 25.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.30,
+            "Storia": 8.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2002-04-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 19,
+          "result": 25.60,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.70,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2001-05-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 20,
+          "result": 25.30,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 2.20,
+            "Storia": 5.20,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-05-09",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 21,
+          "result": 25.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": -0.10,
+            "Storia": 2.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2003-09-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 22,
+          "result": 24.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 2.20,
+            "Storia": 8.20,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-02-03",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 23,
+          "result": 24.90,
+          "sectionsResults": {
+            "Cultura Generale": 1.10,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.40,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 6.70
+          }
+        },
+        {
+          "birthDate": "2002-06-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 24,
+          "result": 24.80,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 0.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 1.40
+          }
+        },
+        {
+          "birthDate": "2002-03-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 25,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 6.60,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2002-10-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 26,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 3.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 4.80
+          }
+        },
+        {
+          "birthDate": "1999-03-03",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 27,
+          "result": 24.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 4.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2001-09-19",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 28,
+          "result": 24.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2003-06-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 29,
+          "result": 23.40,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 2.60,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-05-27",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 30,
+          "result": 22.60,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 3.30,
+            "Storia": 13.10,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.20
+          }
+        },
+        {
+          "birthDate": "1998-05-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 31,
+          "result": 22.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 2.60,
+            "Storia": 3.70,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "2001-10-06",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 32,
+          "result": 22.00,
+          "sectionsResults": {
+            "Cultura Generale": 3.00,
+            "Ragionamento Logico": 2.20,
+            "Storia": 4.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 3.00
+          }
+        },
+        {
+          "birthDate": "1993-07-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 33,
+          "result": 21.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2001-03-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 34,
+          "result": 21.20,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 0.70,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 4.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-04-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 35,
+          "result": 21.10,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 5.20,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 4.50
+          }
+        },
+        {
+          "birthDate": "1999-07-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 36,
+          "result": 20.80,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 0.30,
+            "Storia": 8.20,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 3.00
+          }
+        },
+        {
+          "birthDate": "2002-12-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 37,
+          "result": 20.40,
+          "sectionsResults": {
+            "Cultura Generale": 3.70,
+            "Ragionamento Logico": 0.30,
+            "Storia": 10.10,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2002-11-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 38,
+          "result": 20.20,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2002-11-26",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 39,
+          "result": 20.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.30,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "1999-07-17",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 40,
+          "result": 19.30,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": -0.80,
+            "Storia": 6.30,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": -0.80
+          }
+        },
+        {
+          "birthDate": "1997-03-30",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 41,
+          "result": 19.20,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 2.60,
+            "Storia": 5.50,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "1992-11-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 42,
+          "result": 18.70,
+          "sectionsResults": {
+            "Cultura Generale": 0.60,
+            "Ragionamento Logico": 5.20,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -2.00
+          }
+        },
+        {
+          "birthDate": "2001-09-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 43,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -1.60,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2003-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 44,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 2.50,
+            "Ragionamento Logico": 0.30,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2000-12-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 45,
+          "result": 17.80,
+          "sectionsResults": {
+            "Cultura Generale": 5.60,
+            "Ragionamento Logico": 2.60,
+            "Storia": 2.90,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "1999-03-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 46,
+          "result": 17.60,
+          "sectionsResults": {
+            "Cultura Generale": 0.00,
+            "Ragionamento Logico": 3.00,
+            "Storia": 4.50,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 4.50
+          }
+        },
+        {
+          "birthDate": "2002-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 47,
+          "result": 17.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": -0.60,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -0.90
+          }
+        },
+        {
+          "birthDate": "1974-06-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 48,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -3.20
+          }
+        },
+        {
+          "birthDate": "2002-04-06",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 49,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": -0.50,
+            "Storia": 2.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "1988-12-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 50,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 5.60,
+            "Ragionamento Logico": -0.80,
+            "Storia": 4.40,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "2003-08-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 51,
+          "result": 16.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": 1.80
+          }
+        },
+        {
+          "birthDate": "2000-10-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 52,
+          "result": 15.10,
+          "sectionsResults": {
+            "Cultura Generale": 3.70,
+            "Ragionamento Logico": -2.00,
+            "Storia": 2.60,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2002-07-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 53,
+          "result": 14.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -0.50,
+            "Storia": 1.70,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "2001-01-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 54,
+          "result": 14.40,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": 0.30,
+            "Storia": 2.20,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 55,
+          "result": 13.40,
+          "sectionsResults": {
+            "Cultura Generale": 0.00,
+            "Ragionamento Logico": 0.30,
+            "Storia": 4.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.00
+          }
+        },
+        {
+          "birthDate": "1993-10-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 56,
+          "result": 13.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2001-11-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 57,
+          "result": 10.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "2003-03-31",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 58,
+          "result": 8.70,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.50,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2001-12-14",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 59,
+          "result": 8.60,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2003-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 60,
+          "result": 6.50,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 2.60,
+            "Storia": 1.80,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "2003-12-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 61,
+          "result": 6.40,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.40,
+            "Storia": 1.10,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.30
+          }
+        },
+        {
+          "birthDate": "2003-04-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 62,
+          "result": -0.80,
+          "sectionsResults": {
+            "Cultura Generale": 0.60,
+            "Ragionamento Logico": 1.40,
+            "Storia": -4.80,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -1.30
+          }
+        }
+      ]
+    },
+    {
+      "location": "MANTOVA",
+      "sections": [
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "title": "PROGETTAZIONE DELL'ARCHITETTURA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Cultura Generale",
+        "Ragionamento Logico",
+        "Storia",
+        "Disegno e Rappresentazione",
+        "Fisica e Matematica"
+      ],
+      "rows": [
+        {
+          "birthDate": "2000-12-22",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 33.20,
+          "sectionsResults": {
+            "Cultura Generale": 0.30,
+            "Ragionamento Logico": 2.20,
+            "Storia": 14.20,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.50
+          }
+        },
+        {
+          "birthDate": "2001-09-04",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 32.00,
+          "sectionsResults": {
+            "Cultura Generale": 9.00,
+            "Ragionamento Logico": 3.30,
+            "Storia": 12.30,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2004-07-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 1.80,
+            "Storia": 12.70,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2002-11-22",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.30,
+            "Storia": 8.90,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2003-09-21",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 30.10,
+          "sectionsResults": {
+            "Cultura Generale": 2.50,
+            "Ragionamento Logico": 1.40,
+            "Storia": 16.10,
+            "Disegno e Rappresentazione": 6.00,
+            "Fisica e Matematica": 4.10
+          }
+        },
+        {
+          "birthDate": "1999-08-04",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 27.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 10.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2000-05-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 27.70,
+          "sectionsResults": {
+            "Cultura Generale": 1.10,
+            "Ragionamento Logico": 6.00,
+            "Storia": 4.50,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.10
+          }
+        },
+        {
+          "birthDate": "2002-03-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 8,
+          "result": 26.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.10,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 4.10
+          }
+        },
+        {
+          "birthDate": "2001-09-21",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 9,
+          "result": 26.50,
+          "sectionsResults": {
+            "Cultura Generale": 10.50,
+            "Ragionamento Logico": 4.10,
+            "Storia": 0.70,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2002-01-22",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 10,
+          "result": 26.20,
+          "sectionsResults": {
+            "Cultura Generale": 2.60,
+            "Ragionamento Logico": 3.00,
+            "Storia": 4.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 7.50
+          }
+        },
+        {
+          "birthDate": "2000-01-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 11,
+          "result": 25.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.30,
+            "Storia": 8.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2002-04-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 12,
+          "result": 25.60,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.70,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2001-05-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 13,
+          "result": 25.30,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 2.20,
+            "Storia": 5.20,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-05-09",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 14,
+          "result": 25.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": -0.10,
+            "Storia": 2.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2003-09-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 15,
+          "result": 24.90,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 2.20,
+            "Storia": 8.20,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-02-03",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 16,
+          "result": 24.90,
+          "sectionsResults": {
+            "Cultura Generale": 1.10,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.40,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 6.70
+          }
+        },
+        {
+          "birthDate": "2002-06-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 17,
+          "result": 24.80,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 0.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 1.40
+          }
+        },
+        {
+          "birthDate": "2002-03-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 18,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": 3.70,
+            "Storia": 6.60,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2002-10-11",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 19,
+          "result": 24.40,
+          "sectionsResults": {
+            "Cultura Generale": 3.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 4.80
+          }
+        },
+        {
+          "birthDate": "1999-03-03",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 20,
+          "result": 24.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 4.80,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 5.20
+          }
+        },
+        {
+          "birthDate": "2001-09-19",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 21,
+          "result": 24.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2003-06-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 22,
+          "result": 23.40,
+          "sectionsResults": {
+            "Cultura Generale": 8.60,
+            "Ragionamento Logico": 2.60,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-07-03",
+          "canEnroll": true,
+          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 23,
+          "result": 23.30,
+          "sectionsResults": {
+            "Cultura Generale": 2.90,
+            "Ragionamento Logico": 3.70,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 3.70
+          }
+        },
+        {
+          "birthDate": "2002-05-27",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 24,
+          "result": 22.60,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 3.30,
+            "Storia": 13.10,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.20
+          }
+        },
+        {
+          "birthDate": "1998-05-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 25,
+          "result": 22.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 2.60,
+            "Storia": 3.70,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "1993-07-12",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 26,
+          "result": 21.80,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 2.50,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2001-03-20",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 27,
+          "result": 21.20,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 0.70,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 4.50,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "2002-04-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 28,
+          "result": 21.10,
+          "sectionsResults": {
+            "Cultura Generale": 6.70,
+            "Ragionamento Logico": 5.20,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 4.50
+          }
+        },
+        {
+          "birthDate": "1999-07-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 29,
+          "result": 20.80,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 0.30,
+            "Storia": 8.20,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 3.00
+          }
+        },
+        {
+          "birthDate": "2002-12-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 30,
+          "result": 20.40,
+          "sectionsResults": {
+            "Cultura Generale": 3.70,
+            "Ragionamento Logico": 0.30,
+            "Storia": 10.10,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2002-11-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 31,
+          "result": 20.20,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.00,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2002-11-26",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 32,
+          "result": 20.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 3.30,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "1999-07-17",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 33,
+          "result": 19.30,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": -0.80,
+            "Storia": 6.30,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": -0.80
+          }
+        },
+        {
+          "birthDate": "1997-03-30",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 34,
+          "result": 19.20,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 2.60,
+            "Storia": 5.50,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 2.60
+          }
+        },
+        {
+          "birthDate": "1992-11-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 35,
+          "result": 18.70,
+          "sectionsResults": {
+            "Cultura Generale": 0.60,
+            "Ragionamento Logico": 5.20,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -2.00
+          }
+        },
+        {
+          "birthDate": "2001-09-15",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 36,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -1.60,
+            "Storia": 2.10,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 5.60
+          }
+        },
+        {
+          "birthDate": "2003-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 37,
+          "result": 18.00,
+          "sectionsResults": {
+            "Cultura Generale": 2.50,
+            "Ragionamento Logico": 0.30,
+            "Storia": 11.20,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2000-12-07",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 38,
+          "result": 17.80,
+          "sectionsResults": {
+            "Cultura Generale": 5.60,
+            "Ragionamento Logico": 2.60,
+            "Storia": 2.90,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "1999-03-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 39,
+          "result": 17.60,
+          "sectionsResults": {
+            "Cultura Generale": 0.00,
+            "Ragionamento Logico": 3.00,
+            "Storia": 4.50,
+            "Disegno e Rappresentazione": 5.60,
+            "Fisica e Matematica": 4.50
+          }
+        },
+        {
+          "birthDate": "2002-07-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 40,
+          "result": 17.10,
+          "sectionsResults": {
+            "Cultura Generale": 8.20,
+            "Ragionamento Logico": 1.40,
+            "Storia": -0.60,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": -0.90
+          }
+        },
+        {
+          "birthDate": "1974-06-25",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 41,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 5.20,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 3.30,
+            "Fisica e Matematica": -3.20
+          }
+        },
+        {
+          "birthDate": "2002-04-06",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 42,
+          "result": 16.30,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": -0.50,
+            "Storia": 2.80,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 0.60
+          }
+        },
+        {
+          "birthDate": "2003-08-02",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 43,
+          "result": 16.10,
+          "sectionsResults": {
+            "Cultura Generale": 1.40,
+            "Ragionamento Logico": 3.70,
+            "Storia": 7.80,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": 1.80
+          }
+        },
+        {
+          "birthDate": "2000-10-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 44,
+          "result": 15.10,
+          "sectionsResults": {
+            "Cultura Generale": 3.70,
+            "Ragionamento Logico": -2.00,
+            "Storia": 2.60,
+            "Disegno e Rappresentazione": 7.50,
+            "Fisica e Matematica": 3.30
+          }
+        },
+        {
+          "birthDate": "2002-07-08",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 45,
+          "result": 14.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.80,
+            "Ragionamento Logico": -0.50,
+            "Storia": 1.70,
+            "Disegno e Rappresentazione": 7.10,
+            "Fisica e Matematica": 1.50
+          }
+        },
+        {
+          "birthDate": "2001-01-01",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 46,
+          "result": 14.40,
+          "sectionsResults": {
+            "Cultura Generale": 7.10,
+            "Ragionamento Logico": 0.30,
+            "Storia": 2.20,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.70
+          }
+        },
+        {
+          "birthDate": "2002-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 47,
+          "result": 13.40,
+          "sectionsResults": {
+            "Cultura Generale": 0.00,
+            "Ragionamento Logico": 0.30,
+            "Storia": 4.10,
+            "Disegno e Rappresentazione": 9.00,
+            "Fisica e Matematica": 0.00
+          }
+        },
+        {
+          "birthDate": "1993-10-29",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 48,
+          "result": 13.00,
+          "sectionsResults": {
+            "Cultura Generale": 6.30,
+            "Ragionamento Logico": 3.70,
+            "Storia": 5.10,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -2.40
+          }
+        },
+        {
+          "birthDate": "2001-11-16",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 49,
+          "result": 10.60,
+          "sectionsResults": {
+            "Cultura Generale": 4.40,
+            "Ragionamento Logico": 1.40,
+            "Storia": 4.70,
+            "Disegno e Rappresentazione": 1.40,
+            "Fisica e Matematica": -1.30
+          }
+        },
+        {
+          "birthDate": "2003-03-31",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 50,
+          "result": 8.70,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.50,
+            "Disegno e Rappresentazione": 3.70,
+            "Fisica e Matematica": 2.20
+          }
+        },
+        {
+          "birthDate": "2001-12-14",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 51,
+          "result": 8.60,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 1.80,
+            "Storia": 1.00,
+            "Disegno e Rappresentazione": 5.20,
+            "Fisica e Matematica": -1.60
+          }
+        },
+        {
+          "birthDate": "2003-10-28",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 52,
+          "result": 6.50,
+          "sectionsResults": {
+            "Cultura Generale": 2.20,
+            "Ragionamento Logico": 2.60,
+            "Storia": 1.80,
+            "Disegno e Rappresentazione": 0.30,
+            "Fisica e Matematica": -0.40
+          }
+        },
+        {
+          "birthDate": "2003-12-18",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 53,
+          "result": 6.40,
+          "sectionsResults": {
+            "Cultura Generale": -0.50,
+            "Ragionamento Logico": 1.40,
+            "Storia": 1.10,
+            "Disegno e Rappresentazione": 4.10,
+            "Fisica e Matematica": 0.30
+          }
+        },
+        {
+          "birthDate": "2003-04-24",
+          "canEnroll": false,
+          "canEnrollInto": null,
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 54,
           "result": -0.80,
           "sectionsResults": {
             "Cultura Generale": 0.60,
@@ -11609,2850 +14453,6 @@
           }
         }
       ]
-    },
-    {
-      "location": "MANTOVA",
-      "sections": [
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "title": "PROGETTAZIONE DELL'ARCHITETTURA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "rows": [
-        {
-          "birthDate": "2000-12-22",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 33.20,
-          "sectionsResults": {
-            "Cultura Generale": 0.30,
-            "Ragionamento Logico": 2.20,
-            "Storia": 14.20,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.50
-          }
-        },
-        {
-          "birthDate": "2001-09-04",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 32.00,
-          "sectionsResults": {
-            "Cultura Generale": 9.00,
-            "Ragionamento Logico": 3.30,
-            "Storia": 12.30,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2004-07-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 1.80,
-            "Storia": 12.70,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2002-11-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.30,
-            "Storia": 8.90,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2003-09-21",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 2.50,
-            "Ragionamento Logico": 1.40,
-            "Storia": 16.10,
-            "Disegno e Rappresentazione": 6.00,
-            "Fisica e Matematica": 4.10
-          }
-        },
-        {
-          "birthDate": "1999-08-04",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 27.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 10.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2000-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 27.70,
-          "sectionsResults": {
-            "Cultura Generale": 1.10,
-            "Ragionamento Logico": 6.00,
-            "Storia": 4.50,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.10
-          }
-        },
-        {
-          "birthDate": "2002-03-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 26.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.10,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 4.10
-          }
-        },
-        {
-          "birthDate": "2001-09-21",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 26.50,
-          "sectionsResults": {
-            "Cultura Generale": 10.50,
-            "Ragionamento Logico": 4.10,
-            "Storia": 0.70,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2002-01-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 26.20,
-          "sectionsResults": {
-            "Cultura Generale": 2.60,
-            "Ragionamento Logico": 3.00,
-            "Storia": 4.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.50
-          }
-        },
-        {
-          "birthDate": "2000-01-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 25.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.30,
-            "Storia": 8.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2002-04-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 25.60,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.70,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2001-05-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 25.30,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 2.20,
-            "Storia": 5.20,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-05-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 25.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": -0.10,
-            "Storia": 2.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2003-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 24.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 2.20,
-            "Storia": 8.20,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-02-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 16,
-          "result": 24.90,
-          "sectionsResults": {
-            "Cultura Generale": 1.10,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.40,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 6.70
-          }
-        },
-        {
-          "birthDate": "2002-06-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 17,
-          "result": 24.80,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 0.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 1.40
-          }
-        },
-        {
-          "birthDate": "2002-03-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 18,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 6.60,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2002-10-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 19,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 3.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 4.80
-          }
-        },
-        {
-          "birthDate": "1999-03-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 20,
-          "result": 24.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 4.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2001-09-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 21,
-          "result": 24.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2003-06-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 22,
-          "result": 23.40,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 2.60,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-07-03",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 23,
-          "result": 23.30,
-          "sectionsResults": {
-            "Cultura Generale": 2.90,
-            "Ragionamento Logico": 3.70,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2002-05-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 24,
-          "result": 22.60,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 3.30,
-            "Storia": 13.10,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.20
-          }
-        },
-        {
-          "birthDate": "1998-05-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 25,
-          "result": 22.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 2.60,
-            "Storia": 3.70,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "1993-07-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 26,
-          "result": 21.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2001-03-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 27,
-          "result": 21.20,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 0.70,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 4.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-04-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 28,
-          "result": 21.10,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 5.20,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 4.50
-          }
-        },
-        {
-          "birthDate": "1999-07-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 29,
-          "result": 20.80,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 0.30,
-            "Storia": 8.20,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 3.00
-          }
-        },
-        {
-          "birthDate": "2002-12-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 30,
-          "result": 20.40,
-          "sectionsResults": {
-            "Cultura Generale": 3.70,
-            "Ragionamento Logico": 0.30,
-            "Storia": 10.10,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2002-11-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 31,
-          "result": 20.20,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2002-11-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 32,
-          "result": 20.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.30,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "1999-07-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 33,
-          "result": 19.30,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": -0.80,
-            "Storia": 6.30,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": -0.80
-          }
-        },
-        {
-          "birthDate": "1997-03-30",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 34,
-          "result": 19.20,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 2.60,
-            "Storia": 5.50,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "1992-11-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 35,
-          "result": 18.70,
-          "sectionsResults": {
-            "Cultura Generale": 0.60,
-            "Ragionamento Logico": 5.20,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -2.00
-          }
-        },
-        {
-          "birthDate": "2001-09-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 36,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -1.60,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2003-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 37,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 2.50,
-            "Ragionamento Logico": 0.30,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2000-12-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 38,
-          "result": 17.80,
-          "sectionsResults": {
-            "Cultura Generale": 5.60,
-            "Ragionamento Logico": 2.60,
-            "Storia": 2.90,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "1999-03-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 39,
-          "result": 17.60,
-          "sectionsResults": {
-            "Cultura Generale": 0.00,
-            "Ragionamento Logico": 3.00,
-            "Storia": 4.50,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 4.50
-          }
-        },
-        {
-          "birthDate": "2002-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 40,
-          "result": 17.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": -0.60,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -0.90
-          }
-        },
-        {
-          "birthDate": "1974-06-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 41,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -3.20
-          }
-        },
-        {
-          "birthDate": "2002-04-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 42,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": -0.50,
-            "Storia": 2.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2003-08-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 43,
-          "result": 16.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": 1.80
-          }
-        },
-        {
-          "birthDate": "2000-10-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 44,
-          "result": 15.10,
-          "sectionsResults": {
-            "Cultura Generale": 3.70,
-            "Ragionamento Logico": -2.00,
-            "Storia": 2.60,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2002-07-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 45,
-          "result": 14.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -0.50,
-            "Storia": 1.70,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "2001-01-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 46,
-          "result": 14.40,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": 0.30,
-            "Storia": 2.20,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 47,
-          "result": 13.40,
-          "sectionsResults": {
-            "Cultura Generale": 0.00,
-            "Ragionamento Logico": 0.30,
-            "Storia": 4.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.00
-          }
-        },
-        {
-          "birthDate": "1993-10-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 48,
-          "result": 13.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2001-11-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 49,
-          "result": 10.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "2003-03-31",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 50,
-          "result": 8.70,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.50,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2001-12-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 51,
-          "result": 8.60,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2003-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 52,
-          "result": 6.50,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 2.60,
-            "Storia": 1.80,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "2003-12-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 53,
-          "result": 6.40,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.40,
-            "Storia": 1.10,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.30
-          }
-        },
-        {
-          "birthDate": "2003-04-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 54,
-          "result": -0.80,
-          "sectionsResults": {
-            "Cultura Generale": 0.60,
-            "Ragionamento Logico": 1.40,
-            "Storia": -4.80,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -1.30
-          }
-        }
-      ]
-    },
-    {
-      "location": "LECCO",
-      "sections": [
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "title": "INGEGNERIA EDILE - ARCHITETTURA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "rows": [
-        {
-          "birthDate": "1973-11-01",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA EDILE - ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 30.60,
-          "sectionsResults": {
-            "Cultura Generale": 12.00,
-            "Ragionamento Logico": 4.50,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -0.80
-          }
-        },
-        {
-          "birthDate": "1999-08-04",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA EDILE - ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 27.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 10.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2000-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 27.70,
-          "sectionsResults": {
-            "Cultura Generale": 1.10,
-            "Ragionamento Logico": 6.00,
-            "Storia": 4.50,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.10
-          }
-        },
-        {
-          "birthDate": "2002-03-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 26.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.10,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 4.10
-          }
-        },
-        {
-          "birthDate": "2000-01-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 25.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.30,
-            "Storia": 8.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2002-04-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 25.60,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.70,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2001-05-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 25.30,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 2.20,
-            "Storia": 5.20,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2003-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 24.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 2.20,
-            "Storia": 8.20,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-06-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 24.80,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 0.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 1.40
-          }
-        },
-        {
-          "birthDate": "2002-03-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 6.60,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2002-10-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 3.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 4.80
-          }
-        },
-        {
-          "birthDate": "1999-03-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 24.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 4.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2001-09-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 24.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "1998-05-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 22.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 2.60,
-            "Storia": 3.70,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "1993-07-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 21.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2001-03-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 16,
-          "result": 21.20,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 0.70,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 4.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-04-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 17,
-          "result": 21.10,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 5.20,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 4.50
-          }
-        },
-        {
-          "birthDate": "2002-11-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 18,
-          "result": 20.20,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2002-11-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 19,
-          "result": 20.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.30,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "1999-07-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 20,
-          "result": 19.30,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": -0.80,
-            "Storia": 6.30,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": -0.80
-          }
-        },
-        {
-          "birthDate": "2001-09-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 21,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -1.60,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2003-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 22,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 2.50,
-            "Ragionamento Logico": 0.30,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2000-12-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 23,
-          "result": 17.80,
-          "sectionsResults": {
-            "Cultura Generale": 5.60,
-            "Ragionamento Logico": 2.60,
-            "Storia": 2.90,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "2002-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 24,
-          "result": 17.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": -0.60,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -0.90
-          }
-        },
-        {
-          "birthDate": "1974-06-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 25,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -3.20
-          }
-        },
-        {
-          "birthDate": "2002-04-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 26,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": -0.50,
-            "Storia": 2.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2003-08-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 27,
-          "result": 16.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": 1.80
-          }
-        },
-        {
-          "birthDate": "2002-07-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 28,
-          "result": 14.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -0.50,
-            "Storia": 1.70,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "2001-01-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 29,
-          "result": 14.40,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": 0.30,
-            "Storia": 2.20,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 30,
-          "result": 13.40,
-          "sectionsResults": {
-            "Cultura Generale": 0.00,
-            "Ragionamento Logico": 0.30,
-            "Storia": 4.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.00
-          }
-        },
-        {
-          "birthDate": "1993-10-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 31,
-          "result": 13.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2001-11-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 32,
-          "result": 10.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "2002-03-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 33,
-          "result": 10.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 1.40,
-            "Storia": 0.90,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2003-03-31",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 34,
-          "result": 8.70,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.50,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2001-12-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 35,
-          "result": 8.60,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2003-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 36,
-          "result": 6.50,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 2.60,
-            "Storia": 1.80,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "2003-12-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 37,
-          "result": 6.40,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.40,
-            "Storia": 1.10,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.30
-          }
-        },
-        {
-          "birthDate": "2003-04-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 38,
-          "result": -0.80,
-          "sectionsResults": {
-            "Cultura Generale": 0.60,
-            "Ragionamento Logico": 1.40,
-            "Storia": -4.80,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -1.30
-          }
-        }
-      ]
-    },
-    {
-      "location": "PIACENZA",
-      "sections": [
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "title": "PROGETTAZIONE DELL'ARCHITETTURA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Cultura Generale",
-        "Ragionamento Logico",
-        "Storia",
-        "Disegno e Rappresentazione",
-        "Fisica e Matematica"
-      ],
-      "rows": [
-        {
-          "birthDate": "1999-04-23",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 35.80,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 4.10,
-            "Storia": 10.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2001-09-15",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 34.70,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 0.70,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2001-09-04",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 32.00,
-          "sectionsResults": {
-            "Cultura Generale": 9.00,
-            "Ragionamento Logico": 3.30,
-            "Storia": 12.30,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2004-07-20",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 1.80,
-            "Storia": 12.70,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2002-11-22",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.30,
-            "Storia": 8.90,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2003-09-21",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 30.10,
-          "sectionsResults": {
-            "Cultura Generale": 2.50,
-            "Ragionamento Logico": 1.40,
-            "Storia": 16.10,
-            "Disegno e Rappresentazione": 6.00,
-            "Fisica e Matematica": 4.10
-          }
-        },
-        {
-          "birthDate": "1999-07-15",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 29.70,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.00,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2000-05-02",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 8,
-          "result": 29.50,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 2.60,
-            "Storia": 5.60,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 12.00
-          }
-        },
-        {
-          "birthDate": "2002-08-05",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 9,
-          "result": 29.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 2.60,
-            "Storia": 8.60,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "1999-03-07",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 10,
-          "result": 28.30,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 4.50,
-            "Storia": 5.50,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 1.10
-          }
-        },
-        {
-          "birthDate": "2000-02-09",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 11,
-          "result": 28.30,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": 3.70,
-            "Storia": 5.90,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "1999-08-04",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 12,
-          "result": 27.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 10.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2001-02-20",
-          "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 13,
-          "result": 27.90,
-          "sectionsResults": {
-            "Cultura Generale": 1.80,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.90,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 9.00
-          }
-        },
-        {
-          "birthDate": "2000-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 14,
-          "result": 27.70,
-          "sectionsResults": {
-            "Cultura Generale": 1.10,
-            "Ragionamento Logico": 6.00,
-            "Storia": 4.50,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.10
-          }
-        },
-        {
-          "birthDate": "2002-03-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 15,
-          "result": 26.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.10,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 4.10
-          }
-        },
-        {
-          "birthDate": "2002-04-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 16,
-          "result": 26.40,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": 1.40,
-            "Storia": 6.30,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-01-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 17,
-          "result": 26.20,
-          "sectionsResults": {
-            "Cultura Generale": 2.60,
-            "Ragionamento Logico": 3.00,
-            "Storia": 4.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 7.50
-          }
-        },
-        {
-          "birthDate": "2000-01-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 18,
-          "result": 25.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.30,
-            "Storia": 8.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "2002-04-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 19,
-          "result": 25.60,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.70,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2001-05-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 20,
-          "result": 25.30,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 2.20,
-            "Storia": 5.20,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-05-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 21,
-          "result": 25.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": -0.10,
-            "Storia": 2.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2003-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 22,
-          "result": 24.90,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 2.20,
-            "Storia": 8.20,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-02-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 23,
-          "result": 24.90,
-          "sectionsResults": {
-            "Cultura Generale": 1.10,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.40,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 6.70
-          }
-        },
-        {
-          "birthDate": "2002-06-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 24,
-          "result": 24.80,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 0.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 1.40
-          }
-        },
-        {
-          "birthDate": "2002-03-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 25,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": 3.70,
-            "Storia": 6.60,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 3.70
-          }
-        },
-        {
-          "birthDate": "2002-10-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 26,
-          "result": 24.40,
-          "sectionsResults": {
-            "Cultura Generale": 3.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 4.80
-          }
-        },
-        {
-          "birthDate": "1999-03-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 27,
-          "result": 24.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 4.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 5.20
-          }
-        },
-        {
-          "birthDate": "2001-09-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 28,
-          "result": 24.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2003-06-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 29,
-          "result": 23.40,
-          "sectionsResults": {
-            "Cultura Generale": 8.60,
-            "Ragionamento Logico": 2.60,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-05-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 30,
-          "result": 22.60,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 3.30,
-            "Storia": 13.10,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.20
-          }
-        },
-        {
-          "birthDate": "1998-05-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 31,
-          "result": 22.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 2.60,
-            "Storia": 3.70,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "2001-10-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 32,
-          "result": 22.00,
-          "sectionsResults": {
-            "Cultura Generale": 3.00,
-            "Ragionamento Logico": 2.20,
-            "Storia": 4.80,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 3.00
-          }
-        },
-        {
-          "birthDate": "1993-07-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 33,
-          "result": 21.80,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 2.50,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2001-03-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 34,
-          "result": 21.20,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 0.70,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 4.50,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "2002-04-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 35,
-          "result": 21.10,
-          "sectionsResults": {
-            "Cultura Generale": 6.70,
-            "Ragionamento Logico": 5.20,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 4.50
-          }
-        },
-        {
-          "birthDate": "1999-07-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 36,
-          "result": 20.80,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 0.30,
-            "Storia": 8.20,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 3.00
-          }
-        },
-        {
-          "birthDate": "2002-12-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 37,
-          "result": 20.40,
-          "sectionsResults": {
-            "Cultura Generale": 3.70,
-            "Ragionamento Logico": 0.30,
-            "Storia": 10.10,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2002-11-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 38,
-          "result": 20.20,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.00,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2002-11-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 39,
-          "result": 20.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 3.30,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "1999-07-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 40,
-          "result": 19.30,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": -0.80,
-            "Storia": 6.30,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": -0.80
-          }
-        },
-        {
-          "birthDate": "1997-03-30",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 41,
-          "result": 19.20,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 2.60,
-            "Storia": 5.50,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 2.60
-          }
-        },
-        {
-          "birthDate": "1992-11-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 42,
-          "result": 18.70,
-          "sectionsResults": {
-            "Cultura Generale": 0.60,
-            "Ragionamento Logico": 5.20,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -2.00
-          }
-        },
-        {
-          "birthDate": "2001-09-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 43,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -1.60,
-            "Storia": 2.10,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 5.60
-          }
-        },
-        {
-          "birthDate": "2003-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 44,
-          "result": 18.00,
-          "sectionsResults": {
-            "Cultura Generale": 2.50,
-            "Ragionamento Logico": 0.30,
-            "Storia": 11.20,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2000-12-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 45,
-          "result": 17.80,
-          "sectionsResults": {
-            "Cultura Generale": 5.60,
-            "Ragionamento Logico": 2.60,
-            "Storia": 2.90,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "1999-03-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 46,
-          "result": 17.60,
-          "sectionsResults": {
-            "Cultura Generale": 0.00,
-            "Ragionamento Logico": 3.00,
-            "Storia": 4.50,
-            "Disegno e Rappresentazione": 5.60,
-            "Fisica e Matematica": 4.50
-          }
-        },
-        {
-          "birthDate": "2002-07-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 47,
-          "result": 17.10,
-          "sectionsResults": {
-            "Cultura Generale": 8.20,
-            "Ragionamento Logico": 1.40,
-            "Storia": -0.60,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": -0.90
-          }
-        },
-        {
-          "birthDate": "1974-06-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 48,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 5.20,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -3.20
-          }
-        },
-        {
-          "birthDate": "2002-04-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 49,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": -0.50,
-            "Storia": 2.80,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 0.60
-          }
-        },
-        {
-          "birthDate": "1988-12-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 50,
-          "result": 16.30,
-          "sectionsResults": {
-            "Cultura Generale": 5.60,
-            "Ragionamento Logico": -0.80,
-            "Storia": 4.40,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "2003-08-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 51,
-          "result": 16.10,
-          "sectionsResults": {
-            "Cultura Generale": 1.40,
-            "Ragionamento Logico": 3.70,
-            "Storia": 7.80,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": 1.80
-          }
-        },
-        {
-          "birthDate": "2000-10-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 52,
-          "result": 15.10,
-          "sectionsResults": {
-            "Cultura Generale": 3.70,
-            "Ragionamento Logico": -2.00,
-            "Storia": 2.60,
-            "Disegno e Rappresentazione": 7.50,
-            "Fisica e Matematica": 3.30
-          }
-        },
-        {
-          "birthDate": "2002-07-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 53,
-          "result": 14.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.80,
-            "Ragionamento Logico": -0.50,
-            "Storia": 1.70,
-            "Disegno e Rappresentazione": 7.10,
-            "Fisica e Matematica": 1.50
-          }
-        },
-        {
-          "birthDate": "2001-01-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 54,
-          "result": 14.40,
-          "sectionsResults": {
-            "Cultura Generale": 7.10,
-            "Ragionamento Logico": 0.30,
-            "Storia": 2.20,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.70
-          }
-        },
-        {
-          "birthDate": "2002-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 55,
-          "result": 13.40,
-          "sectionsResults": {
-            "Cultura Generale": 0.00,
-            "Ragionamento Logico": 0.30,
-            "Storia": 4.10,
-            "Disegno e Rappresentazione": 9.00,
-            "Fisica e Matematica": 0.00
-          }
-        },
-        {
-          "birthDate": "1993-10-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 56,
-          "result": 13.00,
-          "sectionsResults": {
-            "Cultura Generale": 6.30,
-            "Ragionamento Logico": 3.70,
-            "Storia": 5.10,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -2.40
-          }
-        },
-        {
-          "birthDate": "2001-11-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 57,
-          "result": 10.60,
-          "sectionsResults": {
-            "Cultura Generale": 4.40,
-            "Ragionamento Logico": 1.40,
-            "Storia": 4.70,
-            "Disegno e Rappresentazione": 1.40,
-            "Fisica e Matematica": -1.30
-          }
-        },
-        {
-          "birthDate": "2003-03-31",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 58,
-          "result": 8.70,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.50,
-            "Disegno e Rappresentazione": 3.70,
-            "Fisica e Matematica": 2.20
-          }
-        },
-        {
-          "birthDate": "2001-12-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 59,
-          "result": 8.60,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 1.80,
-            "Storia": 1.00,
-            "Disegno e Rappresentazione": 5.20,
-            "Fisica e Matematica": -1.60
-          }
-        },
-        {
-          "birthDate": "2003-10-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 60,
-          "result": 6.50,
-          "sectionsResults": {
-            "Cultura Generale": 2.20,
-            "Ragionamento Logico": 2.60,
-            "Storia": 1.80,
-            "Disegno e Rappresentazione": 0.30,
-            "Fisica e Matematica": -0.40
-          }
-        },
-        {
-          "birthDate": "2003-12-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 61,
-          "result": 6.40,
-          "sectionsResults": {
-            "Cultura Generale": -0.50,
-            "Ragionamento Logico": 1.40,
-            "Storia": 1.10,
-            "Disegno e Rappresentazione": 4.10,
-            "Fisica e Matematica": 0.30
-          }
-        },
-        {
-          "birthDate": "2003-04-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
-          "englishCorrectAnswers": null,
-          "id": null,
-          "ofa": {},
-          "positionAbsolute": null,
-          "positionCourse": 62,
-          "result": -0.80,
-          "sectionsResults": {
-            "Cultura Generale": 0.60,
-            "Ragionamento Logico": 1.40,
-            "Storia": -4.80,
-            "Disegno e Rappresentazione": 3.30,
-            "Fisica e Matematica": -1.30
-          }
-        }
-      ]
     }
   ],
   "byMerit": {
@@ -18881,7 +18881,7 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-27T23:01:14.2785961+00:00",
+  "lastUpdate": "2023-06-29T13:01:42.8227965+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -18902,6 +18902,22 @@
         "title": "PROGETTAZIONE DELL'ARCHITETTURA"
       },
       {
+        "averageBirthYear": 1999.5263157894738,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfa": {},
+        "averageOfWhoPassed": 29.25,
+        "averagePartialScores": {
+          "Cultura Generale": 4.8184210526315789473684210526,
+          "Ragionamento Logico": 2.4236842105263157894736842105,
+          "Storia": 4.2236842105263157894736842105,
+          "Disegno e Rappresentazione": 6.0105263157894736842105263158,
+          "Fisica e Matematica": 1.1473684210526315789473684211
+        },
+        "averageScoresOfAllStudents": 18.623684210526315789473684211,
+        "location": "LECCO",
+        "title": "INGEGNERIA EDILE - ARCHITETTURA"
+      },
+      {
         "averageBirthYear": 2000.90756302521,
         "averageEnglishCorrectAnswers": null,
         "averageOfa": {},
@@ -18918,20 +18934,20 @@
         "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
       },
       {
-        "averageBirthYear": 2000.8532934131736,
+        "averageBirthYear": 2000.1451612903227,
         "averageEnglishCorrectAnswers": null,
         "averageOfa": {},
-        "averageOfWhoPassed": 42.414,
+        "averageOfWhoPassed": 30.466666666666666666666666667,
         "averagePartialScores": {
-          "Cultura Generale": 5.5167664670658682634730538922,
-          "Ragionamento Logico": 3.5811377245508982035928143713,
-          "Storia": 6.044910179640718562874251497,
-          "Disegno e Rappresentazione": 6.8272455089820359281437125749,
-          "Fisica e Matematica": 3.5829341317365269461077844311
+          "Cultura Generale": 4.7548387096774193548387096774,
+          "Ragionamento Logico": 2.408064516129032258064516129,
+          "Storia": 5.5758064516129032258064516129,
+          "Disegno e Rappresentazione": 6.5403225806451612903225806452,
+          "Fisica e Matematica": 2.1854838709677419354838709677
         },
-        "averageScoresOfAllStudents": 25.552994011976047904191616766,
-        "location": "MI LEONARDO",
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+        "averageScoresOfAllStudents": 21.464516129032258064516129032,
+        "location": "PIACENZA",
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA"
       },
       {
         "averageBirthYear": 2000.3703703703704,
@@ -18950,36 +18966,20 @@
         "title": "PROGETTAZIONE DELL'ARCHITETTURA"
       },
       {
-        "averageBirthYear": 1999.5263157894738,
+        "averageBirthYear": 2000.8532934131736,
         "averageEnglishCorrectAnswers": null,
         "averageOfa": {},
-        "averageOfWhoPassed": 29.25,
+        "averageOfWhoPassed": 42.414,
         "averagePartialScores": {
-          "Cultura Generale": 4.8184210526315789473684210526,
-          "Ragionamento Logico": 2.4236842105263157894736842105,
-          "Storia": 4.2236842105263157894736842105,
-          "Disegno e Rappresentazione": 6.0105263157894736842105263158,
-          "Fisica e Matematica": 1.1473684210526315789473684211
+          "Cultura Generale": 5.5167664670658682634730538922,
+          "Ragionamento Logico": 3.5811377245508982035928143713,
+          "Storia": 6.044910179640718562874251497,
+          "Disegno e Rappresentazione": 6.8272455089820359281437125749,
+          "Fisica e Matematica": 3.5829341317365269461077844311
         },
-        "averageScoresOfAllStudents": 18.623684210526315789473684211,
-        "location": "LECCO",
-        "title": "INGEGNERIA EDILE - ARCHITETTURA"
-      },
-      {
-        "averageBirthYear": 2000.1451612903227,
-        "averageEnglishCorrectAnswers": null,
-        "averageOfa": {},
-        "averageOfWhoPassed": 30.466666666666666666666666667,
-        "averagePartialScores": {
-          "Cultura Generale": 4.7548387096774193548387096774,
-          "Ragionamento Logico": 2.408064516129032258064516129,
-          "Storia": 5.5758064516129032258064516129,
-          "Disegno e Rappresentazione": 6.5403225806451612903225806452,
-          "Fisica e Matematica": 2.1854838709677419354838709677
-        },
-        "averageScoresOfAllStudents": 21.464516129032258064516129032,
-        "location": "PIACENZA",
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+        "averageScoresOfAllStudents": 25.552994011976047904191616766,
+        "location": "MI LEONARDO",
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
       }
     ],
     "howManyCanEnroll": 368,
