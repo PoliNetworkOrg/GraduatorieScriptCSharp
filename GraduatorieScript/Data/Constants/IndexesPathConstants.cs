@@ -2,5 +2,5 @@
 
 public static class IndexesPathConstants
 {
-    public const string MainJsonFilename = "main.json";
+    public const string BySchoolYearFilename = "bySchoolYear.json";
 }

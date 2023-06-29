@@ -47,7 +47,7 @@ public class BySchoolYearJson : IndexJsonBase
     public static RankingsSet? Parse(string dataFolder)
     {
         var outFolder = Path.Join(dataFolder, ConstantsGeneral.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, IndexesPathConstants.MainJsonFilename);
+        var mainJsonPath = Path.Join(outFolder, IndexesPathConstants.BySchoolYearFilename);
         try
         {
             var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
