@@ -16,26 +16,7 @@ public class RankingsSet
         LastUpdate = DateTime.Now;
     }
 
-    public static RankingsSet Merge(params RankingsSet?[] sets)
-    {
-        var fixedSets = sets.Where(set => set is not null);
-        var rankingsSet = new RankingsSet
-        {
-            LastUpdate = fixedSets.Max(x => x!.LastUpdate ?? DateTime.Now),
-            Rankings = new List<Ranking>()
-        };
 
-        foreach (var set in sets)
-            if (set != null)
-                rankingsSet.MergeSet(set);
-
-        return rankingsSet;
-    }
-
-    public void MergeSet(RankingsSet rankingsSet)
-    {
-        foreach (var ranking in rankingsSet.Rankings) AddRanking(ranking);
-    }
 
     public void AddRanking(Ranking ranking)
     {

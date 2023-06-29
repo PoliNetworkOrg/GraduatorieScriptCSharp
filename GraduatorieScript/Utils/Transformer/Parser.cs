@@ -46,6 +46,7 @@ public static class Parser
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
         Parallel.Invoke(action);
 
+        rankingsSet.Rankings = rankingsSet.Rankings.OrderBy(x => x.School).ThenBy(x => x.Year).ThenBy(x => x.Url?.Url).ToList();
         return rankingsSet;
     }
 
@@ -290,6 +291,7 @@ public static class Parser
             };
         }
 
+        ranking.ByCourse = ranking.ByCourse.OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
         StatsCalculate.CalculateStats(ranking);
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
