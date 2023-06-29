@@ -68,4 +68,16 @@ public class StatsJson
         var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
+
+    public int GetHashWithoutLastUpdate()
+    {
+        int i = 0;
+        foreach (var variable in this.Stats)
+        {
+            var i2 = variable.Key ^ variable.Value.GetHashWithoutLastUpdate();
+            i ^= i2;
+        }
+
+        return i;
+    }
 }
