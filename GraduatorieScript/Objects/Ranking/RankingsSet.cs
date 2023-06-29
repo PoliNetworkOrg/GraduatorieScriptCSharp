@@ -1,18 +1,18 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects;
+namespace GraduatorieScript.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingsSet
 {
     public DateTime? LastUpdate;
-    public List<Ranking.Ranking> Rankings;
+    public List<Ranking> Rankings;
 
     public RankingsSet()
     {
-        Rankings = new List<Ranking.Ranking>();
+        Rankings = new List<Ranking>();
         LastUpdate = DateTime.Now;
     }
 
@@ -22,7 +22,7 @@ public class RankingsSet
         var rankingsSet = new RankingsSet
         {
             LastUpdate = fixedSets.Max(x => x!.LastUpdate ?? DateTime.Now),
-            Rankings = new List<Ranking.Ranking>()
+            Rankings = new List<Ranking>()
         };
 
         foreach (var set in sets)
@@ -37,7 +37,7 @@ public class RankingsSet
         foreach (var ranking in rankingsSet.Rankings) AddRanking(ranking);
     }
 
-    public void AddRanking(Ranking.Ranking ranking)
+    public void AddRanking(Ranking ranking)
     {
         var alreadyPresent = Contains(ranking);
         if (!alreadyPresent)
@@ -46,7 +46,7 @@ public class RankingsSet
         if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
     }
 
-    public bool Contains(Ranking.Ranking ranking)
+    public bool Contains(Ranking ranking)
     {
         return Rankings.Any(v => v.IsSimilarTo(ranking));
     }

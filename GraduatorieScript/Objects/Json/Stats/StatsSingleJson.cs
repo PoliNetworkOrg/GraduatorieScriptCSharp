@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Objects.Json.Stats;
 
@@ -10,7 +11,7 @@ public class StatsSingleCourseJson
     public SingleCourseJson? SingleCourseJson;
     public RankingSummary? Stats;
 
-    public static StatsSingleCourseJson From(Ranking.Ranking ranking)
+    public static StatsSingleCourseJson From(Ranking ranking)
     {
         return new StatsSingleCourseJson
         {

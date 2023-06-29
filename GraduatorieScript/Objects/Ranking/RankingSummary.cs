@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects;
+namespace GraduatorieScript.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -27,7 +27,7 @@ public class RankingSummary
         return i;
     }
 
-    public static RankingSummary From(Ranking.Ranking ranking)
+    public static RankingSummary From(Ranking ranking)
     {
         var byMeritRows = ranking.ByMerit?.Rows;
         var results = CalculateResultsScores(byMeritRows);
