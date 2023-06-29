@@ -1,4 +1,5 @@
 ﻿using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
@@ -42,7 +43,7 @@ public static class Program
 
     private static void SaveOutputs(string dataFolder, RankingsSet rankingsSet)
     {
-        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
+        var outFolder = Path.Join(dataFolder, ConstantsGeneral.OutputFolder);
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
     }
@@ -57,13 +58,13 @@ public static class Program
         // use it if passed or search the default
         var dataFolder = !string.IsNullOrEmpty(argsFolder)
             ? argsFolder
-            : PathUtils.FindFolder(Constants.DataFolder);
+            : PathUtils.FindFolder(ConstantsGeneral.DataFolder);
 
 
         if (!string.IsNullOrEmpty(dataFolder)) return dataFolder;
 
         // if not found, create it
         Console.WriteLine("[WARNING] dataFolder not found, creating it");
-        return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
+        return PathUtils.CreateAndReturnDataFolder(ConstantsGeneral.DataFolder);
     }
 }

@@ -1,4 +1,5 @@
 using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
 using HtmlAgilityPack;
@@ -198,7 +199,7 @@ public class OldScraper
         if (string.IsNullOrEmpty(currentLink))
             return;
 
-        if (currentLink.Contains(Constants.RisultatiAmmissionePolimiIt))
+        if (currentLink.Contains(ConstantsGeneral.RisultatiAmmissionePolimiIt))
         {
             rankingsList.Add(currentLink);
             return;
@@ -208,7 +209,7 @@ public class OldScraper
         var links = htmlDoc.DocumentNode.GetElementsByTagName("a")
             .Select(element =>
                 UrlUtils.UrlifyLocalHref(element.GetAttributeValue("href", string.Empty), HttpsPolimiIt.First()))
-            .Where(url => url.Contains(Constants.RisultatiAmmissionePolimiIt))
+            .Where(url => url.Contains(ConstantsGeneral.RisultatiAmmissionePolimiIt))
             .ToList();
 
         lock (rankingsList)

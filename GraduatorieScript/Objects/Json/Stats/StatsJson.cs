@@ -1,4 +1,5 @@
 ﻿using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -64,7 +65,7 @@ public class StatsJson
 
     private void WriteToFile(string outFolder)
     {
-        var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
+        var jsonPath = Path.Join(outFolder, ConstantsGeneral.StatsJsonFilename);
 
         if (ExitIfThereIsntAnUpdate(jsonPath)) return;
 
@@ -74,14 +75,23 @@ public class StatsJson
 
     private bool ExitIfThereIsntAnUpdate(string jsonPath)
     {
-        if (!File.Exists(jsonPath)) return false;
+        try
+        {
+            if (!File.Exists(jsonPath)) return false;
 
-        var read = File.ReadAllText(jsonPath);
-        var jsonRead = JsonConvert.DeserializeObject<StatsJson>(read);
-        var hashRead = jsonRead?.GetHashWithoutLastUpdate();
-        var hashThis = GetHashWithoutLastUpdate();
+            var read = File.ReadAllText(jsonPath);
+            var jsonRead = JsonConvert.DeserializeObject<StatsJson>(read);
+            var hashRead = jsonRead?.GetHashWithoutLastUpdate();
+            var hashThis = GetHashWithoutLastUpdate();
 
-        return hashRead == hashThis;
+            return hashRead == hashThis;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        return false;
     }
 
     public int GetHashWithoutLastUpdate()

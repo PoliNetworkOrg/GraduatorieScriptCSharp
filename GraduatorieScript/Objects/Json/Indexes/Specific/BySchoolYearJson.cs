@@ -1,4 +1,4 @@
-using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
@@ -46,8 +46,8 @@ public class BySchoolYearJson : IndexJsonBase
 
     public static RankingsSet? Parse(string dataFolder)
     {
-        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
+        var outFolder = Path.Join(dataFolder, ConstantsGeneral.OutputFolder);
+        var mainJsonPath = Path.Join(outFolder, IndexesPathConstants.MainJsonFilename);
         try
         {
             var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);

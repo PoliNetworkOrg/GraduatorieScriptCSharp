@@ -1,9 +1,9 @@
-﻿namespace GraduatorieScript.Data;
+﻿namespace GraduatorieScript.Data.Constants;
 
-public static class Constants
+public static class ConstantsGeneral
 {
     public const string RisultatiAmmissionePolimiIt = "www.risultati-ammissione.polimi.it";
-    public const string MainJsonFilename = "main.json";
+
     public const string StatsJsonFilename = "stats.json";
     public const string OutputFolder = "output";
     public const string HtmlFolder = "html";
