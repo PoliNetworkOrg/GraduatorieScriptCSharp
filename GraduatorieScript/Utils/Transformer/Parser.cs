@@ -41,7 +41,7 @@ public static class Parser
 
         Action Selector(HtmlPage index)
         {
-            return () => { GetRankingsSingle(index, rankingsSet, allHtmls); };
+            return () => { GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing); };
         }
 
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
@@ -125,7 +125,8 @@ public static class Parser
         Parallel.Invoke(action);
     }
 
-    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls)
+    private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls,
+        bool? argsConfigForceReparsing)
     {
         Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
         var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
@@ -134,8 +135,12 @@ public static class Parser
             var parsed = rankingsSet.Rankings[findIndex];
             if (parsed is { ByMerit: not null, ByCourse: not null })
             {
-                Console.WriteLine($"[DEBUG] skipping index {index.Url.Url}: already parsed");
-                return;
+                var configForceReparsing = argsConfigForceReparsing ?? false;
+                if (!configForceReparsing)
+                {
+                    Console.WriteLine($"[DEBUG] skipping index {index.Url.Url}: already parsed");
+                    return;
+                }
             }
         }
 
