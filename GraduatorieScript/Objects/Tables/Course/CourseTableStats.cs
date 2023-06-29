@@ -40,6 +40,7 @@ public class CourseTableStats
                 i ^= variable.Value.GetHashCode();
             }
 
+        //return result
         return i;
     }
 

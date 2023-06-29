@@ -50,7 +50,7 @@ public static class ScraperOutput
     {
         if (string.IsNullOrEmpty(dataFolder))
             return;
-        
+
         var filePath = GetFilePath(dataFolder);
         var output = "";
         var rankingUrls = rankingsUrls.Where(UrlUtils.CheckUrl);

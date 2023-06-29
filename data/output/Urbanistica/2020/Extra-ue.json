@@ -27,11 +27,11 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 84.00,
+          "result": 8400.0,
           "sectionsResults": {
-            "Colloquio": 44.00,
-            "Elaborato": 22.00,
-            "Lettera Motivazionale": 18.00
+            "Colloquio": 4400.0,
+            "Elaborato": 2200.0,
+            "Lettera Motivazionale": 1800.0
           }
         },
         {
@@ -43,11 +43,11 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 2,
-          "result": 79.00,
+          "result": 7900.0,
           "sectionsResults": {
-            "Colloquio": 43.00,
-            "Elaborato": 19.00,
-            "Lettera Motivazionale": 17.00
+            "Colloquio": 4300.0,
+            "Elaborato": 1900.0,
+            "Lettera Motivazionale": 1700.0
           }
         },
         {
@@ -59,11 +59,11 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 3,
-          "result": 64.00,
+          "result": 6400.0,
           "sectionsResults": {
-            "Colloquio": 34.00,
-            "Elaborato": 15.00,
-            "Lettera Motivazionale": 15.00
+            "Colloquio": 3400.0,
+            "Elaborato": 1500.0,
+            "Lettera Motivazionale": 1500.0
           }
         }
       ]
@@ -85,7 +85,7 @@
         "ofa": {},
         "positionAbsolute": 1,
         "positionCourse": null,
-        "result": 84.00,
+        "result": 8400.0,
         "sectionsResults": null
       },
       {
@@ -97,7 +97,7 @@
         "ofa": {},
         "positionAbsolute": 2,
         "positionCourse": null,
-        "result": 79.00,
+        "result": 7900.0,
         "sectionsResults": null
       },
       {
@@ -109,27 +109,27 @@
         "ofa": {},
         "positionAbsolute": 3,
         "positionCourse": null,
-        "result": 64.00,
+        "result": 6400.0,
         "sectionsResults": null
       }
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-29T18:58:44.6918929+00:00",
+  "lastUpdate": "2023-06-29T21:11:19.8442859+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
       {
         "averageBirthYear": 2001.0,
         "averageEnglishCorrectAnswers": null,
-        "averageOfWhoPassed": 75.666666666666666666666666667,
+        "averageOfWhoPassed": 7566.66667,
         "averagePartialScores": {
-          "Colloquio": 40.333333333333333333333333333,
-          "Elaborato": 18.666666666666666666666666667,
-          "Lettera Motivazionale": 16.666666666666666666666666667
+          "Colloquio": 4033.33333,
+          "Elaborato": 1866.66667,
+          "Lettera Motivazionale": 1666.66667
         },
-        "averageScoresOfAllStudents": 75.666666666666666666666666667,
-        "howManyOfa": null,
+        "averageScoresOfAllStudents": 7566.66667,
+        "howManyOfa": {},
         "location": null,
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
@@ -137,15 +137,15 @@
     "howManyCanEnroll": 3,
     "howManyStudents": 3,
     "resultsSummarized": {
-      "84": 1,
-      "79": 1,
-      "64": 1
+      "8400": 1,
+      "7900": 1,
+      "6400": 1
     }
   },
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2020_20007_html/2020_20007_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2020_20007_html\\2020_20007_generale.html"
   },
   "year": 2020
 }

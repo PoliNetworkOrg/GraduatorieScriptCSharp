@@ -15,11 +15,11 @@ namespace GraduatorieScript.Utils.Transformer;
 public static class Parser
 {
     public static RankingsSet? GetRankings(ArgsConfig argsConfig,
-        IEnumerable<RankingUrl> urls )
+        IEnumerable<RankingUrl> urls)
     {
         if (string.IsNullOrEmpty(argsConfig.DataFolder))
             return null;
-        
+
         var rankingsSet = BySchoolYearJson.Parse(argsConfig.DataFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
@@ -46,6 +46,7 @@ public static class Parser
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
         Parallel.Invoke(action);
 
+        rankingsSet.Rankings = rankingsSet.Rankings.OrderBy(x => x.School).ThenBy(x => x.Year).ThenBy(x => x.Url?.Url).ToList();
         return rankingsSet;
     }
 
@@ -290,6 +291,7 @@ public static class Parser
             };
         }
 
+        ranking.ByCourse = ranking.ByCourse.OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
         StatsCalculate.CalculateStats(ranking);
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url.Url}");
@@ -372,15 +374,18 @@ public static class Parser
 
     private static HtmlPage? SubIndex(IEnumerable<HtmlPage> allHtmls, RankingUrl url)
     {
-        bool Predicate(HtmlPage h)
+        bool FindUrlSimilar(HtmlPage? h)
         {
+            if (h == null)
+                return false;
+
             var urlUrl = h.Url.Url;
             var s = url.Url;
 
             return CheckIfSimilar(urlUrl, s);
         }
 
-        var subIndex = allHtmls.ToList().Find(Predicate);
+        var subIndex = allHtmls.ToList().Find(FindUrlSimilar);
         return subIndex;
     }
 

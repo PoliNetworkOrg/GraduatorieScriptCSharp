@@ -23,7 +23,7 @@ public abstract class IndexJsonBase
     {
         if (set == null)
             return;
-        
+
         // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)

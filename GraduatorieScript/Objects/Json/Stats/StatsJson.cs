@@ -22,7 +22,7 @@ public class StatsJson
     {
         if (rankingsSet == null)
             return null;
-        
+
         var statsJson = new StatsJson();
         foreach (var ranking in rankingsSet.Rankings) GenerateSingleRanking(rankingsSet, ranking, statsJson);
 
@@ -43,7 +43,7 @@ public class StatsJson
             return;
         if (statsJson == null)
             return;
-        
+
         if (ranking.Year == null) return;
         if (!statsJson.Stats.ContainsKey(ranking.Year.Value))
         {

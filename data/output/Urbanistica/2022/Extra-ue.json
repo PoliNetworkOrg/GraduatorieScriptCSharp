@@ -28,11 +28,11 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 60.00,
+          "result": 6000.0,
           "sectionsResults": {
-            "Colloquio": 23.00,
-            "Elaborato": 20.00,
-            "Lettera Motivazionale": 17.00
+            "Colloquio": 2300.0,
+            "Elaborato": 2000.0,
+            "Lettera Motivazionale": 1700.0
           }
         }
       ]
@@ -55,27 +55,27 @@
         "ofa": {},
         "positionAbsolute": 1,
         "positionCourse": null,
-        "result": 60.00,
+        "result": 6000.0,
         "sectionsResults": null
       }
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-29T18:58:51.2428347+00:00",
+  "lastUpdate": "2023-06-29T21:23:17.8215033+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
       {
         "averageBirthYear": 2003.0,
         "averageEnglishCorrectAnswers": null,
-        "averageOfWhoPassed": 60.00,
+        "averageOfWhoPassed": 6000.0,
         "averagePartialScores": {
-          "Colloquio": 23.00,
-          "Elaborato": 20.00,
-          "Lettera Motivazionale": 17.00
+          "Colloquio": 2300.0,
+          "Elaborato": 2000.0,
+          "Lettera Motivazionale": 1700.0
         },
-        "averageScoresOfAllStudents": 60.00,
-        "howManyOfa": null,
+        "averageScoresOfAllStudents": 6000.0,
+        "howManyOfa": {},
         "location": null,
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
@@ -83,13 +83,13 @@
     "howManyCanEnroll": 1,
     "howManyStudents": 1,
     "resultsSummarized": {
-      "60": 1
+      "6000": 1
     }
   },
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20007_html/2022_20007_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20007_html\\2022_20007_generale.html"
   },
   "year": 2022
 }

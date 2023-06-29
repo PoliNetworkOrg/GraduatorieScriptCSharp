@@ -27,11 +27,11 @@
           "ofa": {},
           "positionAbsolute": null,
           "positionCourse": 1,
-          "result": 41.00,
+          "result": 4100.0,
           "sectionsResults": {
-            "Colloquio": 17.00,
-            "Elaborato": 13.00,
-            "Lettera Motivazionale": 11.00
+            "Colloquio": 1700.0,
+            "Elaborato": 1300.0,
+            "Lettera Motivazionale": 1100.0
           }
         }
       ]
@@ -53,27 +53,27 @@
         "ofa": {},
         "positionAbsolute": 1,
         "positionCourse": null,
-        "result": 41.00,
+        "result": 4100.0,
         "sectionsResults": null
       }
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-29T18:58:43.1671146+00:00",
+  "lastUpdate": "2023-06-29T21:11:19.844757+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
       {
         "averageBirthYear": 2001.0,
         "averageEnglishCorrectAnswers": null,
-        "averageOfWhoPassed": 41.00,
+        "averageOfWhoPassed": 4100.0,
         "averagePartialScores": {
-          "Colloquio": 17.00,
-          "Elaborato": 13.00,
-          "Lettera Motivazionale": 11.00
+          "Colloquio": 1700.0,
+          "Elaborato": 1300.0,
+          "Lettera Motivazionale": 1100.0
         },
-        "averageScoresOfAllStudents": 41.00,
-        "howManyOfa": null,
+        "averageScoresOfAllStudents": 4100.0,
+        "howManyOfa": {},
         "location": null,
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
@@ -81,13 +81,13 @@
     "howManyCanEnroll": 1,
     "howManyStudents": 1,
     "resultsSummarized": {
-      "41": 1
+      "4100": 1
     }
   },
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2021_20007_html/2021_20007_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2021_20007_html\\2021_20007_generale.html"
   },
   "year": 2021
 }

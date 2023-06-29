@@ -34,15 +34,17 @@ public class RankingUrl
 
         var split = local.Split("/");
         var folder = Path.Join(htmlFolder, split[0]);
-        if (!Directory.Exists(folder))
-            try
-            {
-                Directory.CreateDirectory(folder);
-            }
-            catch
-            {
-                Console.WriteLine("[ERROR] Can't create folder for html file: {folder}");
-            }
+        if (Directory.Exists(folder))
+            return fullPath;
+
+        try
+        {
+            Directory.CreateDirectory(folder);
+        }
+        catch
+        {
+            Console.WriteLine("[ERROR] Can't create folder for html file: {folder}");
+        }
 
         return fullPath;
     }
