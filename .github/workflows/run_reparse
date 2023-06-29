@@ -1,0 +1,45 @@
+name: Run script
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: ["7.0.x"]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      # Update references
+      - name: Git Submodule Update
+        run: |
+          git config --global user.email "polinetwork@outlook.com"
+          git config --global user.name "PoliNetwork"
+          git config --global pull.rebase false --allow-unrelated-histories
+          git pull origin ${{ steps.extract_branch.outputs.branch }} --recurse-submodules --allow-unrelated-histories
+          git submodule update --init --remote --recursive  
+          git submodule update
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run
+        run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj --reparse
+
+      - name: Push generated files
+        uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        with:
+          add: "data"
+          message: '[auto] run script and update data'
+          default_author: github_actions
+          pathspec_error_handling: exitImmediately
