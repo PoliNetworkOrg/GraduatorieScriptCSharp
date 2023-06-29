@@ -3,6 +3,7 @@ using GraduatorieScript.Enums;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 

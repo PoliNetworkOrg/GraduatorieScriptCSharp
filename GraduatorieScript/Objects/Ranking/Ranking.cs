@@ -6,7 +6,7 @@ using GraduatorieScript.Objects.Tables;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects;
+namespace GraduatorieScript.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -53,10 +53,12 @@ public class Ranking
 
     public SingleCourseJson ToSingleCourseJson()
     {
+        var schoolString = School == null ? null : Enum.GetName(typeof(SchoolEnum), School);
         return new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
-            Name = Phase
+            Name = Phase,
+            BasePath = schoolString + "/" + Year + "/"
         };
     }
 
