@@ -56,27 +56,26 @@ public class CourseTableStats
         if (count == 0 || courseTableRows is null)
             return stats;
 
-        var testResults = courseTableRows.Select(x => x.Result).ToList();
-        stats.AverageScoresOfAllStudents = testResults.Count > 0 ? MathRound(testResults.Average()) : null;
-
-        var passedTestResults = courseTableRows
+        stats.AverageScoresOfAllStudents = AverageList(courseTableRows.Select(x => x.Result).ToList());
+        stats.AverageOfWhoPassed = AverageList(courseTableRows
             .Where(x => x.CanEnroll)
             .Select(x => x.Result)
-            .ToList();
-        stats.AverageOfWhoPassed = passedTestResults.Count > 0 ? MathRound(passedTestResults.Average()) : null;
-
-        var birthYears = courseTableRows.Select(x => x.BirthDate?.Year).ToList();
-
-        stats.AverageBirthYear = birthYears.Count > 0 ? MathRound(birthYears.Average()) : null;
-
-        var engCorrAnswers = courseTableRows.Select(x => x.EnglishCorrectAnswers).ToList();
-        stats.AverageEnglishCorrectAnswers =
-            engCorrAnswers.Count > 0 ? engCorrAnswers.Average() : null;
-
-        stats.AveragePartialScores =
-            count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
-        stats.HowManyOfa = count > 0 ? HowManyOfaCalculate(courseTableRows) : null;
+            .ToList());
+        stats.AverageBirthYear = AverageList(courseTableRows.Select(x => x.BirthDate?.Year).ToList());
+        stats.AverageEnglishCorrectAnswers = AverageList(courseTableRows.Select(x => x.EnglishCorrectAnswers).ToList());
+        stats.AveragePartialScores = AveragePartialScoresCalculate(courseTableRows);
+        stats.HowManyOfa = HowManyOfaCalculate(courseTableRows);
         return stats;
+    }
+
+    private static double? AverageList(IReadOnlyCollection<int?> testResults)
+    {
+        return testResults.Count == 0 ? null : MathRound(testResults.Average());
+    }
+
+    private static decimal? AverageList(IReadOnlyCollection<decimal> testResults)
+    {
+        return testResults.Count == 0 ? null : MathRound(testResults.Average());
     }
 
     private static decimal? MathRound(decimal? average)
@@ -89,13 +88,14 @@ public class CourseTableStats
         return average == null ? null : Math.Round(average.Value, Decimals);
     }
 
-    private static Dictionary<string, int> HowManyOfaCalculate(
+    private static Dictionary<string, int>? HowManyOfaCalculate(
         IReadOnlyCollection<StudentResult> courseTableRows
     )
     {
-        var result = new Dictionary<string, int>();
         if (courseTableRows.Count == 0)
-            return result;
+            return null;
+
+        var result = new Dictionary<string, int>();
 
         var keys = courseTableRows.Select(x => x.Ofa?.Keys);
         var distinctKeys = DistinctKeys(keys);
@@ -109,10 +109,13 @@ public class CourseTableStats
         return result;
     }
 
-    private static Dictionary<string, decimal> AveragePartialScoresCalculate(
+    private static Dictionary<string, decimal>? AveragePartialScoresCalculate(
         IReadOnlyCollection<StudentResult> courseTableRows
     )
     {
+        if (courseTableRows.Count == 0)
+            return null;
+
         var scores = new Dictionary<string, decimal>();
 
         var keys = courseTableRows.Select(x => x.SectionsResults?.Keys).ToList();
