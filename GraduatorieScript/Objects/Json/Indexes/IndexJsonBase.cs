@@ -19,8 +19,11 @@ public abstract class IndexJsonBase
     }
 
 
-    public static void WriteSingleJsons(RankingsSet set, string outFolder)
+    public static void WriteSingleJsons(RankingsSet? set, string outFolder)
     {
+        if (set == null)
+            return;
+        
         // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)
@@ -48,13 +51,13 @@ public abstract class IndexJsonBase
         }
     }
 
-    public static void IndexesWrite(RankingsSet rankingsSet, string outFolder)
+    public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder)
     {
         //let's write all single json files
         WriteSingleJsons(rankingsSet, outFolder);
 
         //now let's write each single different index
-        BySchoolYearJson.From(rankingsSet).WriteToFile(outFolder, BySchoolYearJson.PathCustom);
-        ByYearSchoolJson.From(rankingsSet).WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
+        BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.PathCustom);
+        ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
     }
 }

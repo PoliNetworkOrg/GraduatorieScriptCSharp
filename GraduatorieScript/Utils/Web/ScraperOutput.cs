@@ -46,8 +46,11 @@ public static class ScraperOutput
         }
     }
 
-    public static void Write(List<RankingUrl> rankingsUrls, string dataFolder)
+    public static void Write(List<RankingUrl> rankingsUrls, string? dataFolder)
     {
+        if (string.IsNullOrEmpty(dataFolder))
+            return;
+        
         var filePath = GetFilePath(dataFolder);
         var output = "";
         var rankingUrls = rankingsUrls.Where(UrlUtils.CheckUrl);
