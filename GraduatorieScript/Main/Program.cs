@@ -44,8 +44,13 @@ public static class Program
     private static void SaveOutputs(string dataFolder, RankingsSet rankingsSet)
     {
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        BySchoolYearJson.Write(outFolder, rankingsSet);
+        IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
+    }
+
+    private static void IndexesWrite(RankingsSet rankingsSet, string outFolder)
+    {
+        BySchoolYearJson.Write(outFolder, rankingsSet);
     }
 
     private static string GetDataFolder(IReadOnlyList<string> args)
