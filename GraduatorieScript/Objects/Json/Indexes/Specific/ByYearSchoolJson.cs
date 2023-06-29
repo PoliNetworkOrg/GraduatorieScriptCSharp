@@ -8,38 +8,38 @@ namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class BySchoolYearJson : IndexJsonBase
+public class ByYearSchoolJson : IndexJsonBase
 {
-    internal const string PathCustom = "bySchoolYear.json";
+    internal const string PathCustom = "byYearSchool.json";
 
-    public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
+    public Dictionary<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
 
-    public static BySchoolYearJson From(RankingsSet set)
+    public static ByYearSchoolJson From(RankingsSet set)
     {
-        var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
-        // group rankings by school
-        var bySchool = set.Rankings.GroupBy(r => r.School);
-        foreach (var schoolGroup in bySchool)
+        var mainJson = new ByYearSchoolJson { LastUpdate = set.LastUpdate };
+        // group rankings by year
+        var byYear = set.Rankings.GroupBy(r => r.Year);
+        foreach (var yearGroup in byYear)
         {
-            if (schoolGroup.Key is null)
+            if (yearGroup.Key is null)
                 continue;
-            var school = schoolGroup.Key.Value;
+            var year = yearGroup.Key.Value;
 
-            var schoolDict = new Dictionary<int, IEnumerable<SingleCourseJson>>();
+            var yearDict = new Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>();
 
-            var byYears = schoolGroup.GroupBy(r => r.Year);
-            foreach (var yearGroup in byYears)
+            var bySchools = yearGroup.GroupBy(r => r.School);
+            foreach (var schoolGroup in bySchools)
             {
-                if (yearGroup.Key is null)
+                if (schoolGroup.Key is null)
                     continue;
-                var filenames = yearGroup
+                var filenames = schoolGroup
                     .Select(ranking => ranking.ToSingleCourseJson())
                     .DistinctBy(x => x.Link)
                     .ToList().OrderBy(a => a.Name);
-                schoolDict.Add(yearGroup.Key.Value, filenames);
+                yearDict.Add(schoolGroup.Key.Value, filenames);
             }
 
-            mainJson.Schools.Add(school, schoolDict);
+            mainJson.Years.Add(year, yearDict);
         }
 
         return mainJson;
