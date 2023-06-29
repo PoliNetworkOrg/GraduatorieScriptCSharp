@@ -8,7 +8,7 @@ namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class BySchoolYearJson : IndexJsonBase
+public class ByYearSchoolJson : IndexJsonBase
 {
     internal const string PathCustom = "bySchoolYear.json";
     
@@ -17,7 +17,7 @@ public class BySchoolYearJson : IndexJsonBase
     public static BySchoolYearJson From(RankingsSet set)
     {
         var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
-        // group rankings by school
+        // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)
         {
