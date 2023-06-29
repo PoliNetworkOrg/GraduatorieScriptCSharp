@@ -8,7 +8,7 @@ namespace GraduatorieScript.Objects.Json.Indexes;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class MainJson
+public class BySchoolYearJson
 {
     public DateTime? LastUpdate;
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
@@ -19,9 +19,9 @@ public class MainJson
         mainJson.WriteToFile(outFolder);
     }
 
-    private static MainJson Generate(RankingsSet set, string outFolder)
+    private static BySchoolYearJson Generate(RankingsSet set, string outFolder)
     {
-        var mainJson = new MainJson { LastUpdate = set.LastUpdate };
+        var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
         // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)
@@ -72,7 +72,7 @@ public class MainJson
         var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
         try
         {
-            var mainJson = Parser.ParseJson<MainJson>(mainJsonPath);
+            var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
             if (mainJson is null)
                 return null;
 
@@ -88,7 +88,7 @@ public class MainJson
         return null;
     }
 
-    private static List<Ranking> RankingsAdd(MainJson mainJson, string outFolder)
+    private static List<Ranking> RankingsAdd(BySchoolYearJson mainJson, string outFolder)
     {
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)

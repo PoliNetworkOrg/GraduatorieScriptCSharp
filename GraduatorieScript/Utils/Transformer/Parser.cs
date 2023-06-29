@@ -18,7 +18,7 @@ public static class Parser
         IEnumerable<RankingUrl> urls
     )
     {
-        var rankingsSet = MainJson.Parse(dataFolder) ?? new RankingsSet();
+        var rankingsSet = BySchoolYearJson.Parse(dataFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
