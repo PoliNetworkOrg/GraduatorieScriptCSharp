@@ -2190,10 +2190,6 @@
       {
         "averageBirthYear": 1999.2857142857142,
         "averageEnglishCorrectAnswers": 23.428571428571427,
-        "averageOfa": {
-          "ENG": 4,
-          "TEST": 4
-        },
         "averageOfWhoPassed": 57.521428571428571428571428571,
         "averagePartialScores": {
           "Inglese": 7.3214285714285714285714285714,
@@ -2202,16 +2198,13 @@
           "Fisica": 4.2142857142857142857142857143
         },
         "averageScoresOfAllStudents": 57.521428571428571428571428571,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "INGEGNERIA AEROSPAZIALE"
       },
       {
         "averageBirthYear": 2000.6666666666667,
         "averageEnglishCorrectAnswers": 18.666666666666668,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 1
-        },
         "averageOfWhoPassed": 68.09,
         "averagePartialScores": {
           "Inglese": 6.11,
@@ -2220,16 +2213,13 @@
           "Fisica": 6.00
         },
         "averageScoresOfAllStudents": 45.393333333333333333333333333,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA BIOMEDICA"
       },
       {
         "averageBirthYear": 2001.0,
         "averageEnglishCorrectAnswers": 28.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 0
-        },
         "averageOfWhoPassed": 66.17,
         "averagePartialScores": {
           "Inglese": 9.17,
@@ -2238,16 +2228,13 @@
           "Fisica": 10.00
         },
         "averageScoresOfAllStudents": 66.17,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA CHIMICA"
       },
       {
         "averageBirthYear": 1999.8,
         "averageEnglishCorrectAnswers": 26.8,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 2
-        },
         "averageOfWhoPassed": 58.756,
         "averagePartialScores": {
           "Inglese": 8.666,
@@ -2256,16 +2243,13 @@
           "Fisica": 5.40
         },
         "averageScoresOfAllStudents": 58.756,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA CIVILE"
       },
       {
         "averageBirthYear": 2001.0,
         "averageEnglishCorrectAnswers": 23.0,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 1
-        },
         "averageOfWhoPassed": null,
         "averagePartialScores": {
           "Inglese": 7.08,
@@ -2274,16 +2258,13 @@
           "Fisica": -1.50
         },
         "averageScoresOfAllStudents": 18.13,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
       },
       {
         "averageBirthYear": 1995.0,
         "averageEnglishCorrectAnswers": 28.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
         "averageOfWhoPassed": 24.32,
         "averagePartialScores": {
           "Inglese": 9.17,
@@ -2292,16 +2273,13 @@
           "Fisica": 0.50
         },
         "averageScoresOfAllStudents": 24.32,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
       },
       {
         "averageBirthYear": 2002.0,
         "averageEnglishCorrectAnswers": 29.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
         "averageOfWhoPassed": 44.33,
         "averagePartialScores": {
           "Inglese": 9.58,
@@ -2310,16 +2288,13 @@
           "Fisica": 6.00
         },
         "averageScoresOfAllStudents": 44.33,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA ELETTRICA"
       },
       {
         "averageBirthYear": 1999.3333333333333,
         "averageEnglishCorrectAnswers": 23.666666666666668,
-        "averageOfa": {
-          "ENG": 2,
-          "TEST": 3
-        },
         "averageOfWhoPassed": 42.04,
         "averagePartialScores": {
           "Inglese": 7.4733333333333333333333333333,
@@ -2328,16 +2303,13 @@
           "Fisica": 2.3333333333333333333333333333
         },
         "averageScoresOfAllStudents": 42.04,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA ELETTRONICA"
       },
       {
         "averageBirthYear": 2002.0,
         "averageEnglishCorrectAnswers": 22.0,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 1
-        },
         "averageOfWhoPassed": 55.275,
         "averagePartialScores": {
           "Inglese": 6.875,
@@ -2346,16 +2318,13 @@
           "Fisica": 6.75
         },
         "averageScoresOfAllStudents": 55.275,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "INGEGNERIA ENERGETICA"
       },
       {
         "averageBirthYear": 1997.75,
         "averageEnglishCorrectAnswers": 22.75,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 3
-        },
         "averageOfWhoPassed": 46.95,
         "averagePartialScores": {
           "Inglese": 7.25,
@@ -2364,16 +2333,13 @@
           "Fisica": 0.25
         },
         "averageScoresOfAllStudents": 46.95,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "INGEGNERIA GESTIONALE"
       },
       {
         "averageBirthYear": 1999.357142857143,
         "averageEnglishCorrectAnswers": 20.642857142857142,
-        "averageOfa": {
-          "ENG": 7,
-          "TEST": 11
-        },
         "averageOfWhoPassed": 44.560714285714285714285714286,
         "averagePartialScores": {
           "Inglese": 6.4107142857142857142857142857,
@@ -2382,16 +2348,13 @@
           "Fisica": 2.75
         },
         "averageScoresOfAllStudents": 44.560714285714285714285714286,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA INFORMATICA"
       },
       {
         "averageBirthYear": 2000.0,
         "averageEnglishCorrectAnswers": 21.0,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 0
-        },
         "averageOfWhoPassed": 63.05,
         "averagePartialScores": {
           "Inglese": 6.25,
@@ -2400,16 +2363,13 @@
           "Fisica": 7.50
         },
         "averageScoresOfAllStudents": 63.05,
+        "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA MATEMATICA"
       },
       {
         "averageBirthYear": 2000.25,
         "averageEnglishCorrectAnswers": 23.375,
-        "averageOfa": {
-          "ENG": 1,
-          "TEST": 4
-        },
         "averageOfWhoPassed": 59.258571428571428571428571429,
         "averagePartialScores": {
           "Inglese": 7.5825,
@@ -2418,16 +2378,13 @@
           "Fisica": 2.25
         },
         "averageScoresOfAllStudents": 51.91375,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "INGEGNERIA MECCANICA"
       },
       {
         "averageBirthYear": 1998.0,
         "averageEnglishCorrectAnswers": 27.0,
-        "averageOfa": {
-          "ENG": 0,
-          "TEST": 1
-        },
         "averageOfWhoPassed": 28.80,
         "averagePartialScores": {
           "Inglese": 8.75,
@@ -2436,6 +2393,7 @@
           "Fisica": 2.50
         },
         "averageScoresOfAllStudents": 28.80,
+        "howManyOfa": null,
         "location": "LECCO",
         "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
       }

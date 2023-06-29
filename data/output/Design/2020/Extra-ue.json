@@ -4475,9 +4475,6 @@
       {
         "averageBirthYear": 1999.5294117647059,
         "averageEnglishCorrectAnswers": 22.3265306122449,
-        "averageOfa": {
-          "ENG": 24
-        },
         "averageOfWhoPassed": 51.8335,
         "averagePartialScores": {
           "Geometria e Rappresentazione": 5.0490196078431372549019607843,
@@ -4487,15 +4484,13 @@
           "Cultura Generale": 7.3529411764705882352941176471
         },
         "averageScoresOfAllStudents": 34.591568627450980392156862745,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
       },
       {
         "averageBirthYear": 1999.103448275862,
         "averageEnglishCorrectAnswers": 21.857142857142858,
-        "averageOfa": {
-          "ENG": 14
-        },
         "averageOfWhoPassed": 58.748,
         "averagePartialScores": {
           "Geometria e Rappresentazione": 4.2931034482758620689655172414,
@@ -4505,15 +4500,13 @@
           "Cultura Generale": 7.3189655172413793103448275862
         },
         "averageScoresOfAllStudents": 31.206551724137931034482758621,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "DESIGN DELLA MODA"
       },
       {
         "averageBirthYear": 1998.7333333333333,
         "averageEnglishCorrectAnswers": 19.0,
-        "averageOfa": {
-          "ENG": 7
-        },
         "averageOfWhoPassed": 33.584,
         "averagePartialScores": {
           "Geometria e Rappresentazione": 3.10,
@@ -4523,15 +4516,13 @@
           "Cultura Generale": 4.2333333333333333333333333333
         },
         "averageScoresOfAllStudents": 19.805333333333333333333333333,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "DESIGN DELLA COMUNICAZIONE"
       },
       {
         "averageBirthYear": 1999.3030303030303,
         "averageEnglishCorrectAnswers": 19.875,
-        "averageOfa": {
-          "ENG": 21
-        },
         "averageOfWhoPassed": 45.50,
         "averagePartialScores": {
           "Geometria e Rappresentazione": 4.1136363636363636363636363636,
@@ -4541,6 +4532,7 @@
           "Cultura Generale": 5.8560606060606060606060606061
         },
         "averageScoresOfAllStudents": 27.284545454545454545454545455,
+        "howManyOfa": null,
         "location": "MILANO BOVISA",
         "title": "DESIGN DEGLI INTERNI"
       }
