@@ -1,5 +1,5 @@
 using System.Net;
-using GraduatorieScript.Objects;
+using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Utils.Web;
 

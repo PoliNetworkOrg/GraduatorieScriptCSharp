@@ -1,7 +1,7 @@
 ﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
-using GraduatorieScript.Objects;
+using GraduatorieScript.Objects.RankingNS;
 using SampleNuGet.Utils;
 
 namespace GraduatorieScript.Utils.Web;

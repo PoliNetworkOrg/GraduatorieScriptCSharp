@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using GraduatorieScript.Objects.RankingNS;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Objects.Json.Stats;
 
