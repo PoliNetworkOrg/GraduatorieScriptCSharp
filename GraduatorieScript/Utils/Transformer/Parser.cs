@@ -511,7 +511,7 @@ public static class Parser
         var idIndex = headers.FindIndex(t => t.Contains("matricola") && !t.Contains("corso"));
         var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
-        var corsoIndex = headers.FindIndex(t => t.Contains("corso"));
+        var corsoIndex = headers.FindIndex(t => t.Contains("corso") || t == "stato"); // "stato" per architettura
         var ofaEngIndex = headers.FindIndex(t => t.Contains("ofa inglese"));
         var ofaTestIndex = headers.FindIndex(t => t.Contains("ofa test"));
 

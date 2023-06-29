@@ -71,119 +71,6 @@
         }
       ]
     },
-    "Architettura": {
-      "2021": [
-        {
-          "basePath": "Architettura/2021/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Architettura",
-          "year": 2021
-        },
-        {
-          "basePath": "Architettura/2021/",
-          "link": "Extra-ue_Seconda_Graduatoria.json",
-          "name": "Extra-ue Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2021
-        },
-        {
-          "basePath": "Architettura/2021/",
-          "link": "Prima_Graduatoria.json",
-          "name": "Prima Graduatoria",
-          "school": "Architettura",
-          "year": 2021
-        },
-        {
-          "basePath": "Architettura/2021/",
-          "link": "Seconda_Graduatoria.json",
-          "name": "Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2021
-        },
-        {
-          "basePath": "Architettura/2021/",
-          "link": "Terza_Graduatoria.json",
-          "name": "Terza Graduatoria",
-          "school": "Architettura",
-          "year": 2021
-        }
-      ],
-      "2020": [
-        {
-          "basePath": "Architettura/2020/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Architettura",
-          "year": 2020
-        },
-        {
-          "basePath": "Architettura/2020/",
-          "link": "Extra-ue_Seconda_Graduatoria.json",
-          "name": "Extra-ue Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2020
-        },
-        {
-          "basePath": "Architettura/2020/",
-          "link": "Prima_Graduatoria.json",
-          "name": "Prima Graduatoria",
-          "school": "Architettura",
-          "year": 2020
-        },
-        {
-          "basePath": "Architettura/2020/",
-          "link": "Seconda_Graduatoria.json",
-          "name": "Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2020
-        },
-        {
-          "basePath": "Architettura/2020/",
-          "link": "Terza_Graduatoria.json",
-          "name": "Terza Graduatoria",
-          "school": "Architettura",
-          "year": 2020
-        }
-      ],
-      "2022": [
-        {
-          "basePath": "Architettura/2022/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Architettura",
-          "year": 2022
-        },
-        {
-          "basePath": "Architettura/2022/",
-          "link": "Extra-ue_Seconda_Graduatoria.json",
-          "name": "Extra-ue Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2022
-        },
-        {
-          "basePath": "Architettura/2022/",
-          "link": "Prima_Graduatoria.json",
-          "name": "Prima Graduatoria",
-          "school": "Architettura",
-          "year": 2022
-        },
-        {
-          "basePath": "Architettura/2022/",
-          "link": "Seconda_Graduatoria.json",
-          "name": "Seconda Graduatoria",
-          "school": "Architettura",
-          "year": 2022
-        },
-        {
-          "basePath": "Architettura/2022/",
-          "link": "Terza_Graduatoria.json",
-          "name": "Terza Graduatoria",
-          "school": "Architettura",
-          "year": 2022
-        }
-      ]
-    },
     "Ingegneria": {
       "2022": [
         {
@@ -395,6 +282,119 @@
           "name": "Anticipato",
           "school": "Design",
           "year": 2023
+        }
+      ]
+    },
+    "Architettura": {
+      "2021": [
+        {
+          "basePath": "Architettura/2021/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Architettura",
+          "year": 2021
+        },
+        {
+          "basePath": "Architettura/2021/",
+          "link": "Extra-ue_Seconda_Graduatoria.json",
+          "name": "Extra-ue Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2021
+        },
+        {
+          "basePath": "Architettura/2021/",
+          "link": "Prima_Graduatoria.json",
+          "name": "Prima Graduatoria",
+          "school": "Architettura",
+          "year": 2021
+        },
+        {
+          "basePath": "Architettura/2021/",
+          "link": "Seconda_Graduatoria.json",
+          "name": "Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2021
+        },
+        {
+          "basePath": "Architettura/2021/",
+          "link": "Terza_Graduatoria.json",
+          "name": "Terza Graduatoria",
+          "school": "Architettura",
+          "year": 2021
+        }
+      ],
+      "2022": [
+        {
+          "basePath": "Architettura/2022/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Architettura",
+          "year": 2022
+        },
+        {
+          "basePath": "Architettura/2022/",
+          "link": "Extra-ue_Seconda_Graduatoria.json",
+          "name": "Extra-ue Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2022
+        },
+        {
+          "basePath": "Architettura/2022/",
+          "link": "Prima_Graduatoria.json",
+          "name": "Prima Graduatoria",
+          "school": "Architettura",
+          "year": 2022
+        },
+        {
+          "basePath": "Architettura/2022/",
+          "link": "Seconda_Graduatoria.json",
+          "name": "Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2022
+        },
+        {
+          "basePath": "Architettura/2022/",
+          "link": "Terza_Graduatoria.json",
+          "name": "Terza Graduatoria",
+          "school": "Architettura",
+          "year": 2022
+        }
+      ],
+      "2020": [
+        {
+          "basePath": "Architettura/2020/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Architettura",
+          "year": 2020
+        },
+        {
+          "basePath": "Architettura/2020/",
+          "link": "Extra-ue_Seconda_Graduatoria.json",
+          "name": "Extra-ue Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2020
+        },
+        {
+          "basePath": "Architettura/2020/",
+          "link": "Prima_Graduatoria.json",
+          "name": "Prima Graduatoria",
+          "school": "Architettura",
+          "year": 2020
+        },
+        {
+          "basePath": "Architettura/2020/",
+          "link": "Seconda_Graduatoria.json",
+          "name": "Seconda Graduatoria",
+          "school": "Architettura",
+          "year": 2020
+        },
+        {
+          "basePath": "Architettura/2020/",
+          "link": "Terza_Graduatoria.json",
+          "name": "Terza Graduatoria",
+          "school": "Architettura",
+          "year": 2020
         }
       ]
     }
