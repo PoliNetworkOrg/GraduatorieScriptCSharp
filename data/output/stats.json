@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2023-06-29T16:59:28.047248+02:00",
+  "lastUpdate": "2023-06-29T15:57:55.0681392+00:00",
   "stats": {
     "2022": {
       "numStudents": 17246,
@@ -8,6 +8,7 @@
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Urbanistica/2022/",
                 "link": "Anticipata.json",
                 "name": "Anticipata"
               },
@@ -86,6 +87,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Urbanistica/2022/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -115,6 +117,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Urbanistica/2022/",
                 "link": "Standard.json",
                 "name": "Standard"
               },
@@ -176,10 +179,815 @@
           ],
           "numStudents": 180
         },
+        "Architettura": {
+          "list": [
+            {
+              "singleCourseJson": {
+                "basePath": "Architettura/2022/",
+                "link": "Extra-ue_Seconda_Graduatoria.json",
+                "name": "Extra-ue Seconda Graduatoria"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2000.8666666666666,
+                    "averageEnglishCorrectAnswers": 19.416666666666668,
+                    "averageOfa": {
+                      "ENG": 40
+                    },
+                    "averageOfWhoPassed": 31.00,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.2611111111111111111111111111,
+                      "Comprensione del Testo": 4.1722222222222222222222222222,
+                      "Disegno e Rappresentazione": 7.1777777777777777777777777778,
+                      "Fisica e Matematica": 2.1944444444444444444444444444,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2222222222222222222222222222
+                    },
+                    "averageScoresOfAllStudents": 20.027777777777777777777777778,
+                    "location": "MILANO LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.0344827586207,
+                    "averageEnglishCorrectAnswers": 12.0,
+                    "averageOfa": {
+                      "ENG": 29
+                    },
+                    "averageOfWhoPassed": 27.00,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 3.8793103448275862068965517241,
+                      "Comprensione del Testo": 4.6120689655172413793103448276,
+                      "Disegno e Rappresentazione": 7.1982758620689655172413793103,
+                      "Fisica e Matematica": 1.3965517241379310344827586207,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 1.9310344827586206896551724138
+                    },
+                    "averageScoresOfAllStudents": 19.017241379310344827586206897,
+                    "location": "LECCO",
+                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.8275862068965,
+                    "averageEnglishCorrectAnswers": 28.0,
+                    "averageOfa": {
+                      "ENG": 232
+                    },
+                    "averageOfWhoPassed": 33.607142857142857142857142857,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.6896551724137931034482758621,
+                      "Comprensione del Testo": 5.2844827586206896551724137931,
+                      "Disegno e Rappresentazione": 7.1691810344827586206896551724,
+                      "Fisica e Matematica": 3.3211206896551724137931034483,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0334051724137931034482758621
+                    },
+                    "averageScoresOfAllStudents": 23.497844827586206896551724138,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  },
+                  {
+                    "averageBirthYear": 2000.7894736842106,
+                    "averageEnglishCorrectAnswers": 18.555555555555557,
+                    "averageOfa": {
+                      "ENG": 35
+                    },
+                    "averageOfWhoPassed": 27.00,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.3355263157894736842105263158,
+                      "Comprensione del Testo": 4.125,
+                      "Disegno e Rappresentazione": 7.0328947368421052631578947368,
+                      "Fisica e Matematica": 1.7631578947368421052631578947,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.1842105263157894736842105263
+                    },
+                    "averageScoresOfAllStudents": 19.440789473684210526315789474,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2000.7941176470588,
+                    "averageEnglishCorrectAnswers": 18.555555555555557,
+                    "averageOfa": {
+                      "ENG": 31
+                    },
+                    "averageOfWhoPassed": 27.00,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.0661764705882352941176470588,
+                      "Comprensione del Testo": 4.25,
+                      "Disegno e Rappresentazione": 7.1838235294117647058823529412,
+                      "Fisica e Matematica": 1.7573529411764705882352941176,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.1397058823529411764705882353
+                    },
+                    "averageScoresOfAllStudents": 19.397058823529411764705882353,
+                    "location": "MANTOVA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.7471698113206,
+                    "averageEnglishCorrectAnswers": 27.0,
+                    "averageOfa": {
+                      "ENG": 265
+                    },
+                    "averageOfWhoPassed": 35.20,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.6650943396226415094339622642,
+                      "Comprensione del Testo": 5.3264150943396226415094339623,
+                      "Disegno e Rappresentazione": 7.0603773584905660377358490566,
+                      "Fisica e Matematica": 3.2415094339622641509433962264,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1509433962264150943396226415
+                    },
+                    "averageScoresOfAllStudents": 23.444339622641509433962264151,
+                    "location": "MI LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  }
+                ],
+                "howManyCanEnroll": 277,
+                "howManyStudents": 277,
+                "resultsSummarized": {
+                  "36": 1,
+                  "35": 8,
+                  "34": 4,
+                  "33": 7,
+                  "32": 15,
+                  "31": 6,
+                  "30": 13,
+                  "29": 13,
+                  "28": 16,
+                  "27": 19,
+                  "26": 14,
+                  "25": 8,
+                  "24": 18,
+                  "23": 12,
+                  "22": 22,
+                  "21": 11,
+                  "20": 17,
+                  "19": 3,
+                  "18": 10,
+                  "17": 9,
+                  "16": 9,
+                  "15": 8,
+                  "14": 9,
+                  "13": 4,
+                  "12": 3,
+                  "11": 4,
+                  "10": 5,
+                  "9": 2,
+                  "8": 3,
+                  "6": 2,
+                  "5": 1,
+                  "4": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Architettura/2022/",
+                "link": "Extra-ue.json",
+                "name": "Extra-ue"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2001.0394736842106,
+                    "averageEnglishCorrectAnswers": 19.724137931034484,
+                    "averageOfa": {
+                      "ENG": 64
+                    },
+                    "averageOfWhoPassed": 33.15,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.2565789473684210526315789474,
+                      "Comprensione del Testo": 3.7763157894736842105263157895,
+                      "Disegno e Rappresentazione": 6.9473684210526315789473684211,
+                      "Fisica e Matematica": 2.75,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.3289473684210526315789473684
+                    },
+                    "averageScoresOfAllStudents": 20.059210526315789473684210526,
+                    "location": "MILANO LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2000.7551020408164,
+                    "averageEnglishCorrectAnswers": 17.555555555555557,
+                    "averageOfa": {
+                      "ENG": 46
+                    },
+                    "averageOfWhoPassed": 27.50,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 3.8571428571428571428571428571,
+                      "Comprensione del Testo": 4.5306122448979591836734693878,
+                      "Disegno e Rappresentazione": 6.7142857142857142857142857143,
+                      "Fisica e Matematica": 2.2346938775510204081632653061,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.0255102040816326530612244898
+                    },
+                    "averageScoresOfAllStudents": 19.362244897959183673469387755,
+                    "location": "LECCO",
+                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.9851851851852,
+                    "averageEnglishCorrectAnswers": 24.75,
+                    "averageOfa": {
+                      "ENG": 405
+                    },
+                    "averageOfWhoPassed": 36.73125,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.6104938271604938271604938272,
+                      "Comprensione del Testo": 5.0987654320987654320987654321,
+                      "Disegno e Rappresentazione": 6.9975308641975308641975308642,
+                      "Fisica e Matematica": 3.3858024691358024691358024691,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0382716049382716049382716049
+                    },
+                    "averageScoresOfAllStudents": 23.130864197530864197530864198,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  },
+                  {
+                    "averageBirthYear": 2001.0597014925372,
+                    "averageEnglishCorrectAnswers": 19.956521739130434,
+                    "averageOfa": {
+                      "ENG": 57
+                    },
+                    "averageOfWhoPassed": 27.854166666666666666666666667,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.2350746268656716417910447761,
+                      "Comprensione del Testo": 4.0298507462686567164179104478,
+                      "Disegno e Rappresentazione": 6.8843283582089552238805970149,
+                      "Fisica e Matematica": 2.3880597014925373134328358209,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2910447761194029850746268657
+                    },
+                    "averageScoresOfAllStudents": 19.828358208955223880597014925,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2000.9818181818182,
+                    "averageEnglishCorrectAnswers": 19.352941176470587,
+                    "averageOfa": {
+                      "ENG": 48
+                    },
+                    "averageOfWhoPassed": 17.25,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 3.9545454545454545454545454545,
+                      "Comprensione del Testo": 4.0909090909090909090909090909,
+                      "Disegno e Rappresentazione": 6.8045454545454545454545454545,
+                      "Fisica e Matematica": 2.3090909090909090909090909091,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2318181818181818181818181818
+                    },
+                    "averageScoresOfAllStudents": 19.390909090909090909090909091,
+                    "location": "MANTOVA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.9570552147238,
+                    "averageEnglishCorrectAnswers": 24.75,
+                    "averageOfa": {
+                      "ENG": 489
+                    },
+                    "averageOfWhoPassed": 39.105,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.8067484662576687116564417178,
+                      "Comprensione del Testo": 5.2862985685071574642126789366,
+                      "Disegno e Rappresentazione": 7.017382413087934560327198364,
+                      "Fisica e Matematica": 3.594580777096114519427402863,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.2494887525562372188139059305
+                    },
+                    "averageScoresOfAllStudents": 23.954498977505112474437627812,
+                    "location": "MI LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  }
+                ],
+                "howManyCanEnroll": 534,
+                "howManyStudents": 534,
+                "resultsSummarized": {
+                  "50": 1,
+                  "49": 1,
+                  "46": 1,
+                  "45": 3,
+                  "44": 1,
+                  "43": 3,
+                  "42": 4,
+                  "41": 4,
+                  "40": 8,
+                  "39": 11,
+                  "38": 12,
+                  "37": 5,
+                  "36": 12,
+                  "35": 16,
+                  "34": 11,
+                  "33": 8,
+                  "32": 17,
+                  "31": 10,
+                  "30": 19,
+                  "29": 14,
+                  "28": 29,
+                  "27": 27,
+                  "26": 22,
+                  "25": 13,
+                  "24": 24,
+                  "23": 22,
+                  "22": 32,
+                  "21": 20,
+                  "20": 30,
+                  "19": 5,
+                  "18": 23,
+                  "17": 14,
+                  "16": 19,
+                  "15": 13,
+                  "14": 21,
+                  "13": 6,
+                  "12": 7,
+                  "11": 5,
+                  "10": 14,
+                  "9": 6,
+                  "8": 6,
+                  "7": 4,
+                  "6": 5,
+                  "5": 2,
+                  "4": 1,
+                  "3": 2,
+                  "2": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Architettura/2022/",
+                "link": "Prima_Graduatoria.json",
+                "name": "Prima Graduatoria"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2002.2911611785096,
+                    "averageEnglishCorrectAnswers": 21.99504281207751,
+                    "averageOfa": {
+                      "ENG": 1229
+                    },
+                    "averageOfWhoPassed": 33.883892617449664429530201342,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 5.6008448873483535528596187175,
+                      "Comprensione del Testo": 6.9232019064124783362218370884,
+                      "Disegno e Rappresentazione": 7.5157062391681109185441941075,
+                      "Fisica e Matematica": 2.0258882149046793760831889081,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 4.0514514731369150779896013865
+                    },
+                    "averageScoresOfAllStudents": 26.117092720970537261698440208,
+                    "location": "MILANO LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.237556561086,
+                    "averageEnglishCorrectAnswers": 21.2562874251497,
+                    "averageOfa": {
+                      "ENG": 528
+                    },
+                    "averageOfWhoPassed": 33.752118644067796610169491525,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 5.0008484162895927601809954751,
+                      "Comprensione del Testo": 6.592194570135746606334841629,
+                      "Disegno e Rappresentazione": 7.0542986425339366515837104072,
+                      "Fisica e Matematica": 1.7709276018099547511312217195,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.4884049773755656108597285068
+                    },
+                    "averageScoresOfAllStudents": 23.906674208144796380090497738,
+                    "location": "LECCO",
+                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.0968280467446,
+                    "averageEnglishCorrectAnswers": 22.366412213740457,
+                    "averageOfa": {
+                      "ENG": 599
+                    },
+                    "averageOfWhoPassed": 35.675,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.6719532554257095158597662771,
+                      "Comprensione del Testo": 6.3055091819699499165275459098,
+                      "Disegno e Rappresentazione": 7.0217028380634390651085141903,
+                      "Fisica e Matematica": 1.7721202003338898163606010017,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0271285475792988313856427379
+                    },
+                    "averageScoresOfAllStudents": 22.798414023372287145242070117,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  },
+                  {
+                    "averageBirthYear": 2002.2497297297298,
+                    "averageEnglishCorrectAnswers": 20.735870818915803,
+                    "averageOfa": {
+                      "ENG": 584
+                    },
+                    "averageOfWhoPassed": 30.4875,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.5781081081081081081081081081,
+                      "Comprensione del Testo": 6.3467567567567567567567567568,
+                      "Disegno e Rappresentazione": 6.9364864864864864864864864865,
+                      "Fisica e Matematica": 1.3018918918918918918918918919,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.227027027027027027027027027
+                    },
+                    "averageScoresOfAllStudents": 22.39027027027027027027027027,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.2513144058885,
+                    "averageEnglishCorrectAnswers": 20.912026726057906,
+                    "averageOfa": {
+                      "ENG": 593
+                    },
+                    "averageOfWhoPassed": 30.863888888888888888888888889,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.733438485804416403785488959,
+                      "Comprensione del Testo": 6.4766035751840168243953732913,
+                      "Disegno e Rappresentazione": 7.0399579390115667718191377497,
+                      "Fisica e Matematica": 1.3880126182965299684542586751,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3367507886435331230283911672
+                    },
+                    "averageScoresOfAllStudents": 22.974763406940063091482649842,
+                    "location": "MANTOVA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.2444444444445,
+                    "averageEnglishCorrectAnswers": 23.39644012944984,
+                    "averageOfa": {
+                      "ENG": 900
+                    },
+                    "averageOfWhoPassed": 38.105,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.9475,
+                      "Comprensione del Testo": 6.5469444444444444444444444444,
+                      "Disegno e Rappresentazione": 7.1713888888888888888888888889,
+                      "Fisica e Matematica": 1.9997222222222222222222222222,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3916666666666666666666666667
+                    },
+                    "averageScoresOfAllStudents": 24.057222222222222222222222222,
+                    "location": "MI LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  }
+                ],
+                "howManyCanEnroll": 2785,
+                "howManyStudents": 2785,
+                "resultsSummarized": {
+                  "48": 1,
+                  "47": 1,
+                  "46": 3,
+                  "45": 2,
+                  "44": 5,
+                  "43": 7,
+                  "42": 16,
+                  "41": 17,
+                  "40": 33,
+                  "39": 36,
+                  "38": 66,
+                  "37": 34,
+                  "36": 85,
+                  "35": 79,
+                  "34": 108,
+                  "33": 83,
+                  "32": 150,
+                  "31": 110,
+                  "30": 158,
+                  "29": 114,
+                  "28": 188,
+                  "27": 124,
+                  "26": 187,
+                  "25": 112,
+                  "24": 177,
+                  "23": 102,
+                  "22": 142,
+                  "21": 76,
+                  "20": 119,
+                  "19": 57,
+                  "18": 99,
+                  "17": 35,
+                  "16": 65,
+                  "15": 35,
+                  "14": 46,
+                  "13": 17,
+                  "12": 30,
+                  "11": 13,
+                  "10": 10,
+                  "9": 16,
+                  "8": 14,
+                  "7": 2,
+                  "6": 5,
+                  "5": 1,
+                  "4": 2,
+                  "2": 2,
+                  "-4": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Architettura/2022/",
+                "link": "Seconda_Graduatoria.json",
+                "name": "Seconda Graduatoria"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2002.2037586547972,
+                    "averageEnglishCorrectAnswers": 21.03455497382199,
+                    "averageOfa": {
+                      "ENG": 624
+                    },
+                    "averageOfWhoPassed": 28.22660098522167487684729064,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.7591493570722057368941641939,
+                      "Comprensione del Testo": 6.5655291790306627101879327399,
+                      "Disegno e Rappresentazione": 7.0576162215628090999010880317,
+                      "Fisica e Matematica": 1.3672106824925816023738872404,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3538575667655786350148367953
+                    },
+                    "averageScoresOfAllStudents": 23.103363006923837784371909001,
+                    "location": "MILANO LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.076923076923,
+                    "averageEnglishCorrectAnswers": 20.364556962025315,
+                    "averageOfa": {
+                      "ENG": 293
+                    },
+                    "averageOfWhoPassed": 28.269230769230769230769230769,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.4108391608391608391608391608,
+                      "Comprensione del Testo": 6.2820512820512820512820512821,
+                      "Disegno e Rappresentazione": 6.8175990675990675990675990676,
+                      "Fisica e Matematica": 1.3846153846153846153846153846,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.2185314685314685314685314685
+                    },
+                    "averageScoresOfAllStudents": 22.113636363636363636363636364,
+                    "location": "LECCO",
+                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.0815047021943,
+                    "averageEnglishCorrectAnswers": 22.126262626262626,
+                    "averageOfa": {
+                      "ENG": 319
+                    },
+                    "averageOfWhoPassed": 33.107142857142857142857142857,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.4090909090909090909090909091,
+                      "Comprensione del Testo": 6.1943573667711598746081504702,
+                      "Disegno e Rappresentazione": 7.0681818181818181818181818182,
+                      "Fisica e Matematica": 1.7374608150470219435736677116,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.9286833855799373040752351097
+                    },
+                    "averageScoresOfAllStudents": 22.337774294670846394984326019,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  },
+                  {
+                    "averageBirthYear": 2002.2057026476577,
+                    "averageEnglishCorrectAnswers": 20.433920704845814,
+                    "averageOfa": {
+                      "ENG": 331
+                    },
+                    "averageOfWhoPassed": 26.88,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.3039714867617107942973523422,
+                      "Comprensione del Testo": 6.2474541751527494908350305499,
+                      "Disegno e Rappresentazione": 6.9139511201629327902240325866,
+                      "Fisica e Matematica": 1.1807535641547861507128309572,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1364562118126272912423625255
+                    },
+                    "averageScoresOfAllStudents": 21.782586558044806517311608961,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.1938775510205,
+                    "averageEnglishCorrectAnswers": 20.363436123348016,
+                    "averageOfa": {
+                      "ENG": 332
+                    },
+                    "averageOfWhoPassed": 27.138157894736842105263157895,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.3331632653061224489795918367,
+                      "Comprensione del Testo": 6.2994897959183673469387755102,
+                      "Disegno e Rappresentazione": 6.9341836734693877551020408163,
+                      "Fisica e Matematica": 1.2163265306122448979591836735,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1367346938775510204081632653
+                    },
+                    "averageScoresOfAllStudents": 21.919897959183673469387755102,
+                    "location": "MANTOVA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.1724890829694,
+                    "averageEnglishCorrectAnswers": 22.993311036789297,
+                    "averageOfa": {
+                      "ENG": 458
+                    },
+                    "averageOfWhoPassed": 34.25,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.5616812227074235807860262009,
+                      "Comprensione del Testo": 6.4159388646288209606986899563,
+                      "Disegno e Rappresentazione": 6.991266375545851528384279476,
+                      "Fisica e Matematica": 1.7822052401746724890829694323,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0802401746724890829694323144
+                    },
+                    "averageScoresOfAllStudents": 22.83133187772925764192139738,
+                    "location": "MI LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  }
+                ],
+                "howManyCanEnroll": 1188,
+                "howManyStudents": 1188,
+                "resultsSummarized": {
+                  "35": 3,
+                  "34": 7,
+                  "33": 10,
+                  "32": 9,
+                  "31": 9,
+                  "30": 6,
+                  "29": 65,
+                  "28": 139,
+                  "27": 97,
+                  "26": 141,
+                  "25": 81,
+                  "24": 115,
+                  "23": 65,
+                  "22": 100,
+                  "21": 45,
+                  "20": 72,
+                  "19": 29,
+                  "18": 53,
+                  "17": 21,
+                  "16": 36,
+                  "15": 10,
+                  "14": 24,
+                  "13": 8,
+                  "12": 12,
+                  "11": 6,
+                  "10": 6,
+                  "9": 4,
+                  "8": 11,
+                  "7": 1,
+                  "6": 2,
+                  "4": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Architettura/2022/",
+                "link": "Terza_Graduatoria.json",
+                "name": "Terza Graduatoria"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2002.132743362832,
+                    "averageEnglishCorrectAnswers": 20.64435946462715,
+                    "averageOfa": {
+                      "ENG": 370
+                    },
+                    "averageOfWhoPassed": 27.196078431372549019607843137,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.4013274336283185840707964602,
+                      "Comprensione del Testo": 6.3836283185840707964601769912,
+                      "Disegno e Rappresentazione": 7.0362831858407079646017699115,
+                      "Fisica e Matematica": 1.2234513274336283185840707965,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1349557522123893805309734513
+                    },
+                    "averageScoresOfAllStudents": 22.179646017699115044247787611,
+                    "location": "MILANO LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.8867924528302,
+                    "averageEnglishCorrectAnswers": 20.333333333333332,
+                    "averageOfa": {
+                      "ENG": 178
+                    },
+                    "averageOfWhoPassed": 27.416666666666666666666666667,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.0933962264150943396226415094,
+                      "Comprensione del Testo": 6.0688679245283018867924528302,
+                      "Disegno e Rappresentazione": 6.80,
+                      "Fisica e Matematica": 1.3867924528301886792452830189,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1103773584905660377358490566
+                    },
+                    "averageScoresOfAllStudents": 21.459433962264150943396226415,
+                    "location": "LECCO",
+                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2001.8407960199006,
+                    "averageEnglishCorrectAnswers": 21.92241379310345,
+                    "averageOfa": {
+                      "ENG": 201
+                    },
+                    "averageOfWhoPassed": 32.75,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.2587064676616915422885572139,
+                      "Comprensione del Testo": 6.1106965174129353233830845771,
+                      "Disegno e Rappresentazione": 6.9552238805970149253731343284,
+                      "Fisica e Matematica": 1.7251243781094527363184079602,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.6977611940298507462686567164
+                    },
+                    "averageScoresOfAllStudents": 21.747512437810945273631840796,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  },
+                  {
+                    "averageBirthYear": 2002.1634615384614,
+                    "averageEnglishCorrectAnswers": 20.357894736842105,
+                    "averageOfa": {
+                      "ENG": 211
+                    },
+                    "averageOfWhoPassed": 25.984375,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.2355769230769230769230769231,
+                      "Comprensione del Testo": 6.1538461538461538461538461538,
+                      "Disegno e Rappresentazione": 6.9030448717948717948717948718,
+                      "Fisica e Matematica": 1.1939102564102564102564102564,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.9495192307692307692307692308
+                    },
+                    "averageScoresOfAllStudents": 21.435897435897435897435897436,
+                    "location": "PIACENZA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.297385620915,
+                    "averageEnglishCorrectAnswers": 20.3584229390681,
+                    "averageOfa": {
+                      "ENG": 208
+                    },
+                    "averageOfWhoPassed": 26.102941176470588235294117647,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.0955882352941176470588235294,
+                      "Comprensione del Testo": 6.2001633986928104575163398693,
+                      "Disegno e Rappresentazione": 6.9191176470588235294117647059,
+                      "Fisica e Matematica": 1.2140522875816993464052287582,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0122549019607843137254901961
+                    },
+                    "averageScoresOfAllStudents": 21.441176470588235294117647059,
+                    "location": "MANTOVA",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+                  },
+                  {
+                    "averageBirthYear": 2002.0034843205574,
+                    "averageEnglishCorrectAnswers": 22.86111111111111,
+                    "averageOfa": {
+                      "ENG": 287
+                    },
+                    "averageOfWhoPassed": 33.25,
+                    "averagePartialScores": {
+                      "Ragionamento Logico": 4.3301393728222996515679442509,
+                      "Comprensione del Testo": 6.3031358885017421602787456446,
+                      "Disegno e Rappresentazione": 7.0095818815331010452961672474,
+                      "Fisica e Matematica": 1.7125435540069686411149825784,
+                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.00
+                    },
+                    "averageScoresOfAllStudents": 22.355400696864111498257839721,
+                    "location": "MI LEONARDO",
+                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+                  }
+                ],
+                "howManyCanEnroll": 659,
+                "howManyStudents": 659,
+                "resultsSummarized": {
+                  "33": 6,
+                  "32": 6,
+                  "31": 7,
+                  "30": 4,
+                  "29": 4,
+                  "28": 8,
+                  "27": 31,
+                  "26": 114,
+                  "25": 62,
+                  "24": 83,
+                  "23": 50,
+                  "22": 64,
+                  "21": 29,
+                  "20": 45,
+                  "19": 19,
+                  "18": 36,
+                  "17": 18,
+                  "16": 26,
+                  "15": 6,
+                  "14": 13,
+                  "13": 6,
+                  "12": 7,
+                  "11": 3,
+                  "10": 2,
+                  "8": 7,
+                  "6": 2,
+                  "4": 1
+                }
+              }
+            }
+          ],
+          "numStudents": 5443
+        },
         "Ingegneria": {
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2022/",
                 "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Extra-ue Prima Graduatoria Di Seconda Fase"
               },
@@ -550,6 +1358,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2022/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Prima Graduatoria Di Seconda Fase"
               },
@@ -1018,6 +1827,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2022/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Seconda Graduatoria Di Seconda Fase"
               },
@@ -1451,6 +2261,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2022/",
                 "link": "Terza_Fase.json",
                 "name": "Terza Fase"
               },
@@ -1878,6 +2689,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2022/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Terza Graduatoria Di Seconda Fase"
               },
@@ -2234,6 +3046,7 @@
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Design/2022/",
                 "link": "Anticipato.json",
                 "name": "Anticipato"
               },
@@ -2389,6 +3202,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2022/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -2517,6 +3331,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2022/",
                 "link": "Ripescaggio.json",
                 "name": "Ripescaggio"
               },
@@ -2597,6 +3412,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2022/",
                 "link": "Standard.json",
                 "name": "Standard"
               },
@@ -2755,815 +3571,197 @@
             }
           ],
           "numStudents": 7303
-        },
-        "Architettura": {
-          "list": [
-            {
-              "singleCourseJson": {
-                "link": "Extra-ue_Seconda_Graduatoria.json",
-                "name": "Extra-ue Seconda Graduatoria"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2000.8666666666666,
-                    "averageEnglishCorrectAnswers": 19.416666666666668,
-                    "averageOfa": {
-                      "ENG": 40
-                    },
-                    "averageOfWhoPassed": 31.00,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.2611111111111111111111111111,
-                      "Comprensione del Testo": 4.1722222222222222222222222222,
-                      "Disegno e Rappresentazione": 7.1777777777777777777777777778,
-                      "Fisica e Matematica": 2.1944444444444444444444444444,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2222222222222222222222222222
-                    },
-                    "averageScoresOfAllStudents": 20.027777777777777777777777778,
-                    "location": "MILANO LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.0344827586207,
-                    "averageEnglishCorrectAnswers": 12.0,
-                    "averageOfa": {
-                      "ENG": 29
-                    },
-                    "averageOfWhoPassed": 27.00,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 3.8793103448275862068965517241,
-                      "Comprensione del Testo": 4.6120689655172413793103448276,
-                      "Disegno e Rappresentazione": 7.1982758620689655172413793103,
-                      "Fisica e Matematica": 1.3965517241379310344827586207,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 1.9310344827586206896551724138
-                    },
-                    "averageScoresOfAllStudents": 19.017241379310344827586206897,
-                    "location": "LECCO",
-                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.8275862068965,
-                    "averageEnglishCorrectAnswers": 28.0,
-                    "averageOfa": {
-                      "ENG": 232
-                    },
-                    "averageOfWhoPassed": 33.607142857142857142857142857,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.6896551724137931034482758621,
-                      "Comprensione del Testo": 5.2844827586206896551724137931,
-                      "Disegno e Rappresentazione": 7.1691810344827586206896551724,
-                      "Fisica e Matematica": 3.3211206896551724137931034483,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0334051724137931034482758621
-                    },
-                    "averageScoresOfAllStudents": 23.497844827586206896551724138,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  },
-                  {
-                    "averageBirthYear": 2000.7894736842106,
-                    "averageEnglishCorrectAnswers": 18.555555555555557,
-                    "averageOfa": {
-                      "ENG": 35
-                    },
-                    "averageOfWhoPassed": 27.00,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.3355263157894736842105263158,
-                      "Comprensione del Testo": 4.125,
-                      "Disegno e Rappresentazione": 7.0328947368421052631578947368,
-                      "Fisica e Matematica": 1.7631578947368421052631578947,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.1842105263157894736842105263
-                    },
-                    "averageScoresOfAllStudents": 19.440789473684210526315789474,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2000.7941176470588,
-                    "averageEnglishCorrectAnswers": 18.555555555555557,
-                    "averageOfa": {
-                      "ENG": 31
-                    },
-                    "averageOfWhoPassed": 27.00,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.0661764705882352941176470588,
-                      "Comprensione del Testo": 4.25,
-                      "Disegno e Rappresentazione": 7.1838235294117647058823529412,
-                      "Fisica e Matematica": 1.7573529411764705882352941176,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.1397058823529411764705882353
-                    },
-                    "averageScoresOfAllStudents": 19.397058823529411764705882353,
-                    "location": "MANTOVA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.7471698113206,
-                    "averageEnglishCorrectAnswers": 27.0,
-                    "averageOfa": {
-                      "ENG": 265
-                    },
-                    "averageOfWhoPassed": 35.20,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.6650943396226415094339622642,
-                      "Comprensione del Testo": 5.3264150943396226415094339623,
-                      "Disegno e Rappresentazione": 7.0603773584905660377358490566,
-                      "Fisica e Matematica": 3.2415094339622641509433962264,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1509433962264150943396226415
-                    },
-                    "averageScoresOfAllStudents": 23.444339622641509433962264151,
-                    "location": "MI LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  }
-                ],
-                "howManyCanEnroll": 277,
-                "howManyStudents": 277,
-                "resultsSummarized": {
-                  "36": 1,
-                  "35": 8,
-                  "34": 4,
-                  "33": 7,
-                  "32": 15,
-                  "31": 6,
-                  "30": 13,
-                  "29": 13,
-                  "28": 16,
-                  "27": 19,
-                  "26": 14,
-                  "25": 8,
-                  "24": 18,
-                  "23": 12,
-                  "22": 22,
-                  "21": 11,
-                  "20": 17,
-                  "19": 3,
-                  "18": 10,
-                  "17": 9,
-                  "16": 9,
-                  "15": 8,
-                  "14": 9,
-                  "13": 4,
-                  "12": 3,
-                  "11": 4,
-                  "10": 5,
-                  "9": 2,
-                  "8": 3,
-                  "6": 2,
-                  "5": 1,
-                  "4": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Extra-ue.json",
-                "name": "Extra-ue"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2001.0394736842106,
-                    "averageEnglishCorrectAnswers": 19.724137931034484,
-                    "averageOfa": {
-                      "ENG": 64
-                    },
-                    "averageOfWhoPassed": 33.15,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.2565789473684210526315789474,
-                      "Comprensione del Testo": 3.7763157894736842105263157895,
-                      "Disegno e Rappresentazione": 6.9473684210526315789473684211,
-                      "Fisica e Matematica": 2.75,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.3289473684210526315789473684
-                    },
-                    "averageScoresOfAllStudents": 20.059210526315789473684210526,
-                    "location": "MILANO LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2000.7551020408164,
-                    "averageEnglishCorrectAnswers": 17.555555555555557,
-                    "averageOfa": {
-                      "ENG": 46
-                    },
-                    "averageOfWhoPassed": 27.50,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 3.8571428571428571428571428571,
-                      "Comprensione del Testo": 4.5306122448979591836734693878,
-                      "Disegno e Rappresentazione": 6.7142857142857142857142857143,
-                      "Fisica e Matematica": 2.2346938775510204081632653061,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.0255102040816326530612244898
-                    },
-                    "averageScoresOfAllStudents": 19.362244897959183673469387755,
-                    "location": "LECCO",
-                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.9851851851852,
-                    "averageEnglishCorrectAnswers": 24.75,
-                    "averageOfa": {
-                      "ENG": 405
-                    },
-                    "averageOfWhoPassed": 36.73125,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.6104938271604938271604938272,
-                      "Comprensione del Testo": 5.0987654320987654320987654321,
-                      "Disegno e Rappresentazione": 6.9975308641975308641975308642,
-                      "Fisica e Matematica": 3.3858024691358024691358024691,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0382716049382716049382716049
-                    },
-                    "averageScoresOfAllStudents": 23.130864197530864197530864198,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  },
-                  {
-                    "averageBirthYear": 2001.0597014925372,
-                    "averageEnglishCorrectAnswers": 19.956521739130434,
-                    "averageOfa": {
-                      "ENG": 57
-                    },
-                    "averageOfWhoPassed": 27.854166666666666666666666667,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.2350746268656716417910447761,
-                      "Comprensione del Testo": 4.0298507462686567164179104478,
-                      "Disegno e Rappresentazione": 6.8843283582089552238805970149,
-                      "Fisica e Matematica": 2.3880597014925373134328358209,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2910447761194029850746268657
-                    },
-                    "averageScoresOfAllStudents": 19.828358208955223880597014925,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2000.9818181818182,
-                    "averageEnglishCorrectAnswers": 19.352941176470587,
-                    "averageOfa": {
-                      "ENG": 48
-                    },
-                    "averageOfWhoPassed": 17.25,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 3.9545454545454545454545454545,
-                      "Comprensione del Testo": 4.0909090909090909090909090909,
-                      "Disegno e Rappresentazione": 6.8045454545454545454545454545,
-                      "Fisica e Matematica": 2.3090909090909090909090909091,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.2318181818181818181818181818
-                    },
-                    "averageScoresOfAllStudents": 19.390909090909090909090909091,
-                    "location": "MANTOVA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.9570552147238,
-                    "averageEnglishCorrectAnswers": 24.75,
-                    "averageOfa": {
-                      "ENG": 489
-                    },
-                    "averageOfWhoPassed": 39.105,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.8067484662576687116564417178,
-                      "Comprensione del Testo": 5.2862985685071574642126789366,
-                      "Disegno e Rappresentazione": 7.017382413087934560327198364,
-                      "Fisica e Matematica": 3.594580777096114519427402863,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.2494887525562372188139059305
-                    },
-                    "averageScoresOfAllStudents": 23.954498977505112474437627812,
-                    "location": "MI LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  }
-                ],
-                "howManyCanEnroll": 534,
-                "howManyStudents": 534,
-                "resultsSummarized": {
-                  "50": 1,
-                  "49": 1,
-                  "46": 1,
-                  "45": 3,
-                  "44": 1,
-                  "43": 3,
-                  "42": 4,
-                  "41": 4,
-                  "40": 8,
-                  "39": 11,
-                  "38": 12,
-                  "37": 5,
-                  "36": 12,
-                  "35": 16,
-                  "34": 11,
-                  "33": 8,
-                  "32": 17,
-                  "31": 10,
-                  "30": 19,
-                  "29": 14,
-                  "28": 29,
-                  "27": 27,
-                  "26": 22,
-                  "25": 13,
-                  "24": 24,
-                  "23": 22,
-                  "22": 32,
-                  "21": 20,
-                  "20": 30,
-                  "19": 5,
-                  "18": 23,
-                  "17": 14,
-                  "16": 19,
-                  "15": 13,
-                  "14": 21,
-                  "13": 6,
-                  "12": 7,
-                  "11": 5,
-                  "10": 14,
-                  "9": 6,
-                  "8": 6,
-                  "7": 4,
-                  "6": 5,
-                  "5": 2,
-                  "4": 1,
-                  "3": 2,
-                  "2": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Prima_Graduatoria.json",
-                "name": "Prima Graduatoria"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2002.2911611785096,
-                    "averageEnglishCorrectAnswers": 21.99504281207751,
-                    "averageOfa": {
-                      "ENG": 1229
-                    },
-                    "averageOfWhoPassed": 33.883892617449664429530201342,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 5.6008448873483535528596187175,
-                      "Comprensione del Testo": 6.9232019064124783362218370884,
-                      "Disegno e Rappresentazione": 7.5157062391681109185441941075,
-                      "Fisica e Matematica": 2.0258882149046793760831889081,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 4.0514514731369150779896013865
-                    },
-                    "averageScoresOfAllStudents": 26.117092720970537261698440208,
-                    "location": "MILANO LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.237556561086,
-                    "averageEnglishCorrectAnswers": 21.2562874251497,
-                    "averageOfa": {
-                      "ENG": 528
-                    },
-                    "averageOfWhoPassed": 33.752118644067796610169491525,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 5.0008484162895927601809954751,
-                      "Comprensione del Testo": 6.592194570135746606334841629,
-                      "Disegno e Rappresentazione": 7.0542986425339366515837104072,
-                      "Fisica e Matematica": 1.7709276018099547511312217195,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.4884049773755656108597285068
-                    },
-                    "averageScoresOfAllStudents": 23.906674208144796380090497738,
-                    "location": "LECCO",
-                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.0968280467446,
-                    "averageEnglishCorrectAnswers": 22.366412213740457,
-                    "averageOfa": {
-                      "ENG": 599
-                    },
-                    "averageOfWhoPassed": 35.675,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.6719532554257095158597662771,
-                      "Comprensione del Testo": 6.3055091819699499165275459098,
-                      "Disegno e Rappresentazione": 7.0217028380634390651085141903,
-                      "Fisica e Matematica": 1.7721202003338898163606010017,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0271285475792988313856427379
-                    },
-                    "averageScoresOfAllStudents": 22.798414023372287145242070117,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  },
-                  {
-                    "averageBirthYear": 2002.2497297297298,
-                    "averageEnglishCorrectAnswers": 20.735870818915803,
-                    "averageOfa": {
-                      "ENG": 584
-                    },
-                    "averageOfWhoPassed": 30.4875,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.5781081081081081081081081081,
-                      "Comprensione del Testo": 6.3467567567567567567567567568,
-                      "Disegno e Rappresentazione": 6.9364864864864864864864864865,
-                      "Fisica e Matematica": 1.3018918918918918918918918919,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.227027027027027027027027027
-                    },
-                    "averageScoresOfAllStudents": 22.39027027027027027027027027,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.2513144058885,
-                    "averageEnglishCorrectAnswers": 20.912026726057906,
-                    "averageOfa": {
-                      "ENG": 593
-                    },
-                    "averageOfWhoPassed": 30.863888888888888888888888889,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.733438485804416403785488959,
-                      "Comprensione del Testo": 6.4766035751840168243953732913,
-                      "Disegno e Rappresentazione": 7.0399579390115667718191377497,
-                      "Fisica e Matematica": 1.3880126182965299684542586751,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3367507886435331230283911672
-                    },
-                    "averageScoresOfAllStudents": 22.974763406940063091482649842,
-                    "location": "MANTOVA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.2444444444445,
-                    "averageEnglishCorrectAnswers": 23.39644012944984,
-                    "averageOfa": {
-                      "ENG": 900
-                    },
-                    "averageOfWhoPassed": 38.105,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.9475,
-                      "Comprensione del Testo": 6.5469444444444444444444444444,
-                      "Disegno e Rappresentazione": 7.1713888888888888888888888889,
-                      "Fisica e Matematica": 1.9997222222222222222222222222,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3916666666666666666666666667
-                    },
-                    "averageScoresOfAllStudents": 24.057222222222222222222222222,
-                    "location": "MI LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  }
-                ],
-                "howManyCanEnroll": 2785,
-                "howManyStudents": 2785,
-                "resultsSummarized": {
-                  "48": 1,
-                  "47": 1,
-                  "46": 3,
-                  "45": 2,
-                  "44": 5,
-                  "43": 7,
-                  "42": 16,
-                  "41": 17,
-                  "40": 33,
-                  "39": 36,
-                  "38": 66,
-                  "37": 34,
-                  "36": 85,
-                  "35": 79,
-                  "34": 108,
-                  "33": 83,
-                  "32": 150,
-                  "31": 110,
-                  "30": 158,
-                  "29": 114,
-                  "28": 188,
-                  "27": 124,
-                  "26": 187,
-                  "25": 112,
-                  "24": 177,
-                  "23": 102,
-                  "22": 142,
-                  "21": 76,
-                  "20": 119,
-                  "19": 57,
-                  "18": 99,
-                  "17": 35,
-                  "16": 65,
-                  "15": 35,
-                  "14": 46,
-                  "13": 17,
-                  "12": 30,
-                  "11": 13,
-                  "10": 10,
-                  "9": 16,
-                  "8": 14,
-                  "7": 2,
-                  "6": 5,
-                  "5": 1,
-                  "4": 2,
-                  "2": 2,
-                  "-4": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Seconda_Graduatoria.json",
-                "name": "Seconda Graduatoria"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2002.2037586547972,
-                    "averageEnglishCorrectAnswers": 21.03455497382199,
-                    "averageOfa": {
-                      "ENG": 624
-                    },
-                    "averageOfWhoPassed": 28.22660098522167487684729064,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.7591493570722057368941641939,
-                      "Comprensione del Testo": 6.5655291790306627101879327399,
-                      "Disegno e Rappresentazione": 7.0576162215628090999010880317,
-                      "Fisica e Matematica": 1.3672106824925816023738872404,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.3538575667655786350148367953
-                    },
-                    "averageScoresOfAllStudents": 23.103363006923837784371909001,
-                    "location": "MILANO LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.076923076923,
-                    "averageEnglishCorrectAnswers": 20.364556962025315,
-                    "averageOfa": {
-                      "ENG": 293
-                    },
-                    "averageOfWhoPassed": 28.269230769230769230769230769,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.4108391608391608391608391608,
-                      "Comprensione del Testo": 6.2820512820512820512820512821,
-                      "Disegno e Rappresentazione": 6.8175990675990675990675990676,
-                      "Fisica e Matematica": 1.3846153846153846153846153846,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.2185314685314685314685314685
-                    },
-                    "averageScoresOfAllStudents": 22.113636363636363636363636364,
-                    "location": "LECCO",
-                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.0815047021943,
-                    "averageEnglishCorrectAnswers": 22.126262626262626,
-                    "averageOfa": {
-                      "ENG": 319
-                    },
-                    "averageOfWhoPassed": 33.107142857142857142857142857,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.4090909090909090909090909091,
-                      "Comprensione del Testo": 6.1943573667711598746081504702,
-                      "Disegno e Rappresentazione": 7.0681818181818181818181818182,
-                      "Fisica e Matematica": 1.7374608150470219435736677116,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.9286833855799373040752351097
-                    },
-                    "averageScoresOfAllStudents": 22.337774294670846394984326019,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  },
-                  {
-                    "averageBirthYear": 2002.2057026476577,
-                    "averageEnglishCorrectAnswers": 20.433920704845814,
-                    "averageOfa": {
-                      "ENG": 331
-                    },
-                    "averageOfWhoPassed": 26.88,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.3039714867617107942973523422,
-                      "Comprensione del Testo": 6.2474541751527494908350305499,
-                      "Disegno e Rappresentazione": 6.9139511201629327902240325866,
-                      "Fisica e Matematica": 1.1807535641547861507128309572,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1364562118126272912423625255
-                    },
-                    "averageScoresOfAllStudents": 21.782586558044806517311608961,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.1938775510205,
-                    "averageEnglishCorrectAnswers": 20.363436123348016,
-                    "averageOfa": {
-                      "ENG": 332
-                    },
-                    "averageOfWhoPassed": 27.138157894736842105263157895,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.3331632653061224489795918367,
-                      "Comprensione del Testo": 6.2994897959183673469387755102,
-                      "Disegno e Rappresentazione": 6.9341836734693877551020408163,
-                      "Fisica e Matematica": 1.2163265306122448979591836735,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1367346938775510204081632653
-                    },
-                    "averageScoresOfAllStudents": 21.919897959183673469387755102,
-                    "location": "MANTOVA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.1724890829694,
-                    "averageEnglishCorrectAnswers": 22.993311036789297,
-                    "averageOfa": {
-                      "ENG": 458
-                    },
-                    "averageOfWhoPassed": 34.25,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.5616812227074235807860262009,
-                      "Comprensione del Testo": 6.4159388646288209606986899563,
-                      "Disegno e Rappresentazione": 6.991266375545851528384279476,
-                      "Fisica e Matematica": 1.7822052401746724890829694323,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0802401746724890829694323144
-                    },
-                    "averageScoresOfAllStudents": 22.83133187772925764192139738,
-                    "location": "MI LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  }
-                ],
-                "howManyCanEnroll": 1188,
-                "howManyStudents": 1188,
-                "resultsSummarized": {
-                  "35": 3,
-                  "34": 7,
-                  "33": 10,
-                  "32": 9,
-                  "31": 9,
-                  "30": 6,
-                  "29": 65,
-                  "28": 139,
-                  "27": 97,
-                  "26": 141,
-                  "25": 81,
-                  "24": 115,
-                  "23": 65,
-                  "22": 100,
-                  "21": 45,
-                  "20": 72,
-                  "19": 29,
-                  "18": 53,
-                  "17": 21,
-                  "16": 36,
-                  "15": 10,
-                  "14": 24,
-                  "13": 8,
-                  "12": 12,
-                  "11": 6,
-                  "10": 6,
-                  "9": 4,
-                  "8": 11,
-                  "7": 1,
-                  "6": 2,
-                  "4": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Terza_Graduatoria.json",
-                "name": "Terza Graduatoria"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2002.132743362832,
-                    "averageEnglishCorrectAnswers": 20.64435946462715,
-                    "averageOfa": {
-                      "ENG": 370
-                    },
-                    "averageOfWhoPassed": 27.196078431372549019607843137,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.4013274336283185840707964602,
-                      "Comprensione del Testo": 6.3836283185840707964601769912,
-                      "Disegno e Rappresentazione": 7.0362831858407079646017699115,
-                      "Fisica e Matematica": 1.2234513274336283185840707965,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1349557522123893805309734513
-                    },
-                    "averageScoresOfAllStudents": 22.179646017699115044247787611,
-                    "location": "MILANO LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.8867924528302,
-                    "averageEnglishCorrectAnswers": 20.333333333333332,
-                    "averageOfa": {
-                      "ENG": 178
-                    },
-                    "averageOfWhoPassed": 27.416666666666666666666666667,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.0933962264150943396226415094,
-                      "Comprensione del Testo": 6.0688679245283018867924528302,
-                      "Disegno e Rappresentazione": 6.80,
-                      "Fisica e Matematica": 1.3867924528301886792452830189,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.1103773584905660377358490566
-                    },
-                    "averageScoresOfAllStudents": 21.459433962264150943396226415,
-                    "location": "LECCO",
-                    "title": "INGEGNERIA EDILE - ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2001.8407960199006,
-                    "averageEnglishCorrectAnswers": 21.92241379310345,
-                    "averageOfa": {
-                      "ENG": 201
-                    },
-                    "averageOfWhoPassed": 32.75,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.2587064676616915422885572139,
-                      "Comprensione del Testo": 6.1106965174129353233830845771,
-                      "Disegno e Rappresentazione": 6.9552238805970149253731343284,
-                      "Fisica e Matematica": 1.7251243781094527363184079602,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.6977611940298507462686567164
-                    },
-                    "averageScoresOfAllStudents": 21.747512437810945273631840796,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  },
-                  {
-                    "averageBirthYear": 2002.1634615384614,
-                    "averageEnglishCorrectAnswers": 20.357894736842105,
-                    "averageOfa": {
-                      "ENG": 211
-                    },
-                    "averageOfWhoPassed": 25.984375,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.2355769230769230769230769231,
-                      "Comprensione del Testo": 6.1538461538461538461538461538,
-                      "Disegno e Rappresentazione": 6.9030448717948717948717948718,
-                      "Fisica e Matematica": 1.1939102564102564102564102564,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 2.9495192307692307692307692308
-                    },
-                    "averageScoresOfAllStudents": 21.435897435897435897435897436,
-                    "location": "PIACENZA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.297385620915,
-                    "averageEnglishCorrectAnswers": 20.3584229390681,
-                    "averageOfa": {
-                      "ENG": 208
-                    },
-                    "averageOfWhoPassed": 26.102941176470588235294117647,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.0955882352941176470588235294,
-                      "Comprensione del Testo": 6.2001633986928104575163398693,
-                      "Disegno e Rappresentazione": 6.9191176470588235294117647059,
-                      "Fisica e Matematica": 1.2140522875816993464052287582,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.0122549019607843137254901961
-                    },
-                    "averageScoresOfAllStudents": 21.441176470588235294117647059,
-                    "location": "MANTOVA",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA"
-                  },
-                  {
-                    "averageBirthYear": 2002.0034843205574,
-                    "averageEnglishCorrectAnswers": 22.86111111111111,
-                    "averageOfa": {
-                      "ENG": 287
-                    },
-                    "averageOfWhoPassed": 33.25,
-                    "averagePartialScores": {
-                      "Ragionamento Logico": 4.3301393728222996515679442509,
-                      "Comprensione del Testo": 6.3031358885017421602787456446,
-                      "Disegno e Rappresentazione": 7.0095818815331010452961672474,
-                      "Fisica e Matematica": 1.7125435540069686411149825784,
-                      "Conoscenze aquisite negli studi, storia e cultura generale": 3.00
-                    },
-                    "averageScoresOfAllStudents": 22.355400696864111498257839721,
-                    "location": "MI LEONARDO",
-                    "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
-                  }
-                ],
-                "howManyCanEnroll": 659,
-                "howManyStudents": 659,
-                "resultsSummarized": {
-                  "33": 6,
-                  "32": 6,
-                  "31": 7,
-                  "30": 4,
-                  "29": 4,
-                  "28": 8,
-                  "27": 31,
-                  "26": 114,
-                  "25": 62,
-                  "24": 83,
-                  "23": 50,
-                  "22": 64,
-                  "21": 29,
-                  "20": 45,
-                  "19": 19,
-                  "18": 36,
-                  "17": 18,
-                  "16": 26,
-                  "15": 6,
-                  "14": 13,
-                  "13": 6,
-                  "12": 7,
-                  "11": 3,
-                  "10": 2,
-                  "8": 7,
-                  "6": 2,
-                  "4": 1
-                }
-              }
-            }
-          ],
-          "numStudents": 5443
         }
       }
     },
     "2021": {
       "numStudents": 16625,
       "schools": {
+        "Urbanistica": {
+          "list": [
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2021/",
+                "link": "Anticipata.json",
+                "name": "Anticipata"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2001.123076923077,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 72.945454545454545454545454545,
+                    "averagePartialScores": {
+                      "Colloquio": 34.623076923076923076923076923,
+                      "Elaborato": 19.407692307692307692307692308,
+                      "Lettera Motivazionale": 14.592307692307692307692307692
+                    },
+                    "averageScoresOfAllStudents": 68.623076923076923076923076923,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 115,
+                "howManyStudents": 130,
+                "resultsSummarized": {
+                  "94": 1,
+                  "93": 1,
+                  "92": 1,
+                  "91": 1,
+                  "90": 2,
+                  "89": 1,
+                  "88": 1,
+                  "87": 4,
+                  "86": 2,
+                  "84": 5,
+                  "83": 1,
+                  "82": 6,
+                  "81": 2,
+                  "80": 3,
+                  "79": 3,
+                  "78": 6,
+                  "77": 4,
+                  "76": 4,
+                  "75": 3,
+                  "73": 1,
+                  "72": 7,
+                  "71": 5,
+                  "70": 6,
+                  "69": 2,
+                  "68": 3,
+                  "67": 4,
+                  "66": 2,
+                  "65": 5,
+                  "64": 3,
+                  "63": 2,
+                  "62": 1,
+                  "61": 4,
+                  "60": 4,
+                  "59": 1,
+                  "58": 2,
+                  "56": 1,
+                  "55": 1,
+                  "54": 4,
+                  "53": 4,
+                  "52": 2,
+                  "51": 1,
+                  "49": 1,
+                  "47": 1,
+                  "45": 1,
+                  "43": 5,
+                  "41": 1,
+                  "39": 3,
+                  "38": 1,
+                  "31": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2021/",
+                "link": "Extra-ue.json",
+                "name": "Extra-ue"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2001.0,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 41.00,
+                    "averagePartialScores": {
+                      "Colloquio": 17.00,
+                      "Elaborato": 13.00,
+                      "Lettera Motivazionale": 11.00
+                    },
+                    "averageScoresOfAllStudents": 41.00,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 1,
+                "howManyStudents": 1,
+                "resultsSummarized": {
+                  "41": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2021/",
+                "link": "Standard.json",
+                "name": "Standard"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2001.0,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 70.703703703703703703703703704,
+                    "averagePartialScores": {
+                      "Colloquio": 31.567567567567567567567567568,
+                      "Elaborato": 18.148648648648648648648648649,
+                      "Lettera Motivazionale": 13.702702702702702702702702703
+                    },
+                    "averageScoresOfAllStudents": 63.418918918918918918918918919,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 61,
+                "howManyStudents": 74,
+                "resultsSummarized": {
+                  "90": 1,
+                  "86": 1,
+                  "85": 1,
+                  "83": 2,
+                  "82": 2,
+                  "80": 8,
+                  "79": 1,
+                  "78": 2,
+                  "77": 1,
+                  "76": 1,
+                  "75": 5,
+                  "73": 2,
+                  "72": 3,
+                  "71": 1,
+                  "70": 3,
+                  "69": 1,
+                  "67": 1,
+                  "66": 1,
+                  "65": 2,
+                  "64": 1,
+                  "63": 1,
+                  "62": 2,
+                  "57": 1,
+                  "56": 1,
+                  "55": 2,
+                  "54": 4,
+                  "53": 3,
+                  "52": 3,
+                  "51": 1,
+                  "48": 1,
+                  "46": 3,
+                  "45": 1,
+                  "44": 1,
+                  "43": 2,
+                  "42": 1,
+                  "39": 1,
+                  "38": 4,
+                  "37": 2
+                }
+              }
+            }
+          ],
+          "numStudents": 205
+        },
         "Architettura": {
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2021/",
                 "link": "Extra-ue_Seconda_Graduatoria.json",
                 "name": "Extra-ue Seconda Graduatoria"
               },
@@ -3707,6 +3905,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2021/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -3865,6 +4064,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2021/",
                 "link": "Prima_Graduatoria.json",
                 "name": "Prima Graduatoria"
               },
@@ -4030,6 +4230,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2021/",
                 "link": "Seconda_Graduatoria.json",
                 "name": "Seconda Graduatoria"
               },
@@ -4176,6 +4377,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2021/",
                 "link": "Terza_Graduatoria.json",
                 "name": "Terza Graduatoria"
               },
@@ -4322,6 +4524,7 @@
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2021/",
                 "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Extra-ue Prima Graduatoria Di Seconda Fase"
               },
@@ -4602,6 +4805,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2021/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Prima Graduatoria Di Seconda Fase"
               },
@@ -5071,6 +5275,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2021/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Seconda Graduatoria Di Seconda Fase"
               },
@@ -5514,6 +5719,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2021/",
                 "link": "Terza_Fase.json",
                 "name": "Terza Fase"
               },
@@ -5930,6 +6136,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2021/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Terza Graduatoria Di Seconda Fase"
               },
@@ -6331,187 +6538,11 @@
           ],
           "numStudents": 4918
         },
-        "Urbanistica": {
-          "list": [
-            {
-              "singleCourseJson": {
-                "link": "Anticipata.json",
-                "name": "Anticipata"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2001.123076923077,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 72.945454545454545454545454545,
-                    "averagePartialScores": {
-                      "Colloquio": 34.623076923076923076923076923,
-                      "Elaborato": 19.407692307692307692307692308,
-                      "Lettera Motivazionale": 14.592307692307692307692307692
-                    },
-                    "averageScoresOfAllStudents": 68.623076923076923076923076923,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
-                  }
-                ],
-                "howManyCanEnroll": 115,
-                "howManyStudents": 130,
-                "resultsSummarized": {
-                  "94": 1,
-                  "93": 1,
-                  "92": 1,
-                  "91": 1,
-                  "90": 2,
-                  "89": 1,
-                  "88": 1,
-                  "87": 4,
-                  "86": 2,
-                  "84": 5,
-                  "83": 1,
-                  "82": 6,
-                  "81": 2,
-                  "80": 3,
-                  "79": 3,
-                  "78": 6,
-                  "77": 4,
-                  "76": 4,
-                  "75": 3,
-                  "73": 1,
-                  "72": 7,
-                  "71": 5,
-                  "70": 6,
-                  "69": 2,
-                  "68": 3,
-                  "67": 4,
-                  "66": 2,
-                  "65": 5,
-                  "64": 3,
-                  "63": 2,
-                  "62": 1,
-                  "61": 4,
-                  "60": 4,
-                  "59": 1,
-                  "58": 2,
-                  "56": 1,
-                  "55": 1,
-                  "54": 4,
-                  "53": 4,
-                  "52": 2,
-                  "51": 1,
-                  "49": 1,
-                  "47": 1,
-                  "45": 1,
-                  "43": 5,
-                  "41": 1,
-                  "39": 3,
-                  "38": 1,
-                  "31": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Extra-ue.json",
-                "name": "Extra-ue"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2001.0,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 41.00,
-                    "averagePartialScores": {
-                      "Colloquio": 17.00,
-                      "Elaborato": 13.00,
-                      "Lettera Motivazionale": 11.00
-                    },
-                    "averageScoresOfAllStudents": 41.00,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
-                  }
-                ],
-                "howManyCanEnroll": 1,
-                "howManyStudents": 1,
-                "resultsSummarized": {
-                  "41": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Standard.json",
-                "name": "Standard"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2001.0,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 70.703703703703703703703703704,
-                    "averagePartialScores": {
-                      "Colloquio": 31.567567567567567567567567568,
-                      "Elaborato": 18.148648648648648648648648649,
-                      "Lettera Motivazionale": 13.702702702702702702702702703
-                    },
-                    "averageScoresOfAllStudents": 63.418918918918918918918918919,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
-                  }
-                ],
-                "howManyCanEnroll": 61,
-                "howManyStudents": 74,
-                "resultsSummarized": {
-                  "90": 1,
-                  "86": 1,
-                  "85": 1,
-                  "83": 2,
-                  "82": 2,
-                  "80": 8,
-                  "79": 1,
-                  "78": 2,
-                  "77": 1,
-                  "76": 1,
-                  "75": 5,
-                  "73": 2,
-                  "72": 3,
-                  "71": 1,
-                  "70": 3,
-                  "69": 1,
-                  "67": 1,
-                  "66": 1,
-                  "65": 2,
-                  "64": 1,
-                  "63": 1,
-                  "62": 2,
-                  "57": 1,
-                  "56": 1,
-                  "55": 2,
-                  "54": 4,
-                  "53": 3,
-                  "52": 3,
-                  "51": 1,
-                  "48": 1,
-                  "46": 3,
-                  "45": 1,
-                  "44": 1,
-                  "43": 2,
-                  "42": 1,
-                  "39": 1,
-                  "38": 4,
-                  "37": 2
-                }
-              }
-            }
-          ],
-          "numStudents": 205
-        },
         "Design": {
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Design/2021/",
                 "link": "Anticipato.json",
                 "name": "Anticipato"
               },
@@ -6670,6 +6701,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2021/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -6795,6 +6827,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2021/",
                 "link": "Ripescaggio.json",
                 "name": "Ripescaggio"
               },
@@ -6932,6 +6965,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2021/",
                 "link": "Standard.json",
                 "name": "Standard"
               },
@@ -7098,10 +7132,180 @@
     "2020": {
       "numStudents": 18454,
       "schools": {
+        "Urbanistica": {
+          "list": [
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2020/",
+                "link": "Anticipata.json",
+                "name": "Anticipata"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2000.0277777777778,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 72.285714285714285714285714286,
+                    "averagePartialScores": {
+                      "Colloquio": 36.194444444444444444444444444,
+                      "Elaborato": 20.231481481481481481481481481,
+                      "Lettera Motivazionale": 14.898148148148148148148148148
+                    },
+                    "averageScoresOfAllStudents": 71.324074074074074074074074074,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 108,
+                "howManyStudents": 108,
+                "resultsSummarized": {
+                  "95": 2,
+                  "94": 3,
+                  "93": 2,
+                  "92": 1,
+                  "91": 3,
+                  "90": 4,
+                  "89": 1,
+                  "88": 1,
+                  "87": 4,
+                  "86": 1,
+                  "85": 2,
+                  "84": 6,
+                  "83": 1,
+                  "80": 1,
+                  "79": 2,
+                  "78": 3,
+                  "77": 2,
+                  "76": 2,
+                  "75": 5,
+                  "74": 4,
+                  "73": 4,
+                  "72": 3,
+                  "71": 4,
+                  "70": 1,
+                  "69": 1,
+                  "68": 3,
+                  "67": 2,
+                  "66": 5,
+                  "65": 2,
+                  "64": 1,
+                  "63": 2,
+                  "62": 1,
+                  "61": 4,
+                  "60": 4,
+                  "59": 1,
+                  "58": 2,
+                  "57": 1,
+                  "56": 1,
+                  "55": 2,
+                  "54": 1,
+                  "53": 1,
+                  "50": 2,
+                  "49": 1,
+                  "48": 2,
+                  "47": 1,
+                  "44": 1,
+                  "43": 1,
+                  "41": 1,
+                  "39": 1,
+                  "38": 1,
+                  "36": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2020/",
+                "link": "Extra-ue.json",
+                "name": "Extra-ue"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2001.0,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 75.666666666666666666666666667,
+                    "averagePartialScores": {
+                      "Colloquio": 40.333333333333333333333333333,
+                      "Elaborato": 18.666666666666666666666666667,
+                      "Lettera Motivazionale": 16.666666666666666666666666667
+                    },
+                    "averageScoresOfAllStudents": 75.666666666666666666666666667,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 3,
+                "howManyStudents": 3,
+                "resultsSummarized": {
+                  "84": 1,
+                  "79": 1,
+                  "64": 1
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Urbanistica/2020/",
+                "link": "Standard.json",
+                "name": "Standard"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 1998.7534246575342,
+                    "averageEnglishCorrectAnswers": null,
+                    "averageOfa": {},
+                    "averageOfWhoPassed": 72.666666666666666666666666667,
+                    "averagePartialScores": {
+                      "Colloquio": 36.082191780821917808219178082,
+                      "Elaborato": 19.10958904109589041095890411,
+                      "Lettera Motivazionale": 14.232876712328767123287671233
+                    },
+                    "averageScoresOfAllStudents": 69.424657534246575342465753425,
+                    "location": null,
+                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                  }
+                ],
+                "howManyCanEnroll": 32,
+                "howManyStudents": 41,
+                "resultsSummarized": {
+                  "93": 2,
+                  "92": 2,
+                  "90": 2,
+                  "88": 1,
+                  "87": 2,
+                  "86": 2,
+                  "85": 2,
+                  "82": 1,
+                  "81": 1,
+                  "80": 3,
+                  "79": 1,
+                  "78": 2,
+                  "77": 1,
+                  "76": 2,
+                  "75": 4,
+                  "74": 3,
+                  "73": 1,
+                  "52": 2,
+                  "51": 2,
+                  "48": 1,
+                  "47": 1,
+                  "46": 2,
+                  "45": 1
+                }
+              }
+            }
+          ],
+          "numStudents": 152
+        },
         "Architettura": {
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2020/",
                 "link": "Extra-ue_Seconda_Graduatoria.json",
                 "name": "Extra-ue Seconda Graduatoria"
               },
@@ -7247,6 +7451,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2020/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -7413,6 +7618,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2020/",
                 "link": "Prima_Graduatoria.json",
                 "name": "Prima Graduatoria"
               },
@@ -7586,6 +7792,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2020/",
                 "link": "Seconda_Graduatoria.json",
                 "name": "Seconda Graduatoria"
               },
@@ -7736,6 +7943,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Architettura/2020/",
                 "link": "Terza_Graduatoria.json",
                 "name": "Terza Graduatoria"
               },
@@ -7880,632 +8088,11 @@
           ],
           "numStudents": 3534
         },
-        "Design": {
-          "list": [
-            {
-              "singleCourseJson": {
-                "link": "Anticipato.json",
-                "name": "Anticipato"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2000.1743375174337,
-                    "averageEnglishCorrectAnswers": 22.766721945826422,
-                    "averageOfa": {
-                      "ENG": 813
-                    },
-                    "averageOfWhoPassed": 74.124139784946236559139784946,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 5.050092980009298000929800093,
-                      "Comprensione Verbale": 3.0672942817294281729428172943,
-                      "Storia del Design, Storia dell'Arte": 7.0176662017666201766620176662,
-                      "Logica": 2.347629009762900976290097629,
-                      "Cultura Generale": 12.349372384937238493723849372
-                    },
-                    "averageScoresOfAllStudents": 49.720032543003254300325430033,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-                  },
-                  {
-                    "averageBirthYear": 2000.200667037243,
-                    "averageEnglishCorrectAnswers": 22.828460038986353,
-                    "averageOfa": {
-                      "ENG": 689
-                    },
-                    "averageOfWhoPassed": 74.016391752577319587628865979,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.7676486937187326292384658143,
-                      "Comprensione Verbale": 3.0343246247915508615897720956,
-                      "Storia del Design, Storia dell'Arte": 6.9613674263479710950528071151,
-                      "Logica": 2.2964146748193440800444691495,
-                      "Cultura Generale": 12.117009449694274596998332407
-                    },
-                    "averageScoresOfAllStudents": 48.627898832684824902723735409,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA MODA"
-                  },
-                  {
-                    "averageBirthYear": 2000.192378328742,
-                    "averageEnglishCorrectAnswers": 22.952225841476658,
-                    "averageOfa": {
-                      "ENG": 812
-                    },
-                    "averageOfWhoPassed": 77.708448275862068965517241379,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.9854224058769513314967860422,
-                      "Comprensione Verbale": 3.1159320477502295684113865932,
-                      "Storia del Design, Storia dell'Arte": 7.0549816345270890725436179982,
-                      "Logica": 2.367079889807162534435261708,
-                      "Cultura Generale": 12.36409550045913682277318641
-                    },
-                    "averageScoresOfAllStudents": 49.812516069788797061524334252,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA COMUNICAZIONE"
-                  },
-                  {
-                    "averageBirthYear": 2000.1850180505414,
-                    "averageEnglishCorrectAnswers": 22.756955380577427,
-                    "averageOfa": {
-                      "ENG": 854
-                    },
-                    "averageOfWhoPassed": 72.704870466321243523316062176,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.9037680505415162454873646209,
-                      "Comprensione Verbale": 3.0470442238267148014440433213,
-                      "Storia del Design, Storia dell'Arte": 6.9591606498194945848375451264,
-                      "Logica": 2.310807761732851985559566787,
-                      "Cultura Generale": 12.177459386281588447653429603
-                    },
-                    "averageScoresOfAllStudents": 48.997008122743682310469314079,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEGLI INTERNI"
-                  }
-                ],
-                "howManyCanEnroll": 880,
-                "howManyStudents": 3053,
-                "resultsSummarized": {
-                  "92": 2,
-                  "91": 2,
-                  "90": 6,
-                  "89": 3,
-                  "88": 6,
-                  "87": 5,
-                  "86": 9,
-                  "85": 6,
-                  "84": 12,
-                  "83": 14,
-                  "82": 15,
-                  "81": 14,
-                  "80": 20,
-                  "79": 12,
-                  "78": 33,
-                  "77": 25,
-                  "76": 20,
-                  "75": 45,
-                  "74": 37,
-                  "73": 42,
-                  "72": 45,
-                  "71": 29,
-                  "70": 45,
-                  "69": 51,
-                  "68": 64,
-                  "67": 52,
-                  "66": 64,
-                  "65": 87,
-                  "64": 45,
-                  "63": 61,
-                  "62": 77,
-                  "61": 60,
-                  "60": 86,
-                  "59": 49,
-                  "58": 91,
-                  "57": 53,
-                  "56": 60,
-                  "55": 87,
-                  "54": 62,
-                  "53": 64,
-                  "52": 84,
-                  "51": 46,
-                  "50": 70,
-                  "49": 53,
-                  "48": 72,
-                  "47": 46,
-                  "46": 64,
-                  "45": 85,
-                  "44": 57,
-                  "43": 42,
-                  "42": 65,
-                  "41": 49,
-                  "40": 75,
-                  "39": 38,
-                  "38": 63,
-                  "37": 32,
-                  "36": 44,
-                  "35": 50,
-                  "34": 38,
-                  "33": 32,
-                  "32": 38,
-                  "31": 39,
-                  "30": 29,
-                  "29": 29,
-                  "28": 46,
-                  "27": 20,
-                  "26": 12,
-                  "25": 14,
-                  "24": 15,
-                  "23": 23,
-                  "22": 10,
-                  "21": 10,
-                  "20": 13,
-                  "19": 8,
-                  "18": 19,
-                  "17": 10,
-                  "16": 5,
-                  "15": 7,
-                  "14": 9,
-                  "13": 2,
-                  "12": 4,
-                  "11": 1,
-                  "10": 5,
-                  "9": 2,
-                  "8": 1,
-                  "6": 5,
-                  "4": 2,
-                  "2": 2,
-                  "0": 8
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Extra-ue.json",
-                "name": "Extra-ue"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 1999.5294117647059,
-                    "averageEnglishCorrectAnswers": 22.3265306122449,
-                    "averageOfa": {
-                      "ENG": 24
-                    },
-                    "averageOfWhoPassed": 51.8335,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 5.0490196078431372549019607843,
-                      "Comprensione Verbale": 0.5735294117647058823529411765,
-                      "Storia del Design, Storia dell'Arte": 6.5588235294117647058823529412,
-                      "Logica": 1.2205882352941176470588235294,
-                      "Cultura Generale": 7.3529411764705882352941176471
-                    },
-                    "averageScoresOfAllStudents": 34.591568627450980392156862745,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-                  },
-                  {
-                    "averageBirthYear": 1999.103448275862,
-                    "averageEnglishCorrectAnswers": 21.857142857142858,
-                    "averageOfa": {
-                      "ENG": 14
-                    },
-                    "averageOfWhoPassed": 58.748,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.2931034482758620689655172414,
-                      "Comprensione Verbale": 0.5258620689655172413793103448,
-                      "Storia del Design, Storia dell'Arte": 5.8275862068965517241379310345,
-                      "Logica": 0.7586206896551724137931034483,
-                      "Cultura Generale": 7.3189655172413793103448275862
-                    },
-                    "averageScoresOfAllStudents": 31.206551724137931034482758621,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA MODA"
-                  },
-                  {
-                    "averageBirthYear": 1998.7333333333333,
-                    "averageEnglishCorrectAnswers": 19.0,
-                    "averageOfa": {
-                      "ENG": 7
-                    },
-                    "averageOfWhoPassed": 33.584,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 3.10,
-                      "Comprensione Verbale": 0.5333333333333333333333333333,
-                      "Storia del Design, Storia dell'Arte": 3.0333333333333333333333333333,
-                      "Logica": 0.9833333333333333333333333333,
-                      "Cultura Generale": 4.2333333333333333333333333333
-                    },
-                    "averageScoresOfAllStudents": 19.805333333333333333333333333,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA COMUNICAZIONE"
-                  },
-                  {
-                    "averageBirthYear": 1999.3030303030303,
-                    "averageEnglishCorrectAnswers": 19.875,
-                    "averageOfa": {
-                      "ENG": 21
-                    },
-                    "averageOfWhoPassed": 45.50,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.1136363636363636363636363636,
-                      "Comprensione Verbale": 0.3409090909090909090909090909,
-                      "Storia del Design, Storia dell'Arte": 5.1287878787878787878787878788,
-                      "Logica": 0.9318181818181818181818181818,
-                      "Cultura Generale": 5.8560606060606060606060606061
-                    },
-                    "averageScoresOfAllStudents": 27.284545454545454545454545455,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEGLI INTERNI"
-                  }
-                ],
-                "howManyCanEnroll": 79,
-                "howManyStudents": 128,
-                "resultsSummarized": {
-                  "76": 1,
-                  "72": 2,
-                  "67": 1,
-                  "60": 2,
-                  "58": 1,
-                  "57": 1,
-                  "56": 1,
-                  "55": 1,
-                  "54": 1,
-                  "53": 1,
-                  "52": 4,
-                  "51": 1,
-                  "50": 1,
-                  "49": 1,
-                  "48": 2,
-                  "47": 2,
-                  "46": 2,
-                  "45": 1,
-                  "44": 3,
-                  "43": 2,
-                  "42": 2,
-                  "41": 3,
-                  "40": 2,
-                  "39": 3,
-                  "38": 6,
-                  "36": 1,
-                  "35": 4,
-                  "34": 2,
-                  "33": 4,
-                  "32": 1,
-                  "31": 2,
-                  "30": 2,
-                  "29": 2,
-                  "28": 4,
-                  "27": 3,
-                  "26": 1,
-                  "25": 2,
-                  "24": 3,
-                  "23": 4,
-                  "22": 3,
-                  "21": 3,
-                  "20": 3,
-                  "19": 1,
-                  "18": 2,
-                  "17": 3,
-                  "16": 3,
-                  "15": 3,
-                  "14": 3,
-                  "12": 5,
-                  "11": 1,
-                  "10": 1,
-                  "9": 1,
-                  "7": 3,
-                  "6": 1,
-                  "5": 2,
-                  "4": 1,
-                  "3": 2,
-                  "2": 1,
-                  "0": 3,
-                  "-2": 1
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Ripescaggio.json",
-                "name": "Ripescaggio"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2000.1836734693877,
-                    "averageEnglishCorrectAnswers": 22.43548387096774,
-                    "averageOfa": {
-                      "ENG": 251
-                    },
-                    "averageOfWhoPassed": 72.498,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 5.0091836734693877551020408163,
-                      "Comprensione Verbale": 3.2503401360544217687074829932,
-                      "Storia del Design, Storia dell'Arte": 7.50,
-                      "Logica": 2.8639455782312925170068027211,
-                      "Cultura Generale": 14.930272108843537414965986395
-                    },
-                    "averageScoresOfAllStudents": 55.922775510204081632653061224,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-                  },
-                  {
-                    "averageBirthYear": 2000.256661991585,
-                    "averageEnglishCorrectAnswers": 22.59175257731959,
-                    "averageOfa": {
-                      "ENG": 242
-                    },
-                    "averageOfWhoPassed": 74.306666666666666666666666667,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.9575736325385694249649368864,
-                      "Comprensione Verbale": 3.1984572230014025245441795231,
-                      "Storia del Design, Storia dell'Arte": 7.5354137447405329593267882188,
-                      "Logica": 2.8667601683029453015427769986,
-                      "Cultura Generale": 15.035413744740532959326788219
-                    },
-                    "averageScoresOfAllStudents": 55.989270687237026647966339411,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA COMUNICAZIONE"
-                  },
-                  {
-                    "averageBirthYear": 2000.1559633027523,
-                    "averageEnglishCorrectAnswers": 22.406976744186046,
-                    "averageOfa": {
-                      "ENG": 262
-                    },
-                    "averageOfWhoPassed": 71.388,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.9305373525557011795543905636,
-                      "Comprensione Verbale": 3.1743119266055045871559633028,
-                      "Storia del Design, Storia dell'Arte": 7.4846002621231979030144167759,
-                      "Logica": 2.8479685452162516382699868938,
-                      "Cultura Generale": 14.922346002621231979030144168
-                    },
-                    "averageScoresOfAllStudents": 55.599449541284403669724770642,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEGLI INTERNI"
-                  }
-                ],
-                "howManyCanEnroll": 23,
-                "howManyStudents": 830,
-                "resultsSummarized": {
-                  "77": 1,
-                  "74": 3,
-                  "73": 1,
-                  "72": 11,
-                  "71": 13,
-                  "70": 38,
-                  "69": 26,
-                  "68": 26,
-                  "67": 24,
-                  "66": 43,
-                  "65": 50,
-                  "64": 24,
-                  "63": 30,
-                  "62": 41,
-                  "61": 28,
-                  "60": 32,
-                  "59": 16,
-                  "58": 27,
-                  "57": 16,
-                  "56": 25,
-                  "55": 34,
-                  "54": 17,
-                  "53": 14,
-                  "52": 18,
-                  "51": 22,
-                  "50": 24,
-                  "49": 5,
-                  "48": 17,
-                  "47": 17,
-                  "46": 10,
-                  "45": 18,
-                  "44": 17,
-                  "43": 16,
-                  "42": 15,
-                  "41": 11,
-                  "40": 14,
-                  "39": 6,
-                  "38": 12,
-                  "37": 11,
-                  "36": 6,
-                  "35": 15,
-                  "34": 7,
-                  "33": 8,
-                  "32": 11,
-                  "31": 5,
-                  "30": 5
-                }
-              }
-            },
-            {
-              "singleCourseJson": {
-                "link": "Standard.json",
-                "name": "Standard"
-              },
-              "stats": {
-                "courseSummarized": [
-                  {
-                    "averageBirthYear": 2000.2096280087528,
-                    "averageEnglishCorrectAnswers": 21.66643598615917,
-                    "averageOfa": {
-                      "ENG": 798
-                    },
-                    "averageOfWhoPassed": 77.399034482758620689655172414,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.2438730853391684901531728665,
-                      "Comprensione Verbale": 2.9226477024070021881838074398,
-                      "Storia del Design, Storia dell'Arte": 6.370897155361050328227571116,
-                      "Logica": 2.7168490153172866520787746171,
-                      "Cultura Generale": 13.780962800875273522975929978
-                    },
-                    "averageScoresOfAllStudents": 50.05870459518599562363238512,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-                  },
-                  {
-                    "averageBirthYear": 2000.2021886399166,
-                    "averageEnglishCorrectAnswers": 21.7776,
-                    "averageOfa": {
-                      "ENG": 667
-                    },
-                    "averageOfWhoPassed": 79.132950819672131147540983607,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 3.911933298593017196456487754,
-                      "Comprensione Verbale": 2.8729807191245440333507034914,
-                      "Storia del Design, Storia dell'Arte": 6.2974205315268368942157373632,
-                      "Logica": 2.6500781657113079729025534132,
-                      "Cultura Generale": 13.645518499218342886920270974
-                    },
-                    "averageScoresOfAllStudents": 48.963256904637832204273058885,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA MODA"
-                  },
-                  {
-                    "averageBirthYear": 2000.2275109170305,
-                    "averageEnglishCorrectAnswers": 21.631615120274915,
-                    "averageOfa": {
-                      "ENG": 780
-                    },
-                    "averageOfWhoPassed": 83.79227848101265822784810127,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 4.1063318777292576419213973799,
-                      "Comprensione Verbale": 2.9316593886462882096069868996,
-                      "Storia del Design, Storia dell'Arte": 6.4008733624454148471615720524,
-                      "Logica": 2.7151746724890829694323144105,
-                      "Cultura Generale": 13.786790393013100436681222707
-                    },
-                    "averageScoresOfAllStudents": 49.901393013100436681222707424,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DELLA COMUNICAZIONE"
-                  },
-                  {
-                    "averageBirthYear": 2000.1946222791294,
-                    "averageEnglishCorrectAnswers": 21.610636900853578,
-                    "averageOfa": {
-                      "ENG": 838
-                    },
-                    "averageOfWhoPassed": 75.472837837837837837837837838,
-                    "averagePartialScores": {
-                      "Geometria e Rappresentazione": 3.9930644472897994024754588135,
-                      "Comprensione Verbale": 2.8983141271873666239863422962,
-                      "Storia del Design, Storia dell'Arte": 6.3338668373879641485275288092,
-                      "Logica": 2.6704011950490823730260349979,
-                      "Cultura Generale": 13.668693982074263764404609475
-                    },
-                    "averageScoresOfAllStudents": 49.27393512590695689287238583,
-                    "location": "MILANO BOVISA",
-                    "title": "DESIGN DEGLI INTERNI"
-                  }
-                ],
-                "howManyCanEnroll": 793,
-                "howManyStudents": 3014,
-                "resultsSummarized": {
-                  "98": 1,
-                  "96": 1,
-                  "95": 1,
-                  "94": 5,
-                  "92": 2,
-                  "91": 2,
-                  "90": 3,
-                  "89": 5,
-                  "88": 15,
-                  "87": 8,
-                  "86": 6,
-                  "85": 17,
-                  "84": 19,
-                  "83": 8,
-                  "82": 15,
-                  "81": 21,
-                  "80": 21,
-                  "79": 16,
-                  "78": 36,
-                  "77": 33,
-                  "76": 28,
-                  "75": 35,
-                  "74": 36,
-                  "73": 29,
-                  "72": 58,
-                  "71": 39,
-                  "70": 57,
-                  "69": 40,
-                  "68": 54,
-                  "67": 43,
-                  "66": 41,
-                  "65": 66,
-                  "64": 50,
-                  "63": 49,
-                  "62": 73,
-                  "61": 51,
-                  "60": 82,
-                  "59": 59,
-                  "58": 73,
-                  "57": 50,
-                  "56": 38,
-                  "55": 87,
-                  "54": 49,
-                  "53": 49,
-                  "52": 73,
-                  "51": 53,
-                  "50": 89,
-                  "49": 42,
-                  "48": 73,
-                  "47": 43,
-                  "46": 45,
-                  "45": 69,
-                  "44": 52,
-                  "43": 54,
-                  "42": 72,
-                  "41": 41,
-                  "40": 70,
-                  "39": 36,
-                  "38": 67,
-                  "37": 42,
-                  "36": 37,
-                  "35": 55,
-                  "34": 40,
-                  "33": 38,
-                  "32": 37,
-                  "31": 27,
-                  "30": 42,
-                  "29": 31,
-                  "28": 31,
-                  "27": 25,
-                  "26": 26,
-                  "25": 24,
-                  "24": 14,
-                  "23": 7,
-                  "22": 23,
-                  "21": 20,
-                  "20": 19,
-                  "19": 17,
-                  "18": 11,
-                  "17": 8,
-                  "16": 9,
-                  "15": 11,
-                  "14": 3,
-                  "13": 4,
-                  "12": 5,
-                  "11": 8,
-                  "10": 4,
-                  "9": 4,
-                  "8": 4,
-                  "7": 1,
-                  "6": 3,
-                  "5": 3,
-                  "3": 1,
-                  "2": 8,
-                  "1": 2,
-                  "0": 20
-                }
-              }
-            }
-          ],
-          "numStudents": 7025
-        },
         "Ingegneria": {
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2020/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
@@ -8813,6 +8400,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2020/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Prima Graduatoria Di Seconda Fase"
               },
@@ -9347,6 +8935,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2020/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Seconda Graduatoria Di Seconda Fase"
               },
@@ -9765,6 +9354,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2020/",
                 "link": "Terza_Fase.json",
                 "name": "Terza Fase"
               },
@@ -10100,6 +9690,7 @@
             },
             {
               "singleCourseJson": {
+                "basePath": "Ingegneria/2020/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
                 "name": "Terza Graduatoria Di Seconda Fase"
               },
@@ -10453,171 +10044,631 @@
           ],
           "numStudents": 7743
         },
-        "Urbanistica": {
+        "Design": {
           "list": [
             {
               "singleCourseJson": {
-                "link": "Anticipata.json",
-                "name": "Anticipata"
+                "basePath": "Design/2020/",
+                "link": "Anticipato.json",
+                "name": "Anticipato"
               },
               "stats": {
                 "courseSummarized": [
                   {
-                    "averageBirthYear": 2000.0277777777778,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 72.285714285714285714285714286,
-                    "averagePartialScores": {
-                      "Colloquio": 36.194444444444444444444444444,
-                      "Elaborato": 20.231481481481481481481481481,
-                      "Lettera Motivazionale": 14.898148148148148148148148148
+                    "averageBirthYear": 2000.1743375174337,
+                    "averageEnglishCorrectAnswers": 22.766721945826422,
+                    "averageOfa": {
+                      "ENG": 813
                     },
-                    "averageScoresOfAllStudents": 71.324074074074074074074074074,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                    "averageOfWhoPassed": 74.124139784946236559139784946,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 5.050092980009298000929800093,
+                      "Comprensione Verbale": 3.0672942817294281729428172943,
+                      "Storia del Design, Storia dell'Arte": 7.0176662017666201766620176662,
+                      "Logica": 2.347629009762900976290097629,
+                      "Cultura Generale": 12.349372384937238493723849372
+                    },
+                    "averageScoresOfAllStudents": 49.720032543003254300325430033,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+                  },
+                  {
+                    "averageBirthYear": 2000.200667037243,
+                    "averageEnglishCorrectAnswers": 22.828460038986353,
+                    "averageOfa": {
+                      "ENG": 689
+                    },
+                    "averageOfWhoPassed": 74.016391752577319587628865979,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.7676486937187326292384658143,
+                      "Comprensione Verbale": 3.0343246247915508615897720956,
+                      "Storia del Design, Storia dell'Arte": 6.9613674263479710950528071151,
+                      "Logica": 2.2964146748193440800444691495,
+                      "Cultura Generale": 12.117009449694274596998332407
+                    },
+                    "averageScoresOfAllStudents": 48.627898832684824902723735409,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA MODA"
+                  },
+                  {
+                    "averageBirthYear": 2000.192378328742,
+                    "averageEnglishCorrectAnswers": 22.952225841476658,
+                    "averageOfa": {
+                      "ENG": 812
+                    },
+                    "averageOfWhoPassed": 77.708448275862068965517241379,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.9854224058769513314967860422,
+                      "Comprensione Verbale": 3.1159320477502295684113865932,
+                      "Storia del Design, Storia dell'Arte": 7.0549816345270890725436179982,
+                      "Logica": 2.367079889807162534435261708,
+                      "Cultura Generale": 12.36409550045913682277318641
+                    },
+                    "averageScoresOfAllStudents": 49.812516069788797061524334252,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA COMUNICAZIONE"
+                  },
+                  {
+                    "averageBirthYear": 2000.1850180505414,
+                    "averageEnglishCorrectAnswers": 22.756955380577427,
+                    "averageOfa": {
+                      "ENG": 854
+                    },
+                    "averageOfWhoPassed": 72.704870466321243523316062176,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.9037680505415162454873646209,
+                      "Comprensione Verbale": 3.0470442238267148014440433213,
+                      "Storia del Design, Storia dell'Arte": 6.9591606498194945848375451264,
+                      "Logica": 2.310807761732851985559566787,
+                      "Cultura Generale": 12.177459386281588447653429603
+                    },
+                    "averageScoresOfAllStudents": 48.997008122743682310469314079,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEGLI INTERNI"
                   }
                 ],
-                "howManyCanEnroll": 108,
-                "howManyStudents": 108,
+                "howManyCanEnroll": 880,
+                "howManyStudents": 3053,
                 "resultsSummarized": {
-                  "95": 2,
-                  "94": 3,
-                  "93": 2,
-                  "92": 1,
-                  "91": 3,
-                  "90": 4,
-                  "89": 1,
-                  "88": 1,
-                  "87": 4,
-                  "86": 1,
-                  "85": 2,
-                  "84": 6,
-                  "83": 1,
-                  "80": 1,
-                  "79": 2,
-                  "78": 3,
-                  "77": 2,
-                  "76": 2,
-                  "75": 5,
-                  "74": 4,
-                  "73": 4,
-                  "72": 3,
-                  "71": 4,
-                  "70": 1,
-                  "69": 1,
-                  "68": 3,
-                  "67": 2,
-                  "66": 5,
-                  "65": 2,
-                  "64": 1,
-                  "63": 2,
-                  "62": 1,
-                  "61": 4,
-                  "60": 4,
-                  "59": 1,
-                  "58": 2,
-                  "57": 1,
-                  "56": 1,
-                  "55": 2,
-                  "54": 1,
-                  "53": 1,
-                  "50": 2,
-                  "49": 1,
-                  "48": 2,
-                  "47": 1,
-                  "44": 1,
-                  "43": 1,
-                  "41": 1,
-                  "39": 1,
-                  "38": 1,
-                  "36": 1
+                  "92": 2,
+                  "91": 2,
+                  "90": 6,
+                  "89": 3,
+                  "88": 6,
+                  "87": 5,
+                  "86": 9,
+                  "85": 6,
+                  "84": 12,
+                  "83": 14,
+                  "82": 15,
+                  "81": 14,
+                  "80": 20,
+                  "79": 12,
+                  "78": 33,
+                  "77": 25,
+                  "76": 20,
+                  "75": 45,
+                  "74": 37,
+                  "73": 42,
+                  "72": 45,
+                  "71": 29,
+                  "70": 45,
+                  "69": 51,
+                  "68": 64,
+                  "67": 52,
+                  "66": 64,
+                  "65": 87,
+                  "64": 45,
+                  "63": 61,
+                  "62": 77,
+                  "61": 60,
+                  "60": 86,
+                  "59": 49,
+                  "58": 91,
+                  "57": 53,
+                  "56": 60,
+                  "55": 87,
+                  "54": 62,
+                  "53": 64,
+                  "52": 84,
+                  "51": 46,
+                  "50": 70,
+                  "49": 53,
+                  "48": 72,
+                  "47": 46,
+                  "46": 64,
+                  "45": 85,
+                  "44": 57,
+                  "43": 42,
+                  "42": 65,
+                  "41": 49,
+                  "40": 75,
+                  "39": 38,
+                  "38": 63,
+                  "37": 32,
+                  "36": 44,
+                  "35": 50,
+                  "34": 38,
+                  "33": 32,
+                  "32": 38,
+                  "31": 39,
+                  "30": 29,
+                  "29": 29,
+                  "28": 46,
+                  "27": 20,
+                  "26": 12,
+                  "25": 14,
+                  "24": 15,
+                  "23": 23,
+                  "22": 10,
+                  "21": 10,
+                  "20": 13,
+                  "19": 8,
+                  "18": 19,
+                  "17": 10,
+                  "16": 5,
+                  "15": 7,
+                  "14": 9,
+                  "13": 2,
+                  "12": 4,
+                  "11": 1,
+                  "10": 5,
+                  "9": 2,
+                  "8": 1,
+                  "6": 5,
+                  "4": 2,
+                  "2": 2,
+                  "0": 8
                 }
               }
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2020/",
                 "link": "Extra-ue.json",
                 "name": "Extra-ue"
               },
               "stats": {
                 "courseSummarized": [
                   {
-                    "averageBirthYear": 2001.0,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 75.666666666666666666666666667,
-                    "averagePartialScores": {
-                      "Colloquio": 40.333333333333333333333333333,
-                      "Elaborato": 18.666666666666666666666666667,
-                      "Lettera Motivazionale": 16.666666666666666666666666667
+                    "averageBirthYear": 1999.5294117647059,
+                    "averageEnglishCorrectAnswers": 22.3265306122449,
+                    "averageOfa": {
+                      "ENG": 24
                     },
-                    "averageScoresOfAllStudents": 75.666666666666666666666666667,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                    "averageOfWhoPassed": 51.8335,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 5.0490196078431372549019607843,
+                      "Comprensione Verbale": 0.5735294117647058823529411765,
+                      "Storia del Design, Storia dell'Arte": 6.5588235294117647058823529412,
+                      "Logica": 1.2205882352941176470588235294,
+                      "Cultura Generale": 7.3529411764705882352941176471
+                    },
+                    "averageScoresOfAllStudents": 34.591568627450980392156862745,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+                  },
+                  {
+                    "averageBirthYear": 1999.103448275862,
+                    "averageEnglishCorrectAnswers": 21.857142857142858,
+                    "averageOfa": {
+                      "ENG": 14
+                    },
+                    "averageOfWhoPassed": 58.748,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.2931034482758620689655172414,
+                      "Comprensione Verbale": 0.5258620689655172413793103448,
+                      "Storia del Design, Storia dell'Arte": 5.8275862068965517241379310345,
+                      "Logica": 0.7586206896551724137931034483,
+                      "Cultura Generale": 7.3189655172413793103448275862
+                    },
+                    "averageScoresOfAllStudents": 31.206551724137931034482758621,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA MODA"
+                  },
+                  {
+                    "averageBirthYear": 1998.7333333333333,
+                    "averageEnglishCorrectAnswers": 19.0,
+                    "averageOfa": {
+                      "ENG": 7
+                    },
+                    "averageOfWhoPassed": 33.584,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 3.10,
+                      "Comprensione Verbale": 0.5333333333333333333333333333,
+                      "Storia del Design, Storia dell'Arte": 3.0333333333333333333333333333,
+                      "Logica": 0.9833333333333333333333333333,
+                      "Cultura Generale": 4.2333333333333333333333333333
+                    },
+                    "averageScoresOfAllStudents": 19.805333333333333333333333333,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA COMUNICAZIONE"
+                  },
+                  {
+                    "averageBirthYear": 1999.3030303030303,
+                    "averageEnglishCorrectAnswers": 19.875,
+                    "averageOfa": {
+                      "ENG": 21
+                    },
+                    "averageOfWhoPassed": 45.50,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.1136363636363636363636363636,
+                      "Comprensione Verbale": 0.3409090909090909090909090909,
+                      "Storia del Design, Storia dell'Arte": 5.1287878787878787878787878788,
+                      "Logica": 0.9318181818181818181818181818,
+                      "Cultura Generale": 5.8560606060606060606060606061
+                    },
+                    "averageScoresOfAllStudents": 27.284545454545454545454545455,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEGLI INTERNI"
                   }
                 ],
-                "howManyCanEnroll": 3,
-                "howManyStudents": 3,
+                "howManyCanEnroll": 79,
+                "howManyStudents": 128,
                 "resultsSummarized": {
-                  "84": 1,
-                  "79": 1,
-                  "64": 1
+                  "76": 1,
+                  "72": 2,
+                  "67": 1,
+                  "60": 2,
+                  "58": 1,
+                  "57": 1,
+                  "56": 1,
+                  "55": 1,
+                  "54": 1,
+                  "53": 1,
+                  "52": 4,
+                  "51": 1,
+                  "50": 1,
+                  "49": 1,
+                  "48": 2,
+                  "47": 2,
+                  "46": 2,
+                  "45": 1,
+                  "44": 3,
+                  "43": 2,
+                  "42": 2,
+                  "41": 3,
+                  "40": 2,
+                  "39": 3,
+                  "38": 6,
+                  "36": 1,
+                  "35": 4,
+                  "34": 2,
+                  "33": 4,
+                  "32": 1,
+                  "31": 2,
+                  "30": 2,
+                  "29": 2,
+                  "28": 4,
+                  "27": 3,
+                  "26": 1,
+                  "25": 2,
+                  "24": 3,
+                  "23": 4,
+                  "22": 3,
+                  "21": 3,
+                  "20": 3,
+                  "19": 1,
+                  "18": 2,
+                  "17": 3,
+                  "16": 3,
+                  "15": 3,
+                  "14": 3,
+                  "12": 5,
+                  "11": 1,
+                  "10": 1,
+                  "9": 1,
+                  "7": 3,
+                  "6": 1,
+                  "5": 2,
+                  "4": 1,
+                  "3": 2,
+                  "2": 1,
+                  "0": 3,
+                  "-2": 1
                 }
               }
             },
             {
               "singleCourseJson": {
+                "basePath": "Design/2020/",
+                "link": "Ripescaggio.json",
+                "name": "Ripescaggio"
+              },
+              "stats": {
+                "courseSummarized": [
+                  {
+                    "averageBirthYear": 2000.1836734693877,
+                    "averageEnglishCorrectAnswers": 22.43548387096774,
+                    "averageOfa": {
+                      "ENG": 251
+                    },
+                    "averageOfWhoPassed": 72.498,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 5.0091836734693877551020408163,
+                      "Comprensione Verbale": 3.2503401360544217687074829932,
+                      "Storia del Design, Storia dell'Arte": 7.50,
+                      "Logica": 2.8639455782312925170068027211,
+                      "Cultura Generale": 14.930272108843537414965986395
+                    },
+                    "averageScoresOfAllStudents": 55.922775510204081632653061224,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+                  },
+                  {
+                    "averageBirthYear": 2000.256661991585,
+                    "averageEnglishCorrectAnswers": 22.59175257731959,
+                    "averageOfa": {
+                      "ENG": 242
+                    },
+                    "averageOfWhoPassed": 74.306666666666666666666666667,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.9575736325385694249649368864,
+                      "Comprensione Verbale": 3.1984572230014025245441795231,
+                      "Storia del Design, Storia dell'Arte": 7.5354137447405329593267882188,
+                      "Logica": 2.8667601683029453015427769986,
+                      "Cultura Generale": 15.035413744740532959326788219
+                    },
+                    "averageScoresOfAllStudents": 55.989270687237026647966339411,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA COMUNICAZIONE"
+                  },
+                  {
+                    "averageBirthYear": 2000.1559633027523,
+                    "averageEnglishCorrectAnswers": 22.406976744186046,
+                    "averageOfa": {
+                      "ENG": 262
+                    },
+                    "averageOfWhoPassed": 71.388,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.9305373525557011795543905636,
+                      "Comprensione Verbale": 3.1743119266055045871559633028,
+                      "Storia del Design, Storia dell'Arte": 7.4846002621231979030144167759,
+                      "Logica": 2.8479685452162516382699868938,
+                      "Cultura Generale": 14.922346002621231979030144168
+                    },
+                    "averageScoresOfAllStudents": 55.599449541284403669724770642,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEGLI INTERNI"
+                  }
+                ],
+                "howManyCanEnroll": 23,
+                "howManyStudents": 830,
+                "resultsSummarized": {
+                  "77": 1,
+                  "74": 3,
+                  "73": 1,
+                  "72": 11,
+                  "71": 13,
+                  "70": 38,
+                  "69": 26,
+                  "68": 26,
+                  "67": 24,
+                  "66": 43,
+                  "65": 50,
+                  "64": 24,
+                  "63": 30,
+                  "62": 41,
+                  "61": 28,
+                  "60": 32,
+                  "59": 16,
+                  "58": 27,
+                  "57": 16,
+                  "56": 25,
+                  "55": 34,
+                  "54": 17,
+                  "53": 14,
+                  "52": 18,
+                  "51": 22,
+                  "50": 24,
+                  "49": 5,
+                  "48": 17,
+                  "47": 17,
+                  "46": 10,
+                  "45": 18,
+                  "44": 17,
+                  "43": 16,
+                  "42": 15,
+                  "41": 11,
+                  "40": 14,
+                  "39": 6,
+                  "38": 12,
+                  "37": 11,
+                  "36": 6,
+                  "35": 15,
+                  "34": 7,
+                  "33": 8,
+                  "32": 11,
+                  "31": 5,
+                  "30": 5
+                }
+              }
+            },
+            {
+              "singleCourseJson": {
+                "basePath": "Design/2020/",
                 "link": "Standard.json",
                 "name": "Standard"
               },
               "stats": {
                 "courseSummarized": [
                   {
-                    "averageBirthYear": 1998.7534246575342,
-                    "averageEnglishCorrectAnswers": null,
-                    "averageOfa": {},
-                    "averageOfWhoPassed": 72.666666666666666666666666667,
-                    "averagePartialScores": {
-                      "Colloquio": 36.082191780821917808219178082,
-                      "Elaborato": 19.10958904109589041095890411,
-                      "Lettera Motivazionale": 14.232876712328767123287671233
+                    "averageBirthYear": 2000.2096280087528,
+                    "averageEnglishCorrectAnswers": 21.66643598615917,
+                    "averageOfa": {
+                      "ENG": 798
                     },
-                    "averageScoresOfAllStudents": 69.424657534246575342465753425,
-                    "location": null,
-                    "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                    "averageOfWhoPassed": 77.399034482758620689655172414,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.2438730853391684901531728665,
+                      "Comprensione Verbale": 2.9226477024070021881838074398,
+                      "Storia del Design, Storia dell'Arte": 6.370897155361050328227571116,
+                      "Logica": 2.7168490153172866520787746171,
+                      "Cultura Generale": 13.780962800875273522975929978
+                    },
+                    "averageScoresOfAllStudents": 50.05870459518599562363238512,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+                  },
+                  {
+                    "averageBirthYear": 2000.2021886399166,
+                    "averageEnglishCorrectAnswers": 21.7776,
+                    "averageOfa": {
+                      "ENG": 667
+                    },
+                    "averageOfWhoPassed": 79.132950819672131147540983607,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 3.911933298593017196456487754,
+                      "Comprensione Verbale": 2.8729807191245440333507034914,
+                      "Storia del Design, Storia dell'Arte": 6.2974205315268368942157373632,
+                      "Logica": 2.6500781657113079729025534132,
+                      "Cultura Generale": 13.645518499218342886920270974
+                    },
+                    "averageScoresOfAllStudents": 48.963256904637832204273058885,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA MODA"
+                  },
+                  {
+                    "averageBirthYear": 2000.2275109170305,
+                    "averageEnglishCorrectAnswers": 21.631615120274915,
+                    "averageOfa": {
+                      "ENG": 780
+                    },
+                    "averageOfWhoPassed": 83.79227848101265822784810127,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 4.1063318777292576419213973799,
+                      "Comprensione Verbale": 2.9316593886462882096069868996,
+                      "Storia del Design, Storia dell'Arte": 6.4008733624454148471615720524,
+                      "Logica": 2.7151746724890829694323144105,
+                      "Cultura Generale": 13.786790393013100436681222707
+                    },
+                    "averageScoresOfAllStudents": 49.901393013100436681222707424,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DELLA COMUNICAZIONE"
+                  },
+                  {
+                    "averageBirthYear": 2000.1946222791294,
+                    "averageEnglishCorrectAnswers": 21.610636900853578,
+                    "averageOfa": {
+                      "ENG": 838
+                    },
+                    "averageOfWhoPassed": 75.472837837837837837837837838,
+                    "averagePartialScores": {
+                      "Geometria e Rappresentazione": 3.9930644472897994024754588135,
+                      "Comprensione Verbale": 2.8983141271873666239863422962,
+                      "Storia del Design, Storia dell'Arte": 6.3338668373879641485275288092,
+                      "Logica": 2.6704011950490823730260349979,
+                      "Cultura Generale": 13.668693982074263764404609475
+                    },
+                    "averageScoresOfAllStudents": 49.27393512590695689287238583,
+                    "location": "MILANO BOVISA",
+                    "title": "DESIGN DEGLI INTERNI"
                   }
                 ],
-                "howManyCanEnroll": 32,
-                "howManyStudents": 41,
+                "howManyCanEnroll": 793,
+                "howManyStudents": 3014,
                 "resultsSummarized": {
-                  "93": 2,
+                  "98": 1,
+                  "96": 1,
+                  "95": 1,
+                  "94": 5,
                   "92": 2,
-                  "90": 2,
-                  "88": 1,
-                  "87": 2,
-                  "86": 2,
-                  "85": 2,
-                  "82": 1,
-                  "81": 1,
-                  "80": 3,
-                  "79": 1,
-                  "78": 2,
-                  "77": 1,
-                  "76": 2,
-                  "75": 4,
-                  "74": 3,
-                  "73": 1,
-                  "52": 2,
-                  "51": 2,
-                  "48": 1,
-                  "47": 1,
-                  "46": 2,
-                  "45": 1
+                  "91": 2,
+                  "90": 3,
+                  "89": 5,
+                  "88": 15,
+                  "87": 8,
+                  "86": 6,
+                  "85": 17,
+                  "84": 19,
+                  "83": 8,
+                  "82": 15,
+                  "81": 21,
+                  "80": 21,
+                  "79": 16,
+                  "78": 36,
+                  "77": 33,
+                  "76": 28,
+                  "75": 35,
+                  "74": 36,
+                  "73": 29,
+                  "72": 58,
+                  "71": 39,
+                  "70": 57,
+                  "69": 40,
+                  "68": 54,
+                  "67": 43,
+                  "66": 41,
+                  "65": 66,
+                  "64": 50,
+                  "63": 49,
+                  "62": 73,
+                  "61": 51,
+                  "60": 82,
+                  "59": 59,
+                  "58": 73,
+                  "57": 50,
+                  "56": 38,
+                  "55": 87,
+                  "54": 49,
+                  "53": 49,
+                  "52": 73,
+                  "51": 53,
+                  "50": 89,
+                  "49": 42,
+                  "48": 73,
+                  "47": 43,
+                  "46": 45,
+                  "45": 69,
+                  "44": 52,
+                  "43": 54,
+                  "42": 72,
+                  "41": 41,
+                  "40": 70,
+                  "39": 36,
+                  "38": 67,
+                  "37": 42,
+                  "36": 37,
+                  "35": 55,
+                  "34": 40,
+                  "33": 38,
+                  "32": 37,
+                  "31": 27,
+                  "30": 42,
+                  "29": 31,
+                  "28": 31,
+                  "27": 25,
+                  "26": 26,
+                  "25": 24,
+                  "24": 14,
+                  "23": 7,
+                  "22": 23,
+                  "21": 20,
+                  "20": 19,
+                  "19": 17,
+                  "18": 11,
+                  "17": 8,
+                  "16": 9,
+                  "15": 11,
+                  "14": 3,
+                  "13": 4,
+                  "12": 5,
+                  "11": 8,
+                  "10": 4,
+                  "9": 4,
+                  "8": 4,
+                  "7": 1,
+                  "6": 3,
+                  "5": 3,
+                  "3": 1,
+                  "2": 8,
+                  "1": 2,
+                  "0": 20
                 }
               }
             }
           ],
-          "numStudents": 152
+          "numStudents": 7025
         }
       }
     },
@@ -10628,6 +10679,7 @@
           "list": [
             {
               "singleCourseJson": {
+                "basePath": "Design/2023/",
                 "link": "Anticipato.json",
                 "name": "Anticipato"
               },
