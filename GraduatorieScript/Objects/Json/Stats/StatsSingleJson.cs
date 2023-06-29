@@ -11,7 +11,7 @@ public class StatsSingleCourseJson
     public SingleCourseJson? SingleCourseJson;
     public RankingSummary? Stats;
 
-    public static StatsSingleCourseJson From(Ranking ranking)
+    public static StatsSingleCourseJson From(Ranking.Ranking ranking)
     {
         return new StatsSingleCourseJson
         {

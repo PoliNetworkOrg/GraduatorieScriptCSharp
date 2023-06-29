@@ -15,11 +15,14 @@ public class StatsJson
     public static void Write(string outFolder, RankingsSet? rankingsSet)
     {
         var statsJson = Generate(rankingsSet);
-        statsJson.WriteToFile(outFolder);
+        statsJson?.WriteToFile(outFolder);
     }
 
-    private static StatsJson Generate(RankingsSet? rankingsSet)
+    private static StatsJson? Generate(RankingsSet? rankingsSet)
     {
+        if (rankingsSet == null)
+            return null;
+        
         var statsJson = new StatsJson();
         foreach (var ranking in rankingsSet.Rankings) GenerateSingleRanking(rankingsSet, ranking, statsJson);
 
@@ -34,8 +37,13 @@ public class StatsJson
         return statsJson;
     }
 
-    private static void GenerateSingleRanking(RankingsSet? rankingsSet, Ranking ranking, StatsJson statsJson)
+    private static void GenerateSingleRanking(RankingsSet? rankingsSet, Ranking.Ranking ranking, StatsJson? statsJson)
     {
+        if (rankingsSet == null)
+            return;
+        if (statsJson == null)
+            return;
+        
         if (ranking.Year == null) return;
         if (!statsJson.Stats.ContainsKey(ranking.Year.Value))
         {

@@ -15,29 +15,26 @@ public static class Program
     {
         var mt = new Metrics();
 
-        ArgsConfig argsConfig = GetArgsConfig(args);
-        Console.WriteLine($"[INFO] dataFolder: {argsConfig.dataFolder}");
+        var argsConfig = GetArgsConfig(args);
+        Console.WriteLine($"[INFO] dataFolder: {argsConfig.DataFolder}");
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
-        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.dataFolder);
-        ScraperOutput.Write(rankingsUrls, argsConfig.dataFolder);
+        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
+        ScraperOutput.Write(rankingsUrls, argsConfig.DataFolder);
 
         //print links found
         PrintLinks(rankingsUrls);
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(argsConfig.dataFolder, rankingsUrls);
+        var rankingsSet = Parser.GetRankings(argsConfig, rankingsUrls);
 
         // salvare il set
-        SaveOutputs(argsConfig.dataFolder, rankingsSet);
+        SaveOutputs(argsConfig.DataFolder, rankingsSet);
     }
 
-    private static ArgsConfig GetArgsConfig(string[] args)
-    {
-        throw new NotImplementedException();
-    }
+
 
     private static void PrintLinks(List<RankingUrl> rankingsUrls)
     {
@@ -55,12 +52,38 @@ public static class Program
         StatsJson.Write(outFolder, rankingsSet);
     }
 
-
-    private static string GetDataFolder(IReadOnlyList<string> args)
+    private static ArgsConfig GetArgsConfig(IReadOnlyList<string> args)
     {
-        // check if dataFolder passed in args
-        var argsFolder = args.Count > 0 ? args[0] : null;
+        var argsConfig = new ArgsConfig
+        {
+            DataFolder = GetDataFolder(FindArgString(args, "--data")),
+            ForceReparsing = FindArgPresent(args, "--reparse")
+        };
+        return argsConfig;
+    }
 
+    private static bool? FindArgPresent(IEnumerable<string> args, string reparse)
+    {
+        return args.Any(x => x == reparse);
+    }
+
+    private static string? FindArgString(IReadOnlyList<string> args, string data)
+    {
+        for (var i = 0; i < args.Count; i++)
+        {
+            var s = args[i];
+            if (s != data) continue;
+            if (i + 1 < args.Count)
+            {
+                return args[i + 1];
+            }
+        }
+
+        return null;
+    }
+
+    private static string GetDataFolder(string? argsFolder)
+    {
         // use it if passed or search the default
         var dataFolder = !string.IsNullOrEmpty(argsFolder)
             ? argsFolder
@@ -73,9 +96,4 @@ public static class Program
         Console.WriteLine("[WARNING] dataFolder not found, creating it");
         return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
     }
-}
-
-public class ArgsConfig
-{
-    public string? dataFolder;
 }

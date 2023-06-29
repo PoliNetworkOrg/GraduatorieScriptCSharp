@@ -15,8 +15,11 @@ public class ByYearSchoolJson : IndexJsonBase
 
     public Dictionary<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
 
-    public static ByYearSchoolJson From(RankingsSet? set)
+    public static ByYearSchoolJson? From(RankingsSet? set)
     {
+        if (set == null)
+            return null;
+        
         var mainJson = new ByYearSchoolJson { LastUpdate = set.LastUpdate };
         // group rankings by year
         var byYear = set.Rankings.GroupBy(r => r.Year);
@@ -69,9 +72,9 @@ public class ByYearSchoolJson : IndexJsonBase
         return null;
     }
 
-    private static List<Ranking> RankingsAdd(ByYearSchoolJson mainJson, string outFolder)
+    private static List<Ranking.Ranking> RankingsAdd(ByYearSchoolJson mainJson, string outFolder)
     {
-        List<Ranking> rankings = new();
+        List<Ranking.Ranking> rankings = new();
         foreach (var year in mainJson.Years)
         foreach (var school in year.Value)
         foreach (var filename in school.Value)
@@ -85,12 +88,12 @@ public class ByYearSchoolJson : IndexJsonBase
         KeyValuePair<SchoolEnum, IEnumerable<SingleCourseJson>> school,
         string outFolder,
         SingleCourseJson filename,
-        ICollection<Ranking> rankings)
+        ICollection<Ranking.Ranking> rankings)
     {
         var schoolKey = school.Key.ToString();
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-        var ranking = Parser.ParseJson<Ranking>(path);
+        var ranking = Parser.ParseJson<Ranking.Ranking>(path);
         if (ranking != null)
             rankings.Add(ranking);
     }

@@ -1,8 +1,10 @@
 ﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
+using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
+using GraduatorieScript.Objects.Ranking;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Utils.Web;
@@ -13,19 +15,17 @@ namespace GraduatorieScript.Utils.Transformer;
 
 public static class Parser
 {
-    public static RankingsSet? GetRankings(
-        string? dataFolder,
-        IEnumerable<RankingUrl> urls
-    )
+    public static RankingsSet? GetRankings(ArgsConfig argsConfig,
+        IEnumerable<RankingUrl> urls )
     {
-        if (string.IsNullOrEmpty(dataFolder))
+        if (string.IsNullOrEmpty(argsConfig.DataFolder))
             return null;
         
-        var rankingsSet = BySchoolYearJson.Parse(dataFolder) ?? new RankingsSet();
+        var rankingsSet = BySchoolYearJson.Parse(argsConfig.DataFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
-        var htmlFolder = System.IO.Path.Join(dataFolder, Constants.HtmlFolder);
+        var htmlFolder = System.IO.Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
         var recursiveHtmls = urls
