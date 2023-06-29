@@ -28,15 +28,21 @@ public class RankingSummary
         var byMeritRows = ranking.ByMerit?.Rows;
         var results = CalculateResultsScores(byMeritRows);
 
-        var rankingSummary = new RankingSummary
-        {
-            HowManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll),
-            HowManyStudents = byMeritRows?.Count,
-            ResultsSummarized = results,
-            CourseSummarized = ranking.ByCourse?.Select(x => x.GetStats()).ToList()
-        };
+        var keyValuePairs = results?.OrderBy(x => x.Key)
+            .ToDictionary(obj => obj.Key, obj => obj.Value);
 
-        return rankingSummary;
+        var courseTableStatsList = ranking.ByCourse?.Select(x => x.GetStats())
+            .OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
+
+        var howManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll);
+
+        return new RankingSummary
+        {
+            HowManyCanEnroll = howManyCanEnroll,
+            HowManyStudents = byMeritRows?.Count,
+            ResultsSummarized = keyValuePairs,
+            CourseSummarized = courseTableStatsList
+        };
     }
 
     private static Dictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)

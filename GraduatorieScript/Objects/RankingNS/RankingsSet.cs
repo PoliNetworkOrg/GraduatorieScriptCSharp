@@ -17,7 +17,6 @@ public class RankingsSet
     }
 
 
-
     public void AddRanking(Ranking ranking)
     {
         var alreadyPresent = Contains(ranking);

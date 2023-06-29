@@ -46,7 +46,8 @@ public static class Parser
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
         Parallel.Invoke(action);
 
-        rankingsSet.Rankings = rankingsSet.Rankings.OrderBy(x => x.School).ThenBy(x => x.Year).ThenBy(x => x.Url?.Url).ToList();
+        rankingsSet.Rankings = rankingsSet.Rankings.OrderBy(x => x.School).ThenBy(x => x.Year).ThenBy(x => x.Url?.Url)
+            .ToList();
         return rankingsSet;
     }
 
