@@ -7,14 +7,9 @@ namespace GraduatorieScript.Objects.Json;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class SingleCourseJson
 {
+    public string? BasePath;
     public string? Link;
     public string? Name;
-    public string? BasePath;
-
-    public SingleCourseJson()
-    {
-        
-    }
 
     public int GetHashWithoutLastUpdate()
     {
