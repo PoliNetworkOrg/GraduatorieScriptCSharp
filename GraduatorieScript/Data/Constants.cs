@@ -1,6 +1,6 @@
 ﻿namespace GraduatorieScript.Data.Constants;
 
-public static class ConstantsGeneral
+public static class Constants
 {
     public const string RisultatiAmmissionePolimiIt = "www.risultati-ammissione.polimi.it";
 

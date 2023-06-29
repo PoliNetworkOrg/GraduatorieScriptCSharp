@@ -21,7 +21,7 @@ public static class Parser
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
-        var htmlFolder = System.IO.Path.Join(dataFolder, ConstantsGeneral.HtmlFolder);
+        var htmlFolder = System.IO.Path.Join(dataFolder, Constants.HtmlFolder);
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
         var recursiveHtmls = urls
@@ -647,7 +647,7 @@ public static class Parser
                 continue;
 
             var html = File.ReadAllText(file);
-            var url = $"http://{ConstantsGeneral.RisultatiAmmissionePolimiIt}{fileRelativePath}";
+            var url = $"http://{Constants.RisultatiAmmissionePolimiIt}{fileRelativePath}";
             // no need to check if url is online
             // because the html is already stored
 

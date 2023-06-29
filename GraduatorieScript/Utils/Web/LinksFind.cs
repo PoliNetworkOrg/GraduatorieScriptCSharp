@@ -51,7 +51,7 @@ public static class LinksFind
         var yearIds = ids.Select(i => $"{year}_{i}").ToArray(); // 2022_20002, 2022_20005, ...
         var links = yearIds
             //http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
-            .Select(id => $"http://{ConstantsGeneral.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
+            .Select(id => $"http://{Constants.RisultatiAmmissionePolimiIt}/{id}_html/{id}_generale.html")
             .ToHashSet();
         var r = new HashSet<string>();
         r.AddRange(links);

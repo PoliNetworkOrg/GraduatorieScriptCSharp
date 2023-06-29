@@ -10,6 +10,8 @@ namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class BySchoolYearJson : IndexJsonBase
 {
+    internal const string PathCustom = "bySchoolYear.json";
+    
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
 
     public static BySchoolYearJson From(RankingsSet set)
@@ -46,8 +48,8 @@ public class BySchoolYearJson : IndexJsonBase
 
     public static RankingsSet? Parse(string dataFolder)
     {
-        var outFolder = Path.Join(dataFolder, ConstantsGeneral.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, IndexesPathConstants.BySchoolYearFilename);
+        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
+        var mainJsonPath = Path.Join(outFolder, PathCustom);
         try
         {
             var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);

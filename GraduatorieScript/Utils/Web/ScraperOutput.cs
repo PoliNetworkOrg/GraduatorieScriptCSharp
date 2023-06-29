@@ -7,7 +7,7 @@ public static class ScraperOutput
 {
     private static string GetFilePath(string? docFolder)
     {
-        return docFolder + "/" + ConstantsGeneral.OutputLinksFilename;
+        return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
     public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)

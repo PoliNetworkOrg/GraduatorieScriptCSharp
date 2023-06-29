@@ -64,7 +64,7 @@ public class StatsJson
 
     private void WriteToFile(string outFolder)
     {
-        var jsonPath = Path.Join(outFolder, ConstantsGeneral.StatsJsonFilename);
+        var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
 
         if (ExitIfThereIsntAnUpdate(jsonPath)) return;
 
