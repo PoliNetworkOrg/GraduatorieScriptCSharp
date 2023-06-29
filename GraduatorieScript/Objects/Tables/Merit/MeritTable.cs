@@ -13,21 +13,13 @@ public class MeritTable
     public int GetHashWithoutLastUpdate()
     {
         var i = 0;
-        if (this.Headers != null)
-        {
-            foreach (var variable in this.Headers)
-            {
+        if (Headers != null)
+            foreach (var variable in Headers)
                 i ^= variable.GetHashCode();
-            }
-        }
 
-        if (this.Rows != null)
-        {
-            foreach (var variable in this.Rows)
-            {
+        if (Rows != null)
+            foreach (var variable in Rows)
                 i ^= variable.GetHashWithoutLastUpdate();
-            }
-        }
         return i;
     }
 }

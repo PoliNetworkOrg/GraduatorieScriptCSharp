@@ -41,10 +41,7 @@ public abstract class IndexJsonBase
                 var folder = Path.Join(outFolder, school.ToString(), year.ToString());
                 Directory.CreateDirectory(folder);
 
-                foreach (var ranking in yearGroup)
-                {
-                    WriteSingleJsonRanking(folder, ranking);
-                }
+                foreach (var ranking in yearGroup) WriteSingleJsonRanking(folder, ranking);
             }
         }
     }
@@ -62,9 +59,9 @@ public abstract class IndexJsonBase
     private static bool ExitIfAlreadyExistsAndNotUpdated(Ranking ranking, string path)
     {
         if (!File.Exists(path)) return false;
-        
+
         var x = File.ReadAllText(path);
-        var j = Newtonsoft.Json.JsonConvert.DeserializeObject<Ranking>(x);
+        var j = JsonConvert.DeserializeObject<Ranking>(x);
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
         return hashThis == hashJ;

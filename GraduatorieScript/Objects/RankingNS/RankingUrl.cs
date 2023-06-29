@@ -10,12 +10,12 @@ public class RankingUrl
 {
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
-    
+
     public int GetHashWithoutLastUpdate()
     {
         var i = 0;
-        i ^= this.Url.GetHashCode();
-        i ^= this.PageEnum.GetHashCode();
+        i ^= Url.GetHashCode();
+        i ^= PageEnum.GetHashCode();
         return i;
     }
 
@@ -93,6 +93,4 @@ public class RankingUrl
         var baseDomain = Url[..lastUrlIndex] + "/";
         return baseDomain;
     }
-
-
 }
