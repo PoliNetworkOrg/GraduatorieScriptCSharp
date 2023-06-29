@@ -15,33 +15,30 @@ public class CourseTableStats
     public decimal? AverageScoresOfAllStudents;
     public string? Location;
     public string? Title;
-    
+
     public int GetHashWithoutLastUpdate()
     {
-        int i = this.AverageBirthYear?.GetHashCode() ?? 0;
-        i ^= this.AverageEnglishCorrectAnswers?.GetHashCode() ?? 0;
-        i ^= this.AverageOfWhoPassed?.GetHashCode() ?? 0;
-        i ^= this.AverageScoresOfAllStudents?.GetHashCode() ?? 0;
-        i ^= this.Location?.GetHashCode() ?? 0;
-        i ^= this.Title?.GetHashCode() ?? 0;
+        var i = AverageBirthYear?.GetHashCode() ?? 0;
+        i ^= AverageEnglishCorrectAnswers?.GetHashCode() ?? 0;
+        i ^= AverageOfWhoPassed?.GetHashCode() ?? 0;
+        i ^= AverageScoresOfAllStudents?.GetHashCode() ?? 0;
+        i ^= Location?.GetHashCode() ?? 0;
+        i ^= Title?.GetHashCode() ?? 0;
 
-        if (this.AverageOfa != null)
-        {
-            foreach (var variable in this.AverageOfa)
+        if (AverageOfa != null)
+            foreach (var variable in AverageOfa)
             {
                 i ^= variable.Key.GetHashCode();
                 i ^= variable.Value.GetHashCode();
             }
-        }
 
-        if (this.AveragePartialScores != null)
-        {
-            foreach (var variable in this.AveragePartialScores)
+        if (AveragePartialScores != null)
+            foreach (var variable in AveragePartialScores)
             {
                 i ^= variable.Key.GetHashCode();
                 i ^= variable.Value.GetHashCode();
             }
-        }
+
         return i;
     }
 
@@ -140,6 +137,4 @@ public class CourseTableStats
 
         return result;
     }
-
-  
 }

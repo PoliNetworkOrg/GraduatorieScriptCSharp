@@ -12,8 +12,8 @@ public class SingleCourseJson
 
     public int GetHashWithoutLastUpdate()
     {
-        var hashWithoutLastUpdate = this.Link?.GetHashCode() ?? 0;
-        var hashCode = this.Name?.GetHashCode() ?? 0;
+        var hashWithoutLastUpdate = Link?.GetHashCode() ?? 0;
+        var hashCode = Name?.GetHashCode() ?? 0;
         return hashWithoutLastUpdate ^ hashCode;
     }
 }

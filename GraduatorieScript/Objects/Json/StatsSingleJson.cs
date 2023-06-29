@@ -21,9 +21,9 @@ public class StatsSingleCourseJson
 
     public int GetHashWithoutLastUpdate()
     {
-        int i = 0;
-        i ^= this.SingleCourseJson?.GetHashWithoutLastUpdate() ?? 0;
-        i ^= this.Stats?.GetHashWithoutLastUpdate() ?? 0;
+        var i = 0;
+        i ^= SingleCourseJson?.GetHashWithoutLastUpdate() ?? 0;
+        i ^= Stats?.GetHashWithoutLastUpdate() ?? 0;
 
         return i;
     }

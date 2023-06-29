@@ -67,7 +67,7 @@ public class StatsJson
         var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
 
         if (ExitIfThereIsntAnUpdate(jsonPath)) return;
-        
+
         var jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(jsonPath, jsonString);
     }
@@ -75,19 +75,19 @@ public class StatsJson
     private bool ExitIfThereIsntAnUpdate(string jsonPath)
     {
         if (!File.Exists(jsonPath)) return false;
-        
+
         var read = File.ReadAllText(jsonPath);
-        var jsonRead = Newtonsoft.Json.JsonConvert.DeserializeObject<StatsJson>(read);
+        var jsonRead = JsonConvert.DeserializeObject<StatsJson>(read);
         var hashRead = jsonRead?.GetHashWithoutLastUpdate();
-        var hashThis = this.GetHashWithoutLastUpdate();
+        var hashThis = GetHashWithoutLastUpdate();
 
         return hashRead == hashThis;
     }
 
     public int GetHashWithoutLastUpdate()
     {
-        int i = 0;
-        foreach (var variable in this.Stats)
+        var i = 0;
+        foreach (var variable in Stats)
         {
             var i2 = variable.Key ^ variable.Value.GetHashWithoutLastUpdate();
             i ^= i2;

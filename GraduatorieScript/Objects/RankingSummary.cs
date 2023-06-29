@@ -12,23 +12,17 @@ public class RankingSummary
     public int? HowManyCanEnroll;
     public int? HowManyStudents;
     public Dictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
-    
+
     public int GetHashWithoutLastUpdate()
     {
-        int i = (this.HowManyStudents ?? 0) ^ (this.HowManyCanEnroll ?? 0);
+        var i = (HowManyStudents ?? 0) ^ (HowManyCanEnroll ?? 0);
         if (CourseSummarized != null)
             foreach (var variable in CourseSummarized)
-            {
                 i ^= variable.GetHashWithoutLastUpdate();
-            }
 
         if (ResultsSummarized != null)
-        {
-            foreach (var variable in this.ResultsSummarized)
-            {
+            foreach (var variable in ResultsSummarized)
                 i ^= variable.Key ^ variable.Value;
-            }
-        }
 
         return i;
     }
@@ -63,6 +57,4 @@ public class RankingSummary
 
         return results;
     }
-
-    
 }
