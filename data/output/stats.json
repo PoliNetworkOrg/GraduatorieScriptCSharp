@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2023-06-29T15:57:55.0681392+00:00",
+  "lastUpdate": "2023-06-29T16:11:07.6833086+00:00",
   "stats": {
     "2022": {
       "numStudents": 17246,
@@ -10,7 +10,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2022/",
                 "link": "Anticipata.json",
-                "name": "Anticipata"
+                "name": "Anticipata",
+                "school": "Urbanistica",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -89,7 +91,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2022/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Urbanistica",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -119,7 +123,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2022/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Urbanistica",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -185,7 +191,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2022/",
                 "link": "Extra-ue_Seconda_Graduatoria.json",
-                "name": "Extra-ue Seconda Graduatoria"
+                "name": "Extra-ue Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -340,7 +348,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2022/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Architettura",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -510,7 +520,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2022/",
                 "link": "Prima_Graduatoria.json",
-                "name": "Prima Graduatoria"
+                "name": "Prima Graduatoria",
+                "school": "Architettura",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -680,7 +692,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2022/",
                 "link": "Seconda_Graduatoria.json",
-                "name": "Seconda Graduatoria"
+                "name": "Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -834,7 +848,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2022/",
                 "link": "Terza_Graduatoria.json",
-                "name": "Terza Graduatoria"
+                "name": "Terza Graduatoria",
+                "school": "Architettura",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -989,7 +1005,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2022/",
                 "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Extra-ue Prima Graduatoria Di Seconda Fase"
+                "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -1360,7 +1378,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2022/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Prima Graduatoria Di Seconda Fase"
+                "name": "Prima Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -1829,7 +1849,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2022/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Seconda Graduatoria Di Seconda Fase"
+                "name": "Seconda Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -2263,7 +2285,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2022/",
                 "link": "Terza_Fase.json",
-                "name": "Terza Fase"
+                "name": "Terza Fase",
+                "school": "Ingegneria",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -2691,7 +2715,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2022/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Terza Graduatoria Di Seconda Fase"
+                "name": "Terza Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -3048,7 +3074,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2022/",
                 "link": "Anticipato.json",
-                "name": "Anticipato"
+                "name": "Anticipato",
+                "school": "Design",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -3204,7 +3232,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2022/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Design",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -3333,7 +3363,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2022/",
                 "link": "Ripescaggio.json",
-                "name": "Ripescaggio"
+                "name": "Ripescaggio",
+                "school": "Design",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -3414,7 +3446,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2022/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Design",
+                "year": 2022
               },
               "stats": {
                 "courseSummarized": [
@@ -3583,7 +3617,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2021/",
                 "link": "Anticipata.json",
-                "name": "Anticipata"
+                "name": "Anticipata",
+                "school": "Urbanistica",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -3661,7 +3697,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2021/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Urbanistica",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -3691,7 +3729,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2021/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Urbanistica",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -3763,7 +3803,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2021/",
                 "link": "Extra-ue_Seconda_Graduatoria.json",
-                "name": "Extra-ue Seconda Graduatoria"
+                "name": "Extra-ue Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -3907,7 +3949,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2021/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Architettura",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -4066,7 +4110,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2021/",
                 "link": "Prima_Graduatoria.json",
-                "name": "Prima Graduatoria"
+                "name": "Prima Graduatoria",
+                "school": "Architettura",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -4232,7 +4278,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2021/",
                 "link": "Seconda_Graduatoria.json",
-                "name": "Seconda Graduatoria"
+                "name": "Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -4379,7 +4427,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2021/",
                 "link": "Terza_Graduatoria.json",
-                "name": "Terza Graduatoria"
+                "name": "Terza Graduatoria",
+                "school": "Architettura",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -4526,7 +4576,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2021/",
                 "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Extra-ue Prima Graduatoria Di Seconda Fase"
+                "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -4807,7 +4859,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2021/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Prima Graduatoria Di Seconda Fase"
+                "name": "Prima Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -5277,7 +5331,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2021/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Seconda Graduatoria Di Seconda Fase"
+                "name": "Seconda Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -5721,7 +5777,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2021/",
                 "link": "Terza_Fase.json",
-                "name": "Terza Fase"
+                "name": "Terza Fase",
+                "school": "Ingegneria",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -6138,7 +6196,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2021/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Terza Graduatoria Di Seconda Fase"
+                "name": "Terza Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -6544,7 +6604,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2021/",
                 "link": "Anticipato.json",
-                "name": "Anticipato"
+                "name": "Anticipato",
+                "school": "Design",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -6703,7 +6765,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2021/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Design",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -6829,7 +6893,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2021/",
                 "link": "Ripescaggio.json",
-                "name": "Ripescaggio"
+                "name": "Ripescaggio",
+                "school": "Design",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -6967,7 +7033,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2021/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Design",
+                "year": 2021
               },
               "stats": {
                 "courseSummarized": [
@@ -7138,7 +7206,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2020/",
                 "link": "Anticipata.json",
-                "name": "Anticipata"
+                "name": "Anticipata",
+                "school": "Urbanistica",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7218,7 +7288,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2020/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Urbanistica",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7250,7 +7322,9 @@
               "singleCourseJson": {
                 "basePath": "Urbanistica/2020/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Urbanistica",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7307,7 +7381,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2020/",
                 "link": "Extra-ue_Seconda_Graduatoria.json",
-                "name": "Extra-ue Seconda Graduatoria"
+                "name": "Extra-ue Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7453,7 +7529,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2020/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Architettura",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7620,7 +7698,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2020/",
                 "link": "Prima_Graduatoria.json",
-                "name": "Prima Graduatoria"
+                "name": "Prima Graduatoria",
+                "school": "Architettura",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7794,7 +7874,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2020/",
                 "link": "Seconda_Graduatoria.json",
-                "name": "Seconda Graduatoria"
+                "name": "Seconda Graduatoria",
+                "school": "Architettura",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -7945,7 +8027,9 @@
               "singleCourseJson": {
                 "basePath": "Architettura/2020/",
                 "link": "Terza_Graduatoria.json",
-                "name": "Terza Graduatoria"
+                "name": "Terza Graduatoria",
+                "school": "Architettura",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -8094,7 +8178,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2020/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Ingegneria",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -8402,7 +8488,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2020/",
                 "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Prima Graduatoria Di Seconda Fase"
+                "name": "Prima Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -8937,7 +9025,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2020/",
                 "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Seconda Graduatoria Di Seconda Fase"
+                "name": "Seconda Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -9356,7 +9446,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2020/",
                 "link": "Terza_Fase.json",
-                "name": "Terza Fase"
+                "name": "Terza Fase",
+                "school": "Ingegneria",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -9692,7 +9784,9 @@
               "singleCourseJson": {
                 "basePath": "Ingegneria/2020/",
                 "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-                "name": "Terza Graduatoria Di Seconda Fase"
+                "name": "Terza Graduatoria Di Seconda Fase",
+                "school": "Ingegneria",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -10050,7 +10144,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2020/",
                 "link": "Anticipato.json",
-                "name": "Anticipato"
+                "name": "Anticipato",
+                "school": "Design",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -10226,7 +10322,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2020/",
                 "link": "Extra-ue.json",
-                "name": "Extra-ue"
+                "name": "Extra-ue",
+                "school": "Design",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -10373,7 +10471,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2020/",
                 "link": "Ripescaggio.json",
-                "name": "Ripescaggio"
+                "name": "Ripescaggio",
+                "school": "Design",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -10488,7 +10588,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2020/",
                 "link": "Standard.json",
-                "name": "Standard"
+                "name": "Standard",
+                "school": "Design",
+                "year": 2020
               },
               "stats": {
                 "courseSummarized": [
@@ -10681,7 +10783,9 @@
               "singleCourseJson": {
                 "basePath": "Design/2023/",
                 "link": "Anticipato.json",
-                "name": "Anticipato"
+                "name": "Anticipato",
+                "school": "Design",
+                "year": 2023
               },
               "stats": {
                 "courseSummarized": [
