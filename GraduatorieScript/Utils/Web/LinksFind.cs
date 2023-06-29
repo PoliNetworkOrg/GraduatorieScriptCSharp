@@ -1,5 +1,4 @@
-﻿using GraduatorieScript.Data;
-using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;

@@ -1,4 +1,3 @@
-using GraduatorieScript.Data;
 using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Extensions;
 using HtmlAgilityPack;

@@ -1,5 +1,4 @@
-﻿using GraduatorieScript.Data;
-using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Objects;
 
 namespace GraduatorieScript.Utils.Web;

@@ -1,5 +1,4 @@
-﻿using GraduatorieScript.Data;
-using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
@@ -47,7 +46,6 @@ public static class Program
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
     }
-
 
 
     private static string GetDataFolder(IReadOnlyList<string> args)
