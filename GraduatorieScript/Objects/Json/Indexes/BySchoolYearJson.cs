@@ -8,18 +8,11 @@ namespace GraduatorieScript.Objects.Json.Indexes;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class BySchoolYearJson
+public class BySchoolYearJson : IndexJsonBase
 {
-    public DateTime? LastUpdate;
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
-
-    public static void Write(string outFolder, RankingsSet set)
-    {
-        var mainJson = Generate(set, outFolder);
-        mainJson.WriteToFile(outFolder);
-    }
-
-    private static BySchoolYearJson Generate(RankingsSet set, string outFolder)
+    
+    public static BySchoolYearJson From(RankingsSet set)
     {
         var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
         // group rankings by year
@@ -37,22 +30,11 @@ public class BySchoolYearJson
             {
                 if (yearGroup.Key is null)
                     continue;
-                var year = yearGroup.Key.Value;
-                var folder = Path.Join(outFolder, school.ToString(), year.ToString());
-                Directory.CreateDirectory(folder);
-
-                foreach (var ranking in yearGroup)
-                {
-                    var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
-                    var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
-                    File.WriteAllText(path, rankingJsonString);
-                }
-
                 var filenames = yearGroup
                     .Select(ranking => ranking.ToSingleCourseJson())
                     .DistinctBy(x => x.Link)
                     .ToList().OrderBy(a => a.Name);
-                schoolDict.Add(year, filenames);
+                schoolDict.Add(yearGroup.Key.Value, filenames);
             }
 
             mainJson.Schools.Add(school, schoolDict);
@@ -61,12 +43,7 @@ public class BySchoolYearJson
         return mainJson;
     }
 
-    private void WriteToFile(string outFolder)
-    {
-        var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
-        File.WriteAllText(mainJsonPath, mainJsonString);
-    }
+
 
     public static RankingsSet? Parse(string dataFolder)
     {

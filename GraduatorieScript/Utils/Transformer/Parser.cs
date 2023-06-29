@@ -2,7 +2,6 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
-using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Utils.Web;
