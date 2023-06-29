@@ -19,7 +19,7 @@ public abstract class IndexJsonBase
     }
 
 
-    public static void WriteSingleJsons(RankingsSet set, string outFolder)
+    public static void WriteSingleJsons(RankingsSet? set, string outFolder)
     {
         // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
@@ -48,7 +48,7 @@ public abstract class IndexJsonBase
         }
     }
 
-    public static void IndexesWrite(RankingsSet rankingsSet, string outFolder)
+    public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder)
     {
         //let's write all single json files
         WriteSingleJsons(rankingsSet, outFolder);

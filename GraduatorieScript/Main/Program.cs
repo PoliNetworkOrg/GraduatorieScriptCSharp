@@ -15,23 +15,28 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var dataFolder = GetDataFolder(args);
-        Console.WriteLine($"[INFO] dataFolder: {dataFolder}");
+        ArgsConfig argsConfig = GetArgsConfig(args);
+        Console.WriteLine($"[INFO] dataFolder: {argsConfig.dataFolder}");
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
-        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, dataFolder);
-        ScraperOutput.Write(rankingsUrls, dataFolder);
+        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.dataFolder);
+        ScraperOutput.Write(rankingsUrls, argsConfig.dataFolder);
 
         //print links found
         PrintLinks(rankingsUrls);
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(dataFolder, rankingsUrls);
+        var rankingsSet = Parser.GetRankings(argsConfig.dataFolder, rankingsUrls);
 
         // salvare il set
-        SaveOutputs(dataFolder, rankingsSet);
+        SaveOutputs(argsConfig.dataFolder, rankingsSet);
+    }
+
+    private static ArgsConfig GetArgsConfig(string[] args)
+    {
+        throw new NotImplementedException();
     }
 
     private static void PrintLinks(List<RankingUrl> rankingsUrls)
@@ -40,8 +45,11 @@ public static class Program
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
     }
 
-    private static void SaveOutputs(string dataFolder, RankingsSet rankingsSet)
+    private static void SaveOutputs(string? dataFolder, RankingsSet? rankingsSet)
     {
+        if (string.IsNullOrEmpty(dataFolder))
+            return;
+        
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
@@ -65,4 +73,9 @@ public static class Program
         Console.WriteLine("[WARNING] dataFolder not found, creating it");
         return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
     }
+}
+
+public class ArgsConfig
+{
+    public string? dataFolder;
 }

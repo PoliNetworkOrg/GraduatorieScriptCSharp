@@ -15,7 +15,7 @@ public class ByYearSchoolJson : IndexJsonBase
 
     public Dictionary<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
 
-    public static ByYearSchoolJson From(RankingsSet set)
+    public static ByYearSchoolJson From(RankingsSet? set)
     {
         var mainJson = new ByYearSchoolJson { LastUpdate = set.LastUpdate };
         // group rankings by year

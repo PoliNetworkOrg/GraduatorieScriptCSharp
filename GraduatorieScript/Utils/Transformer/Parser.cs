@@ -13,11 +13,14 @@ namespace GraduatorieScript.Utils.Transformer;
 
 public static class Parser
 {
-    public static RankingsSet GetRankings(
-        string dataFolder,
+    public static RankingsSet? GetRankings(
+        string? dataFolder,
         IEnumerable<RankingUrl> urls
     )
     {
+        if (string.IsNullOrEmpty(dataFolder))
+            return null;
+        
         var rankingsSet = BySchoolYearJson.Parse(dataFolder) ?? new RankingsSet();
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
