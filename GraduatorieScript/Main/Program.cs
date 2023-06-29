@@ -1,6 +1,7 @@
 ﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes;
+using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
