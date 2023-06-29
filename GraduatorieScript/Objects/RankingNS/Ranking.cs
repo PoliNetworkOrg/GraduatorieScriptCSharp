@@ -3,6 +3,7 @@ using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.Tables;
+using GraduatorieScript.Objects.Tables.Merit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -21,6 +22,31 @@ public class Ranking
     public SchoolEnum? School;
     public RankingUrl? Url;
     public int? Year;
+    
+    /***
+     * Ottieni l'hash senza considerare il valore di LastUpdate
+     */
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = 0;
+        i ^= this.Extra?.GetHashCode() ?? "Extra".GetHashCode();
+        i ^= this.Phase?.GetHashCode() ?? "Phase".GetHashCode();
+        i ^= this.RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
+        i ^= this.School.GetHashCode();
+        i ^= this.Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
+        i ^= this.Year?.GetHashCode() ?? "Year".GetHashCode();
+        i ^= this.ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
+
+        if (this.ByCourse != null)
+        {
+            foreach (var variable in this.ByCourse)
+            {
+                i ^= variable.GetHashWithoutLastUpdate();
+            }
+        }
+        return i;
+    }
+    
 
     public bool IsSimilarTo(Ranking ranking)
     {
@@ -73,4 +99,6 @@ public class Ranking
     {
         return RankingSummary.From(this);
     }
+
+
 }

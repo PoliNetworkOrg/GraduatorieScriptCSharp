@@ -85,4 +85,9 @@ public class RankingUrl
         var baseDomain = Url[..lastUrlIndex] + "/";
         return baseDomain;
     }
+
+    public int GetHashWithoutLastUpdate()
+    {
+        throw new NotImplementedException();
+    }
 }
