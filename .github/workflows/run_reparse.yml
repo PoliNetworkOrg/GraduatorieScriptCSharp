@@ -1,4 +1,4 @@
-name: Run script
+name: Run script --reparse
 
 on:
   workflow_dispatch:
