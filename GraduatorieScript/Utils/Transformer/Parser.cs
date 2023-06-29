@@ -372,15 +372,18 @@ public static class Parser
 
     private static HtmlPage? SubIndex(IEnumerable<HtmlPage> allHtmls, RankingUrl url)
     {
-        bool Predicate(HtmlPage h)
+        bool FindUrlSimilar(HtmlPage? h)
         {
+            if (h == null)
+                return false;
+            
             var urlUrl = h.Url.Url;
             var s = url.Url;
 
             return CheckIfSimilar(urlUrl, s);
         }
 
-        var subIndex = allHtmls.ToList().Find(Predicate);
+        var subIndex = allHtmls.ToList().Find(FindUrlSimilar);
         return subIndex;
     }
 
