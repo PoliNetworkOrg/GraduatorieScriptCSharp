@@ -1,0 +1,151 @@
+{
+  "byCourse": [
+    {
+      "location": null,
+      "sections": [
+        "Colloquio",
+        "Elaborato",
+        "Lettera Motivazionale"
+      ],
+      "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Colloquio",
+        "Elaborato",
+        "Lettera Motivazionale"
+      ],
+      "rows": [
+        {
+          "birthDate": "2001-09-03",
+          "canEnroll": true,
+          "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 8400.0,
+          "sectionsResults": {
+            "Colloquio": 4400.0,
+            "Elaborato": 2200.0,
+            "Lettera Motivazionale": 1800.0
+          }
+        },
+        {
+          "birthDate": "2001-05-16",
+          "canEnroll": true,
+          "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 7900.0,
+          "sectionsResults": {
+            "Colloquio": 4300.0,
+            "Elaborato": 1900.0,
+            "Lettera Motivazionale": 1700.0
+          }
+        },
+        {
+          "birthDate": "2001-04-30",
+          "canEnroll": true,
+          "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+          "englishCorrectAnswers": null,
+          "id": null,
+          "ofa": {},
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 6400.0,
+          "sectionsResults": {
+            "Colloquio": 3400.0,
+            "Elaborato": 1500.0,
+            "Lettera Motivazionale": 1500.0
+          }
+        }
+      ]
+    }
+  ],
+  "byMerit": {
+    "headers": [
+      "Voto Test",
+      "Posizione Assoluta",
+      "Corso di Studi per il quale è consentita l'immatricolazione"
+    ],
+    "rows": [
+      {
+        "birthDate": null,
+        "canEnroll": true,
+        "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+        "englishCorrectAnswers": null,
+        "id": null,
+        "ofa": {},
+        "positionAbsolute": 1,
+        "positionCourse": null,
+        "result": 8400.0,
+        "sectionsResults": null
+      },
+      {
+        "birthDate": null,
+        "canEnroll": true,
+        "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+        "englishCorrectAnswers": null,
+        "id": null,
+        "ofa": {},
+        "positionAbsolute": 2,
+        "positionCourse": null,
+        "result": 7900.0,
+        "sectionsResults": null
+      },
+      {
+        "birthDate": null,
+        "canEnroll": true,
+        "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
+        "englishCorrectAnswers": null,
+        "id": null,
+        "ofa": {},
+        "positionAbsolute": 3,
+        "positionCourse": null,
+        "result": 6400.0,
+        "sectionsResults": null
+      }
+    ]
+  },
+  "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
+  "lastUpdate": "2023-06-29T21:11:19.8442859+02:00",
+  "phase": "Extra-ue",
+  "rankingSummary": {
+    "courseSummarized": [
+      {
+        "averageBirthYear": 2001.0,
+        "averageEnglishCorrectAnswers": null,
+        "averageOfWhoPassed": 7566.66667,
+        "averagePartialScores": {
+          "Colloquio": 4033.33333,
+          "Elaborato": 1866.66667,
+          "Lettera Motivazionale": 1666.66667
+        },
+        "averageScoresOfAllStudents": 7566.66667,
+        "howManyOfa": {},
+        "location": null,
+        "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+      }
+    ],
+    "howManyCanEnroll": 3,
+    "howManyStudents": 3,
+    "resultsSummarized": {
+      "8400": 1,
+      "7900": 1,
+      "6400": 1
+    }
+  },
+  "school": "Urbanistica",
+  "url": {
+    "pageEnum": 1,
+    "url": "http://www.risultati-ammissione.polimi.it\\2020_20007_html\\2020_20007_generale.html"
+  },
+  "year": 2020
+}
