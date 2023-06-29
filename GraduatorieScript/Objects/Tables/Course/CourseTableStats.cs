@@ -75,7 +75,7 @@ public class CourseTableStats
 
         stats.AveragePartialScores =
             count > 0 ? AveragePartialScoresCalculate(courseTableRows) : null;
-        stats.HowManyOfa = count > 0 ? AverageOfaCalculate(courseTableRows) : null;
+        stats.HowManyOfa = count > 0 ? HowManyOfaCalculate(courseTableRows) : null;
         return stats;
     }
 
@@ -89,7 +89,7 @@ public class CourseTableStats
         return average == null ? null : Math.Round(average.Value, Decimals);
     }
 
-    private static Dictionary<string, int> AverageOfaCalculate(
+    private static Dictionary<string, int> HowManyOfaCalculate(
         IReadOnlyCollection<StudentResult> courseTableRows
     )
     {
