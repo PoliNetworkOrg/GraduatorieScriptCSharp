@@ -64,9 +64,9 @@ public class StatsJson
 
     private void WriteToFile(string outFolder)
     {
-        var mainJsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
-        File.WriteAllText(mainJsonPath, mainJsonString);
+        var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
+        var jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+        File.WriteAllText(jsonPath, jsonString);
     }
 
     public int GetHashWithoutLastUpdate()
