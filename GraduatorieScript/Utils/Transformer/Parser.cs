@@ -507,7 +507,7 @@ public static class Parser
         List<MeritTableRow> parsedRows = new();
         var headers = table.Headers.Select(h => h.ToLower()).ToList();
 
-        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
+        var idIndex = headers.FindIndex(t => t.Contains("matricola") && !t.Contains("corso"));
         var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
         var corsoIndex = headers.FindIndex(t => t.Contains("corso"));
@@ -553,7 +553,7 @@ public static class Parser
         var headers = table.Headers.Select(h => h.ToLower()).ToList();
 
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
-        var idIndex = headers.FindIndex(t => t.Contains("matricola"));
+        var idIndex = headers.FindIndex(t => t.Contains("matricola") && !t.Contains("consentita"));
         var birthDateIndex = headers.FindIndex(t => t.Contains("nascita"));
         var enrollAllowedIndex = headers.FindIndex(t => t.Contains("consentita"));
         var votoTestIndex = headers.FindIndex(t => t.Contains("voto"));
