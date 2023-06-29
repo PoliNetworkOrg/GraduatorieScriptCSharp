@@ -11,7 +11,7 @@ namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 public class BySchoolYearJson : IndexJsonBase
 {
     internal const string PathCustom = "bySchoolYear.json";
-    
+
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
 
     public static BySchoolYearJson From(RankingsSet set)
