@@ -1,27 +1,20 @@
-using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects.Json;
+namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class MainJson
+public class BySchoolYearJson : IndexJsonBase
 {
-    public DateTime? LastUpdate;
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
 
-    public static void Write(string outFolder, RankingsSet set)
+    public static BySchoolYearJson From(RankingsSet set)
     {
-        var mainJson = Generate(set, outFolder);
-        mainJson.WriteToFile(outFolder);
-    }
-
-    private static MainJson Generate(RankingsSet set, string outFolder)
-    {
-        var mainJson = new MainJson { LastUpdate = set.LastUpdate };
+        var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
         // group rankings by year
         var bySchool = set.Rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)
@@ -37,20 +30,11 @@ public class MainJson
             {
                 if (yearGroup.Key is null)
                     continue;
-                var year = yearGroup.Key.Value;
-                var folder = Path.Join(outFolder, school.ToString(), year.ToString());
-                Directory.CreateDirectory(folder);
-
-                foreach (var ranking in yearGroup)
-                {
-                    var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
-                    var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
-                    File.WriteAllText(path, rankingJsonString);
-                }
-
-                var filenames = yearGroup.Select(ranking => ranking.ToSingleCourseJson()).DistinctBy(x => x.Link)
+                var filenames = yearGroup
+                    .Select(ranking => ranking.ToSingleCourseJson())
+                    .DistinctBy(x => x.Link)
                     .ToList().OrderBy(a => a.Name);
-                schoolDict.Add(year, filenames);
+                schoolDict.Add(yearGroup.Key.Value, filenames);
             }
 
             mainJson.Schools.Add(school, schoolDict);
@@ -59,20 +43,14 @@ public class MainJson
         return mainJson;
     }
 
-    private void WriteToFile(string outFolder)
-    {
-        var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
-        File.WriteAllText(mainJsonPath, mainJsonString);
-    }
 
     public static RankingsSet? Parse(string dataFolder)
     {
-        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, Constants.MainJsonFilename);
+        var outFolder = Path.Join(dataFolder, ConstantsGeneral.OutputFolder);
+        var mainJsonPath = Path.Join(outFolder, IndexesPathConstants.MainJsonFilename);
         try
         {
-            var mainJson = Parser.ParseJson<MainJson>(mainJsonPath);
+            var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
             if (mainJson is null)
                 return null;
 
@@ -88,7 +66,7 @@ public class MainJson
         return null;
     }
 
-    private static List<Ranking> RankingsAdd(MainJson mainJson, string outFolder)
+    private static List<Ranking> RankingsAdd(BySchoolYearJson mainJson, string outFolder)
     {
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)

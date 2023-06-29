@@ -1,4 +1,4 @@
-using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Extensions;
 using HtmlAgilityPack;
 
@@ -6,7 +6,7 @@ namespace GraduatorieScript.Utils.Web;
 
 public class Scraper
 {
-    private const string TargetUrl = Constants.RisultatiAmmissionePolimiIt;
+    private const string TargetUrl = ConstantsGeneral.RisultatiAmmissionePolimiIt;
     private const string HomepageUrl = "https://www.polimi.it";
     private const string FuturiStudentiUrl = "https://www.polimi.it/futuri-studenti";
     private const string InEvidenzaUrl = "https://www.polimi.it/in-evidenza";

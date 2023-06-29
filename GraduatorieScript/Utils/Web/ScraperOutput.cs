@@ -1,4 +1,4 @@
-﻿using GraduatorieScript.Data;
+﻿using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Objects;
 
 namespace GraduatorieScript.Utils.Web;
@@ -7,7 +7,7 @@ public static class ScraperOutput
 {
     private static string GetFilePath(string? docFolder)
     {
-        return docFolder + "/" + Constants.OutputLinksFilename;
+        return docFolder + "/" + ConstantsGeneral.OutputLinksFilename;
     }
 
     public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)
