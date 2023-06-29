@@ -58,7 +58,9 @@ public class Ranking
         {
             Link = ConvertPhaseToFilename(),
             Name = Phase,
-            BasePath = schoolString + "/" + Year + "/"
+            BasePath = schoolString + "/" + Year + "/",
+            Year = Year,
+            School = School
         };
     }
 
