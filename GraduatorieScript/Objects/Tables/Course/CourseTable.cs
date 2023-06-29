@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GraduatorieScript.Objects.Tables.Course;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects.Tables;
