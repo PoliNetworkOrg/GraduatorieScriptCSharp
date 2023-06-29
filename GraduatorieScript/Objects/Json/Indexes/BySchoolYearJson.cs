@@ -11,7 +11,7 @@ namespace GraduatorieScript.Objects.Json.Indexes;
 public class BySchoolYearJson : IndexJsonBase
 {
     public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
-    
+
     public static BySchoolYearJson From(RankingsSet set)
     {
         var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
@@ -42,7 +42,6 @@ public class BySchoolYearJson : IndexJsonBase
 
         return mainJson;
     }
-
 
 
     public static RankingsSet? Parse(string dataFolder)

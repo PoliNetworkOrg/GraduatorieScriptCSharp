@@ -15,7 +15,7 @@ public abstract class IndexJsonBase
         var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
-    
+
 
     public static void WriteSingleJsons(RankingsSet set, string outFolder)
     {
@@ -26,7 +26,7 @@ public abstract class IndexJsonBase
             if (schoolGroup.Key is null)
                 continue;
             var school = schoolGroup.Key.Value;
-            
+
             var byYears = schoolGroup.GroupBy(r => r.Year);
             foreach (var yearGroup in byYears)
             {
