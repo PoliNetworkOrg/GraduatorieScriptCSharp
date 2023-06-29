@@ -1,5 +1,5 @@
 ﻿using GraduatorieScript.Objects;
-using GraduatorieScript.Objects.Ranking;
+using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Utils.Transformer;
 

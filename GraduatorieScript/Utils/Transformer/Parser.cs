@@ -3,7 +3,7 @@ using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
-using GraduatorieScript.Objects.Ranking;
+using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
