@@ -35,7 +35,6 @@ public static class Program
     }
 
 
-
     private static void PrintLinks(List<RankingUrl> rankingsUrls)
     {
         foreach (var r in rankingsUrls)
@@ -46,7 +45,7 @@ public static class Program
     {
         if (string.IsNullOrEmpty(dataFolder))
             return;
-        
+
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
@@ -73,10 +72,7 @@ public static class Program
         {
             var s = args[i];
             if (s != data) continue;
-            if (i + 1 < args.Count)
-            {
-                return args[i + 1];
-            }
+            if (i + 1 < args.Count) return args[i + 1];
         }
 
         return null;

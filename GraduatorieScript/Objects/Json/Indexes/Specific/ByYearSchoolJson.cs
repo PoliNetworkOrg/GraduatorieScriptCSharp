@@ -19,7 +19,7 @@ public class ByYearSchoolJson : IndexJsonBase
     {
         if (set == null)
             return null;
-        
+
         var mainJson = new ByYearSchoolJson { LastUpdate = set.LastUpdate };
         // group rankings by year
         var byYear = set.Rankings.GroupBy(r => r.Year);
