@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GraduatorieScript.Enums;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects.Json;
@@ -10,12 +11,16 @@ public class SingleCourseJson
     public string? BasePath;
     public string? Link;
     public string? Name;
+    public SchoolEnum? School;
+    public int? Year;
 
     public int GetHashWithoutLastUpdate()
     {
         var hashWithoutLastUpdate = Link?.GetHashCode() ?? "Link".GetHashCode();
         var hashCode = Name?.GetHashCode() ?? "Name".GetHashCode();
         var basePathInt = BasePath?.GetHashCode() ?? "BasePath".GetHashCode();
-        return hashWithoutLastUpdate ^ hashCode ^ basePathInt;
+        var yearInt = Year?.GetHashCode() ?? "Year".GetHashCode();
+        var schoolInt = School?.GetHashCode() ?? "School".GetHashCode();
+        return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt;
     }
 }
