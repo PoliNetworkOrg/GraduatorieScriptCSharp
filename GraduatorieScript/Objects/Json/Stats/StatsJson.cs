@@ -95,13 +95,7 @@ public class StatsJson
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
-        foreach (var variable in Stats)
-        {
-            var i2 = variable.Key ^ variable.Value.GetHashWithoutLastUpdate();
-            i ^= i2;
-        }
-
-        return i;
+        return Stats.Select(variable => variable.Key ^ variable.Value.GetHashWithoutLastUpdate())
+            .Aggregate(0, (current, i2) => current ^ i2);
     }
 }
