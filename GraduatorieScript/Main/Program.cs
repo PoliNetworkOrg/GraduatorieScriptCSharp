@@ -1,7 +1,6 @@
 ﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes;
-using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
@@ -44,15 +43,11 @@ public static class Program
     private static void SaveOutputs(string dataFolder, RankingsSet rankingsSet)
     {
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        IndexesWrite(rankingsSet, outFolder);
+        IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
     }
 
-    private static void IndexesWrite(RankingsSet rankingsSet, string outFolder)
-    {
-        IndexJsonBase.WriteSingleJsons(rankingsSet, outFolder);
-        BySchoolYearJson.From(rankingsSet).WriteToFile(outFolder, Constants.MainJsonFilename);
-    }
+
 
     private static string GetDataFolder(IReadOnlyList<string> args)
     {

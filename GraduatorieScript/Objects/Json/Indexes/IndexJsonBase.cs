@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects.Json.Indexes.Specific;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace GraduatorieScript.Objects.Json.Indexes;
@@ -44,5 +46,14 @@ public abstract class IndexJsonBase
                 }
             }
         }
+    }
+
+    public static void IndexesWrite(RankingsSet rankingsSet, string outFolder)
+    {
+        //let's write all single json files
+        WriteSingleJsons(rankingsSet, outFolder);
+        
+        //now let's write each single different index
+        BySchoolYearJson.From(rankingsSet).WriteToFile(outFolder, Constants.MainJsonFilename);
     }
 }
