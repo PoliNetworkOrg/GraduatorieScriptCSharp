@@ -1,5 +1,5 @@
 ﻿using GraduatorieScript.Data.Constants;
-using GraduatorieScript.Objects;
+using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Utils.Web;
 

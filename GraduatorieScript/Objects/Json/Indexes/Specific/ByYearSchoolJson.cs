@@ -1,9 +1,9 @@
 using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
+using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 
