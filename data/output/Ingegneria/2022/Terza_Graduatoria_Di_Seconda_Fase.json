@@ -819,6 +819,112 @@
       ]
     },
     {
+      "location": "MILANO BOVISA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA GESTIONALE",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-06-01",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 30,
+          "id": "7eca289130d8f53216b6",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 13,
+          "positionCourse": 1,
+          "result": 6800.0,
+          "sectionsResults": {
+            "Inglese": 1000.0,
+            "Matematica": 4225.0,
+            "Comprensione Verbale": 825.0,
+            "Fisica": 750.0
+          }
+        },
+        {
+          "birthDate": "2003-05-20",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 23,
+          "id": "d5aee02aed5384cd6b7b",
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": 19,
+          "positionCourse": 2,
+          "result": 6608.0,
+          "sectionsResults": {
+            "Inglese": 708.0,
+            "Matematica": 3900.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 500.0
+          }
+        },
+        {
+          "birthDate": "2003-02-08",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 26,
+          "id": "3cfaa78d463a5f0e13a7",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 25,
+          "positionCourse": 3,
+          "result": 6288.0,
+          "sectionsResults": {
+            "Inglese": 833.0,
+            "Matematica": 3705.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 250.0
+          }
+        },
+        {
+          "birthDate": "2003-07-17",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "englishCorrectAnswers": 26,
+          "id": "2eff8778ec77584e381d",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 29,
+          "positionCourse": 4,
+          "result": 6158.0,
+          "sectionsResults": {
+            "Inglese": 833.0,
+            "Matematica": 3900.0,
+            "Comprensione Verbale": 1125.0,
+            "Fisica": 300.0
+          }
+        }
+      ]
+    },
+    {
       "location": "MILANO LEONARDO",
       "sections": [
         "Inglese",
@@ -945,112 +1051,6 @@
       ]
     },
     {
-      "location": "MILANO BOVISA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA GESTIONALE",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-06-01",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 30,
-          "id": "7eca289130d8f53216b6",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": 13,
-          "positionCourse": 1,
-          "result": 6800.0,
-          "sectionsResults": {
-            "Inglese": 1000.0,
-            "Matematica": 4225.0,
-            "Comprensione Verbale": 825.0,
-            "Fisica": 750.0
-          }
-        },
-        {
-          "birthDate": "2003-05-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 23,
-          "id": "d5aee02aed5384cd6b7b",
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": 19,
-          "positionCourse": 2,
-          "result": 6608.0,
-          "sectionsResults": {
-            "Inglese": 708.0,
-            "Matematica": 3900.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 500.0
-          }
-        },
-        {
-          "birthDate": "2003-02-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 26,
-          "id": "3cfaa78d463a5f0e13a7",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": 25,
-          "positionCourse": 3,
-          "result": 6288.0,
-          "sectionsResults": {
-            "Inglese": 833.0,
-            "Matematica": 3705.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 250.0
-          }
-        },
-        {
-          "birthDate": "2003-07-17",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
-          "englishCorrectAnswers": 26,
-          "id": "2eff8778ec77584e381d",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": 29,
-          "positionCourse": 4,
-          "result": 6158.0,
-          "sectionsResults": {
-            "Inglese": 833.0,
-            "Matematica": 3900.0,
-            "Comprensione Verbale": 1125.0,
-            "Fisica": 300.0
-          }
-        }
-      ]
-    },
-    {
       "location": "MILANO LEONARDO",
       "sections": [
         "Inglese",
@@ -1074,52 +1074,6 @@
         "OFA Inglese"
       ],
       "rows": []
-    },
-    {
-      "location": "MILANO LEONARDO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
-      "headers": [
-        "Posizione",
-        "Matricola",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2003-05-17",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO (MILANO LEONARDO)",
-          "englishCorrectAnswers": 25,
-          "id": "85603abfcc32f80b969d",
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": 39,
-          "positionCourse": 1,
-          "result": 5980.0,
-          "sectionsResults": {
-            "Inglese": 800.0,
-            "Matematica": 3380.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 300.0
-          }
-        }
-      ]
     },
     {
       "location": "MILANO LEONARDO",
@@ -1329,6 +1283,52 @@
             "Matematica": 4160.0,
             "Comprensione Verbale": 900.0,
             "Fisica": 100.0
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO LEONARDO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+      "headers": [
+        "Posizione",
+        "Matricola",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2003-05-17",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO (MILANO LEONARDO)",
+          "englishCorrectAnswers": 25,
+          "id": "85603abfcc32f80b969d",
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": 39,
+          "positionCourse": 1,
+          "result": 5980.0,
+          "sectionsResults": {
+            "Inglese": 800.0,
+            "Matematica": 3380.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 300.0
           }
         }
       ]
@@ -2273,7 +2273,7 @@
     ]
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-29T21:11:24.1920765+02:00",
+  "lastUpdate": "2023-06-29T21:23:18.2111554+02:00",
   "phase": "Terza Graduatoria Di Seconda Fase",
   "rankingSummary": {
     "courseSummarized": [
@@ -2442,24 +2442,6 @@
         "title": "INGEGNERIA ENERGETICA"
       },
       {
-        "averageBirthYear": 2001.8,
-        "averageEnglishCorrectAnswers": 26.8,
-        "averageOfWhoPassed": 6489.25,
-        "averagePartialScores": {
-          "Inglese": 868.4,
-          "Matematica": 3965.0,
-          "Comprensione Verbale": 1095.0,
-          "Fisica": 470.0
-        },
-        "averageScoresOfAllStudents": 6398.4,
-        "howManyOfa": {
-          "ENG": 0,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA INFORMATICA"
-      },
-      {
         "averageBirthYear": 2003.0,
         "averageEnglishCorrectAnswers": 26.25,
         "averageOfWhoPassed": 6463.5,
@@ -2478,6 +2460,24 @@
         "title": "INGEGNERIA GESTIONALE"
       },
       {
+        "averageBirthYear": 2001.8,
+        "averageEnglishCorrectAnswers": 26.8,
+        "averageOfWhoPassed": 6489.25,
+        "averagePartialScores": {
+          "Inglese": 868.4,
+          "Matematica": 3965.0,
+          "Comprensione Verbale": 1095.0,
+          "Fisica": 470.0
+        },
+        "averageScoresOfAllStudents": 6398.4,
+        "howManyOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA INFORMATICA"
+      },
+      {
         "averageBirthYear": null,
         "averageEnglishCorrectAnswers": null,
         "averageOfWhoPassed": null,
@@ -2486,24 +2486,6 @@
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "title": "INGEGNERIA INFORMATICA ONLINE"
-      },
-      {
-        "averageBirthYear": 2003.0,
-        "averageEnglishCorrectAnswers": 25.0,
-        "averageOfWhoPassed": 5980.0,
-        "averagePartialScores": {
-          "Inglese": 800.0,
-          "Matematica": 3380.0,
-          "Comprensione Verbale": 1500.0,
-          "Fisica": 300.0
-        },
-        "averageScoresOfAllStudents": 5980.0,
-        "howManyOfa": {
-          "ENG": 0,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
       },
       {
         "averageBirthYear": 2003.0,
@@ -2540,6 +2522,24 @@
         },
         "location": "MILANO BOVISA",
         "title": "INGEGNERIA MECCANICA"
+      },
+      {
+        "averageBirthYear": 2003.0,
+        "averageEnglishCorrectAnswers": 25.0,
+        "averageOfWhoPassed": 5980.0,
+        "averagePartialScores": {
+          "Inglese": 800.0,
+          "Matematica": 3380.0,
+          "Comprensione Verbale": 1500.0,
+          "Fisica": 300.0
+        },
+        "averageScoresOfAllStudents": 5980.0,
+        "howManyOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
       },
       {
         "averageBirthYear": null,
@@ -2645,7 +2645,7 @@
   "school": "Ingegneria",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20103_355c_html/2022_20103_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20103_355c_html\\2022_20103_generale.html"
   },
   "year": 2022
 }
