@@ -16,6 +16,32 @@ public class CourseTableStats
     public string? Location;
     public string? Title;
 
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = AverageBirthYear?.GetHashCode() ?? 0;
+        i ^= AverageEnglishCorrectAnswers?.GetHashCode() ?? 0;
+        i ^= AverageOfWhoPassed?.GetHashCode() ?? 0;
+        i ^= AverageScoresOfAllStudents?.GetHashCode() ?? 0;
+        i ^= Location?.GetHashCode() ?? 0;
+        i ^= Title?.GetHashCode() ?? 0;
+
+        if (AverageOfa != null)
+            foreach (var variable in AverageOfa)
+            {
+                i ^= variable.Key.GetHashCode();
+                i ^= variable.Value.GetHashCode();
+            }
+
+        if (AveragePartialScores != null)
+            foreach (var variable in AveragePartialScores)
+            {
+                i ^= variable.Key.GetHashCode();
+                i ^= variable.Value.GetHashCode();
+            }
+
+        return i;
+    }
+
     public static CourseTableStats From(CourseTable courseTable)
     {
         var stats = new CourseTableStats

@@ -13,6 +13,20 @@ public class RankingSummary
     public int? HowManyStudents;
     public Dictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
 
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = (HowManyStudents ?? 0) ^ (HowManyCanEnroll ?? 0);
+        if (CourseSummarized != null)
+            foreach (var variable in CourseSummarized)
+                i ^= variable.GetHashWithoutLastUpdate();
+
+        if (ResultsSummarized != null)
+            foreach (var variable in ResultsSummarized)
+                i ^= variable.Key ^ variable.Value;
+
+        return i;
+    }
+
     public static RankingSummary From(Ranking ranking)
     {
         var byMeritRows = ranking.ByMerit?.Rows;

@@ -64,8 +64,35 @@ public class StatsJson
 
     private void WriteToFile(string outFolder)
     {
-        var mainJsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
-        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
-        File.WriteAllText(mainJsonPath, mainJsonString);
+        var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
+
+        if (ExitIfThereIsntAnUpdate(jsonPath)) return;
+
+        var jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+        File.WriteAllText(jsonPath, jsonString);
+    }
+
+    private bool ExitIfThereIsntAnUpdate(string jsonPath)
+    {
+        if (!File.Exists(jsonPath)) return false;
+
+        var read = File.ReadAllText(jsonPath);
+        var jsonRead = JsonConvert.DeserializeObject<StatsJson>(read);
+        var hashRead = jsonRead?.GetHashWithoutLastUpdate();
+        var hashThis = GetHashWithoutLastUpdate();
+
+        return hashRead == hashThis;
+    }
+
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = 0;
+        foreach (var variable in Stats)
+        {
+            var i2 = variable.Key ^ variable.Value.GetHashWithoutLastUpdate();
+            i ^= i2;
+        }
+
+        return i;
     }
 }

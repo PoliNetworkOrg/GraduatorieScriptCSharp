@@ -18,4 +18,13 @@ public class StatsSingleCourseJson
             Stats = ranking.RankingSummary
         };
     }
+
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = 0;
+        i ^= SingleCourseJson?.GetHashWithoutLastUpdate() ?? 0;
+        i ^= Stats?.GetHashWithoutLastUpdate() ?? 0;
+
+        return i;
+    }
 }
