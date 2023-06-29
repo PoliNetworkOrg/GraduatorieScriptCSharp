@@ -7,17 +7,16 @@ namespace GraduatorieScript.Objects.Tables.Course;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class CourseTableStats
 {
+    private const int Decimals = 5;
     public double? AverageBirthYear;
     public double? AverageEnglishCorrectAnswers;
-    public Dictionary<string, int>? HowManyOfa;
     public decimal? AverageOfWhoPassed;
     public Dictionary<string, decimal>? AveragePartialScores;
     public decimal? AverageScoresOfAllStudents;
+    public Dictionary<string, int>? HowManyOfa;
     public string? Location;
     public string? Title;
 
-    private const int Decimals = 5;
-    
     public int GetHashWithoutLastUpdate()
     {
         var i = AverageBirthYear?.GetHashCode() ?? 0;
@@ -67,8 +66,8 @@ public class CourseTableStats
         stats.AverageOfWhoPassed = passedTestResults.Count > 0 ? MathRound(passedTestResults.Average()) : null;
 
         var birthYears = courseTableRows.Select(x => x.BirthDate?.Year).ToList();
-    
-        stats.AverageBirthYear = birthYears.Count > 0 ?  MathRound(birthYears.Average()) : null;
+
+        stats.AverageBirthYear = birthYears.Count > 0 ? MathRound(birthYears.Average()) : null;
 
         var engCorrAnswers = courseTableRows.Select(x => x.EnglishCorrectAnswers).ToList();
         stats.AverageEnglishCorrectAnswers =
@@ -84,7 +83,7 @@ public class CourseTableStats
     {
         return average == null ? null : Math.Round(average.Value, Decimals);
     }
-    
+
     private static double? MathRound(double? average)
     {
         return average == null ? null : Math.Round(average.Value, Decimals);
