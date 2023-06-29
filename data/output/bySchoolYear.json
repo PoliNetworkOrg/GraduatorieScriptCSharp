@@ -1,5 +1,118 @@
 {
   "schools": {
+    "Ingegneria": {
+      "2020": [
+        {
+          "basePath": "Ingegneria/2020/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Ingegneria",
+          "year": 2020
+        },
+        {
+          "basePath": "Ingegneria/2020/",
+          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2020
+        },
+        {
+          "basePath": "Ingegneria/2020/",
+          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Seconda Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2020
+        },
+        {
+          "basePath": "Ingegneria/2020/",
+          "link": "Terza_Fase.json",
+          "name": "Terza Fase",
+          "school": "Ingegneria",
+          "year": 2020
+        },
+        {
+          "basePath": "Ingegneria/2020/",
+          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Terza Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2020
+        }
+      ],
+      "2021": [
+        {
+          "basePath": "Ingegneria/2021/",
+          "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2021
+        },
+        {
+          "basePath": "Ingegneria/2021/",
+          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2021
+        },
+        {
+          "basePath": "Ingegneria/2021/",
+          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Seconda Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2021
+        },
+        {
+          "basePath": "Ingegneria/2021/",
+          "link": "Terza_Fase.json",
+          "name": "Terza Fase",
+          "school": "Ingegneria",
+          "year": 2021
+        },
+        {
+          "basePath": "Ingegneria/2021/",
+          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Terza Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2021
+        }
+      ],
+      "2022": [
+        {
+          "basePath": "Ingegneria/2022/",
+          "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2022
+        },
+        {
+          "basePath": "Ingegneria/2022/",
+          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2022
+        },
+        {
+          "basePath": "Ingegneria/2022/",
+          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Seconda Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2022
+        },
+        {
+          "basePath": "Ingegneria/2022/",
+          "link": "Terza_Fase.json",
+          "name": "Terza Fase",
+          "school": "Ingegneria",
+          "year": 2022
+        },
+        {
+          "basePath": "Ingegneria/2022/",
+          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+          "name": "Terza Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2022
+        }
+      ]
+    },
     "Urbanistica": {
       "2020": [
         {
@@ -68,107 +181,6 @@
           "name": "Standard",
           "school": "Urbanistica",
           "year": 2022
-        }
-      ]
-    },
-    "Design": {
-      "2020": [
-        {
-          "basePath": "Design/2020/",
-          "link": "Anticipato.json",
-          "name": "Anticipato",
-          "school": "Design",
-          "year": 2020
-        },
-        {
-          "basePath": "Design/2020/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Design",
-          "year": 2020
-        },
-        {
-          "basePath": "Design/2020/",
-          "link": "Ripescaggio.json",
-          "name": "Ripescaggio",
-          "school": "Design",
-          "year": 2020
-        },
-        {
-          "basePath": "Design/2020/",
-          "link": "Standard.json",
-          "name": "Standard",
-          "school": "Design",
-          "year": 2020
-        }
-      ],
-      "2021": [
-        {
-          "basePath": "Design/2021/",
-          "link": "Anticipato.json",
-          "name": "Anticipato",
-          "school": "Design",
-          "year": 2021
-        },
-        {
-          "basePath": "Design/2021/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Design",
-          "year": 2021
-        },
-        {
-          "basePath": "Design/2021/",
-          "link": "Ripescaggio.json",
-          "name": "Ripescaggio",
-          "school": "Design",
-          "year": 2021
-        },
-        {
-          "basePath": "Design/2021/",
-          "link": "Standard.json",
-          "name": "Standard",
-          "school": "Design",
-          "year": 2021
-        }
-      ],
-      "2022": [
-        {
-          "basePath": "Design/2022/",
-          "link": "Anticipato.json",
-          "name": "Anticipato",
-          "school": "Design",
-          "year": 2022
-        },
-        {
-          "basePath": "Design/2022/",
-          "link": "Extra-ue.json",
-          "name": "Extra-ue",
-          "school": "Design",
-          "year": 2022
-        },
-        {
-          "basePath": "Design/2022/",
-          "link": "Ripescaggio.json",
-          "name": "Ripescaggio",
-          "school": "Design",
-          "year": 2022
-        },
-        {
-          "basePath": "Design/2022/",
-          "link": "Standard.json",
-          "name": "Standard",
-          "school": "Design",
-          "year": 2022
-        }
-      ],
-      "2023": [
-        {
-          "basePath": "Design/2023/",
-          "link": "Anticipato.json",
-          "name": "Anticipato",
-          "school": "Design",
-          "year": 2023
         }
       ]
     },
@@ -285,116 +297,104 @@
         }
       ]
     },
-    "Ingegneria": {
+    "Design": {
       "2020": [
         {
-          "basePath": "Ingegneria/2020/",
+          "basePath": "Design/2020/",
+          "link": "Anticipato.json",
+          "name": "Anticipato",
+          "school": "Design",
+          "year": 2020
+        },
+        {
+          "basePath": "Design/2020/",
           "link": "Extra-ue.json",
           "name": "Extra-ue",
-          "school": "Ingegneria",
+          "school": "Design",
           "year": 2020
         },
         {
-          "basePath": "Ingegneria/2020/",
-          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Prima Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2020/",
+          "link": "Ripescaggio.json",
+          "name": "Ripescaggio",
+          "school": "Design",
           "year": 2020
         },
         {
-          "basePath": "Ingegneria/2020/",
-          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Seconda Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
-          "year": 2020
-        },
-        {
-          "basePath": "Ingegneria/2020/",
-          "link": "Terza_Fase.json",
-          "name": "Terza Fase",
-          "school": "Ingegneria",
-          "year": 2020
-        },
-        {
-          "basePath": "Ingegneria/2020/",
-          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Terza Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2020/",
+          "link": "Standard.json",
+          "name": "Standard",
+          "school": "Design",
           "year": 2020
         }
       ],
       "2021": [
         {
-          "basePath": "Ingegneria/2021/",
-          "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2021/",
+          "link": "Anticipato.json",
+          "name": "Anticipato",
+          "school": "Design",
           "year": 2021
         },
         {
-          "basePath": "Ingegneria/2021/",
-          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Prima Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2021/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Design",
           "year": 2021
         },
         {
-          "basePath": "Ingegneria/2021/",
-          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Seconda Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2021/",
+          "link": "Ripescaggio.json",
+          "name": "Ripescaggio",
+          "school": "Design",
           "year": 2021
         },
         {
-          "basePath": "Ingegneria/2021/",
-          "link": "Terza_Fase.json",
-          "name": "Terza Fase",
-          "school": "Ingegneria",
-          "year": 2021
-        },
-        {
-          "basePath": "Ingegneria/2021/",
-          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Terza Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2021/",
+          "link": "Standard.json",
+          "name": "Standard",
+          "school": "Design",
           "year": 2021
         }
       ],
       "2022": [
         {
-          "basePath": "Ingegneria/2022/",
-          "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2022/",
+          "link": "Anticipato.json",
+          "name": "Anticipato",
+          "school": "Design",
           "year": 2022
         },
         {
-          "basePath": "Ingegneria/2022/",
-          "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Prima Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2022/",
+          "link": "Extra-ue.json",
+          "name": "Extra-ue",
+          "school": "Design",
           "year": 2022
         },
         {
-          "basePath": "Ingegneria/2022/",
-          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Seconda Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2022/",
+          "link": "Ripescaggio.json",
+          "name": "Ripescaggio",
+          "school": "Design",
           "year": 2022
         },
         {
-          "basePath": "Ingegneria/2022/",
-          "link": "Terza_Fase.json",
-          "name": "Terza Fase",
-          "school": "Ingegneria",
+          "basePath": "Design/2022/",
+          "link": "Standard.json",
+          "name": "Standard",
+          "school": "Design",
           "year": 2022
-        },
+        }
+      ],
+      "2023": [
         {
-          "basePath": "Ingegneria/2022/",
-          "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-          "name": "Terza Graduatoria Di Seconda Fase",
-          "school": "Ingegneria",
-          "year": 2022
+          "basePath": "Design/2023/",
+          "link": "Anticipato.json",
+          "name": "Anticipato",
+          "school": "Design",
+          "year": 2023
         }
       ]
     }
