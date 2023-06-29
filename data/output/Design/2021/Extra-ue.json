@@ -675,6 +675,139 @@
         "Cultura Generale",
         "Inglese"
       ],
+      "title": "DESIGN DELLA COMUNICAZIONE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale",
+        "Inglese",
+        "Risposte Esatte Inglese",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2001-02-05",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 20,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 56.90,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 9.50,
+            "Comprensione Verbale": 4.00,
+            "Storia del Design, Storia dell'Arte": 8.50,
+            "Logica": 5.00,
+            "Cultura Generale": 7.00,
+            "Inglese": 17.50
+          }
+        },
+        {
+          "birthDate": "2001-12-15",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 50.71,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 4.00,
+            "Comprensione Verbale": 5.00,
+            "Storia del Design, Storia dell'Arte": 7.75,
+            "Logica": 2.50,
+            "Cultura Generale": 7.50,
+            "Inglese": 26.25
+          }
+        },
+        {
+          "birthDate": "2000-02-03",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 43.33,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 8.25,
+            "Comprensione Verbale": 1.25,
+            "Storia del Design, Storia dell'Arte": 8.75,
+            "Logica": 0.00,
+            "Cultura Generale": 3.75,
+            "Inglese": 25.00
+          }
+        },
+        {
+          "birthDate": "2003-01-06",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 28,
+          "id": null,
+          "ofa": {
+            "ENG": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 34.52,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 0.75,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 2.00,
+            "Logica": 4.75,
+            "Cultura Generale": 7.75,
+            "Inglese": 27.50
+          }
+        },
+        {
+          "birthDate": "1994-05-19",
+          "canEnroll": true,
+          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
+          "englishCorrectAnswers": 13,
+          "id": null,
+          "ofa": {
+            "ENG": true
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 27.38,
+          "sectionsResults": {
+            "Geometria e Rappresentazione": 4.50,
+            "Comprensione Verbale": -0.25,
+            "Storia del Design, Storia dell'Arte": 7.25,
+            "Logica": 0.50,
+            "Cultura Generale": 4.25,
+            "Inglese": 8.75
+          }
+        }
+      ]
+    },
+    {
+      "location": "MILANO BOVISA",
+      "sections": [
+        "Geometria e Rappresentazione",
+        "Comprensione Verbale",
+        "Storia del Design, Storia dell'Arte",
+        "Logica",
+        "Cultura Generale",
+        "Inglese"
+      ],
       "title": "DESIGN DEGLI INTERNI",
       "headers": [
         "Posizione",
@@ -1133,139 +1266,6 @@
           }
         }
       ]
-    },
-    {
-      "location": "MILANO BOVISA",
-      "sections": [
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale",
-        "Inglese"
-      ],
-      "title": "DESIGN DELLA COMUNICAZIONE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Geometria e Rappresentazione",
-        "Comprensione Verbale",
-        "Storia del Design, Storia dell'Arte",
-        "Logica",
-        "Cultura Generale",
-        "Inglese",
-        "Risposte Esatte Inglese",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2001-02-05",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 20,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 56.90,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 9.50,
-            "Comprensione Verbale": 4.00,
-            "Storia del Design, Storia dell'Arte": 8.50,
-            "Logica": 5.00,
-            "Cultura Generale": 7.00,
-            "Inglese": 17.50
-          }
-        },
-        {
-          "birthDate": "2001-12-15",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 50.71,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 4.00,
-            "Comprensione Verbale": 5.00,
-            "Storia del Design, Storia dell'Arte": 7.75,
-            "Logica": 2.50,
-            "Cultura Generale": 7.50,
-            "Inglese": 26.25
-          }
-        },
-        {
-          "birthDate": "2000-02-03",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 43.33,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 8.25,
-            "Comprensione Verbale": 1.25,
-            "Storia del Design, Storia dell'Arte": 8.75,
-            "Logica": 0.00,
-            "Cultura Generale": 3.75,
-            "Inglese": 25.00
-          }
-        },
-        {
-          "birthDate": "2003-01-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 28,
-          "id": null,
-          "ofa": {
-            "ENG": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 34.52,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 0.75,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 2.00,
-            "Logica": 4.75,
-            "Cultura Generale": 7.75,
-            "Inglese": 27.50
-          }
-        },
-        {
-          "birthDate": "1994-05-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
-          "englishCorrectAnswers": 13,
-          "id": null,
-          "ofa": {
-            "ENG": true
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 27.38,
-          "sectionsResults": {
-            "Geometria e Rappresentazione": 4.50,
-            "Comprensione Verbale": -0.25,
-            "Storia del Design, Storia dell'Arte": 7.25,
-            "Logica": 0.50,
-            "Cultura Generale": 4.25,
-            "Inglese": 8.75
-          }
-        }
-      ]
     }
   ],
   "byMerit": {
@@ -1281,7 +1281,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1295,7 +1295,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1309,7 +1309,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1323,7 +1323,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA MODA (MILANO BOVISA)",
+        "id": "31f80ced90ba615ad8f4",
         "ofa": {
           "ENG": false
         },
@@ -1337,7 +1337,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": true
         },
@@ -1351,7 +1351,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": true
         },
@@ -1365,7 +1365,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1379,7 +1379,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1393,7 +1393,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1407,7 +1407,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1421,7 +1421,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1435,7 +1435,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1449,7 +1449,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1463,7 +1463,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1477,7 +1477,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA MODA (MILANO BOVISA)",
+        "id": "31f80ced90ba615ad8f4",
         "ofa": {
           "ENG": true
         },
@@ -1491,7 +1491,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA MODA (MILANO BOVISA)",
+        "id": "31f80ced90ba615ad8f4",
         "ofa": {
           "ENG": false
         },
@@ -1505,7 +1505,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+        "id": "b9b1b500d560d629800f",
         "ofa": {
           "ENG": true
         },
@@ -1519,7 +1519,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1533,7 +1533,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1547,7 +1547,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA MODA (MILANO BOVISA)",
+        "id": "31f80ced90ba615ad8f4",
         "ofa": {
           "ENG": false
         },
@@ -1561,7 +1561,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1575,7 +1575,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1589,7 +1589,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1603,7 +1603,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": false
         },
@@ -1617,7 +1617,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+        "id": "b9b1b500d560d629800f",
         "ofa": {
           "ENG": false
         },
@@ -1631,7 +1631,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1645,7 +1645,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+        "id": "4306a43d2a98df3a6aa3",
         "ofa": {
           "ENG": true
         },
@@ -1659,7 +1659,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": true
         },
@@ -1673,7 +1673,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1687,7 +1687,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1701,7 +1701,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1715,7 +1715,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1729,7 +1729,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1743,7 +1743,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1757,7 +1757,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1771,7 +1771,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1785,7 +1785,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1799,7 +1799,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+        "id": "b9b1b500d560d629800f",
         "ofa": {
           "ENG": false
         },
@@ -1813,7 +1813,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA MODA (MILANO BOVISA)",
+        "id": "31f80ced90ba615ad8f4",
         "ofa": {
           "ENG": false
         },
@@ -1827,7 +1827,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1841,7 +1841,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1855,7 +1855,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1869,7 +1869,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1883,7 +1883,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1897,7 +1897,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": true
         },
@@ -1911,7 +1911,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1925,7 +1925,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": true
         },
@@ -1939,7 +1939,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+        "id": "b9b1b500d560d629800f",
         "ofa": {
           "ENG": false
         },
@@ -1953,7 +1953,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+        "id": "42c6b7baba86e27154e7",
         "ofa": {
           "ENG": false
         },
@@ -1967,7 +1967,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -1981,7 +1981,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": true
         },
@@ -1995,7 +1995,7 @@
         "canEnroll": true,
         "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
-        "id": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+        "id": "b9b1b500d560d629800f",
         "ofa": {
           "ENG": true
         },
@@ -2009,7 +2009,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": true
         },
@@ -2023,7 +2023,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": false
         },
@@ -2037,7 +2037,7 @@
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
-        "id": "Immatricolazione non consentita / Enrolment is not possible",
+        "id": "8553575841da9384fb46",
         "ofa": {
           "ENG": true
         },
@@ -2049,7 +2049,7 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-27T23:01:18.3153294+00:00",
+  "lastUpdate": "2023-06-29T13:01:48.9238656+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -2092,25 +2092,6 @@
         "title": "DESIGN DELLA MODA"
       },
       {
-        "averageBirthYear": 1999.7142857142858,
-        "averageEnglishCorrectAnswers": 23.857142857142858,
-        "averageOfa": {
-          "ENG": 7
-        },
-        "averageOfWhoPassed": 67.12,
-        "averagePartialScores": {
-          "Geometria e Rappresentazione": 5.9166666666666666666666666667,
-          "Comprensione Verbale": 1.6904761904761904761904761905,
-          "Storia del Design, Storia dell'Arte": 7.7619047619047619047619047619,
-          "Logica": 2.75,
-          "Cultura Generale": 10.988095238095238095238095238,
-          "Inglese": 22.50
-        },
-        "averageScoresOfAllStudents": 52.296666666666666666666666667,
-        "location": "MILANO BOVISA",
-        "title": "DESIGN DEGLI INTERNI"
-      },
-      {
         "averageBirthYear": 1999.8,
         "averageEnglishCorrectAnswers": 22.8,
         "averageOfa": {
@@ -2128,6 +2109,25 @@
         "averageScoresOfAllStudents": 42.568,
         "location": "MILANO BOVISA",
         "title": "DESIGN DELLA COMUNICAZIONE"
+      },
+      {
+        "averageBirthYear": 1999.7142857142858,
+        "averageEnglishCorrectAnswers": 23.857142857142858,
+        "averageOfa": {
+          "ENG": 7
+        },
+        "averageOfWhoPassed": 67.12,
+        "averagePartialScores": {
+          "Geometria e Rappresentazione": 5.9166666666666666666666666667,
+          "Comprensione Verbale": 1.6904761904761904761904761905,
+          "Storia del Design, Storia dell'Arte": 7.7619047619047619047619047619,
+          "Logica": 2.75,
+          "Cultura Generale": 10.988095238095238095238095238,
+          "Inglese": 22.50
+        },
+        "averageScoresOfAllStudents": 52.296666666666666666666666667,
+        "location": "MILANO BOVISA",
+        "title": "DESIGN DEGLI INTERNI"
       }
     ],
     "howManyCanEnroll": 40,
