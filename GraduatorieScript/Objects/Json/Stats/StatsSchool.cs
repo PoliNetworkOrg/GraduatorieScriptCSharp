@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects.Json;
+namespace GraduatorieScript.Objects.Json.Stats;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -13,8 +13,6 @@ public class StatsSchool
     public int GetHashWithoutLastUpdate()
     {
         var i = NumStudents ?? 0;
-        foreach (var VARIABLE in List) i ^= VARIABLE.GetHashWithoutLastUpdate();
-
-        return i;
+        return List.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
     }
 }
