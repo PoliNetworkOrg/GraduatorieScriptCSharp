@@ -14,13 +14,10 @@ public class StatsYear
     public int GetHashWithoutLastUpdate()
     {
         var i = NumStudents ?? 0;
-        foreach (var variable in Schools)
-        {
-            var variableKey = (int)variable.Key;
-            var i2 = variableKey ^ variable.Value.GetHashWithoutLastUpdate();
-            i ^= i2;
-        }
 
-        return i;
+        var enumerable = from variable in Schools
+            let variableKey = (int)variable.Key
+            select variableKey ^ variable.Value.GetHashWithoutLastUpdate();
+        return enumerable.Aggregate(i, (current, i2) => current ^ i2);
     }
 }

@@ -17,13 +17,9 @@ public class RankingSummary
     {
         var i = (HowManyStudents ?? 0) ^ (HowManyCanEnroll ?? 0);
         if (CourseSummarized != null)
-            foreach (var variable in CourseSummarized)
-                i ^= variable.GetHashWithoutLastUpdate();
-
+            i = CourseSummarized.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
         if (ResultsSummarized != null)
-            foreach (var variable in ResultsSummarized)
-                i ^= variable.Key ^ variable.Value;
-
+            i = ResultsSummarized.Aggregate(i, (current, variable) => current ^ variable.Key ^ variable.Value);
         return i;
     }
 
