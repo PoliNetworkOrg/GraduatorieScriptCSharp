@@ -53,10 +53,12 @@ public class Ranking
 
     public SingleCourseJson ToSingleCourseJson()
     {
+        string? schoolString = this.School == null ? null :Enum.GetName(typeof(SchoolEnum), this.School);
         return new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
-            Name = Phase
+            Name = Phase,
+            BasePath = schoolString + "/" + this.Year
         };
     }
 
