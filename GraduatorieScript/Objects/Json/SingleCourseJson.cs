@@ -9,11 +9,18 @@ public class SingleCourseJson
 {
     public string? Link;
     public string? Name;
+    public string? BasePath;
+
+    public SingleCourseJson()
+    {
+        
+    }
 
     public int GetHashWithoutLastUpdate()
     {
-        var hashWithoutLastUpdate = Link?.GetHashCode() ?? 0;
-        var hashCode = Name?.GetHashCode() ?? 0;
-        return hashWithoutLastUpdate ^ hashCode;
+        var hashWithoutLastUpdate = Link?.GetHashCode() ?? "Link".GetHashCode();
+        var hashCode = Name?.GetHashCode() ?? "Name".GetHashCode();
+        var basePathInt = BasePath?.GetHashCode() ?? "BasePath".GetHashCode();
+        return hashWithoutLastUpdate ^ hashCode ^ basePathInt;
     }
 }

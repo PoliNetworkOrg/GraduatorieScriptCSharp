@@ -33,7 +33,7 @@ public class StatsJson
         return statsJson;
     }
 
-    private static void GenerateSingleRanking(RankingsSet rankingsSet, Ranking ranking, StatsJson statsJson)
+    private static void GenerateSingleRanking(RankingsSet rankingsSet, Ranking.Ranking ranking, StatsJson statsJson)
     {
         if (ranking.Year == null) return;
         if (!statsJson.Stats.ContainsKey(ranking.Year.Value))

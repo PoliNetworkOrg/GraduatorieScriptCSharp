@@ -27,7 +27,7 @@ public class RankingSummary
         return i;
     }
 
-    public static RankingSummary From(Ranking ranking)
+    public static RankingSummary From(Ranking.Ranking ranking)
     {
         var byMeritRows = ranking.ByMerit?.Rows;
         var results = CalculateResultsScores(byMeritRows);
