@@ -2,12 +2,11 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Objects.Json.Stats;
-using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects.Ranking;
+namespace GraduatorieScript.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
