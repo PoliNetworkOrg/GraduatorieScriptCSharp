@@ -1,5 +1,4 @@
-﻿using GraduatorieScript.Data.Constants;
-using GraduatorieScript.Objects.RankingNS;
+﻿using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -9,6 +8,8 @@ namespace GraduatorieScript.Objects.Json.Stats;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class StatsJson
 {
+    private const string PathStats = "stats";
+
     public DateTime LastUpdate = DateTime.Now;
     public Dictionary<int, StatsYear> Stats = new();
 
@@ -73,8 +74,21 @@ public class StatsJson
 
     private void WriteToFile(string outFolder)
     {
-        var jsonPath = Path.Join(outFolder, Constants.StatsJsonFilename);
+        foreach (var variable in this.Stats)
+        {
+            WriteToFileYear(outFolder, variable);
+        }
+    }
 
+    private void WriteToFileYear(string outFolder, KeyValuePair<int, StatsYear> variable)
+    {
+        var statsPath = Path.Join(outFolder, PathStats);
+        if (!Directory.Exists(statsPath))
+        {
+            Directory.CreateDirectory(statsPath);
+        }
+
+        var jsonPath = Path.Join(statsPath, variable.Key + ".json");
         if (ExitIfThereIsntAnUpdate(jsonPath)) return;
 
         var jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
@@ -88,7 +102,7 @@ public class StatsJson
             if (!File.Exists(jsonPath)) return false;
 
             var read = File.ReadAllText(jsonPath);
-            var jsonRead = JsonConvert.DeserializeObject<StatsJson>(read);
+            var jsonRead = JsonConvert.DeserializeObject<StatsYear>(read);
             var hashRead = jsonRead?.GetHashWithoutLastUpdate();
             var hashThis = GetHashWithoutLastUpdate();
 
