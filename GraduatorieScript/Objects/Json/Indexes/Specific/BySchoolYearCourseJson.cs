@@ -62,31 +62,33 @@ public class BySchoolYearCourseJson : IndexJsonBase
         foreach (var courseName in coursesNames)
         {
             if (courseName == null) continue;
-            var singleCourseJsons = new List<SingleCourseJson>();
-            singleCourseJsons.AddRange(listCourses.Where(x => IsSimilar(yearGroup, x)));
+
+            var singleCourseJsons = SingleCourseJsonsGet(yearGroup, listCourses);
+
             dictionary[courseName] = singleCourseJsons;
         }
 
         return dictionary;
     }
 
-    private static bool IsSimilar(IGrouping<int?, Ranking> yearGroup, SingleCourseJson singleCourseJson)
-    {
-        foreach (var v1 in yearGroup)
-        {
-            if (v1.ByCourse == null) continue;
-            if (singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year)
-                return IsSimilar2(singleCourseJson, v1);
-        }
 
-        return false;
+    private static List<SingleCourseJson> SingleCourseJsonsGet(IGrouping<int?, Ranking> yearGroup, List<SingleCourseJson> listCourses)
+    {
+        var singleCourseJsons = new List<SingleCourseJson>();
+        var courseJsons = listCourses.Where(x => IsSimilar(yearGroup, x)).ToList();
+        singleCourseJsons.AddRange(courseJsons);
+        return singleCourseJsons;
     }
 
-    private static bool IsSimilar2(SingleCourseJson singleCourseJson,
-        Ranking v1)
+    private static bool IsSimilar(IEnumerable<Ranking> yearGroup, SingleCourseJson singleCourseJson)
     {
-        return v1.Phase == singleCourseJson.Name;
+        var enumerable = yearGroup.Where(v1 => v1.ByCourse != null);
+        bool Predicate(Ranking v1) => singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year && v1.Phase == singleCourseJson.Name;
+        return enumerable.Any(Predicate);
     }
+
+ 
+
 
 
     public static RankingsSet? Parse(string dataFolder)
