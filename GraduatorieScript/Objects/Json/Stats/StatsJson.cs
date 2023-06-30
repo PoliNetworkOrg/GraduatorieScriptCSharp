@@ -95,7 +95,7 @@ public class StatsJson
         File.WriteAllText(jsonPath, jsonString);
     }
 
-    private bool ExitIfThereIsntAnUpdate(string jsonPath, StatsYear variableValue)
+    private static bool ExitIfThereIsntAnUpdate(string jsonPath, StatsYear variableValue)
     {
         try
         {
