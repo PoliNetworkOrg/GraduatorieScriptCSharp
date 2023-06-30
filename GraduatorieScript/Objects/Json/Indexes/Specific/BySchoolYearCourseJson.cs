@@ -72,7 +72,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     private static List<SingleCourseJson> SingleCourseJsonsGet(IGrouping<int?, Ranking> yearGroup, List<SingleCourseJson> listCourses)
     {
         var singleCourseJsons = new List<SingleCourseJson>();
-        var courseJsons = listCourses.Where(x => IsSimilar(yearGroup, x));
+        var courseJsons = listCourses.Where(x => IsSimilar(yearGroup, x)).ToList();
         singleCourseJsons.AddRange(courseJsons);
         return singleCourseJsons;
     }
