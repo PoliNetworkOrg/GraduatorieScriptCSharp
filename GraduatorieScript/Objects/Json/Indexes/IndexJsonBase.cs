@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using GraduatorieScript.Data;
+﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;
@@ -63,7 +62,7 @@ public abstract class IndexJsonBase
         if (!File.Exists(path)) return false;
 
         var x = File.ReadAllText(path);
-      
+
         var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
