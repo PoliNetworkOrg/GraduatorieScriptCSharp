@@ -1,4 +1,6 @@
-﻿using GraduatorieScript.Objects.Json.Indexes.Specific;
+﻿using System.Globalization;
+using GraduatorieScript.Data;
+using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -14,7 +16,7 @@ public abstract class IndexJsonBase
     public void WriteToFile(string outFolder, string pathFile)
     {
         var mainJsonPath = Path.Join(outFolder, pathFile);
-        var mainJsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+        var mainJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
 
@@ -52,7 +54,7 @@ public abstract class IndexJsonBase
 
         if (ExitIfAlreadyExistsAndNotUpdated(ranking, path)) return;
 
-        var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
+        var rankingJsonString = JsonConvert.SerializeObject(ranking, Culture.JsonSerializerSettings);
         File.WriteAllText(path, rankingJsonString);
     }
 
@@ -61,7 +63,8 @@ public abstract class IndexJsonBase
         if (!File.Exists(path)) return false;
 
         var x = File.ReadAllText(path);
-        var j = JsonConvert.DeserializeObject<Ranking>(x);
+      
+        var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
         return hashThis == hashJ;
