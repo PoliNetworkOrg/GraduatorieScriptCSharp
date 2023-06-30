@@ -7,6 +7,7 @@ using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
+using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Objects.Tables.Merit;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
@@ -210,7 +211,9 @@ public static class Parser
                     Location = course.CourseLocation,
                     Sections = course.Sections,
                     Headers = course.Headers,
-                    Rows = courseStudents.OrderBy(s => s.PositionCourse).ToList()
+                    Rows = courseStudents.OrderBy(s => s.PositionCourse).ToList(),
+                    Year = year,
+                    Path = index.Url.Url
                 });
             }
 
@@ -261,7 +264,9 @@ public static class Parser
                     Location = course.CourseLocation,
                     Sections = course.Sections,
                     Headers = course.Headers,
-                    Rows = courseStudentsOrderByPositionCourse
+                    Rows = courseStudentsOrderByPositionCourse,
+                    Year = year,
+                    Path = index.Url.Url
                 });
             }
 

@@ -2,6 +2,7 @@ using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
+using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Transformer.ParserNS;
 using Newtonsoft.Json;
@@ -58,7 +59,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var listCourses = filenames.ToList();
         Dictionary<string, List<SingleCourseJson>> dictionary = new Dictionary<string, List<SingleCourseJson>>();
         List<string?> coursesNames = yearGroup.ToList().SelectMany(x => x.ByCourse ?? new List<CourseTable>())
-            .Select(x => x.Title).Where(x => !string.IsNullOrEmpty(x)).ToList();
+            .Select(x => x.Title).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
         foreach (var courseName in coursesNames)
         {
             if (courseName == null) continue;

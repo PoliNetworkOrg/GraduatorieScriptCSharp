@@ -9,6 +9,8 @@ public class MeritTable
 {
     public List<string>? Headers;
     public List<StudentResult>? Rows;
+    public int? Year;
+    public string? Path;
 
     public int GetHashWithoutLastUpdate()
     {

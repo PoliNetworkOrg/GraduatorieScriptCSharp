@@ -1,9 +1,8 @@
-﻿using GraduatorieScript.Objects.Tables.Course;
-using GraduatorieScript.Objects.Tables.Merit;
+﻿using GraduatorieScript.Objects.Tables.Merit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Objects.Tables;
+namespace GraduatorieScript.Objects.Tables.Course;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -16,5 +15,10 @@ public class CourseTable : MeritTable
     public CourseTableStats GetStats()
     {
         return CourseTableStats.From(this);
+    }
+
+    public CourseTable()
+    {
+        
     }
 }
