@@ -62,12 +62,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
         foreach (var courseName in coursesNames)
         {
             if (courseName == null) continue;
+
             var singleCourseJsons = SingleCourseJsonsGet(yearGroup, listCourses);
+
             dictionary[courseName] = singleCourseJsons;
         }
 
         return dictionary;
     }
+
 
     private static List<SingleCourseJson> SingleCourseJsonsGet(IGrouping<int?, Ranking> yearGroup, List<SingleCourseJson> listCourses)
     {
@@ -85,6 +88,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
  
+
 
 
     public static RankingsSet? Parse(string dataFolder)
