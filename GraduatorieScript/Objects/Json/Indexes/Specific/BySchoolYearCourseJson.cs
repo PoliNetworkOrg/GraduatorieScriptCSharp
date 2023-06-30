@@ -74,25 +74,20 @@ public class BySchoolYearCourseJson : IndexJsonBase
     {
         foreach (var v1 in yearGroup)
         {
-            if (v1.ByCourse != null)
-                foreach (var v2 in v1.ByCourse)
-                {
-                    if (singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year)
-                    {
-                        return IsSimilar2(v2,singleCourseJson, v1, yearGroup );
-                    }
-                }
+            if (v1.ByCourse == null) continue;
+            if (singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year)
+            {
+                return IsSimilar2(singleCourseJson, v1 );
+            }
         }
 
         return false;
     }
 
-    private static bool IsSimilar2(CourseTable v2, SingleCourseJson singleCourseJson, Ranking v1, IGrouping<int?, Ranking> yearGroup)
+    private static bool IsSimilar2(SingleCourseJson singleCourseJson, 
+        Ranking v1)
     {
-        ;
-
-
-        return false;
+        return v1.Phase == singleCourseJson.Name;
     }
 
 
