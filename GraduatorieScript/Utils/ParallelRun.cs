@@ -5,7 +5,7 @@ namespace GraduatorieScript.Utils;
 public static class ParallelRun
 {
     private const int MaxWithoutDebug = 50;
-    private static readonly int MaxWithDebug = System.Diagnostics.Debugger.IsAttached ? 1 : MaxWithoutDebug;
+    private static readonly int MaxWithDebug = Debugger.IsAttached ? 1 : MaxWithoutDebug;
     private static readonly int MaxCoreCount = Environment.ProcessorCount;
 
     public static void Run(Action[] toArray)
