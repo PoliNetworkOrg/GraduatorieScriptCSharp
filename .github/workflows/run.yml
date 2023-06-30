@@ -46,6 +46,10 @@ jobs:
       - name: Run (schedule)
         if: ${{ github.event_name == 'schedule' }}
         run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj
+      
+      - name: git pull
+        if: ${{ github.event_name == 'schedule' }}
+        run: git pull
 
       - name: Push generated files (schedule)
         if: ${{ github.event_name == 'schedule' }}
@@ -60,6 +64,10 @@ jobs:
       - name: Run (reparse)
         if: ${{ github.event_name != 'schedule' }}
         run: dotnet run --project ./GraduatorieScript/GraduatorieScript.csproj --reparse
+        
+      - name: git pull
+        if: ${{ github.event_name == 'schedule' }}
+        run: git pull
 
       - name: Push generated files
         uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
