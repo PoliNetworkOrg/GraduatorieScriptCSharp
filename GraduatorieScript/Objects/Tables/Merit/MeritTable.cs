@@ -8,7 +8,9 @@ namespace GraduatorieScript.Objects.Tables.Merit;
 public class MeritTable
 {
     public List<string>? Headers;
+    public string? Path;
     public List<StudentResult>? Rows;
+    public int? Year;
 
     public int GetHashWithoutLastUpdate()
     {
@@ -20,6 +22,9 @@ public class MeritTable
         if (Rows != null)
             foreach (var variable in Rows)
                 i ^= variable.GetHashWithoutLastUpdate();
+
+        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
+        i ^= Path?.GetHashCode() ?? "Path".GetHashCode();
         return i;
     }
 }

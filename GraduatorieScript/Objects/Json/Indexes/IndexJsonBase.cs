@@ -77,5 +77,6 @@ public abstract class IndexJsonBase
         //now let's write each single different index
         BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.PathCustom);
         ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
+        BySchoolYearCourseJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearCourseJson.PathCustom);
     }
 }
