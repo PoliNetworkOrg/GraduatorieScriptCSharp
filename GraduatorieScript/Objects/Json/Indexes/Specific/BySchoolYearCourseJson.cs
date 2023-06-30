@@ -1,7 +1,6 @@
 using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Transformer.ParserNS;
@@ -73,16 +72,27 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     private static bool IsSimilar(IGrouping<int?, Ranking> yearGroup, SingleCourseJson singleCourseJson)
     {
-        var x = yearGroup.SelectMany(x => x.ByCourse ?? new List<CourseTable>())
-            .Where(x =>
-            {
-                ;
-                return x.Title == singleCourseJson.Link;
-                
-            }).ToList();
+        foreach (var v1 in yearGroup)
+        {
+            if (v1.ByCourse != null)
+                foreach (var v2 in v1.ByCourse)
+                {
+                    if (singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year)
+                    {
+                        return IsSimilar2(v2,singleCourseJson, v1, yearGroup );
+                    }
+                }
+        }
 
+        return false;
+    }
+
+    private static bool IsSimilar2(CourseTable v2, SingleCourseJson singleCourseJson, Ranking v1, IGrouping<int?, Ranking> yearGroup)
+    {
         ;
-        return x.Any();
+
+
+        return false;
     }
 
 
