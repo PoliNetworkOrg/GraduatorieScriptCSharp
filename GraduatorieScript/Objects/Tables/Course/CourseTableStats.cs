@@ -15,8 +15,8 @@ public class CourseTableStats
     public decimal? AverageScoresOfAllStudents;
     public Dictionary<string, int>? HowManyOfa;
     public string? Location;
-    public string? Title;
     public decimal? MinScoreToEnroll;
+    public string? Title;
 
     public int GetHashWithoutLastUpdate()
     {
@@ -48,7 +48,7 @@ public class CourseTableStats
 
     private static double? GetYearBorn(StudentResult x)
     {
-        var birthDateMonth = (x.BirthDate?.Month / 12.0);
+        var birthDateMonth = x.BirthDate?.Month / 12.0;
         var birthDateYear = x.BirthDate?.Year;
         var dateMonth = birthDateYear + birthDateMonth;
         return dateMonth;
@@ -68,11 +68,12 @@ public class CourseTableStats
             return stats;
 
         var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll).ToList();
-        var minValueToEnroll = studentsWhoCanEnroll.Count > 0 ?  studentsWhoCanEnroll.Min(x => x.Result): (decimal?)null;
+        var minValueToEnroll =
+            studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : (decimal?)null;
         var resultsOfStudentsWhoCanEnroll = studentsWhoCanEnroll.Select(x => x.Result);
         var resultsOfAllStudents = courseTableRows.Select(x => x.Result);
         var yearBornStudents = courseTableRows.Select(GetYearBorn);
-        
+
         //fill stats field
         stats.AverageScoresOfAllStudents = AverageList(resultsOfAllStudents);
         stats.AverageOfWhoPassed = AverageList(resultsOfStudentsWhoCanEnroll);

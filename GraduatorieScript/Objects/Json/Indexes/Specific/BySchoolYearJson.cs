@@ -78,14 +78,9 @@ public class BySchoolYearJson : IndexJsonBase
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
         {
-            List<Action> actions = new List<Action>();
+            var actions = new List<Action>();
             foreach (var filename in year.Value)
-            {
-                actions.Add(() =>
-                {
-                    RankingAdd(school, year, outFolder, filename, rankings);
-                });
-            }
+                actions.Add(() => { RankingAdd(school, year, outFolder, filename, rankings); });
             Parallel.Invoke(actions.ToArray());
         }
 
@@ -104,11 +99,9 @@ public class BySchoolYearJson : IndexJsonBase
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
         var ranking = Parser.ParseJson<Ranking>(path);
         if (ranking != null)
-        {
-            lock(rankings)
+            lock (rankings)
             {
                 rankings.Add(ranking);
             }
-        }
     }
 }
