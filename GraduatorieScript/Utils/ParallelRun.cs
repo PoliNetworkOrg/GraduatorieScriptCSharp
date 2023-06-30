@@ -10,7 +10,7 @@ public static class ParallelRun
 
     public static void Run(Action[] toArray)
     {
-        var maxDegreeOfParallelism = Math.Min(MaxCoreCount, Math.Min(Max, MaxThreadCount));
+        var maxDegreeOfParallelism = Math.Max(Math.Min(MaxCoreCount, Math.Min(Max, MaxThreadCount)), 1);
         var parallelOptions = new ParallelOptions { MaxDegreeOfParallelism = maxDegreeOfParallelism };
         Parallel.Invoke(parallelOptions, toArray);
     }
