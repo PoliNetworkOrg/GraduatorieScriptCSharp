@@ -184,9 +184,9 @@ public class OldScraper
 
     public IEnumerable<string>? FindRankingsLink(IEnumerable<string?>? newsLink)
     {
-        if (newsLink == null) 
+        if (newsLink == null)
             return null;
-        
+
         var rankingsList = new HashSet<string>();
         var actions = newsLink
             .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); }))
