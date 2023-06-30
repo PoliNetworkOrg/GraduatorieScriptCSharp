@@ -22,6 +22,9 @@ public class MeritTable
         if (Rows != null)
             foreach (var variable in Rows)
                 i ^= variable.GetHashWithoutLastUpdate();
+
+        i ^= this.Year?.GetHashCode() ?? "Year".GetHashCode();
+        i ^= this.Path?.GetHashCode() ?? "Path".GetHashCode();
         return i;
     }
 }

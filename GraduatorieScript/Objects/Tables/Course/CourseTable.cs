@@ -19,6 +19,6 @@ public class CourseTable : MeritTable
 
     public CourseTable()
     {
-        
+        ;
     }
 }
