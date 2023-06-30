@@ -17,4 +17,25 @@ public class StudentResult
     public int? PositionCourse;
     public decimal Result;
     public Dictionary<string, decimal>? SectionsResults;
+
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = 0;
+        i ^= BirthDate.GetHashCode();
+        i ^= CanEnroll.GetHashCode();
+        i ^= CanEnrollInto?.GetHashCode() ?? "CanEnrollInto".GetHashCode();
+        i ^= EnglishCorrectAnswers.GetHashCode();
+        i ^= Id?.GetHashCode() ?? "Id".GetHashCode();
+        i ^= PositionAbsolute.GetHashCode();
+        i ^= PositionCourse.GetHashCode();
+        i ^= Result.GetHashCode();
+        if (Ofa != null)
+            foreach (var variable in Ofa)
+                i ^= variable.Key.GetHashCode() ^ variable.Value.GetHashCode();
+
+        if (SectionsResults != null)
+            foreach (var variable in SectionsResults)
+                i ^= variable.Key.GetHashCode() ^ variable.Value.GetHashCode();
+        return i;
+    }
 }

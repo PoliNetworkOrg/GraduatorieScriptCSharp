@@ -1,4 +1,5 @@
 ﻿using GraduatorieScript.Objects.Tables.Course;
+using GraduatorieScript.Objects.Tables.Merit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

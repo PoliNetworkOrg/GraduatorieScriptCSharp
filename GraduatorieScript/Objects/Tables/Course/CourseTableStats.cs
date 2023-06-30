@@ -15,6 +15,7 @@ public class CourseTableStats
     public decimal? AverageScoresOfAllStudents;
     public Dictionary<string, int>? HowManyOfa;
     public string? Location;
+    public decimal? MinScoreToEnroll;
     public string? Title;
 
     public int GetHashWithoutLastUpdate()
@@ -25,6 +26,7 @@ public class CourseTableStats
         i ^= AverageScoresOfAllStudents?.GetHashCode() ?? 0;
         i ^= Location?.GetHashCode() ?? 0;
         i ^= Title?.GetHashCode() ?? 0;
+        i ^= MinScoreToEnroll?.GetHashCode() ?? "MinScoreToEnroll".GetHashCode();
 
         if (HowManyOfa != null)
             foreach (var variable in HowManyOfa)
@@ -44,6 +46,14 @@ public class CourseTableStats
         return i;
     }
 
+    private static double? GetYearBorn(StudentResult x)
+    {
+        var birthDateMonth = x.BirthDate?.Month / 12.0;
+        var birthDateYear = x.BirthDate?.Year;
+        var dateMonth = birthDateYear + birthDateMonth;
+        return dateMonth;
+    }
+
     public static CourseTableStats From(CourseTable courseTable)
     {
         var stats = new CourseTableStats
@@ -57,16 +67,34 @@ public class CourseTableStats
         if (count == 0 || courseTableRows is null)
             return stats;
 
-        stats.AverageScoresOfAllStudents = AverageList(courseTableRows.Select(x => x.Result).ToList());
-        stats.AverageOfWhoPassed = AverageList(courseTableRows
-            .Where(x => x.CanEnroll)
-            .Select(x => x.Result)
-            .ToList());
-        stats.AverageBirthYear = AverageList(courseTableRows.Select(x => x.BirthDate?.Year).ToList());
+        var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll).ToList();
+        var minValueToEnroll =
+            studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : (decimal?)null;
+        var resultsOfStudentsWhoCanEnroll = studentsWhoCanEnroll.Select(x => x.Result);
+        var resultsOfAllStudents = courseTableRows.Select(x => x.Result);
+        var yearBornStudents = courseTableRows.Select(GetYearBorn);
+
+        //fill stats field
+        stats.AverageScoresOfAllStudents = AverageList(resultsOfAllStudents);
+        stats.AverageOfWhoPassed = AverageList(resultsOfStudentsWhoCanEnroll);
+        stats.AverageBirthYear = AverageList(yearBornStudents);
         stats.AverageEnglishCorrectAnswers = AverageList(courseTableRows.Select(x => x.EnglishCorrectAnswers).ToList());
         stats.AveragePartialScores = AveragePartialScoresCalculate(courseTableRows);
         stats.HowManyOfa = HowManyOfaCalculate(courseTableRows);
+        stats.MinScoreToEnroll = MathRound(minValueToEnroll);
         return stats;
+    }
+
+    private static double? AverageList(IEnumerable<double?> yearBornStudents)
+    {
+        var bornStudents = yearBornStudents.ToList();
+        return !bornStudents.Any() ? null : MathRound(bornStudents.Average());
+    }
+
+    private static decimal? AverageList(IEnumerable<decimal> testResults)
+    {
+        var enumerable = testResults.ToList();
+        return !enumerable.Any() ? null : MathRound(enumerable.Average());
     }
 
     private static double? AverageList(IReadOnlyCollection<int?> testResults)
