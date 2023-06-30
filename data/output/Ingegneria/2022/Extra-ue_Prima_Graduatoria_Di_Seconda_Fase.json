@@ -2303,7 +2303,7 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-29T19:51:43.1998377+00:00",
+  "lastUpdate": "2023-06-29T21:51:43.1998377+02:00",
   "phase": "Extra-ue Prima Graduatoria Di Seconda Fase",
   "rankingSummary": {
     "courseSummarized": [
@@ -2323,6 +2323,7 @@
           "TEST": 1
         },
         "location": "MILANO BOVISA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA AEROSPAZIALE"
       },
       {
@@ -2341,6 +2342,7 @@
           "TEST": 4
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA BIOMEDICA"
       },
       {
@@ -2359,6 +2361,7 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA CHIMICA"
       },
       {
@@ -2377,6 +2380,7 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA CIVILE"
       },
       {
@@ -2387,6 +2391,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
       },
       {
@@ -2405,6 +2410,7 @@
           "TEST": 1
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA DELL'AUTOMAZIONE"
       },
       {
@@ -2415,6 +2421,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
       },
       {
@@ -2433,6 +2440,7 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA ELETTRICA"
       },
       {
@@ -2451,6 +2459,7 @@
           "TEST": 1
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA ELETTRONICA"
       },
       {
@@ -2469,6 +2478,7 @@
           "TEST": 1
         },
         "location": "MILANO BOVISA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA ENERGETICA"
       },
       {
@@ -2487,6 +2497,7 @@
           "TEST": 2
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA FISICA"
       },
       {
@@ -2505,6 +2516,7 @@
           "TEST": 2
         },
         "location": "MILANO BOVISA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA GESTIONALE"
       },
       {
@@ -2523,6 +2535,7 @@
           "TEST": 11
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA INFORMATICA"
       },
       {
@@ -2541,6 +2554,7 @@
           "TEST": 1
         },
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA MATEMATICA"
       },
       {
@@ -2559,6 +2573,7 @@
           "TEST": 3
         },
         "location": "MILANO BOVISA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA MECCANICA"
       },
       {
@@ -2569,6 +2584,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
       },
       {
@@ -2579,6 +2595,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "CREMONA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA GESTIONALE"
       },
       {
@@ -2589,6 +2606,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "CREMONA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA INFORMATICA"
       },
       {
@@ -2599,6 +2617,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "LECCO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
       },
       {
@@ -2617,6 +2636,7 @@
           "TEST": 1
         },
         "location": "LECCO",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
       },
       {
@@ -2627,6 +2647,7 @@
         "averageScoresOfAllStudents": null,
         "howManyOfa": null,
         "location": "PIACENZA",
+        "minScoreToEnroll": null,
         "title": "INGEGNERIA MECCANICA"
       }
     ],
