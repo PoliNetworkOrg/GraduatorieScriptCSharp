@@ -6,6 +6,7 @@ using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables;
+using GraduatorieScript.Objects.Tables.Merit;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
 using Newtonsoft.Json;

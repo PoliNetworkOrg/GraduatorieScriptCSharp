@@ -41,14 +41,30 @@ public abstract class IndexJsonBase
                 var folder = Path.Join(outFolder, school.ToString(), year.ToString());
                 Directory.CreateDirectory(folder);
 
-                foreach (var ranking in yearGroup)
-                {
-                    var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
-                    var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
-                    File.WriteAllText(path, rankingJsonString);
-                }
+                foreach (var ranking in yearGroup) WriteSingleJsonRanking(folder, ranking);
             }
         }
+    }
+
+    private static void WriteSingleJsonRanking(string folder, Ranking ranking)
+    {
+        var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
+
+        if (ExitIfAlreadyExistsAndNotUpdated(ranking, path)) return;
+
+        var rankingJsonString = JsonConvert.SerializeObject(ranking, Formatting.Indented);
+        File.WriteAllText(path, rankingJsonString);
+    }
+
+    private static bool ExitIfAlreadyExistsAndNotUpdated(Ranking ranking, string path)
+    {
+        if (!File.Exists(path)) return false;
+
+        var x = File.ReadAllText(path);
+        var j = JsonConvert.DeserializeObject<Ranking>(x);
+        var hashThis = ranking.GetHashWithoutLastUpdate();
+        var hashJ = j?.GetHashWithoutLastUpdate();
+        return hashThis == hashJ;
     }
 
     public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder)

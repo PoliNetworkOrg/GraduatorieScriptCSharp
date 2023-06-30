@@ -11,6 +11,14 @@ public class RankingUrl
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
 
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = 0;
+        i ^= Url.GetHashCode();
+        i ^= PageEnum.GetHashCode();
+        return i;
+    }
+
     /// <summary>
     ///     It creates a RankingUrl instance starting from the url
     /// </summary>
