@@ -1,4 +1,5 @@
-﻿using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data;
+using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Main;
@@ -682,7 +683,7 @@ public static class Parser
         if (string.IsNullOrEmpty(fileContent))
             return default;
 
-        var obj = JsonConvert.DeserializeObject<T>(fileContent);
+        var obj = JsonConvert.DeserializeObject<T>(fileContent, Culture.JsonSerializerSettings);
         return obj;
     }
 }

@@ -1,4 +1,5 @@
-﻿using GraduatorieScript.Objects.RankingNS;
+﻿using GraduatorieScript.Data;
+using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -85,7 +86,7 @@ public class StatsJson
         var jsonPath = Path.Join(statsPath, variable.Key + ".json");
         if (ExitIfThereIsntAnUpdate(jsonPath, variable.Value)) return;
 
-        var jsonString = JsonConvert.SerializeObject(variable.Value, Formatting.Indented);
+        var jsonString = JsonConvert.SerializeObject(variable.Value, Culture.JsonSerializerSettings);
         File.WriteAllText(jsonPath, jsonString);
     }
 
@@ -96,7 +97,7 @@ public class StatsJson
             if (!File.Exists(jsonPath)) return false;
 
             var read = File.ReadAllText(jsonPath);
-            var jsonRead = JsonConvert.DeserializeObject<StatsYear>(read);
+            var jsonRead = JsonConvert.DeserializeObject<StatsYear>(read, Culture.JsonSerializerSettings);
             var hashRead = jsonRead?.GetHashWithoutLastUpdate();
             var hashThis = variableValue.GetHashWithoutLastUpdate();
 
