@@ -2,6 +2,7 @@
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;
+using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer;
 using GraduatorieScript.Utils.Web;
@@ -17,6 +18,8 @@ public static class Program
 
         var argsConfig = GetArgsConfig(args);
         Console.WriteLine($"[INFO] dataFolder: {argsConfig.DataFolder}");
+
+        Console.WriteLine($"[INFO] thread max count: {ParallelRun.MaxDegreeOfParallelism}");
 
         //find links from web
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
