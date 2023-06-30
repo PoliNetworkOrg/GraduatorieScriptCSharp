@@ -89,13 +89,13 @@ public class StatsJson
         }
 
         var jsonPath = Path.Join(statsPath, variable.Key + ".json");
-        if (ExitIfThereIsntAnUpdate(jsonPath)) return;
+        if (ExitIfThereIsntAnUpdate(jsonPath, variable.Value)) return;
 
-        var jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
+        var jsonString = JsonConvert.SerializeObject(variable.Value, Formatting.Indented);
         File.WriteAllText(jsonPath, jsonString);
     }
 
-    private bool ExitIfThereIsntAnUpdate(string jsonPath)
+    private bool ExitIfThereIsntAnUpdate(string jsonPath, StatsYear variableValue)
     {
         try
         {
@@ -104,7 +104,7 @@ public class StatsJson
             var read = File.ReadAllText(jsonPath);
             var jsonRead = JsonConvert.DeserializeObject<StatsYear>(read);
             var hashRead = jsonRead?.GetHashWithoutLastUpdate();
-            var hashThis = GetHashWithoutLastUpdate();
+            var hashThis = variableValue.GetHashWithoutLastUpdate();
 
             return hashRead == hashThis;
         }
