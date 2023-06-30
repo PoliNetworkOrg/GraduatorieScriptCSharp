@@ -4,7 +4,7 @@ using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
-using GraduatorieScript.Utils.Transformer;
+using GraduatorieScript.Utils.Transformer.ParserNS;
 using GraduatorieScript.Utils.Web;
 using SampleNuGet.Utils;
 

@@ -2,7 +2,7 @@ using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils;
-using GraduatorieScript.Utils.Transformer;
+using GraduatorieScript.Utils.Transformer.ParserNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
