@@ -2651,6 +2651,91 @@
       ]
     },
     {
+      "location": "LECCO",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2000-08-16",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+          "englishCorrectAnswers": 20,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 6637.0,
+          "sectionsResults": {
+            "Inglese": 592.0,
+            "Matematica": 4420.0,
+            "Comprensione Verbale": 825.0,
+            "Fisica": 800.0
+          }
+        },
+        {
+          "birthDate": "2002-05-30",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 6158.0,
+          "sectionsResults": {
+            "Inglese": 783.0,
+            "Matematica": 3575.0,
+            "Comprensione Verbale": 1200.0,
+            "Fisica": 600.0
+          }
+        },
+        {
+          "birthDate": "2002-06-10",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+          "englishCorrectAnswers": 22,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 5950.0,
+          "sectionsResults": {
+            "Inglese": 675.0,
+            "Matematica": 4225.0,
+            "Comprensione Verbale": 750.0,
+            "Fisica": 300.0
+          }
+        }
+      ]
+    },
+    {
       "location": "MILANO LEONARDO",
       "sections": [
         "Inglese",
@@ -4131,6 +4216,171 @@
       ]
     },
     {
+      "location": "CREMONA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA GESTIONALE",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2001-03-23",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 6800.0,
+          "sectionsResults": {
+            "Inglese": 750.0,
+            "Matematica": 4550.0,
+            "Comprensione Verbale": 750.0,
+            "Fisica": 750.0
+          }
+        },
+        {
+          "birthDate": "2002-05-15",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 6420.0,
+          "sectionsResults": {
+            "Inglese": 875.0,
+            "Matematica": 4420.0,
+            "Comprensione Verbale": 825.0,
+            "Fisica": 300.0
+          }
+        },
+        {
+          "birthDate": "2002-01-30",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 6373.0,
+          "sectionsResults": {
+            "Inglese": 833.0,
+            "Matematica": 4290.0,
+            "Comprensione Verbale": 750.0,
+            "Fisica": 500.0
+          }
+        },
+        {
+          "birthDate": "2002-03-31",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 26,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 4,
+          "result": 6281.0,
+          "sectionsResults": {
+            "Inglese": 833.0,
+            "Matematica": 3510.0,
+            "Comprensione Verbale": 1163.0,
+            "Fisica": 775.0
+          }
+        },
+        {
+          "birthDate": "2002-05-25",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 24,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 5,
+          "result": 6180.0,
+          "sectionsResults": {
+            "Inglese": 750.0,
+            "Matematica": 4030.0,
+            "Comprensione Verbale": 1200.0,
+            "Fisica": 200.0
+          }
+        },
+        {
+          "birthDate": "2002-03-18",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 6,
+          "result": 6152.0,
+          "sectionsResults": {
+            "Inglese": 892.0,
+            "Matematica": 3510.0,
+            "Comprensione Verbale": 1200.0,
+            "Fisica": 550.0
+          }
+        },
+        {
+          "birthDate": "2003-09-03",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA GESTIONALE",
+          "englishCorrectAnswers": 21,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 7,
+          "result": 6002.0,
+          "sectionsResults": {
+            "Inglese": 642.0,
+            "Matematica": 3510.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 350.0
+          }
+        }
+      ]
+    },
+    {
       "location": "MILANO BOVISA",
       "sections": [
         "Inglese",
@@ -5311,6 +5561,71 @@
             "Matematica": 4160.0,
             "Comprensione Verbale": 150.0,
             "Fisica": 800.0
+          }
+        }
+      ]
+    },
+    {
+      "location": "CREMONA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA INFORMATICA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2002-08-29",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "englishCorrectAnswers": 21,
+          "id": null,
+          "ofa": {
+            "ENG": true,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 6088.0,
+          "sectionsResults": {
+            "Inglese": 658.0,
+            "Matematica": 3380.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 550.0
+          }
+        },
+        {
+          "birthDate": "2002-09-03",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA INFORMATICA",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 5975.0,
+          "sectionsResults": {
+            "Inglese": 875.0,
+            "Matematica": 4225.0,
+            "Comprensione Verbale": 375.0,
+            "Fisica": 500.0
           }
         }
       ]
@@ -7036,6 +7351,91 @@
       ]
     },
     {
+      "location": "PIACENZA",
+      "sections": [
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica"
+      ],
+      "title": "INGEGNERIA MECCANICA",
+      "headers": [
+        "Posizione",
+        "Data di Nascita",
+        "Immat. consentita",
+        "Voto Test",
+        "Inglese",
+        "Matematica",
+        "Comprensione Verbale",
+        "Fisica",
+        "Risposte Esatte Inglese",
+        "OFA Test",
+        "OFA Inglese"
+      ],
+      "rows": [
+        {
+          "birthDate": "2002-05-21",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MECCANICA",
+          "englishCorrectAnswers": 27,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 1,
+          "result": 6185.0,
+          "sectionsResults": {
+            "Inglese": 875.0,
+            "Matematica": 3185.0,
+            "Comprensione Verbale": 1125.0,
+            "Fisica": 1000.0
+          }
+        },
+        {
+          "birthDate": "2002-03-13",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MECCANICA",
+          "englishCorrectAnswers": 25,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 2,
+          "result": 6132.0,
+          "sectionsResults": {
+            "Inglese": 792.0,
+            "Matematica": 3640.0,
+            "Comprensione Verbale": 1200.0,
+            "Fisica": 500.0
+          }
+        },
+        {
+          "birthDate": "2002-11-06",
+          "canEnroll": true,
+          "canEnrollInto": "INGEGNERIA MECCANICA",
+          "englishCorrectAnswers": 29,
+          "id": null,
+          "ofa": {
+            "ENG": false,
+            "TEST": false
+          },
+          "positionAbsolute": null,
+          "positionCourse": 3,
+          "result": 6003.0,
+          "sectionsResults": {
+            "Inglese": 958.0,
+            "Matematica": 2795.0,
+            "Comprensione Verbale": 1500.0,
+            "Fisica": 750.0
+          }
+        }
+      ]
+    },
+    {
       "location": "MILANO LEONARDO",
       "sections": [
         "Inglese",
@@ -7176,406 +7576,6 @@
             "Matematica": 3250.0,
             "Comprensione Verbale": 1500.0,
             "Fisica": 550.0
-          }
-        }
-      ]
-    },
-    {
-      "location": "CREMONA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA GESTIONALE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2001-03-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 6800.0,
-          "sectionsResults": {
-            "Inglese": 750.0,
-            "Matematica": 4550.0,
-            "Comprensione Verbale": 750.0,
-            "Fisica": 750.0
-          }
-        },
-        {
-          "birthDate": "2002-05-15",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 6420.0,
-          "sectionsResults": {
-            "Inglese": 875.0,
-            "Matematica": 4420.0,
-            "Comprensione Verbale": 825.0,
-            "Fisica": 300.0
-          }
-        },
-        {
-          "birthDate": "2002-01-30",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 6373.0,
-          "sectionsResults": {
-            "Inglese": 833.0,
-            "Matematica": 4290.0,
-            "Comprensione Verbale": 750.0,
-            "Fisica": 500.0
-          }
-        },
-        {
-          "birthDate": "2002-03-31",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 26,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 4,
-          "result": 6281.0,
-          "sectionsResults": {
-            "Inglese": 833.0,
-            "Matematica": 3510.0,
-            "Comprensione Verbale": 1163.0,
-            "Fisica": 775.0
-          }
-        },
-        {
-          "birthDate": "2002-05-25",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 5,
-          "result": 6180.0,
-          "sectionsResults": {
-            "Inglese": 750.0,
-            "Matematica": 4030.0,
-            "Comprensione Verbale": 1200.0,
-            "Fisica": 200.0
-          }
-        },
-        {
-          "birthDate": "2002-03-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 6,
-          "result": 6152.0,
-          "sectionsResults": {
-            "Inglese": 892.0,
-            "Matematica": 3510.0,
-            "Comprensione Verbale": 1200.0,
-            "Fisica": 550.0
-          }
-        },
-        {
-          "birthDate": "2003-09-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE",
-          "englishCorrectAnswers": 21,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 7,
-          "result": 6002.0,
-          "sectionsResults": {
-            "Inglese": 642.0,
-            "Matematica": 3510.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 350.0
-          }
-        }
-      ]
-    },
-    {
-      "location": "CREMONA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA INFORMATICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2002-08-29",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
-          "englishCorrectAnswers": 21,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 6088.0,
-          "sectionsResults": {
-            "Inglese": 658.0,
-            "Matematica": 3380.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 550.0
-          }
-        },
-        {
-          "birthDate": "2002-09-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 5975.0,
-          "sectionsResults": {
-            "Inglese": 875.0,
-            "Matematica": 4225.0,
-            "Comprensione Verbale": 375.0,
-            "Fisica": 500.0
-          }
-        }
-      ]
-    },
-    {
-      "location": "LECCO",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2000-08-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-          "englishCorrectAnswers": 20,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 6637.0,
-          "sectionsResults": {
-            "Inglese": 592.0,
-            "Matematica": 4420.0,
-            "Comprensione Verbale": 825.0,
-            "Fisica": 800.0
-          }
-        },
-        {
-          "birthDate": "2002-05-30",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-          "englishCorrectAnswers": 24,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 6158.0,
-          "sectionsResults": {
-            "Inglese": 783.0,
-            "Matematica": 3575.0,
-            "Comprensione Verbale": 1200.0,
-            "Fisica": 600.0
-          }
-        },
-        {
-          "birthDate": "2002-06-10",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
-          "englishCorrectAnswers": 22,
-          "id": null,
-          "ofa": {
-            "ENG": true,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 5950.0,
-          "sectionsResults": {
-            "Inglese": 675.0,
-            "Matematica": 4225.0,
-            "Comprensione Verbale": 750.0,
-            "Fisica": 300.0
-          }
-        }
-      ]
-    },
-    {
-      "location": "PIACENZA",
-      "sections": [
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica"
-      ],
-      "title": "INGEGNERIA MECCANICA",
-      "headers": [
-        "Posizione",
-        "Data di Nascita",
-        "Immat. consentita",
-        "Voto Test",
-        "Inglese",
-        "Matematica",
-        "Comprensione Verbale",
-        "Fisica",
-        "Risposte Esatte Inglese",
-        "OFA Test",
-        "OFA Inglese"
-      ],
-      "rows": [
-        {
-          "birthDate": "2002-05-21",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 27,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 1,
-          "result": 6185.0,
-          "sectionsResults": {
-            "Inglese": 875.0,
-            "Matematica": 3185.0,
-            "Comprensione Verbale": 1125.0,
-            "Fisica": 1000.0
-          }
-        },
-        {
-          "birthDate": "2002-03-13",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 25,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 2,
-          "result": 6132.0,
-          "sectionsResults": {
-            "Inglese": 792.0,
-            "Matematica": 3640.0,
-            "Comprensione Verbale": 1200.0,
-            "Fisica": 500.0
-          }
-        },
-        {
-          "birthDate": "2002-11-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA",
-          "englishCorrectAnswers": 29,
-          "id": null,
-          "ofa": {
-            "ENG": false,
-            "TEST": false
-          },
-          "positionAbsolute": null,
-          "positionCourse": 3,
-          "result": 6003.0,
-          "sectionsResults": {
-            "Inglese": 958.0,
-            "Matematica": 2795.0,
-            "Comprensione Verbale": 1500.0,
-            "Fisica": 750.0
           }
         }
       ]
@@ -10098,12 +10098,12 @@
     ]
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-29T19:51:42.9462826+00:00",
+  "lastUpdate": "2023-06-30T13:17:22.6697546+02:00",
   "phase": "Terza Graduatoria Di Seconda Fase",
   "rankingSummary": {
     "courseSummarized": [
       {
-        "averageBirthYear": 2001.85,
+        "averageBirthYear": 2002.4125,
         "averageEnglishCorrectAnswers": 25.6,
         "averageOfWhoPassed": 9175.0,
         "averagePartialScores": {
@@ -10118,11 +10118,11 @@
           "TEST": 0
         },
         "location": "MILANO BOVISA",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 9175.0,
         "title": "INGEGNERIA AEROSPAZIALE"
       },
       {
-        "averageBirthYear": 2001.52174,
+        "averageBirthYear": 2002.24275,
         "averageEnglishCorrectAnswers": 26.30435,
         "averageOfWhoPassed": 6422.66667,
         "averagePartialScores": {
@@ -10137,11 +10137,11 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 6180.0,
         "title": "INGEGNERIA CHIMICA"
       },
       {
-        "averageBirthYear": 2002.08333,
+        "averageBirthYear": 2002.61806,
         "averageEnglishCorrectAnswers": 26.91667,
         "averageOfWhoPassed": 6213.16667,
         "averagePartialScores": {
@@ -10156,11 +10156,11 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 5952.0,
         "title": "INGEGNERIA CIVILE"
       },
       {
-        "averageBirthYear": 2002.0,
+        "averageBirthYear": 2002.63889,
         "averageEnglishCorrectAnswers": 29.33333,
         "averageOfWhoPassed": 6545.33333,
         "averagePartialScores": {
@@ -10175,11 +10175,11 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 5990.0,
         "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
       },
       {
-        "averageBirthYear": 2001.33333,
+        "averageBirthYear": 2001.9375,
         "averageEnglishCorrectAnswers": 27.0,
         "averageOfWhoPassed": 6905.75,
         "averagePartialScores": {
@@ -10194,11 +10194,11 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 6598.0,
         "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
       },
       {
-        "averageBirthYear": 2002.0,
+        "averageBirthYear": 2002.50725,
         "averageEnglishCorrectAnswers": 24.86957,
         "averageOfWhoPassed": 6545.14286,
         "averagePartialScores": {
@@ -10213,239 +10213,11 @@
           "TEST": 0
         },
         "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 6200.0,
         "title": "INGEGNERIA DELL'AUTOMAZIONE"
       },
       {
-        "averageBirthYear": 2001.66667,
-        "averageEnglishCorrectAnswers": 25.83333,
-        "averageOfWhoPassed": 6050.16667,
-        "averagePartialScores": {
-          "Inglese": 826.33333,
-          "Matematica": 3461.33333,
-          "Comprensione Verbale": 1300.0,
-          "Fisica": 462.5
-        },
-        "averageScoresOfAllStudents": 6050.16667,
-        "howManyOfa": {
-          "ENG": 0,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
-      },
-      {
-        "averageBirthYear": 2001.83333,
-        "averageEnglishCorrectAnswers": 26.91667,
-        "averageOfWhoPassed": 6330.0,
-        "averagePartialScores": {
-          "Inglese": 875.08333,
-          "Matematica": 3661.75,
-          "Comprensione Verbale": 1050.0,
-          "Fisica": 537.5
-        },
-        "averageScoresOfAllStudents": 6124.33333,
-        "howManyOfa": {
-          "ENG": 0,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA ELETTRICA"
-      },
-      {
-        "averageBirthYear": 2001.41176,
-        "averageEnglishCorrectAnswers": 26.17647,
-        "averageOfWhoPassed": 6692.4,
-        "averagePartialScores": {
-          "Inglese": 846.52941,
-          "Matematica": 3865.58824,
-          "Comprensione Verbale": 1014.70588,
-          "Fisica": 511.76471
-        },
-        "averageScoresOfAllStudents": 6238.58824,
-        "howManyOfa": {
-          "ENG": 3,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA ELETTRONICA"
-      },
-      {
-        "averageBirthYear": 2001.76471,
-        "averageEnglishCorrectAnswers": 24.58824,
-        "averageOfWhoPassed": 6898.83333,
-        "averagePartialScores": {
-          "Inglese": 796.35294,
-          "Matematica": 3883.76471,
-          "Comprensione Verbale": 1104.05882,
-          "Fisica": 473.52941
-        },
-        "averageScoresOfAllStudents": 6257.70588,
-        "howManyOfa": {
-          "ENG": 8,
-          "TEST": 0
-        },
-        "location": "MILANO BOVISA",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA ENERGETICA"
-      },
-      {
-        "averageBirthYear": 2001.89655,
-        "averageEnglishCorrectAnswers": 25.60345,
-        "averageOfWhoPassed": 7434.71429,
-        "averagePartialScores": {
-          "Inglese": 822.98276,
-          "Matematica": 4089.43103,
-          "Comprensione Verbale": 991.24138,
-          "Fisica": 485.77586
-        },
-        "averageScoresOfAllStudents": 6389.31034,
-        "howManyOfa": {
-          "ENG": 12,
-          "TEST": 0
-        },
-        "location": "MILANO BOVISA",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA GESTIONALE"
-      },
-      {
-        "averageBirthYear": 2001.9375,
-        "averageEnglishCorrectAnswers": 25.53125,
-        "averageOfWhoPassed": 8120.33333,
-        "averagePartialScores": {
-          "Inglese": 819.9375,
-          "Matematica": 4290.0625,
-          "Comprensione Verbale": 917.625,
-          "Fisica": 419.53125
-        },
-        "averageScoresOfAllStudents": 6447.0625,
-        "howManyOfa": {
-          "ENG": 9,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA INFORMATICA"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 24.66667,
-        "averageOfWhoPassed": 6281.66667,
-        "averagePartialScores": {
-          "Inglese": 800.0,
-          "Matematica": 3965.0,
-          "Comprensione Verbale": 1050.0,
-          "Fisica": 466.66667
-        },
-        "averageScoresOfAllStudents": 6281.66667,
-        "howManyOfa": {
-          "ENG": 1,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA INFORMATICA ONLINE"
-      },
-      {
-        "averageBirthYear": 2002.07692,
-        "averageEnglishCorrectAnswers": 26.07692,
-        "averageOfWhoPassed": 8612.0,
-        "averagePartialScores": {
-          "Inglese": 842.30769,
-          "Matematica": 4312.53846,
-          "Comprensione Verbale": 1073.15385,
-          "Fisica": 511.53846
-        },
-        "averageScoresOfAllStudents": 6739.46154,
-        "howManyOfa": {
-          "ENG": 2,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA MATEMATICA"
-      },
-      {
-        "averageBirthYear": 2001.51515,
-        "averageEnglishCorrectAnswers": 24.06061,
-        "averageOfWhoPassed": 8104.5,
-        "averagePartialScores": {
-          "Inglese": 774.51515,
-          "Matematica": 4154.12121,
-          "Comprensione Verbale": 989.81818,
-          "Fisica": 512.87879
-        },
-        "averageScoresOfAllStudents": 6431.27273,
-        "howManyOfa": {
-          "ENG": 9,
-          "TEST": 0
-        },
-        "location": "MILANO BOVISA",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA MECCANICA"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 25.0,
-        "averageOfWhoPassed": 6109.5,
-        "averagePartialScores": {
-          "Inglese": 802.83333,
-          "Matematica": 3640.0,
-          "Comprensione Verbale": 1137.5,
-          "Fisica": 529.16667
-        },
-        "averageScoresOfAllStudents": 6109.5,
-        "howManyOfa": {
-          "ENG": 1,
-          "TEST": 0
-        },
-        "location": "MILANO LEONARDO",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 25.0,
-        "averageOfWhoPassed": 6315.42857,
-        "averagePartialScores": {
-          "Inglese": 796.42857,
-          "Matematica": 3974.28571,
-          "Comprensione Verbale": 1055.42857,
-          "Fisica": 489.28571
-        },
-        "averageScoresOfAllStudents": 6315.42857,
-        "howManyOfa": {
-          "ENG": 1,
-          "TEST": 0
-        },
-        "location": "CREMONA",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA GESTIONALE"
-      },
-      {
-        "averageBirthYear": 2002.0,
-        "averageEnglishCorrectAnswers": 24.0,
-        "averageOfWhoPassed": 6031.5,
-        "averagePartialScores": {
-          "Inglese": 766.5,
-          "Matematica": 3802.5,
-          "Comprensione Verbale": 937.5,
-          "Fisica": 525.0
-        },
-        "averageScoresOfAllStudents": 6031.5,
-        "howManyOfa": {
-          "ENG": 1,
-          "TEST": 0
-        },
-        "location": "CREMONA",
-        "minScoreToEnroll": null,
-        "title": "INGEGNERIA INFORMATICA"
-      },
-      {
-        "averageBirthYear": 2001.33333,
+        "averageBirthYear": 2001.86111,
         "averageEnglishCorrectAnswers": 22.0,
         "averageOfWhoPassed": 6248.33333,
         "averagePartialScores": {
@@ -10460,11 +10232,220 @@
           "TEST": 0
         },
         "location": "LECCO",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 5950.0,
         "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
       },
       {
-        "averageBirthYear": 2002.0,
+        "averageBirthYear": 2002.45833,
+        "averageEnglishCorrectAnswers": 25.83333,
+        "averageOfWhoPassed": 6050.16667,
+        "averagePartialScores": {
+          "Inglese": 826.33333,
+          "Matematica": 3461.33333,
+          "Comprensione Verbale": 1300.0,
+          "Fisica": 462.5
+        },
+        "averageScoresOfAllStudents": 6050.16667,
+        "howManyOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 5973.0,
+        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+      },
+      {
+        "averageBirthYear": 2002.52083,
+        "averageEnglishCorrectAnswers": 26.91667,
+        "averageOfWhoPassed": 6330.0,
+        "averagePartialScores": {
+          "Inglese": 875.08333,
+          "Matematica": 3661.75,
+          "Comprensione Verbale": 1050.0,
+          "Fisica": 537.5
+        },
+        "averageScoresOfAllStudents": 6124.33333,
+        "howManyOfa": {
+          "ENG": 0,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 6095.0,
+        "title": "INGEGNERIA ELETTRICA"
+      },
+      {
+        "averageBirthYear": 2001.86275,
+        "averageEnglishCorrectAnswers": 26.17647,
+        "averageOfWhoPassed": 6692.4,
+        "averagePartialScores": {
+          "Inglese": 846.52941,
+          "Matematica": 3865.58824,
+          "Comprensione Verbale": 1014.70588,
+          "Fisica": 511.76471
+        },
+        "averageScoresOfAllStudents": 6238.58824,
+        "howManyOfa": {
+          "ENG": 3,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 6142.0,
+        "title": "INGEGNERIA ELETTRONICA"
+      },
+      {
+        "averageBirthYear": 2002.3652,
+        "averageEnglishCorrectAnswers": 24.58824,
+        "averageOfWhoPassed": 6898.83333,
+        "averagePartialScores": {
+          "Inglese": 796.35294,
+          "Matematica": 3883.76471,
+          "Comprensione Verbale": 1104.05882,
+          "Fisica": 473.52941
+        },
+        "averageScoresOfAllStudents": 6257.70588,
+        "howManyOfa": {
+          "ENG": 8,
+          "TEST": 0
+        },
+        "location": "MILANO BOVISA",
+        "minScoreToEnroll": 6440.0,
+        "title": "INGEGNERIA ENERGETICA"
+      },
+      {
+        "averageBirthYear": 2002.34524,
+        "averageEnglishCorrectAnswers": 25.0,
+        "averageOfWhoPassed": 6315.42857,
+        "averagePartialScores": {
+          "Inglese": 796.42857,
+          "Matematica": 3974.28571,
+          "Comprensione Verbale": 1055.42857,
+          "Fisica": 489.28571
+        },
+        "averageScoresOfAllStudents": 6315.42857,
+        "howManyOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "location": "CREMONA",
+        "minScoreToEnroll": 6002.0,
+        "title": "INGEGNERIA GESTIONALE"
+      },
+      {
+        "averageBirthYear": 2002.41954,
+        "averageEnglishCorrectAnswers": 25.60345,
+        "averageOfWhoPassed": 7434.71429,
+        "averagePartialScores": {
+          "Inglese": 822.98276,
+          "Matematica": 4089.43103,
+          "Comprensione Verbale": 991.24138,
+          "Fisica": 485.77586
+        },
+        "averageScoresOfAllStudents": 6389.31034,
+        "howManyOfa": {
+          "ENG": 12,
+          "TEST": 0
+        },
+        "location": "MILANO BOVISA",
+        "minScoreToEnroll": 6898.0,
+        "title": "INGEGNERIA GESTIONALE"
+      },
+      {
+        "averageBirthYear": 2002.70833,
+        "averageEnglishCorrectAnswers": 24.0,
+        "averageOfWhoPassed": 6031.5,
+        "averagePartialScores": {
+          "Inglese": 766.5,
+          "Matematica": 3802.5,
+          "Comprensione Verbale": 937.5,
+          "Fisica": 525.0
+        },
+        "averageScoresOfAllStudents": 6031.5,
+        "howManyOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "location": "CREMONA",
+        "minScoreToEnroll": 5975.0,
+        "title": "INGEGNERIA INFORMATICA"
+      },
+      {
+        "averageBirthYear": 2002.4375,
+        "averageEnglishCorrectAnswers": 25.53125,
+        "averageOfWhoPassed": 8120.33333,
+        "averagePartialScores": {
+          "Inglese": 819.9375,
+          "Matematica": 4290.0625,
+          "Comprensione Verbale": 917.625,
+          "Fisica": 419.53125
+        },
+        "averageScoresOfAllStudents": 6447.0625,
+        "howManyOfa": {
+          "ENG": 9,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 7320.0,
+        "title": "INGEGNERIA INFORMATICA"
+      },
+      {
+        "averageBirthYear": 2002.52778,
+        "averageEnglishCorrectAnswers": 24.66667,
+        "averageOfWhoPassed": 6281.66667,
+        "averagePartialScores": {
+          "Inglese": 800.0,
+          "Matematica": 3965.0,
+          "Comprensione Verbale": 1050.0,
+          "Fisica": 466.66667
+        },
+        "averageScoresOfAllStudents": 6281.66667,
+        "howManyOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 6047.0,
+        "title": "INGEGNERIA INFORMATICA ONLINE"
+      },
+      {
+        "averageBirthYear": 2002.62179,
+        "averageEnglishCorrectAnswers": 26.07692,
+        "averageOfWhoPassed": 8612.0,
+        "averagePartialScores": {
+          "Inglese": 842.30769,
+          "Matematica": 4312.53846,
+          "Comprensione Verbale": 1073.15385,
+          "Fisica": 511.53846
+        },
+        "averageScoresOfAllStudents": 6739.46154,
+        "howManyOfa": {
+          "ENG": 2,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 8463.0,
+        "title": "INGEGNERIA MATEMATICA"
+      },
+      {
+        "averageBirthYear": 2002.08838,
+        "averageEnglishCorrectAnswers": 24.06061,
+        "averageOfWhoPassed": 8104.5,
+        "averagePartialScores": {
+          "Inglese": 774.51515,
+          "Matematica": 4154.12121,
+          "Comprensione Verbale": 989.81818,
+          "Fisica": 512.87879
+        },
+        "averageScoresOfAllStudents": 6431.27273,
+        "howManyOfa": {
+          "ENG": 9,
+          "TEST": 0
+        },
+        "location": "MILANO BOVISA",
+        "minScoreToEnroll": 7805.0,
+        "title": "INGEGNERIA MECCANICA"
+      },
+      {
+        "averageBirthYear": 2002.52778,
         "averageEnglishCorrectAnswers": 27.0,
         "averageOfWhoPassed": 6106.66667,
         "averagePartialScores": {
@@ -10479,162 +10460,181 @@
           "TEST": 0
         },
         "location": "PIACENZA",
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 6003.0,
         "title": "INGEGNERIA MECCANICA"
+      },
+      {
+        "averageBirthYear": 2002.41667,
+        "averageEnglishCorrectAnswers": 25.0,
+        "averageOfWhoPassed": 6109.5,
+        "averagePartialScores": {
+          "Inglese": 802.83333,
+          "Matematica": 3640.0,
+          "Comprensione Verbale": 1137.5,
+          "Fisica": 529.16667
+        },
+        "averageScoresOfAllStudents": 6109.5,
+        "howManyOfa": {
+          "ENG": 1,
+          "TEST": 0
+        },
+        "location": "MILANO LEONARDO",
+        "minScoreToEnroll": 5992.0,
+        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
       }
     ],
     "howManyCanEnroll": 92,
     "howManyStudents": 167,
     "resultsSummarized": {
-      "9175": 1,
-      "9008": 1,
-      "8967": 1,
-      "8833": 1,
-      "8761": 1,
-      "8682": 1,
-      "8488": 1,
-      "8463": 1,
-      "8404": 1,
-      "8283": 1,
-      "8123": 1,
-      "8075": 1,
-      "8033": 1,
-      "7805": 1,
-      "7523": 1,
-      "7442": 1,
-      "7424": 1,
-      "7342": 1,
-      "7320": 1,
-      "7313": 1,
-      "7234": 1,
-      "7212": 1,
-      "7210": 1,
-      "7196": 1,
-      "7195": 1,
-      "7157": 1,
-      "7153": 1,
-      "7125": 1,
-      "7000": 1,
-      "6898": 1,
-      "6889": 1,
-      "6870": 1,
-      "6847": 1,
-      "6815": 1,
-      "6800": 1,
-      "6788": 1,
-      "6738": 1,
-      "6726": 1,
-      "6710": 1,
-      "6683": 2,
-      "6680": 1,
-      "6655": 1,
-      "6642": 1,
-      "6638": 1,
-      "6637": 1,
-      "6598": 2,
-      "6592": 1,
-      "6565": 1,
-      "6550": 1,
-      "6530": 1,
-      "6518": 2,
-      "6503": 1,
-      "6500": 1,
-      "6483": 1,
-      "6477": 1,
-      "6465": 2,
-      "6452": 1,
-      "6442": 1,
-      "6440": 2,
-      "6433": 1,
-      "6422": 1,
-      "6420": 1,
-      "6410": 1,
-      "6373": 1,
-      "6367": 1,
-      "6365": 1,
-      "6352": 1,
-      "6342": 1,
-      "6333": 1,
-      "6325": 1,
-      "6323": 1,
-      "6313": 1,
-      "6312": 1,
-      "6281": 1,
-      "6267": 1,
-      "6255": 1,
-      "6248": 1,
-      "6245": 1,
-      "6237": 1,
-      "6235": 1,
-      "6218": 1,
-      "6213": 2,
-      "6205": 1,
-      "6203": 1,
-      "6200": 1,
-      "6189": 1,
-      "6185": 1,
-      "6180": 2,
-      "6178": 3,
-      "6177": 1,
-      "6175": 1,
-      "6173": 1,
-      "6170": 1,
-      "6168": 1,
-      "6162": 1,
-      "6158": 1,
-      "6155": 2,
-      "6152": 1,
-      "6150": 2,
-      "6142": 1,
-      "6135": 1,
-      "6134": 1,
-      "6132": 2,
-      "6128": 1,
-      "6123": 1,
-      "6122": 1,
-      "6118": 1,
-      "6113": 1,
-      "6110": 1,
-      "6105": 2,
-      "6103": 1,
-      "6102": 1,
-      "6095": 1,
-      "6092": 1,
-      "6088": 1,
-      "6087": 2,
-      "6085": 1,
-      "6083": 1,
-      "6082": 1,
-      "6077": 2,
-      "6073": 1,
-      "6067": 1,
-      "6065": 1,
-      "6063": 1,
-      "6060": 1,
-      "6057": 1,
-      "6055": 1,
-      "6048": 1,
-      "6047": 1,
-      "6037": 1,
-      "6033": 1,
-      "6028": 2,
-      "6017": 1,
-      "6015": 1,
-      "6012": 1,
-      "6008": 1,
-      "6003": 2,
-      "6002": 1,
-      "5998": 1,
-      "5995": 1,
-      "5993": 1,
-      "5992": 2,
-      "5990": 1,
-      "5988": 1,
-      "5978": 1,
-      "5975": 1,
-      "5973": 1,
+      "5950": 1,
       "5952": 1,
-      "5950": 1
+      "5973": 1,
+      "5975": 1,
+      "5978": 1,
+      "5988": 1,
+      "5990": 1,
+      "5992": 2,
+      "5993": 1,
+      "5995": 1,
+      "5998": 1,
+      "6002": 1,
+      "6003": 2,
+      "6008": 1,
+      "6012": 1,
+      "6015": 1,
+      "6017": 1,
+      "6028": 2,
+      "6033": 1,
+      "6037": 1,
+      "6047": 1,
+      "6048": 1,
+      "6055": 1,
+      "6057": 1,
+      "6060": 1,
+      "6063": 1,
+      "6065": 1,
+      "6067": 1,
+      "6073": 1,
+      "6077": 2,
+      "6082": 1,
+      "6083": 1,
+      "6085": 1,
+      "6087": 2,
+      "6088": 1,
+      "6092": 1,
+      "6095": 1,
+      "6102": 1,
+      "6103": 1,
+      "6105": 2,
+      "6110": 1,
+      "6113": 1,
+      "6118": 1,
+      "6122": 1,
+      "6123": 1,
+      "6128": 1,
+      "6132": 2,
+      "6134": 1,
+      "6135": 1,
+      "6142": 1,
+      "6150": 2,
+      "6152": 1,
+      "6155": 2,
+      "6158": 1,
+      "6162": 1,
+      "6168": 1,
+      "6170": 1,
+      "6173": 1,
+      "6175": 1,
+      "6177": 1,
+      "6178": 3,
+      "6180": 2,
+      "6185": 1,
+      "6189": 1,
+      "6200": 1,
+      "6203": 1,
+      "6205": 1,
+      "6213": 2,
+      "6218": 1,
+      "6235": 1,
+      "6237": 1,
+      "6245": 1,
+      "6248": 1,
+      "6255": 1,
+      "6267": 1,
+      "6281": 1,
+      "6312": 1,
+      "6313": 1,
+      "6323": 1,
+      "6325": 1,
+      "6333": 1,
+      "6342": 1,
+      "6352": 1,
+      "6365": 1,
+      "6367": 1,
+      "6373": 1,
+      "6410": 1,
+      "6420": 1,
+      "6422": 1,
+      "6433": 1,
+      "6440": 2,
+      "6442": 1,
+      "6452": 1,
+      "6465": 2,
+      "6477": 1,
+      "6483": 1,
+      "6500": 1,
+      "6503": 1,
+      "6518": 2,
+      "6530": 1,
+      "6550": 1,
+      "6565": 1,
+      "6592": 1,
+      "6598": 2,
+      "6637": 1,
+      "6638": 1,
+      "6642": 1,
+      "6655": 1,
+      "6680": 1,
+      "6683": 2,
+      "6710": 1,
+      "6726": 1,
+      "6738": 1,
+      "6788": 1,
+      "6800": 1,
+      "6815": 1,
+      "6847": 1,
+      "6870": 1,
+      "6889": 1,
+      "6898": 1,
+      "7000": 1,
+      "7125": 1,
+      "7153": 1,
+      "7157": 1,
+      "7195": 1,
+      "7196": 1,
+      "7210": 1,
+      "7212": 1,
+      "7234": 1,
+      "7313": 1,
+      "7320": 1,
+      "7342": 1,
+      "7424": 1,
+      "7442": 1,
+      "7523": 1,
+      "7805": 1,
+      "8033": 1,
+      "8075": 1,
+      "8123": 1,
+      "8283": 1,
+      "8404": 1,
+      "8463": 1,
+      "8488": 1,
+      "8682": 1,
+      "8761": 1,
+      "8833": 1,
+      "8967": 1,
+      "9008": 1,
+      "9175": 1
     }
   },
   "school": "Ingegneria",

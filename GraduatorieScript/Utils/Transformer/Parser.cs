@@ -45,7 +45,7 @@ public static class Parser
         }
 
         var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
-        Parallel.Invoke(action);
+        ParallelRun.Run(action);
 
         rankingsSet.Rankings = rankingsSet.Rankings.OrderBy(x => x.School).ThenBy(x => x.Year).ThenBy(x => x.Url?.Url)
             .ToList();
@@ -104,7 +104,7 @@ public static class Parser
 
         var actions = subHtmls
             .Select(subHtml => (Action)(() => { GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls); })).ToArray();
-        Parallel.Invoke(actions);
+        ParallelRun.Run(actions);
 
         return newHtmls;
     }
@@ -124,7 +124,7 @@ public static class Parser
             tableHtml.SaveLocal(htmlFolder);
             newHtmls.Add(tableHtml);
         })).ToArray();
-        Parallel.Invoke(action);
+        ParallelRun.Run(action);
     }
 
     private static void GetRankingsSingle(HtmlPage index, RankingsSet rankingsSet, ICollection<HtmlPage> allHtmls,
@@ -343,7 +343,8 @@ public static class Parser
             };
         }
 
-        Parallel.Invoke(tableLinks.Select((Func<RankingUrl, Action>)Selector).ToArray());
+        var actions = tableLinks.Select((Func<RankingUrl, Action>)Selector).ToArray();
+        ParallelRun.Run(actions);
         var urlPageEnum = html.Url.PageEnum;
         switch (urlPageEnum)
         {
