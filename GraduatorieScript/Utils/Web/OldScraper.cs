@@ -50,7 +50,7 @@ public class OldScraper
             actions.Add(Action);
         }
 
-        Parallel.Invoke(actions.ToArray());
+        ParallelRun.Run(actions.ToArray());
 
 
         var newsLinks = result.Distinct();
@@ -103,7 +103,7 @@ public class OldScraper
     {
         var list = SplitIntoChunks(action.ToList(), 10);
         var actionsEnumerable = list.Select(variable => variable.ToArray());
-        foreach (var actions in actionsEnumerable) Parallel.Invoke(actions);
+        foreach (var actions in actionsEnumerable) ParallelRun.Run(actions);
     }
 
     private static List<List<T>> SplitIntoChunks<T>(IReadOnlyCollection<T> list, int chunkSize)
@@ -182,14 +182,17 @@ public class OldScraper
         return new AnchorElement { Name = element.InnerText, Url = url };
     }
 
-    public IEnumerable<string> FindRankingsLink(IEnumerable<string?>? newsLink)
+    public IEnumerable<string>? FindRankingsLink(IEnumerable<string?>? newsLink)
     {
+        if (newsLink == null) 
+            return null;
+        
         var rankingsList = new HashSet<string>();
+        var actions = newsLink
+            .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); }))
+            .ToArray();
+        ParallelRun.Run(actions);
 
-        if (newsLink != null)
-            Parallel.Invoke(newsLink
-                .Select(currentLink => (Action)(() => { FindSingleRankingLink(rankingsList, currentLink); }))
-                .ToArray());
         return rankingsList;
     }
 

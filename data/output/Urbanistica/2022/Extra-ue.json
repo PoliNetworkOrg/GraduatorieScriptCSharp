@@ -61,12 +61,12 @@
     ]
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T10:13:20.7962395+00:00",
+  "lastUpdate": "2023-06-30T13:23:08.3684185+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
       {
-        "averageBirthYear": 2003.0,
+        "averageBirthYear": 2003.41667,
         "averageEnglishCorrectAnswers": null,
         "averageOfWhoPassed": 6000.0,
         "averagePartialScores": {
@@ -77,7 +77,7 @@
         "averageScoresOfAllStudents": 6000.0,
         "howManyOfa": {},
         "location": null,
-        "minScoreToEnroll": null,
+        "minScoreToEnroll": 6000.0,
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
     ],

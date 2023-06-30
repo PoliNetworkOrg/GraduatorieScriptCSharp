@@ -1,6 +1,7 @@
 using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
+using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Transformer;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -81,7 +82,8 @@ public class BySchoolYearJson : IndexJsonBase
             var actions = new List<Action>();
             foreach (var filename in year.Value)
                 actions.Add(() => { RankingAdd(school, year, outFolder, filename, rankings); });
-            Parallel.Invoke(actions.ToArray());
+
+            ParallelRun.Run(actions.ToArray());
         }
 
         return rankings;
