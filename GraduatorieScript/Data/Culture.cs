@@ -10,4 +10,6 @@ public static class Culture
         Culture = CultureInfo.InvariantCulture,
         Formatting = Formatting.Indented
     };
+
+    public static readonly NumberFormatInfo NumberFormatInfo = new() { NumberDecimalSeparator = "." };
 }
