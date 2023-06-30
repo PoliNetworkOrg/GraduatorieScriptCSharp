@@ -16,9 +16,4 @@ public class CourseTable : MeritTable
     {
         return CourseTableStats.From(this);
     }
-
-    public CourseTable()
-    {
-        ;
-    }
 }

@@ -15,7 +15,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
 {
     internal const string PathCustom = "BySchoolYearCourse.json";
 
-    public Dictionary<SchoolEnum, Dictionary<int, Dictionary<string,List<SingleCourseJson>>>> Schools = new();
+    public Dictionary<SchoolEnum, Dictionary<int, Dictionary<string, List<SingleCourseJson>>>> Schools = new();
 
     public static BySchoolYearCourseJson? From(RankingsSet? set)
     {
@@ -31,7 +31,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
                 continue;
             var school = schoolGroup.Key.Value;
 
-            var schoolDict = new Dictionary<int, Dictionary<string,List<SingleCourseJson>>>();
+            var schoolDict = new Dictionary<int, Dictionary<string, List<SingleCourseJson>>>();
 
             var byYears = schoolGroup.GroupBy(r => r.Year);
             foreach (var yearGroup in byYears)
@@ -56,8 +56,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
         IGrouping<int?, Ranking> yearGroup)
     {
         var listCourses = filenames.ToList();
-        Dictionary<string, List<SingleCourseJson>> dictionary = new Dictionary<string, List<SingleCourseJson>>();
-        List<string?> coursesNames = yearGroup.ToList().SelectMany(x => x.ByCourse ?? new List<CourseTable>())
+        var dictionary = new Dictionary<string, List<SingleCourseJson>>();
+        var coursesNames = yearGroup.ToList().SelectMany(x => x.ByCourse ?? new List<CourseTable>())
             .Select(x => x.Title).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
         foreach (var courseName in coursesNames)
         {
@@ -76,15 +76,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
         {
             if (v1.ByCourse == null) continue;
             if (singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year)
-            {
-                return IsSimilar2(singleCourseJson, v1 );
-            }
+                return IsSimilar2(singleCourseJson, v1);
         }
 
         return false;
     }
 
-    private static bool IsSimilar2(SingleCourseJson singleCourseJson, 
+    private static bool IsSimilar2(SingleCourseJson singleCourseJson,
         Ranking v1)
     {
         return v1.Phase == singleCourseJson.Name;
@@ -122,13 +120,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
             var actions = new List<Action>();
             foreach (var filename in year.Value)
             foreach (var variable in filename.Value)
-            {
-                actions.Add(() =>
-                {
-                    RankingAdd(school, year, outFolder, variable, rankings);
-                });
-            }
-           
+                actions.Add(() => { RankingAdd(school, year, outFolder, variable, rankings); });
+
 
             ParallelRun.Run(actions.ToArray());
         }
@@ -137,8 +130,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void RankingAdd(
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string,List<SingleCourseJson>>>> school,
-        KeyValuePair<int, Dictionary<string,List<SingleCourseJson>>> year,
+        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, List<SingleCourseJson>>>> school,
+        KeyValuePair<int, Dictionary<string, List<SingleCourseJson>>> year,
         string outFolder,
         SingleCourseJson filename,
         ICollection<Ranking> rankings)
@@ -159,7 +152,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         if (rankings.Any(x =>
                 x.School == ranking.School && x.Year == ranking.Year && Similar(x.ByCourse, ranking.ByCourse)))
             return;
-        
+
         rankings.Add(ranking);
     }
 

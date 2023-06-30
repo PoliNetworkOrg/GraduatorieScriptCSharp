@@ -2,7 +2,6 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Objects.Json.Stats;
-using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Objects.Tables.Merit;
 using Newtonsoft.Json;
