@@ -4,7 +4,6 @@ using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects.RankingNS;
 using PoliNetwork.Core.Utils;
 
-
 namespace GraduatorieScript.Utils.Web;
 
 public static class LinksFind

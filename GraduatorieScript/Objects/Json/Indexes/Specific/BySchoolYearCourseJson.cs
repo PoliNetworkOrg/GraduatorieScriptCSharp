@@ -73,7 +73,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
 
     private static List<SingleCourseJson> SingleCourseJsonsGet(
-        IGrouping<int?, Ranking> yearGroup, 
+        IGrouping<int?, Ranking> yearGroup,
         IEnumerable<SingleCourseJson> listCourses)
     {
         var singleCourseJsons = new List<SingleCourseJson>();
@@ -85,12 +85,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
     private static bool IsSimilar(IEnumerable<Ranking> yearGroup, SingleCourseJson singleCourseJson)
     {
         var enumerable = yearGroup.Where(v1 => v1.ByCourse != null);
-        bool Predicate(Ranking v1) => singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year && v1.Phase == singleCourseJson.Name;
+
+        bool Predicate(Ranking v1)
+        {
+            return singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year &&
+                   v1.Phase == singleCourseJson.Name;
+        }
+
         return enumerable.Any(Predicate);
     }
-
- 
-
 
 
     public static RankingsSet? Parse(string dataFolder)
@@ -120,9 +123,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
-        {
             RankingsAddSingleYearSchool(year, outFolder, school, rankings);
-        }
 
         return rankings;
     }
@@ -135,8 +136,10 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var actions = new List<Action>();
         foreach (var filename in year.Value)
         {
-            Action Selector(SingleCourseJson variable) =>
-                () => { RankingAdd(school, year, outFolder, variable, rankings); };
+            Action Selector(SingleCourseJson variable)
+            {
+                return () => { RankingAdd(school, year, outFolder, variable, rankings); };
+            }
 
             var collection = filename.Value.Select(Selector);
             actions.AddRange(collection);
@@ -156,9 +159,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
         var ranking = Parser.ParseJson<Ranking>(path);
-        if (ranking == null) 
+        if (ranking == null)
             return;
-        
+
         lock (rankings)
         {
             AddToRankings(rankings, ranking);

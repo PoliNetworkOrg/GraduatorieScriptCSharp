@@ -8,7 +8,6 @@ using GraduatorieScript.Utils.Transformer.ParserNS;
 using GraduatorieScript.Utils.Web;
 using PoliNetwork.Core.Utils;
 
-
 namespace GraduatorieScript.Main;
 
 public static class Program

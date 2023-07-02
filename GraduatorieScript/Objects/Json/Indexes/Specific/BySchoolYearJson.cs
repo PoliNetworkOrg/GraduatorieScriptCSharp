@@ -78,9 +78,7 @@ public class BySchoolYearJson : IndexJsonBase
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
-        {
             RankingsAddSingleYearSchool(year, school, outFolder, rankings);
-        }
 
         return rankings;
     }
@@ -89,7 +87,11 @@ public class BySchoolYearJson : IndexJsonBase
         KeyValuePair<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> school, string outFolder,
         ICollection<Ranking> rankings)
     {
-        Action Selector(SingleCourseJson filename) => () => { RankingAdd(school, year, outFolder, filename, rankings); };
+        Action Selector(SingleCourseJson filename)
+        {
+            return () => { RankingAdd(school, year, outFolder, filename, rankings); };
+        }
+
         var actions = year.Value.Select(Selector).ToArray();
         ParallelRun.Run(actions);
     }
@@ -105,9 +107,9 @@ public class BySchoolYearJson : IndexJsonBase
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
         var ranking = Parser.ParseJson<Ranking>(path);
-        if (ranking == null) 
+        if (ranking == null)
             return;
-        
+
         lock (rankings)
         {
             rankings.Add(ranking);

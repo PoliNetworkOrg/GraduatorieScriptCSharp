@@ -29,12 +29,14 @@ public class StudentResult
         i ^= PositionAbsolute.GetHashCode();
         i ^= PositionCourse.GetHashCode();
         i ^= Result.GetHashCode();
-        if (Ofa != null) 
-            i = Ofa.Aggregate(i, (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
+        if (Ofa != null)
+            i = Ofa.Aggregate(i,
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
 
-        if (SectionsResults != null) 
-            i = SectionsResults.Aggregate(i, (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
-        
+        if (SectionsResults != null)
+            i = SectionsResults.Aggregate(i,
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
+
         return i;
     }
 }
