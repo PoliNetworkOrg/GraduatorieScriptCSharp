@@ -1,4 +1,4 @@
-﻿namespace GraduatorieScript.Data.Constants;
+﻿namespace GraduatorieScript.Data;
 
 public static class Constants
 {

@@ -15,13 +15,11 @@ public class MeritTable
     public int GetHashWithoutLastUpdate()
     {
         var i = 0;
-        if (Headers != null)
-            foreach (var variable in Headers)
-                i ^= variable.GetHashCode();
+        if (Headers != null) 
+            i = Headers.Aggregate(i, (current, variable) => current ^ variable.GetHashCode());
 
-        if (Rows != null)
-            foreach (var variable in Rows)
-                i ^= variable.GetHashWithoutLastUpdate();
+        if (Rows != null) 
+            i = Rows.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
 
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         i ^= Path?.GetHashCode() ?? "Path".GetHashCode();

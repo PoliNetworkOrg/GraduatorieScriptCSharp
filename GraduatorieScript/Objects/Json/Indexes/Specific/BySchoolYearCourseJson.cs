@@ -1,4 +1,4 @@
-using GraduatorieScript.Data.Constants;
+using GraduatorieScript.Data;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables.Course;
@@ -72,7 +72,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
 
-    private static List<SingleCourseJson> SingleCourseJsonsGet(IGrouping<int?, Ranking> yearGroup, List<SingleCourseJson> listCourses)
+    private static List<SingleCourseJson> SingleCourseJsonsGet(
+        IGrouping<int?, Ranking> yearGroup, 
+        IEnumerable<SingleCourseJson> listCourses)
     {
         var singleCourseJsons = new List<SingleCourseJson>();
         var courseJsons = listCourses.Where(x => IsSimilar(yearGroup, x)).ToList();
@@ -119,16 +121,28 @@ public class BySchoolYearCourseJson : IndexJsonBase
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
         {
-            var actions = new List<Action>();
-            foreach (var filename in year.Value)
-            foreach (var variable in filename.Value)
-                actions.Add(() => { RankingAdd(school, year, outFolder, variable, rankings); });
-
-
-            ParallelRun.Run(actions.ToArray());
+            RankingsAddSingleYearSchool(year, outFolder, school, rankings);
         }
 
         return rankings;
+    }
+
+    private static void RankingsAddSingleYearSchool(KeyValuePair<int, Dictionary<string, List<SingleCourseJson>>> year,
+        string outFolder,
+        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, List<SingleCourseJson>>>> school,
+        ICollection<Ranking> rankings)
+    {
+        var actions = new List<Action>();
+        foreach (var filename in year.Value)
+        {
+            Action Selector(SingleCourseJson variable) =>
+                () => { RankingAdd(school, year, outFolder, variable, rankings); };
+
+            var collection = filename.Value.Select(Selector);
+            actions.AddRange(collection);
+        }
+
+        ParallelRun.Run(actions.ToArray());
     }
 
     private static void RankingAdd(
@@ -142,11 +156,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
         var ranking = Parser.ParseJson<Ranking>(path);
-        if (ranking != null)
-            lock (rankings)
-            {
-                AddToRankings(rankings, ranking);
-            }
+        if (ranking == null) 
+            return;
+        
+        lock (rankings)
+        {
+            AddToRankings(rankings, ranking);
+        }
     }
 
     private static void AddToRankings(ICollection<Ranking> rankings, Ranking ranking)

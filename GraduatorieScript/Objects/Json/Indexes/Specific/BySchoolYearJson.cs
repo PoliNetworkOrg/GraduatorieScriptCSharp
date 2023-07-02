@@ -1,4 +1,4 @@
-using GraduatorieScript.Data.Constants;
+using GraduatorieScript.Data;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils;
@@ -79,14 +79,19 @@ public class BySchoolYearJson : IndexJsonBase
         foreach (var school in mainJson.Schools)
         foreach (var year in school.Value)
         {
-            var actions = new List<Action>();
-            foreach (var filename in year.Value)
-                actions.Add(() => { RankingAdd(school, year, outFolder, filename, rankings); });
-
-            ParallelRun.Run(actions.ToArray());
+            RankingsAddSingleYearSchool(year, school, outFolder, rankings);
         }
 
         return rankings;
+    }
+
+    private static void RankingsAddSingleYearSchool(KeyValuePair<int, IEnumerable<SingleCourseJson>> year,
+        KeyValuePair<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> school, string outFolder,
+        ICollection<Ranking> rankings)
+    {
+        Action Selector(SingleCourseJson filename) => () => { RankingAdd(school, year, outFolder, filename, rankings); };
+        var actions = year.Value.Select(Selector).ToArray();
+        ParallelRun.Run(actions);
     }
 
     private static void RankingAdd(
@@ -100,10 +105,12 @@ public class BySchoolYearJson : IndexJsonBase
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
         var ranking = Parser.ParseJson<Ranking>(path);
-        if (ranking != null)
-            lock (rankings)
-            {
-                rankings.Add(ranking);
-            }
+        if (ranking == null) 
+            return;
+        
+        lock (rankings)
+        {
+            rankings.Add(ranking);
+        }
     }
 }

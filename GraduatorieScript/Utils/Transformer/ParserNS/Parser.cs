@@ -1,12 +1,10 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Data.Constants;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Objects.Tables;
 using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Objects.Tables.Merit;
 using GraduatorieScript.Utils.Web;

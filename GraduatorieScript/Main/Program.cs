@@ -1,4 +1,4 @@
-﻿using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;

@@ -1,4 +1,4 @@
-using GraduatorieScript.Data.Constants;
+using GraduatorieScript.Data;
 using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils.Transformer.ParserNS;
