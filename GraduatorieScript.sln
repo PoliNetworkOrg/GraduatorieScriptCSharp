@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraduatorieScript", "GraduatorieScript\GraduatorieScript.csproj", "{D5781B33-5012-43BB-8435-7C59ED85C05B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleNuGet", "TestNugetPackage\SampleNuGet\SampleNuGet.csproj", "{D231C0D7-75E6-41F8-9C61-FC00EE38C06E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoliNetwork.Core", "Lib_CSharp\PoliNetwork.Core\PoliNetwork.Core.csproj", "{8EB36C8E-4708-44A6-9462-9C4C20EC81C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{D5781B33-5012-43BB-8435-7C59ED85C05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5781B33-5012-43BB-8435-7C59ED85C05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5781B33-5012-43BB-8435-7C59ED85C05B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D231C0D7-75E6-41F8-9C61-FC00EE38C06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D231C0D7-75E6-41F8-9C61-FC00EE38C06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D231C0D7-75E6-41F8-9C61-FC00EE38C06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D231C0D7-75E6-41F8-9C61-FC00EE38C06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB36C8E-4708-44A6-9462-9C4C20EC81C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB36C8E-4708-44A6-9462-9C4C20EC81C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB36C8E-4708-44A6-9462-9C4C20EC81C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB36C8E-4708-44A6-9462-9C4C20EC81C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
