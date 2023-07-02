@@ -30,12 +30,13 @@ public class StudentResult
         i ^= PositionCourse.GetHashCode();
         i ^= Result.GetHashCode();
         if (Ofa != null)
-            foreach (var variable in Ofa)
-                i ^= variable.Key.GetHashCode() ^ variable.Value.GetHashCode();
+            i = Ofa.Aggregate(i,
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
 
         if (SectionsResults != null)
-            foreach (var variable in SectionsResults)
-                i ^= variable.Key.GetHashCode() ^ variable.Value.GetHashCode();
+            i = SectionsResults.Aggregate(i,
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
+
         return i;
     }
 }

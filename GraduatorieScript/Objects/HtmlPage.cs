@@ -49,14 +49,12 @@ public class HtmlPage
             if (!File.Exists(localPath)) return null;
 
             var html = File.ReadAllText(localPath);
-            if (!html.ToLower().Contains("politecnico"))
-            {
-                // saved html is wrong
-                File.Delete(localPath);
-                return null;
-            }
+            if (html.ToLower().Contains("politecnico"))
+                return html;
 
-            return html;
+            // saved html is wrong
+            File.Delete(localPath);
+            return null;
         }
         catch
         {
@@ -69,11 +67,11 @@ public class HtmlPage
         var localPath = Url.GetLocalPath(htmlFolder);
         try
         {
-            if (!File.Exists(localPath) || force)
-            {
-                Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
-                File.WriteAllText(localPath, _htmlString);
-            }
+            if (File.Exists(localPath) && !force)
+                return true;
+
+            Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
+            File.WriteAllText(localPath, _htmlString);
 
             return true;
         }

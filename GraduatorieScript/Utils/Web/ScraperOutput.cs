@@ -1,4 +1,4 @@
-﻿using GraduatorieScript.Data.Constants;
+﻿using GraduatorieScript.Data;
 using GraduatorieScript.Objects.RankingNS;
 
 namespace GraduatorieScript.Utils.Web;

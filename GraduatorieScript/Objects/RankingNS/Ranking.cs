@@ -38,8 +38,8 @@ public class Ranking
         i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
 
         if (ByCourse != null)
-            foreach (var variable in ByCourse)
-                i ^= variable.GetHashWithoutLastUpdate();
+            i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+
         return i;
     }
 

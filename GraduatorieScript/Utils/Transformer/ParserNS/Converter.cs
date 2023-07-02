@@ -1,9 +1,10 @@
 ﻿using GraduatorieScript.Objects;
-using GraduatorieScript.Objects.Tables;
+using GraduatorieScript.Objects.Tables.Course;
+using GraduatorieScript.Objects.Tables.Merit;
 
 namespace GraduatorieScript.Utils.Transformer.ParserNS;
 
-public class Converter
+public static class Converter
 {
     public static StudentResult FromMeritTableToStudentResult(MeritTableRow row)
     {

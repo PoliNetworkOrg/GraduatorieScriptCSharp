@@ -78,7 +78,7 @@ public class StatsJson
         foreach (var variable in Stats) WriteToFileYear(outFolder, variable);
     }
 
-    private void WriteToFileYear(string outFolder, KeyValuePair<int, StatsYear> variable)
+    private static void WriteToFileYear(string outFolder, KeyValuePair<int, StatsYear> variable)
     {
         var statsPath = Path.Join(outFolder, PathStats);
         if (!Directory.Exists(statsPath)) Directory.CreateDirectory(statsPath);
