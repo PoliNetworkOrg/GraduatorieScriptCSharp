@@ -2,7 +2,8 @@
 using GraduatorieScript.Enums;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects.RankingNS;
-using SampleNuGet.Utils;
+using PoliNetwork.Core.Utils;
+
 
 namespace GraduatorieScript.Utils.Web;
 

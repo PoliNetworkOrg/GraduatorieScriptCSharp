@@ -6,7 +6,8 @@ using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer.ParserNS;
 using GraduatorieScript.Utils.Web;
-using SampleNuGet.Utils;
+using PoliNetwork.Core.Utils;
+
 
 namespace GraduatorieScript.Main;
 

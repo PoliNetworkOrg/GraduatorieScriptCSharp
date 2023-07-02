@@ -40,7 +40,7 @@ jobs:
       - name: ls
         run: |
           ls -l
-          cd TestNugetPackage
+          cd Lib_CSharp
           ls -l
 
       - name: Restore dependencies
