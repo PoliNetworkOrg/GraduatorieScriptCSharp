@@ -84,8 +84,14 @@ public class BySchoolYearCourseJson : IndexJsonBase
             dictionary[course] = new Dictionary<string, List<SingleCourseJson>>();
         if (!dictionary[course].ContainsKey(location))
             dictionary[course][location] = new List<SingleCourseJson>();
-        
-        dictionary[course][location].Add(Add2(v1,v2));
+
+        var singleCourseJson = Add2(v1,v2);
+        bool Predicate(SingleCourseJson x) => x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
+        var any = dictionary[course][location].Any(Predicate);
+        if (!any)
+        {
+            dictionary[course][location].Add(singleCourseJson);
+        }
     }
 
     private static SingleCourseJson Add2(Ranking v1, CourseTable v2)
