@@ -74,11 +74,7 @@ public class StatsJson
         {
             x.SingleCourseJson?.Link, x.SingleCourseJson?.Location
         });
-        foreach (var variable in statsSingleCourseJsons)
-        {
-            schools[ranking.School.Value].List.Add(variable);
-        }
-     
+        foreach (var variable in statsSingleCourseJsons) schools[ranking.School.Value].List.Add(variable);
     }
 
     private void WriteToFile(string outFolder)

@@ -24,11 +24,6 @@ public class Ranking
     public int? Year;
 
 
-    public Ranking()
-    {
-        
-    }
-
     /***
      * Ottieni l'hash senza considerare il valore di LastUpdate
      */
@@ -83,7 +78,7 @@ public class Ranking
     {
         var result = new List<SingleCourseJson>();
         var schoolString = School == null ? null : Enum.GetName(typeof(SchoolEnum), School);
-        var courseTables = this.ByCourse;
+        var courseTables = ByCourse;
         if (courseTables == null) return result;
         result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {

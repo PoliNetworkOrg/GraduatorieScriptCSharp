@@ -10,15 +10,10 @@ public class SingleCourseJson
 {
     public string? BasePath;
     public string? Link;
+    public string? Location;
     public string? Name;
     public SchoolEnum? School;
     public int? Year;
-    public string? Location;
-
-    public SingleCourseJson()
-    {
-        
-    }
 
     public int GetHashWithoutLastUpdate()
     {

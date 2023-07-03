@@ -184,7 +184,6 @@ public static class Parser
         foreach (var html in subIndexes) GetRankingSingleSub(html, ref meritTable, courseTables, allHtmls);
 
 
-        
         var ranking = new Ranking
         {
             Year = year,

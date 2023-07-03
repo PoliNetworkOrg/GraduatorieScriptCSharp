@@ -14,7 +14,8 @@ public class StatsSingleCourseJson
     public static List<StatsSingleCourseJson> From(Ranking ranking)
     {
         var singleCourseJsons = ranking.ToSingleCourseJson();
-        return singleCourseJsons.Select(variable => new StatsSingleCourseJson() { SingleCourseJson = variable, Stats = ranking.RankingSummary }).ToList();
+        return singleCourseJsons.Select(variable => new StatsSingleCourseJson
+            { SingleCourseJson = variable, Stats = ranking.RankingSummary }).ToList();
     }
 
     public int GetHashWithoutLastUpdate()

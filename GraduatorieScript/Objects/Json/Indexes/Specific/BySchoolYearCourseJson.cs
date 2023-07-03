@@ -16,7 +16,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
     internal const string PathCustom = "BySchoolYearCourse.json";
 
     //keys: school, year, phase, course, location
-    public Dictionary<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>> Schools = new();
+    public Dictionary<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
+        Schools = new();
 
     public static BySchoolYearCourseJson? From(RankingsSet? set)
     {
@@ -50,31 +51,29 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> ToDict2(
         IGrouping<int?, Ranking> yearGroup
-        )
+    )
     {
-        Dictionary<string, Dictionary<string, List<SingleCourseJson>>> d =
+        var d =
             new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
 
         foreach (var v1 in yearGroup)
         {
             if (v1.ByCourse == null) continue;
-            foreach (var v2 in v1.ByCourse)
-            {
-                Add(d, v1, v2);
-            }
+            foreach (var v2 in v1.ByCourse) Add(d, v1, v2);
         }
-        
+
         return d;
     }
 
-    private static void Add(Dictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1, CourseTable v2)
+    private static void Add(Dictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1,
+        CourseTable v2)
     {
         //key course, location
 
         var course = v2.Title;
         if (string.IsNullOrEmpty(course))
             return;
-        
+
         var location = v2.Location;
 
         if (string.IsNullOrEmpty(location))
@@ -85,19 +84,21 @@ public class BySchoolYearCourseJson : IndexJsonBase
         if (!dictionary[course].ContainsKey(location))
             dictionary[course][location] = new List<SingleCourseJson>();
 
-        var singleCourseJson = Add2(v1,v2);
-        bool Predicate(SingleCourseJson x) => x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
-        var any = dictionary[course][location].Any(Predicate);
-        if (!any)
+        var singleCourseJson = Add2(v1, v2);
+
+        bool Predicate(SingleCourseJson x)
         {
-            dictionary[course][location].Add(singleCourseJson);
+            return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
         }
+
+        var any = dictionary[course][location].Any(Predicate);
+        if (!any) dictionary[course][location].Add(singleCourseJson);
     }
 
     private static SingleCourseJson Add2(Ranking v1, CourseTable v2)
     {
         var v1School = v1.School + "/" + v1.Year + "/";
-        return new SingleCourseJson()
+        return new SingleCourseJson
         {
             Link = v1.ConvertPhaseToFilename(),
             Name = v1.Phase,
@@ -155,9 +156,11 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return rankings;
     }
 
-    private static void RankingsAddSingleYearSchool(KeyValuePair<int, Dictionary<string, Dictionary<string,List<SingleCourseJson>>>> year,
+    private static void RankingsAddSingleYearSchool(
+        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string,List<SingleCourseJson>>>>> school,
+        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
+            school,
         ICollection<Ranking> rankings)
     {
         var actions = new List<Action>();
@@ -177,21 +180,21 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
 
-
     private static void RankingAdd(
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string,List<SingleCourseJson>>>>> school,
-        KeyValuePair<int, Dictionary<string, Dictionary<string,List<SingleCourseJson>>>> year,
+        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
+            school,
+        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
         KeyValuePair<string, List<SingleCourseJson>> filename,
         ICollection<Ranking> rankings)
     {
-        foreach (var variable in filename.Value)
-        {
-             RankingAddSingle(school, year, outFolder, rankings, variable);
-        }
+        foreach (var variable in filename.Value) RankingAddSingle(school, year, outFolder, rankings, variable);
     }
 
-    private static void RankingAddSingle(KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>> school, KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year, string outFolder, ICollection<Ranking> rankings,
+    private static void RankingAddSingle(
+        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
+            school, KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
+        string outFolder, ICollection<Ranking> rankings,
         SingleCourseJson variable)
     {
         var schoolKey = school.Key.ToString();
