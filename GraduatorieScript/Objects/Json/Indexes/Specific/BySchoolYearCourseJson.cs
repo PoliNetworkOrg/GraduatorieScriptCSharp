@@ -36,12 +36,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
             var schoolDict = new Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>();
 
             var byYears = schoolGroup.GroupBy(r => r.Year);
-            foreach (var yearGroup in byYears)
-            {
-                if (yearGroup.Key is null)
-                    continue;
-                schoolDict.Add(yearGroup.Key.Value, ToDict2(yearGroup));
-            }
+            FromSchool(byYears, schoolDict);
 
             mainJson.Schools.Add(school, schoolDict);
         }
@@ -49,8 +44,17 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return mainJson;
     }
 
+    private static void FromSchool(
+        IEnumerable<IGrouping<int?, Ranking>> byYears,
+        IDictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> schoolDict)
+    {
+        foreach (var yearGroup in byYears)
+            if (yearGroup.Key != null)
+                schoolDict.Add(yearGroup.Key.Value, ToDict2(yearGroup));
+    }
+
     private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> ToDict2(
-        IGrouping<int?, Ranking> yearGroup
+        IEnumerable<Ranking> yearGroup
     )
     {
         var d =
@@ -65,7 +69,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return d;
     }
 
-    private static void Add(Dictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1,
+    private static void Add(IDictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1,
         CourseTable v2)
     {
         //key course, location
