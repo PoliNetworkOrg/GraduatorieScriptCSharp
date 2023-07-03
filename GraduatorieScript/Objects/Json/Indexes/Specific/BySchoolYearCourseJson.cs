@@ -39,12 +39,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
             {
                 if (yearGroup.Key is null)
                     continue;
-                var filenames = yearGroup
-                    .SelectMany(ranking => ranking.ToSingleCourseJson())
-                    .DistinctBy(x => new {x.Link, x.Location})
-                    .ToList().OrderBy(a => a.Name).ToList();
-                var dict2 = ToDict(filenames, yearGroup);
-                schoolDict.Add(yearGroup.Key.Value, dict2);
+                schoolDict.Add(yearGroup.Key.Value, ToDict2(yearGroup));
             }
 
             mainJson.Schools.Add(school, schoolDict);
@@ -53,45 +48,60 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return mainJson;
     }
 
-    private static  Dictionary<string, Dictionary<string, List<SingleCourseJson>>> ToDict(List<SingleCourseJson> filenames,
-        IGrouping<int?, Ranking> yearGroup)
+    private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> ToDict2(
+        IGrouping<int?, Ranking> yearGroup
+        )
     {
-        var dictionary = new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
-        var coursesNames = yearGroup.ToList().SelectMany(x => x.ByCourse ?? new List<CourseTable>())
-            .Select(x => x.Title).Where(x => !string.IsNullOrEmpty(x)).Distinct().ToList();
-        foreach (var courseName in coursesNames)
+        Dictionary<string, Dictionary<string, List<SingleCourseJson>>> d =
+            new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
+
+        foreach (var v1 in yearGroup)
         {
-            if (courseName == null) continue;
-
-            var singleCourseJsons2 = SingleCourseJsonsGet(yearGroup, filenames);
-            
-            dictionary[courseName] = singleCourseJsons2;
-        }
-
-        return dictionary;
-    }
-
-
-    private static Dictionary<string, List<SingleCourseJson>> SingleCourseJsonsGet(
-        IGrouping<int?, Ranking> yearGroup,
-        List<SingleCourseJson> listCourses)
-    {
-        var singleCourseJsons = new Dictionary<string, List<SingleCourseJson>>();
-        var courseJsons = listCourses.Where(x => IsSimilar(yearGroup, x)).ToList();
-        foreach (SingleCourseJson variable in courseJsons)
-        {
-            string? location = variable.Location;
-            if (!string.IsNullOrEmpty(location))
+            if (v1.ByCourse == null) continue;
+            foreach (var v2 in v1.ByCourse)
             {
-                if (!singleCourseJsons.ContainsKey(location))
-                    singleCourseJsons[location] = new List<SingleCourseJson>();
-
-                singleCourseJsons[location].Add(variable);
+                Add(d, v1, v2);
             }
         }
         
-        return singleCourseJsons;
+        return d;
     }
+
+    private static void Add(Dictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1, CourseTable v2)
+    {
+        //key course, location
+
+        var course = v2.Title;
+        if (string.IsNullOrEmpty(course))
+            return;
+        
+        var location = v2.Location;
+
+        if (string.IsNullOrEmpty(location))
+            return;
+
+        if (!dictionary.ContainsKey(course))
+            dictionary[course] = new Dictionary<string, List<SingleCourseJson>>();
+        if (!dictionary[course].ContainsKey(location))
+            dictionary[course][location] = new List<SingleCourseJson>();
+        
+        dictionary[course][location].Add(Add2(v1,v2));
+    }
+
+    private static SingleCourseJson Add2(Ranking v1, CourseTable v2)
+    {
+        var v1School = v1.School + "/" + v1.Year + "/";
+        return new SingleCourseJson()
+        {
+            Link = v1.ConvertPhaseToFilename(),
+            Name = v1.Phase,
+            BasePath = v1School,
+            Year = v1.Year,
+            School = v1.School,
+            Location = v2.Location
+        };
+    }
+
 
     private static bool IsSimilar(IEnumerable<Ranking> yearGroup, SingleCourseJson singleCourseJson)
     {
