@@ -23,6 +23,12 @@ public class Ranking
     public RankingUrl? Url;
     public int? Year;
 
+
+    public Ranking()
+    {
+        
+    }
+
     /***
      * Ottieni l'hash senza considerare il valore di LastUpdate
      */
@@ -73,20 +79,26 @@ public class Ranking
         return $"{phase1}.json".Replace(" ", "_");
     }
 
-    public SingleCourseJson ToSingleCourseJson()
+    public List<SingleCourseJson> ToSingleCourseJson()
     {
+        var result = new List<SingleCourseJson>();
         var schoolString = School == null ? null : Enum.GetName(typeof(SchoolEnum), School);
-        return new SingleCourseJson
+        var courseTables = this.ByCourse;
+        if (courseTables == null) return result;
+        result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
             Name = Phase,
             BasePath = schoolString + "/" + Year + "/",
             Year = Year,
-            School = School
-        };
+            School = School,
+            Location = variable.Location
+        }));
+
+        return result;
     }
 
-    public StatsSingleCourseJson ToStats()
+    public List<StatsSingleCourseJson> ToStats()
     {
         return StatsSingleCourseJson.From(this);
     }

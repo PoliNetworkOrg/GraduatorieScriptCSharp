@@ -70,7 +70,15 @@ public class StatsJson
             schools[ranking.School.Value] = statsSchool;
         }
 
-        schools[ranking.School.Value].List.Add(ranking.ToStats());
+        var statsSingleCourseJsons = ranking.ToStats().DistinctBy(x => new
+        {
+            x.SingleCourseJson?.Link, x.SingleCourseJson?.Location
+        });
+        foreach (var variable in statsSingleCourseJsons)
+        {
+            schools[ranking.School.Value].List.Add(variable);
+        }
+     
     }
 
     private void WriteToFile(string outFolder)

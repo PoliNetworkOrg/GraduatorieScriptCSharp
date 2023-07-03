@@ -37,8 +37,8 @@ public class ByYearSchoolJson : IndexJsonBase
                 if (schoolGroup.Key is null)
                     continue;
                 var filenames = schoolGroup
-                    .Select(ranking => ranking.ToSingleCourseJson())
-                    .DistinctBy(x => x.Link)
+                    .SelectMany(ranking => ranking.ToSingleCourseJson())
+                    .DistinctBy(x => new {x.Link, x.Location})
                     .ToList().OrderBy(a => a.Name);
                 yearDict.Add(schoolGroup.Key.Value, filenames);
             }
