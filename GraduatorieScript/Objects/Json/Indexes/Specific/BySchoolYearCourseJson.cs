@@ -13,11 +13,13 @@ namespace GraduatorieScript.Objects.Json.Indexes.Specific;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class BySchoolYearCourseJson : IndexJsonBase
 {
-    internal const string PathCustom = "BySchoolYearCourse.json";
+    internal const string PathCustom = "bySchoolYearCourse.json";
 
-    //keys: school, year, phase, course, location
-    public Dictionary<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
-        Schools = new();
+    //keys: school, year, course, location
+    public Dictionary<
+        SchoolEnum,
+        Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+    > Schools = new();
 
     public static BySchoolYearCourseJson? From(RankingsSet? set)
     {
@@ -33,86 +35,104 @@ public class BySchoolYearCourseJson : IndexJsonBase
                 continue;
             var school = schoolGroup.Key.Value;
 
-            var schoolDict = new Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>();
-
             var byYears = schoolGroup.GroupBy(r => r.Year);
-            FromSchool(byYears, schoolDict);
+            var yearsDict = GetYearsDict(byYears);
 
-            mainJson.Schools.Add(school, schoolDict);
+            mainJson.Schools.Add(school, yearsDict);
         }
 
         return mainJson;
     }
 
-    private static void FromSchool(
-        IEnumerable<IGrouping<int?, Ranking>> byYears,
-        IDictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> schoolDict)
+    private static Dictionary<
+        int,
+        Dictionary<string, Dictionary<string, List<SingleCourseJson>>>
+    > GetYearsDict(IEnumerable<IGrouping<int?, Ranking>> byYears)
     {
+        var d =
+            new Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>();
+
         foreach (var yearGroup in byYears)
             if (yearGroup.Key != null)
-                schoolDict.Add(yearGroup.Key.Value, ToDict2(yearGroup));
+                d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
+
+        return d;
     }
 
-    private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> ToDict2(
+    private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> GetCoursesDict(
         IEnumerable<Ranking> yearGroup
     )
     {
-        var d =
-            new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
+        var d = new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
 
-        foreach (var v1 in yearGroup)
+        foreach (var ranking in yearGroup)
         {
-            if (v1.ByCourse == null) continue;
-            foreach (var v2 in v1.ByCourse) Add(d, v1, v2);
+            if (ranking.ByCourse == null)
+                continue;
+
+            var byTitle = ranking.ByCourse.GroupBy(c => c.Title);
+            foreach (var courseGroup in byTitle)
+                AddCourseToDict(d, ranking, courseGroup);
         }
 
         return d;
     }
 
-    private static void Add(IDictionary<string, Dictionary<string, List<SingleCourseJson>>> dictionary, Ranking v1,
-        CourseTable v2)
+    private static void AddCourseToDict(
+        IDictionary<string, Dictionary<string, List<SingleCourseJson>>> d,
+        Ranking ranking,
+        IGrouping<string?, CourseTable> courseGroup
+    )
     {
-        //key course, location
-
-        var course = v2.Title;
-        if (string.IsNullOrEmpty(course))
+        var title = courseGroup.Key;
+        if (string.IsNullOrEmpty(title))
             return;
 
-        var location = v2.Location;
+        if (!d.ContainsKey(title))
+            d[title] = new Dictionary<string, List<SingleCourseJson>>();
 
-        if (string.IsNullOrEmpty(location))
-            return;
-
-        if (!dictionary.ContainsKey(course))
-            dictionary[course] = new Dictionary<string, List<SingleCourseJson>>();
-        if (!dictionary[course].ContainsKey(location))
-            dictionary[course][location] = new List<SingleCourseJson>();
-
-        var singleCourseJson = Add2(v1, v2);
-
-        bool Predicate(SingleCourseJson x)
+        var courseDict = d[title];
+        foreach (var course in courseGroup)
         {
-            return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
-        }
+            var location = course.Location;
 
-        var any = dictionary[course][location].Any(Predicate);
-        if (!any) dictionary[course][location].Add(singleCourseJson);
+            // fixedLocation
+            // esempio: Urbanistica 2022 ha un solo corso senza location, ma anche quello
+            // deve comparire nella lista
+            // fix: se un corso non ha location, si inserisce un valore 0
+            var fixedLocation = string.IsNullOrEmpty(location) ? "0" : location;
+
+            if (!courseDict.ContainsKey(fixedLocation))
+                courseDict[fixedLocation] = new List<SingleCourseJson>();
+
+            var locationDict = courseDict[fixedLocation];
+            var singleCourseJson = createCourseJson(ranking, course);
+
+            bool IsThisCourse(SingleCourseJson x)
+            {
+                return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
+            }
+
+            if (locationDict.Any(IsThisCourse))
+                continue;
+
+            locationDict.Add(singleCourseJson);
+        }
     }
 
-    private static SingleCourseJson Add2(Ranking v1, CourseTable v2)
+    private static SingleCourseJson createCourseJson(Ranking ranking, CourseTable course)
     {
-        var v1School = v1.School + "/" + v1.Year + "/";
+        var basePath = ranking.School + "/" + ranking.Year + "/";
         return new SingleCourseJson
         {
-            Link = v1.ConvertPhaseToFilename(),
-            Name = v1.Phase,
-            BasePath = v1School,
-            Year = v1.Year,
-            School = v1.School,
-            Location = v2.Location
+            Link = ranking.ConvertPhaseToFilename(),
+            Name = ranking.Phase,
+            BasePath = basePath,
+            Year = ranking.Year,
+            School = ranking.School,
+            Location = course.Location
         };
     }
-
 
     private static bool IsSimilar(IEnumerable<Ranking> yearGroup, SingleCourseJson singleCourseJson)
     {
@@ -120,13 +140,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
         bool Predicate(Ranking v1)
         {
-            return singleCourseJson.School == v1.School && singleCourseJson.Year == v1.Year &&
-                   v1.Phase == singleCourseJson.Name;
+            return singleCourseJson.School == v1.School
+                && singleCourseJson.Year == v1.Year
+                && v1.Phase == singleCourseJson.Name;
         }
 
         return enumerable.Any(Predicate);
     }
-
 
     public static RankingsSet? Parse(string dataFolder)
     {
@@ -154,8 +174,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
     {
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)
-        foreach (var year in school.Value)
-            RankingsAddSingleYearSchool(year, outFolder, school, rankings);
+            foreach (var year in school.Value)
+                RankingsAddSingleYearSchool(year, outFolder, school, rankings);
 
         return rankings;
     }
@@ -163,18 +183,23 @@ public class BySchoolYearCourseJson : IndexJsonBase
     private static void RankingsAddSingleYearSchool(
         KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
-            school,
-        ICollection<Ranking> rankings)
+        KeyValuePair<
+            SchoolEnum,
+            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+        > school,
+        ICollection<Ranking> rankings
+    )
     {
         var actions = new List<Action>();
         foreach (var filename in year.Value)
         {
             Action Selector(KeyValuePair<string, List<SingleCourseJson>> variable)
             {
-                return () => { RankingAdd(school, year, outFolder, variable, rankings); };
+                return () =>
+                {
+                    RankingAdd(school, year, outFolder, variable, rankings);
+                };
             }
-
 
             var collection = filename.Value.Select(Selector);
             actions.AddRange(collection);
@@ -183,23 +208,31 @@ public class BySchoolYearCourseJson : IndexJsonBase
         ParallelRun.Run(actions.ToArray());
     }
 
-
     private static void RankingAdd(
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
-            school,
+        KeyValuePair<
+            SchoolEnum,
+            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+        > school,
         KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
         KeyValuePair<string, List<SingleCourseJson>> filename,
-        ICollection<Ranking> rankings)
+        ICollection<Ranking> rankings
+    )
     {
-        foreach (var variable in filename.Value) RankingAddSingle(school, year, outFolder, rankings, variable);
+        foreach (var variable in filename.Value)
+            RankingAddSingle(school, year, outFolder, rankings, variable);
     }
 
     private static void RankingAddSingle(
-        KeyValuePair<SchoolEnum, Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>>
-            school, KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
-        string outFolder, ICollection<Ranking> rankings,
-        SingleCourseJson variable)
+        KeyValuePair<
+            SchoolEnum,
+            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+        > school,
+        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
+        string outFolder,
+        ICollection<Ranking> rankings,
+        SingleCourseJson variable
+    )
     {
         var schoolKey = school.Key.ToString();
         var yearKey = year.Key.ToString();
@@ -216,17 +249,27 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     private static void AddToRankings(ICollection<Ranking> rankings, Ranking ranking)
     {
-        if (rankings.Any(x =>
-                x.School == ranking.School && x.Year == ranking.Year && Similar(x.ByCourse, ranking.ByCourse)))
+        if (
+            rankings.Any(
+                x =>
+                    x.School == ranking.School
+                    && x.Year == ranking.Year
+                    && Similar(x.ByCourse, ranking.ByCourse)
+            )
+        )
             return;
 
         rankings.Add(ranking);
     }
 
-    private static bool Similar(IReadOnlyCollection<CourseTable>? a, IReadOnlyCollection<CourseTable>? b)
+    private static bool Similar(
+        IReadOnlyCollection<CourseTable>? a,
+        IReadOnlyCollection<CourseTable>? b
+    )
     {
         if (a == null || b == null)
             return false;
-        return a.Count == b.Count && a.Select(variable => b.Any(x => x.Title == variable.Title)).All(boolB => boolB);
+        return a.Count == b.Count
+            && a.Select(variable => b.Any(x => x.Title == variable.Title)).All(boolB => boolB);
     }
 }
