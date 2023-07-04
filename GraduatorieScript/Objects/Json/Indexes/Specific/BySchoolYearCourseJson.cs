@@ -52,11 +52,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var d =
             new Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>();
 
-        foreach (var yearGroup in byYears)
-            if (yearGroup.Key != null)
-                d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
+        foreach (var yearGroup in byYears) GetYearsDictSingle(yearGroup, d);
 
         return d;
+    }
+
+    private static void GetYearsDictSingle(IGrouping<int?, Ranking> yearGroup,
+        IDictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> d)
+    {
+        if (yearGroup.Key != null) d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
     }
 
     private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> GetCoursesDict(
@@ -106,7 +110,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
                 courseDict[fixedLocation] = new List<SingleCourseJson>();
 
             var locationDict = courseDict[fixedLocation];
-            var singleCourseJson = createCourseJson(ranking, course);
+            var singleCourseJson = CreateCourseJson(ranking, course);
 
             bool IsThisCourse(SingleCourseJson x)
             {
@@ -120,7 +124,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         }
     }
 
-    private static SingleCourseJson createCourseJson(Ranking ranking, CourseTable course)
+    private static SingleCourseJson CreateCourseJson(Ranking ranking, CourseTable course)
     {
         var basePath = ranking.School + "/" + ranking.Year + "/";
         return new SingleCourseJson
