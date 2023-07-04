@@ -11,13 +11,11 @@ public class StatsSingleCourseJson
     public SingleCourseJson? SingleCourseJson;
     public RankingSummary? Stats;
 
-    public static StatsSingleCourseJson From(Ranking ranking)
+    public static List<StatsSingleCourseJson> From(Ranking ranking)
     {
-        return new StatsSingleCourseJson
-        {
-            SingleCourseJson = ranking.ToSingleCourseJson(),
-            Stats = ranking.RankingSummary
-        };
+        var singleCourseJsons = ranking.ToSingleCourseJson();
+        return singleCourseJsons.Select(variable => new StatsSingleCourseJson
+            { SingleCourseJson = variable, Stats = ranking.RankingSummary }).ToList();
     }
 
     public int GetHashWithoutLastUpdate()
