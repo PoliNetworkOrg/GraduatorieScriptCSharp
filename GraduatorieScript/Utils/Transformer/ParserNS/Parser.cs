@@ -302,7 +302,7 @@ public static class Parser
     private static StudentResult CourseTableRowToStudentResult(List<MeritTableRow> meritTableData, CourseTableRow row)
     {
         var absolute = meritTableData.Find(r => r.Id == row.Id);
-        var rowCanEnroll = row.CanEnroll ??false;
+        var rowCanEnroll = row.CanEnroll ?? false;
         var student = new StudentResult
         {
             Id = row.Id,
@@ -391,7 +391,7 @@ public static class Parser
 
         if (string.IsNullOrEmpty(a) || string.IsNullOrEmpty(b))
             return false;
-        
+
         a = a.Replace('\\', '/');
         b = b.Replace('\\', '/');
 
@@ -646,7 +646,7 @@ public static class Parser
     {
         if (string.IsNullOrEmpty(schoolStr))
             return SchoolEnum.Unknown;
-        
+
         if (schoolStr.Contains("design"))
             return SchoolEnum.Design;
         if (schoolStr.Contains("ingegneria") && !schoolStr.Contains("architettura"))

@@ -70,11 +70,9 @@ public abstract class IndexJsonBase
         if (ranking.Year == 2020)
         {
             ;
-            if (ranking.School == SchoolEnum.Design)
-            {
-                ;
-            }
+            if (ranking.School == SchoolEnum.Design) ;
         }
+
         return hashThis == hashJ;
     }
 

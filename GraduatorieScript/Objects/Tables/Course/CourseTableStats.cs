@@ -29,9 +29,7 @@ public class CourseTableStats
         i ^= MinScoreToEnroll?.GetHashCode() ?? "MinScoreToEnroll".GetHashCode();
 
         if (HowManyOfa == null)
-        {
             i ^= "HowManyOfa".GetHashCode();
-        }
         else
             foreach (var variable in HowManyOfa)
             {
@@ -41,17 +39,13 @@ public class CourseTableStats
 
 
         if (AveragePartialScores == null)
-        {
             i ^= "AveragePartialScores".GetHashCode();
-        }
         else
-        {
             foreach (var variable in AveragePartialScores)
             {
                 i ^= variable.Key.GetHashCode();
                 i ^= variable.Value.GetHashCode();
             }
-        }
 
         //return result
         return i;
@@ -80,7 +74,7 @@ public class CourseTableStats
 
         var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll ?? false).ToList();
         var minValueToEnroll =
-            studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : (decimal?)null;
+            studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : null;
         var resultsOfStudentsWhoCanEnroll = studentsWhoCanEnroll.Select(x => x.Result);
         var resultsOfAllStudents = courseTableRows.Select(x => x.Result);
         var yearBornStudents = courseTableRows.Select(GetYearBorn);
@@ -100,7 +94,7 @@ public class CourseTableStats
     {
         if (yearBornStudents == null)
             return null;
-        
+
         var bornStudents = yearBornStudents.ToList();
         return !bornStudents.Any() ? null : MathRound(bornStudents.Average());
     }
@@ -109,7 +103,7 @@ public class CourseTableStats
     {
         if (testResults == null)
             return null;
-        
+
         var enumerable = testResults.ToList();
         return !enumerable.Any() ? null : MathRound(enumerable.Average());
     }
@@ -118,7 +112,7 @@ public class CourseTableStats
     {
         if (testResults == null)
             return null;
-        
+
         return testResults.Count == 0 ? null : MathRound(testResults.Average());
     }
 
@@ -126,7 +120,7 @@ public class CourseTableStats
     {
         if (testResults == null)
             return null;
-        
+
         return testResults.Count == 0 ? null : MathRound(testResults.Average());
     }
 

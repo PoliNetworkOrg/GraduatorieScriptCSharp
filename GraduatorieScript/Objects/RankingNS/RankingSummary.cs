@@ -15,7 +15,8 @@ public class RankingSummary
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = (HowManyStudents ?? "HowManyStudents".GetHashCode()) ^ (HowManyCanEnroll ?? "HowManyCanEnroll".GetHashCode());
+        var i = (HowManyStudents ?? "HowManyStudents".GetHashCode()) ^
+                (HowManyCanEnroll ?? "HowManyCanEnroll".GetHashCode());
         if (CourseSummarized != null)
             i = CourseSummarized.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
         if (ResultsSummarized != null)

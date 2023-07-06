@@ -71,7 +71,7 @@ public class HtmlPage
                 return true;
 
             Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
-            if (localPath != null) 
+            if (localPath != null)
                 File.WriteAllText(localPath, _htmlString);
 
             return true;
