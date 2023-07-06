@@ -20,27 +20,38 @@ public class CourseTableStats
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = AverageBirthYear?.GetHashCode() ?? 0;
-        i ^= AverageEnglishCorrectAnswers?.GetHashCode() ?? 0;
-        i ^= AverageOfWhoPassed?.GetHashCode() ?? 0;
-        i ^= AverageScoresOfAllStudents?.GetHashCode() ?? 0;
-        i ^= Location?.GetHashCode() ?? 0;
-        i ^= Title?.GetHashCode() ?? 0;
+        var i = AverageBirthYear?.GetHashCode() ?? "AverageBirthYear".GetHashCode();
+        i ^= AverageEnglishCorrectAnswers?.GetHashCode() ?? "AverageEnglishCorrectAnswers".GetHashCode();
+        i ^= AverageOfWhoPassed?.GetHashCode() ?? "AverageOfWhoPassed".GetHashCode();
+        i ^= AverageScoresOfAllStudents?.GetHashCode() ?? "AverageScoresOfAllStudents".GetHashCode();
+        i ^= Location?.GetHashCode() ?? "Location".GetHashCode();
+        i ^= Title?.GetHashCode() ?? "Title".GetHashCode();
         i ^= MinScoreToEnroll?.GetHashCode() ?? "MinScoreToEnroll".GetHashCode();
 
-        if (HowManyOfa != null)
+        if (HowManyOfa == null)
+        {
+            i ^= "HowManyOfa".GetHashCode();
+        }
+        else
             foreach (var variable in HowManyOfa)
             {
                 i ^= variable.Key.GetHashCode();
                 i ^= variable.Value.GetHashCode();
             }
 
-        if (AveragePartialScores != null)
+
+        if (AveragePartialScores == null)
+        {
+            i ^= "AveragePartialScores".GetHashCode();
+        }
+        else
+        {
             foreach (var variable in AveragePartialScores)
             {
                 i ^= variable.Key.GetHashCode();
                 i ^= variable.Value.GetHashCode();
             }
+        }
 
         //return result
         return i;

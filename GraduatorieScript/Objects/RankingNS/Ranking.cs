@@ -33,12 +33,16 @@ public class Ranking
         i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
         i ^= Phase?.GetHashCode() ?? "Phase".GetHashCode();
         i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
-        i ^= School.GetHashCode();
+        i ^= School?.GetHashCode() ?? "School".GetHashCode();
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
 
-        if (ByCourse != null)
+        if (ByCourse == null)
+        {
+            i ^= "ByCourse".GetHashCode();
+        }
+        else
             i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
 
         return i;

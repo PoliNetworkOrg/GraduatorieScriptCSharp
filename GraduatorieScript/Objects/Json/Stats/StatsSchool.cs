@@ -12,7 +12,7 @@ public class StatsSchool
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = NumStudents ?? 0;
+        var i = NumStudents ?? "NumStudents".GetHashCode();
         return List.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
     }
 }

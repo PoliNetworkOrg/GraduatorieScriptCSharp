@@ -10,9 +10,9 @@ namespace GraduatorieScript.Objects;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class HtmlPage
 {
-    private readonly string _htmlString;
-    public readonly HtmlDocument Html;
-    public readonly RankingUrl Url;
+    private readonly string? _htmlString;
+    public readonly HtmlDocument? Html;
+    public readonly RankingUrl? Url;
 
     public HtmlPage(string html, RankingUrl url)
     {

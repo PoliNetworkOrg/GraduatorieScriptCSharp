@@ -18,6 +18,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20006_4fbc_html\\2022_20006_generale.html",
       "rows": [
         {
           "birthDate": "1999-01-24",
@@ -851,7 +852,8 @@
             "Lettera Motivazionale": 12.00
           }
         }
-      ]
+      ],
+      "year": 2022
     }
   ],
   "byMerit": {
@@ -861,6 +863,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": "1999-01-24",
@@ -1616,8 +1619,8 @@
       },
       {
         "birthDate": "2001-06-06",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "a62a38020329b3e68669",
         "ofa": {},
@@ -1632,8 +1635,8 @@
       },
       {
         "birthDate": "2002-12-17",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "54aba625c605eb807b31",
         "ofa": {},
@@ -1648,8 +1651,8 @@
       },
       {
         "birthDate": "2002-12-24",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "f5b46e5a5da756d96e28",
         "ofa": {},
@@ -1664,8 +1667,8 @@
       },
       {
         "birthDate": "2003-07-08",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "6b552c9a84b888bb061a",
         "ofa": {},
@@ -1680,8 +1683,8 @@
       },
       {
         "birthDate": "1999-11-14",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "76c240d92ae9b7051b0d",
         "ofa": {},
@@ -1694,10 +1697,11 @@
           "Lettera Motivazionale": 12.00
         }
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-30T12:39:23.4855093+00:00",
+  "lastUpdate": "2023-07-06T21:16:18.7332165+02:00",
   "phase": "Standard",
   "rankingSummary": {
     "courseSummarized": [
@@ -1717,7 +1721,7 @@
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
     ],
-    "howManyCanEnroll": 52,
+    "howManyCanEnroll": 47,
     "howManyStudents": 52,
     "resultsSummarized": {
       "42": 2,
@@ -1757,7 +1761,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20006_4fbc_html/2022_20006_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20006_4fbc_html\\2022_20006_generale.html"
   },
   "year": 2022
 }
