@@ -18,6 +18,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20008_html\\2022_20008_generale.html",
       "rows": [
         {
           "birthDate": "2003-02-21",
@@ -2051,7 +2052,8 @@
             "Lettera Motivazionale": 10.00
           }
         }
-      ]
+      ],
+      "year": 2022
     }
   ],
   "byMerit": {
@@ -2061,6 +2063,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": "2003-02-21",
@@ -3888,8 +3891,8 @@
       },
       {
         "birthDate": "2003-06-05",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "46f0fc2eb2c2fb314969",
         "ofa": {},
@@ -3904,8 +3907,8 @@
       },
       {
         "birthDate": "2003-07-21",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "647f8bd92f7215ca7488",
         "ofa": {},
@@ -3920,8 +3923,8 @@
       },
       {
         "birthDate": "2003-10-05",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "82927813ad42db08f64b",
         "ofa": {},
@@ -3936,8 +3939,8 @@
       },
       {
         "birthDate": "2003-07-22",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "c9c086195d12ee889845",
         "ofa": {},
@@ -3952,8 +3955,8 @@
       },
       {
         "birthDate": "2003-10-05",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "13299131d4fe14b97f06",
         "ofa": {},
@@ -3968,8 +3971,8 @@
       },
       {
         "birthDate": "2001-04-05",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "19f75a915d17fef5416c",
         "ofa": {},
@@ -3984,8 +3987,8 @@
       },
       {
         "birthDate": "2003-05-13",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "405936f74dd2fb20c5a6",
         "ofa": {},
@@ -4000,8 +4003,8 @@
       },
       {
         "birthDate": "2003-05-27",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "ac93b286601059b021e6",
         "ofa": {},
@@ -4016,8 +4019,8 @@
       },
       {
         "birthDate": "2002-08-06",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "c51a64a1bde72e29a4bd",
         "ofa": {},
@@ -4032,8 +4035,8 @@
       },
       {
         "birthDate": "2003-05-07",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "2b844d1db26dd5538c84",
         "ofa": {},
@@ -4048,8 +4051,8 @@
       },
       {
         "birthDate": "2002-06-16",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "d234f28456d68136bde1",
         "ofa": {},
@@ -4064,8 +4067,8 @@
       },
       {
         "birthDate": "2003-01-11",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "3594603252d22a2adf5f",
         "ofa": {},
@@ -4080,8 +4083,8 @@
       },
       {
         "birthDate": "2003-12-12",
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "9ecac6fac8d9fddd7bdd",
         "ofa": {},
@@ -4094,10 +4097,11 @@
           "Lettera Motivazionale": 10.00
         }
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-30T12:39:18.9168968+00:00",
+  "lastUpdate": "2023-07-06T21:16:18.8089682+02:00",
   "phase": "Anticipata",
   "rankingSummary": {
     "courseSummarized": [
@@ -4117,7 +4121,7 @@
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
     ],
-    "howManyCanEnroll": 123,
+    "howManyCanEnroll": 110,
     "howManyStudents": 127,
     "resultsSummarized": {
       "40": 1,
@@ -4175,7 +4179,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20008_html/2022_20008_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20008_html\\2022_20008_generale.html"
   },
   "year": 2022
 }

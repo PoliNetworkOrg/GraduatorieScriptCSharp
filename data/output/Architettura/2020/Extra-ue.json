@@ -23,6 +23,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "2000-01-18",
@@ -424,7 +425,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MANTOVA",
@@ -449,6 +451,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "1994-05-25",
@@ -1090,7 +1093,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MILANO LEONARDO",
@@ -1115,6 +1119,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "1999-08-14",
@@ -2256,7 +2261,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "PIACENZA",
@@ -2281,6 +2287,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "1994-05-25",
@@ -3002,7 +3009,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MI LEONARDO",
@@ -3027,6 +3035,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "1999-08-02",
@@ -6448,7 +6457,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "PIACENZA",
@@ -6473,6 +6483,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html",
       "rows": [
         {
           "birthDate": "2002-07-08",
@@ -8394,7 +8405,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2020
     }
   ],
   "byMerit": {
@@ -8404,6 +8416,7 @@
       "Posizione Assoluta",
       "Stato"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -11247,10 +11260,11 @@
         "result": 0.40,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T12:39:13.9955966+00:00",
+  "lastUpdate": "2023-07-06T21:16:06.9482484+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -11421,7 +11435,7 @@
   "school": "Architettura",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2020_20005_html/2020_20005_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2020_20005_html\\2020_20005_generale.html"
   },
   "year": 2020
 }

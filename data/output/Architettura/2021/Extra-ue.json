@@ -21,6 +21,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "1973-11-01",
@@ -706,7 +707,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     },
     {
       "location": "MANTOVA",
@@ -729,6 +731,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "2000-12-22",
@@ -1702,7 +1705,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     },
     {
       "location": "MILANO LEONARDO",
@@ -1725,6 +1729,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "2000-09-05",
@@ -2968,7 +2973,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     },
     {
       "location": "PIACENZA",
@@ -2991,6 +2997,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "1999-04-23",
@@ -4108,7 +4115,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     },
     {
       "location": "MI LEONARDO",
@@ -4131,6 +4139,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "2003-01-17",
@@ -10144,7 +10153,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     },
     {
       "location": "PIACENZA",
@@ -10167,6 +10177,7 @@
         "Disegno e Rappresentazione",
         "Fisica e Matematica"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html",
       "rows": [
         {
           "birthDate": "2002-02-14",
@@ -14452,7 +14463,8 @@
             "Fisica e Matematica": -1.30
           }
         }
-      ]
+      ],
+      "year": 2021
     }
   ],
   "byMerit": {
@@ -14461,6 +14473,7 @@
       "Posizione Assoluta",
       "Stato"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -18878,10 +18891,11 @@
         "result": -0.80,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T12:39:00.7549079+00:00",
+  "lastUpdate": "2023-07-06T21:16:11.8669131+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -19044,7 +19058,7 @@
   "school": "Architettura",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2021_20005_html/2021_20005_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2021_20005_html\\2021_20005_generale.html"
   },
   "year": 2021
 }

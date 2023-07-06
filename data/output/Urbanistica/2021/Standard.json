@@ -17,6 +17,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2021_20006_html\\2021_20006_generale.html",
       "rows": [
         {
           "birthDate": "2001-03-10",
@@ -1202,7 +1203,8 @@
             "Lettera Motivazionale": 11.00
           }
         }
-      ]
+      ],
+      "year": 2021
     }
   ],
   "byMerit": {
@@ -1211,6 +1213,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -2018,8 +2021,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2030,8 +2033,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2042,8 +2045,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2054,8 +2057,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2066,8 +2069,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2078,8 +2081,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2090,8 +2093,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -2100,10 +2103,11 @@
         "result": 37.00,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-30T12:39:16.1232015+00:00",
+  "lastUpdate": "2023-07-06T21:16:11.8863509+02:00",
   "phase": "Standard",
   "rankingSummary": {
     "courseSummarized": [
@@ -2123,7 +2127,7 @@
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
     ],
-    "howManyCanEnroll": 61,
+    "howManyCanEnroll": 54,
     "howManyStudents": 74,
     "resultsSummarized": {
       "37": 2,
@@ -2169,7 +2173,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2021_20006_html/2021_20006_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2021_20006_html\\2021_20006_generale.html"
   },
   "year": 2021
 }

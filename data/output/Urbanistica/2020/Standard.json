@@ -17,6 +17,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20006_html\\2020_20006_generale.html",
       "rows": [
         {
           "birthDate": "1998-04-29",
@@ -1186,7 +1187,8 @@
             "Lettera Motivazionale": 11.00
           }
         }
-      ]
+      ],
+      "year": 2020
     }
   ],
   "byMerit": {
@@ -1195,6 +1197,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -2072,10 +2075,11 @@
         "result": 45.00,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-30T12:39:18.6991187+00:00",
+  "lastUpdate": "2023-07-06T21:16:06.9555839+02:00",
   "phase": "Standard",
   "rankingSummary": {
     "courseSummarized": [
@@ -2142,7 +2146,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2020_20006_html/2020_20006_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2020_20006_html\\2020_20006_generale.html"
   },
   "year": 2020
 }

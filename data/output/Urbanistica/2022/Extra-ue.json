@@ -18,6 +18,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20007_html\\2022_20007_generale.html",
       "rows": [
         {
           "birthDate": "2003-05-31",
@@ -35,7 +36,8 @@
             "Lettera Motivazionale": 17.00
           }
         }
-      ]
+      ],
+      "year": 2022
     }
   ],
   "byMerit": {
@@ -45,6 +47,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -58,10 +61,11 @@
         "result": 60.00,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T12:39:18.8936825+00:00",
+  "lastUpdate": "2023-07-06T21:16:18.7525633+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -90,7 +94,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20007_html/2022_20007_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20007_html\\2022_20007_generale.html"
   },
   "year": 2022
 }

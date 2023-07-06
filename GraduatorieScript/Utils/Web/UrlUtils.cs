@@ -12,9 +12,9 @@ public static class UrlUtils
     /// <param name="href">The href from the html anchor tag taken from the news content.</param>
     /// <param name="domain">https://example.com</param>
     /// <returns>The full url</returns>
-    public static string UrlifyLocalHref(string href, string domain)
+    public static string UrlifyLocalHref(string href, string? domain)
     {
-        return !href.Contains(domain) ? domain + href : href;
+        return domain != null && !href.Contains(domain) ? domain + href : href;
     }
 
     public static bool CheckUrl(RankingUrl? url)

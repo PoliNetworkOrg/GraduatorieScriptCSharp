@@ -24,6 +24,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "2004-04-03",
@@ -605,7 +606,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": -1.25
           }
         }
-      ]
+      ],
+      "year": 2022
     },
     {
       "location": "MANTOVA",
@@ -631,6 +633,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "2001-03-25",
@@ -1312,7 +1315,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": -1.25
           }
         }
-      ]
+      ],
+      "year": 2022
     },
     {
       "location": "MILANO LEONARDO",
@@ -1338,6 +1342,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "2002-04-12",
@@ -2239,7 +2244,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": 0.00
           }
         }
-      ]
+      ],
+      "year": 2022
     },
     {
       "location": "PIACENZA",
@@ -2265,6 +2271,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "1994-04-21",
@@ -3026,7 +3033,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": 0.00
           }
         }
-      ]
+      ],
+      "year": 2022
     },
     {
       "location": "MI LEONARDO",
@@ -3052,6 +3060,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "2004-02-11",
@@ -8353,7 +8362,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": -0.25
           }
         }
-      ]
+      ],
+      "year": 2022
     },
     {
       "location": "PIACENZA",
@@ -8379,6 +8389,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html",
       "rows": [
         {
           "birthDate": "2005-02-13",
@@ -13020,7 +13031,8 @@
             "Conoscenze aquisite negli studi, storia e cultura generale": -0.25
           }
         }
-      ]
+      ],
+      "year": 2022
     }
   ],
   "byMerit": {
@@ -13031,6 +13043,7 @@
       "Posizione Assoluta",
       "Stato"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": "2004-02-11",
@@ -18566,10 +18579,11 @@
           "Conoscenze aquisite negli studi, storia e cultura generale": -0.25
         }
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T12:39:21.1587234+00:00",
+  "lastUpdate": "2023-07-06T21:16:27.3632087+02:00",
   "phase": "Extra-ue Seconda Graduatoria",
   "rankingSummary": {
     "courseSummarized": [
@@ -18728,7 +18742,7 @@
   "school": "Architettura",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2022_20104_47ef_html/2022_20104_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2022_20104_47ef_html\\2022_20104_generale.html"
   },
   "year": 2022
 }

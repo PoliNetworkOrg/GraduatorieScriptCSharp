@@ -13,7 +13,7 @@ public class StatsYear
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = NumStudents ?? 0;
+        var i = NumStudents ?? "NumStudents".GetHashCode();
 
         var enumerable = from variable in Schools
             let variableKey = (int)variable.Key

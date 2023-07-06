@@ -17,6 +17,7 @@
         "Elaborato",
         "Lettera Motivazionale"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it\\2020_20008_html\\2020_20008_generale.html",
       "rows": [
         {
           "birthDate": "2002-01-27",
@@ -1746,7 +1747,8 @@
             "Lettera Motivazionale": 7.00
           }
         }
-      ]
+      ],
+      "year": 2020
     }
   ],
   "byMerit": {
@@ -1755,6 +1757,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": null,
     "rows": [
       {
         "birthDate": null,
@@ -3018,8 +3021,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -3030,8 +3033,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -3042,8 +3045,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {},
@@ -3052,10 +3055,11 @@
         "result": 36.00,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": null
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-06-30T12:39:00.9121085+00:00",
+  "lastUpdate": "2023-07-06T21:16:06.9662348+02:00",
   "phase": "Anticipata",
   "rankingSummary": {
     "courseSummarized": [
@@ -3075,7 +3079,7 @@
         "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
       }
     ],
-    "howManyCanEnroll": 108,
+    "howManyCanEnroll": 105,
     "howManyStudents": 108,
     "resultsSummarized": {
       "36": 1,
@@ -3134,7 +3138,7 @@
   "school": "Urbanistica",
   "url": {
     "pageEnum": 1,
-    "url": "http://www.risultati-ammissione.polimi.it/2020_20008_html/2020_20008_generale.html"
+    "url": "http://www.risultati-ammissione.polimi.it\\2020_20008_html\\2020_20008_generale.html"
   },
   "year": 2020
 }

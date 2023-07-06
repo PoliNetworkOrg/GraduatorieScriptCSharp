@@ -15,7 +15,8 @@ public class RankingSummary
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = (HowManyStudents ?? 0) ^ (HowManyCanEnroll ?? 0);
+        var i = (HowManyStudents ?? "HowManyStudents".GetHashCode()) ^
+                (HowManyCanEnroll ?? "HowManyCanEnroll".GetHashCode());
         if (CourseSummarized != null)
             i = CourseSummarized.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
         if (ResultsSummarized != null)
@@ -34,7 +35,7 @@ public class RankingSummary
         var courseTableStatsList = ranking.ByCourse?.Select(x => x.GetStats())
             .OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
 
-        var howManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll);
+        var howManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll ?? false);
 
         return new RankingSummary
         {
@@ -50,13 +51,22 @@ public class RankingSummary
         if (byMeritRows == null) return null;
 
         var results = new Dictionary<int, int>();
-        var enumerable = byMeritRows.Select(variable => (int)Math.Round(variable.Result));
+        var enumerable = byMeritRows.Select(Round);
         foreach (var score in enumerable)
         {
-            results.TryAdd(score, 0);
-            results[score] += 1;
+            if (score == null) continue;
+            results.TryAdd(score.Value, 0);
+            results[score.Value] += 1;
         }
 
         return results;
+    }
+
+    private static int? Round(StudentResult variable)
+    {
+        var variableResult = variable.Result;
+        if (variableResult == null)
+            return null;
+        return (int)Math.Round(variableResult.Value);
     }
 }
