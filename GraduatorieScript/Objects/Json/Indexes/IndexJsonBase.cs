@@ -67,12 +67,6 @@ public abstract class IndexJsonBase
         var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
-        if (ranking.Year == 2020)
-        {
-            ;
-            if (ranking.School == SchoolEnum.Design) ;
-        }
-
         return hashThis == hashJ;
     }
 
