@@ -78,7 +78,7 @@ public class CourseTableStats
         if (count == 0 || courseTableRows is null)
             return stats;
 
-        var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll).ToList();
+        var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll ?? false).ToList();
         var minValueToEnroll =
             studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : (decimal?)null;
         var resultsOfStudentsWhoCanEnroll = studentsWhoCanEnroll.Select(x => x.Result);
@@ -96,25 +96,37 @@ public class CourseTableStats
         return stats;
     }
 
-    private static double? AverageList(IEnumerable<double?> yearBornStudents)
+    private static double? AverageList(IEnumerable<double?>? yearBornStudents)
     {
+        if (yearBornStudents == null)
+            return null;
+        
         var bornStudents = yearBornStudents.ToList();
         return !bornStudents.Any() ? null : MathRound(bornStudents.Average());
     }
 
-    private static decimal? AverageList(IEnumerable<decimal> testResults)
+    private static decimal? AverageList(IEnumerable<decimal?>? testResults)
     {
+        if (testResults == null)
+            return null;
+        
         var enumerable = testResults.ToList();
         return !enumerable.Any() ? null : MathRound(enumerable.Average());
     }
 
-    private static double? AverageList(IReadOnlyCollection<int?> testResults)
+    private static double? AverageList(IReadOnlyCollection<int?>? testResults)
     {
+        if (testResults == null)
+            return null;
+        
         return testResults.Count == 0 ? null : MathRound(testResults.Average());
     }
 
-    private static decimal? AverageList(IReadOnlyCollection<decimal> testResults)
+    private static decimal? AverageList(IReadOnlyCollection<decimal>? testResults)
     {
+        if (testResults == null)
+            return null;
+        
         return testResults.Count == 0 ? null : MathRound(testResults.Average());
     }
 
