@@ -20,7 +20,7 @@ public class StatsSingleCourseJson
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
+        var i = "StatsSingleCourseJson".GetHashCode();
         i ^= SingleCourseJson?.GetHashWithoutLastUpdate() ?? "SingleCourseJson".GetHashCode();
         i ^= Stats?.GetHashWithoutLastUpdate() ?? "Stats".GetHashCode();
 

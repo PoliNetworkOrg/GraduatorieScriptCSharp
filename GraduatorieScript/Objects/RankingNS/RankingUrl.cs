@@ -13,7 +13,7 @@ public class RankingUrl
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
+        var i = "RankingUrl".GetHashCode();
         i ^= Url.GetHashCode();
         i ^= PageEnum.GetHashCode();
         return i;

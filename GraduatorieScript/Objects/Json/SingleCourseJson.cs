@@ -22,6 +22,7 @@ public class SingleCourseJson
         var basePathInt = BasePath?.GetHashCode() ?? "BasePath".GetHashCode();
         var yearInt = Year?.GetHashCode() ?? "Year".GetHashCode();
         var schoolInt = School?.GetHashCode() ?? "School".GetHashCode();
-        return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt;
+        var code = "SingleCourseJson".GetHashCode();
+        return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt ^ code;
     }
 }

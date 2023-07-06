@@ -20,7 +20,7 @@ public class StudentResult
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
+        var i = "StudentResult".GetHashCode();
         i ^= BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode();
         i ^= CanEnroll?.GetHashCode() ?? "CanEnroll".GetHashCode();
         i ^= CanEnrollInto?.GetHashCode() ?? "CanEnrollInto".GetHashCode();

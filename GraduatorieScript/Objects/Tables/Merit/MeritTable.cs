@@ -14,7 +14,7 @@ public class MeritTable
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
+        var i = "MeritTable".GetHashCode();
         if (Headers != null)
             i = Headers.Aggregate(i, (current, variable) => current ^ variable.GetHashCode());
         else

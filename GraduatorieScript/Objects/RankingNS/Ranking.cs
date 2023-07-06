@@ -29,7 +29,7 @@ public class Ranking
      */
     public int GetHashWithoutLastUpdate()
     {
-        var i = 0;
+        var i = "Ranking".GetHashCode();
         i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
         i ^= Phase?.GetHashCode() ?? "Phase".GetHashCode();
         i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
