@@ -505,6 +505,18 @@ public static class Parser
         return Table.Create(headers, sections, data, null, null);
     }
 
+    private static bool EnrollCourseToAllowed(string? enrollCourse)
+    {
+        var lower = enrollCourse?.ToLower().Trim();
+
+        if (string.IsNullOrEmpty(lower))
+            return false;
+        if (lower == "-")
+            return false;
+        string[] tester = { "immatricolazione non consentita", "non ammesso", "non idoneo" };
+        return !tester.Any(test => lower.Contains(test));
+    }
+
     private static List<MeritTableRow> ParseMeritTable(Table<List<string>> table)
     {
         List<MeritTableRow> parsedRows = new();
@@ -523,10 +535,7 @@ public static class Parser
             var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
-            var enrollAllowed = !enrollCourse
-                .ToLower()
-                .Contains("immatricolazione non consentita");
-
+            var enrollAllowed = EnrollCourseToAllowed(enrollCourse);
             var ofa = new Dictionary<string, bool>();
 
             var ofaEng = Table.GetFieldByIndex(row, ofaEngIndex);
