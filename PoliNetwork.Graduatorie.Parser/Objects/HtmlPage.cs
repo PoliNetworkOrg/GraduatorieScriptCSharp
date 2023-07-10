@@ -1,5 +1,5 @@
-﻿using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Utils.Web;
+﻿using GraduatorieScraper.Utils.Web;
+using GraduatorieScript.Objects.RankingNS;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;

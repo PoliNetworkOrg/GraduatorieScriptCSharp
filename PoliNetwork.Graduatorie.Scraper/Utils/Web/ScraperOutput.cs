@@ -1,5 +1,4 @@
 ﻿using GraduatorieCommon.Data;
-using GraduatorieScript.Utils.Web;
 
 namespace GraduatorieScraper.Utils.Web;
 

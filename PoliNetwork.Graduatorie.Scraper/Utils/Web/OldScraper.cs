@@ -2,10 +2,9 @@ using GraduatorieCommon.Data;
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Objects;
 using GraduatorieCommon.Utils.ParallelNS;
-using GraduatorieScraper.Utils.Web;
 using HtmlAgilityPack;
 
-namespace GraduatorieScript.Utils.Web;
+namespace GraduatorieScraper.Utils.Web;
 
 public class OldScraper
 {
