@@ -2,6 +2,7 @@
 using GraduatorieCommon.Enums;
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Utils.ParallelNS;
+using GraduatorieScraper.Utils.Web;
 using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
