@@ -1,4 +1,5 @@
-﻿using GraduatorieCommon.Utils.ParallelNS;
+﻿using GraduatorieCommon.Data;
+using GraduatorieCommon.Utils.ParallelNS;
  using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;

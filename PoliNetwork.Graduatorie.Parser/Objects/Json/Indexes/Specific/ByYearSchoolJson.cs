@@ -1,3 +1,4 @@
+using GraduatorieCommon.Data;
 using GraduatorieCommon.Enums;
  using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils.Transformer.ParserNS;
