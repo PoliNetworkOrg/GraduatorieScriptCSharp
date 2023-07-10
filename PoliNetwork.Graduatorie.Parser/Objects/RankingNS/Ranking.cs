@@ -2,8 +2,13 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Objects.Json;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
-namespace PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -98,6 +103,6 @@ public class Ranking
 
     public RankingSummary CreateSummary()
     {
-        return RankingSummary.From(this);
+        return this.RankingSummary?.From(this);
     }
 }

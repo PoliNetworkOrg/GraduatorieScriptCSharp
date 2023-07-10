@@ -1,5 +1,7 @@
-﻿using PoliNetwork.Graduatorie.Common.Enums;
+﻿using PoliNetwork.Core.Utils;
+using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
+using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
