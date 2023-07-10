@@ -1,5 +1,6 @@
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Objects;
+using GraduatorieCommon.Utils.ParallelNS;
 using GraduatorieScript.Data;
 using HtmlAgilityPack;
 

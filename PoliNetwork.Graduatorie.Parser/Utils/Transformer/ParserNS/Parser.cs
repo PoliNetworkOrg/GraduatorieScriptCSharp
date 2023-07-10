@@ -1,5 +1,6 @@
 ﻿using GraduatorieCommon.Enums;
 using GraduatorieCommon.Extensions;
+using GraduatorieCommon.Utils.ParallelNS;
 using GraduatorieScript.Data;
 using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
