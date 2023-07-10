@@ -57,7 +57,7 @@ public class ArgsConfig
 
     public void Print()
     {
-        Console.WriteLine($"[INFO] dataFolder: {this.DataFolder}");
+        Console.WriteLine($"[INFO] dataFolder: {DataFolder}");
         Console.WriteLine($"[INFO] thread max count: {ParallelRun.MaxDegreeOfParallelism}");
     }
 }
