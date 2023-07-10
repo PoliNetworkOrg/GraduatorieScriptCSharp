@@ -1,12 +1,12 @@
 ﻿using GraduatorieCommon.Data;
 using GraduatorieCommon.Utils.ParallelNS;
+using GraduatorieScraper.Utils.Web;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer.ParserNS;
-using GraduatorieScript.Utils.Web;
-using PoliNetwork.Core.Utils;
+ using PoliNetwork.Core.Utils;
 
 namespace GraduatorieScript.Main;
 
