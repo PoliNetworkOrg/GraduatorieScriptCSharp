@@ -37,14 +37,49 @@ public class RankingSummary
 
         var howManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll ?? false);
 
+
+        var groupBy = courseTableStatsList?.GroupBy(x =>
+        {
+            TitleLocation titleLocation;
+            titleLocation.Title = x.Title;
+            titleLocation.Location = x.Location;
+            return titleLocation;
+        });
+        var distinctBy = groupBy
+            ?.DistinctBy(x =>
+            {
+                TitleLocation titleLocation;
+                titleLocation.Title = x.Key.Title;
+                titleLocation.Location = x.Key.Location;
+                return titleLocation;
+            });
+        var tableStatsList =
+            distinctBy
+                ?.ToList();
+        var tableStatsList2 = Get(tableStatsList);
         return new RankingSummary
         {
             HowManyCanEnroll = howManyCanEnroll,
             HowManyStudents = byMeritRows?.Count,
             ResultsSummarized = keyValuePairs,
-            CourseSummarized = courseTableStatsList
+            CourseSummarized = tableStatsList2
         };
     }
+
+    private static List<CourseTableStats> Get(
+        IReadOnlyCollection<IGrouping<TitleLocation, CourseTableStats>>? tableStatsList)
+    {
+        var r = new List<CourseTableStats>();
+        if (tableStatsList == null) return r;
+        var enumerable = tableStatsList.Select(v1 => v1.ToList());
+        foreach (var y in enumerable)
+        {
+            r.AddRange(y);
+        }
+
+        return r;
+    }
+
 
     private static Dictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)
     {
@@ -68,5 +103,11 @@ public class RankingSummary
         if (variableResult == null)
             return null;
         return (int)Math.Round(variableResult.Value);
+    }
+
+    private struct TitleLocation
+    {
+        public string? Title;
+        public string? Location;
     }
 }
