@@ -103,6 +103,6 @@ public class Ranking
 
     public RankingSummary CreateSummary()
     {
-        return this.RankingSummary?.From(this);
+        return RankingSummary.From(this);
     }
 }
