@@ -1,5 +1,4 @@
-﻿using GraduatorieScript.Data;
-using GraduatorieScript.Objects.RankingNS;
+﻿ using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

@@ -1,8 +1,7 @@
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Objects;
 using GraduatorieCommon.Utils.ParallelNS;
-using GraduatorieScript.Data;
-using HtmlAgilityPack;
+ using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 

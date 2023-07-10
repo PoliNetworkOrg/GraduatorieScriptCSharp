@@ -1,6 +1,5 @@
 using GraduatorieCommon.Enums;
-using GraduatorieScript.Data;
-using GraduatorieScript.Objects.RankingNS;
+ using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Utils.Transformer.ParserNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
