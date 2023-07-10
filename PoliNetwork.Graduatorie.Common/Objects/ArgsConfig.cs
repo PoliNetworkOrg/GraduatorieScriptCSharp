@@ -21,7 +21,7 @@ public class ArgsConfig
         };
         return argsConfig;
     }
-    
+
     private static string GetDataFolder(string? argsFolder)
     {
         // use it if passed or search the default
@@ -53,5 +53,4 @@ public class ArgsConfig
 
         return null;
     }
-
 }

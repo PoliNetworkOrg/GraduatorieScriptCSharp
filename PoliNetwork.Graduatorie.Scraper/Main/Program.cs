@@ -24,7 +24,6 @@ public static class Program
 
         //print links found
         PrintLinks(rankingsUrls);
-        
     }
 
 
@@ -33,7 +32,4 @@ public static class Program
         foreach (var r in rankingsUrls)
             Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
     }
-
-  
- 
 }

@@ -72,10 +72,7 @@ public class RankingSummary
         var r = new List<CourseTableStats>();
         if (tableStatsList == null) return r;
         var enumerable = tableStatsList.Select(v1 => v1.ToList());
-        foreach (var y in enumerable)
-        {
-            r.AddRange(y);
-        }
+        foreach (var y in enumerable) r.AddRange(y);
 
         return r;
     }
