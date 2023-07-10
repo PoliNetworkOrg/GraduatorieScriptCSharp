@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace PoliNetwork.Graduatorie.Common.Extensions;
+namespace GraduatorieCommon.Extensions;
 
 /// <summary>
 ///     Extension of Hashset in order to implement some methods like AddRange
