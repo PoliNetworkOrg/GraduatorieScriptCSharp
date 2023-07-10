@@ -288,7 +288,7 @@ public static class Parser
         }
 
         ranking.ByCourse = ranking.ByCourse.OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
-        StatsCalculate.CalculateStats(ranking);
+        ranking.RankingSummary = ranking.CreateSummary();
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url?.Url}");
 
