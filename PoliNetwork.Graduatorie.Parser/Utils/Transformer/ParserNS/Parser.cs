@@ -28,7 +28,7 @@ public static class Parser
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0) Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
 
-        var htmlFolder = System.IO.Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
+        var htmlFolder = Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
         var recursiveHtmls = urls
