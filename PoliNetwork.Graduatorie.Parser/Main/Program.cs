@@ -17,18 +17,15 @@ public static class Program
         var mt = new Metrics();
 
         var argsConfig = ArgsConfig.GetArgsConfig(args);
-        Console.WriteLine($"[INFO] dataFolder: {argsConfig.DataFolder}");
+        argsConfig.Print();
 
-        Console.WriteLine($"[INFO] thread max count: {ParallelRun.MaxDegreeOfParallelism}");
+        var rankingsUrls = Scraper.Main.Program.RankingsUrls(mt, argsConfig);
 
-        //find links from web
-        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
-        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
-        ScraperOutput.Write(rankingsUrls, argsConfig.DataFolder);
+        ParserDo(argsConfig, rankingsUrls);
+    }
 
-        //print links found
-        PrintLinks(rankingsUrls);
-
+    private static void ParserDo(ArgsConfig argsConfig, List<RankingUrl> rankingsUrls)
+    {
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
         var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Common.Utils.Path;
 
 namespace PoliNetwork.Graduatorie.Common.Objects;
@@ -52,5 +53,11 @@ public class ArgsConfig
         }
 
         return null;
+    }
+
+    public void Print()
+    {
+        Console.WriteLine($"[INFO] dataFolder: {this.DataFolder}");
+        Console.WriteLine($"[INFO] thread max count: {ParallelRun.MaxDegreeOfParallelism}");
     }
 }
