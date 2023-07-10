@@ -1,4 +1,5 @@
-﻿using GraduatorieCommon.Enums;
+﻿using GraduatorieCommon.Data;
+using GraduatorieCommon.Enums;
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Utils.ParallelNS;
  using GraduatorieScript.Main;
