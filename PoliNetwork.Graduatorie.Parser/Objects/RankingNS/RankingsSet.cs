@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 

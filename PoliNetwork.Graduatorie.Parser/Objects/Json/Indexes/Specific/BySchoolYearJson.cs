@@ -2,7 +2,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
-using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
