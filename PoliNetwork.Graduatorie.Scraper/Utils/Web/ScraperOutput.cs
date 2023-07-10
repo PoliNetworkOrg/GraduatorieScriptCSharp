@@ -9,7 +9,7 @@ public static class ScraperOutput
         return docFolder + "/" + Constants.OutputLinksFilename;
     }
 
-    public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)
+    public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<Graduatorie.Common.Objects.RankingNS.RankingUrl> urls, string? dataFolder)
     {
         var links = GetSaved(dataFolder);
         links.AddRange(urls);
