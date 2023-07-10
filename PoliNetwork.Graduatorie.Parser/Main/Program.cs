@@ -22,7 +22,7 @@ public static class Program
         ParserDo(argsConfig, rankingsUrls);
     }
 
-    private static void ParserDo(ArgsConfig argsConfig, List<RankingUrl> rankingsUrls)
+    private static void ParserDo(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsUrls)
     {
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
