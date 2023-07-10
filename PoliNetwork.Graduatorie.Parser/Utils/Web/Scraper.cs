@@ -1,6 +1,6 @@
 using GraduatorieCommon.Data;
 using GraduatorieCommon.Extensions;
- using HtmlAgilityPack;
+using HtmlAgilityPack;
 
 namespace GraduatorieScript.Utils.Web;
 

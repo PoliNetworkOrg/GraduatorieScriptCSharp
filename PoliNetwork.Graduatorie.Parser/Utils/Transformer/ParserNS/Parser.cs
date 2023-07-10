@@ -2,7 +2,7 @@
 using GraduatorieCommon.Enums;
 using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Utils.ParallelNS;
- using GraduatorieScript.Main;
+using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;

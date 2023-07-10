@@ -1,8 +1,8 @@
-﻿using GraduatorieCommon.Enums;
+﻿using GraduatorieCommon.Data;
+using GraduatorieCommon.Enums;
 using GraduatorieCommon.Extensions;
- using GraduatorieScript.Objects.RankingNS;
+using GraduatorieScript.Objects.RankingNS;
 using PoliNetwork.Core.Utils;
-using GraduatorieCommon.Data;
 
 namespace GraduatorieScript.Utils.Web;
 

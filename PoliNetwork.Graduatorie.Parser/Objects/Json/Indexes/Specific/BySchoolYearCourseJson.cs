@@ -1,7 +1,7 @@
 using GraduatorieCommon.Data;
 using GraduatorieCommon.Enums;
 using GraduatorieCommon.Utils.ParallelNS;
- using GraduatorieScript.Objects.RankingNS;
+using GraduatorieScript.Objects.RankingNS;
 using GraduatorieScript.Objects.Tables.Course;
 using GraduatorieScript.Utils.Transformer.ParserNS;
 using Newtonsoft.Json;
