@@ -3,7 +3,6 @@ using GraduatorieScript.Data;
 using GraduatorieScript.Objects.Json.Indexes;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Utils;
 using GraduatorieScript.Utils.Path;
 using GraduatorieScript.Utils.Transformer.ParserNS;
 using GraduatorieScript.Utils.Web;
