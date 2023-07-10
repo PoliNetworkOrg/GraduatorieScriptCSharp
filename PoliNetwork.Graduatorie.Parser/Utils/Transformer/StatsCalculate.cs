@@ -1,4 +1,5 @@
-﻿using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+﻿using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer;
 
