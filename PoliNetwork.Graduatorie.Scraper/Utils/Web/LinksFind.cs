@@ -1,10 +1,6 @@
-﻿using GraduatorieCommon.Data;
-using GraduatorieCommon.Enums;
-using GraduatorieCommon.Extensions;
-using GraduatorieScript.Objects.RankingNS;
-using PoliNetwork.Core.Utils;
+﻿using GraduatorieScript.Utils.Web;
 
-namespace GraduatorieScript.Utils.Web;
+namespace GraduatorieScraper.Utils.Web;
 
 public static class LinksFind
 {

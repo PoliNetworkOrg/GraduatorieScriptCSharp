@@ -1,7 +1,7 @@
 ﻿using GraduatorieCommon.Data;
-using GraduatorieScript.Objects.RankingNS;
+using GraduatorieScript.Utils.Web;
 
-namespace GraduatorieScript.Utils.Web;
+namespace GraduatorieScraper.Utils.Web;
 
 public static class ScraperOutput
 {
