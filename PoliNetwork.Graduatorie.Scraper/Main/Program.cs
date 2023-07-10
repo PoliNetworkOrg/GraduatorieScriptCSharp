@@ -1,7 +1,6 @@
 ﻿using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 namespace PoliNetwork.Graduatorie.Scraper.Main;
@@ -18,7 +17,8 @@ public static class Program
 
         //find links from web
         var rankingsUrls = RankingsUrls(mt, argsConfig);
-        
+
+        //print and write results
         PrintAndWriteResults(rankingsUrls, argsConfig);
     }
 
