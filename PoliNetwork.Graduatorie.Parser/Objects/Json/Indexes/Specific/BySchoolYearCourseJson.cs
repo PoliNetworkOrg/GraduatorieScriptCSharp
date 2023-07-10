@@ -37,10 +37,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
             var byYears = schoolGroup.GroupBy(r => r.Year);
             var yearsDict = GetYearsDict(byYears);
-            
+
             mainJson.Schools.Add(school, yearsDict);
         }
-        
 
 
         return mainJson;

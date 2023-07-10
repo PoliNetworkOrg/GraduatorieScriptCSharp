@@ -1,8 +1,8 @@
+using GraduatorieCommon.Extensions;
 using GraduatorieCommon.Objects;
 using GraduatorieScript.Data;
- 
-using GraduatorieScript.Objects;
 using HtmlAgilityPack;
+using PoliNetwork.Graduatorie.Common.Extensions;
 
 namespace GraduatorieScript.Utils.Web;
 

@@ -1,4 +1,5 @@
 ﻿using GraduatorieCommon.Enums;
+using GraduatorieCommon.Extensions;
 using GraduatorieScript.Data;
 using GraduatorieScript.Main;
 using GraduatorieScript.Objects;
@@ -9,7 +10,6 @@ using GraduatorieScript.Objects.Tables.Merit;
 using GraduatorieScript.Utils.Web;
 using HtmlAgilityPack;
 using Newtonsoft.Json;
- 
 
 namespace GraduatorieScript.Utils.Transformer.ParserNS;
 

@@ -31,30 +31,19 @@ public class SingleCourseJson
         if (Year != singleCourseJson.Year)
             return (Year ?? -1) < (singleCourseJson.Year ?? -1) ? -1 : 1;
 
-        if (School != singleCourseJson.School)
-        {
-            return School < singleCourseJson.School ? -1 : 1;
-        }
-        
+        if (School != singleCourseJson.School) return School < singleCourseJson.School ? -1 : 1;
+
         if (BasePath != singleCourseJson.BasePath)
-        {
             return string.Compare(BasePath ?? "", singleCourseJson.BasePath ?? "", StringComparison.InvariantCulture);
-        }
-        
+
         if (Link != singleCourseJson.Link)
-        {
             return string.Compare(Link ?? "", singleCourseJson.Link ?? "", StringComparison.InvariantCulture);
-        }
-        
+
         if (Location != singleCourseJson.Location)
-        {
             return string.Compare(Location ?? "", singleCourseJson.Location ?? "", StringComparison.InvariantCulture);
-        }
-        
+
         if (Name != singleCourseJson.Name)
-        {
             return string.Compare(Name ?? "", singleCourseJson.Name ?? "", StringComparison.InvariantCulture);
-        }
 
         return 0;
     }
