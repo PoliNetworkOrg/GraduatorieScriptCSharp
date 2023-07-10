@@ -5,6 +5,7 @@ using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Common.Utils.HashNS;
 using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;

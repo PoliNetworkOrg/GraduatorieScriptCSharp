@@ -3,10 +3,10 @@ using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
+using PoliNetwork.Graduatorie.Common.Utils.Path;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Parser.Utils.Path;
 using PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
