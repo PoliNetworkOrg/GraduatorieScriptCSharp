@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace GraduatorieScript.Extensions;
+namespace GraduatorieCommon.Extensions;
 
 /// <summary>
 ///     Extension of Hashset in order to implement some methods like AddRange
