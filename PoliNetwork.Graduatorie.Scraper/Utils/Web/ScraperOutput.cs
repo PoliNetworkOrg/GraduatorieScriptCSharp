@@ -1,4 +1,5 @@
 ﻿using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
