@@ -1,7 +1,6 @@
 using System.Net;
-using GraduatorieScript.Objects.RankingNS;
 
-namespace GraduatorieScript.Utils.Web;
+namespace GraduatorieScraper.Utils.Web;
 
 public static class UrlUtils
 {
