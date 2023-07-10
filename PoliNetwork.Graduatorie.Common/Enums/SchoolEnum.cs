@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace GraduatorieScript.Enums;
+namespace GraduatorieCommon.Enums;
 
 [Serializable]
 [JsonConverter(typeof(StringEnumConverter))]

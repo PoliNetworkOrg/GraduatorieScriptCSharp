@@ -1,4 +1,4 @@
-﻿namespace GraduatorieScript.Enums;
+﻿namespace GraduatorieCommon.Enums;
 
 [Serializable]
 public enum PageEnum

@@ -1,4 +1,4 @@
-﻿using GraduatorieScript.Enums;
+﻿using GraduatorieCommon.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

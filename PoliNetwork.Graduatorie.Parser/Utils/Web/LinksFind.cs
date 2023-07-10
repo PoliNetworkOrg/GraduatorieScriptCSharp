@@ -1,5 +1,5 @@
-﻿using GraduatorieScript.Data;
-using GraduatorieScript.Enums;
+﻿using GraduatorieCommon.Enums;
+using GraduatorieScript.Data;
 using GraduatorieScript.Extensions;
 using GraduatorieScript.Objects.RankingNS;
 using PoliNetwork.Core.Utils;

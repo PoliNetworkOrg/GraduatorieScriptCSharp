@@ -1,5 +1,4 @@
 ﻿using GraduatorieScript.Data;
-using GraduatorieScript.Enums;
 using GraduatorieScript.Objects.Json.Indexes.Specific;
 using GraduatorieScript.Objects.RankingNS;
 using Newtonsoft.Json;

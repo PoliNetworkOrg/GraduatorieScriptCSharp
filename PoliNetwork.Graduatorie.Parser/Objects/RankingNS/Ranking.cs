@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
-using GraduatorieScript.Enums;
+using GraduatorieCommon.Enums;
 using GraduatorieScript.Objects.Json;
 using GraduatorieScript.Objects.Json.Stats;
 using GraduatorieScript.Objects.Tables.Course;

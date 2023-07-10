@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <WarningsAsErrors>Nullable</WarningsAsErrors>
+        <RootNamespace>GraduatorieScript</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="..\data\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="..\data\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="..\data\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\PoliNetwork.Graduatorie.Common\PoliNetwork.Graduatorie.Common.csproj" />
+        <ProjectReference Include="..\Lib_CSharp\PoliNetwork.Core\PoliNetwork.Core.csproj" />
+    </ItemGroup>
+
+</Project>
