@@ -1,4 +1,4 @@
-﻿ using PoliNetwork.Graduatorie.Parser.Objects;
+﻿using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 

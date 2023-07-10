@@ -1,4 +1,4 @@
-﻿ using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
@@ -6,7 +6,6 @@ using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
-using PoliNetwork.Graduatorie.Parser.Main;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
