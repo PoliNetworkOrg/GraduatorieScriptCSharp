@@ -37,9 +37,11 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
             var byYears = schoolGroup.GroupBy(r => r.Year);
             var yearsDict = GetYearsDict(byYears);
-
+            
             mainJson.Schools.Add(school, yearsDict);
         }
+        
+
 
         return mainJson;
     }
@@ -121,7 +123,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
                 continue;
 
             locationDict.Add(singleCourseJson);
+            locationDict.Sort(Comparison);
         }
+    }
+
+    private static int Comparison(SingleCourseJson x, SingleCourseJson y)
+    {
+        return x.Compare(y);
     }
 
     private static SingleCourseJson CreateCourseJson(Ranking ranking, CourseTable course)
