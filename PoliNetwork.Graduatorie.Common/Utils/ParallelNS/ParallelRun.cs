@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace GraduatorieScript.Utils;
+namespace GraduatorieCommon.Utils.ParallelNS;
 
 public static class ParallelRun
 {
