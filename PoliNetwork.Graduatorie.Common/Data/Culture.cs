@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Newtonsoft.Json;
 
-namespace GraduatorieScript.Data;
+namespace GraduatorieCommon.Data;
 
 public static class Culture
 {
