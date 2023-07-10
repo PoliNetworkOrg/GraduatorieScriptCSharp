@@ -1,12 +1,139 @@
 {
-  "numStudents": 3206,
+  "numStudents": 3358,
   "schools": {
+    "Urbanistica": {
+      "list": [
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2023/",
+            "link": "Anticipata.json",
+            "location": null,
+            "name": "Anticipata",
+            "school": "Urbanistica",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2003.72595,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 76.38182,
+                "averagePartialScores": {
+                  "Colloquio": 35.46309,
+                  "Elaborato": 20.08725,
+                  "Lettera Motivazionale": 14.65101
+                },
+                "averageScoresOfAllStudents": 70.20134,
+                "howManyOfa": {},
+                "location": null,
+                "minScoreToEnroll": 62.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 110,
+            "howManyStudents": 149,
+            "resultsSummarized": {
+              "31": 1,
+              "37": 1,
+              "44": 3,
+              "46": 1,
+              "47": 1,
+              "48": 2,
+              "49": 1,
+              "50": 3,
+              "51": 2,
+              "52": 3,
+              "53": 3,
+              "54": 1,
+              "55": 2,
+              "56": 3,
+              "57": 1,
+              "59": 4,
+              "60": 2,
+              "61": 2,
+              "62": 7,
+              "63": 3,
+              "64": 3,
+              "65": 4,
+              "66": 1,
+              "67": 4,
+              "68": 2,
+              "69": 4,
+              "70": 8,
+              "71": 1,
+              "72": 6,
+              "73": 10,
+              "74": 4,
+              "75": 3,
+              "76": 2,
+              "77": 2,
+              "78": 4,
+              "79": 4,
+              "80": 7,
+              "81": 3,
+              "82": 3,
+              "83": 1,
+              "84": 3,
+              "85": 6,
+              "86": 3,
+              "87": 3,
+              "88": 2,
+              "89": 1,
+              "90": 1,
+              "91": 2,
+              "92": 1,
+              "93": 1,
+              "94": 2,
+              "98": 2
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2023/",
+            "link": "Extra-ue.json",
+            "location": null,
+            "name": "Extra-ue",
+            "school": "Urbanistica",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 61.00,
+                "averagePartialScores": {
+                  "Colloquio": 27.33333,
+                  "Elaborato": 14.33333,
+                  "Lettera Motivazionale": 11.00
+                },
+                "averageScoresOfAllStudents": 52.66667,
+                "howManyOfa": {},
+                "location": null,
+                "minScoreToEnroll": 55.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 2,
+            "howManyStudents": 3,
+            "resultsSummarized": {
+              "36": 1,
+              "55": 1,
+              "67": 1
+            }
+          }
+        }
+      ],
+      "numStudents": 152
+    },
     "Design": {
       "list": [
         {
           "singleCourseJson": {
             "basePath": "Design/2023/",
             "link": "Anticipato.json",
+            "location": "MILANO BOVISA",
             "name": "Anticipato",
             "school": "Design",
             "year": 2023

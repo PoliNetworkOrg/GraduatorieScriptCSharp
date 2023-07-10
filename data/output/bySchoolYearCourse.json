@@ -2724,6 +2724,28 @@
             }
           ]
         }
+      },
+      "2023": {
+        "URBANISTICA: CITTA' AMBIENTE PAESAGGIO": {
+          "0": [
+            {
+              "basePath": "Urbanistica/2023/",
+              "link": "Extra-ue.json",
+              "location": null,
+              "name": "Extra-ue",
+              "school": "Urbanistica",
+              "year": 2023
+            },
+            {
+              "basePath": "Urbanistica/2023/",
+              "link": "Anticipata.json",
+              "location": null,
+              "name": "Anticipata",
+              "school": "Urbanistica",
+              "year": 2023
+            }
+          ]
+        }
       }
     },
     "Architettura": {
