@@ -1,10 +1,10 @@
-﻿using GraduatorieCommon.Data;
-using GraduatorieScript.Objects.Json.Indexes.Specific;
-using GraduatorieScript.Objects.RankingNS;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
-namespace GraduatorieScript.Objects.Json.Indexes;
+namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]

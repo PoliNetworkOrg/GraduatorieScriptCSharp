@@ -1,14 +1,14 @@
-﻿using GraduatorieCommon.Data;
-using GraduatorieCommon.Utils.ParallelNS;
-using GraduatorieScraper.Utils.Web;
-using GraduatorieScript.Objects.Json.Indexes;
-using GraduatorieScript.Objects.Json.Stats;
-using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Utils.Path;
-using GraduatorieScript.Utils.Transformer.ParserNS;
- using PoliNetwork.Core.Utils;
+﻿using PoliNetwork.Core.Utils;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Objects;
+using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Utils.Path;
+using PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
-namespace GraduatorieScript.Main;
+namespace PoliNetwork.Graduatorie.Parser.Main;
 
 public static class Program
 {
@@ -31,7 +31,7 @@ public static class Program
 
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Parser.GetRankings(argsConfig, rankingsUrls);
+        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
 
         // salvare il set
         SaveOutputs(argsConfig.DataFolder, rankingsSet);

@@ -1,12 +1,11 @@
-using GraduatorieCommon.Data;
-using GraduatorieCommon.Enums;
-using GraduatorieCommon.Utils.ParallelNS;
-using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Utils.Transformer.ParserNS;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
-namespace GraduatorieScript.Objects.Json.Indexes.Specific;
+namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -57,7 +56,7 @@ public class BySchoolYearJson : IndexJsonBase
         var mainJsonPath = Path.Join(outFolder, PathCustom);
         try
         {
-            var mainJson = Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
+            var mainJson = Utils.Transformer.ParserNS.Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
             if (mainJson is null)
                 return null;
 
@@ -106,7 +105,7 @@ public class BySchoolYearJson : IndexJsonBase
         var schoolKey = school.Key.ToString();
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-        var ranking = Parser.ParseJson<Ranking>(path);
+        var ranking = Utils.Transformer.ParserNS.Parser.ParseJson<Ranking>(path);
         if (ranking == null)
             return;
 

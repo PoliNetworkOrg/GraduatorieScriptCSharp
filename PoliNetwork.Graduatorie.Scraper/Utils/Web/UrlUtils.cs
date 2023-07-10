@@ -1,6 +1,6 @@
 using System.Net;
 
-namespace GraduatorieScraper.Utils.Web;
+namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public static class UrlUtils
 {

@@ -1,8 +1,8 @@
-using GraduatorieCommon.Enums;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Enums;
 
-namespace GraduatorieScript.Objects.RankingNS;
+namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]

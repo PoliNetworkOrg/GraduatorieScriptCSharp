@@ -1,10 +1,10 @@
-using GraduatorieCommon.Data;
-using GraduatorieCommon.Extensions;
-using GraduatorieCommon.Objects;
-using GraduatorieCommon.Utils.ParallelNS;
 using HtmlAgilityPack;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Extensions;
+using PoliNetwork.Graduatorie.Common.Objects;
+using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 
-namespace GraduatorieScraper.Utils.Web;
+namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public class OldScraper
 {

@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace GraduatorieCommon.Enums;
+namespace PoliNetwork.Graduatorie.Common.Enums;
 
 [Serializable]
 [JsonConverter(typeof(StringEnumConverter))]

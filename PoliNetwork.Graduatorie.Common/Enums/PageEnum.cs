@@ -1,4 +1,4 @@
-﻿namespace GraduatorieCommon.Enums;
+﻿namespace PoliNetwork.Graduatorie.Common.Enums;
 
 [Serializable]
 public enum PageEnum

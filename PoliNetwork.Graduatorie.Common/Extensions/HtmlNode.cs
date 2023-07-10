@@ -1,6 +1,6 @@
 using HtmlAgilityPack;
 
-namespace GraduatorieCommon.Extensions;
+namespace PoliNetwork.Graduatorie.Common.Extensions;
 
 public static class HtmlNodeExtensions
 {

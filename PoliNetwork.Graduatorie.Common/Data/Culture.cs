@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using Newtonsoft.Json;
 
-namespace GraduatorieCommon.Data;
+namespace PoliNetwork.Graduatorie.Common.Data;
 
 public static class Culture
 {

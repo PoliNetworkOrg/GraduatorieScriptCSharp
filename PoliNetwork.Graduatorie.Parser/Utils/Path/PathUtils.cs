@@ -1,4 +1,4 @@
-﻿namespace GraduatorieScript.Utils.Path;
+﻿namespace PoliNetwork.Graduatorie.Parser.Utils.Path;
 
 public static class PathUtils
 {

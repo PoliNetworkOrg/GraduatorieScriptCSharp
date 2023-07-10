@@ -1,8 +1,8 @@
-using GraduatorieCommon.Data;
-using GraduatorieCommon.Extensions;
 using HtmlAgilityPack;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Extensions;
 
-namespace GraduatorieScraper.Utils.Web;
+namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public class Scraper
 {

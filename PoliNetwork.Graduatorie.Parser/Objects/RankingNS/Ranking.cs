@@ -1,13 +1,14 @@
 ﻿using System.Globalization;
-using GraduatorieCommon.Enums;
 using GraduatorieScript.Objects.Json;
-using GraduatorieScript.Objects.Json.Stats;
-using GraduatorieScript.Objects.Tables.Course;
-using GraduatorieScript.Objects.Tables.Merit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Parser.Objects.Json;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
-namespace GraduatorieScript.Objects.RankingNS;
+namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]

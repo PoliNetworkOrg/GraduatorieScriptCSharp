@@ -1,8 +1,9 @@
 ﻿using GraduatorieScript.Objects;
-using GraduatorieScript.Objects.Tables.Course;
-using GraduatorieScript.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Objects;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
-namespace GraduatorieScript.Utils.Transformer.ParserNS;
+namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
 public static class Converter
 {

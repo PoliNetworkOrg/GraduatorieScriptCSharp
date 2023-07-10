@@ -1,6 +1,6 @@
-﻿using GraduatorieCommon.Data;
+﻿using PoliNetwork.Graduatorie.Common.Data;
 
-namespace GraduatorieScraper.Utils.Web;
+namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public static class ScraperOutput
 {

@@ -1,6 +1,6 @@
-﻿using GraduatorieScript.Objects.RankingNS;
+﻿using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
-namespace GraduatorieScript.Utils.Transformer;
+namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer;
 
 public static class StatsCalculate
 {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace GraduatorieCommon.Utils.ParallelNS;
+namespace PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 
 public static class ParallelRun
 {

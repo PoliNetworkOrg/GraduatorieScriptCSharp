@@ -1,18 +1,20 @@
-﻿using GraduatorieCommon.Data;
-using GraduatorieCommon.Enums;
-using GraduatorieCommon.Extensions;
-using GraduatorieCommon.Utils.ParallelNS;
-using GraduatorieScraper.Utils.Web;
-using GraduatorieScript.Main;
-using GraduatorieScript.Objects;
-using GraduatorieScript.Objects.Json.Indexes.Specific;
-using GraduatorieScript.Objects.RankingNS;
-using GraduatorieScript.Objects.Tables.Course;
-using GraduatorieScript.Objects.Tables.Merit;
- using HtmlAgilityPack;
+﻿using GraduatorieScript.Objects;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
+using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Common.Extensions;
+using PoliNetwork.Graduatorie.Common.Objects;
+using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
+using PoliNetwork.Graduatorie.Parser.Main;
+using PoliNetwork.Graduatorie.Parser.Objects;
+using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
-namespace GraduatorieScript.Utils.Transformer.ParserNS;
+namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
 public static class Parser
 {

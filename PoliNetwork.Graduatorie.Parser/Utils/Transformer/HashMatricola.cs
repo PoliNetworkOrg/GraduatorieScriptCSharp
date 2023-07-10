@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace GraduatorieScript.Utils.Transformer;
+namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer;
 
 public static class HashMatricola
 {

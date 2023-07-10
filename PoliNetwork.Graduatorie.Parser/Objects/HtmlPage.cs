@@ -1,10 +1,9 @@
-﻿using GraduatorieScraper.Utils.Web;
-using GraduatorieScript.Objects.RankingNS;
-using HtmlAgilityPack;
+﻿using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
-namespace GraduatorieScript.Objects;
+namespace PoliNetwork.Graduatorie.Parser.Objects;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -34,7 +33,7 @@ public class HtmlPage
         if (!string.IsNullOrEmpty(saved)) return new HtmlPage(saved, url);
 
         // no saved file, need to download
-        var html = Scraper.Download(url.Url);
+        var html = Scraper.Utils.Web.Scraper.Download(url.Url);
         if (html is null || string.IsNullOrEmpty(html))
             return null;
 

@@ -1,4 +1,4 @@
-﻿namespace GraduatorieCommon.Data;
+﻿namespace PoliNetwork.Graduatorie.Common.Data;
 
 public static class Constants
 {
