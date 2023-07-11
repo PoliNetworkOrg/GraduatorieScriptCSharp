@@ -21047,6 +21047,159 @@
           "singleCourseJson": {
             "basePath": "Architettura/2021/",
             "link": "Extra-ue_Seconda_Graduatoria.json",
+            "location": "LECCO",
+            "name": "Extra-ue Seconda Graduatoria",
+            "school": "Architettura",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 1999.25,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 25.80,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.68889,
+                  "Ragionamento Logico": 2.82222,
+                  "Storia": 4.11111,
+                  "Disegno e Rappresentazione": 6.10,
+                  "Fisica e Matematica": 1.05556
+                },
+                "averageScoresOfAllStudents": 19.77778,
+                "howManyOfa": {},
+                "location": "LECCO",
+                "minScoreToEnroll": 25.80,
+                "title": "INGEGNERIA EDILE - ARCHITETTURA"
+              },
+              {
+                "averageBirthYear": 1999.85333,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.356,
+                  "Ragionamento Logico": 2.616,
+                  "Storia": 5.072,
+                  "Disegno e Rappresentazione": 5.976,
+                  "Fisica e Matematica": 1.68
+                },
+                "averageScoresOfAllStudents": 20.70,
+                "howManyOfa": {},
+                "location": "MANTOVA",
+                "minScoreToEnroll": null,
+                "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+              },
+              {
+                "averageBirthYear": 1999.59596,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 24.90,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.47879,
+                  "Ragionamento Logico": 2.77576,
+                  "Storia": 5.70909,
+                  "Disegno e Rappresentazione": 6.20606,
+                  "Fisica e Matematica": 1.74848
+                },
+                "averageScoresOfAllStudents": 21.91818,
+                "howManyOfa": {},
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 24.90,
+                "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+              },
+              {
+                "averageBirthYear": 1999.6369,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 27.56667,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.06071,
+                  "Ragionamento Logico": 2.39643,
+                  "Storia": 5.20357,
+                  "Disegno e Rappresentazione": 6.36786,
+                  "Fisica e Matematica": 1.75357
+                },
+                "averageScoresOfAllStudents": 20.78214,
+                "howManyOfa": {},
+                "location": "PIACENZA",
+                "minScoreToEnroll": 26.20,
+                "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+              },
+              {
+                "averageBirthYear": 2001.17851,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 35.18571,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.11526,
+                  "Ragionamento Logico": 3.10,
+                  "Storia": 4.99211,
+                  "Disegno e Rappresentazione": 6.54579,
+                  "Fisica e Matematica": 2.66947
+                },
+                "averageScoresOfAllStudents": 22.42263,
+                "howManyOfa": {},
+                "location": "MI LEONARDO",
+                "minScoreToEnroll": 33.90,
+                "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+              },
+              {
+                "averageBirthYear": 2001.31208,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 31.40,
+                "averagePartialScores": {
+                  "Cultura Generale": 4.89866,
+                  "Ragionamento Logico": 2.96913,
+                  "Storia": 4.92685,
+                  "Disegno e Rappresentazione": 6.44966,
+                  "Fisica e Matematica": 2.52550
+                },
+                "averageScoresOfAllStudents": 21.76980,
+                "howManyOfa": {},
+                "location": "PIACENZA",
+                "minScoreToEnroll": 30.10,
+                "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+              }
+            ],
+            "howManyCanEnroll": 26,
+            "howManyStudents": 201,
+            "resultsSummarized": {
+              "-1": 1,
+              "5": 2,
+              "6": 2,
+              "7": 1,
+              "8": 2,
+              "9": 3,
+              "10": 1,
+              "11": 5,
+              "12": 3,
+              "13": 4,
+              "14": 6,
+              "15": 2,
+              "16": 5,
+              "17": 5,
+              "18": 11,
+              "19": 5,
+              "20": 12,
+              "21": 7,
+              "22": 13,
+              "23": 12,
+              "24": 11,
+              "25": 13,
+              "26": 17,
+              "27": 8,
+              "28": 9,
+              "29": 7,
+              "30": 13,
+              "31": 4,
+              "32": 6,
+              "33": 3,
+              "34": 2,
+              "35": 3,
+              "36": 3
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Architettura/2021/",
+            "link": "Extra-ue_Seconda_Graduatoria.json",
             "location": "MANTOVA",
             "name": "Extra-ue Seconda Graduatoria",
             "school": "Architettura",
@@ -21054,6 +21207,23 @@
           },
           "stats": {
             "courseSummarized": [
+              {
+                "averageBirthYear": 1999.25,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 25.80,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.68889,
+                  "Ragionamento Logico": 2.82222,
+                  "Storia": 4.11111,
+                  "Disegno e Rappresentazione": 6.10,
+                  "Fisica e Matematica": 1.05556
+                },
+                "averageScoresOfAllStudents": 19.77778,
+                "howManyOfa": {},
+                "location": "LECCO",
+                "minScoreToEnroll": 25.80,
+                "title": "INGEGNERIA EDILE - ARCHITETTURA"
+              },
               {
                 "averageBirthYear": 1999.85333,
                 "averageEnglishCorrectAnswers": null,
@@ -21191,6 +21361,23 @@
           "stats": {
             "courseSummarized": [
               {
+                "averageBirthYear": 1999.25,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 25.80,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.68889,
+                  "Ragionamento Logico": 2.82222,
+                  "Storia": 4.11111,
+                  "Disegno e Rappresentazione": 6.10,
+                  "Fisica e Matematica": 1.05556
+                },
+                "averageScoresOfAllStudents": 19.77778,
+                "howManyOfa": {},
+                "location": "LECCO",
+                "minScoreToEnroll": 25.80,
+                "title": "INGEGNERIA EDILE - ARCHITETTURA"
+              },
+              {
                 "averageBirthYear": 1999.85333,
                 "averageEnglishCorrectAnswers": null,
                 "averageOfWhoPassed": null,
@@ -21327,6 +21514,23 @@
           "stats": {
             "courseSummarized": [
               {
+                "averageBirthYear": 1999.25,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 25.80,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.68889,
+                  "Ragionamento Logico": 2.82222,
+                  "Storia": 4.11111,
+                  "Disegno e Rappresentazione": 6.10,
+                  "Fisica e Matematica": 1.05556
+                },
+                "averageScoresOfAllStudents": 19.77778,
+                "howManyOfa": {},
+                "location": "LECCO",
+                "minScoreToEnroll": 25.80,
+                "title": "INGEGNERIA EDILE - ARCHITETTURA"
+              },
+              {
                 "averageBirthYear": 1999.85333,
                 "averageEnglishCorrectAnswers": null,
                 "averageOfWhoPassed": null,
@@ -21462,6 +21666,23 @@
           },
           "stats": {
             "courseSummarized": [
+              {
+                "averageBirthYear": 1999.25,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 25.80,
+                "averagePartialScores": {
+                  "Cultura Generale": 5.68889,
+                  "Ragionamento Logico": 2.82222,
+                  "Storia": 4.11111,
+                  "Disegno e Rappresentazione": 6.10,
+                  "Fisica e Matematica": 1.05556
+                },
+                "averageScoresOfAllStudents": 19.77778,
+                "howManyOfa": {},
+                "location": "LECCO",
+                "minScoreToEnroll": 25.80,
+                "title": "INGEGNERIA EDILE - ARCHITETTURA"
+              },
               {
                 "averageBirthYear": 1999.85333,
                 "averageEnglishCorrectAnswers": null,
