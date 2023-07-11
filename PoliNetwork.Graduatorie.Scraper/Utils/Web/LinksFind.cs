@@ -34,7 +34,7 @@ public static class LinksFind
     {
         var r = new HashSet<string>();
         var nowYear = DateTime.Now.Year;
-        for (var i = nowYear - 1; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
+        for (var i = 2021; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }
 
