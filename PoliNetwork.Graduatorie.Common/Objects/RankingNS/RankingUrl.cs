@@ -30,8 +30,9 @@ public class RankingUrl
     /// <returns>RankingUrl</returns>
     public static RankingUrl From(string url)
     {
+        var fixedUrl = url.Replace("\\", "/");
         const string value = ".html";
-        var cleanUrl = url.EndsWith(value) ? url.Remove(url.Length - value.Length) : url;
+        var cleanUrl = fixedUrl.EndsWith(value) ? fixedUrl.Remove(fixedUrl.Length - value.Length) : fixedUrl;
         return new RankingUrl { Url = url, PageEnum = GetPageEnum(cleanUrl) };
     }
 

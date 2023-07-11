@@ -23,6 +23,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html",
       "rows": [
         {
           "birthDate": "1995-12-20",
@@ -684,7 +685,8 @@
             "Cultura Generale": 0.00
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MILANO BOVISA",
@@ -709,6 +711,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html",
       "rows": [
         {
           "birthDate": "2001-01-22",
@@ -1730,7 +1733,8 @@
             "Cultura Generale": -0.25
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MILANO BOVISA",
@@ -1755,6 +1759,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html",
       "rows": [
         {
           "birthDate": "2001-09-19",
@@ -2056,7 +2061,8 @@
             "Cultura Generale": 0.00
           }
         }
-      ]
+      ],
+      "year": 2020
     },
     {
       "location": "MILANO BOVISA",
@@ -2081,6 +2087,7 @@
         "Risposte Esatte Inglese",
         "OFA Inglese"
       ],
+      "path": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html",
       "rows": [
         {
           "birthDate": "1996-02-11",
@@ -2662,7 +2669,8 @@
             "Cultura Generale": -0.75
           }
         }
-      ]
+      ],
+      "year": 2020
     }
   ],
   "byMerit": {
@@ -2672,6 +2680,7 @@
       "Posizione Assoluta",
       "Corso di Studi per il quale è consentita l'immatricolazione"
     ],
+    "path": "http://www.risultati-ammissione.polimi.it/2020_20045_html/2020_20045_generale.html",
     "rows": [
       {
         "birthDate": null,
@@ -3921,8 +3930,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -3935,8 +3944,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -3949,8 +3958,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -3963,8 +3972,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -3977,8 +3986,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -3991,8 +4000,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4005,8 +4014,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4019,8 +4028,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4033,8 +4042,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4047,8 +4056,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4061,8 +4070,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4075,8 +4084,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4089,8 +4098,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4103,8 +4112,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4117,8 +4126,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4131,8 +4140,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4145,8 +4154,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4159,8 +4168,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4173,8 +4182,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4187,8 +4196,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4201,8 +4210,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4215,8 +4224,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4229,8 +4238,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4243,8 +4252,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4257,8 +4266,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4271,8 +4280,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4285,8 +4294,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4299,8 +4308,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4313,8 +4322,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4327,8 +4336,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4341,8 +4350,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4355,8 +4364,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4369,8 +4378,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4383,8 +4392,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4397,8 +4406,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4411,8 +4420,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4425,8 +4434,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4439,8 +4448,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4453,8 +4462,8 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "Non idoneo / Not eligible",
+        "canEnroll": false,
+        "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": null,
         "ofa": {
@@ -4465,10 +4474,11 @@
         "result": -1.67,
         "sectionsResults": null
       }
-    ]
+    ],
+    "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-06-30T12:38:57.2320066+00:00",
+  "lastUpdate": "2023-07-11T19:27:01.1277654+02:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -4549,7 +4559,7 @@
         "title": "DESIGN DELLA MODA"
       }
     ],
-    "howManyCanEnroll": 79,
+    "howManyCanEnroll": 40,
     "howManyStudents": 128,
     "resultsSummarized": {
       "-2": 1,
