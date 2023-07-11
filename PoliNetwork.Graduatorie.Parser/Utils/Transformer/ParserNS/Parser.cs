@@ -6,7 +6,7 @@ using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Common.Utils.HashNS;
-using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
+/* using PoliNetwork.Graduatorie.Common.Utils.ParallelNS; */
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
@@ -41,16 +41,19 @@ public static class Parser
         var indexes = allHtmls.Where(h => h.Url?.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
 
-        Action Selector(HtmlPage index)
-        {
-            return () =>
-            {
-                GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing ?? false);
-            };
+        foreach (var index in indexes) {
+            GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing ?? false);
         }
 
-        var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray();
-        ParallelRun.Run(action);
+        /* Action Selector(HtmlPage index) */
+        /* { */
+        /*     return () => */
+        /*     { */
+        /*     }; */
+        /* } */
+        /*  */
+        /* var action = indexes.Select((Func<HtmlPage, Action>)Selector).ToArray(); */
+        /* ParallelRun.Run(action); */
 
         rankingsSet.Rankings = rankingsSet.Rankings
             .OrderBy(x => x.School)
@@ -92,7 +95,6 @@ public static class Parser
             .Where(href => href != null)
             .Select(href => UrlUtils.UrlifyLocalHref(href!, baseDomain))
             .Select(RankingUrl.From)
-            .AsParallel()
             .ToList();
 
         return tablesLinks;
@@ -106,20 +108,25 @@ public static class Parser
 
         var subUrls = GetSubUrls(index);
         var subHtmls = subUrls?.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
+        if (subHtmls == null) return newHtmls;
+        
+        foreach (var subHtml in subHtmls) {
+            GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls);
+        }
 
-        var actions = subHtmls
-            ?.Select(
-                subHtml =>
-                    (Action)(
-                        () =>
-                        {
-                            GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls);
-                        }
-                    )
-            )
-            .ToArray();
-        if (actions != null)
-            ParallelRun.Run(actions);
+        /* var actions = subHtmls */
+        /*     ?.Select( */
+        /*         subHtml => */
+        /*             (Action)( */
+        /*                 () => */
+        /*                 { */
+        /*                 } */
+        /*             ) */
+        /*     ) */
+        /*     .ToArray(); */
+        /*  */
+        /* if (actions != null) */
+        /*     ParallelRun.Run(actions); */
 
         return newHtmls;
     }
@@ -138,22 +145,30 @@ public static class Parser
         var tableLinks = GetTableLinks(subHtml);
         var tableHtmls = tableLinks?.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
 
-        var action = tableHtmls
-            ?.Select(
-                tableHtml =>
-                    (Action)(
-                        () =>
-                        {
-                            if (tableHtml is null)
-                                return;
-                            tableHtml.SaveLocal(htmlFolder);
-                            newHtmls.Add(tableHtml);
-                        }
-                    )
-            )
-            .ToArray();
-        if (action != null)
-            ParallelRun.Run(action);
+        if (tableHtmls == null) return;
+        foreach (var html in tableHtmls)
+        {
+            if (html == null) continue;
+            html.SaveLocal(htmlFolder);
+            newHtmls.Add(html);
+        }
+
+        /* var action = tableHtmls */
+        /*     ?.Select( */
+        /*         tableHtml => */
+        /*             (Action)( */
+        /*                 () => */
+        /*                 { */
+        /*                     if (tableHtml is null) */
+        /*                         return; */
+        /*                     tableHtml.SaveLocal(htmlFolder); */
+        /*                     newHtmls.Add(tableHtml); */
+        /*                 } */
+        /*             ) */
+        /*     ) */
+        /*     .ToArray(); */
+        /* if (action != null) */
+        /*     ParallelRun.Run(action); */
     }
 
     private static void GetRankingsSingle(
@@ -164,16 +179,21 @@ public static class Parser
     )
     {
         Console.WriteLine($"[DEBUG] parsing index {index.Url?.Url}");
-        var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url?.Url);
-        if (findIndex >= 0)
+        if (rankingsSet.Rankings.Count > 0)
         {
-            var parsed = rankingsSet.Rankings[findIndex];
-            if (parsed is { ByMerit: not null, ByCourse: not null })
+            var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url?.Url);
+            if (findIndex >= 0)
             {
-                if (!forceReparsing)
+                var parsed = rankingsSet.Rankings[findIndex];
+                if (parsed is { ByMerit: not null, ByCourse: not null })
                 {
-                    Console.WriteLine($"[DEBUG] skipping index {index.Url?.Url}: already parsed");
-                    return;
+                    if (!forceReparsing)
+                    {
+                        Console.WriteLine(
+                            $"[DEBUG] skipping index {index.Url?.Url}: already parsed"
+                        );
+                        return;
+                    }
                 }
             }
         }
@@ -232,111 +252,31 @@ public static class Parser
             ByCourse = new List<CourseTable>()
         };
 
-        var meritTableData = meritTable.Data;
-        var courseTableRows = courseTables.Count > 0 ? courseTables[0].Data : null;
-        var courseTableRow = courseTableRows != null && courseTableRows.Count > 0 ? courseTableRows[0] : null;
-        if (meritTableData[0].Id is not null && courseTableRow?.Id is not null)
+        foreach (var course in courseTables)
         {
-            foreach (var course in courseTables)
-            {
-                var courseStudents = GetCourseStudents(course, meritTableData);
-
-                ranking.ByCourse.Add(
-                    new CourseTable
-                    {
-                        Title = course.CourseTitle,
-                        Location = course.CourseLocation,
-                        Sections = course.Sections,
-                        Headers = course.Headers,
-                        Rows = courseStudents.OrderBy(s => s.PositionCourse).ToList(),
-                        Year = year,
-                        Path = index.Url?.Url
-                    }
-                );
-            }
-
-            ranking.ByMerit = new MeritTable
-            {
-                Year = year,
-                Path = index.Url?.Url,
-                Headers = meritTable.Headers,
-                Rows = meritTableData
-                    .Select(row =>
-                    {
-                        var findInCourse = ranking.ByCourse
-                            .Select(course => course.Rows?.Find(r => r.Id == row.Id))
-                            .Where(rowSingle => rowSingle is not null)
-                            .ToList();
-
-                        var withEnroll =
-                            findInCourse.Count > 0
-                                ? findInCourse.Find(c => c!.CanEnroll ?? false)
-                                : null;
-                        var withMaxPoints =
-                            findInCourse.Count > 0
-                                ? findInCourse.OrderBy(c => c!.PositionCourse).First()
-                                : null;
-
-                        var courseData = withEnroll ?? withMaxPoints;
-
-                        var argCanEnroll = row.CanEnroll ?? false;
-                        return new StudentResult
-                        {
-                            CanEnroll = argCanEnroll,
-                            CanEnrollInto = argCanEnroll ? row.CanEnrollInto : null,
-                            Id = row.Id,
-                            PositionAbsolute = row.Position,
-                            Result = row.Result,
-                            Ofa = row.Ofa,
-                            PositionCourse = courseData?.PositionCourse,
-                            EnglishCorrectAnswers = courseData?.EnglishCorrectAnswers,
-                            SectionsResults = courseData?.SectionsResults,
-                            BirthDate = courseData?.BirthDate
-                        };
-                    })
-                    .OrderBy(s => s.PositionAbsolute)
-                    .ToList()
-            };
-        }
-        else
-        {
-            foreach (var course in courseTables)
-            {
-                var studentResults = course.Data.Select(
-                    x => Converter.FromCourseTableRowToStudentResult(x, course)
-                );
-                var courseStudentsOrderByPositionCourse = studentResults
-                    .OrderBy(s => s.PositionCourse)
-                    .ToList();
-
-                ranking.ByCourse.Add(
-                    new CourseTable
-                    {
-                        Title = course.CourseTitle,
-                        Location = course.CourseLocation,
-                        Sections = course.Sections,
-                        Headers = course.Headers,
-                        Rows = courseStudentsOrderByPositionCourse,
-                        Year = year,
-                        Path = index.Url?.Url
-                    }
-                );
-            }
-
-            var listByMerit = meritTableData.Select(Converter.FromMeritTableToStudentResult);
-            var listByMeritOrderByPositionAbsolute = listByMerit
-                .OrderBy(s => s.PositionAbsolute)
-                .ToList();
-            ranking.ByMerit = new MeritTable
-            {
-                Headers = meritTable.Headers,
-                Rows = listByMeritOrderByPositionAbsolute,
-                Year = year,
-                Path = index.Url?.Url
-            };
+            ranking.ByCourse.Add(
+                new CourseTable
+                {
+                    Title = course.CourseTitle,
+                    Location = course.CourseLocation,
+                    Sections = course.Sections,
+                    Headers = course.Headers,
+                    Rows = GetCourseStudents(course, meritTable),
+                    Year = year,
+                    Path = index.Url?.Url
+                }
+            );
         }
 
         ranking.ByCourse = ranking.ByCourse.OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
+        ranking.ByMerit = new MeritTable
+        {
+            Year = year,
+            Path = index.Url?.Url,
+            Headers = meritTable.Headers,
+            Rows = GetMeritStudents(meritTable, ranking.ByCourse)
+        };
+
         ranking.RankingSummary = ranking.CreateSummary();
 
         Console.WriteLine($"[DEBUG] adding ranking {index.Url?.Url}");
@@ -344,36 +284,108 @@ public static class Parser
         AddRankingAndMerge(rankingsSet, ranking, forceReparsing);
     }
 
-    private static IEnumerable<StudentResult> GetCourseStudents(
+    private static List<StudentResult> GetMeritStudents(
+        Table<MeritTableRow> table,
+        List<CourseTable> courses
+    )
+    {
+        return table.Data
+            .Select(row => MeritTableRowToStudentResult(row, courses))
+            .OrderBy(s => s.PositionAbsolute)
+            .ToList();
+    }
+
+    public static StudentResult MeritTableRowToStudentResult(
+        MeritTableRow row,
+        List<CourseTable> courses
+    )
+    {
+        var canEnroll = row.CanEnroll ?? false;
+        var student = new StudentResult
+        {
+            CanEnroll = canEnroll,
+            CanEnrollInto = canEnroll ? row.CanEnrollInto : null,
+            Id = row.Id,
+            PositionAbsolute = row.Position,
+            Result = row.Result,
+            Ofa = row.Ofa,
+        };
+
+        if (row.Id == null)
+            return student;
+
+        var coursesRows = courses
+            .Where(course => course.Rows != null && course.Rows.Count > 0)
+            .Select(course => course.Rows!)
+            .ToList();
+
+        if (coursesRows.Count == 0)
+            return student;
+
+        var studentCoursesRows = coursesRows
+            .Select(rows => rows.Find(r => r.Id == row.Id))
+            .Where(row => row is not null)
+            .Select(row => row!)
+            .ToList();
+
+        if (studentCoursesRows == null || studentCoursesRows.Count == 0)
+            return student;
+
+        var finalRow = canEnroll
+            ? studentCoursesRows.Find(c => c.CanEnroll ?? false)
+            : studentCoursesRows.OrderBy(c => c.PositionCourse).First();
+
+        if (finalRow == null)
+            return student;
+
+        student.PositionCourse = finalRow.PositionCourse;
+        student.EnglishCorrectAnswers = finalRow.EnglishCorrectAnswers;
+        student.SectionsResults = finalRow.SectionsResults;
+        student.BirthDate = finalRow.BirthDate;
+        return student;
+    }
+
+    private static List<StudentResult> GetCourseStudents(
         Table<CourseTableRow> course,
-        List<MeritTableRow> meritTableData
+        Table<MeritTableRow> merit
     )
     {
         return course.Data
-            .Select(row => CourseTableRowToStudentResult(meritTableData, row))
+            .Select(row => CourseTableRowToStudentResult(merit.Data, row, course))
+            .ToList()
+            .OrderBy(s => s.PositionCourse)
             .ToList();
     }
 
     private static StudentResult CourseTableRowToStudentResult(
         List<MeritTableRow> meritTableData,
-        CourseTableRow row
+        CourseTableRow row,
+        Table<CourseTableRow> course
     )
     {
-        var absolute = meritTableData.Find(r => r.Id == row.Id);
-        var rowCanEnroll = row.CanEnroll ?? false;
+        var canEnroll = row.CanEnroll ?? false;
         var student = new StudentResult
         {
             Id = row.Id,
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = row.BirthDate,
-            CanEnroll = rowCanEnroll,
-            CanEnrollInto = rowCanEnroll ? absolute?.CanEnrollInto : null,
-            PositionAbsolute = absolute?.Position,
+            CanEnroll = canEnroll,
+            CanEnrollInto = canEnroll ? course.CourseTitle : null,
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
-            EnglishCorrectAnswers = row.EnglishCorrectAnswers
+            EnglishCorrectAnswers = row.EnglishCorrectAnswers,
         };
+
+        if (row.Id == null)
+            return student;
+
+        var meritRow = meritTableData.Find(r => r.Id == row.Id);
+        if (meritRow == null)
+            return student;
+
+        student.PositionAbsolute = meritRow.Position;
+        student.CanEnrollInto = canEnroll ? meritRow.CanEnrollInto : null;
         return student;
     }
 
@@ -385,22 +397,26 @@ public static class Parser
     )
     {
         var tableLinks = GetTableLinks(html);
+        if (tableLinks == null) return;
 
         List<HtmlPage> tablePages = new();
 
-        Action Selector(RankingUrl urlSingle)
-        {
-            return () =>
-            {
-                var htmlPage = SubIndex(allHtmls, urlSingle);
-                if (htmlPage != null)
-                    tablePages.Add(htmlPage);
-            };
-        }
+        foreach(var urlSingle in tableLinks) {
 
-        var actions = tableLinks?.Select((Func<RankingUrl, Action>)Selector).ToArray();
-        if (actions != null)
-            ParallelRun.Run(actions);
+        var htmlPage = SubIndex(allHtmls, urlSingle);
+        if (htmlPage != null)
+            tablePages.Add(htmlPage);
+        }
+        /* Action Selector(RankingUrl urlSingle) */
+        /* { */
+        /*     return () => */
+        /*     { */
+        /*     }; */
+        /* } */
+        /*  */
+        /* var actions = tableLinks?.Select((Func<RankingUrl, Action>)Selector).ToArray(); */
+        /* if (actions != null) */
+        /*     ParallelRun.Run(actions); */
         var urlPageEnum = html.Url?.PageEnum;
         switch (urlPageEnum)
         {
