@@ -24,6 +24,9 @@ public static partial class HashMatricola
 
         input = RemoveNonAlphanumeric(input);
 
+        if (string.IsNullOrEmpty(input))
+            return null;
+
         var stringInputWithSalt = input + SaltGlobal;
         var hexHash = GetSha256(stringInputWithSalt);
         var hashMatricolaMethod = hexHash[..MaxCharHash];
