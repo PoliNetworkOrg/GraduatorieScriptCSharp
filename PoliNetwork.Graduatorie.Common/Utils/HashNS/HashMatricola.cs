@@ -9,21 +9,21 @@ public static partial class HashMatricola
     private const string SaltGlobal = "saltPoliNetwork";
     private const int MaxCharHash = 20;
 
-    private static string RemoveNonAlphanumeric(string input)
+    private static string? RemoveNonAlphanumeric(string? input)
     {
-        // Remove non-alphanumeric characters using regular expressions
-        return NotAlphaNumericRegex().Replace(input, "");
+        if (string.IsNullOrEmpty(input))
+            return null;
+        
+        var trim = input.Trim();
+        return string.IsNullOrEmpty(trim) ? null :
+            // Remove non-alphanumeric characters using regular expressions
+            NotAlphaNumericRegex().Replace(trim, "");
     }
 
     public static string? HashMatricolaMethod(string? input)
     {
-        if (string.IsNullOrEmpty(input))
-            return null;
-
-        input = input.Trim();
-
         input = RemoveNonAlphanumeric(input);
-
+        
         if (string.IsNullOrEmpty(input))
             return null;
 
