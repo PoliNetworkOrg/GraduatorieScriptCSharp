@@ -12,6 +12,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 using PoliNetwork.Graduatorie.Scraper.Utils.Web;
+
 /* using PoliNetwork.Graduatorie.Common.Utils.ParallelNS; */
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
