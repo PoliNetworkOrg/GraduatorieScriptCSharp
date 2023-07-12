@@ -279,7 +279,7 @@ public static class Parser
 
     private static List<StudentResult> GetMeritStudents(
         Table<MeritTableRow> table,
-        List<CourseTable> courses
+        IReadOnlyCollection<CourseTable> courses
     )
     {
         return table.Data
@@ -288,9 +288,9 @@ public static class Parser
             .ToList();
     }
 
-    public static StudentResult MeritTableRowToStudentResult(
+    private static StudentResult MeritTableRowToStudentResult(
         MeritTableRow row,
-        List<CourseTable> courses
+        IEnumerable<CourseTable> courses
     )
     {
         var canEnroll = row.CanEnroll ?? false;
@@ -308,7 +308,7 @@ public static class Parser
             return student;
 
         var coursesRows = courses
-            .Where(course => course.Rows != null && course.Rows.Count > 0)
+            .Where(course => course.Rows is { Count: > 0 })
             .Select(course => course.Rows!)
             .ToList();
 
@@ -317,16 +317,15 @@ public static class Parser
 
         var studentCoursesRows = coursesRows
             .Select(rows => rows.Find(r => r.Id == row.Id))
-            .Where(row => row is not null)
-            .Select(row => row!)
+            .Where(studentResult => studentResult is not null)
             .ToList();
 
-        if (studentCoursesRows == null || studentCoursesRows.Count == 0)
+        if (studentCoursesRows.Count == 0)
             return student;
 
         var finalRow = canEnroll
-            ? studentCoursesRows.Find(c => c.CanEnroll ?? false)
-            : studentCoursesRows.OrderBy(c => c.PositionCourse).First();
+            ? studentCoursesRows.Find(c => c?.CanEnroll ?? false)
+            : studentCoursesRows.OrderBy(c => c?.PositionCourse).First();
 
         if (finalRow == null)
             return student;
@@ -394,9 +393,10 @@ public static class Parser
 
         List<HtmlPage> tablePages = new();
 
+        var htmlPages = allHtmls.ToList();
         foreach (var urlSingle in tableLinks)
         {
-            var htmlPage = SubIndex(allHtmls, urlSingle);
+            var htmlPage = SubIndex(htmlPages, urlSingle);
             if (htmlPage != null)
                 tablePages.Add(htmlPage);
         }
