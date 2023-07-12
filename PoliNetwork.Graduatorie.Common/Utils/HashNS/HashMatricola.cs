@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace PoliNetwork.Graduatorie.Common.Utils.HashNS;
 
-public static class HashMatricola
+public static partial class HashMatricola
 {
     private const string SaltGlobal = "saltPoliNetwork";
     private const int MaxCharHash = 20;
@@ -12,7 +12,7 @@ public static class HashMatricola
     private static string RemoveNonAlphanumeric(string input)
     {
         // Remove non-alphanumeric characters using regular expressions
-        return Regex.Replace(input, "[^a-zA-Z0-9]", "");
+        return NotAlphaNumericRegex().Replace(input, "");
     }
     
     public static string? HashMatricolaMethod(string? input)
@@ -45,4 +45,7 @@ public static class HashMatricola
         foreach (var b in bytes) sb.Append(b.ToString("X2"));
         return sb.ToString();
     }
+
+    [GeneratedRegex("[^a-zA-Z0-9]")]
+    private static partial Regex NotAlphaNumericRegex();
 }
