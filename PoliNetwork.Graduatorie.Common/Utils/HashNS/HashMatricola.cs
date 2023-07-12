@@ -1,15 +1,31 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace PoliNetwork.Graduatorie.Common.Utils.HashNS;
 
-public static class HashMatricola
+public static partial class HashMatricola
 {
     private const string SaltGlobal = "saltPoliNetwork";
     private const int MaxCharHash = 20;
 
+    private static string? RemoveNonAlphanumeric(string? input)
+    {
+        if (string.IsNullOrEmpty(input))
+            return null;
+
+        var trim = input.Trim();
+        return string.IsNullOrEmpty(trim)
+            ? null
+            :
+            // Remove non-alphanumeric characters using regular expressions
+            NotAlphaNumericRegex().Replace(trim, "");
+    }
+
     public static string? HashMatricolaMethod(string? input)
     {
+        input = RemoveNonAlphanumeric(input);
+
         if (string.IsNullOrEmpty(input))
             return null;
 
@@ -34,4 +50,7 @@ public static class HashMatricola
         foreach (var b in bytes) sb.Append(b.ToString("X2"));
         return sb.ToString();
     }
+
+    [GeneratedRegex("[^a-zA-Z0-9]")]
+    private static partial Regex NotAlphaNumericRegex();
 }
