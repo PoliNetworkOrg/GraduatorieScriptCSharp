@@ -6,13 +6,13 @@ using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Common.Utils.HashNS;
-/* using PoliNetwork.Graduatorie.Common.Utils.ParallelNS; */
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 using PoliNetwork.Graduatorie.Scraper.Utils.Web;
+/* using PoliNetwork.Graduatorie.Common.Utils.ParallelNS; */
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
@@ -41,9 +41,8 @@ public static class Parser
         var indexes = allHtmls.Where(h => h.Url?.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
 
-        foreach (var index in indexes) {
+        foreach (var index in indexes)
             GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing ?? false);
-        }
 
         /* Action Selector(HtmlPage index) */
         /* { */
@@ -109,10 +108,8 @@ public static class Parser
         var subUrls = GetSubUrls(index);
         var subHtmls = subUrls?.Select(url => HtmlPage.FromUrl(url, htmlFolder)).ToList();
         if (subHtmls == null) return newHtmls;
-        
-        foreach (var subHtml in subHtmls) {
-            GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls);
-        }
+
+        foreach (var subHtml in subHtmls) GetAndSaveAllHtmls2(htmlFolder, subHtml, newHtmls);
 
         /* var actions = subHtmls */
         /*     ?.Select( */
@@ -186,7 +183,6 @@ public static class Parser
             {
                 var parsed = rankingsSet.Rankings[findIndex];
                 if (parsed is { ByMerit: not null, ByCourse: not null })
-                {
                     if (!forceReparsing)
                     {
                         Console.WriteLine(
@@ -194,7 +190,6 @@ public static class Parser
                         );
                         return;
                     }
-                }
             }
         }
 
@@ -253,7 +248,6 @@ public static class Parser
         };
 
         foreach (var course in courseTables)
-        {
             ranking.ByCourse.Add(
                 new CourseTable
                 {
@@ -266,7 +260,6 @@ public static class Parser
                     Path = index.Url?.Url
                 }
             );
-        }
 
         ranking.ByCourse = ranking.ByCourse.OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
         ranking.ByMerit = new MeritTable
@@ -308,7 +301,7 @@ public static class Parser
             Id = row.Id,
             PositionAbsolute = row.Position,
             Result = row.Result,
-            Ofa = row.Ofa,
+            Ofa = row.Ofa
         };
 
         if (row.Id == null)
@@ -374,7 +367,7 @@ public static class Parser
             CanEnrollInto = canEnroll ? course.CourseTitle : null,
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
-            EnglishCorrectAnswers = row.EnglishCorrectAnswers,
+            EnglishCorrectAnswers = row.EnglishCorrectAnswers
         };
 
         if (row.Id == null)
@@ -401,12 +394,13 @@ public static class Parser
 
         List<HtmlPage> tablePages = new();
 
-        foreach(var urlSingle in tableLinks) {
-
-        var htmlPage = SubIndex(allHtmls, urlSingle);
-        if (htmlPage != null)
-            tablePages.Add(htmlPage);
+        foreach (var urlSingle in tableLinks)
+        {
+            var htmlPage = SubIndex(allHtmls, urlSingle);
+            if (htmlPage != null)
+                tablePages.Add(htmlPage);
         }
+
         /* Action Selector(RankingUrl urlSingle) */
         /* { */
         /*     return () => */
@@ -548,8 +542,8 @@ public static class Parser
                 var title = isCourse ? fullTitle?.Split(" (")[0] : null;
                 var location = isCourse ? GetCourseLocation(fullTitle) : null;
                 var rowsData = rows?.Select(
-                    row => row.Descendants("td").Select(node => node.InnerText).ToList()
-                )
+                        row => row.Descendants("td").Select(node => node.InnerText).ToList()
+                    )
                     .ToList();
                 return Table.Create(header.Item1, header.Item2, rowsData, title, location);
             })

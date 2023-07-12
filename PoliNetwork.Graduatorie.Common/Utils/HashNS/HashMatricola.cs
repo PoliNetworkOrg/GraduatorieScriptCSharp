@@ -14,7 +14,7 @@ public static partial class HashMatricola
         // Remove non-alphanumeric characters using regular expressions
         return NotAlphaNumericRegex().Replace(input, "");
     }
-    
+
     public static string? HashMatricolaMethod(string? input)
     {
         if (string.IsNullOrEmpty(input))
