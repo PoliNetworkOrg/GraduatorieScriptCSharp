@@ -9,22 +9,26 @@ public static partial class HashMatricola
     private const string SaltGlobal = "saltPoliNetwork";
     private const int MaxCharHash = 20;
 
-    private static string? RemoveNonAlphanumeric(string? input)
+    private static string? CleanInput(string? input)
     {
         if (string.IsNullOrEmpty(input))
             return null;
 
-        var trim = input.Trim();
-        return string.IsNullOrEmpty(trim)
-            ? null
-            :
-            // Remove non-alphanumeric characters using regular expressions
-            NotAlphaNumericRegex().Replace(trim, "");
+        if (input.Contains(' '))
+        {
+            input = input.Split(" ").First(x => !string.IsNullOrEmpty(x));
+        }
+
+        var s = input.Trim().ToUpper();
+        if (string.IsNullOrEmpty(s))
+            return null;
+        
+        return NotAlphaNumericRegex().Replace(s, "");
     }
 
     public static string? HashMatricolaMethod(string? input)
     {
-        input = RemoveNonAlphanumeric(input);
+        input = CleanInput(input);
 
         if (string.IsNullOrEmpty(input))
             return null;
