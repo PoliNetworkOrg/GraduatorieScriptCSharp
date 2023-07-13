@@ -1134,11 +1134,11 @@
         {
           "birthDate": "2002-07-03",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (MANTOVA)",
           "englishCorrectAnswers": null,
-          "id": "cf442cfdc184f2434b32",
+          "id": "9ad4234b19f54400fda8",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 218,
           "positionCourse": 23,
           "result": 23.30,
           "sectionsResults": {
@@ -2565,11 +2565,11 @@
         {
           "birthDate": "2000-03-28",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Prenotato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
           "englishCorrectAnswers": null,
-          "id": "ae48e4cb29cc37b41a46",
+          "id": "4757784b429f8696e715",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 281,
           "positionCourse": 47,
           "result": 19.00,
           "sectionsResults": {
@@ -2601,11 +2601,11 @@
         {
           "birthDate": "1998-03-12",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Prenotato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
           "englishCorrectAnswers": null,
-          "id": "f7c660f3edfe7fb024a9",
+          "id": "3cd343be651a17ea4058",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 285,
           "positionCourse": 49,
           "result": 18.40,
           "sectionsResults": {
@@ -3024,11 +3024,11 @@
         {
           "birthDate": "2001-09-15",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (PIACENZA)",
           "englishCorrectAnswers": null,
-          "id": "0cb3cda7bc549caefe93",
+          "id": "236c19dbf2165b10b1e7",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 72,
           "positionCourse": 2,
           "result": 34.70,
           "sectionsResults": {
@@ -3222,11 +3222,11 @@
         {
           "birthDate": "2001-02-20",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (PIACENZA)",
           "englishCorrectAnswers": null,
-          "id": "0fa54aa04da4a680ada7",
+          "id": "d81f266d857b3640f158",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 149,
           "positionCourse": 13,
           "result": 27.90,
           "sectionsResults": {
@@ -8633,9 +8633,9 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": null,
-          "id": "ae48e4cb29cc37b41a46",
+          "id": "4757784b429f8696e715",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 281,
           "positionCourse": 250,
           "result": 19.00,
           "sectionsResults": {
@@ -8687,9 +8687,9 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": null,
-          "id": "f7c660f3edfe7fb024a9",
+          "id": "3cd343be651a17ea4058",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 285,
           "positionCourse": 253,
           "result": 18.40,
           "sectionsResults": {
@@ -13196,9 +13196,9 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": null,
-          "id": "ae48e4cb29cc37b41a46",
+          "id": "4757784b429f8696e715",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 281,
           "positionCourse": 168,
           "result": 19.00,
           "sectionsResults": {
@@ -15761,16 +15761,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2001-09-15",
         "canEnroll": true,
         "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (PIACENZA)",
         "englishCorrectAnswers": null,
         "id": "236c19dbf2165b10b1e7",
         "ofa": {},
         "positionAbsolute": 72,
-        "positionCourse": null,
+        "positionCourse": 2,
         "result": 34.70,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": 8.20,
+          "Ragionamento Logico": 0.70,
+          "Storia": 11.20,
+          "Disegno e Rappresentazione": 9.00,
+          "Fisica e Matematica": 5.60
+        }
       },
       {
         "birthDate": "2002-04-06",
@@ -17141,16 +17147,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2001-02-20",
         "canEnroll": true,
         "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (PIACENZA)",
         "englishCorrectAnswers": null,
         "id": "d81f266d857b3640f158",
         "ofa": {},
         "positionAbsolute": 149,
-        "positionCourse": null,
+        "positionCourse": 13,
         "result": 27.90,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": 1.80,
+          "Ragionamento Logico": 5.20,
+          "Storia": 2.90,
+          "Disegno e Rappresentazione": 9.00,
+          "Fisica e Matematica": 9.00
+        }
       },
       {
         "birthDate": "1999-12-30",
@@ -18377,16 +18389,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-07-03",
         "canEnroll": true,
         "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (MANTOVA)",
         "englishCorrectAnswers": null,
         "id": "9ad4234b19f54400fda8",
         "ofa": {},
         "positionAbsolute": 218,
-        "positionCourse": null,
+        "positionCourse": 23,
         "result": 23.30,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": 2.90,
+          "Ragionamento Logico": 3.70,
+          "Storia": 4.00,
+          "Disegno e Rappresentazione": 9.00,
+          "Fisica e Matematica": 3.70
+        }
       },
       {
         "birthDate": "2002-03-07",
@@ -19505,16 +19523,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2000-03-28",
         "canEnroll": true,
         "canEnrollInto": "Prenotato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
         "englishCorrectAnswers": null,
         "id": "4757784b429f8696e715",
         "ofa": {},
         "positionAbsolute": 281,
-        "positionCourse": null,
+        "positionCourse": 47,
         "result": 19.00,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": -0.40,
+          "Ragionamento Logico": 4.10,
+          "Storia": 5.20,
+          "Disegno e Rappresentazione": 4.10,
+          "Fisica e Matematica": 6.00
+        }
       },
       {
         "birthDate": "2002-06-05",
@@ -19571,16 +19595,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "1998-03-12",
         "canEnroll": true,
         "canEnrollInto": "Prenotato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
         "englishCorrectAnswers": null,
         "id": "3cd343be651a17ea4058",
         "ofa": {},
         "positionAbsolute": 285,
-        "positionCourse": null,
+        "positionCourse": 49,
         "result": 18.40,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": -0.10,
+          "Ragionamento Logico": -0.10,
+          "Storia": 7.80,
+          "Disegno e Rappresentazione": 9.00,
+          "Fisica e Matematica": 1.80
+        }
       },
       {
         "birthDate": "2003-04-30",
@@ -21080,7 +21110,7 @@
     "year": 2021
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-12T22:35:15.99714+00:00",
+  "lastUpdate": "2023-07-13T21:33:21.8553229+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
