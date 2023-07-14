@@ -7,6 +7,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
@@ -23,6 +24,17 @@ public class Ranking
     public SchoolEnum? School;
     public RankingUrl? Url;
     public int? Year;
+    
+    public RankingSummaryStudent GetRankingSummaryStudent()
+    {
+        return new RankingSummaryStudent
+        {
+            Phase = Phase,
+            School = School,
+            Year = Year,
+            Url = Url
+        };
+    }
 
 
     /***
@@ -105,4 +117,6 @@ public class Ranking
     {
         return RankingSummary.From(this);
     }
+
+
 }

@@ -13,7 +13,7 @@ public class StudentHashSummary
 {
     public string? Id;
     public List<SingleCourseJson> SingleCourseJsons = new();
-    public List<RankingSummary> RankingSummaries = new();
+    public List<RankingSummaryStudent> RankingSummaries = new();
     public bool? Merit;
     public void Merge(StudentResult student, Ranking ranking, CourseTable? courseTable)
     {
@@ -30,7 +30,7 @@ public class StudentHashSummary
             if (s != null) this.SingleCourseJsons.Add(s);
         }
 
-        var r = ranking.RankingSummary ?? ranking.CreateSummary();
-        this.RankingSummaries.Add(r);
+        var r = ranking.GetRankingSummaryStudent();
+        RankingSummaries.Add(r);
     }
 }
