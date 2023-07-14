@@ -14,15 +14,12 @@ public static partial class HashMatricola
         if (string.IsNullOrEmpty(input))
             return null;
 
-        if (input.Contains(' '))
-        {
-            input = input.Split(" ").First(x => !string.IsNullOrEmpty(x));
-        }
+        if (input.Contains(' ')) input = input.Split(" ").First(x => !string.IsNullOrEmpty(x));
 
         var s = input.Trim().ToUpper();
         if (string.IsNullOrEmpty(s))
             return null;
-        
+
         return NotAlphaNumericRegex().Replace(s, "");
     }
 
