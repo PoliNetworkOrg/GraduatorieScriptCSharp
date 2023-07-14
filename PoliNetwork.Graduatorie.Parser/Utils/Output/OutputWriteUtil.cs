@@ -15,5 +15,6 @@ public static class OutputWriteUtil
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
         StatsJson.Write(outFolder, rankingsSet);
+        HashMatricoleWrite.Write(rankingsSet, outFolder);
     }
 }
