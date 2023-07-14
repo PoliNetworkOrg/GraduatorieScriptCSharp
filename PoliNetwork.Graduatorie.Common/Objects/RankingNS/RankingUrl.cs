@@ -8,8 +8,8 @@ namespace PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingUrl
 {
-    public readonly PageEnum PageEnum = PageEnum.Unknown;
-    public readonly string Url = "";
+    public PageEnum PageEnum = PageEnum.Unknown;
+    public string Url = "";
 
     public override bool Equals(object? obj)
     {
@@ -17,15 +17,20 @@ public class RankingUrl
         return this.PageEnum == rankingUrl.PageEnum && this.Url == rankingUrl.Url;
     }
 
+    public override int GetHashCode()
+    {
+        // ReSharper disable once NonReadonlyMemberInGetHashCode
+        var urlHash = this.Url.GetHashCode();
+        // ReSharper disable once NonReadonlyMemberInGetHashCode
+        return this.PageEnum.GetHashCode() ^ urlHash ;
+    }
+
     protected bool Equals(RankingUrl other)
     {
         return PageEnum == other.PageEnum && Url == other.Url;
     }
 
-    public override int GetHashCode()
-    {
-        return HashCode.Combine((int)PageEnum, Url);
-    }
+
 
     public int GetHashWithoutLastUpdate()
     {
