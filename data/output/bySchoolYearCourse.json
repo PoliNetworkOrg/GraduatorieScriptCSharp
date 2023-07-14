@@ -640,6 +640,62 @@
             }
           ]
         },
+        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
+        "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO": {
+          "LECCO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "LECCO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "LECCO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Fase.json",
+              "location": "LECCO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
         "INGEGNERIA DELL'AUTOMAZIONE": {
           "MILANO LEONARDO": [
             {
@@ -663,6 +719,26 @@
               "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Terza Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
+        "INGEGNERIA FISICA": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             }
@@ -735,82 +811,6 @@
               "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
-        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
-        "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO": {
-          "LECCO": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "LECCO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "LECCO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Fase.json",
-              "location": "LECCO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
-        "INGEGNERIA FISICA": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             }
@@ -4069,5 +4069,5 @@
       }
     }
   },
-  "lastUpdate": "2023-07-14T11:46:54.083448+02:00"
+  "lastUpdate": "2023-07-14T09:46:54.083448+00:00"
 }
