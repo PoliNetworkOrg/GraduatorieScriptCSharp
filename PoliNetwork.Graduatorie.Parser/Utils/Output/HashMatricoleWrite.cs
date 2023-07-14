@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
@@ -65,7 +66,7 @@ public static class HashMatricoleWrite
 
         foreach (var variable in dictResult)
         {
-            var toWrite = JsonConvert.SerializeObject(variable.Value);
+            var toWrite = JsonConvert.SerializeObject(variable.Value, Culture.JsonSerializerSettings);
             File.WriteAllText(hashmatricole + "/" + variable.Key + ".json", toWrite);
         }
     }
