@@ -55,10 +55,11 @@ public static class HashMatricoleWrite
 
     private static void WriteToFile(Dictionary<string, StudentHashSummary> dictionary, string outFolder)
     {
-        throw new NotImplementedException();
+        ;
+
     }
 
-    private static void AddToDict(Dictionary<string, StudentHashSummary> dictionary, Ranking ranking, StudentResult student, CourseTable? courseTable)
+    private static void AddToDict(IDictionary<string, StudentHashSummary> dictionary, Ranking ranking, StudentResult student, CourseTable? courseTable)
     {
         var id = student.Id;
         if (string.IsNullOrEmpty(id))

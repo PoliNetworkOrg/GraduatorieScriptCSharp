@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Parser.Objects;
-using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 
@@ -12,9 +11,9 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 public class StudentHashSummary
 {
     public string? Id;
-    public List<SingleCourseJson> SingleCourseJsons = new();
+    public List<RankingSummaryStudent> SingleCourseJsons = new();
     public List<RankingSummaryStudent> RankingSummaries = new();
-    public bool? Merit;
+    public bool? InMeritTable;
     public void Merge(StudentResult student, Ranking ranking, CourseTable? courseTable)
     {
         if (string.IsNullOrEmpty(Id))
@@ -22,12 +21,12 @@ public class StudentHashSummary
 
         if (courseTable == null)
         {
-            Merit = true;
+            InMeritTable = true;
         }
         else
         {
-            var s = ranking.ToSingleCourseJson().FirstOrDefault(x => x.Is(courseTable));
-            if (s != null) this.SingleCourseJsons.Add(s);
+            var s = courseTable.GetRankingSummaryStudent(ranking);
+            this.SingleCourseJsons.Add(s);
         }
 
         var r = ranking.GetRankingSummaryStudent();

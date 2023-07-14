@@ -13,4 +13,5 @@ public class RankingSummaryStudent
     public SchoolEnum? School;
     public int? Year;
     public RankingUrl? Url;
+    public string? Course;
 }
