@@ -25,9 +25,9 @@
           "canEnroll": true,
           "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
           "englishCorrectAnswers": null,
-          "id": "649cd0a24a3475594367",
+          "id": "74ff8e0552110fd61f6b",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 1,
           "positionCourse": 1,
           "result": 60.00,
           "sectionsResults": {
@@ -50,22 +50,26 @@
     "path": "http://www.risultati-ammissione.polimi.it/2022_20007_html/2022_20007_generale.html",
     "rows": [
       {
-        "birthDate": null,
+        "birthDate": "2003-05-31",
         "canEnroll": true,
         "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
         "englishCorrectAnswers": null,
         "id": "74ff8e0552110fd61f6b",
         "ofa": {},
         "positionAbsolute": 1,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 60.00,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Colloquio": 23.00,
+          "Elaborato": 20.00,
+          "Lettera Motivazionale": 17.00
+        }
       }
     ],
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-12T22:34:49.1870244+00:00",
+  "lastUpdate": "2023-07-13T21:33:03.2471144+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [

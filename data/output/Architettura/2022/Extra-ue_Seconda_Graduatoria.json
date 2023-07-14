@@ -1389,11 +1389,11 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": 24,
-          "id": "570e82e564dc5a5b2112",
+          "id": "61cf0ea9e2bb32ba2f35",
           "ofa": {
             "ENG": false
           },
-          "positionAbsolute": null,
+          "positionAbsolute": 91,
           "positionCourse": 3,
           "result": 27.00,
           "sectionsResults": {
@@ -14846,18 +14846,24 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2001-08-13",
         "canEnroll": false,
         "canEnrollInto": null,
-        "englishCorrectAnswers": null,
+        "englishCorrectAnswers": 24,
         "id": "61cf0ea9e2bb32ba2f35",
         "ofa": {
           "ENG": false
         },
         "positionAbsolute": 91,
-        "positionCourse": null,
+        "positionCourse": 3,
         "result": 27.00,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Ragionamento Logico": 6.00,
+          "Comprensione del Testo": 5.00,
+          "Disegno e Rappresentazione": 6.75,
+          "Fisica e Matematica": 6.75,
+          "Conoscenze aquisite negli studi, storia e cultura generale": 2.50
+        }
       },
       {
         "birthDate": "2003-08-12",
@@ -18583,7 +18589,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-12T22:34:53.0063688+00:00",
+  "lastUpdate": "2023-07-13T21:33:05.6293317+00:00",
   "phase": "Extra-ue Seconda Graduatoria",
   "rankingSummary": {
     "courseSummarized": [

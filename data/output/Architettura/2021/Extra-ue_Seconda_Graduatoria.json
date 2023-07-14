@@ -1053,11 +1053,11 @@
         {
           "birthDate": "2002-02-03",
           "canEnroll": true,
-          "canEnrollInto": "PROGETTAZIONE DELL'ARCHITETTURA",
+          "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
           "englishCorrectAnswers": null,
-          "id": "50655119a30fe0594174",
+          "id": "c5740c8fbb09721ff669",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 85,
           "positionCourse": 12,
           "result": 24.90,
           "sectionsResults": {
@@ -9659,16 +9659,22 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2002-02-03",
         "canEnroll": true,
         "canEnrollInto": "Assegnato - PROGETTAZIONE DELL'ARCHITETTURA (MILANO LEONARDO)",
         "englishCorrectAnswers": null,
         "id": "c5740c8fbb09721ff669",
         "ofa": {},
         "positionAbsolute": 85,
-        "positionCourse": null,
+        "positionCourse": 12,
         "result": 24.90,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Cultura Generale": 1.10,
+          "Ragionamento Logico": 5.20,
+          "Storia": 4.40,
+          "Disegno e Rappresentazione": 7.50,
+          "Fisica e Matematica": 6.70
+        }
       },
       {
         "birthDate": "2002-06-28",
@@ -11762,7 +11768,7 @@
     "year": 2021
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-12T22:35:16.4880855+00:00",
+  "lastUpdate": "2023-07-13T21:33:22.2288768+00:00",
   "phase": "Extra-ue Seconda Graduatoria",
   "rankingSummary": {
     "courseSummarized": [

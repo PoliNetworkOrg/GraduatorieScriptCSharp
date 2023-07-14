@@ -25,9 +25,9 @@
           "canEnroll": true,
           "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
           "englishCorrectAnswers": null,
-          "id": "4064c1be4204eb493f58",
+          "id": "6aeb0d1bd5e5e2c1c39e",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 1,
           "positionCourse": 1,
           "result": 67.00,
           "sectionsResults": {
@@ -57,9 +57,9 @@
           "canEnroll": false,
           "canEnrollInto": null,
           "englishCorrectAnswers": null,
-          "id": "f370bbc899b0a79f894f",
+          "id": "12ece5f71c9d515ac473",
           "ofa": {},
-          "positionAbsolute": null,
+          "positionAbsolute": 3,
           "positionCourse": 3,
           "result": 36.00,
           "sectionsResults": {
@@ -82,16 +82,20 @@
     "path": "http://www.risultati-ammissione.polimi.it/2023_20007_65df_html/2023_20007_generale.html",
     "rows": [
       {
-        "birthDate": null,
+        "birthDate": "2003-10-20",
         "canEnroll": true,
         "canEnrollInto": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO",
         "englishCorrectAnswers": null,
         "id": "6aeb0d1bd5e5e2c1c39e",
         "ofa": {},
         "positionAbsolute": 1,
-        "positionCourse": null,
+        "positionCourse": 1,
         "result": 67.00,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Colloquio": 32.00,
+          "Elaborato": 19.00,
+          "Lettera Motivazionale": 16.00
+        }
       },
       {
         "birthDate": "2004-02-26",
@@ -110,22 +114,26 @@
         }
       },
       {
-        "birthDate": null,
+        "birthDate": "2004-06-21",
         "canEnroll": false,
         "canEnrollInto": null,
         "englishCorrectAnswers": null,
         "id": "12ece5f71c9d515ac473",
         "ofa": {},
         "positionAbsolute": 3,
-        "positionCourse": null,
+        "positionCourse": 3,
         "result": 36.00,
-        "sectionsResults": null
+        "sectionsResults": {
+          "Colloquio": 25.00,
+          "Elaborato": 7.00,
+          "Lettera Motivazionale": 4.00
+        }
       }
     ],
     "year": 2023
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-12T22:34:59.1783968+00:00",
+  "lastUpdate": "2023-07-13T21:33:09.5158923+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
