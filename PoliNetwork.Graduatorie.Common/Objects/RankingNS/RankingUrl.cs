@@ -14,22 +14,21 @@ public class RankingUrl
     public override bool Equals(object? obj)
     {
         if (obj is not RankingUrl rankingUrl) return false;
-        return this.PageEnum == rankingUrl.PageEnum && this.Url == rankingUrl.Url;
+        return PageEnum == rankingUrl.PageEnum && Url == rankingUrl.Url;
     }
 
     public override int GetHashCode()
     {
         // ReSharper disable once NonReadonlyMemberInGetHashCode
-        var urlHash = this.Url.GetHashCode();
+        var urlHash = Url.GetHashCode();
         // ReSharper disable once NonReadonlyMemberInGetHashCode
-        return this.PageEnum.GetHashCode() ^ urlHash ;
+        return PageEnum.GetHashCode() ^ urlHash;
     }
 
     protected bool Equals(RankingUrl other)
     {
         return PageEnum == other.PageEnum && Url == other.Url;
     }
-
 
 
     public int GetHashWithoutLastUpdate()
