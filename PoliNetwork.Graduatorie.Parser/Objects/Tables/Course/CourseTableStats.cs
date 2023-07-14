@@ -17,6 +17,7 @@ public class CourseTableStats
     public string? Location;
     public decimal? MinScoreToEnroll;
     public string? Title;
+    public int? HowManyCanEnroll;
 
     public int GetHashWithoutLastUpdate()
     {
@@ -27,6 +28,7 @@ public class CourseTableStats
         i ^= Location?.GetHashCode() ?? "Location".GetHashCode();
         i ^= Title?.GetHashCode() ?? "Title".GetHashCode();
         i ^= MinScoreToEnroll?.GetHashCode() ?? "MinScoreToEnroll".GetHashCode();
+        i ^= HowManyCanEnroll?.GetHashCode() ?? "HowManyCanEnroll".GetHashCode();
 
         if (HowManyOfa == null)
             i ^= "HowManyOfa".GetHashCode();
@@ -73,8 +75,9 @@ public class CourseTableStats
             return stats;
 
         var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll ?? false).ToList();
+        var studentsWhoCanEnrollCount = studentsWhoCanEnroll.Count;
         var minValueToEnroll =
-            studentsWhoCanEnroll.Count > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : null;
+            studentsWhoCanEnrollCount > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : null;
         var resultsOfStudentsWhoCanEnroll = studentsWhoCanEnroll.Select(x => x.Result);
         var resultsOfAllStudents = courseTableRows.Select(x => x.Result);
         var yearBornStudents = courseTableRows.Select(GetYearBorn);
@@ -87,6 +90,7 @@ public class CourseTableStats
         stats.AveragePartialScores = AveragePartialScoresCalculate(courseTableRows);
         stats.HowManyOfa = HowManyOfaCalculate(courseTableRows);
         stats.MinScoreToEnroll = MathRound(minValueToEnroll);
+        stats.HowManyCanEnroll = studentsWhoCanEnrollCount;
         return stats;
     }
 
