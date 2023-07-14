@@ -22,13 +22,7 @@ public class CourseTable : MeritTable
 
     public RankingSummaryStudent GetRankingSummaryStudent(Ranking ranking)
     {
-        return new RankingSummaryStudent()
-        {
-            Course = this.Title,
-            Phase = ranking.Phase,
-            School = ranking.School,
-            Url = ranking.Url,
-            Year = ranking.Year
-        };
+        return new RankingSummaryStudent(course: this.Title, phase: ranking.Phase, school: ranking.School,
+            url: ranking.Url, year: ranking.Year);
     }
 }

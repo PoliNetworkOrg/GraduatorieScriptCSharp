@@ -27,13 +27,7 @@ public class Ranking
     
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
-        return new RankingSummaryStudent
-        {
-            Phase = Phase,
-            School = School,
-            Year = Year,
-            Url = Url
-        };
+        return new RankingSummaryStudent(phase: Phase, school: School, year: Year, url: Url);
     }
 
 
