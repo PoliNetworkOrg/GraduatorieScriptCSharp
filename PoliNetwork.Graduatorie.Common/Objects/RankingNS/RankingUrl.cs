@@ -11,6 +11,12 @@ public class RankingUrl
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
 
+    public override bool Equals(object? obj)
+    {
+        if (obj is not RankingUrl rankingUrl) return false;
+        return this.PageEnum == rankingUrl.PageEnum && this.Url == rankingUrl.Url;
+    }
+
     public int GetHashWithoutLastUpdate()
     {
         var i = "RankingUrl".GetHashCode();

@@ -26,10 +26,14 @@ public class StudentHashSummary
         else
         {
             var s = courseTable.GetRankingSummaryStudent(ranking);
-            this.SingleCourseJsons.Add(s);
+            bool present1 = this.SingleCourseJsons.Any(x => x.Equals(s));
+            if (!present1)
+                this.SingleCourseJsons.Add(s);
         }
 
         var r = ranking.GetRankingSummaryStudent();
-        RankingSummaries.Add(r);
+        bool present2 = this.RankingSummaries.Any(x => x.Equals(r));
+        if (!present2)
+            RankingSummaries.Add(r);
     }
 }
