@@ -52,15 +52,24 @@ public static class ScraperOutput
             return;
 
         var filePath = GetFilePath(dataFolder);
-        var output = "";
-        var rankingUrls = rankingsUrls.Where(UrlUtils.CheckUrl);
-        foreach (var link in rankingUrls)
-        {
-            output += link.Url;
-            output += "\n";
-        }
+
+        var output = GetOutputLinksString(rankingsUrls);
 
         Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {rankingsUrls.Count} links");
         File.WriteAllText(filePath, output);
+    }
+
+    private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
+    {
+        var output = "";
+        var enumerable = rankingsUrls.Where(UrlUtils.CheckUrl).Select(x => x.Url);
+        var rankingUrls = enumerable.OrderBy(x => x).ToList();
+        foreach (var link in rankingUrls)
+        {
+            output += link;
+            output += "\n";
+        }
+
+        return output;
     }
 }
