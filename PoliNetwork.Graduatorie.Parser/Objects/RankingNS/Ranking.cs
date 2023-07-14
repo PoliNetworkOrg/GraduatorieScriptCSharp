@@ -24,16 +24,10 @@ public class Ranking
     public SchoolEnum? School;
     public RankingUrl? Url;
     public int? Year;
-    
+
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
-        return new RankingSummaryStudent
-        {
-            Phase = Phase,
-            School = School,
-            Year = Year,
-            Url = Url
-        };
+        return new RankingSummaryStudent(Phase, School, Year, Url);
     }
 
 
@@ -117,6 +111,4 @@ public class Ranking
     {
         return RankingSummary.From(this);
     }
-
-
 }

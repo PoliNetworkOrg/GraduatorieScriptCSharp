@@ -11,13 +11,14 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 public class StudentHashSummary
 {
     public string? Id;
-    public List<RankingSummaryStudent> SingleCourseJsons = new();
-    public List<RankingSummaryStudent> RankingSummaries = new();
     public bool? InMeritTable;
+    public List<RankingSummaryStudent> RankingSummaries = new();
+    public List<RankingSummaryStudent> SingleCourseJsons = new();
+
     public void Merge(StudentResult student, Ranking ranking, CourseTable? courseTable)
     {
         if (string.IsNullOrEmpty(Id))
-            this.Id = student.Id;
+            Id = student.Id;
 
         if (courseTable == null)
         {
@@ -26,10 +27,14 @@ public class StudentHashSummary
         else
         {
             var s = courseTable.GetRankingSummaryStudent(ranking);
-            this.SingleCourseJsons.Add(s);
+            var present1 = SingleCourseJsons.Any(x => x.Equals(s));
+            if (!present1)
+                SingleCourseJsons.Add(s);
         }
 
         var r = ranking.GetRankingSummaryStudent();
-        RankingSummaries.Add(r);
+        var present2 = RankingSummaries.Any(x => x.Equals(r));
+        if (!present2)
+            RankingSummaries.Add(r);
     }
 }

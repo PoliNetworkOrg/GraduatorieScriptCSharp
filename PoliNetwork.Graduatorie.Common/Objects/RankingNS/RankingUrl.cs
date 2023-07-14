@@ -11,6 +11,26 @@ public class RankingUrl
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
 
+    public override bool Equals(object? obj)
+    {
+        if (obj is not RankingUrl rankingUrl) return false;
+        return PageEnum == rankingUrl.PageEnum && Url == rankingUrl.Url;
+    }
+
+    public override int GetHashCode()
+    {
+        // ReSharper disable once NonReadonlyMemberInGetHashCode
+        var urlHash = Url.GetHashCode();
+        // ReSharper disable once NonReadonlyMemberInGetHashCode
+        return PageEnum.GetHashCode() ^ urlHash;
+    }
+
+    protected bool Equals(RankingUrl other)
+    {
+        return PageEnum == other.PageEnum && Url == other.Url;
+    }
+
+
     public int GetHashWithoutLastUpdate()
     {
         var i = "RankingUrl".GetHashCode();

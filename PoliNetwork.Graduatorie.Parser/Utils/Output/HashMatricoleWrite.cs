@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
@@ -17,37 +18,25 @@ public static class HashMatricoleWrite
 
     private static Dictionary<string, StudentHashSummary> GetDictToWrite(RankingsSet rankingsSet)
     {
-        Dictionary<string, StudentHashSummary> dictionary = new Dictionary<string, StudentHashSummary>();
+        var dictionary = new Dictionary<string, StudentHashSummary>();
         foreach (var ranking in rankingsSet.Rankings)
         {
             var byMeritRows = ranking.ByMerit?.Rows;
             if (byMeritRows != null)
                 foreach (var student in byMeritRows)
-                {
                     if (!string.IsNullOrEmpty(student.Id))
-                    {
                         AddToDict(dictionary, ranking, student, null);
-                    }
-                }
 
             var rankingByCourse = ranking.ByCourse;
             if (rankingByCourse != null)
-            {
                 foreach (var courseTable in rankingByCourse)
                 {
                     var row = courseTable.Rows;
                     if (row != null)
-                    {
                         foreach (var studentResult in row)
-                        {
                             if (!string.IsNullOrEmpty(studentResult.Id))
-                            {
                                 AddToDict(dictionary, ranking, studentResult, courseTable);
-                            }
-                        }
-                    }
                 }
-            }
         }
 
         return dictionary;
@@ -58,7 +47,7 @@ public static class HashMatricoleWrite
         Console.WriteLine($"[INFO] Students with id are {dictionary.Keys.Count}");
 
 
-        Dictionary<string, Dictionary<string, StudentHashSummary>> dictResult =
+        var dictResult =
             new Dictionary<string, Dictionary<string, StudentHashSummary>>();
 
         foreach (var variable in dictionary)
@@ -72,14 +61,11 @@ public static class HashMatricoleWrite
         }
 
         var hashmatricole = outFolder + "/hashMatricole";
-        if (!Directory.Exists(hashmatricole))
-        {
-            Directory.CreateDirectory(hashmatricole);
-        }
+        if (!Directory.Exists(hashmatricole)) Directory.CreateDirectory(hashmatricole);
 
         foreach (var variable in dictResult)
         {
-            var toWrite = Newtonsoft.Json.JsonConvert.SerializeObject(variable.Value);
+            var toWrite = JsonConvert.SerializeObject(variable.Value);
             File.WriteAllText(hashmatricole + "/" + variable.Key + ".json", toWrite);
         }
     }

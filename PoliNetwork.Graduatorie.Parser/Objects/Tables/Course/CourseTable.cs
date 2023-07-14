@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
@@ -22,13 +21,7 @@ public class CourseTable : MeritTable
 
     public RankingSummaryStudent GetRankingSummaryStudent(Ranking ranking)
     {
-        return new RankingSummaryStudent()
-        {
-            Course = this.Title,
-            Phase = ranking.Phase,
-            School = ranking.School,
-            Url = ranking.Url,
-            Year = ranking.Year
-        };
+        return new RankingSummaryStudent(Title, ranking.Phase, ranking.School,
+            ranking.Url, ranking.Year);
     }
 }
