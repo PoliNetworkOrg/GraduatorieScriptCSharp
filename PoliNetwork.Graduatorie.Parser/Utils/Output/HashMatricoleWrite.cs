@@ -10,7 +10,7 @@ public static class HashMatricoleWrite
     {
         if (rankingsSet == null)
             return;
-        
+
         var dictionary = GetDictToWrite(rankingsSet);
         WriteToFile(dictionary, outFolder);
     }
@@ -55,11 +55,37 @@ public static class HashMatricoleWrite
 
     private static void WriteToFile(Dictionary<string, StudentHashSummary> dictionary, string outFolder)
     {
-        ;
+        Console.WriteLine($"[INFO] Students with id are {dictionary.Keys.Count}");
 
+
+        Dictionary<string, Dictionary<string, StudentHashSummary>> dictResult =
+            new Dictionary<string, Dictionary<string, StudentHashSummary>>();
+
+        foreach (var variable in dictionary)
+        {
+            var key = variable.Key[..2];
+            if (!dictResult.ContainsKey(key))
+                dictResult[key] = new Dictionary<string, StudentHashSummary>();
+
+            if (!dictResult[key].ContainsKey(variable.Key))
+                dictResult[key][variable.Key] = variable.Value;
+        }
+
+        var hashmatricole = outFolder + "/hashMatricole";
+        if (!Directory.Exists(hashmatricole))
+        {
+            Directory.CreateDirectory(hashmatricole);
+        }
+
+        foreach (var variable in dictResult)
+        {
+            var toWrite = Newtonsoft.Json.JsonConvert.SerializeObject(variable.Value);
+            File.WriteAllText(hashmatricole + "/" + variable.Key + ".json", toWrite);
+        }
     }
 
-    private static void AddToDict(IDictionary<string, StudentHashSummary> dictionary, Ranking ranking, StudentResult student, CourseTable? courseTable)
+    private static void AddToDict(IDictionary<string, StudentHashSummary> dictionary, Ranking ranking,
+        StudentResult student, CourseTable? courseTable)
     {
         var id = student.Id;
         if (string.IsNullOrEmpty(id))
