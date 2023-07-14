@@ -1,10 +1,6 @@
 ﻿using PoliNetwork.Core.Utils;
-using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
-using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
-using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
@@ -33,7 +29,4 @@ public static class Program
         // salvare il set
         OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet);
     }
-
-
-
 }

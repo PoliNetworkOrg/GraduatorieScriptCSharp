@@ -15,8 +15,6 @@ public class SingleCourseJson
     public string? Name;
     public SchoolEnum? School;
     public int? Year;
-    
-    public SingleCourseJson(){}
 
     public int GetHashWithoutLastUpdate()
     {
@@ -53,6 +51,6 @@ public class SingleCourseJson
 
     public bool Is(CourseTable courseTable)
     {
-        return this.Name == courseTable.Title;
+        return Name == courseTable.Title;
     }
 }

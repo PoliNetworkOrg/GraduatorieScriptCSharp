@@ -9,11 +9,11 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingSummaryStudent
 {
+    public readonly string? Course;
     public readonly string? Phase;
     public readonly SchoolEnum? School;
-    public readonly int? Year;
     public readonly RankingUrl? Url;
-    public readonly string? Course;
+    public readonly int? Year;
 
     public RankingSummaryStudent()
     {
@@ -39,14 +39,16 @@ public class RankingSummaryStudent
     public override bool Equals(object? obj)
     {
         if (obj is not RankingSummaryStudent rankingSummaryStudent) return false;
-        var equals = (Url == null && rankingSummaryStudent.Url == null )  || (Url?.Equals(rankingSummaryStudent.Url) ?? false);
+        var equals = (Url == null && rankingSummaryStudent.Url == null) ||
+                     (Url?.Equals(rankingSummaryStudent.Url) ?? false);
         return Phase == rankingSummaryStudent.Phase && School == rankingSummaryStudent.School &&
                Year == rankingSummaryStudent.Year && equals && Course == rankingSummaryStudent.Course;
     }
 
     protected bool Equals(RankingSummaryStudent other)
     {
-        return Phase == other.Phase && School == other.School && Year == other.Year && Equals(Url, other.Url) && Course == other.Course;
+        return Phase == other.Phase && School == other.School && Year == other.Year && Equals(Url, other.Url) &&
+               Course == other.Course;
     }
 
     public override int GetHashCode()
