@@ -18,6 +18,7 @@ public class CourseTableStats
     public decimal? MinScoreToEnroll;
     public string? Title;
     public int? HowManyCanEnroll;
+    public int? HowManyStudents;
 
     public int GetHashWithoutLastUpdate()
     {
@@ -29,6 +30,7 @@ public class CourseTableStats
         i ^= Title?.GetHashCode() ?? "Title".GetHashCode();
         i ^= MinScoreToEnroll?.GetHashCode() ?? "MinScoreToEnroll".GetHashCode();
         i ^= HowManyCanEnroll?.GetHashCode() ?? "HowManyCanEnroll".GetHashCode();
+        i ^= HowManyStudents?.GetHashCode() ?? "HowManyStudents".GetHashCode();
 
         if (HowManyOfa == null)
             i ^= "HowManyOfa".GetHashCode();
@@ -70,8 +72,8 @@ public class CourseTableStats
         };
 
         var courseTableRows = courseTable.Rows;
-        var count = courseTableRows?.Count ?? 0;
-        if (count == 0 || courseTableRows is null)
+        var howManyStudentsCount = courseTableRows?.Count ?? 0;
+        if (howManyStudentsCount == 0 || courseTableRows is null)
             return stats;
 
         var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll ?? false).ToList();
@@ -91,6 +93,7 @@ public class CourseTableStats
         stats.HowManyOfa = HowManyOfaCalculate(courseTableRows);
         stats.MinScoreToEnroll = MathRound(minValueToEnroll);
         stats.HowManyCanEnroll = studentsWhoCanEnrollCount;
+        stats.HowManyStudents = howManyStudentsCount;
         return stats;
     }
 
