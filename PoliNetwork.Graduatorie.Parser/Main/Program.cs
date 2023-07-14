@@ -5,6 +5,7 @@ using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
 
@@ -19,6 +20,7 @@ public static class Program
 
         var rankingsUrls = Scraper.Main.Program.RankingsUrls(mt, argsConfig);
 
+        // esegui ciò che fa il parser (parse + write)
         ParserDo(argsConfig, rankingsUrls);
     }
 
@@ -29,23 +31,9 @@ public static class Program
         var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
 
         // salvare il set
-        SaveOutputs(argsConfig.DataFolder, rankingsSet);
+        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet);
     }
 
 
-    private static void PrintLinks(List<RankingUrl> rankingsUrls)
-    {
-        foreach (var r in rankingsUrls)
-            Console.WriteLine($"[DEBUG] valid url found: {r.Url}");
-    }
 
-    private static void SaveOutputs(string? dataFolder, RankingsSet? rankingsSet)
-    {
-        if (string.IsNullOrEmpty(dataFolder))
-            return;
-
-        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        IndexJsonBase.IndexesWrite(rankingsSet, outFolder);
-        StatsJson.Write(outFolder, rankingsSet);
-    }
 }

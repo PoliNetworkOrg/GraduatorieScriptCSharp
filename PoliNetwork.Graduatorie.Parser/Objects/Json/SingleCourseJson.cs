@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json;
 
@@ -14,6 +15,8 @@ public class SingleCourseJson
     public string? Name;
     public SchoolEnum? School;
     public int? Year;
+    
+    public SingleCourseJson(){}
 
     public int GetHashWithoutLastUpdate()
     {
@@ -46,5 +49,10 @@ public class SingleCourseJson
             return string.Compare(Name ?? "", singleCourseJson.Name ?? "", StringComparison.InvariantCulture);
 
         return 0;
+    }
+
+    public bool Is(CourseTable courseTable)
+    {
+        return this.Name == courseTable.Title;
     }
 }
