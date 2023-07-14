@@ -13,12 +13,12 @@ public class CourseTableStats
     public decimal? AverageOfWhoPassed;
     public Dictionary<string, decimal>? AveragePartialScores;
     public decimal? AverageScoresOfAllStudents;
+    public int? HowManyCanEnroll;
     public Dictionary<string, int>? HowManyOfa;
+    public int? HowManyStudents;
     public string? Location;
     public decimal? MinScoreToEnroll;
     public string? Title;
-    public int? HowManyCanEnroll;
-    public int? HowManyStudents;
 
     public int GetHashWithoutLastUpdate()
     {
