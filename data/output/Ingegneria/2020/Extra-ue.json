@@ -2213,7 +2213,7 @@
     "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-11T19:27:01.3066569+02:00",
+  "lastUpdate": "2023-07-14T09:47:01.6662493+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -2234,7 +2234,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 39.10,
-        "title": "INGEGNERIA AEROSPAZIALE"
+        "title": "INGEGNERIA AEROSPAZIALE",
+        "howManyCanEnroll": 7
       },
       {
         "averageBirthYear": 2001.0,
@@ -2253,7 +2254,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 66.40,
-        "title": "INGEGNERIA BIOMEDICA"
+        "title": "INGEGNERIA BIOMEDICA",
+        "howManyCanEnroll": 2
       },
       {
         "averageBirthYear": 2001.91667,
@@ -2272,7 +2274,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 66.17,
-        "title": "INGEGNERIA CHIMICA"
+        "title": "INGEGNERIA CHIMICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2000.41667,
@@ -2291,7 +2294,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 40.75,
-        "title": "INGEGNERIA CIVILE"
+        "title": "INGEGNERIA CIVILE",
+        "howManyCanEnroll": 5
       },
       {
         "averageBirthYear": 2001.33333,
@@ -2310,7 +2314,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+        "howManyCanEnroll": 0
       },
       {
         "averageBirthYear": 1998.5,
@@ -2329,7 +2334,8 @@
         },
         "location": "LECCO",
         "minScoreToEnroll": 28.80,
-        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 1995.83333,
@@ -2348,7 +2354,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 24.32,
-        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2002.16667,
@@ -2367,7 +2374,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 44.33,
-        "title": "INGEGNERIA ELETTRICA"
+        "title": "INGEGNERIA ELETTRICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 1999.77778,
@@ -2386,7 +2394,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 23.03,
-        "title": "INGEGNERIA ELETTRONICA"
+        "title": "INGEGNERIA ELETTRONICA",
+        "howManyCanEnroll": 3
       },
       {
         "averageBirthYear": 2002.5,
@@ -2405,7 +2414,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 20.80,
-        "title": "INGEGNERIA ENERGETICA"
+        "title": "INGEGNERIA ENERGETICA",
+        "howManyCanEnroll": 2
       },
       {
         "averageBirthYear": 1998.41667,
@@ -2424,7 +2434,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 27.62,
-        "title": "INGEGNERIA GESTIONALE"
+        "title": "INGEGNERIA GESTIONALE",
+        "howManyCanEnroll": 4
       },
       {
         "averageBirthYear": 1999.80952,
@@ -2443,7 +2454,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 20.92,
-        "title": "INGEGNERIA INFORMATICA"
+        "title": "INGEGNERIA INFORMATICA",
+        "howManyCanEnroll": 14
       },
       {
         "averageBirthYear": 2000.66667,
@@ -2462,7 +2474,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 63.05,
-        "title": "INGEGNERIA MATEMATICA"
+        "title": "INGEGNERIA MATEMATICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2000.92708,
@@ -2481,7 +2494,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 35.17,
-        "title": "INGEGNERIA MECCANICA"
+        "title": "INGEGNERIA MECCANICA",
+        "howManyCanEnroll": 7
       }
     ],
     "howManyCanEnroll": 49,

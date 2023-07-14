@@ -18589,7 +18589,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-13T21:33:05.6293317+00:00",
+  "lastUpdate": "2023-07-14T09:47:27.9314333+00:00",
   "phase": "Extra-ue Seconda Graduatoria",
   "rankingSummary": {
     "courseSummarized": [
@@ -18610,7 +18610,8 @@
         },
         "location": "LECCO",
         "minScoreToEnroll": 27.00,
-        "title": "INGEGNERIA EDILE - ARCHITETTURA"
+        "title": "INGEGNERIA EDILE - ARCHITETTURA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2001.26225,
@@ -18629,7 +18630,8 @@
         },
         "location": "MANTOVA",
         "minScoreToEnroll": 27.00,
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2001.34074,
@@ -18648,7 +18650,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 31.00,
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2001.25658,
@@ -18667,7 +18670,8 @@
         },
         "location": "PIACENZA",
         "minScoreToEnroll": 25.75,
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA"
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "howManyCanEnroll": 5
       },
       {
         "averageBirthYear": 2002.23994,
@@ -18686,7 +18690,8 @@
         },
         "location": "MI LEONARDO",
         "minScoreToEnroll": 35.00,
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
+        "howManyCanEnroll": 5
       },
       {
         "averageBirthYear": 2002.31968,
@@ -18705,7 +18710,8 @@
         },
         "location": "PIACENZA",
         "minScoreToEnroll": 32.50,
-        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH"
+        "title": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
+        "howManyCanEnroll": 14
       }
     ],
     "howManyCanEnroll": 27,
