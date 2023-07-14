@@ -2397,7 +2397,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-13T21:33:04.7725203+00:00",
+  "lastUpdate": "2023-07-14T09:47:26.835629+00:00",
   "phase": "Extra-ue Prima Graduatoria Di Seconda Fase",
   "rankingSummary": {
     "courseSummarized": [
@@ -2418,7 +2418,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 32.15,
-        "title": "INGEGNERIA AEROSPAZIALE"
+        "title": "INGEGNERIA AEROSPAZIALE",
+        "howManyCanEnroll": 5
       },
       {
         "averageBirthYear": 2002.61111,
@@ -2437,7 +2438,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 24.67,
-        "title": "INGEGNERIA BIOMEDICA"
+        "title": "INGEGNERIA BIOMEDICA",
+        "howManyCanEnroll": 6
       },
       {
         "averageBirthYear": 2003.0,
@@ -2456,7 +2458,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 65.08,
-        "title": "INGEGNERIA CHIMICA"
+        "title": "INGEGNERIA CHIMICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 1995.83333,
@@ -2475,7 +2478,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 71.92,
-        "title": "INGEGNERIA CIVILE"
+        "title": "INGEGNERIA CIVILE",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": null,
@@ -2486,7 +2490,8 @@
         "howManyOfa": null,
         "location": "LECCO",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+        "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": null,
@@ -2497,7 +2502,8 @@
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+        "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": 2003.08333,
@@ -2516,7 +2522,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 38.13,
-        "title": "INGEGNERIA DELL'AUTOMAZIONE"
+        "title": "INGEGNERIA DELL'AUTOMAZIONE",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2003.16667,
@@ -2535,7 +2542,8 @@
         },
         "location": "LECCO",
         "minScoreToEnroll": 58.82,
-        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+        "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": null,
@@ -2546,7 +2554,8 @@
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+        "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": 2003.91667,
@@ -2565,7 +2574,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 70.03,
-        "title": "INGEGNERIA ELETTRICA"
+        "title": "INGEGNERIA ELETTRICA",
+        "howManyCanEnroll": 2
       },
       {
         "averageBirthYear": 2002.91667,
@@ -2584,7 +2594,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 22.47,
-        "title": "INGEGNERIA ELETTRONICA"
+        "title": "INGEGNERIA ELETTRONICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 1994.41667,
@@ -2603,7 +2614,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 57.60,
-        "title": "INGEGNERIA ENERGETICA"
+        "title": "INGEGNERIA ENERGETICA",
+        "howManyCanEnroll": 1
       },
       {
         "averageBirthYear": 2003.79167,
@@ -2622,7 +2634,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 26.45,
-        "title": "INGEGNERIA FISICA"
+        "title": "INGEGNERIA FISICA",
+        "howManyCanEnroll": 2
       },
       {
         "averageBirthYear": null,
@@ -2633,7 +2646,8 @@
         "howManyOfa": null,
         "location": "CREMONA",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA GESTIONALE"
+        "title": "INGEGNERIA GESTIONALE",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": 2002.75,
@@ -2652,7 +2666,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 36.37,
-        "title": "INGEGNERIA GESTIONALE"
+        "title": "INGEGNERIA GESTIONALE",
+        "howManyCanEnroll": 2
       },
       {
         "averageBirthYear": null,
@@ -2663,7 +2678,8 @@
         "howManyOfa": null,
         "location": "CREMONA",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA INFORMATICA"
+        "title": "INGEGNERIA INFORMATICA",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": 2001.06111,
@@ -2682,7 +2698,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 22.30,
-        "title": "INGEGNERIA INFORMATICA"
+        "title": "INGEGNERIA INFORMATICA",
+        "howManyCanEnroll": 15
       },
       {
         "averageBirthYear": 2003.25,
@@ -2701,7 +2718,8 @@
         },
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": 42.08,
-        "title": "INGEGNERIA MATEMATICA"
+        "title": "INGEGNERIA MATEMATICA",
+        "howManyCanEnroll": 3
       },
       {
         "averageBirthYear": 2002.5625,
@@ -2720,7 +2738,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 28.32,
-        "title": "INGEGNERIA MECCANICA"
+        "title": "INGEGNERIA MECCANICA",
+        "howManyCanEnroll": 4
       },
       {
         "averageBirthYear": null,
@@ -2731,7 +2750,8 @@
         "howManyOfa": null,
         "location": "PIACENZA",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA MECCANICA"
+        "title": "INGEGNERIA MECCANICA",
+        "howManyCanEnroll": null
       },
       {
         "averageBirthYear": null,
@@ -2742,7 +2762,8 @@
         "howManyOfa": null,
         "location": "MILANO LEONARDO",
         "minScoreToEnroll": null,
-        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+        "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO",
+        "howManyCanEnroll": null
       }
     ],
     "howManyCanEnroll": 45,

@@ -2743,7 +2743,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-13T21:33:04.6992074+00:00",
+  "lastUpdate": "2023-07-14T09:47:26.7357515+00:00",
   "phase": "Extra-ue",
   "rankingSummary": {
     "courseSummarized": [
@@ -2765,7 +2765,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 23.75,
-        "title": "DESIGN DEGLI INTERNI"
+        "title": "DESIGN DEGLI INTERNI",
+        "howManyCanEnroll": 10
       },
       {
         "averageBirthYear": 2002.18827,
@@ -2785,7 +2786,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 34.54,
-        "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+        "title": "DESIGN DEL PRODOTTO INDUSTRIALE",
+        "howManyCanEnroll": 20
       },
       {
         "averageBirthYear": 2002.02083,
@@ -2805,7 +2807,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 39.63,
-        "title": "DESIGN DELLA COMUNICAZIONE"
+        "title": "DESIGN DELLA COMUNICAZIONE",
+        "howManyCanEnroll": 5
       },
       {
         "averageBirthYear": 2001.47619,
@@ -2825,7 +2828,8 @@
         },
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 52.63,
-        "title": "DESIGN DELLA MODA"
+        "title": "DESIGN DELLA MODA",
+        "howManyCanEnroll": 5
       }
     ],
     "howManyCanEnroll": 40,
