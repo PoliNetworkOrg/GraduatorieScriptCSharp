@@ -62,9 +62,8 @@ public static class ScraperOutput
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
     {
         var output = "";
-        var enumerable = rankingsUrls.Where(UrlUtils.CheckUrl).Select(x => x.Url);
-        var rankingUrls = enumerable.OrderBy(x => x).ToList();
-        foreach (var link in rankingUrls)
+        var urls = rankingsUrls.Where(UrlUtils.CheckUrl).Select(x => x.Url).Order();
+        foreach (var link in urls)
         {
             output += link;
             output += "\n";
