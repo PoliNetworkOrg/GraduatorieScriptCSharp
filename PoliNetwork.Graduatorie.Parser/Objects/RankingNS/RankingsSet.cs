@@ -13,7 +13,7 @@ public class RankingsSet
     public RankingsSet()
     {
         Rankings = new List<Ranking>();
-        LastUpdate = DateTime.Now;
+        LastUpdate = DateTime.UtcNow;
     }
 
 
