@@ -119,8 +119,14 @@
     "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-14T14:45:57.7390007+00:00",
-  "phase": "Extra-ue",
+  "extraEu": null,
+  "lastUpdate": "2023-07-16T15:10:46.6031262+02:00",
+  "rankingOrder": {
+    "ExtraEu": true,
+    "Phase": "Extra-ue",
+    "Primary": null,
+    "Secondary": null
+  },
   "rankingSummary": {
     "courseSummarized": [
       {

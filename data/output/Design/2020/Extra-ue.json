@@ -4478,8 +4478,14 @@
     "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-14T09:47:17.506113+00:00",
-  "phase": "Extra-ue",
+  "extraEu": null,
+  "lastUpdate": "2023-07-14T11:47:17.506113+02:00",
+  "rankingOrder": {
+    "ExtraEu": true,
+    "Phase": "Extra-ue",
+    "Primary": null,
+    "Secondary": null
+  },
   "rankingSummary": {
     "courseSummarized": [
       {
@@ -4494,13 +4500,14 @@
           "Cultura Generale": 5.85606
         },
         "averageScoresOfAllStudents": 27.28455,
+        "howManyCanEnroll": 10,
         "howManyOfa": {
           "ENG": 21
         },
+        "howManyStudents": null,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 37.50,
-        "title": "DESIGN DEGLI INTERNI",
-        "howManyCanEnroll": 10
+        "title": "DESIGN DEGLI INTERNI"
       },
       {
         "averageBirthYear": 2000.13399,
@@ -4514,13 +4521,14 @@
           "Cultura Generale": 7.35294
         },
         "averageScoresOfAllStudents": 34.59157,
+        "howManyCanEnroll": 20,
         "howManyOfa": {
           "ENG": 24
         },
+        "howManyStudents": null,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 41.25,
-        "title": "DESIGN DEL PRODOTTO INDUSTRIALE",
-        "howManyCanEnroll": 20
+        "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
       },
       {
         "averageBirthYear": 1999.29444,
@@ -4534,13 +4542,14 @@
           "Cultura Generale": 4.23333
         },
         "averageScoresOfAllStudents": 19.80533,
+        "howManyCanEnroll": 5,
         "howManyOfa": {
           "ENG": 7
         },
+        "howManyStudents": null,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 25.83,
-        "title": "DESIGN DELLA COMUNICAZIONE",
-        "howManyCanEnroll": 5
+        "title": "DESIGN DELLA COMUNICAZIONE"
       },
       {
         "averageBirthYear": 1999.56897,
@@ -4554,13 +4563,14 @@
           "Cultura Generale": 7.31897
         },
         "averageScoresOfAllStudents": 31.20655,
+        "howManyCanEnroll": 5,
         "howManyOfa": {
           "ENG": 14
         },
+        "howManyStudents": null,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 50.83,
-        "title": "DESIGN DELLA MODA",
-        "howManyCanEnroll": 5
+        "title": "DESIGN DELLA MODA"
       }
     ],
     "howManyCanEnroll": 40,

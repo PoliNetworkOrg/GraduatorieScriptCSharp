@@ -2397,8 +2397,14 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-07-14T14:54:55.1397984+00:00",
-  "phase": "Extra-ue Prima Graduatoria Di Seconda Fase",
+  "extraEu": null,
+  "lastUpdate": "2023-07-16T15:10:52.4743575+02:00",
+  "rankingOrder": {
+    "ExtraEu": true,
+    "Phase": "Extra-ue Prima Graduatoria Di Seconda Fase",
+    "Primary": 2,
+    "Secondary": 1
+  },
   "rankingSummary": {
     "courseSummarized": [
       {

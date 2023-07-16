@@ -44796,8 +44796,14 @@
     "year": 2020
   },
   "extra": "Studenti Comunitari ed Equiparati",
-  "lastUpdate": "2023-07-14T10:02:50.0446538+00:00",
-  "phase": "Seconda Graduatoria",
+  "extraEu": null,
+  "lastUpdate": "2023-07-14T12:02:50.0446538+02:00",
+  "rankingOrder": {
+    "ExtraEu": false,
+    "Phase": "Seconda Graduatoria",
+    "Primary": null,
+    "Secondary": 2
+  },
   "rankingSummary": {
     "courseSummarized": [
       {
