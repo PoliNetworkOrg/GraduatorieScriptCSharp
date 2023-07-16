@@ -244,7 +244,7 @@ public static class Parser
             Extra = notes,
             Url = index.Url,
             School = school,
-            LastUpdate = DateTime.Now,
+            LastUpdate = DateTime.UtcNow,
             ByCourse = new List<CourseTable>()
         };
 

@@ -33,7 +33,7 @@ public static class LinksFind
     private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
-        var nowYear = DateTime.Now.Year;
+        var nowYear = DateTime.UtcNow.Year;
         for (var i = 2021; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
         return r;
     }

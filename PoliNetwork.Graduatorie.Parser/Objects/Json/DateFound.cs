@@ -31,7 +31,7 @@ public class DateFound
 
         FirstDate ??= new Dictionary<string, DateTime?>();
 
-        var dateTime = new DateTime(variable.Year ?? DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        var dateTime = new DateTime(variable.Year ?? DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day);
         if (FirstDate.TryGetValue(path, out var oldValue))
         {
             if (oldValue == null)
