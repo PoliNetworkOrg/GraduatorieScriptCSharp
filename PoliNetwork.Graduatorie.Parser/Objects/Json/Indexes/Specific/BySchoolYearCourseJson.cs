@@ -136,7 +136,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return new SingleCourseJson
         {
             Link = ranking.ConvertPhaseToFilename(),
-            Name = ranking.Phase,
+            Name = ranking.RankingOrder?.Phase,
             BasePath = basePath,
             Year = ranking.Year,
             School = ranking.School,
@@ -152,7 +152,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         {
             return singleCourseJson.School == v1.School
                    && singleCourseJson.Year == v1.Year
-                   && v1.Phase == singleCourseJson.Name;
+                   && v1.RankingOrder?.Phase == singleCourseJson.Name;
         }
 
         return enumerable.Any(Predicate);
@@ -244,7 +244,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var schoolKey = school.Key.ToString();
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, variable.Link);
-        var ranking = Utils.Transformer.ParserNS.Parser.ParseJson<Ranking>(path);
+        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
         if (ranking == null)
             return;
 

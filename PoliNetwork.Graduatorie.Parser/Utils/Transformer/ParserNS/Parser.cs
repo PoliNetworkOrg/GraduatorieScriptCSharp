@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
@@ -32,12 +33,7 @@ public static class Parser
         var htmlFolder = Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
-        var recursiveHtmls = urls.Where(url => url.PageEnum == PageEnum.Index)
-            .Select(url => HtmlPage.FromUrl(url, htmlFolder))
-            .Where(h => h is not null)
-            .SelectMany(h => GetAndSaveAllHtmls(h!, htmlFolder));
-
-        var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
+        var allHtmls = GetAllHtmls(urls, htmlFolder, savedHtmls);
 
         var indexes = allHtmls.Where(h => h.Url?.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
@@ -61,6 +57,20 @@ public static class Parser
             .ThenBy(x => x.Url?.Url)
             .ToList();
         return rankingsSet;
+    }
+
+    private static List<HtmlPage> GetAllHtmls(IEnumerable<RankingUrl> urls, string htmlFolder,
+        IEnumerable<HtmlPage> savedHtmls)
+    {
+        Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
+        var recursiveHtmls = urls.Where(url => url.PageEnum == PageEnum.Index)
+            .Select(url => HtmlPage.FromUrl(url, htmlFolder))
+            .Where(h => h is not null)
+            .SelectMany(h => GetAndSaveAllHtmls(h!, htmlFolder));
+
+        var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
+        Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
+        return allHtmls;
     }
 
     private static IEnumerable<RankingUrl>? GetSubUrls(HtmlPage index)
@@ -240,7 +250,7 @@ public static class Parser
         var ranking = new Ranking
         {
             Year = year,
-            Phase = phase,
+            RankingOrder = new RankingOrder(phase),
             Extra = notes,
             Url = index.Url,
             School = school,
@@ -781,6 +791,8 @@ public static class Parser
 
     private static IEnumerable<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
     {
+        Console.WriteLine($"[DEBUG] Started ParseLocalHtmlFiles {DateTime.Now}");
+
         HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(htmlFolder))
             return elements;
@@ -809,6 +821,7 @@ public static class Parser
             elements.Add(new HtmlPage(html, RankingUrl.From(url)));
         }
 
+        Console.WriteLine($"[DEBUG] Ended ParseLocalHtmlFiles {DateTime.Now}");
         return elements;
     }
 
@@ -823,5 +836,41 @@ public static class Parser
 
         var obj = JsonConvert.DeserializeObject<T>(fileContent, Culture.JsonSerializerSettings);
         return obj;
+    }
+
+    public static Ranking? ParseJsonRanking(string path)
+    {
+        if (string.IsNullOrEmpty(path) || !File.Exists(path))
+            return default;
+
+        var fileContent = File.ReadAllText(path);
+        if (string.IsNullOrEmpty(fileContent))
+            return default;
+
+        var deserializeObject = JsonConvert.DeserializeObject(fileContent, Culture.JsonSerializerSettings);
+        if (deserializeObject == null)
+            return null;
+
+        var objectToRead = (JObject)deserializeObject;
+
+        const string propertyName = "phase";
+        if (objectToRead.TryGetValue(propertyName, out var jToken))
+        {
+            var obj1 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+            if (obj1 == null)
+                return null;
+
+            if (obj1.RankingOrder != null)
+                return obj1;
+
+            var jValue = (JValue)jToken;
+            var phase = jValue.Value?.ToString();
+            if (!string.IsNullOrEmpty(phase)) obj1.RankingOrder = new RankingOrder(phase);
+
+            return obj1;
+        }
+
+        var obj2 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+        return obj2;
     }
 }
