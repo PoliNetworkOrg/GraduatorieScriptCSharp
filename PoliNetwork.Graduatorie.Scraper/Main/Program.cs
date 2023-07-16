@@ -14,12 +14,19 @@ public static class Program
         var argsConfig = ArgsConfig.GetArgsConfig(args);
         argsConfig.Print();
 
+        RankingsUrls(mt, argsConfig);
+    }
 
-        //find links from web
-        var rankingsUrls = RankingsUrls(mt, argsConfig);
 
-        //print and write results
+    public static List<RankingUrl> RankingsUrls(Metrics mt, ArgsConfig argsConfig)
+    {
+        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
+        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
+        
+        // save result
         PrintAndWriteResults(rankingsUrls, argsConfig);
+
+        return rankingsUrls;
     }
 
     private static void PrintAndWriteResults(List<RankingUrl> rankingsUrls, ArgsConfig argsConfig)
@@ -30,14 +37,6 @@ public static class Program
         //print links found
         PrintLinks(rankingsUrls);
     }
-
-    public static List<RankingUrl> RankingsUrls(Metrics mt, ArgsConfig argsConfig)
-    {
-        var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
-        rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
-        return rankingsUrls;
-    }
-
 
     private static void PrintLinks(List<RankingUrl> rankingsUrls)
     {
