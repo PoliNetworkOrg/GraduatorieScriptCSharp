@@ -59,7 +59,8 @@ public static class Parser
         return rankingsSet;
     }
 
-    private static List<HtmlPage> GetAllHtmls(IEnumerable<RankingUrl> urls, string htmlFolder, IEnumerable<HtmlPage> savedHtmls)
+    private static List<HtmlPage> GetAllHtmls(IEnumerable<RankingUrl> urls, string htmlFolder,
+        IEnumerable<HtmlPage> savedHtmls)
     {
         Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
         var recursiveHtmls = urls.Where(url => url.PageEnum == PageEnum.Index)
@@ -70,7 +71,6 @@ public static class Parser
         var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
         Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
         return allHtmls;
-        
     }
 
     private static IEnumerable<RankingUrl>? GetSubUrls(HtmlPage index)
@@ -792,7 +792,7 @@ public static class Parser
     private static IEnumerable<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
     {
         Console.WriteLine($"[DEBUG] Started ParseLocalHtmlFiles {DateTime.Now}");
-        
+
         HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(htmlFolder))
             return elements;
@@ -850,30 +850,27 @@ public static class Parser
         var deserializeObject = JsonConvert.DeserializeObject(fileContent, Culture.JsonSerializerSettings);
         if (deserializeObject == null)
             return null;
-        
+
         var objectToRead = (JObject)deserializeObject;
-        
+
         const string propertyName = "phase";
         if (objectToRead.TryGetValue(propertyName, out var jToken))
         {
-            Ranking? obj1 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+            var obj1 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
             if (obj1 == null)
                 return null;
 
-            if (obj1.RankingOrder != null) 
+            if (obj1.RankingOrder != null)
                 return obj1;
-            
-            var jValue = ((JValue)jToken);
+
+            var jValue = (JValue)jToken;
             var phase = jValue.Value?.ToString();
-            if (!string.IsNullOrEmpty(phase))
-            {
-                obj1.RankingOrder = new RankingOrder(phase);
-            }
+            if (!string.IsNullOrEmpty(phase)) obj1.RankingOrder = new RankingOrder(phase);
 
             return obj1;
         }
-        
-        Ranking? obj2 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+
+        var obj2 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
         return obj2;
     }
 }

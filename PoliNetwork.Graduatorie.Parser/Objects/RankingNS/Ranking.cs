@@ -18,13 +18,13 @@ public class Ranking
     public List<CourseTable>? ByCourse;
     public MeritTable? ByMerit;
     public string? Extra;
+    public bool? ExtraEu;
     public DateTime LastUpdate;
+    public RankingOrder? RankingOrder;
     public RankingSummary? RankingSummary;
     public SchoolEnum? School;
     public RankingUrl? Url;
     public int? Year;
-    public bool? ExtraEu;
-    public RankingOrder? RankingOrder;
 
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
@@ -39,7 +39,7 @@ public class Ranking
     {
         var i = "Ranking".GetHashCode();
         i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= this.RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
+        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
         i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
         i ^= School?.GetHashCode() ?? "School".GetHashCode();
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
@@ -59,7 +59,7 @@ public class Ranking
     {
         return Year == ranking.Year &&
                School == ranking.School &&
-               this.RankingOrder?.Phase == ranking.RankingOrder?.Phase &&
+               RankingOrder?.Phase == ranking.RankingOrder?.Phase &&
                Extra == ranking.Extra &&
                Url?.Url == ranking.Url?.Url;
     }
@@ -88,7 +88,7 @@ public class Ranking
     public string ConvertPhaseToFilename()
     {
         var s = DateTime.Now.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
-        var phase1 = this.RankingOrder?.Phase ?? s;
+        var phase1 = RankingOrder?.Phase ?? s;
         return $"{phase1}.json".Replace(" ", "_");
     }
 
@@ -101,7 +101,7 @@ public class Ranking
         result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
-            Name = this.RankingOrder?.Phase,
+            Name = RankingOrder?.Phase,
             BasePath = schoolString + "/" + Year + "/",
             Year = Year,
             School = School,
@@ -123,6 +123,6 @@ public class Ranking
 
     public string GetPath()
     {
-        return School + "/" + Year + "/" + this.RankingOrder?.Phase;
+        return School + "/" + Year + "/" + RankingOrder?.Phase;
     }
 }

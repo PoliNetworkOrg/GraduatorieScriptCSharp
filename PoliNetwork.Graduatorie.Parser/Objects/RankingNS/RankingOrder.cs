@@ -2,44 +2,44 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 public class RankingOrder
 {
+    public bool? ExtraEu;
+
+    public string? Phase;
+
     //esempio:
     //seconda graduatoria di seconda fase: {primary:2,secondary:2}
     //prima graduatoria di seconda fase:{primary:2, secondary:1}
     public int? Primary;
     public int? Secondary;
-    public string? Phase;
-    public bool? ExtraEu;
 
     public RankingOrder()
     {
-        
     }
-    
+
     public RankingOrder(string phase)
     {
-        this.Phase = phase;
+        Phase = phase;
         FixValues();
     }
 
     private void FixValues()
     {
-        var s = this.Phase?.ToUpper().Trim() ?? "";
+        var s = Phase?.ToUpper().Trim() ?? "";
         if (string.IsNullOrEmpty(s))
             return;
 
-        this.ExtraEu = s.Contains("EXTRA");
+        ExtraEu = s.Contains("EXTRA");
         var strings = s.Split(" ");
-        this.Primary = GetCount(strings, "FASE");
-        this.Secondary = GetCount(strings, "GRADUATORIA");
+        Primary = GetCount(strings, "FASE");
+        Secondary = GetCount(strings, "GRADUATORIA");
     }
 
     private int? GetCount(string[] s, string key)
     {
-        for (int i = 0; i < s.Length; i++)
+        for (var i = 0; i < s.Length; i++)
         {
             var item = s[i];
             if (item == key)
-            {
                 if (i - 1 >= 0)
                 {
                     var item2 = s[i - 1];
@@ -59,7 +59,6 @@ public class RankingOrder
                             return null;
                     }
                 }
-            }
         }
 
         return null;
