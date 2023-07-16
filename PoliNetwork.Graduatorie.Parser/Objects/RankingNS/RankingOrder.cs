@@ -8,6 +8,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 public class RankingOrder
 {
     public bool? ExtraEu;
+    public bool? Anticipata;
 
     public string? Phase;
 
@@ -37,6 +38,7 @@ public class RankingOrder
         var strings = s.Split(" ");
         Primary = GetCount(strings, "FASE");
         Secondary = GetCount(strings, "GRADUATORIA");
+        Anticipata = s.Contains("ANTICIPATA");
     }
 
     private static int? GetCount(IReadOnlyList<string> s, string key)
