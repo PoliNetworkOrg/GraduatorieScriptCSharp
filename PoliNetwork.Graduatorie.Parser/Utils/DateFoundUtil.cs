@@ -7,18 +7,17 @@ namespace PoliNetwork.Graduatorie.Parser.Utils;
 
 public static class DateFoundUtil
 {
-    public static DateFound? GetDateFound(ArgsConfig argsConfig, RankingsSet? rankingsSet)
+    public static DateFound GetDateFound(ArgsConfig argsConfig, RankingsSet? rankingsSet)
     {
         var dateFound = GetDateFoundFromFile(argsConfig.DataFolder);
         dateFound = UpdateDateFound(rankingsSet, dateFound);
         return dateFound;
     }
 
-    private static DateFound? UpdateDateFound(RankingsSet? rankingsSet, DateFound? dateFound)
+    private static DateFound UpdateDateFound(RankingsSet? rankingsSet, DateFound? dateFound)
     {
         dateFound ??= new DateFound();
 
-        ;
         var rankingsSetRankings = rankingsSet?.Rankings;
         if (rankingsSetRankings == null) return dateFound;
         foreach (var variable in rankingsSetRankings) dateFound.UpdateDateFound(variable);

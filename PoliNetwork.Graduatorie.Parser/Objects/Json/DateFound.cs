@@ -27,9 +27,7 @@ public class DateFound
 
     public void UpdateDateFound(Ranking variable)
     {
-        ;
         var path = variable.GetPath().Trim();
-        ;
 
         FirstDate ??= new Dictionary<string, DateTime?>();
 
