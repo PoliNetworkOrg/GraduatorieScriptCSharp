@@ -1,5 +1,10 @@
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
 namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
+[Serializable]
+[JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingOrder
 {
     public bool? ExtraEu;
@@ -34,9 +39,9 @@ public class RankingOrder
         Secondary = GetCount(strings, "GRADUATORIA");
     }
 
-    private int? GetCount(string[] s, string key)
+    private int? GetCount(IReadOnlyList<string> s, string key)
     {
-        for (var i = 0; i < s.Length; i++)
+        for (var i = 0; i < s.Count; i++)
         {
             var item = s[i];
             if (item == key)
