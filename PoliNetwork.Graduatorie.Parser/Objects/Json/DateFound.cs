@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json;
 
@@ -17,5 +18,10 @@ public class DateFound
         var s = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
         var path = Path.Join(dataFolder, PathFileName);
         File.WriteAllText(path, s);
+    }
+
+    public void UpdateDateFound(Ranking variable)
+    {
+        ;
     }
 }

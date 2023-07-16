@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Common.Objects;
-using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
@@ -8,18 +7,25 @@ namespace PoliNetwork.Graduatorie.Parser.Utils;
 
 public static class DateFoundUtil
 {
-    public static DateFound? GetDateFound(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsSet)
+    public static DateFound? GetDateFound(ArgsConfig argsConfig, RankingsSet? rankingsSet)
     {
         DateFound? dateFound = GetDateFoundFromFile(argsConfig.DataFolder);
         dateFound = UpdateDateFound(rankingsSet, dateFound);
         return dateFound;
     }
 
-    private static DateFound? UpdateDateFound(IEnumerable<RankingUrl> rankingsSet, DateFound? dateFound)
+    private static DateFound? UpdateDateFound(RankingsSet? rankingsSet, DateFound? dateFound)
     {
         dateFound ??= new DateFound();
 
         ;
+        var rankingsSetRankings = rankingsSet?.Rankings;
+        if (rankingsSetRankings == null) return dateFound;
+        foreach (var variable in rankingsSetRankings)
+        {
+            dateFound.UpdateDateFound(variable);
+        }
+
         return dateFound;
     }
 

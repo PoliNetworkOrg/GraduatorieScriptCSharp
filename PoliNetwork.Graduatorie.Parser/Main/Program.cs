@@ -26,15 +26,11 @@ public static class Program
 
     private static void ParserDo(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsUrls)
     {
-        var rankingUrls = rankingsUrls.ToList();
-        
-        var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingUrls);
-        
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingUrls);
+        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
 
-     
+        var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingsSet);
 
         // salvare il set
         OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet, dateFound);
