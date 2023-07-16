@@ -18,7 +18,6 @@ public class Ranking
     public List<CourseTable>? ByCourse;
     public MeritTable? ByMerit;
     public string? Extra;
-    public bool? ExtraEu;
     public DateTime LastUpdate;
     public RankingOrder? RankingOrder;
     public RankingSummary? RankingSummary;
