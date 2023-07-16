@@ -9,7 +9,7 @@ public static class DateFoundUtil
 {
     public static DateFound? GetDateFound(ArgsConfig argsConfig, RankingsSet? rankingsSet)
     {
-        DateFound? dateFound = GetDateFoundFromFile(argsConfig.DataFolder);
+        var dateFound = GetDateFoundFromFile(argsConfig.DataFolder);
         dateFound = UpdateDateFound(rankingsSet, dateFound);
         return dateFound;
     }
@@ -21,10 +21,7 @@ public static class DateFoundUtil
         ;
         var rankingsSetRankings = rankingsSet?.Rankings;
         if (rankingsSetRankings == null) return dateFound;
-        foreach (var variable in rankingsSetRankings)
-        {
-            dateFound.UpdateDateFound(variable);
-        }
+        foreach (var variable in rankingsSetRankings) dateFound.UpdateDateFound(variable);
 
         return dateFound;
     }

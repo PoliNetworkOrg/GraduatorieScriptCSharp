@@ -114,6 +114,6 @@ public class Ranking
 
     public string GetPath()
     {
-        return this.School.ToString() + "/" + this.Year.ToString() + "/" + this.Phase?.ToString();
+        return School + "/" + Year + "/" + Phase;
     }
 }

@@ -32,6 +32,4 @@ public static class Program
         // salvare il set
         OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet, dateFound);
     }
-
-
 }

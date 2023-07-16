@@ -9,9 +9,8 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class DateFound
 {
-    public Dictionary<string, DateTime?>? FirstDate;
-
     public const string PathFileName = "dateFound.json";
+    public Dictionary<string, DateTime?>? FirstDate;
 
     public void WriteToFile(string dataFolder)
     {
@@ -20,16 +19,16 @@ public class DateFound
         File.WriteAllText(path, s);
     }
 
-       
+
     public static DateTime MinDateTime(DateTime date1, DateTime date2)
     {
         return date1 < date2 ? date1 : date2;
     }
-    
+
     public void UpdateDateFound(Ranking variable)
     {
         ;
-        string path = variable.GetPath().Trim();
+        var path = variable.GetPath().Trim();
         ;
 
         FirstDate ??= new Dictionary<string, DateTime?>();
@@ -38,19 +37,13 @@ public class DateFound
         if (FirstDate.TryGetValue(path, out var oldValue))
         {
             if (oldValue == null)
-            {
                 FirstDate[path] = dateTime;
-            }
             else
-            {
                 FirstDate[path] = MinDateTime(dateTime, oldValue.Value);
-            }
         }
         else
         {
             FirstDate[path] = dateTime;
         }
-        
-        
     }
 }

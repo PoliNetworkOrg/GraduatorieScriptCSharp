@@ -22,7 +22,7 @@ public static class Program
     {
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
         rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
-        
+
         // save result
         PrintAndWriteResults(rankingsUrls, argsConfig);
 
