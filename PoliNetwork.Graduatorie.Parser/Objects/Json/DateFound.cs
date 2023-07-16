@@ -20,8 +20,37 @@ public class DateFound
         File.WriteAllText(path, s);
     }
 
+       
+    public static DateTime MinDateTime(DateTime date1, DateTime date2)
+    {
+        return date1 < date2 ? date1 : date2;
+    }
+    
     public void UpdateDateFound(Ranking variable)
     {
         ;
+        string path = variable.GetPath().Trim();
+        ;
+
+        FirstDate ??= new Dictionary<string, DateTime?>();
+
+        var dateTime = new DateTime(variable.Year ?? DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        if (FirstDate.TryGetValue(path, out var oldValue))
+        {
+            if (oldValue == null)
+            {
+                FirstDate[path] = dateTime;
+            }
+            else
+            {
+                FirstDate[path] = MinDateTime(dateTime, oldValue.Value);
+            }
+        }
+        else
+        {
+            FirstDate[path] = dateTime;
+        }
+        
+        
     }
 }
