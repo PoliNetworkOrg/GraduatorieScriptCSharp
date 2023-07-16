@@ -7,8 +7,8 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingOrder
 {
-    public bool? ExtraEu;
     public bool? Anticipata;
+    public bool? ExtraEu;
 
     public string? Phase;
 
