@@ -136,7 +136,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return new SingleCourseJson
         {
             Link = ranking.ConvertPhaseToFilename(),
-            Name = ranking.Phase,
+            Name = ranking.RankingOrder?.Phase,
             BasePath = basePath,
             Year = ranking.Year,
             School = ranking.School,
@@ -152,7 +152,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         {
             return singleCourseJson.School == v1.School
                    && singleCourseJson.Year == v1.Year
-                   && v1.Phase == singleCourseJson.Name;
+                   && v1.RankingOrder?.Phase == singleCourseJson.Name;
         }
 
         return enumerable.Any(Predicate);

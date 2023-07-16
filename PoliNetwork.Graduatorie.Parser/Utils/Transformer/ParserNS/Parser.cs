@@ -240,7 +240,7 @@ public static class Parser
         var ranking = new Ranking
         {
             Year = year,
-            Phase = phase,
+            RankingOrder = new RankingOrder(phase),
             Extra = notes,
             Url = index.Url,
             School = school,
