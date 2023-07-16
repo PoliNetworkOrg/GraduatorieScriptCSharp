@@ -33,12 +33,7 @@ public static class Parser
         var htmlFolder = Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
         var savedHtmls = ParseLocalHtmlFiles(htmlFolder);
 
-        var recursiveHtmls = urls.Where(url => url.PageEnum == PageEnum.Index)
-            .Select(url => HtmlPage.FromUrl(url, htmlFolder))
-            .Where(h => h is not null)
-            .SelectMany(h => GetAndSaveAllHtmls(h!, htmlFolder));
-
-        var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
+        var allHtmls = GetAllHtmls(urls, htmlFolder, savedHtmls);
 
         var indexes = allHtmls.Where(h => h.Url?.PageEnum == PageEnum.Index).ToList();
         allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
@@ -62,6 +57,20 @@ public static class Parser
             .ThenBy(x => x.Url?.Url)
             .ToList();
         return rankingsSet;
+    }
+
+    private static List<HtmlPage> GetAllHtmls(IEnumerable<RankingUrl> urls, string htmlFolder, IEnumerable<HtmlPage> savedHtmls)
+    {
+        Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
+        var recursiveHtmls = urls.Where(url => url.PageEnum == PageEnum.Index)
+            .Select(url => HtmlPage.FromUrl(url, htmlFolder))
+            .Where(h => h is not null)
+            .SelectMany(h => GetAndSaveAllHtmls(h!, htmlFolder));
+
+        var allHtmls = savedHtmls.Concat(recursiveHtmls).ToList();
+        Console.WriteLine($"[DEBUG] Started GetAllHtmls {DateTime.Now}");
+        return allHtmls;
+        
     }
 
     private static IEnumerable<RankingUrl>? GetSubUrls(HtmlPage index)
@@ -782,6 +791,8 @@ public static class Parser
 
     private static IEnumerable<HtmlPage> ParseLocalHtmlFiles(string htmlFolder)
     {
+        Console.WriteLine($"[DEBUG] Started ParseLocalHtmlFiles {DateTime.Now}");
+        
         HashSet<HtmlPage> elements = new();
         if (string.IsNullOrEmpty(htmlFolder))
             return elements;
@@ -810,6 +821,7 @@ public static class Parser
             elements.Add(new HtmlPage(html, RankingUrl.From(url)));
         }
 
+        Console.WriteLine($"[DEBUG] Ended ParseLocalHtmlFiles {DateTime.Now}");
         return elements;
     }
 
