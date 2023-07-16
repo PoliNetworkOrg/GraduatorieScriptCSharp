@@ -1,6 +1,7 @@
 ﻿using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
@@ -26,7 +27,9 @@ public static class Program
         // trovati e dal precedente set salvato nel .json
         var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
 
+        var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingsSet);
+
         // salvare il set
-        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet);
+        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet, dateFound);
     }
 }

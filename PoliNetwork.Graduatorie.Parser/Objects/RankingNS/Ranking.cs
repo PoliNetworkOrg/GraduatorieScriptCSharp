@@ -111,4 +111,9 @@ public class Ranking
     {
         return RankingSummary.From(this);
     }
+
+    public string GetPath()
+    {
+        return School + "/" + Year + "/" + Phase;
+    }
 }
