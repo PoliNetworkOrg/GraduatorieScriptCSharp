@@ -1,6 +1,10 @@
-﻿using PoliNetwork.Core.Utils;
+﻿using Newtonsoft.Json;
+using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Objects.Json;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
@@ -22,11 +26,19 @@ public static class Program
 
     private static void ParserDo(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsUrls)
     {
+        var rankingUrls = rankingsUrls.ToList();
+        
+        var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingUrls);
+        
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
+        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingUrls);
+
+     
 
         // salvare il set
-        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet);
+        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet, dateFound);
     }
+
+
 }
