@@ -1,9 +1,6 @@
-﻿using Newtonsoft.Json;
-using PoliNetwork.Core.Utils;
+﻿using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Parser.Objects.Json;
-using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
