@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
@@ -823,5 +824,44 @@ public static class Parser
 
         var obj = JsonConvert.DeserializeObject<T>(fileContent, Culture.JsonSerializerSettings);
         return obj;
+    }
+
+    public static Ranking? ParseJsonRanking(string path)
+    {
+        if (string.IsNullOrEmpty(path) || !File.Exists(path))
+            return default;
+
+        var fileContent = File.ReadAllText(path);
+        if (string.IsNullOrEmpty(fileContent))
+            return default;
+
+        var deserializeObject = JsonConvert.DeserializeObject(fileContent, Culture.JsonSerializerSettings);
+        if (deserializeObject == null)
+            return null;
+        
+        var objectToRead = (JObject)deserializeObject;
+        
+        const string propertyName = "phase";
+        if (objectToRead.TryGetValue(propertyName, out var jToken))
+        {
+            Ranking? obj1 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+            if (obj1 == null)
+                return null;
+
+            if (obj1.RankingOrder != null) 
+                return obj1;
+            
+            var jValue = ((JValue)jToken);
+            var phase = jValue.Value?.ToString();
+            if (!string.IsNullOrEmpty(phase))
+            {
+                obj1.RankingOrder = new RankingOrder(phase);
+            }
+
+            return obj1;
+        }
+        
+        Ranking? obj2 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+        return obj2;
     }
 }

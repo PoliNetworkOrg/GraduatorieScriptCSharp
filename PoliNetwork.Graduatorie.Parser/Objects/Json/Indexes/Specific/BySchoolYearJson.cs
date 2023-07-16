@@ -105,7 +105,7 @@ public class BySchoolYearJson : IndexJsonBase
         var schoolKey = school.Key.ToString();
         var yearKey = year.Key.ToString();
         var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-        var ranking = Utils.Transformer.ParserNS.Parser.ParseJson<Ranking>(path);
+        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
         if (ranking == null)
             return;
 

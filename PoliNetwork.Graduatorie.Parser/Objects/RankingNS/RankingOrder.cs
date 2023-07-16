@@ -23,7 +23,7 @@ public class RankingOrder
 
     private void FixValues()
     {
-        string s = this.Phase?.ToUpper().Trim() ?? "";
+        var s = this.Phase?.ToUpper().Trim() ?? "";
         if (string.IsNullOrEmpty(s))
             return;
 
