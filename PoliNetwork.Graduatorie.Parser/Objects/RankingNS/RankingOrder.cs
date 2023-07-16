@@ -39,31 +39,25 @@ public class RankingOrder
         Secondary = GetCount(strings, "GRADUATORIA");
     }
 
-    private int? GetCount(IReadOnlyList<string> s, string key)
+    private static int? GetCount(IReadOnlyList<string> s, string key)
     {
         for (var i = 0; i < s.Count; i++)
         {
             var item = s[i];
-            if (item == key)
-                if (i - 1 >= 0)
-                {
-                    var item2 = s[i - 1];
-                    switch (item2)
-                    {
-                        case "PRIMA":
-                            return 1;
-                        case "SECONDA":
-                            return 2;
-                        case "TERZA":
-                            return 3;
-                        case "QUARTA":
-                            return 4;
-                        case "QUINTA":
-                            return 5;
-                        default:
-                            return null;
-                    }
-                }
+            if (item != key) continue;
+            if (i - 1 < 0)
+                continue;
+
+            var item2 = s[i - 1];
+            return item2 switch
+            {
+                "PRIMA" => 1,
+                "SECONDA" => 2,
+                "TERZA" => 3,
+                "QUARTA" => 4,
+                "QUINTA" => 5,
+                _ => null
+            };
         }
 
         return null;
