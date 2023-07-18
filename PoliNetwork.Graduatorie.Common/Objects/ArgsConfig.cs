@@ -10,17 +10,13 @@ namespace PoliNetwork.Graduatorie.Common.Objects;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class ArgsConfig
 {
-    public string? DataFolder;
-    public bool? ForceReparsing;
+    public string DataFolder;
+    public bool ForceReparsing;
 
-    public static ArgsConfig GetArgsConfig(IReadOnlyList<string> args)
+    public ArgsConfig(IReadOnlyList<string> args)
     {
-        var argsConfig = new ArgsConfig
-        {
-            DataFolder = GetDataFolder(FindArgString(args, "--data")),
-            ForceReparsing = FindArgPresent(args, "--reparse")
-        };
-        return argsConfig;
+        DataFolder = GetDataFolder(FindArgString(args, "--data"));
+        ForceReparsing = FindArgPresent(args, "--reparse");
     }
 
     private static string GetDataFolder(string? argsFolder)
@@ -38,7 +34,7 @@ public class ArgsConfig
         return PathUtils.CreateAndReturnDataFolder(Constants.DataFolder);
     }
 
-    private static bool? FindArgPresent(IEnumerable<string> args, string reparse)
+    private static bool FindArgPresent(IEnumerable<string> args, string reparse)
     {
         return args.Any(x => x == reparse);
     }

@@ -11,7 +11,7 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var argsConfig = ArgsConfig.GetArgsConfig(args);
+        var argsConfig = new ArgsConfig(args);
         argsConfig.Print();
 
         RankingsUrls(mt, argsConfig);

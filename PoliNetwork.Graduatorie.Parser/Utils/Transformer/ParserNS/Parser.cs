@@ -25,7 +25,7 @@ public static class Parser
         if (string.IsNullOrEmpty(argsConfig.DataFolder))
             return null;
 
-        var rankingsSet = BySchoolYearJson.Parse(argsConfig.DataFolder) ?? new RankingsSet();
+        var rankingsSet = BySchoolYearJson.GetAndParse(argsConfig.DataFolder);
         var restoredRankings = rankingsSet.Rankings.Count;
         if (restoredRankings > 0)
             Console.WriteLine($"[INFO] restored {restoredRankings} rankings");
@@ -39,7 +39,7 @@ public static class Parser
         allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
 
         foreach (var index in indexes)
-            GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing ?? false);
+            GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing);
 
         /* Action Selector(HtmlPage index) */
         /* { */
@@ -541,22 +541,23 @@ public static class Parser
             {
                 var isCourse = page.Url?.PageEnum == PageEnum.TableByCourse;
                 var doc = page.Html?.DocumentNode;
-                var header = GetTableHeader(doc);
-                if (header is (null, null))
-                    return null;
+                if (doc == null) return null;
+                
+                var (headers, sections) = GetTableHeader(doc);
+                if (headers is null) return null;
 
-                var rows = doc?.SelectNodes("//table[contains(@class, 'TableDati')]/tbody/tr")
+                var rows = doc.SelectNodes("//table[contains(@class, 'TableDati')]/tbody/tr")
                     .ToList();
                 var fullTitle = isCourse
                     ? doc?.GetElementsByClassName("titolo").ToList()[0].InnerText
                     : null;
                 var title = isCourse ? fullTitle?.Split(" (")[0] : null;
                 var location = isCourse ? GetCourseLocation(fullTitle) : null;
-                var rowsData = rows?.Select(
+                var rowsData = rows.Select(
                         row => row.Descendants("td").Select(node => node.InnerText).ToList()
                     )
                     .ToList();
-                return Table.Create(header.Item1, header.Item2, rowsData, title, location);
+                return Table.Create(headers, sections, rowsData, title, location);
             })
             .Where(el => el is not null)
             .ToList();

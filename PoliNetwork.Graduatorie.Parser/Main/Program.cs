@@ -12,7 +12,7 @@ public static class Program
     {
         var mt = new Metrics();
 
-        var argsConfig = ArgsConfig.GetArgsConfig(args);
+        var argsConfig = new ArgsConfig(args);
         argsConfig.Print();
 
         var rankingsUrls = Scraper.Main.Program.RankingsUrls(mt, argsConfig);
@@ -25,11 +25,13 @@ public static class Program
     {
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
-        var rankingsSet = Utils.Transformer.ParserNS.Parser.GetRankings(argsConfig, rankingsUrls);
+        var parser = new Utils.Transformer.ParserNS.NewParser(argsConfig);
+        var rankingsSet = parser.GetRankings(rankingsUrls);
 
         var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingsSet);
 
         // salvare il set
-        OutputWriteUtil.SaveOutputs(argsConfig.DataFolder, rankingsSet, dateFound);
+        var writer = new OutputWriteUtil(argsConfig);
+        writer.SaveOutputs(rankingsSet, dateFound);
     }
 }

@@ -50,68 +50,40 @@ public class BySchoolYearJson : IndexJsonBase
     }
 
 
-    public static RankingsSet? Parse(string dataFolder)
+    public static RankingsSet GetAndParse(string dataFolder)
     {
+        var set = new RankingsSet();
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
         var mainJsonPath = Path.Join(outFolder, PathCustom);
         try
         {
             var mainJson = Utils.Transformer.ParserNS.Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
-            if (mainJson is null)
-                return null;
+            if (mainJson is null) return set;
 
-            var rankings = RankingsAdd(mainJson, outFolder);
-
-            return new RankingsSet { LastUpdate = mainJson.LastUpdate, Rankings = rankings };
+            set.LastUpdate = mainJson.LastUpdate;
+            set.Rankings = GetRankingsFromIndex(mainJson, outFolder);
+            return set;
         }
-        catch
+        catch (Exception e)
         {
-            // ignored
+            Console.WriteLine($"[ERROR] {e}");
+            return set;
         }
-
-        return null;
     }
 
-    private static List<Ranking> RankingsAdd(BySchoolYearJson mainJson, string outFolder)
+    private static List<Ranking> GetRankingsFromIndex(BySchoolYearJson mainJson, string outFolder)
     {
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)
-        foreach (var year in school.Value)
-            RankingsAddSingleYearSchool(year, school, outFolder, rankings);
+            foreach (var year in school.Value)
+                foreach (var filename in year.Value)
+                {
+                    var path = Path.Join(outFolder, filename.BasePath, filename.Link);
+                    var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
+                    if (ranking != null) rankings.Add(ranking);
+                }
+
 
         return rankings;
-    }
-
-    private static void RankingsAddSingleYearSchool(KeyValuePair<int, IEnumerable<SingleCourseJson>> year,
-        KeyValuePair<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> school, string outFolder,
-        ICollection<Ranking> rankings)
-    {
-        Action Selector(SingleCourseJson filename)
-        {
-            return () => { RankingAdd(school, year, outFolder, filename, rankings); };
-        }
-
-        var actions = year.Value.Select(Selector).ToArray();
-        ParallelRun.Run(actions);
-    }
-
-    private static void RankingAdd(
-        KeyValuePair<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> school,
-        KeyValuePair<int, IEnumerable<SingleCourseJson>> year,
-        string outFolder,
-        SingleCourseJson filename,
-        ICollection<Ranking> rankings)
-    {
-        var schoolKey = school.Key.ToString();
-        var yearKey = year.Key.ToString();
-        var path = Path.Join(outFolder, schoolKey, yearKey, filename.Link);
-        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
-        if (ranking == null)
-            return;
-
-        lock (rankings)
-        {
-            rankings.Add(ranking);
-        }
     }
 }
