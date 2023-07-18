@@ -26,7 +26,7 @@ public static class Program
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
         var parser = new Utils.Transformer.ParserNS.NewParser(argsConfig);
-        var rankingsSet = parser.GetRankings(rankingsUrls);
+        var rankingsSet = parser.GetRankings(rankingsUrls.ToList());
 
         var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingsSet);
 

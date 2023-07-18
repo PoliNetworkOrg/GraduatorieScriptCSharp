@@ -22,7 +22,7 @@ public class HtmlPage
         Url = url;
     }
 
-    public override string? ToString()
+    public override string ToString()
     {
         return _htmlString;
     }
@@ -65,15 +65,14 @@ public class HtmlPage
 
     public bool SaveLocal(string htmlFolder, bool force = false)
     {
-        var localPath = Url?.GetLocalPath(htmlFolder);
+        var localPath = Url.GetLocalPath(htmlFolder);
         try
         {
             if (File.Exists(localPath) && !force)
                 return true;
 
             Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
-            if (localPath != null)
-                File.WriteAllText(localPath, _htmlString);
+            File.WriteAllText(localPath, _htmlString);
 
             return true;
         }

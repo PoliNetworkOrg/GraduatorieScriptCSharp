@@ -20,20 +20,18 @@ public class NewParser
 {
     private readonly ArgsConfig _config;
     private readonly string _htmlFolder;
-    private readonly string _outFolder;
 
     public NewParser(ArgsConfig argsConfig)
     {
         _config = argsConfig;
         _htmlFolder = Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
-        _outFolder = Path.Join(argsConfig.DataFolder, Constants.OutputFolder);
     }
 
-    public RankingsSet GetRankings(IEnumerable<RankingUrl> urls)
+    public RankingsSet GetRankings(List<RankingUrl> urls)
     {
         // pseudo
         // parse saved html
-        // merge url html with saved (do not duplicate)
+        // fix url (replace \\ -> /)
         // get urls distinct (only where not in saved html) and make html
         // r1 = !forceReparse && parse from local Json
         // r2 = parse from new links if any
@@ -47,15 +45,13 @@ public class NewParser
         }
 
         var htmls = ParseLocalHtmlFiles().ToList();
-        var newHtmls = urls
-            .Where(url => !htmls.Any(h => h.Url.Url == url.Url))
+        var newHtmls = urls.Where(url => htmls.All(h => h.Url.Url != url.Url))
             .DistinctBy(url => url.Url)
             .Select(url => HtmlPage.FromUrl(url, _htmlFolder))
             .Where(html => html != null)
             .Select(html => html!);
 
         htmls.AddRange(newHtmls);
-
 
         var savedSet = ParseSavedRankings(htmls);
         var newSet = ParseNewRankings(htmls);
@@ -71,7 +67,7 @@ public class NewParser
         // read data folder
         // parse single json into single ranking
         // put rankings into set
-        // remove from param urls the found ranking urls
+        // remove from param htmls the found ranking url-html
         // return
         //
         var savedSet = _config.ForceReparsing
@@ -86,8 +82,9 @@ public class NewParser
 
             ranking.Url.FixSlashes();
             var relatedHtmls = htmls.Where(h => h.Url.IsSameRanking(ranking.Url)).ToList();
-            foreach (var related in relatedHtmls) 
-                lock(htmls) htmls.Remove(related);
+            foreach (var related in relatedHtmls)
+                lock (htmls)
+                    htmls.Remove(related);
         }
 
         return savedSet;
@@ -112,44 +109,44 @@ public class NewParser
         // _config.ForceReparsing is true
 
         var indexPages = htmls.Where(h => h.Url.PageEnum == PageEnum.Index);
-        var indexesByMeritPages = htmls.Where(h => h.Url.PageEnum == PageEnum.IndexByMerit);
-        var indexesByCoursePages = htmls.Where(h => h.Url.PageEnum == PageEnum.IndexByCourse);
         var meritTablePages = htmls.Where(h => h.Url.PageEnum == PageEnum.TableByMerit).ToList();
         var courseTablePages = htmls.Where(h => h.Url.PageEnum == PageEnum.TableByCourse).ToList();
 
         RankingsSet set = new();
         foreach (var index in indexPages)
         {
-            /* Ranking
-               public List<CourseTable>? ByCourse;
-               public MeritTable? ByMerit;
-               public DateTime LastUpdate;
-               public RankingOrder? RankingOrder;
-               public RankingSummary? RankingSummary;
-               */
-            if (index.Html == null || index.Url == null)
-                continue;
-
+            // ReSharper disable once RedundantSuppressNullableWarningExpression
+            var indexUrl = index.Url!;
             var doc = index.Html.DocumentNode;
-            var ranking = InitRanking(index.Url, doc);
+            var ranking = InitRanking(indexUrl, doc);
             if (ranking == null)
                 continue;
 
-            var (ibMerit, ibCourse) = ParseIndexBy(index.Url, doc);
-            var meritPages = ibMerit.Select(url =>
-            {
-                var found = meritTablePages.Find(h => h.Url.Url == url.Url);
-                if (found != null) return found;
-                return HtmlPage.FromUrl(url, _htmlFolder);
-            }).Where(h => h != null).Select(h => h!).ToList();
+            var (ibMerit, ibCourse) = ParseIndexBy(indexUrl, doc);
+            var meritPages = ibMerit
+                .Select(url =>
+                {
+                    var found = meritTablePages.Find(h => h.Url.Url == url.Url);
+                    if (found != null)
+                        return found;
+                    return HtmlPage.FromUrl(url, _htmlFolder);
+                })
+                .Where(h => h != null)
+                .Select(h => h!)
+                .ToList();
             var meritTable = ParseMeritTable(meritPages);
 
-            var coursesPages = ibCourse.Select(url =>
-            {
-                var found = meritTablePages.Find(h => h.Url.Url == url.Url);
-                if (found != null) return found;
-                return HtmlPage.FromUrl(url, _htmlFolder);
-            }).Where(h => h != null).Select(h => h!).ToList();
+            var coursesPages = ibCourse
+                .Select(url =>
+                {
+                    var found = courseTablePages.Find(h => h.Url.Url == url.Url);
+                    if (found != null)
+                        return found;
+                    return HtmlPage.FromUrl(url, _htmlFolder);
+                })
+                .Where(h => h != null)
+                .Select(h => h!)
+                .ToList();
             var coursesTables = ParseCoursesTables(coursesPages);
 
             ranking.ByCourse = coursesTables
@@ -163,7 +160,7 @@ public class NewParser
                             Headers = course.Headers,
                             Rows = GetCourseStudents(course, meritTable),
                             Year = ranking.Year,
-                            Path = index.Url?.Url
+                            Path = index.Url.Url
                         }
                 )
                 .OrderBy(x => x.Title)
@@ -173,7 +170,7 @@ public class NewParser
             ranking.ByMerit = new MeritTable
             {
                 Year = ranking.Year,
-                Path = index.Url?.Url,
+                Path = index.Url.Url,
                 Headers = meritTable.Headers,
                 Rows = GetMeritStudents(meritTable, ranking.ByCourse)
             };
@@ -237,19 +234,20 @@ public class NewParser
             .Where(url => url.PageEnum is PageEnum.IndexByMerit or PageEnum.IndexByCourse)
             .ToList();
 
-        var meritIndexUrl = subUrls
-            .Find(u => u.PageEnum == PageEnum.IndexByMerit);
-        var meritIndex = meritIndexUrl != null ? HtmlPage.FromUrl(meritIndexUrl, _htmlFolder) : null;
+        var meritIndexUrl = subUrls.Find(u => u.PageEnum == PageEnum.IndexByMerit);
+        var meritIndex =
+            meritIndexUrl != null ? HtmlPage.FromUrl(meritIndexUrl, _htmlFolder) : null;
         var meritPages = meritIndex != null ? GetTableLinks(meritIndex) : new List<RankingUrl>();
 
-        var courseIndexUrl = subUrls
-            .Find(u => u.PageEnum == PageEnum.IndexByCourse);
-        var courseIndex = courseIndexUrl != null ? HtmlPage.FromUrl(courseIndexUrl, _htmlFolder) : null;
-        var coursesPages = courseIndex != null ? GetTableLinks(courseIndex) : new List<RankingUrl>();
+        var courseIndexUrl = subUrls.Find(u => u.PageEnum == PageEnum.IndexByCourse);
+        var courseIndex =
+            courseIndexUrl != null ? HtmlPage.FromUrl(courseIndexUrl, _htmlFolder) : null;
+        var coursesPages =
+            courseIndex != null ? GetTableLinks(courseIndex) : new List<RankingUrl>();
 
         return (meritPages, coursesPages);
     }
-    
+
     private static IEnumerable<RankingUrl> GetTableLinks(HtmlPage html)
     {
         var baseDomain = html.Url.GetBaseDomain();
@@ -264,7 +262,7 @@ public class NewParser
             .ToList();
 
         return tablesLinks;
-    } 
+    }
 
     private Table<MeritTableRow> ParseMeritTable(IEnumerable<HtmlPage> pages)
     {
@@ -389,7 +387,7 @@ public class NewParser
     {
         // ex: INGEGNERIA MECCANICA (MILANO LEONARDO)
         var strings = fullTitle.Split("("); // [INGEGNERIA MECCANICA, MILANO LEONARDO)]
-        if (strings == null || strings.Length < 2)
+        if (strings.Length < 2)
             return null;
 
         var s = strings[1]; // MILANO LEONARDO)
@@ -456,7 +454,6 @@ public class NewParser
 
     private static List<CourseTableRow> ParseCourseTable(Table<List<string>> table)
     {
-        List<CourseTableRow> parsedRows = new();
         var headers = table.Headers.Select(h => h.ToLower()).ToList();
 
         var posIndex = headers.FindIndex(t => t.Contains("posizione"));
@@ -472,24 +469,30 @@ public class NewParser
 
         var sectionsIndex = table.GetSectionsIndex();
 
-        foreach (var row in table.Data)
-            ParseRow(
-                row,
-                idIndex,
-                votoTestIndex,
-                posIndex,
-                birthDateIndex,
-                enrollAllowedIndex,
-                englishCorrectAnswersIndex,
-                ofaEngIndex,
-                ofaTestIndex,
-                sectionsIndex,
-                parsedRows
-            );
+        var parsedRows = table.Data
+            .Select(
+                row =>
+                    ParseCourseRow(
+                        row,
+                        idIndex,
+                        votoTestIndex,
+                        posIndex,
+                        birthDateIndex,
+                        enrollAllowedIndex,
+                        englishCorrectAnswersIndex,
+                        ofaEngIndex,
+                        ofaTestIndex,
+                        sectionsIndex
+                    )
+            )
+            .Where(row => row != null)
+            .Select(row => row!)
+            .ToList();
+
         return parsedRows;
     }
 
-    private static void ParseRow(
+    private static CourseTableRow? ParseCourseRow(
         List<string> row,
         int idIndex,
         int votoTestIndex,
@@ -499,8 +502,7 @@ public class NewParser
         int englishCorrectAnswersIndex,
         int ofaEngIndex,
         int ofaTestIndex,
-        Dictionary<string, int>? sectionsIndex,
-        ICollection<CourseTableRow> parsedRows
+        Dictionary<string, int>? sectionsIndex
     )
     {
         var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
@@ -509,7 +511,7 @@ public class NewParser
         var votoTest = Convert.ToDecimal(votoTestString, Culture.NumberFormatInfo);
         var fieldByIndex = Table.GetFieldByIndex(row, posIndex) ?? "-1";
         if (fieldByIndex.ToLower().Contains("nessun"))
-            return;
+            return null;
 
         var position = Convert.ToInt16(fieldByIndex);
         var birthDate = DateOnly.ParseExact(
@@ -552,7 +554,7 @@ public class NewParser
             BirthDate = birthDate,
             SectionsResults = sectionsResults
         };
-        parsedRows.Add(parsedRow);
+        return parsedRow;
     }
 
     private static List<StudentResult> GetCourseStudents(
@@ -714,7 +716,10 @@ public class NewParser
         if (string.IsNullOrEmpty(fileContent))
             return default;
 
-        var deserializeObject = JsonConvert.DeserializeObject(fileContent, Culture.JsonSerializerSettings);
+        var deserializeObject = JsonConvert.DeserializeObject(
+            fileContent,
+            Culture.JsonSerializerSettings
+        );
         if (deserializeObject == null)
             return null;
 
@@ -723,7 +728,10 @@ public class NewParser
         const string propertyName = "phase";
         if (objectToRead.TryGetValue(propertyName, out var jToken))
         {
-            var obj1 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+            var obj1 = JsonConvert.DeserializeObject<Ranking?>(
+                fileContent,
+                Culture.JsonSerializerSettings
+            );
             if (obj1 == null)
                 return null;
 
@@ -732,12 +740,16 @@ public class NewParser
 
             var jValue = (JValue)jToken;
             var phase = jValue.Value?.ToString();
-            if (!string.IsNullOrEmpty(phase)) obj1.RankingOrder = new RankingOrder(phase);
+            if (!string.IsNullOrEmpty(phase))
+                obj1.RankingOrder = new RankingOrder(phase);
 
             return obj1;
         }
 
-        var obj2 = JsonConvert.DeserializeObject<Ranking?>(fileContent, Culture.JsonSerializerSettings);
+        var obj2 = JsonConvert.DeserializeObject<Ranking?>(
+            fileContent,
+            Culture.JsonSerializerSettings
+        );
         return obj2;
     }
 }

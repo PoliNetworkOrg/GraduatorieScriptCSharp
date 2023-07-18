@@ -35,8 +35,8 @@ public static class Parser
 
         var allHtmls = GetAllHtmls(urls, htmlFolder, savedHtmls);
 
-        var indexes = allHtmls.Where(h => h.Url?.PageEnum == PageEnum.Index).ToList();
-        allHtmls.RemoveAll(h => h.Url?.PageEnum == PageEnum.Index);
+        var indexes = allHtmls.Where(h => h.Url.PageEnum == PageEnum.Index).ToList();
+        allHtmls.RemoveAll(h => h.Url.PageEnum == PageEnum.Index);
 
         foreach (var index in indexes)
             GetRankingsSingle(index, rankingsSet, allHtmls, argsConfig.ForceReparsing);
@@ -75,13 +75,13 @@ public static class Parser
 
     private static IEnumerable<RankingUrl>? GetSubUrls(HtmlPage index)
     {
-        var doc = index.Html?.DocumentNode;
+        var doc = index.Html.DocumentNode;
         var aTags = doc?.GetElementsByClassName("titolo")
             .SelectMany(a => a.GetElementsByTagName("a")) // links to subindex
             .Where(a => !a.InnerText.Contains("matricola"))
             .ToList(); // filter out id ranking
 
-        var baseDomain = index.Url?.GetBaseDomain();
+        var baseDomain = index.Url.GetBaseDomain();
 
         var subUrls = aTags
             ?.Select(a => a.GetAttributeValue("href", null))
@@ -96,9 +96,9 @@ public static class Parser
 
     private static IEnumerable<RankingUrl>? GetTableLinks(HtmlPage html)
     {
-        var baseDomain = html.Url?.GetBaseDomain();
+        var baseDomain = html.Url.GetBaseDomain();
 
-        var page = html.Html?.DocumentNode;
+        var page = html.Html.DocumentNode;
         var tablesLinks = page?.SelectNodes("//td/a")
             .ToList()
             .Select(a => a.GetAttributeValue("href", null))
@@ -186,10 +186,10 @@ public static class Parser
         bool forceReparsing
     )
     {
-        Console.WriteLine($"[DEBUG] parsing index {index.Url?.Url}");
+        Console.WriteLine($"[DEBUG] parsing index {index.Url.Url}");
         if (rankingsSet.Rankings.Count > 0)
         {
-            var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url?.Url);
+            var findIndex = rankingsSet.Rankings.FindIndex(r => r.Url?.Url == index.Url.Url);
             if (findIndex >= 0)
             {
                 var parsed = rankingsSet.Rankings[findIndex];
@@ -197,14 +197,14 @@ public static class Parser
                     if (!forceReparsing)
                     {
                         Console.WriteLine(
-                            $"[DEBUG] skipping index {index.Url?.Url}: already parsed"
+                            $"[DEBUG] skipping index {index.Url.Url}: already parsed"
                         );
                         return;
                     }
             }
         }
 
-        var doc = index.Html?.DocumentNode;
+        var doc = index.Html.DocumentNode;
 
         // get ranking info
         var intestazioni = doc?.GetElementsByClassName("intestazione")
@@ -213,7 +213,7 @@ public static class Parser
             .ToList();
         var schoolStr = intestazioni?[2].Split("\n")[0].ToLower();
         var school = GetSchoolEnum(schoolStr);
-        var urlUrl = index.Url?.Url;
+        var urlUrl = index.Url.Url;
         if (school == SchoolEnum.Unknown)
         {
             Console.WriteLine(
@@ -422,7 +422,7 @@ public static class Parser
         /* var actions = tableLinks?.Select((Func<RankingUrl, Action>)Selector).ToArray(); */
         /* if (actions != null) */
         /*     ParallelRun.Run(actions); */
-        var urlPageEnum = html.Url?.PageEnum;
+        var urlPageEnum = html.Url.PageEnum;
         switch (urlPageEnum)
         {
             case PageEnum.IndexByMerit:
@@ -456,7 +456,7 @@ public static class Parser
             }
             default:
                 Console.WriteLine(
-                    $"[ERROR] Unhandled sub index (url: {html.Url?.Url}, type: {html.Url?.PageEnum})"
+                    $"[ERROR] Unhandled sub index (url: {html.Url.Url}, type: {html.Url.PageEnum})"
                 );
                 break;
         }
@@ -469,7 +469,7 @@ public static class Parser
             if (h == null)
                 return false;
 
-            var urlUrl = h.Url?.Url;
+            var urlUrl = h.Url.Url;
             var s = url.Url;
 
             return CheckIfSimilar(urlUrl, s);
@@ -539,8 +539,8 @@ public static class Parser
         var tables = pages
             .Select(page =>
             {
-                var isCourse = page.Url?.PageEnum == PageEnum.TableByCourse;
-                var doc = page.Html?.DocumentNode;
+                var isCourse = page.Url.PageEnum == PageEnum.TableByCourse;
+                var doc = page.Html.DocumentNode;
                 if (doc == null) return null;
                 
                 var (headers, sections) = GetTableHeader(doc);
@@ -549,7 +549,7 @@ public static class Parser
                 var rows = doc.SelectNodes("//table[contains(@class, 'TableDati')]/tbody/tr")
                     .ToList();
                 var fullTitle = isCourse
-                    ? doc?.GetElementsByClassName("titolo").ToList()[0].InnerText
+                    ? doc.GetElementsByClassName("titolo").ToList()[0].InnerText
                     : null;
                 var title = isCourse ? fullTitle?.Split(" (")[0] : null;
                 var location = isCourse ? GetCourseLocation(fullTitle) : null;
