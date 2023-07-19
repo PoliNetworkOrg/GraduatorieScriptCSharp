@@ -114,4 +114,73 @@ public class RankingUrl
         var baseDomain = Url[..lastUrlIndex] + "/";
         return baseDomain;
     }
+
+    public void FixSlashes() 
+    {
+        Url = Url.Replace("\\", "/");
+    }
+
+    public bool IsSameRanking(RankingUrl urlB)
+    {
+        return AreSameRanking(this, urlB);
+    }
+
+    public bool AreSameRanking(RankingUrl urlA, RankingUrl urlB)
+    {
+        var a = urlA.Url;
+        var b = urlB.Url;
+
+        if (string.IsNullOrEmpty(a) && string.IsNullOrEmpty(b))
+            return true;
+
+        if (string.IsNullOrEmpty(a) || string.IsNullOrEmpty(b))
+            return false;
+
+        a = a.Replace('\\', '/');
+        b = b.Replace('\\', '/');
+
+        if (!a.Contains('/') || !b.Contains('/'))
+            return false;
+
+        var splitA = a.Split("/");
+        var splitB = b.Split("/");
+        if (splitA.Length < 4 || splitB.Length < 4) return false;
+        return splitA[3] == splitB[3];
+    }
+
+    public bool IsSimilar(RankingUrl urlB)
+    {
+        return RankingUrl.AreSimilar(this, urlB);
+    }
+
+    public static bool AreSimilar(RankingUrl urlA, RankingUrl urlB) 
+    {
+        var a = urlA.Url;
+        var b = urlB.Url;
+
+        if (string.IsNullOrEmpty(a) && string.IsNullOrEmpty(b))
+            return true;
+
+        if (string.IsNullOrEmpty(a) || string.IsNullOrEmpty(b))
+            return false;
+
+        a = a.Replace('\\', '/');
+        b = b.Replace('\\', '/');
+
+        if (!a.Contains('/') || !b.Contains('/'))
+            return false;
+
+        var aStrings = a.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+        var bStrings = b.Split("/").Where(x => !string.IsNullOrEmpty(x) && x != "http:").ToList();
+
+        var min = Math.Min(aStrings.Count, bStrings.Count);
+        aStrings = aStrings.Skip(Math.Max(0, aStrings.Count - min)).ToList();
+        bStrings = bStrings.Skip(Math.Max(0, bStrings.Count - min)).ToList();
+
+        for (var i = 0; i < min; i++)
+            if (aStrings[i] != bStrings[i])
+                return false;
+
+        return true;
+    }
 }

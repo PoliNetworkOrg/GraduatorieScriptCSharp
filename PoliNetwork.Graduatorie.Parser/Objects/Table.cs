@@ -19,14 +19,14 @@ public class Table<T>
     public List<string> Headers = new();
     public List<string>? Sections;
 
-    public static Table<T> Create(List<string>? headers, List<string>? sections, List<T>? data, string? courseTitle,
+    public static Table<T> Create(List<string> headers, List<string>? sections, List<T> data, string? courseTitle,
         string? courseLocation)
     {
         return new Table<T>
         {
-            Headers = headers ?? new List<string>(),
+            Headers = headers,
             Sections = sections,
-            Data = data ?? new List<T>(),
+            Data = data,
             CourseTitle = courseTitle,
             CourseLocation = courseLocation
         };
