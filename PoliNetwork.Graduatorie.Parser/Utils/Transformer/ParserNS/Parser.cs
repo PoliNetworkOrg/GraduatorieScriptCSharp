@@ -21,7 +21,7 @@ public class Parser
     private readonly ArgsConfig _config;
     private readonly string _htmlFolder;
 
-    public NewParser(ArgsConfig argsConfig)
+    public Parser(ArgsConfig argsConfig)
     {
         _config = argsConfig;
         _htmlFolder = Path.Join(argsConfig.DataFolder, Constants.HtmlFolder);
