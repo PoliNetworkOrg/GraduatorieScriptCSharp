@@ -16,7 +16,7 @@ using PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
-public class NewParser
+public class Parser
 {
     private readonly ArgsConfig _config;
     private readonly string _htmlFolder;
