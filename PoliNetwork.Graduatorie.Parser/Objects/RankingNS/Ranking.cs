@@ -19,7 +19,7 @@ public class Ranking
     public MeritTable? ByMerit;
     public string? Extra;
     public DateTime LastUpdate;
-    public string? Phase;
+    public RankingOrder? RankingOrder;
     public RankingSummary? RankingSummary;
     public SchoolEnum? School;
     public RankingUrl? Url;
@@ -27,7 +27,7 @@ public class Ranking
 
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
-        return new RankingSummaryStudent(Phase, School, Year, Url);
+        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
 
 
@@ -38,7 +38,7 @@ public class Ranking
     {
         var i = "Ranking".GetHashCode();
         i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= Phase?.GetHashCode() ?? "Phase".GetHashCode();
+        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
         i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
         i ^= School?.GetHashCode() ?? "School".GetHashCode();
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
@@ -58,7 +58,7 @@ public class Ranking
     {
         return Year == ranking.Year &&
                School == ranking.School &&
-               Phase == ranking.Phase &&
+               RankingOrder?.Phase == ranking.RankingOrder?.Phase &&
                Extra == ranking.Extra &&
                Url?.Url == ranking.Url?.Url;
     }
@@ -70,16 +70,24 @@ public class Ranking
         Year ??= ranking.Year;
         Extra ??= ranking.Extra;
         School ??= ranking.School;
-        Phase ??= ranking.Phase;
+        MergeRankingOrder(ranking);
         ByCourse ??= ranking.ByCourse;
         ByMerit ??= ranking.ByMerit;
         Url ??= ranking.Url;
     }
 
+    private void MergeRankingOrder(Ranking ranking)
+    {
+        if (RankingOrder == null)
+            RankingOrder = ranking.RankingOrder;
+        else
+            RankingOrder.Merge(ranking.RankingOrder);
+    }
+
     public string ConvertPhaseToFilename()
     {
         var s = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
-        var phase1 = Phase ?? s;
+        var phase1 = RankingOrder?.Phase ?? s;
         return $"{phase1}.json".Replace(" ", "_");
     }
 
@@ -92,7 +100,7 @@ public class Ranking
         result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {
             Link = ConvertPhaseToFilename(),
-            Name = Phase,
+            Name = RankingOrder?.Phase,
             BasePath = schoolString + "/" + Year + "/",
             Year = Year,
             School = School,
@@ -114,6 +122,6 @@ public class Ranking
 
     public string GetPath()
     {
-        return School + "/" + Year + "/" + Phase;
+        return School + "/" + Year + "/" + RankingOrder?.Phase;
     }
 }

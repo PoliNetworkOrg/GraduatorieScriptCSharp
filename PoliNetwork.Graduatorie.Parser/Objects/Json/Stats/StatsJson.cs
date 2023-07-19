@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
@@ -14,10 +15,11 @@ public class StatsJson
     public DateTime LastUpdate = DateTime.UtcNow;
     public Dictionary<int, StatsYear> Stats = new();
 
-    public static void Write(string outFolder, RankingsSet? rankingsSet)
+    public static void Write(string outFolder, RankingsSet? rankingsSet, ArgsConfig argsConfig)
     {
         var statsJson = Generate(rankingsSet);
-        statsJson?.WriteToFile(outFolder);
+        if (statsJson == null) return; 
+        foreach (var yearDict in statsJson.Stats) WriteToFileYear(outFolder, yearDict, argsConfig);
     }
 
     private static StatsJson? Generate(RankingsSet? rankingsSet)
@@ -77,20 +79,15 @@ public class StatsJson
         foreach (var variable in statsSingleCourseJsons) schools[ranking.School.Value].List.Add(variable);
     }
 
-    private void WriteToFile(string outFolder)
-    {
-        foreach (var variable in Stats) WriteToFileYear(outFolder, variable);
-    }
-
-    private static void WriteToFileYear(string outFolder, KeyValuePair<int, StatsYear> variable)
+    private static void WriteToFileYear(string outFolder, KeyValuePair<int, StatsYear> yearDict, ArgsConfig argsConfig)
     {
         var statsPath = Path.Join(outFolder, PathStats);
         if (!Directory.Exists(statsPath)) Directory.CreateDirectory(statsPath);
 
-        var jsonPath = Path.Join(statsPath, variable.Key + ".json");
-        if (ExitIfThereIsntAnUpdate(jsonPath, variable.Value)) return;
+        var jsonPath = Path.Join(statsPath, yearDict.Key + ".json");
+        if (ExitIfThereIsntAnUpdate(jsonPath, yearDict.Value) && !argsConfig.ForceReparsing) return;
 
-        var jsonString = JsonConvert.SerializeObject(variable.Value, Culture.JsonSerializerSettings);
+        var jsonString = JsonConvert.SerializeObject(yearDict.Value, Culture.JsonSerializerSettings);
         File.WriteAllText(jsonPath, jsonString);
     }
 

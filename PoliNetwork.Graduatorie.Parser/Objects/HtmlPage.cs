@@ -9,9 +9,9 @@ namespace PoliNetwork.Graduatorie.Parser.Objects;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class HtmlPage
 {
-    private readonly string? _htmlString;
-    public readonly HtmlDocument? Html;
-    public readonly RankingUrl? Url;
+    private readonly string _htmlString;
+    public readonly HtmlDocument Html;
+    public readonly RankingUrl Url;
 
     public HtmlPage(string html, RankingUrl url)
     {
@@ -22,7 +22,7 @@ public class HtmlPage
         Url = url;
     }
 
-    public override string? ToString()
+    public override string ToString()
     {
         return _htmlString;
     }
@@ -37,7 +37,9 @@ public class HtmlPage
         if (html is null || string.IsNullOrEmpty(html))
             return null;
 
-        return new HtmlPage(html, url);
+        var dwPage = new HtmlPage(html, url);
+        dwPage.SaveLocal(htmlFolder);
+        return dwPage;
     }
 
     private static string? GetLocalHtml(RankingUrl url, string htmlFolder)
@@ -63,15 +65,14 @@ public class HtmlPage
 
     public bool SaveLocal(string htmlFolder, bool force = false)
     {
-        var localPath = Url?.GetLocalPath(htmlFolder);
+        var localPath = Url.GetLocalPath(htmlFolder);
         try
         {
             if (File.Exists(localPath) && !force)
                 return true;
 
             Console.WriteLine($"[DEBUG] Saving HtmlPage with localPath = {localPath}");
-            if (localPath != null)
-                File.WriteAllText(localPath, _htmlString);
+            File.WriteAllText(localPath, _htmlString);
 
             return true;
         }
@@ -80,5 +81,10 @@ public class HtmlPage
             Console.WriteLine($"[ERROR] Can't save HtmlPage with localPath = {localPath}");
             return false;
         }
+    }
+
+    public bool Equals(HtmlPage target)
+    {
+        return target._htmlString == this._htmlString && target.Url.Url == this.Url.Url;
     }
 }

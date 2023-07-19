@@ -30,4 +30,12 @@ public class RankingsSet
     {
         return Rankings.Any(v => v.IsSimilarTo(ranking));
     }
+
+    public void Merge(RankingsSet set)
+    {
+        foreach(var ranking in set.Rankings)
+        {
+            AddRanking(ranking);
+        }
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
+using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
@@ -20,7 +21,7 @@ public abstract class IndexJsonBase
     }
 
 
-    public static void WriteSingleJsons(RankingsSet? set, string outFolder)
+    public static void WriteSingleJsons(RankingsSet? set, string outFolder, ArgsConfig argsConfig)
     {
         if (set == null)
             return;
@@ -42,16 +43,16 @@ public abstract class IndexJsonBase
                 var folder = Path.Join(outFolder, school.ToString(), year.ToString());
                 Directory.CreateDirectory(folder);
 
-                foreach (var ranking in yearGroup) WriteSingleJsonRanking(folder, ranking);
+                foreach (var ranking in yearGroup) WriteSingleJsonRanking(folder, ranking, argsConfig);
             }
         }
     }
 
-    private static void WriteSingleJsonRanking(string folder, Ranking ranking)
+    private static void WriteSingleJsonRanking(string folder, Ranking ranking, ArgsConfig argsConfig)
     {
         var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
 
-        if (ExitIfAlreadyExistsAndNotUpdated(ranking, path)) return;
+        if (ExitIfAlreadyExistsAndNotUpdated(ranking, path) && !argsConfig.ForceReparsing) return;
 
         var rankingJsonString = JsonConvert.SerializeObject(ranking, Culture.JsonSerializerSettings);
         File.WriteAllText(path, rankingJsonString);
@@ -69,10 +70,10 @@ public abstract class IndexJsonBase
         return hashThis == hashJ;
     }
 
-    public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder)
+    public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder, ArgsConfig argsConfig)
     {
         //let's write all single json files
-        WriteSingleJsons(rankingsSet, outFolder);
+        WriteSingleJsons(rankingsSet, outFolder, argsConfig);
 
         //now let's write each single different index
         BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.PathCustom);
