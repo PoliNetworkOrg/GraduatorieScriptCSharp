@@ -4478,13 +4478,13 @@
     "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "extraEu": null,
-  "lastUpdate": "2023-07-14T11:47:17.506113+02:00",
+  "lastUpdate": "2023-07-19T09:13:07.9487582Z",
   "rankingOrder": {
-    "ExtraEu": true,
-    "Phase": "Extra-ue",
-    "Primary": null,
-    "Secondary": null
+    "anticipata": false,
+    "extraEu": true,
+    "phase": "Extra-ue",
+    "primary": null,
+    "secondary": null
   },
   "rankingSummary": {
     "courseSummarized": [
@@ -4504,7 +4504,7 @@
         "howManyOfa": {
           "ENG": 21
         },
-        "howManyStudents": null,
+        "howManyStudents": 33,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 37.50,
         "title": "DESIGN DEGLI INTERNI"
@@ -4525,7 +4525,7 @@
         "howManyOfa": {
           "ENG": 24
         },
-        "howManyStudents": null,
+        "howManyStudents": 51,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 41.25,
         "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
@@ -4546,7 +4546,7 @@
         "howManyOfa": {
           "ENG": 7
         },
-        "howManyStudents": null,
+        "howManyStudents": 15,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 25.83,
         "title": "DESIGN DELLA COMUNICAZIONE"
@@ -4567,7 +4567,7 @@
         "howManyOfa": {
           "ENG": 14
         },
-        "howManyStudents": null,
+        "howManyStudents": 29,
         "location": "MILANO BOVISA",
         "minScoreToEnroll": 50.83,
         "title": "DESIGN DELLA MODA"
