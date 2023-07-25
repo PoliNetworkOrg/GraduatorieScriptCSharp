@@ -380,9 +380,25 @@
         },
         {
           "basePath": "Ingegneria/2023/",
+          "link": "Extra-ue_Seconda_Graduatoria_Di_Seconda_Fase.json",
+          "location": "MILANO BOVISA",
+          "name": "Extra-ue Seconda Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2023
+        },
+        {
+          "basePath": "Ingegneria/2023/",
           "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
           "location": "MILANO BOVISA",
           "name": "Prima Graduatoria Di Seconda Fase",
+          "school": "Ingegneria",
+          "year": 2023
+        },
+        {
+          "basePath": "Ingegneria/2023/",
+          "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+          "location": "MILANO BOVISA",
+          "name": "Seconda Graduatoria Di Seconda Fase",
           "school": "Ingegneria",
           "year": 2023
         }
@@ -487,5 +503,5 @@
       ]
     }
   },
-  "lastUpdate": "2023-07-19T09:13:06.5153909Z"
+  "lastUpdate": "2023-07-25T09:03:50.7740606Z"
 }
