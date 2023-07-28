@@ -1,173 +1,135 @@
 {
   "numStudents": 5925,
   "schools": {
-    "Design": {
+    "Urbanistica": {
       "list": [
         {
           "singleCourseJson": {
-            "basePath": "Design/2023/",
-            "link": "Anticipato.json",
-            "location": "MILANO BOVISA",
-            "name": "Anticipato",
-            "school": "Design",
+            "basePath": "Urbanistica/2023/",
+            "link": "Anticipata.json",
+            "location": null,
+            "name": "Anticipata",
+            "school": "Urbanistica",
             "year": 2023
           },
           "stats": {
             "courseSummarized": [
               {
-                "averageBirthYear": 2003.96283,
-                "averageEnglishCorrectAnswers": 23.98792,
-                "averageOfWhoPassed": 64.33606,
+                "averageBirthYear": 2003.72595,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 76.38182,
                 "averagePartialScores": {
-                  "Geometria e Rappresentazione": 4.83988,
-                  "Comprensione Verbale": 2.97645,
-                  "Storia del Design, Storia dell'Arte": 5.49285,
-                  "Logica": 3.35246,
-                  "Cultura Generale": 9.61151,
-                  "Inglese": 22.65751
+                  "Colloquio": 35.46309,
+                  "Elaborato": 20.08725,
+                  "Lettera Motivazionale": 14.65101
                 },
-                "averageScoresOfAllStudents": 46.96318,
-                "howManyCanEnroll": 193,
-                "howManyOfa": {
-                  "ENG": 926
-                },
-                "howManyStudents": 2484,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 59.46,
-                "title": "DESIGN DEGLI INTERNI"
-              },
-              {
-                "averageBirthYear": 2003.93249,
-                "averageEnglishCorrectAnswers": 24.09079,
-                "averageOfWhoPassed": 66.75747,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 4.94505,
-                  "Comprensione Verbale": 2.99522,
-                  "Storia del Design, Storia dell'Arte": 5.57472,
-                  "Logica": 3.36012,
-                  "Cultura Generale": 9.78454,
-                  "Inglese": 22.78595
-                },
-                "averageScoresOfAllStudents": 47.58570,
-                "howManyCanEnroll": 186,
-                "howManyOfa": {
-                  "ENG": 846
-                },
-                "howManyStudents": 2302,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 59.88,
-                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-              },
-              {
-                "averageBirthYear": 2003.96021,
-                "averageEnglishCorrectAnswers": 24.15015,
-                "averageOfWhoPassed": 69.51302,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 4.85956,
-                  "Comprensione Verbale": 2.99782,
-                  "Storia del Design, Storia dell'Arte": 5.52423,
-                  "Logica": 3.37080,
-                  "Cultura Generale": 9.68278,
-                  "Inglese": 22.85694
-                },
-                "averageScoresOfAllStudents": 47.27265,
-                "howManyCanEnroll": 116,
-                "howManyOfa": {
-                  "ENG": 827
-                },
-                "howManyStudents": 2291,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 63.08,
-                "title": "DESIGN DELLA COMUNICAZIONE"
-              },
-              {
-                "averageBirthYear": 2003.95926,
-                "averageEnglishCorrectAnswers": 24.12488,
-                "averageOfWhoPassed": 67.18103,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 4.76941,
-                  "Comprensione Verbale": 2.98517,
-                  "Storia del Design, Storia dell'Arte": 5.44913,
-                  "Logica": 3.31907,
-                  "Cultura Generale": 9.55882,
-                  "Inglese": 22.82401
-                },
-                "averageScoresOfAllStudents": 46.73131,
-                "howManyCanEnroll": 97,
-                "howManyOfa": {
-                  "ENG": 755
-                },
-                "howManyStudents": 2074,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 60.58,
-                "title": "DESIGN DELLA MODA"
+                "averageScoresOfAllStudents": 70.20134,
+                "howManyCanEnroll": 110,
+                "howManyOfa": {},
+                "howManyStudents": 149,
+                "location": null,
+                "minScoreToEnroll": 62.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
               }
             ],
-            "howManyCanEnroll": 592,
-            "howManyStudents": 3206,
+            "howManyCanEnroll": 110,
+            "howManyStudents": 149,
             "resultsSummarized": {
-              "30": 36,
-              "31": 55,
-              "32": 47,
-              "33": 67,
-              "34": 56,
-              "35": 77,
-              "36": 78,
-              "37": 92,
-              "38": 99,
-              "39": 105,
-              "40": 90,
-              "41": 108,
-              "42": 108,
-              "43": 101,
-              "44": 98,
-              "45": 92,
-              "46": 109,
-              "47": 100,
-              "48": 76,
-              "49": 90,
-              "50": 140,
-              "51": 94,
-              "52": 89,
-              "53": 92,
-              "54": 105,
-              "55": 81,
-              "56": 76,
-              "57": 83,
-              "58": 76,
-              "59": 90,
-              "60": 57,
-              "61": 63,
-              "62": 63,
-              "63": 38,
-              "64": 46,
-              "65": 53,
-              "66": 32,
-              "67": 32,
-              "68": 37,
-              "69": 19,
-              "70": 21,
-              "71": 25,
-              "72": 18,
-              "73": 16,
-              "74": 14,
+              "31": 1,
+              "37": 1,
+              "44": 3,
+              "46": 1,
+              "47": 1,
+              "48": 2,
+              "49": 1,
+              "50": 3,
+              "51": 2,
+              "52": 3,
+              "53": 3,
+              "54": 1,
+              "55": 2,
+              "56": 3,
+              "57": 1,
+              "59": 4,
+              "60": 2,
+              "61": 2,
+              "62": 7,
+              "63": 3,
+              "64": 3,
+              "65": 4,
+              "66": 1,
+              "67": 4,
+              "68": 2,
+              "69": 4,
+              "70": 8,
+              "71": 1,
+              "72": 6,
+              "73": 10,
+              "74": 4,
               "75": 3,
-              "76": 13,
-              "77": 9,
-              "78": 6,
-              "79": 12,
-              "80": 10,
-              "81": 1,
+              "76": 2,
+              "77": 2,
+              "78": 4,
+              "79": 4,
+              "80": 7,
+              "81": 3,
               "82": 3,
               "83": 1,
-              "85": 2,
-              "87": 1,
-              "92": 1
+              "84": 3,
+              "85": 6,
+              "86": 3,
+              "87": 3,
+              "88": 2,
+              "89": 1,
+              "90": 1,
+              "91": 2,
+              "92": 1,
+              "93": 1,
+              "94": 2,
+              "98": 2
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2023/",
+            "link": "Extra-ue.json",
+            "location": null,
+            "name": "Extra-ue",
+            "school": "Urbanistica",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 61.00,
+                "averagePartialScores": {
+                  "Colloquio": 27.33333,
+                  "Elaborato": 14.33333,
+                  "Lettera Motivazionale": 11.00
+                },
+                "averageScoresOfAllStudents": 52.66667,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {},
+                "howManyStudents": 3,
+                "location": null,
+                "minScoreToEnroll": 55.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 2,
+            "howManyStudents": 3,
+            "resultsSummarized": {
+              "36": 1,
+              "55": 1,
+              "67": 1
             }
           }
         }
       ],
-      "numStudents": 3206
+      "numStudents": 152
     },
     "Ingegneria": {
       "list": [
@@ -9004,135 +8966,173 @@
       ],
       "numStudents": 2567
     },
-    "Urbanistica": {
+    "Design": {
       "list": [
         {
           "singleCourseJson": {
-            "basePath": "Urbanistica/2023/",
-            "link": "Anticipata.json",
-            "location": null,
-            "name": "Anticipata",
-            "school": "Urbanistica",
+            "basePath": "Design/2023/",
+            "link": "Anticipato.json",
+            "location": "MILANO BOVISA",
+            "name": "Anticipato",
+            "school": "Design",
             "year": 2023
           },
           "stats": {
             "courseSummarized": [
               {
-                "averageBirthYear": 2003.72595,
-                "averageEnglishCorrectAnswers": null,
-                "averageOfWhoPassed": 76.38182,
+                "averageBirthYear": 2003.96283,
+                "averageEnglishCorrectAnswers": 23.98792,
+                "averageOfWhoPassed": 64.33606,
                 "averagePartialScores": {
-                  "Colloquio": 35.46309,
-                  "Elaborato": 20.08725,
-                  "Lettera Motivazionale": 14.65101
+                  "Geometria e Rappresentazione": 4.83988,
+                  "Comprensione Verbale": 2.97645,
+                  "Storia del Design, Storia dell'Arte": 5.49285,
+                  "Logica": 3.35246,
+                  "Cultura Generale": 9.61151,
+                  "Inglese": 22.65751
                 },
-                "averageScoresOfAllStudents": 70.20134,
-                "howManyCanEnroll": 110,
-                "howManyOfa": {},
-                "howManyStudents": 149,
-                "location": null,
-                "minScoreToEnroll": 62.00,
-                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                "averageScoresOfAllStudents": 46.96318,
+                "howManyCanEnroll": 193,
+                "howManyOfa": {
+                  "ENG": 926
+                },
+                "howManyStudents": 2484,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.46,
+                "title": "DESIGN DEGLI INTERNI"
+              },
+              {
+                "averageBirthYear": 2003.93249,
+                "averageEnglishCorrectAnswers": 24.09079,
+                "averageOfWhoPassed": 66.75747,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 4.94505,
+                  "Comprensione Verbale": 2.99522,
+                  "Storia del Design, Storia dell'Arte": 5.57472,
+                  "Logica": 3.36012,
+                  "Cultura Generale": 9.78454,
+                  "Inglese": 22.78595
+                },
+                "averageScoresOfAllStudents": 47.58570,
+                "howManyCanEnroll": 186,
+                "howManyOfa": {
+                  "ENG": 846
+                },
+                "howManyStudents": 2302,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.88,
+                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": 2003.96021,
+                "averageEnglishCorrectAnswers": 24.15015,
+                "averageOfWhoPassed": 69.51302,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 4.85956,
+                  "Comprensione Verbale": 2.99782,
+                  "Storia del Design, Storia dell'Arte": 5.52423,
+                  "Logica": 3.37080,
+                  "Cultura Generale": 9.68278,
+                  "Inglese": 22.85694
+                },
+                "averageScoresOfAllStudents": 47.27265,
+                "howManyCanEnroll": 116,
+                "howManyOfa": {
+                  "ENG": 827
+                },
+                "howManyStudents": 2291,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 63.08,
+                "title": "DESIGN DELLA COMUNICAZIONE"
+              },
+              {
+                "averageBirthYear": 2003.95926,
+                "averageEnglishCorrectAnswers": 24.12488,
+                "averageOfWhoPassed": 67.18103,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 4.76941,
+                  "Comprensione Verbale": 2.98517,
+                  "Storia del Design, Storia dell'Arte": 5.44913,
+                  "Logica": 3.31907,
+                  "Cultura Generale": 9.55882,
+                  "Inglese": 22.82401
+                },
+                "averageScoresOfAllStudents": 46.73131,
+                "howManyCanEnroll": 97,
+                "howManyOfa": {
+                  "ENG": 755
+                },
+                "howManyStudents": 2074,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 60.58,
+                "title": "DESIGN DELLA MODA"
               }
             ],
-            "howManyCanEnroll": 110,
-            "howManyStudents": 149,
+            "howManyCanEnroll": 592,
+            "howManyStudents": 3206,
             "resultsSummarized": {
-              "31": 1,
-              "37": 1,
-              "44": 3,
-              "46": 1,
-              "47": 1,
-              "48": 2,
-              "49": 1,
-              "50": 3,
-              "51": 2,
-              "52": 3,
-              "53": 3,
-              "54": 1,
-              "55": 2,
-              "56": 3,
-              "57": 1,
-              "59": 4,
-              "60": 2,
-              "61": 2,
-              "62": 7,
-              "63": 3,
-              "64": 3,
-              "65": 4,
-              "66": 1,
-              "67": 4,
-              "68": 2,
-              "69": 4,
-              "70": 8,
-              "71": 1,
-              "72": 6,
-              "73": 10,
-              "74": 4,
+              "30": 36,
+              "31": 55,
+              "32": 47,
+              "33": 67,
+              "34": 56,
+              "35": 77,
+              "36": 78,
+              "37": 92,
+              "38": 99,
+              "39": 105,
+              "40": 90,
+              "41": 108,
+              "42": 108,
+              "43": 101,
+              "44": 98,
+              "45": 92,
+              "46": 109,
+              "47": 100,
+              "48": 76,
+              "49": 90,
+              "50": 140,
+              "51": 94,
+              "52": 89,
+              "53": 92,
+              "54": 105,
+              "55": 81,
+              "56": 76,
+              "57": 83,
+              "58": 76,
+              "59": 90,
+              "60": 57,
+              "61": 63,
+              "62": 63,
+              "63": 38,
+              "64": 46,
+              "65": 53,
+              "66": 32,
+              "67": 32,
+              "68": 37,
+              "69": 19,
+              "70": 21,
+              "71": 25,
+              "72": 18,
+              "73": 16,
+              "74": 14,
               "75": 3,
-              "76": 2,
-              "77": 2,
-              "78": 4,
-              "79": 4,
-              "80": 7,
-              "81": 3,
+              "76": 13,
+              "77": 9,
+              "78": 6,
+              "79": 12,
+              "80": 10,
+              "81": 1,
               "82": 3,
               "83": 1,
-              "84": 3,
-              "85": 6,
-              "86": 3,
-              "87": 3,
-              "88": 2,
-              "89": 1,
-              "90": 1,
-              "91": 2,
-              "92": 1,
-              "93": 1,
-              "94": 2,
-              "98": 2
-            }
-          }
-        },
-        {
-          "singleCourseJson": {
-            "basePath": "Urbanistica/2023/",
-            "link": "Extra-ue.json",
-            "location": null,
-            "name": "Extra-ue",
-            "school": "Urbanistica",
-            "year": 2023
-          },
-          "stats": {
-            "courseSummarized": [
-              {
-                "averageBirthYear": 2004.16667,
-                "averageEnglishCorrectAnswers": null,
-                "averageOfWhoPassed": 61.00,
-                "averagePartialScores": {
-                  "Colloquio": 27.33333,
-                  "Elaborato": 14.33333,
-                  "Lettera Motivazionale": 11.00
-                },
-                "averageScoresOfAllStudents": 52.66667,
-                "howManyCanEnroll": 2,
-                "howManyOfa": {},
-                "howManyStudents": 3,
-                "location": null,
-                "minScoreToEnroll": 55.00,
-                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
-              }
-            ],
-            "howManyCanEnroll": 2,
-            "howManyStudents": 3,
-            "resultsSummarized": {
-              "36": 1,
-              "55": 1,
-              "67": 1
+              "85": 2,
+              "87": 1,
+              "92": 1
             }
           }
         }
       ],
-      "numStudents": 152
+      "numStudents": 3206
     }
   }
 }

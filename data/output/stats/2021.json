@@ -1,6 +1,204 @@
 {
   "numStudents": 16491,
   "schools": {
+    "Urbanistica": {
+      "list": [
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2021/",
+            "link": "Anticipata.json",
+            "location": null,
+            "name": "Anticipata",
+            "school": "Urbanistica",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2001.625,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 72.94545,
+                "averagePartialScores": {
+                  "Colloquio": 34.62308,
+                  "Elaborato": 19.40769,
+                  "Lettera Motivazionale": 14.59231
+                },
+                "averageScoresOfAllStudents": 68.62308,
+                "howManyCanEnroll": 110,
+                "howManyOfa": {},
+                "howManyStudents": 130,
+                "location": null,
+                "minScoreToEnroll": 53.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 110,
+            "howManyStudents": 130,
+            "resultsSummarized": {
+              "31": 1,
+              "38": 1,
+              "39": 3,
+              "41": 1,
+              "43": 5,
+              "45": 1,
+              "47": 1,
+              "49": 1,
+              "51": 1,
+              "52": 2,
+              "53": 4,
+              "54": 4,
+              "55": 1,
+              "56": 1,
+              "58": 2,
+              "59": 1,
+              "60": 4,
+              "61": 4,
+              "62": 1,
+              "63": 2,
+              "64": 3,
+              "65": 5,
+              "66": 2,
+              "67": 4,
+              "68": 3,
+              "69": 2,
+              "70": 6,
+              "71": 5,
+              "72": 7,
+              "73": 1,
+              "75": 3,
+              "76": 4,
+              "77": 4,
+              "78": 6,
+              "79": 3,
+              "80": 3,
+              "81": 2,
+              "82": 6,
+              "83": 1,
+              "84": 5,
+              "86": 2,
+              "87": 4,
+              "88": 1,
+              "89": 1,
+              "90": 2,
+              "91": 1,
+              "92": 1,
+              "93": 1,
+              "94": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2021/",
+            "link": "Extra-ue.json",
+            "location": null,
+            "name": "Extra-ue",
+            "school": "Urbanistica",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2001.16667,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 41.00,
+                "averagePartialScores": {
+                  "Colloquio": 17.00,
+                  "Elaborato": 13.00,
+                  "Lettera Motivazionale": 11.00
+                },
+                "averageScoresOfAllStudents": 41.00,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {},
+                "howManyStudents": 1,
+                "location": null,
+                "minScoreToEnroll": 41.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 1,
+            "howManyStudents": 1,
+            "resultsSummarized": {
+              "41": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Urbanistica/2021/",
+            "link": "Standard.json",
+            "location": null,
+            "name": "Standard",
+            "school": "Urbanistica",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2001.56081,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": 70.70370,
+                "averagePartialScores": {
+                  "Colloquio": 31.56757,
+                  "Elaborato": 18.14865,
+                  "Lettera Motivazionale": 13.70270
+                },
+                "averageScoresOfAllStudents": 63.41892,
+                "howManyCanEnroll": 54,
+                "howManyOfa": {},
+                "howManyStudents": 74,
+                "location": null,
+                "minScoreToEnroll": 53.00,
+                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+              }
+            ],
+            "howManyCanEnroll": 54,
+            "howManyStudents": 74,
+            "resultsSummarized": {
+              "37": 2,
+              "38": 4,
+              "39": 1,
+              "42": 1,
+              "43": 2,
+              "44": 1,
+              "45": 1,
+              "46": 3,
+              "48": 1,
+              "51": 1,
+              "52": 3,
+              "53": 3,
+              "54": 4,
+              "55": 2,
+              "56": 1,
+              "57": 1,
+              "62": 2,
+              "63": 1,
+              "64": 1,
+              "65": 2,
+              "66": 1,
+              "67": 1,
+              "69": 1,
+              "70": 3,
+              "71": 1,
+              "72": 3,
+              "73": 2,
+              "75": 5,
+              "76": 1,
+              "77": 1,
+              "78": 2,
+              "79": 1,
+              "80": 8,
+              "82": 2,
+              "83": 2,
+              "85": 1,
+              "86": 1,
+              "90": 1
+            }
+          }
+        }
+      ],
+      "numStudents": 205
+    },
     "Architettura": {
       "list": [
         {
@@ -4320,655 +4518,6 @@
         }
       ],
       "numStudents": 4289
-    },
-    "Design": {
-      "list": [
-        {
-          "singleCourseJson": {
-            "basePath": "Design/2021/",
-            "link": "Anticipato.json",
-            "location": "MILANO BOVISA",
-            "name": "Anticipato",
-            "school": "Design",
-            "year": 2021
-          },
-          "stats": {
-            "courseSummarized": [
-              {
-                "averageBirthYear": 2001.9035,
-                "averageEnglishCorrectAnswers": 24.17605,
-                "averageOfWhoPassed": 74.65067,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.08915,
-                  "Comprensione Verbale": 3.16348,
-                  "Storia del Design, Storia dell'Arte": 6.04326,
-                  "Logica": 3.20533,
-                  "Cultura Generale": 10.89687,
-                  "Inglese": 22.88701
-                },
-                "averageScoresOfAllStudents": 51.46717,
-                "howManyCanEnroll": 193,
-                "howManyOfa": {
-                  "ENG": 960
-                },
-                "howManyStudents": 2664,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 68.33,
-                "title": "DESIGN DEGLI INTERNI"
-              },
-              {
-                "averageBirthYear": 2001.89914,
-                "averageEnglishCorrectAnswers": 24.35399,
-                "averageOfWhoPassed": 76.28489,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.30112,
-                  "Comprensione Verbale": 3.17264,
-                  "Storia del Design, Storia dell'Arte": 6.08288,
-                  "Logica": 3.26898,
-                  "Cultura Generale": 11.11716,
-                  "Inglese": 23.10205
-                },
-                "averageScoresOfAllStudents": 52.34774,
-                "howManyCanEnroll": 186,
-                "howManyOfa": {
-                  "ENG": 885
-                },
-                "howManyStudents": 2582,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 69.88,
-                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-              },
-              {
-                "averageBirthYear": 2001.88842,
-                "averageEnglishCorrectAnswers": 24.38696,
-                "averageOfWhoPassed": 82.08276,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.16917,
-                  "Comprensione Verbale": 3.20480,
-                  "Storia del Design, Storia dell'Arte": 6.14428,
-                  "Logica": 3.23487,
-                  "Cultura Generale": 11.11870,
-                  "Inglese": 23.14282
-                },
-                "averageScoresOfAllStudents": 52.26577,
-                "howManyCanEnroll": 116,
-                "howManyOfa": {
-                  "ENG": 868
-                },
-                "howManyStudents": 2561,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 73.69,
-                "title": "DESIGN DELLA COMUNICAZIONE"
-              },
-              {
-                "averageBirthYear": 2001.92476,
-                "averageEnglishCorrectAnswers": 24.23102,
-                "averageOfWhoPassed": 77.30969,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 4.88518,
-                  "Comprensione Verbale": 3.17154,
-                  "Storia del Design, Storia dell'Arte": 6.07168,
-                  "Logica": 3.14139,
-                  "Cultura Generale": 10.89646,
-                  "Inglese": 22.95582
-                },
-                "averageScoresOfAllStudents": 51.16875,
-                "howManyCanEnroll": 97,
-                "howManyOfa": {
-                  "ENG": 770
-                },
-                "howManyStudents": 2173,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 69.76,
-                "title": "DESIGN DELLA MODA"
-              }
-            ],
-            "howManyCanEnroll": 592,
-            "howManyStudents": 3569,
-            "resultsSummarized": {
-              "30": 27,
-              "31": 45,
-              "32": 58,
-              "33": 49,
-              "34": 42,
-              "35": 63,
-              "36": 72,
-              "37": 59,
-              "38": 67,
-              "39": 80,
-              "40": 90,
-              "41": 64,
-              "42": 98,
-              "43": 84,
-              "44": 81,
-              "45": 109,
-              "46": 85,
-              "47": 89,
-              "48": 94,
-              "49": 88,
-              "50": 114,
-              "51": 87,
-              "52": 119,
-              "53": 83,
-              "54": 91,
-              "55": 87,
-              "56": 94,
-              "57": 93,
-              "58": 93,
-              "59": 63,
-              "60": 84,
-              "61": 80,
-              "62": 87,
-              "63": 60,
-              "64": 52,
-              "65": 66,
-              "66": 53,
-              "67": 58,
-              "68": 59,
-              "69": 55,
-              "70": 54,
-              "71": 60,
-              "72": 47,
-              "73": 32,
-              "74": 34,
-              "75": 32,
-              "76": 23,
-              "77": 24,
-              "78": 29,
-              "79": 21,
-              "80": 21,
-              "81": 14,
-              "82": 23,
-              "83": 17,
-              "84": 16,
-              "85": 20,
-              "86": 15,
-              "87": 5,
-              "88": 15,
-              "89": 12,
-              "90": 5,
-              "91": 5,
-              "92": 6,
-              "93": 5,
-              "94": 1,
-              "95": 7,
-              "96": 3,
-              "99": 1
-            }
-          }
-        },
-        {
-          "singleCourseJson": {
-            "basePath": "Design/2021/",
-            "link": "Extra-ue.json",
-            "location": "MILANO BOVISA",
-            "name": "Extra-ue",
-            "school": "Design",
-            "year": 2021
-          },
-          "stats": {
-            "courseSummarized": [
-              {
-                "averageBirthYear": 2000.30159,
-                "averageEnglishCorrectAnswers": 23.85714,
-                "averageOfWhoPassed": 67.12,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.91667,
-                  "Comprensione Verbale": 1.69048,
-                  "Storia del Design, Storia dell'Arte": 7.76190,
-                  "Logica": 2.75,
-                  "Cultura Generale": 10.98810,
-                  "Inglese": 22.50
-                },
-                "averageScoresOfAllStudents": 52.29667,
-                "howManyCanEnroll": 10,
-                "howManyOfa": {
-                  "ENG": 7
-                },
-                "howManyStudents": 21,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 49.88,
-                "title": "DESIGN DEGLI INTERNI"
-              },
-              {
-                "averageBirthYear": 2001.83333,
-                "averageEnglishCorrectAnswers": 24.5,
-                "averageOfWhoPassed": 50.947,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 7.26136,
-                  "Comprensione Verbale": 1.30682,
-                  "Storia del Design, Storia dell'Arte": 6.85227,
-                  "Logica": 2.88636,
-                  "Cultura Generale": 8.27273,
-                  "Inglese": 23.32955
-                },
-                "averageScoresOfAllStudents": 49.08091,
-                "howManyCanEnroll": 20,
-                "howManyOfa": {
-                  "ENG": 7
-                },
-                "howManyStudents": 22,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 33.69,
-                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-              },
-              {
-                "averageBirthYear": 2000.16667,
-                "averageEnglishCorrectAnswers": 22.8,
-                "averageOfWhoPassed": 42.568,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.40,
-                  "Comprensione Verbale": 1.95,
-                  "Storia del Design, Storia dell'Arte": 6.85,
-                  "Logica": 2.55,
-                  "Cultura Generale": 6.05,
-                  "Inglese": 21.00
-                },
-                "averageScoresOfAllStudents": 42.568,
-                "howManyCanEnroll": 5,
-                "howManyOfa": {
-                  "ENG": 2
-                },
-                "howManyStudents": 5,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 27.38,
-                "title": "DESIGN DELLA COMUNICAZIONE"
-              },
-              {
-                "averageBirthYear": 1999.14286,
-                "averageEnglishCorrectAnswers": 26.57143,
-                "averageOfWhoPassed": 57.19,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.64286,
-                  "Comprensione Verbale": 1.67857,
-                  "Storia del Design, Storia dell'Arte": 7.14286,
-                  "Logica": 3.14286,
-                  "Cultura Generale": 9.64286,
-                  "Inglese": 25.71429
-                },
-                "averageScoresOfAllStudents": 51.17429,
-                "howManyCanEnroll": 5,
-                "howManyOfa": {
-                  "ENG": 1
-                },
-                "howManyStudents": 7,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 42.62,
-                "title": "DESIGN DELLA MODA"
-              }
-            ],
-            "howManyCanEnroll": 40,
-            "howManyStudents": 55,
-            "resultsSummarized": {
-              "22": 1,
-              "27": 3,
-              "29": 1,
-              "32": 1,
-              "34": 1,
-              "35": 2,
-              "36": 2,
-              "37": 2,
-              "41": 2,
-              "43": 3,
-              "44": 2,
-              "45": 4,
-              "46": 2,
-              "47": 1,
-              "48": 1,
-              "50": 2,
-              "51": 1,
-              "52": 1,
-              "53": 1,
-              "54": 1,
-              "55": 2,
-              "56": 2,
-              "57": 2,
-              "59": 1,
-              "60": 2,
-              "63": 1,
-              "64": 1,
-              "65": 2,
-              "68": 1,
-              "69": 1,
-              "70": 1,
-              "72": 2,
-              "75": 1,
-              "78": 1,
-              "82": 1
-            }
-          }
-        },
-        {
-          "singleCourseJson": {
-            "basePath": "Design/2021/",
-            "link": "Ripescaggio.json",
-            "location": "MILANO BOVISA",
-            "name": "Ripescaggio",
-            "school": "Design",
-            "year": 2021
-          },
-          "stats": {
-            "courseSummarized": [
-              {
-                "averageBirthYear": 2001.86016,
-                "averageEnglishCorrectAnswers": 24.11424,
-                "averageOfWhoPassed": 71.212,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.42730,
-                  "Comprensione Verbale": 3.59978,
-                  "Storia del Design, Storia dell'Arte": 6.73442,
-                  "Logica": 3.41135,
-                  "Cultura Generale": 12.56046,
-                  "Inglese": 22.84533
-                },
-                "averageScoresOfAllStudents": 56.21199,
-                "howManyCanEnroll": 10,
-                "howManyOfa": {
-                  "ENG": 231
-                },
-                "howManyStudents": 674,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 70.71,
-                "title": "DESIGN DEGLI INTERNI"
-              },
-              {
-                "averageBirthYear": 2001.89686,
-                "averageEnglishCorrectAnswers": 24.27006,
-                "averageOfWhoPassed": 72.68455,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.48302,
-                  "Comprensione Verbale": 3.64506,
-                  "Storia del Design, Storia dell'Arte": 6.75116,
-                  "Logica": 3.44059,
-                  "Cultura Generale": 12.77623,
-                  "Inglese": 23.02392
-                },
-                "averageScoresOfAllStudents": 56.81532,
-                "howManyCanEnroll": 11,
-                "howManyOfa": {
-                  "ENG": 215
-                },
-                "howManyStudents": 648,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 70.60,
-                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-              },
-              {
-                "averageBirthYear": 2001.87507,
-                "averageEnglishCorrectAnswers": 24.33014,
-                "averageOfWhoPassed": 76.07,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.44258,
-                  "Comprensione Verbale": 3.62440,
-                  "Storia del Design, Storia dell'Arte": 6.75319,
-                  "Logica": 3.39514,
-                  "Cultura Generale": 12.71053,
-                  "Inglese": 23.08812
-                },
-                "averageScoresOfAllStudents": 56.60276,
-                "howManyCanEnroll": 2,
-                "howManyOfa": {
-                  "ENG": 202
-                },
-                "howManyStudents": 627,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 73.81,
-                "title": "DESIGN DELLA COMUNICAZIONE"
-              },
-              {
-                "averageBirthYear": 2001.88253,
-                "averageEnglishCorrectAnswers": 24.37085,
-                "averageOfWhoPassed": 72.2925,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.39161,
-                  "Comprensione Verbale": 3.56089,
-                  "Storia del Design, Storia dell'Arte": 6.84548,
-                  "Logica": 3.35747,
-                  "Cultura Generale": 12.74216,
-                  "Inglese": 23.13192
-                },
-                "averageScoresOfAllStudents": 56.58317,
-                "howManyCanEnroll": 4,
-                "howManyOfa": {
-                  "ENG": 174
-                },
-                "howManyStudents": 542,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 71.79,
-                "title": "DESIGN DELLA MODA"
-              }
-            ],
-            "howManyCanEnroll": 27,
-            "howManyStudents": 768,
-            "resultsSummarized": {
-              "30": 3,
-              "31": 4,
-              "32": 5,
-              "33": 2,
-              "34": 2,
-              "35": 8,
-              "36": 7,
-              "37": 10,
-              "38": 9,
-              "39": 10,
-              "40": 8,
-              "41": 12,
-              "42": 11,
-              "43": 14,
-              "44": 12,
-              "45": 20,
-              "46": 11,
-              "47": 19,
-              "48": 16,
-              "49": 13,
-              "50": 31,
-              "51": 18,
-              "52": 22,
-              "53": 19,
-              "54": 18,
-              "55": 28,
-              "56": 18,
-              "57": 20,
-              "58": 28,
-              "59": 16,
-              "60": 29,
-              "61": 20,
-              "62": 34,
-              "63": 34,
-              "64": 29,
-              "65": 26,
-              "66": 26,
-              "67": 22,
-              "68": 37,
-              "69": 26,
-              "70": 39,
-              "71": 20,
-              "72": 6,
-              "73": 3,
-              "74": 1,
-              "78": 1,
-              "88": 1
-            }
-          }
-        },
-        {
-          "singleCourseJson": {
-            "basePath": "Design/2021/",
-            "link": "Standard.json",
-            "location": "MILANO BOVISA",
-            "name": "Standard",
-            "school": "Design",
-            "year": 2021
-          },
-          "stats": {
-            "courseSummarized": [
-              {
-                "averageBirthYear": 2001.84292,
-                "averageEnglishCorrectAnswers": 23.9697,
-                "averageOfWhoPassed": 77.57342,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.13033,
-                  "Comprensione Verbale": 3.50746,
-                  "Storia del Design, Storia dell'Arte": 6.31238,
-                  "Logica": 3.28397,
-                  "Cultura Generale": 12.21070,
-                  "Inglese": 22.65223
-                },
-                "averageScoresOfAllStudents": 54.27930,
-                "howManyCanEnroll": 155,
-                "howManyOfa": {
-                  "ENG": 772
-                },
-                "howManyStudents": 2112,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 71.07,
-                "title": "DESIGN DEGLI INTERNI"
-              },
-              {
-                "averageBirthYear": 2001.86926,
-                "averageEnglishCorrectAnswers": 24.10429,
-                "averageOfWhoPassed": 80.19197,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.28867,
-                  "Comprensione Verbale": 3.55102,
-                  "Storia del Design, Storia dell'Arte": 6.35155,
-                  "Logica": 3.32373,
-                  "Cultura Generale": 12.33346,
-                  "Inglese": 22.82360
-                },
-                "averageScoresOfAllStudents": 54.93748,
-                "howManyCanEnroll": 137,
-                "howManyOfa": {
-                  "ENG": 714
-                },
-                "howManyStudents": 2004,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 72.38,
-                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
-              },
-              {
-                "averageBirthYear": 2001.83567,
-                "averageEnglishCorrectAnswers": 24.12979,
-                "averageOfWhoPassed": 85.79557,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.18965,
-                  "Comprensione Verbale": 3.56219,
-                  "Storia del Design, Storia dell'Arte": 6.38545,
-                  "Logica": 3.28417,
-                  "Cultura Generale": 12.33210,
-                  "Inglese": 22.85497
-                },
-                "averageScoresOfAllStudents": 54.81688,
-                "howManyCanEnroll": 79,
-                "howManyOfa": {
-                  "ENG": 726
-                },
-                "howManyStudents": 2034,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 79.05,
-                "title": "DESIGN DELLA COMUNICAZIONE"
-              },
-              {
-                "averageBirthYear": 2001.86593,
-                "averageEnglishCorrectAnswers": 24.07331,
-                "averageOfWhoPassed": 81.97294,
-                "averagePartialScores": {
-                  "Geometria e Rappresentazione": 5.02835,
-                  "Comprensione Verbale": 3.52921,
-                  "Storia del Design, Storia dell'Arte": 6.33104,
-                  "Logica": 3.23625,
-                  "Cultura Generale": 12.12514,
-                  "Inglese": 22.78021
-                },
-                "averageScoresOfAllStudents": 54.06194,
-                "howManyCanEnroll": 68,
-                "howManyOfa": {
-                  "ENG": 638
-                },
-                "howManyStudents": 1746,
-                "location": "MILANO BOVISA",
-                "minScoreToEnroll": 73.57,
-                "title": "DESIGN DELLA MODA"
-              }
-            ],
-            "howManyCanEnroll": 439,
-            "howManyStudents": 2687,
-            "resultsSummarized": {
-              "30": 20,
-              "31": 26,
-              "32": 18,
-              "33": 33,
-              "34": 25,
-              "35": 42,
-              "36": 32,
-              "37": 36,
-              "38": 45,
-              "39": 37,
-              "40": 50,
-              "41": 51,
-              "42": 61,
-              "43": 63,
-              "44": 53,
-              "45": 67,
-              "46": 41,
-              "47": 67,
-              "48": 57,
-              "49": 62,
-              "50": 82,
-              "51": 77,
-              "52": 73,
-              "53": 54,
-              "54": 61,
-              "55": 82,
-              "56": 66,
-              "57": 58,
-              "58": 72,
-              "59": 61,
-              "60": 77,
-              "61": 54,
-              "62": 81,
-              "63": 70,
-              "64": 61,
-              "65": 67,
-              "66": 47,
-              "67": 44,
-              "68": 48,
-              "69": 43,
-              "70": 49,
-              "71": 44,
-              "72": 32,
-              "73": 25,
-              "74": 28,
-              "75": 17,
-              "76": 26,
-              "77": 23,
-              "78": 28,
-              "79": 37,
-              "80": 27,
-              "81": 21,
-              "82": 19,
-              "83": 12,
-              "84": 15,
-              "85": 21,
-              "86": 14,
-              "87": 11,
-              "88": 11,
-              "89": 7,
-              "90": 15,
-              "91": 7,
-              "92": 6,
-              "93": 8,
-              "94": 7,
-              "95": 5,
-              "96": 2,
-              "97": 2,
-              "98": 3,
-              "100": 1
-            }
-          }
-        }
-      ],
-      "numStudents": 7079
     },
     "Ingegneria": {
       "list": [
@@ -17220,203 +16769,654 @@
       ],
       "numStudents": 4918
     },
-    "Urbanistica": {
+    "Design": {
       "list": [
         {
           "singleCourseJson": {
-            "basePath": "Urbanistica/2021/",
-            "link": "Anticipata.json",
-            "location": null,
-            "name": "Anticipata",
-            "school": "Urbanistica",
+            "basePath": "Design/2021/",
+            "link": "Anticipato.json",
+            "location": "MILANO BOVISA",
+            "name": "Anticipato",
+            "school": "Design",
             "year": 2021
           },
           "stats": {
             "courseSummarized": [
               {
-                "averageBirthYear": 2001.625,
-                "averageEnglishCorrectAnswers": null,
-                "averageOfWhoPassed": 72.94545,
+                "averageBirthYear": 2001.9035,
+                "averageEnglishCorrectAnswers": 24.17605,
+                "averageOfWhoPassed": 74.65067,
                 "averagePartialScores": {
-                  "Colloquio": 34.62308,
-                  "Elaborato": 19.40769,
-                  "Lettera Motivazionale": 14.59231
+                  "Geometria e Rappresentazione": 5.08915,
+                  "Comprensione Verbale": 3.16348,
+                  "Storia del Design, Storia dell'Arte": 6.04326,
+                  "Logica": 3.20533,
+                  "Cultura Generale": 10.89687,
+                  "Inglese": 22.88701
                 },
-                "averageScoresOfAllStudents": 68.62308,
-                "howManyCanEnroll": 110,
-                "howManyOfa": {},
-                "howManyStudents": 130,
-                "location": null,
-                "minScoreToEnroll": 53.00,
-                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                "averageScoresOfAllStudents": 51.46717,
+                "howManyCanEnroll": 193,
+                "howManyOfa": {
+                  "ENG": 960
+                },
+                "howManyStudents": 2664,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 68.33,
+                "title": "DESIGN DEGLI INTERNI"
+              },
+              {
+                "averageBirthYear": 2001.89914,
+                "averageEnglishCorrectAnswers": 24.35399,
+                "averageOfWhoPassed": 76.28489,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.30112,
+                  "Comprensione Verbale": 3.17264,
+                  "Storia del Design, Storia dell'Arte": 6.08288,
+                  "Logica": 3.26898,
+                  "Cultura Generale": 11.11716,
+                  "Inglese": 23.10205
+                },
+                "averageScoresOfAllStudents": 52.34774,
+                "howManyCanEnroll": 186,
+                "howManyOfa": {
+                  "ENG": 885
+                },
+                "howManyStudents": 2582,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 69.88,
+                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": 2001.88842,
+                "averageEnglishCorrectAnswers": 24.38696,
+                "averageOfWhoPassed": 82.08276,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.16917,
+                  "Comprensione Verbale": 3.20480,
+                  "Storia del Design, Storia dell'Arte": 6.14428,
+                  "Logica": 3.23487,
+                  "Cultura Generale": 11.11870,
+                  "Inglese": 23.14282
+                },
+                "averageScoresOfAllStudents": 52.26577,
+                "howManyCanEnroll": 116,
+                "howManyOfa": {
+                  "ENG": 868
+                },
+                "howManyStudents": 2561,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 73.69,
+                "title": "DESIGN DELLA COMUNICAZIONE"
+              },
+              {
+                "averageBirthYear": 2001.92476,
+                "averageEnglishCorrectAnswers": 24.23102,
+                "averageOfWhoPassed": 77.30969,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 4.88518,
+                  "Comprensione Verbale": 3.17154,
+                  "Storia del Design, Storia dell'Arte": 6.07168,
+                  "Logica": 3.14139,
+                  "Cultura Generale": 10.89646,
+                  "Inglese": 22.95582
+                },
+                "averageScoresOfAllStudents": 51.16875,
+                "howManyCanEnroll": 97,
+                "howManyOfa": {
+                  "ENG": 770
+                },
+                "howManyStudents": 2173,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 69.76,
+                "title": "DESIGN DELLA MODA"
               }
             ],
-            "howManyCanEnroll": 110,
-            "howManyStudents": 130,
+            "howManyCanEnroll": 592,
+            "howManyStudents": 3569,
             "resultsSummarized": {
-              "31": 1,
-              "38": 1,
-              "39": 3,
-              "41": 1,
-              "43": 5,
-              "45": 1,
-              "47": 1,
-              "49": 1,
-              "51": 1,
-              "52": 2,
-              "53": 4,
-              "54": 4,
-              "55": 1,
-              "56": 1,
-              "58": 2,
-              "59": 1,
-              "60": 4,
-              "61": 4,
-              "62": 1,
-              "63": 2,
-              "64": 3,
-              "65": 5,
-              "66": 2,
-              "67": 4,
-              "68": 3,
-              "69": 2,
-              "70": 6,
-              "71": 5,
-              "72": 7,
-              "73": 1,
-              "75": 3,
-              "76": 4,
-              "77": 4,
-              "78": 6,
-              "79": 3,
-              "80": 3,
-              "81": 2,
-              "82": 6,
-              "83": 1,
-              "84": 5,
-              "86": 2,
-              "87": 4,
-              "88": 1,
-              "89": 1,
-              "90": 2,
-              "91": 1,
-              "92": 1,
-              "93": 1,
-              "94": 1
+              "30": 27,
+              "31": 45,
+              "32": 58,
+              "33": 49,
+              "34": 42,
+              "35": 63,
+              "36": 72,
+              "37": 59,
+              "38": 67,
+              "39": 80,
+              "40": 90,
+              "41": 64,
+              "42": 98,
+              "43": 84,
+              "44": 81,
+              "45": 109,
+              "46": 85,
+              "47": 89,
+              "48": 94,
+              "49": 88,
+              "50": 114,
+              "51": 87,
+              "52": 119,
+              "53": 83,
+              "54": 91,
+              "55": 87,
+              "56": 94,
+              "57": 93,
+              "58": 93,
+              "59": 63,
+              "60": 84,
+              "61": 80,
+              "62": 87,
+              "63": 60,
+              "64": 52,
+              "65": 66,
+              "66": 53,
+              "67": 58,
+              "68": 59,
+              "69": 55,
+              "70": 54,
+              "71": 60,
+              "72": 47,
+              "73": 32,
+              "74": 34,
+              "75": 32,
+              "76": 23,
+              "77": 24,
+              "78": 29,
+              "79": 21,
+              "80": 21,
+              "81": 14,
+              "82": 23,
+              "83": 17,
+              "84": 16,
+              "85": 20,
+              "86": 15,
+              "87": 5,
+              "88": 15,
+              "89": 12,
+              "90": 5,
+              "91": 5,
+              "92": 6,
+              "93": 5,
+              "94": 1,
+              "95": 7,
+              "96": 3,
+              "99": 1
             }
           }
         },
         {
           "singleCourseJson": {
-            "basePath": "Urbanistica/2021/",
+            "basePath": "Design/2021/",
             "link": "Extra-ue.json",
-            "location": null,
+            "location": "MILANO BOVISA",
             "name": "Extra-ue",
-            "school": "Urbanistica",
+            "school": "Design",
             "year": 2021
           },
           "stats": {
             "courseSummarized": [
               {
-                "averageBirthYear": 2001.16667,
-                "averageEnglishCorrectAnswers": null,
-                "averageOfWhoPassed": 41.00,
+                "averageBirthYear": 2000.30159,
+                "averageEnglishCorrectAnswers": 23.85714,
+                "averageOfWhoPassed": 67.12,
                 "averagePartialScores": {
-                  "Colloquio": 17.00,
-                  "Elaborato": 13.00,
-                  "Lettera Motivazionale": 11.00
+                  "Geometria e Rappresentazione": 5.91667,
+                  "Comprensione Verbale": 1.69048,
+                  "Storia del Design, Storia dell'Arte": 7.76190,
+                  "Logica": 2.75,
+                  "Cultura Generale": 10.98810,
+                  "Inglese": 22.50
                 },
-                "averageScoresOfAllStudents": 41.00,
-                "howManyCanEnroll": 1,
-                "howManyOfa": {},
-                "howManyStudents": 1,
-                "location": null,
-                "minScoreToEnroll": 41.00,
-                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
-              }
-            ],
-            "howManyCanEnroll": 1,
-            "howManyStudents": 1,
-            "resultsSummarized": {
-              "41": 1
-            }
-          }
-        },
-        {
-          "singleCourseJson": {
-            "basePath": "Urbanistica/2021/",
-            "link": "Standard.json",
-            "location": null,
-            "name": "Standard",
-            "school": "Urbanistica",
-            "year": 2021
-          },
-          "stats": {
-            "courseSummarized": [
+                "averageScoresOfAllStudents": 52.29667,
+                "howManyCanEnroll": 10,
+                "howManyOfa": {
+                  "ENG": 7
+                },
+                "howManyStudents": 21,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 49.88,
+                "title": "DESIGN DEGLI INTERNI"
+              },
               {
-                "averageBirthYear": 2001.56081,
-                "averageEnglishCorrectAnswers": null,
-                "averageOfWhoPassed": 70.70370,
+                "averageBirthYear": 2001.83333,
+                "averageEnglishCorrectAnswers": 24.5,
+                "averageOfWhoPassed": 50.947,
                 "averagePartialScores": {
-                  "Colloquio": 31.56757,
-                  "Elaborato": 18.14865,
-                  "Lettera Motivazionale": 13.70270
+                  "Geometria e Rappresentazione": 7.26136,
+                  "Comprensione Verbale": 1.30682,
+                  "Storia del Design, Storia dell'Arte": 6.85227,
+                  "Logica": 2.88636,
+                  "Cultura Generale": 8.27273,
+                  "Inglese": 23.32955
                 },
-                "averageScoresOfAllStudents": 63.41892,
-                "howManyCanEnroll": 54,
-                "howManyOfa": {},
-                "howManyStudents": 74,
-                "location": null,
-                "minScoreToEnroll": 53.00,
-                "title": "URBANISTICA: CITTA' AMBIENTE PAESAGGIO"
+                "averageScoresOfAllStudents": 49.08091,
+                "howManyCanEnroll": 20,
+                "howManyOfa": {
+                  "ENG": 7
+                },
+                "howManyStudents": 22,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 33.69,
+                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": 2000.16667,
+                "averageEnglishCorrectAnswers": 22.8,
+                "averageOfWhoPassed": 42.568,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.40,
+                  "Comprensione Verbale": 1.95,
+                  "Storia del Design, Storia dell'Arte": 6.85,
+                  "Logica": 2.55,
+                  "Cultura Generale": 6.05,
+                  "Inglese": 21.00
+                },
+                "averageScoresOfAllStudents": 42.568,
+                "howManyCanEnroll": 5,
+                "howManyOfa": {
+                  "ENG": 2
+                },
+                "howManyStudents": 5,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 27.38,
+                "title": "DESIGN DELLA COMUNICAZIONE"
+              },
+              {
+                "averageBirthYear": 1999.14286,
+                "averageEnglishCorrectAnswers": 26.57143,
+                "averageOfWhoPassed": 57.19,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.64286,
+                  "Comprensione Verbale": 1.67857,
+                  "Storia del Design, Storia dell'Arte": 7.14286,
+                  "Logica": 3.14286,
+                  "Cultura Generale": 9.64286,
+                  "Inglese": 25.71429
+                },
+                "averageScoresOfAllStudents": 51.17429,
+                "howManyCanEnroll": 5,
+                "howManyOfa": {
+                  "ENG": 1
+                },
+                "howManyStudents": 7,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 42.62,
+                "title": "DESIGN DELLA MODA"
               }
             ],
-            "howManyCanEnroll": 54,
-            "howManyStudents": 74,
+            "howManyCanEnroll": 40,
+            "howManyStudents": 55,
             "resultsSummarized": {
+              "22": 1,
+              "27": 3,
+              "29": 1,
+              "32": 1,
+              "34": 1,
+              "35": 2,
+              "36": 2,
               "37": 2,
-              "38": 4,
-              "39": 1,
-              "42": 1,
-              "43": 2,
-              "44": 1,
-              "45": 1,
-              "46": 3,
+              "41": 2,
+              "43": 3,
+              "44": 2,
+              "45": 4,
+              "46": 2,
+              "47": 1,
               "48": 1,
+              "50": 2,
               "51": 1,
-              "52": 3,
-              "53": 3,
-              "54": 4,
+              "52": 1,
+              "53": 1,
+              "54": 1,
               "55": 2,
-              "56": 1,
-              "57": 1,
-              "62": 2,
+              "56": 2,
+              "57": 2,
+              "59": 1,
+              "60": 2,
               "63": 1,
               "64": 1,
               "65": 2,
-              "66": 1,
-              "67": 1,
+              "68": 1,
               "69": 1,
-              "70": 3,
-              "71": 1,
-              "72": 3,
-              "73": 2,
-              "75": 5,
-              "76": 1,
-              "77": 1,
-              "78": 2,
-              "79": 1,
-              "80": 8,
-              "82": 2,
-              "83": 2,
-              "85": 1,
-              "86": 1,
-              "90": 1
+              "70": 1,
+              "72": 2,
+              "75": 1,
+              "78": 1,
+              "82": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Design/2021/",
+            "link": "Ripescaggio.json",
+            "location": "MILANO BOVISA",
+            "name": "Ripescaggio",
+            "school": "Design",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2001.86016,
+                "averageEnglishCorrectAnswers": 24.11424,
+                "averageOfWhoPassed": 71.212,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.42730,
+                  "Comprensione Verbale": 3.59978,
+                  "Storia del Design, Storia dell'Arte": 6.73442,
+                  "Logica": 3.41135,
+                  "Cultura Generale": 12.56046,
+                  "Inglese": 22.84533
+                },
+                "averageScoresOfAllStudents": 56.21199,
+                "howManyCanEnroll": 10,
+                "howManyOfa": {
+                  "ENG": 231
+                },
+                "howManyStudents": 674,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 70.71,
+                "title": "DESIGN DEGLI INTERNI"
+              },
+              {
+                "averageBirthYear": 2001.89686,
+                "averageEnglishCorrectAnswers": 24.27006,
+                "averageOfWhoPassed": 72.68455,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.48302,
+                  "Comprensione Verbale": 3.64506,
+                  "Storia del Design, Storia dell'Arte": 6.75116,
+                  "Logica": 3.44059,
+                  "Cultura Generale": 12.77623,
+                  "Inglese": 23.02392
+                },
+                "averageScoresOfAllStudents": 56.81532,
+                "howManyCanEnroll": 11,
+                "howManyOfa": {
+                  "ENG": 215
+                },
+                "howManyStudents": 648,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 70.60,
+                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": 2001.87507,
+                "averageEnglishCorrectAnswers": 24.33014,
+                "averageOfWhoPassed": 76.07,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.44258,
+                  "Comprensione Verbale": 3.62440,
+                  "Storia del Design, Storia dell'Arte": 6.75319,
+                  "Logica": 3.39514,
+                  "Cultura Generale": 12.71053,
+                  "Inglese": 23.08812
+                },
+                "averageScoresOfAllStudents": 56.60276,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 202
+                },
+                "howManyStudents": 627,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 73.81,
+                "title": "DESIGN DELLA COMUNICAZIONE"
+              },
+              {
+                "averageBirthYear": 2001.88253,
+                "averageEnglishCorrectAnswers": 24.37085,
+                "averageOfWhoPassed": 72.2925,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.39161,
+                  "Comprensione Verbale": 3.56089,
+                  "Storia del Design, Storia dell'Arte": 6.84548,
+                  "Logica": 3.35747,
+                  "Cultura Generale": 12.74216,
+                  "Inglese": 23.13192
+                },
+                "averageScoresOfAllStudents": 56.58317,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 174
+                },
+                "howManyStudents": 542,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 71.79,
+                "title": "DESIGN DELLA MODA"
+              }
+            ],
+            "howManyCanEnroll": 27,
+            "howManyStudents": 768,
+            "resultsSummarized": {
+              "30": 3,
+              "31": 4,
+              "32": 5,
+              "33": 2,
+              "34": 2,
+              "35": 8,
+              "36": 7,
+              "37": 10,
+              "38": 9,
+              "39": 10,
+              "40": 8,
+              "41": 12,
+              "42": 11,
+              "43": 14,
+              "44": 12,
+              "45": 20,
+              "46": 11,
+              "47": 19,
+              "48": 16,
+              "49": 13,
+              "50": 31,
+              "51": 18,
+              "52": 22,
+              "53": 19,
+              "54": 18,
+              "55": 28,
+              "56": 18,
+              "57": 20,
+              "58": 28,
+              "59": 16,
+              "60": 29,
+              "61": 20,
+              "62": 34,
+              "63": 34,
+              "64": 29,
+              "65": 26,
+              "66": 26,
+              "67": 22,
+              "68": 37,
+              "69": 26,
+              "70": 39,
+              "71": 20,
+              "72": 6,
+              "73": 3,
+              "74": 1,
+              "78": 1,
+              "88": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Design/2021/",
+            "link": "Standard.json",
+            "location": "MILANO BOVISA",
+            "name": "Standard",
+            "school": "Design",
+            "year": 2021
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2001.84292,
+                "averageEnglishCorrectAnswers": 23.9697,
+                "averageOfWhoPassed": 77.57342,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.13033,
+                  "Comprensione Verbale": 3.50746,
+                  "Storia del Design, Storia dell'Arte": 6.31238,
+                  "Logica": 3.28397,
+                  "Cultura Generale": 12.21070,
+                  "Inglese": 22.65223
+                },
+                "averageScoresOfAllStudents": 54.27930,
+                "howManyCanEnroll": 155,
+                "howManyOfa": {
+                  "ENG": 772
+                },
+                "howManyStudents": 2112,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 71.07,
+                "title": "DESIGN DEGLI INTERNI"
+              },
+              {
+                "averageBirthYear": 2001.86926,
+                "averageEnglishCorrectAnswers": 24.10429,
+                "averageOfWhoPassed": 80.19197,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.28867,
+                  "Comprensione Verbale": 3.55102,
+                  "Storia del Design, Storia dell'Arte": 6.35155,
+                  "Logica": 3.32373,
+                  "Cultura Generale": 12.33346,
+                  "Inglese": 22.82360
+                },
+                "averageScoresOfAllStudents": 54.93748,
+                "howManyCanEnroll": 137,
+                "howManyOfa": {
+                  "ENG": 714
+                },
+                "howManyStudents": 2004,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 72.38,
+                "title": "DESIGN DEL PRODOTTO INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": 2001.83567,
+                "averageEnglishCorrectAnswers": 24.12979,
+                "averageOfWhoPassed": 85.79557,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.18965,
+                  "Comprensione Verbale": 3.56219,
+                  "Storia del Design, Storia dell'Arte": 6.38545,
+                  "Logica": 3.28417,
+                  "Cultura Generale": 12.33210,
+                  "Inglese": 22.85497
+                },
+                "averageScoresOfAllStudents": 54.81688,
+                "howManyCanEnroll": 79,
+                "howManyOfa": {
+                  "ENG": 726
+                },
+                "howManyStudents": 2034,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 79.05,
+                "title": "DESIGN DELLA COMUNICAZIONE"
+              },
+              {
+                "averageBirthYear": 2001.86593,
+                "averageEnglishCorrectAnswers": 24.07331,
+                "averageOfWhoPassed": 81.97294,
+                "averagePartialScores": {
+                  "Geometria e Rappresentazione": 5.02835,
+                  "Comprensione Verbale": 3.52921,
+                  "Storia del Design, Storia dell'Arte": 6.33104,
+                  "Logica": 3.23625,
+                  "Cultura Generale": 12.12514,
+                  "Inglese": 22.78021
+                },
+                "averageScoresOfAllStudents": 54.06194,
+                "howManyCanEnroll": 68,
+                "howManyOfa": {
+                  "ENG": 638
+                },
+                "howManyStudents": 1746,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 73.57,
+                "title": "DESIGN DELLA MODA"
+              }
+            ],
+            "howManyCanEnroll": 439,
+            "howManyStudents": 2687,
+            "resultsSummarized": {
+              "30": 20,
+              "31": 26,
+              "32": 18,
+              "33": 33,
+              "34": 25,
+              "35": 42,
+              "36": 32,
+              "37": 36,
+              "38": 45,
+              "39": 37,
+              "40": 50,
+              "41": 51,
+              "42": 61,
+              "43": 63,
+              "44": 53,
+              "45": 67,
+              "46": 41,
+              "47": 67,
+              "48": 57,
+              "49": 62,
+              "50": 82,
+              "51": 77,
+              "52": 73,
+              "53": 54,
+              "54": 61,
+              "55": 82,
+              "56": 66,
+              "57": 58,
+              "58": 72,
+              "59": 61,
+              "60": 77,
+              "61": 54,
+              "62": 81,
+              "63": 70,
+              "64": 61,
+              "65": 67,
+              "66": 47,
+              "67": 44,
+              "68": 48,
+              "69": 43,
+              "70": 49,
+              "71": 44,
+              "72": 32,
+              "73": 25,
+              "74": 28,
+              "75": 17,
+              "76": 26,
+              "77": 23,
+              "78": 28,
+              "79": 37,
+              "80": 27,
+              "81": 21,
+              "82": 19,
+              "83": 12,
+              "84": 15,
+              "85": 21,
+              "86": 14,
+              "87": 11,
+              "88": 11,
+              "89": 7,
+              "90": 15,
+              "91": 7,
+              "92": 6,
+              "93": 8,
+              "94": 7,
+              "95": 5,
+              "96": 2,
+              "97": 2,
+              "98": 3,
+              "100": 1
             }
           }
         }
       ],
-      "numStudents": 205
+      "numStudents": 7079
     }
   }
 }
