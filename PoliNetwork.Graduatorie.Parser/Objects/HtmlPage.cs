@@ -85,6 +85,6 @@ public class HtmlPage
 
     public bool Equals(HtmlPage target)
     {
-        return target._htmlString == this._htmlString && target.Url.Url == this.Url.Url;
+        return target._htmlString == _htmlString && target.Url.Url == Url.Url;
     }
 }

@@ -26,8 +26,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Lib_CSharp\PoliNetwork.Core\src\PoliNetwork.Core.csproj"/>
         <ProjectReference Include="..\PoliNetwork.Graduatorie.Common\PoliNetwork.Graduatorie.Common.csproj"/>
-        <ProjectReference Include="..\Lib_CSharp\PoliNetwork.Core\PoliNetwork.Core.csproj"/>
         <ProjectReference Include="..\PoliNetwork.Graduatorie.Scraper\PoliNetwork.Graduatorie.Scraper.csproj"/>
     </ItemGroup>
 

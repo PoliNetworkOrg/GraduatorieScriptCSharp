@@ -18,7 +18,7 @@ public class StatsJson
     public static void Write(string outFolder, RankingsSet? rankingsSet, ArgsConfig argsConfig)
     {
         var statsJson = Generate(rankingsSet);
-        if (statsJson == null) return; 
+        if (statsJson == null) return;
         foreach (var yearDict in statsJson.Stats) WriteToFileYear(outFolder, yearDict, argsConfig);
     }
 
