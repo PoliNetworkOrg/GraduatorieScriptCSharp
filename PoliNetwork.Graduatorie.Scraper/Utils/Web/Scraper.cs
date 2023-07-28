@@ -1,6 +1,10 @@
+#region
+
 using HtmlAgilityPack;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Extensions;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 

@@ -1,5 +1,9 @@
-﻿using System.Globalization;
+﻿#region
+
+using System.Globalization;
 using Newtonsoft.Json;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Data;
 

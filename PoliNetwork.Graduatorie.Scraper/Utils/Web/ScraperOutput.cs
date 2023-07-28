@@ -1,5 +1,9 @@
-﻿using PoliNetwork.Graduatorie.Common.Data;
+﻿#region
+
+using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 

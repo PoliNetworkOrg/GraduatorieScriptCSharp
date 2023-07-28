@@ -1,4 +1,8 @@
+#region
+
 using HtmlAgilityPack;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Extensions;
 

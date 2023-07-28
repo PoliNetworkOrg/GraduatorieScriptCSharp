@@ -1,6 +1,10 @@
+#region
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 

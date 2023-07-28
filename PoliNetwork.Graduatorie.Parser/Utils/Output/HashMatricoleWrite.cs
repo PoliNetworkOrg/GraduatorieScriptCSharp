@@ -1,8 +1,12 @@
+#region
+
 using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 

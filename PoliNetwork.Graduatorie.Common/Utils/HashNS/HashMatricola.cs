@@ -1,6 +1,10 @@
-﻿using System.Security.Cryptography;
+﻿#region
+
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Utils.HashNS;
 

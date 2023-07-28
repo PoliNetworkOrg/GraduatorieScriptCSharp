@@ -1,9 +1,13 @@
-﻿using PoliNetwork.Graduatorie.Common.Data;
+﻿#region
+
+using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 

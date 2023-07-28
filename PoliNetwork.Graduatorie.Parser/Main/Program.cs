@@ -1,8 +1,12 @@
-﻿using PoliNetwork.Core.Utils;
+﻿#region
+
+using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Main;
 

@@ -1,3 +1,5 @@
+#region
+
 using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -13,6 +15,8 @@ using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 using PoliNetwork.Graduatorie.Scraper.Utils.Web;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 

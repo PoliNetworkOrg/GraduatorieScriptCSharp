@@ -1,8 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿#region
+
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Common.Utils.Path;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Objects;
 

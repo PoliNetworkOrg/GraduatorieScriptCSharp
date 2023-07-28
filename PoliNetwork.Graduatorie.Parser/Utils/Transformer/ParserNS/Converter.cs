@@ -1,6 +1,10 @@
-﻿using PoliNetwork.Graduatorie.Parser.Objects;
+﻿#region
+
+using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 

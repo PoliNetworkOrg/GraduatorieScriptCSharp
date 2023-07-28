@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿#region
+
+using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
@@ -8,6 +10,8 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 

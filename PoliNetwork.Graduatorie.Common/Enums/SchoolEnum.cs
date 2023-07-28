@@ -1,5 +1,9 @@
+#region
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Enums;
 

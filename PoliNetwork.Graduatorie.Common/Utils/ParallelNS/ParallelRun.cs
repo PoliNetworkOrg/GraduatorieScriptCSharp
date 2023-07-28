@@ -1,4 +1,8 @@
-﻿using System.Diagnostics;
+﻿#region
+
+using System.Diagnostics;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 

@@ -1,7 +1,11 @@
-﻿using HtmlAgilityPack;
+﻿#region
+
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Objects;
 

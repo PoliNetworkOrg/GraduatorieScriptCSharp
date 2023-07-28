@@ -1,5 +1,9 @@
+#region
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
