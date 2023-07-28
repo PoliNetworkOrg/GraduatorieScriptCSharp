@@ -1356,6 +1356,34 @@
     },
     "Ingegneria": {
       "2020": {
+        "INGEGNERIA AEROSPAZIALE": {
+          "MILANO BOVISA": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Extra-ue.json",
+              "location": "MILANO BOVISA",
+              "name": "Extra-ue",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO BOVISA",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO BOVISA",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
         "INGEGNERIA BIOMEDICA": {
           "MILANO LEONARDO": [
             {
@@ -1511,34 +1539,6 @@
               "link": "Terza_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
-        "INGEGNERIA DELL'AUTOMAZIONE": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             },
@@ -1757,40 +1757,6 @@
           ]
         },
         "INGEGNERIA GESTIONALE": {
-          "CREMONA": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "CREMONA",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "CREMONA",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Fase.json",
-              "location": "CREMONA",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "CREMONA",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ],
           "MILANO BOVISA": [
             {
               "basePath": "Ingegneria/2020/",
@@ -1824,15 +1790,21 @@
               "school": "Ingegneria",
               "year": 2020
             }
-          ]
-        },
-        "INGEGNERIA INFORMATICA": {
+          ],
           "CREMONA": [
             {
               "basePath": "Ingegneria/2020/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
               "location": "CREMONA",
               "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "CREMONA",
+              "name": "Seconda Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             },
@@ -1852,7 +1824,9 @@
               "school": "Ingegneria",
               "year": 2020
             }
-          ],
+          ]
+        },
+        "INGEGNERIA INFORMATICA": {
           "MILANO LEONARDO": [
             {
               "basePath": "Ingegneria/2020/",
@@ -1886,10 +1860,44 @@
               "school": "Ingegneria",
               "year": 2020
             }
+          ],
+          "CREMONA": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "CREMONA",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Fase.json",
+              "location": "CREMONA",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "CREMONA",
+              "name": "Terza Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
           ]
         },
-        "INGEGNERIA INFORMATICA ONLINE": {
+        "INGEGNERIA MATEMATICA": {
           "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Extra-ue.json",
+              "location": "MILANO LEONARDO",
+              "name": "Extra-ue",
+              "school": "Ingegneria",
+              "year": 2020
+            },
             {
               "basePath": "Ingegneria/2020/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
@@ -1903,22 +1911,6 @@
               "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             }
@@ -2002,42 +1994,6 @@
             }
           ]
         },
-        "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
         "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
           "MILANO LEONARDO": [
             {
@@ -2094,46 +2050,10 @@
             }
           ]
         },
-        "INGEGNERIA AEROSPAZIALE": {
-          "MILANO BOVISA": [
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Extra-ue.json",
-              "location": "MILANO BOVISA",
-              "name": "Extra-ue",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO BOVISA",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO BOVISA",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2020
-            }
-          ]
-        },
-        "INGEGNERIA MATEMATICA": {
+        "INGEGNERIA DELL'AUTOMAZIONE": {
           "MILANO LEONARDO": [
             {
               "basePath": "Ingegneria/2020/",
-              "link": "Extra-ue.json",
-              "location": "MILANO LEONARDO",
-              "name": "Extra-ue",
-              "school": "Ingegneria",
-              "year": 2020
-            },
-            {
-              "basePath": "Ingegneria/2020/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Prima Graduatoria Di Seconda Fase",
@@ -2145,6 +2065,14 @@
               "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             }
@@ -2165,6 +2093,78 @@
               "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
+        "INGEGNERIA INFORMATICA ONLINE": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            }
+          ]
+        },
+        "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2020
+            },
+            {
+              "basePath": "Ingegneria/2020/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2020
             }
@@ -2316,42 +2316,6 @@
             }
           ]
         },
-        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            }
-          ]
-        },
         "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO": {
           "LECCO": [
             {
@@ -2904,42 +2868,6 @@
             }
           ]
         },
-        "INGEGNERIA INFORMATICA ONLINE": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            },
-            {
-              "basePath": "Ingegneria/2021/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2021
-            }
-          ]
-        },
         "INGEGNERIA MATEMATICA": {
           "MILANO LEONARDO": [
             {
@@ -3080,6 +3008,78 @@
               "school": "Ingegneria",
               "year": 2021
             },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            }
+          ]
+        },
+        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            },
+            {
+              "basePath": "Ingegneria/2021/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2021
+            }
+          ]
+        },
+        "INGEGNERIA INFORMATICA ONLINE": {
+          "MILANO LEONARDO": [
             {
               "basePath": "Ingegneria/2021/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
@@ -3260,26 +3260,6 @@
             }
           ]
         },
-        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2023/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2023
-            },
-            {
-              "basePath": "Ingegneria/2023/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2023
-            }
-          ]
-        },
         "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO": {
           "LECCO": [
             {
@@ -3744,26 +3724,6 @@
             }
           ]
         },
-        "INGEGNERIA INFORMATICA ONLINE": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2023/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2023
-            },
-            {
-              "basePath": "Ingegneria/2023/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2023
-            }
-          ]
-        },
         "INGEGNERIA MATEMATICA": {
           "MILANO LEONARDO": [
             {
@@ -3905,9 +3865,77 @@
               "year": 2023
             }
           ]
+        },
+        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2023/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2023
+            },
+            {
+              "basePath": "Ingegneria/2023/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2023
+            }
+          ]
+        },
+        "INGEGNERIA INFORMATICA ONLINE": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2023/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2023
+            },
+            {
+              "basePath": "Ingegneria/2023/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2023
+            }
+          ]
         }
       },
       "2022": {
+        "INGEGNERIA AEROSPAZIALE": {
+          "MILANO BOVISA": [
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO BOVISA",
+              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO BOVISA",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO BOVISA",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            }
+          ]
+        },
         "INGEGNERIA BIOMEDICA": {
           "MILANO LEONARDO": [
             {
@@ -4040,42 +4068,6 @@
             }
           ]
         },
-        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            }
-          ]
-        },
         "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO": {
           "LECCO": [
             {
@@ -4428,6 +4420,34 @@
             }
           ]
         },
+        "INGEGNERIA FISICA": {
+          "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            }
+          ]
+        },
         "INGEGNERIA GESTIONALE": {
           "CREMONA": [
             {
@@ -4600,8 +4620,16 @@
             }
           ]
         },
-        "INGEGNERIA INFORMATICA ONLINE": {
+        "INGEGNERIA MATEMATICA": {
           "MILANO LEONARDO": [
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
             {
               "basePath": "Ingegneria/2022/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
@@ -4615,14 +4643,6 @@
               "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
               "location": "MILANO LEONARDO",
               "name": "Seconda Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Terza_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Terza Fase",
               "school": "Ingegneria",
               "year": 2022
             },
@@ -4766,20 +4786,12 @@
             }
           ]
         },
-        "INGEGNERIA AEROSPAZIALE": {
-          "MILANO BOVISA": [
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO BOVISA",
-              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
+        "INGEGNERIA CIVILE - CIVIL ENGINEERING": {
+          "MILANO LEONARDO": [
             {
               "basePath": "Ingegneria/2022/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO BOVISA",
+              "location": "MILANO LEONARDO",
               "name": "Prima Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2022
@@ -4787,23 +4799,31 @@
             {
               "basePath": "Ingegneria/2022/",
               "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO BOVISA",
+              "location": "MILANO LEONARDO",
               "name": "Seconda Graduatoria Di Seconda Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Terza_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Fase",
+              "school": "Ingegneria",
+              "year": 2022
+            },
+            {
+              "basePath": "Ingegneria/2022/",
+              "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+              "location": "MILANO LEONARDO",
+              "name": "Terza Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2022
             }
           ]
         },
-        "INGEGNERIA FISICA": {
+        "INGEGNERIA INFORMATICA ONLINE": {
           "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
             {
               "basePath": "Ingegneria/2022/",
               "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
@@ -4819,32 +4839,12 @@
               "name": "Seconda Graduatoria Di Seconda Fase",
               "school": "Ingegneria",
               "year": 2022
-            }
-          ]
-        },
-        "INGEGNERIA MATEMATICA": {
-          "MILANO LEONARDO": [
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Extra-ue_Prima_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Extra-ue Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
             },
             {
               "basePath": "Ingegneria/2022/",
-              "link": "Prima_Graduatoria_Di_Seconda_Fase.json",
+              "link": "Terza_Fase.json",
               "location": "MILANO LEONARDO",
-              "name": "Prima Graduatoria Di Seconda Fase",
-              "school": "Ingegneria",
-              "year": 2022
-            },
-            {
-              "basePath": "Ingegneria/2022/",
-              "link": "Seconda_Graduatoria_Di_Seconda_Fase.json",
-              "location": "MILANO LEONARDO",
-              "name": "Seconda Graduatoria Di Seconda Fase",
+              "name": "Terza Fase",
               "school": "Ingegneria",
               "year": 2022
             },
