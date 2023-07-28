@@ -39,10 +39,7 @@ public class Parser
         // order set by school => year => url (for git)
         // return
         //
-        foreach (var url in urls)
-        {
-            url.FixSlashes();
-        }
+        foreach (var url in urls) url.FixSlashes();
 
         var htmls = ParseLocalHtmlFiles().ToList();
         var newHtmls = urls.Where(url => htmls.All(h => h.Url.Url != url.Url))
@@ -84,7 +81,9 @@ public class Parser
             var relatedHtmls = htmls.Where(h => h.Url.IsSameRanking(ranking.Url)).ToList();
             foreach (var related in relatedHtmls)
                 lock (htmls)
+                {
                     htmls.Remove(related);
+                }
         }
 
         return savedSet;

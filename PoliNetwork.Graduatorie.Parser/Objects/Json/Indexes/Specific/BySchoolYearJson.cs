@@ -74,13 +74,13 @@ public class BySchoolYearJson : IndexJsonBase
     {
         List<Ranking> rankings = new();
         foreach (var school in mainJson.Schools)
-            foreach (var year in school.Value)
-                foreach (var filename in year.Value)
-                {
-                    var path = Path.Join(outFolder, filename.BasePath, filename.Link);
-                    var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
-                    if (ranking != null) rankings.Add(ranking);
-                }
+        foreach (var year in school.Value)
+        foreach (var filename in year.Value)
+        {
+            var path = Path.Join(outFolder, filename.BasePath, filename.Link);
+            var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
+            if (ranking != null) rankings.Add(ranking);
+        }
 
 
         return rankings;

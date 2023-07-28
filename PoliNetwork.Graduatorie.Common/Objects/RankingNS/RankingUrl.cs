@@ -115,7 +115,7 @@ public class RankingUrl
         return baseDomain;
     }
 
-    public void FixSlashes() 
+    public void FixSlashes()
     {
         Url = Url.Replace("\\", "/");
     }
@@ -150,10 +150,10 @@ public class RankingUrl
 
     public bool IsSimilar(RankingUrl urlB)
     {
-        return RankingUrl.AreSimilar(this, urlB);
+        return AreSimilar(this, urlB);
     }
 
-    public static bool AreSimilar(RankingUrl urlA, RankingUrl urlB) 
+    public static bool AreSimilar(RankingUrl urlA, RankingUrl urlB)
     {
         var a = urlA.Url;
         var b = urlB.Url;

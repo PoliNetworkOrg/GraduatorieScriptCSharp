@@ -33,9 +33,6 @@ public class RankingsSet
 
     public void Merge(RankingsSet set)
     {
-        foreach(var ranking in set.Rankings)
-        {
-            AddRanking(ranking);
-        }
+        foreach (var ranking in set.Rankings) AddRanking(ranking);
     }
 }

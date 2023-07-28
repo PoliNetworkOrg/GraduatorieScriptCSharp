@@ -9,19 +9,20 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 public class OutputWriteUtil
 {
-    private ArgsConfig _config;
+    private readonly ArgsConfig _config;
 
     public OutputWriteUtil(ArgsConfig argsConfig)
     {
         _config = argsConfig;
     }
+
     public void SaveOutputs(RankingsSet? rankingsSet, DateFound dateFound)
     {
         var outFolder = Path.Join(_config.DataFolder, Constants.OutputFolder);
         IndexJsonBase.IndexesWrite(rankingsSet, outFolder, _config);
         StatsJson.Write(outFolder, rankingsSet, _config);
         HashMatricoleWrite.Write(rankingsSet, outFolder);
-        
+
         dateFound.WriteToFile(_config.DataFolder);
     }
 }
