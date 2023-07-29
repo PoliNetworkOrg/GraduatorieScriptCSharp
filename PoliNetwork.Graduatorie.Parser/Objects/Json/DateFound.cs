@@ -14,7 +14,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json;
 public class DateFound
 {
     public const string PathFileName = "dateFound.json";
-    public Dictionary<string, DateTime?>? FirstDate;
+    public SortedDictionary<string, DateTime?>? FirstDate;
 
     public void WriteToFile(string dataFolder)
     {
@@ -33,7 +33,7 @@ public class DateFound
     {
         var path = variable.GetPath().Trim();
 
-        FirstDate ??= new Dictionary<string, DateTime?>();
+        FirstDate ??= new SortedDictionary<string, DateTime?>();
 
         var dateTime = new DateTime(variable.Year ?? DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day);
         if (FirstDate.TryGetValue(path, out var oldValue))

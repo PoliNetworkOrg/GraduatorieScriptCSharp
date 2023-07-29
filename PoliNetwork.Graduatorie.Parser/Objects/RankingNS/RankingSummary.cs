@@ -15,7 +15,7 @@ public class RankingSummary
     public List<CourseTableStats>? CourseSummarized;
     public int? HowManyCanEnroll;
     public int? HowManyStudents;
-    public Dictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
+    public SortedDictionary<int, int>? ResultsSummarized; //key=score, value=howManyGotThatScore
 
     public int GetHashWithoutLastUpdate()
     {
@@ -61,11 +61,12 @@ public class RankingSummary
             distinctBy
                 ?.ToList();
         var tableStatsList2 = Get(tableStatsList);
+        var resultsSummarized = new SortedDictionary<int, int>(keyValuePairs ?? new Dictionary<int, int>());
         return new RankingSummary
         {
             HowManyCanEnroll = howManyCanEnroll,
             HowManyStudents = byMeritRows?.Count,
-            ResultsSummarized = keyValuePairs,
+            ResultsSummarized = resultsSummarized,
             CourseSummarized = tableStatsList2
         };
     }
@@ -82,11 +83,11 @@ public class RankingSummary
     }
 
 
-    private static Dictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)
+    private static SortedDictionary<int, int>? CalculateResultsScores(IReadOnlyCollection<StudentResult>? byMeritRows)
     {
         if (byMeritRows == null) return null;
 
-        var results = new Dictionary<int, int>();
+        var results = new SortedDictionary<int, int>();
         var enumerable = byMeritRows.Select(Round);
         foreach (var score in enumerable)
         {

@@ -14,7 +14,7 @@ public class MeritTableRow
     public bool? CanEnroll;
     public string? CanEnrollInto;
     public string? Id;
-    public Dictionary<string, bool>? Ofa; // maybe change it
+    public SortedDictionary<string, bool>? Ofa; // maybe change it
     public int? Position;
     public decimal? Result;
 }

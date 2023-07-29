@@ -15,8 +15,8 @@ public class CourseTableRow
     public bool? CanEnroll;
     public int? EnglishCorrectAnswers;
     public string? Id;
-    public Dictionary<string, bool>? Ofa; // maybe change it
+    public SortedDictionary<string, bool>? Ofa; // maybe change it
     public int? Position;
     public decimal? Result;
-    public Dictionary<string, decimal>? SectionsResults;
+    public SortedDictionary<string, decimal>? SectionsResults;
 }

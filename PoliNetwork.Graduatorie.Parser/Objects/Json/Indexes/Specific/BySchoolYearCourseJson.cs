@@ -19,9 +19,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
     internal const string PathCustom = "bySchoolYearCourse.json";
 
     //keys: school, year, course, location
-    public Dictionary<
+    public SortedDictionary<
         SchoolEnum,
-        Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+        SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
     > Schools = new();
 
     public static BySchoolYearCourseJson? From(RankingsSet? set)
@@ -48,13 +48,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return mainJson;
     }
 
-    private static Dictionary<
+    private static SortedDictionary<
         int,
-        Dictionary<string, Dictionary<string, List<SingleCourseJson>>>
+        SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>
     > GetYearsDict(IEnumerable<IGrouping<int?, Ranking>> byYears)
     {
         var d =
-            new Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>();
+            new SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>();
 
         foreach (var yearGroup in byYears) GetYearsDictSingle(yearGroup, d);
 
@@ -62,16 +62,16 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void GetYearsDictSingle(IGrouping<int?, Ranking> yearGroup,
-        IDictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> d)
+        SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> d)
     {
         if (yearGroup.Key != null) d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
     }
 
-    private static Dictionary<string, Dictionary<string, List<SingleCourseJson>>> GetCoursesDict(
+    private static SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> GetCoursesDict(
         IEnumerable<Ranking> yearGroup
     )
     {
-        var d = new Dictionary<string, Dictionary<string, List<SingleCourseJson>>>();
+        var d = new SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>();
 
         foreach (var ranking in yearGroup)
         {
@@ -87,7 +87,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void AddCourseToDict(
-        IDictionary<string, Dictionary<string, List<SingleCourseJson>>> d,
+        SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> d,
         Ranking ranking,
         IGrouping<string?, CourseTable> courseGroup
     )
@@ -97,7 +97,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
             return;
 
         if (!d.ContainsKey(title))
-            d[title] = new Dictionary<string, List<SingleCourseJson>>();
+            d[title] = new SortedDictionary<string, List<SingleCourseJson>>();
 
         var courseDict = d[title];
         foreach (var course in courseGroup)
@@ -195,11 +195,11 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void RankingsAddSingleYearSchool(
-        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
+        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
         KeyValuePair<
             SchoolEnum,
-            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
         > school,
         ICollection<Ranking> rankings
     )
@@ -222,9 +222,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
     private static void RankingAdd(
         KeyValuePair<
             SchoolEnum,
-            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
         > school,
-        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
+        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
         KeyValuePair<string, List<SingleCourseJson>> filename,
         ICollection<Ranking> rankings
@@ -237,9 +237,9 @@ public class BySchoolYearCourseJson : IndexJsonBase
     private static void RankingAddSingle(
         KeyValuePair<
             SchoolEnum,
-            Dictionary<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>>
+            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
         > school,
-        KeyValuePair<int, Dictionary<string, Dictionary<string, List<SingleCourseJson>>>> year,
+        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
         string outFolder,
         ICollection<Ranking> rankings,
         SingleCourseJson variable
