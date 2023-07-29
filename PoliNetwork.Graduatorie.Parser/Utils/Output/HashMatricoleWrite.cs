@@ -21,9 +21,9 @@ public static class HashMatricoleWrite
         WriteToFile(dictionary, outFolder);
     }
 
-    private static Dictionary<string, StudentHashSummary> GetDictToWrite(RankingsSet rankingsSet)
+    private static SortedDictionary<string, StudentHashSummary> GetDictToWrite(RankingsSet rankingsSet)
     {
-        var dictionary = new Dictionary<string, StudentHashSummary>();
+        var dictionary = new SortedDictionary<string, StudentHashSummary>();
         foreach (var ranking in rankingsSet.Rankings)
         {
             var byMeritRows = ranking.ByMerit?.Rows;
@@ -33,46 +33,50 @@ public static class HashMatricoleWrite
                         AddToDict(dictionary, ranking, student, null);
 
             var rankingByCourse = ranking.ByCourse;
-            if (rankingByCourse != null)
-                foreach (var courseTable in rankingByCourse)
-                {
-                    var row = courseTable.Rows;
-                    if (row != null)
-                        foreach (var studentResult in row)
-                            if (!string.IsNullOrEmpty(studentResult.Id))
-                                AddToDict(dictionary, ranking, studentResult, courseTable);
-                }
+            if (rankingByCourse == null) continue;
+            foreach (var courseTable in rankingByCourse)
+            {
+                var row = courseTable.Rows;
+                if (row == null) continue;
+                foreach (var studentResult in row)
+                    if (!string.IsNullOrEmpty(studentResult.Id))
+                        AddToDict(dictionary, ranking, studentResult, courseTable);
+            }
         }
 
         return dictionary;
     }
 
-    private static void WriteToFile(Dictionary<string, StudentHashSummary> dictionary, string outFolder)
+    private static void WriteToFile(SortedDictionary<string, StudentHashSummary> dictionary, string outFolder)
     {
         Console.WriteLine($"[INFO] Students with id are {dictionary.Keys.Count}");
 
 
         var dictResult =
-            new Dictionary<string, Dictionary<string, StudentHashSummary>>();
+            new SortedDictionary<string, SortedDictionary<string, StudentHashSummary>>();
 
         foreach (var variable in dictionary)
         {
             var key = variable.Key[..2];
             if (!dictResult.ContainsKey(key))
-                dictResult[key] = new Dictionary<string, StudentHashSummary>();
+                dictResult[key] = new SortedDictionary<string, StudentHashSummary>();
 
             if (!dictResult[key].ContainsKey(variable.Key))
                 dictResult[key][variable.Key] = variable.Value;
         }
 
-        var hashmatricole = outFolder + "/hashMatricole";
-        if (!Directory.Exists(hashmatricole)) Directory.CreateDirectory(hashmatricole);
+        var hashMatricole = outFolder + "/hashMatricole";
+        if (!Directory.Exists(hashMatricole)) Directory.CreateDirectory(hashMatricole);
 
-        foreach (var variable in dictResult)
-        {
-            var toWrite = JsonConvert.SerializeObject(variable.Value, Culture.JsonSerializerSettings);
-            File.WriteAllText(hashmatricole + "/" + variable.Key + ".json", toWrite);
-        }
+        foreach (var variable in dictResult) WriteSingleHashFile(variable, hashMatricole);
+    }
+
+    private static void WriteSingleHashFile(KeyValuePair<string, SortedDictionary<string, StudentHashSummary>> variable,
+        string hashMatricole)
+    {
+        var studentHashSummaries = variable.Value;
+        var toWrite = JsonConvert.SerializeObject(studentHashSummaries, Culture.JsonSerializerSettings);
+        File.WriteAllText(hashMatricole + "/" + variable.Key + ".json", toWrite);
     }
 
     private static void AddToDict(IDictionary<string, StudentHashSummary> dictionary, Ranking ranking,

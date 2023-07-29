@@ -429,7 +429,7 @@ public class Parser
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
             var enrollAllowed = EnrollCourseToAllowed(enrollCourse);
-            var ofa = new Dictionary<string, bool>();
+            var ofa = new SortedDictionary<string, bool>();
 
             var ofaEng = Table.GetFieldByIndex(row, ofaEngIndex);
             if (ofaEng is not null)
@@ -505,7 +505,7 @@ public class Parser
         int englishCorrectAnswersIndex,
         int ofaEngIndex,
         int ofaTestIndex,
-        Dictionary<string, int>? sectionsIndex
+        SortedDictionary<string, int>? sectionsIndex
     )
     {
         var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
@@ -527,7 +527,7 @@ public class Parser
         int? englishCorrectAnswers = englishCorrectAnswersValue is not null
             ? Convert.ToInt16(englishCorrectAnswersValue)
             : null;
-        var ofa = new Dictionary<string, bool>();
+        var ofa = new SortedDictionary<string, bool>();
 
         var ofaEng = Table.GetFieldByIndex(row, ofaEngIndex);
         if (ofaEng is not null)
@@ -537,7 +537,7 @@ public class Parser
         if (ofaTest is not null)
             ofa.Add("TEST", ofaTest.ToLower().Contains("si"));
 
-        var sectionsResults = new Dictionary<string, decimal>();
+        var sectionsResults = new SortedDictionary<string, decimal>();
         if (sectionsIndex is not null)
             foreach (var section in sectionsIndex)
             {

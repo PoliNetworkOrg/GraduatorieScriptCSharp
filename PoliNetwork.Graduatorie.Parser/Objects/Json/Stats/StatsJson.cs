@@ -17,7 +17,7 @@ public class StatsJson
     private const string PathStats = "stats";
 
     public DateTime LastUpdate = DateTime.UtcNow;
-    public Dictionary<int, StatsYear> Stats = new();
+    public SortedDictionary<int, StatsYear> Stats = new();
 
     public static void Write(string outFolder, RankingsSet? rankingsSet, ArgsConfig argsConfig)
     {
