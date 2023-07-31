@@ -16,7 +16,7 @@ public class ByYearSchoolJson : IndexJsonBase
 {
     internal const string PathCustom = "byYearSchool.json";
 
-    public Dictionary<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
+    public SortedDictionary<int, SortedDictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
 
     public static ByYearSchoolJson? From(RankingsSet? set)
     {
@@ -32,7 +32,7 @@ public class ByYearSchoolJson : IndexJsonBase
                 continue;
             var year = yearGroup.Key.Value;
 
-            var yearDict = new Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>();
+            var yearDict = new SortedDictionary<SchoolEnum, IEnumerable<SingleCourseJson>>();
 
             var bySchools = yearGroup.GroupBy(r => r.School);
             foreach (var schoolGroup in bySchools)
@@ -87,7 +87,7 @@ public class ByYearSchoolJson : IndexJsonBase
     }
 
     private static void RankingAdd(
-        KeyValuePair<int, Dictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> year,
+        KeyValuePair<int, SortedDictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> year,
         KeyValuePair<SchoolEnum, IEnumerable<SingleCourseJson>> school,
         string outFolder,
         SingleCourseJson filename,

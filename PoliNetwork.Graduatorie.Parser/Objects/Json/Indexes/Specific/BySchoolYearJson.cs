@@ -16,7 +16,7 @@ public class BySchoolYearJson : IndexJsonBase
 {
     internal const string PathCustom = "bySchoolYear.json";
 
-    public Dictionary<SchoolEnum, Dictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
+    public SortedDictionary<SchoolEnum, SortedDictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
 
     public static BySchoolYearJson? From(RankingsSet? set)
     {
@@ -32,24 +32,44 @@ public class BySchoolYearJson : IndexJsonBase
                 continue;
             var school = schoolGroup.Key.Value;
 
-            var schoolDict = new Dictionary<int, IEnumerable<SingleCourseJson>>();
+            var schoolDict = new SortedDictionary<int, IEnumerable<SingleCourseJson>>();
 
             var byYears = schoolGroup.GroupBy(r => r.Year);
             foreach (var yearGroup in byYears)
             {
                 if (yearGroup.Key is null)
                     continue;
-                var filenames = yearGroup
-                    .SelectMany(ranking => ranking.ToSingleCourseJson())
-                    .DistinctBy(x => x.Link)
-                    .ToList().OrderBy(a => a.Name);
-                schoolDict.Add(yearGroup.Key.Value, filenames);
+                AddSchool(yearGroup, schoolDict);
             }
 
             mainJson.Schools.Add(school, schoolDict);
         }
 
         return mainJson;
+    }
+
+    private static void AddSchool(
+        IGrouping<int?, Ranking> yearGroup,
+        SortedDictionary<int, IEnumerable<SingleCourseJson>> schoolDict
+    )
+    {
+        var yearGroupKey = yearGroup.Key;
+        if (yearGroupKey == null)
+            return;
+
+        var singleCourseJsons = yearGroup
+            .SelectMany(ranking => ranking.ToSingleCourseJson())
+            .DistinctBy(x => x.Link)
+            .ToList();
+        var filenames = singleCourseJsons
+            .OrderBy(a => a.Name)
+            .ThenBy(a => a.Year)
+            .ThenBy(a => a.School)
+            .ThenBy(a => a.BasePath)
+            .ThenBy(a => a.Link)
+            .ToList();
+
+        schoolDict.Add(yearGroupKey.Value, filenames);
     }
 
 
@@ -65,6 +85,7 @@ public class BySchoolYearJson : IndexJsonBase
 
             set.LastUpdate = mainJson.LastUpdate;
             set.Rankings = GetRankingsFromIndex(mainJson, outFolder);
+            set.Rankings.Sort();
             return set;
         }
         catch (Exception e)
@@ -77,16 +98,34 @@ public class BySchoolYearJson : IndexJsonBase
     private static List<Ranking> GetRankingsFromIndex(BySchoolYearJson mainJson, string outFolder)
     {
         List<Ranking> rankings = new();
-        foreach (var school in mainJson.Schools)
-        foreach (var year in school.Value)
-        foreach (var filename in year.Value)
-        {
-            var path = Path.Join(outFolder, filename.BasePath, filename.Link);
-            var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
-            if (ranking != null) rankings.Add(ranking);
-        }
-
+        var singleCourseJsons = GetSingleCourseJsons(mainJson).ToList();
+        singleCourseJsons.Sort();
+        foreach (var filename in singleCourseJsons)
+            AddRanking(outFolder, filename, rankings);
 
         return rankings;
+    }
+
+    private static IEnumerable<SingleCourseJson> GetSingleCourseJsons(BySchoolYearJson mainJson)
+    {
+        var singleCourseJsons = mainJson.Schools.SelectMany(
+            school =>
+            {
+                var courseJsons = school.Value.SelectMany(year =>
+                {
+                    var yearValue = year.Value;
+                    return yearValue;
+                });
+                return courseJsons;
+            });
+        return singleCourseJsons;
+    }
+
+    private static void AddRanking(string outFolder, SingleCourseJson filename, ICollection<Ranking> rankings)
+    {
+        var path = Path.Join(outFolder, filename.BasePath, filename.Link);
+        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
+        if (ranking == null) return;
+        rankings.Add(ranking);
     }
 }

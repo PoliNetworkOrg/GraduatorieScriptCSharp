@@ -15,10 +15,10 @@ public class CourseTableStats
     public double? AverageBirthYear;
     public double? AverageEnglishCorrectAnswers;
     public decimal? AverageOfWhoPassed;
-    public Dictionary<string, decimal>? AveragePartialScores;
+    public SortedDictionary<string, decimal>? AveragePartialScores;
     public decimal? AverageScoresOfAllStudents;
     public int? HowManyCanEnroll;
-    public Dictionary<string, int>? HowManyOfa;
+    public SortedDictionary<string, int>? HowManyOfa;
     public int? HowManyStudents;
     public string? Location;
     public decimal? MinScoreToEnroll;
@@ -145,14 +145,14 @@ public class CourseTableStats
         return average == null ? null : Math.Round(average.Value, Decimals);
     }
 
-    private static Dictionary<string, int>? HowManyOfaCalculate(
+    private static SortedDictionary<string, int>? HowManyOfaCalculate(
         IReadOnlyCollection<StudentResult> courseTableRows
     )
     {
         if (courseTableRows.Count == 0)
             return null;
 
-        var result = new Dictionary<string, int>();
+        var result = new SortedDictionary<string, int>();
 
         var keys = courseTableRows.Select(x => x.Ofa?.Keys);
         var distinctKeys = DistinctKeys(keys);
@@ -166,14 +166,14 @@ public class CourseTableStats
         return result;
     }
 
-    private static Dictionary<string, decimal>? AveragePartialScoresCalculate(
+    private static SortedDictionary<string, decimal>? AveragePartialScoresCalculate(
         IReadOnlyCollection<StudentResult> courseTableRows
     )
     {
         if (courseTableRows.Count == 0)
             return null;
 
-        var scores = new Dictionary<string, decimal>();
+        var scores = new SortedDictionary<string, decimal>();
 
         var keys = courseTableRows.Select(x => x.SectionsResults?.Keys).ToList();
         var keysDistinct = DistinctKeys(keys);
@@ -194,7 +194,7 @@ public class CourseTableStats
 
 
     private static HashSet<string> DistinctKeys<T>(
-        IEnumerable<Dictionary<string, T>.KeyCollection?>? keysList
+        IEnumerable<SortedDictionary<string, T>.KeyCollection?>? keysList
     )
     {
         var result = new HashSet<string>();

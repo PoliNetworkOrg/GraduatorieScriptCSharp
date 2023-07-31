@@ -13,7 +13,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 public class StatsYear
 {
     public int? NumStudents;
-    public Dictionary<SchoolEnum, StatsSchool> Schools = new();
+    public SortedDictionary<SchoolEnum, StatsSchool> Schools = new();
 
     public int GetHashWithoutLastUpdate()
     {

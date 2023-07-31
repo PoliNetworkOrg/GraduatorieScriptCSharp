@@ -16,11 +16,11 @@ public class StudentResult
     public string? CanEnrollInto;
     public int? EnglishCorrectAnswers;
     public string? Id;
-    public Dictionary<string, bool>? Ofa; // maybe change it
+    public SortedDictionary<string, bool>? Ofa; // maybe change it
     public int? PositionAbsolute;
     public int? PositionCourse;
     public decimal? Result;
-    public Dictionary<string, decimal>? SectionsResults;
+    public SortedDictionary<string, decimal>? SectionsResults;
 
     public int GetHashWithoutLastUpdate()
     {

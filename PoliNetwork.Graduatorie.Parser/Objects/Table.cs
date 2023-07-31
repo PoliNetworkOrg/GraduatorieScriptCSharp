@@ -43,10 +43,10 @@ public class Table<T>
         return string.IsNullOrEmpty(fieldByIndex) ? null : fieldByIndex;
     }
 
-    public Dictionary<string, int>? GetSectionsIndex()
+    public SortedDictionary<string, int>? GetSectionsIndex()
     {
         if (Sections is null) return null;
-        var dict = new Dictionary<string, int>();
+        var dict = new SortedDictionary<string, int>();
         foreach (var section in Sections)
         {
             var index = Headers.FindIndex(h => h == section);
