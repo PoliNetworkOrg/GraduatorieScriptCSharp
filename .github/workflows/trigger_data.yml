@@ -17,4 +17,5 @@ jobs:
       with:
         workflow: update.yml
         repo: PoliNetworkOrg/RankingsDati
+        token: ${{ secrets.GITHUB_TOKEN }}
         inputs: '{ "is_release": ${{ github.event_name == ''release'' }} }'
