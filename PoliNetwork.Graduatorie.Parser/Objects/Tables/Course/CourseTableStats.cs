@@ -80,7 +80,7 @@ public class CourseTableStats
         if (howManyStudentsCount == 0 || courseTableRows is null)
             return stats;
 
-        var studentsWhoCanEnroll = courseTableRows.Where(x => x.CanEnroll ?? false).ToList();
+        var studentsWhoCanEnroll = courseTableRows.Where(x => x.EnrollType?.CanEnroll ?? false).ToList();
         var studentsWhoCanEnrollCount = studentsWhoCanEnroll.Count;
         var minValueToEnroll =
             studentsWhoCanEnrollCount > 0 ? studentsWhoCanEnroll.Min(x => x.Result) : null;

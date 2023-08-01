@@ -8,6 +8,7 @@ using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Common.Utils;
 using PoliNetwork.Graduatorie.Common.Utils.HashNS;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
@@ -585,8 +586,7 @@ public class Parser
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = row.BirthDate,
-            CanEnroll = canEnroll,
-            CanEnrollInto = canEnroll ? course.CourseTitle : null,
+            EnrollType = EnrollUtil.GetEnrollType(course.CourseTitle, canEnroll),
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
             EnglishCorrectAnswers = row.EnglishCorrectAnswers
@@ -600,7 +600,7 @@ public class Parser
             return student;
 
         student.PositionAbsolute = meritRow.Position;
-        student.CanEnrollInto = canEnroll ? meritRow.CanEnrollInto : null;
+        student.EnrollType = EnrollUtil.GetEnrollType(meritRow.CanEnrollInto, canEnroll);
         return student;
     }
 
@@ -623,8 +623,7 @@ public class Parser
         var canEnroll = row.CanEnroll ?? false;
         var student = new StudentResult
         {
-            CanEnroll = canEnroll,
-            CanEnrollInto = canEnroll ? row.CanEnrollInto : null,
+            EnrollType = EnrollUtil.GetEnrollType(row.CanEnrollInto, canEnroll),
             Id = row.Id,
             PositionAbsolute = row.Position,
             Result = row.Result,
@@ -651,7 +650,7 @@ public class Parser
             return student;
 
         var finalRow = canEnroll
-            ? studentCoursesRows.Find(c => c?.CanEnroll ?? false)
+            ? studentCoursesRows.Find(c => c?.EnrollType?.CanEnroll ?? false)
             : studentCoursesRows.OrderBy(c => c?.PositionCourse).First();
 
         if (finalRow == null)
