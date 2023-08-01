@@ -1,5 +1,5 @@
 {
-  "numStudents": 9371,
+  "numStudents": 9392,
   "schools": {
     "Ingegneria": {
       "list": [
@@ -8832,9 +8832,1994 @@
               "97": 2
             }
           }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Ingegneria/2023/",
+            "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+            "location": "MILANO LEONARDO",
+            "name": "Terza Graduatoria Di Seconda Fase",
+            "school": "Ingegneria",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.41667,
+                "averageEnglishCorrectAnswers": 26.66667,
+                "averageOfWhoPassed": 77.86333,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.50,
+                  "Fisica": 5.66667,
+                  "Inglese": 8.69667,
+                  "Matematica": 52.00
+                },
+                "averageScoresOfAllStudents": 77.86333,
+                "howManyCanEnroll": 3,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 3,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 76.07,
+                "title": "INGEGNERIA BIOMEDICA"
+              },
+              {
+                "averageBirthYear": 2004.66667,
+                "averageEnglishCorrectAnswers": 30.0,
+                "averageOfWhoPassed": 73.55,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 2.25,
+                  "Fisica": 8.00,
+                  "Inglese": 10.00,
+                  "Matematica": 53.30
+                },
+                "averageScoresOfAllStudents": 73.55,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 73.55,
+                "title": "INGEGNERIA CHIMICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE"
+              },
+              {
+                "averageBirthYear": 2004.08333,
+                "averageEnglishCorrectAnswers": 25.0,
+                "averageOfWhoPassed": 63.62,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.25,
+                  "Fisica": 3.50,
+                  "Inglese": 7.92,
+                  "Matematica": 40.95
+                },
+                "averageScoresOfAllStudents": 63.62,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 63.62,
+                "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELL'AUTOMAZIONE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+              },
+              {
+                "averageBirthYear": 2005.25,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 92.25,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 10.00,
+                  "Inglese": 8.75,
+                  "Matematica": 58.50
+                },
+                "averageScoresOfAllStudents": 92.25,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 92.25,
+                "title": "INGEGNERIA ELETTRICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA ELETTRONICA"
+              },
+              {
+                "averageBirthYear": 2004.83333,
+                "averageEnglishCorrectAnswers": 26.0,
+                "averageOfWhoPassed": 83.58,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 5.00,
+                  "Inglese": 8.33,
+                  "Matematica": 55.25
+                },
+                "averageScoresOfAllStudents": 83.58,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 83.58,
+                "title": "INGEGNERIA ENERGETICA"
+              },
+              {
+                "averageBirthYear": 2004.75,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 72.07,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.00,
+                  "Fisica": 8.00,
+                  "Inglese": 9.17,
+                  "Matematica": 42.90
+                },
+                "averageScoresOfAllStudents": 72.07,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 72.07,
+                "title": "INGEGNERIA FISICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": 2004.35417,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 60.4675,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 6.3775,
+                  "Fisica": 6.3275,
+                  "Inglese": 9.1675,
+                  "Matematica": 38.595
+                },
+                "averageScoresOfAllStudents": 60.4675,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 4,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.97,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": 2004.30556,
+                "averageEnglishCorrectAnswers": 28.5,
+                "averageOfWhoPassed": 61.85667,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 9.875,
+                  "Fisica": 2.41667,
+                  "Inglese": 9.37333,
+                  "Matematica": 40.19167
+                },
+                "averageScoresOfAllStudents": 61.85667,
+                "howManyCanEnroll": 6,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 6,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 60.03,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA ONLINE"
+              },
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": 23.0,
+                "averageOfWhoPassed": 70.28,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 7.50,
+                  "Fisica": 5.00,
+                  "Inglese": 7.08,
+                  "Matematica": 50.70
+                },
+                "averageScoresOfAllStudents": 70.28,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 70.28,
+                "title": "INGEGNERIA MATEMATICA"
+              },
+              {
+                "averageBirthYear": 2004.125,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 60.225,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.985,
+                  "Fisica": 3.735,
+                  "Inglese": 8.75,
+                  "Matematica": 34.755
+                },
+                "averageScoresOfAllStudents": 60.225,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 2,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.58,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "PIACENZA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+              }
+            ],
+            "howManyCanEnroll": 21,
+            "howManyStudents": 21,
+            "resultsSummarized": {
+              "60": 4,
+              "61": 5,
+              "62": 1,
+              "63": 1,
+              "64": 2,
+              "70": 1,
+              "72": 1,
+              "74": 1,
+              "76": 1,
+              "77": 1,
+              "81": 1,
+              "84": 1,
+              "92": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Ingegneria/2023/",
+            "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+            "location": "LECCO",
+            "name": "Terza Graduatoria Di Seconda Fase",
+            "school": "Ingegneria",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.41667,
+                "averageEnglishCorrectAnswers": 26.66667,
+                "averageOfWhoPassed": 77.86333,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.50,
+                  "Fisica": 5.66667,
+                  "Inglese": 8.69667,
+                  "Matematica": 52.00
+                },
+                "averageScoresOfAllStudents": 77.86333,
+                "howManyCanEnroll": 3,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 3,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 76.07,
+                "title": "INGEGNERIA BIOMEDICA"
+              },
+              {
+                "averageBirthYear": 2004.66667,
+                "averageEnglishCorrectAnswers": 30.0,
+                "averageOfWhoPassed": 73.55,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 2.25,
+                  "Fisica": 8.00,
+                  "Inglese": 10.00,
+                  "Matematica": 53.30
+                },
+                "averageScoresOfAllStudents": 73.55,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 73.55,
+                "title": "INGEGNERIA CHIMICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE"
+              },
+              {
+                "averageBirthYear": 2004.08333,
+                "averageEnglishCorrectAnswers": 25.0,
+                "averageOfWhoPassed": 63.62,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.25,
+                  "Fisica": 3.50,
+                  "Inglese": 7.92,
+                  "Matematica": 40.95
+                },
+                "averageScoresOfAllStudents": 63.62,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 63.62,
+                "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELL'AUTOMAZIONE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+              },
+              {
+                "averageBirthYear": 2005.25,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 92.25,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 10.00,
+                  "Inglese": 8.75,
+                  "Matematica": 58.50
+                },
+                "averageScoresOfAllStudents": 92.25,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 92.25,
+                "title": "INGEGNERIA ELETTRICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA ELETTRONICA"
+              },
+              {
+                "averageBirthYear": 2004.83333,
+                "averageEnglishCorrectAnswers": 26.0,
+                "averageOfWhoPassed": 83.58,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 5.00,
+                  "Inglese": 8.33,
+                  "Matematica": 55.25
+                },
+                "averageScoresOfAllStudents": 83.58,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 83.58,
+                "title": "INGEGNERIA ENERGETICA"
+              },
+              {
+                "averageBirthYear": 2004.75,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 72.07,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.00,
+                  "Fisica": 8.00,
+                  "Inglese": 9.17,
+                  "Matematica": 42.90
+                },
+                "averageScoresOfAllStudents": 72.07,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 72.07,
+                "title": "INGEGNERIA FISICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": 2004.35417,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 60.4675,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 6.3775,
+                  "Fisica": 6.3275,
+                  "Inglese": 9.1675,
+                  "Matematica": 38.595
+                },
+                "averageScoresOfAllStudents": 60.4675,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 4,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.97,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": 2004.30556,
+                "averageEnglishCorrectAnswers": 28.5,
+                "averageOfWhoPassed": 61.85667,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 9.875,
+                  "Fisica": 2.41667,
+                  "Inglese": 9.37333,
+                  "Matematica": 40.19167
+                },
+                "averageScoresOfAllStudents": 61.85667,
+                "howManyCanEnroll": 6,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 6,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 60.03,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA ONLINE"
+              },
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": 23.0,
+                "averageOfWhoPassed": 70.28,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 7.50,
+                  "Fisica": 5.00,
+                  "Inglese": 7.08,
+                  "Matematica": 50.70
+                },
+                "averageScoresOfAllStudents": 70.28,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 70.28,
+                "title": "INGEGNERIA MATEMATICA"
+              },
+              {
+                "averageBirthYear": 2004.125,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 60.225,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.985,
+                  "Fisica": 3.735,
+                  "Inglese": 8.75,
+                  "Matematica": 34.755
+                },
+                "averageScoresOfAllStudents": 60.225,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 2,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.58,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "PIACENZA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+              }
+            ],
+            "howManyCanEnroll": 21,
+            "howManyStudents": 21,
+            "resultsSummarized": {
+              "60": 4,
+              "61": 5,
+              "62": 1,
+              "63": 1,
+              "64": 2,
+              "70": 1,
+              "72": 1,
+              "74": 1,
+              "76": 1,
+              "77": 1,
+              "81": 1,
+              "84": 1,
+              "92": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Ingegneria/2023/",
+            "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+            "location": "MILANO BOVISA",
+            "name": "Terza Graduatoria Di Seconda Fase",
+            "school": "Ingegneria",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.41667,
+                "averageEnglishCorrectAnswers": 26.66667,
+                "averageOfWhoPassed": 77.86333,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.50,
+                  "Fisica": 5.66667,
+                  "Inglese": 8.69667,
+                  "Matematica": 52.00
+                },
+                "averageScoresOfAllStudents": 77.86333,
+                "howManyCanEnroll": 3,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 3,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 76.07,
+                "title": "INGEGNERIA BIOMEDICA"
+              },
+              {
+                "averageBirthYear": 2004.66667,
+                "averageEnglishCorrectAnswers": 30.0,
+                "averageOfWhoPassed": 73.55,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 2.25,
+                  "Fisica": 8.00,
+                  "Inglese": 10.00,
+                  "Matematica": 53.30
+                },
+                "averageScoresOfAllStudents": 73.55,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 73.55,
+                "title": "INGEGNERIA CHIMICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE"
+              },
+              {
+                "averageBirthYear": 2004.08333,
+                "averageEnglishCorrectAnswers": 25.0,
+                "averageOfWhoPassed": 63.62,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.25,
+                  "Fisica": 3.50,
+                  "Inglese": 7.92,
+                  "Matematica": 40.95
+                },
+                "averageScoresOfAllStudents": 63.62,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 63.62,
+                "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELL'AUTOMAZIONE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+              },
+              {
+                "averageBirthYear": 2005.25,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 92.25,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 10.00,
+                  "Inglese": 8.75,
+                  "Matematica": 58.50
+                },
+                "averageScoresOfAllStudents": 92.25,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 92.25,
+                "title": "INGEGNERIA ELETTRICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA ELETTRONICA"
+              },
+              {
+                "averageBirthYear": 2004.83333,
+                "averageEnglishCorrectAnswers": 26.0,
+                "averageOfWhoPassed": 83.58,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 5.00,
+                  "Inglese": 8.33,
+                  "Matematica": 55.25
+                },
+                "averageScoresOfAllStudents": 83.58,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 83.58,
+                "title": "INGEGNERIA ENERGETICA"
+              },
+              {
+                "averageBirthYear": 2004.75,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 72.07,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.00,
+                  "Fisica": 8.00,
+                  "Inglese": 9.17,
+                  "Matematica": 42.90
+                },
+                "averageScoresOfAllStudents": 72.07,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 72.07,
+                "title": "INGEGNERIA FISICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": 2004.35417,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 60.4675,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 6.3775,
+                  "Fisica": 6.3275,
+                  "Inglese": 9.1675,
+                  "Matematica": 38.595
+                },
+                "averageScoresOfAllStudents": 60.4675,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 4,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.97,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": 2004.30556,
+                "averageEnglishCorrectAnswers": 28.5,
+                "averageOfWhoPassed": 61.85667,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 9.875,
+                  "Fisica": 2.41667,
+                  "Inglese": 9.37333,
+                  "Matematica": 40.19167
+                },
+                "averageScoresOfAllStudents": 61.85667,
+                "howManyCanEnroll": 6,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 6,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 60.03,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA ONLINE"
+              },
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": 23.0,
+                "averageOfWhoPassed": 70.28,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 7.50,
+                  "Fisica": 5.00,
+                  "Inglese": 7.08,
+                  "Matematica": 50.70
+                },
+                "averageScoresOfAllStudents": 70.28,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 70.28,
+                "title": "INGEGNERIA MATEMATICA"
+              },
+              {
+                "averageBirthYear": 2004.125,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 60.225,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.985,
+                  "Fisica": 3.735,
+                  "Inglese": 8.75,
+                  "Matematica": 34.755
+                },
+                "averageScoresOfAllStudents": 60.225,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 2,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.58,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "PIACENZA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+              }
+            ],
+            "howManyCanEnroll": 21,
+            "howManyStudents": 21,
+            "resultsSummarized": {
+              "60": 4,
+              "61": 5,
+              "62": 1,
+              "63": 1,
+              "64": 2,
+              "70": 1,
+              "72": 1,
+              "74": 1,
+              "76": 1,
+              "77": 1,
+              "81": 1,
+              "84": 1,
+              "92": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Ingegneria/2023/",
+            "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+            "location": "CREMONA",
+            "name": "Terza Graduatoria Di Seconda Fase",
+            "school": "Ingegneria",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.41667,
+                "averageEnglishCorrectAnswers": 26.66667,
+                "averageOfWhoPassed": 77.86333,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.50,
+                  "Fisica": 5.66667,
+                  "Inglese": 8.69667,
+                  "Matematica": 52.00
+                },
+                "averageScoresOfAllStudents": 77.86333,
+                "howManyCanEnroll": 3,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 3,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 76.07,
+                "title": "INGEGNERIA BIOMEDICA"
+              },
+              {
+                "averageBirthYear": 2004.66667,
+                "averageEnglishCorrectAnswers": 30.0,
+                "averageOfWhoPassed": 73.55,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 2.25,
+                  "Fisica": 8.00,
+                  "Inglese": 10.00,
+                  "Matematica": 53.30
+                },
+                "averageScoresOfAllStudents": 73.55,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 73.55,
+                "title": "INGEGNERIA CHIMICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE"
+              },
+              {
+                "averageBirthYear": 2004.08333,
+                "averageEnglishCorrectAnswers": 25.0,
+                "averageOfWhoPassed": 63.62,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.25,
+                  "Fisica": 3.50,
+                  "Inglese": 7.92,
+                  "Matematica": 40.95
+                },
+                "averageScoresOfAllStudents": 63.62,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 63.62,
+                "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELL'AUTOMAZIONE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+              },
+              {
+                "averageBirthYear": 2005.25,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 92.25,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 10.00,
+                  "Inglese": 8.75,
+                  "Matematica": 58.50
+                },
+                "averageScoresOfAllStudents": 92.25,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 92.25,
+                "title": "INGEGNERIA ELETTRICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA ELETTRONICA"
+              },
+              {
+                "averageBirthYear": 2004.83333,
+                "averageEnglishCorrectAnswers": 26.0,
+                "averageOfWhoPassed": 83.58,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 5.00,
+                  "Inglese": 8.33,
+                  "Matematica": 55.25
+                },
+                "averageScoresOfAllStudents": 83.58,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 83.58,
+                "title": "INGEGNERIA ENERGETICA"
+              },
+              {
+                "averageBirthYear": 2004.75,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 72.07,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.00,
+                  "Fisica": 8.00,
+                  "Inglese": 9.17,
+                  "Matematica": 42.90
+                },
+                "averageScoresOfAllStudents": 72.07,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 72.07,
+                "title": "INGEGNERIA FISICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": 2004.35417,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 60.4675,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 6.3775,
+                  "Fisica": 6.3275,
+                  "Inglese": 9.1675,
+                  "Matematica": 38.595
+                },
+                "averageScoresOfAllStudents": 60.4675,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 4,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.97,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": 2004.30556,
+                "averageEnglishCorrectAnswers": 28.5,
+                "averageOfWhoPassed": 61.85667,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 9.875,
+                  "Fisica": 2.41667,
+                  "Inglese": 9.37333,
+                  "Matematica": 40.19167
+                },
+                "averageScoresOfAllStudents": 61.85667,
+                "howManyCanEnroll": 6,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 6,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 60.03,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA ONLINE"
+              },
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": 23.0,
+                "averageOfWhoPassed": 70.28,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 7.50,
+                  "Fisica": 5.00,
+                  "Inglese": 7.08,
+                  "Matematica": 50.70
+                },
+                "averageScoresOfAllStudents": 70.28,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 70.28,
+                "title": "INGEGNERIA MATEMATICA"
+              },
+              {
+                "averageBirthYear": 2004.125,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 60.225,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.985,
+                  "Fisica": 3.735,
+                  "Inglese": 8.75,
+                  "Matematica": 34.755
+                },
+                "averageScoresOfAllStudents": 60.225,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 2,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.58,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "PIACENZA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+              }
+            ],
+            "howManyCanEnroll": 21,
+            "howManyStudents": 21,
+            "resultsSummarized": {
+              "60": 4,
+              "61": 5,
+              "62": 1,
+              "63": 1,
+              "64": 2,
+              "70": 1,
+              "72": 1,
+              "74": 1,
+              "76": 1,
+              "77": 1,
+              "81": 1,
+              "84": 1,
+              "92": 1
+            }
+          }
+        },
+        {
+          "singleCourseJson": {
+            "basePath": "Ingegneria/2023/",
+            "link": "Terza_Graduatoria_Di_Seconda_Fase.json",
+            "location": "PIACENZA",
+            "name": "Terza Graduatoria Di Seconda Fase",
+            "school": "Ingegneria",
+            "year": 2023
+          },
+          "stats": {
+            "courseSummarized": [
+              {
+                "averageBirthYear": 2004.41667,
+                "averageEnglishCorrectAnswers": 26.66667,
+                "averageOfWhoPassed": 77.86333,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.50,
+                  "Fisica": 5.66667,
+                  "Inglese": 8.69667,
+                  "Matematica": 52.00
+                },
+                "averageScoresOfAllStudents": 77.86333,
+                "howManyCanEnroll": 3,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 3,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 76.07,
+                "title": "INGEGNERIA BIOMEDICA"
+              },
+              {
+                "averageBirthYear": 2004.66667,
+                "averageEnglishCorrectAnswers": 30.0,
+                "averageOfWhoPassed": 73.55,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 2.25,
+                  "Fisica": 8.00,
+                  "Inglese": 10.00,
+                  "Matematica": 53.30
+                },
+                "averageScoresOfAllStudents": 73.55,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 73.55,
+                "title": "INGEGNERIA CHIMICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE"
+              },
+              {
+                "averageBirthYear": 2004.08333,
+                "averageEnglishCorrectAnswers": 25.0,
+                "averageOfWhoPassed": 63.62,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 11.25,
+                  "Fisica": 3.50,
+                  "Inglese": 7.92,
+                  "Matematica": 40.95
+                },
+                "averageScoresOfAllStudents": 63.62,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 63.62,
+                "title": "INGEGNERIA CIVILE - CIVIL ENGINEERING"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA CIVILE PER LA MITIGAZIONE DEL RISCHIO"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELL'AUTOMAZIONE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "LECCO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA EDILE E DELLE COSTRUZIONI"
+              },
+              {
+                "averageBirthYear": 2005.25,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 92.25,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 10.00,
+                  "Inglese": 8.75,
+                  "Matematica": 58.50
+                },
+                "averageScoresOfAllStudents": 92.25,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 92.25,
+                "title": "INGEGNERIA ELETTRICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA ELETTRONICA"
+              },
+              {
+                "averageBirthYear": 2004.83333,
+                "averageEnglishCorrectAnswers": 26.0,
+                "averageOfWhoPassed": 83.58,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 15.00,
+                  "Fisica": 5.00,
+                  "Inglese": 8.33,
+                  "Matematica": 55.25
+                },
+                "averageScoresOfAllStudents": 83.58,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 83.58,
+                "title": "INGEGNERIA ENERGETICA"
+              },
+              {
+                "averageBirthYear": 2004.75,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 72.07,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.00,
+                  "Fisica": 8.00,
+                  "Inglese": 9.17,
+                  "Matematica": 42.90
+                },
+                "averageScoresOfAllStudents": 72.07,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 72.07,
+                "title": "INGEGNERIA FISICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": 2004.35417,
+                "averageEnglishCorrectAnswers": 28.0,
+                "averageOfWhoPassed": 60.4675,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 6.3775,
+                  "Fisica": 6.3275,
+                  "Inglese": 9.1675,
+                  "Matematica": 38.595
+                },
+                "averageScoresOfAllStudents": 60.4675,
+                "howManyCanEnroll": 4,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 4,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.97,
+                "title": "INGEGNERIA GESTIONALE"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "CREMONA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": 2004.30556,
+                "averageEnglishCorrectAnswers": 28.5,
+                "averageOfWhoPassed": 61.85667,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 9.875,
+                  "Fisica": 2.41667,
+                  "Inglese": 9.37333,
+                  "Matematica": 40.19167
+                },
+                "averageScoresOfAllStudents": 61.85667,
+                "howManyCanEnroll": 6,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 6,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 60.03,
+                "title": "INGEGNERIA INFORMATICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA INFORMATICA ONLINE"
+              },
+              {
+                "averageBirthYear": 2004.16667,
+                "averageEnglishCorrectAnswers": 23.0,
+                "averageOfWhoPassed": 70.28,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 7.50,
+                  "Fisica": 5.00,
+                  "Inglese": 7.08,
+                  "Matematica": 50.70
+                },
+                "averageScoresOfAllStudents": 70.28,
+                "howManyCanEnroll": 1,
+                "howManyOfa": {
+                  "ENG": 1,
+                  "TEST": 0
+                },
+                "howManyStudents": 1,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": 70.28,
+                "title": "INGEGNERIA MATEMATICA"
+              },
+              {
+                "averageBirthYear": 2004.125,
+                "averageEnglishCorrectAnswers": 27.0,
+                "averageOfWhoPassed": 60.225,
+                "averagePartialScores": {
+                  "Comprensione Verbale": 12.985,
+                  "Fisica": 3.735,
+                  "Inglese": 8.75,
+                  "Matematica": 34.755
+                },
+                "averageScoresOfAllStudents": 60.225,
+                "howManyCanEnroll": 2,
+                "howManyOfa": {
+                  "ENG": 0,
+                  "TEST": 0
+                },
+                "howManyStudents": 2,
+                "location": "MILANO BOVISA",
+                "minScoreToEnroll": 59.58,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "PIACENZA",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA MECCANICA"
+              },
+              {
+                "averageBirthYear": null,
+                "averageEnglishCorrectAnswers": null,
+                "averageOfWhoPassed": null,
+                "averagePartialScores": null,
+                "averageScoresOfAllStudents": null,
+                "howManyCanEnroll": null,
+                "howManyOfa": null,
+                "howManyStudents": null,
+                "location": "MILANO LEONARDO",
+                "minScoreToEnroll": null,
+                "title": "INGEGNERIA PER L'AMBIENTE E IL TERRITORIO"
+              }
+            ],
+            "howManyCanEnroll": 21,
+            "howManyStudents": 21,
+            "resultsSummarized": {
+              "60": 4,
+              "61": 5,
+              "62": 1,
+              "63": 1,
+              "64": 2,
+              "70": 1,
+              "72": 1,
+              "74": 1,
+              "76": 1,
+              "77": 1,
+              "81": 1,
+              "84": 1,
+              "92": 1
+            }
+          }
         }
       ],
-      "numStudents": 2567
+      "numStudents": 2588
     },
     "Urbanistica": {
       "list": [
