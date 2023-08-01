@@ -2,6 +2,8 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Objects;
+using PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
 #endregion
 
@@ -12,8 +14,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects;
 public class StudentResult
 {
     public DateOnly? BirthDate;
-    public bool? CanEnroll;
-    public string? CanEnrollInto;
+    public EnrollType? EnrollType;
     public int? EnglishCorrectAnswers;
     public string? Id;
     public SortedDictionary<string, bool>? Ofa; // maybe change it
@@ -22,17 +23,22 @@ public class StudentResult
     public decimal? Result;
     public SortedDictionary<string, decimal>? SectionsResults;
 
+    public StudentResult()
+    {
+        //don't remove it
+    }
+
     public int GetHashWithoutLastUpdate()
     {
         var i = "StudentResult".GetHashCode();
         i ^= BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode();
-        i ^= CanEnroll?.GetHashCode() ?? "CanEnroll".GetHashCode();
-        i ^= CanEnrollInto?.GetHashCode() ?? "CanEnrollInto".GetHashCode();
+        i ^= EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode();
         i ^= EnglishCorrectAnswers?.GetHashCode() ?? "EnglishCorrectAnswers".GetHashCode();
         i ^= Id?.GetHashCode() ?? "Id".GetHashCode();
         i ^= PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode();
         i ^= PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode();
         i ^= Result?.GetHashCode() ?? "Result".GetHashCode();
+        i ^= EnrollType?.GetHashCode() ?? "EnrollType".GetHashCode();
         if (Ofa == null)
             i ^= "Ofa".GetHashCode();
         else

@@ -39,7 +39,7 @@ public class RankingSummary
         var courseTableStatsList = ranking.ByCourse?.Select(x => x.GetStats())
             .OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
 
-        var howManyCanEnroll = byMeritRows?.Count(x => x.CanEnroll ?? false);
+        var howManyCanEnroll = byMeritRows?.Count(x => x.EnrollType?.CanEnroll ?? false);
 
 
         var groupBy = courseTableStatsList?.GroupBy(x =>

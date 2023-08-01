@@ -1,5 +1,6 @@
 ﻿#region
 
+using PoliNetwork.Graduatorie.Common.Utils;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
@@ -13,20 +14,22 @@ public static class Converter
     public static StudentResult FromMeritTableToStudentResult(MeritTableRow row)
     {
         var rowCanEnroll = row.CanEnroll ?? false;
+        var rowCanEnrollInto = rowCanEnroll ? row.CanEnrollInto : null;
         return new StudentResult
         {
             Id = row.Id,
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = null,
-            CanEnroll = rowCanEnroll,
-            CanEnrollInto = rowCanEnroll ? row.CanEnrollInto : null,
             PositionAbsolute = row.Position,
             PositionCourse = null,
             SectionsResults = null,
-            EnglishCorrectAnswers = null
+            EnglishCorrectAnswers = null,
+            EnrollType = EnrollUtil.GetEnrollType(rowCanEnrollInto, rowCanEnroll)
         };
     }
+
+    
 
     public static StudentResult FromCourseTableRowToStudentResult(CourseTableRow row, Table<CourseTableRow> course)
     {
@@ -37,8 +40,7 @@ public static class Converter
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = row.BirthDate,
-            CanEnroll = rowCanEnroll,
-            CanEnrollInto = rowCanEnroll ? course.CourseTitle : null,
+            EnrollType = EnrollUtil.GetEnrollType(course.CourseTitle, rowCanEnroll),
             PositionAbsolute = null,
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
