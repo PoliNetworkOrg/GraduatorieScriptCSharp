@@ -16,7 +16,6 @@ public static class PathUtils
 
             // Constants
 
-
             // Check if the starting folder itself is the data folder
             var findDataFolder = System.IO.Path.Combine(startingFolder, folderToFind);
 
