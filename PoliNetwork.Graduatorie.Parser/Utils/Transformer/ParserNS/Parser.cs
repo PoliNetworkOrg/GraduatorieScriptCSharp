@@ -623,7 +623,7 @@ public class Parser
         var canEnroll = row.CanEnroll ?? false;
         var student = new StudentResult
         {
-            EnrollType = EnrollUtil.GetEnrollType(row.CanEnrollInto , canEnroll),
+            EnrollType = EnrollUtil.GetEnrollType(row.CanEnrollInto, canEnroll),
             Id = row.Id,
             PositionAbsolute = row.Position,
             Result = row.Result,

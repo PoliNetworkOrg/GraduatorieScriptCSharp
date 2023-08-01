@@ -3,7 +3,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Objects;
-using PoliNetwork.Graduatorie.Parser.Utils.Transformer.ParserNS;
 
 #endregion
 
@@ -14,19 +13,14 @@ namespace PoliNetwork.Graduatorie.Parser.Objects;
 public class StudentResult
 {
     public DateOnly? BirthDate;
-    public EnrollType? EnrollType;
     public int? EnglishCorrectAnswers;
+    public EnrollType? EnrollType;
     public string? Id;
     public SortedDictionary<string, bool>? Ofa; // maybe change it
     public int? PositionAbsolute;
     public int? PositionCourse;
     public decimal? Result;
     public SortedDictionary<string, decimal>? SectionsResults;
-
-    public StudentResult()
-    {
-        //don't remove it
-    }
 
     public int GetHashWithoutLastUpdate()
     {

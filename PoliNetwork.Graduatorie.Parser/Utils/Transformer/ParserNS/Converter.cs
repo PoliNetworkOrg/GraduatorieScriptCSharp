@@ -29,7 +29,6 @@ public static class Converter
         };
     }
 
-    
 
     public static StudentResult FromCourseTableRowToStudentResult(CourseTableRow row, Table<CourseTableRow> course)
     {
