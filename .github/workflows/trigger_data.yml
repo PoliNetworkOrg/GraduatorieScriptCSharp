@@ -17,4 +17,4 @@ jobs:
       with:
         workflow: update.yml
         repo: PoliNetworkOrg/RankingsDati
-        inputs: '{ "is_release": ${{ github.event_name == ''release'' }} }"'
+        inputs: '{ "is_release": ${{ github.event_name == ''release'' }} }'
