@@ -30,9 +30,12 @@
       "rows": [
         {
           "birthDate": "2002-03-31",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "9688edd863c24f34bcd5",
           "ofa": {
             "ENG": false
@@ -51,9 +54,12 @@
         },
         {
           "birthDate": "2002-10-28",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "0b1cc9222a60eae8da7e",
           "ofa": {
             "ENG": false
@@ -72,9 +78,12 @@
         },
         {
           "birthDate": "2000-05-14",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "13e36ab9220fdd6844d9",
           "ofa": {
             "ENG": true
@@ -93,9 +102,12 @@
         },
         {
           "birthDate": "2002-01-07",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "d68dd4dc73b86e2a19db",
           "ofa": {
             "ENG": false
@@ -114,9 +126,12 @@
         },
         {
           "birthDate": "2002-08-10",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "56f98add3bd0be895093",
           "ofa": {
             "ENG": false
@@ -135,9 +150,12 @@
         },
         {
           "birthDate": "2003-03-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "8a184bd8eb73cc5235e6",
           "ofa": {
             "ENG": false
@@ -156,9 +174,12 @@
         },
         {
           "birthDate": "2002-11-18",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 18,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "067ffd6bab006c866366",
           "ofa": {
             "ENG": true
@@ -177,9 +198,12 @@
         },
         {
           "birthDate": "2002-12-23",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "a44c8ed9529fce579132",
           "ofa": {
             "ENG": false
@@ -198,9 +222,12 @@
         },
         {
           "birthDate": "2004-04-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 11,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "f331ae5ae158421f73f4",
           "ofa": {
             "ENG": true
@@ -219,9 +246,12 @@
         },
         {
           "birthDate": "2003-05-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "5afa72ef7f8157d53563",
           "ofa": {
             "ENG": true
@@ -240,9 +270,12 @@
         },
         {
           "birthDate": "2004-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "90d8365f1029dfa22abd",
           "ofa": {
             "ENG": false
@@ -261,9 +294,12 @@
         },
         {
           "birthDate": "2002-09-27",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+            "type": null
+          },
           "id": "6397d32e82aedd9d2d74",
           "ofa": {
             "ENG": false
@@ -282,9 +318,12 @@
         },
         {
           "birthDate": "2003-11-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "e2a9a687a6f052dd2b20",
           "ofa": {
             "ENG": false
@@ -334,9 +373,12 @@
       "rows": [
         {
           "birthDate": "1999-07-18",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "82ed9de6a0ae041d3b9a",
           "ofa": {
             "ENG": false
@@ -355,9 +397,12 @@
         },
         {
           "birthDate": "2003-06-11",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "841404869b5d58ddb5a4",
           "ofa": {
             "ENG": false
@@ -376,9 +421,12 @@
         },
         {
           "birthDate": "1999-11-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "52139ba52d411b7321e4",
           "ofa": {
             "ENG": false
@@ -397,9 +445,12 @@
         },
         {
           "birthDate": "2002-08-17",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "0d897bfe4f772144aa9b",
           "ofa": {
             "ENG": false
@@ -418,9 +469,12 @@
         },
         {
           "birthDate": "2002-07-29",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "3927994558b28e72186a",
           "ofa": {
             "ENG": false
@@ -439,9 +493,12 @@
         },
         {
           "birthDate": "2002-04-07",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "5d138a0a1d98b51a34bc",
           "ofa": {
             "ENG": false
@@ -460,9 +517,12 @@
         },
         {
           "birthDate": "2004-09-09",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "e02e743aeed8681a495b",
           "ofa": {
             "ENG": true
@@ -481,9 +541,12 @@
         },
         {
           "birthDate": "2002-09-07",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "8f434e2e93acc70f8ff4",
           "ofa": {
             "ENG": false
@@ -502,9 +565,12 @@
         },
         {
           "birthDate": "2002-08-15",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "79ffce4188299a14146e",
           "ofa": {
             "ENG": false
@@ -523,9 +589,12 @@
         },
         {
           "birthDate": "2002-11-03",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "962d7fe74be453ef42e0",
           "ofa": {
             "ENG": false
@@ -544,9 +613,12 @@
         },
         {
           "birthDate": "2002-06-05",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "f230749af7d561cd23b2",
           "ofa": {
             "ENG": true
@@ -565,9 +637,12 @@
         },
         {
           "birthDate": "2003-11-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "dba851eb0f4c9a25cb74",
           "ofa": {
             "ENG": false
@@ -586,9 +661,12 @@
         },
         {
           "birthDate": "2003-06-25",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "c4ff8d671a6b754b37cf",
           "ofa": {
             "ENG": false
@@ -607,9 +685,12 @@
         },
         {
           "birthDate": "2002-08-15",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "ed65ae91f48b3bd6fb2c",
           "ofa": {
             "ENG": false
@@ -628,9 +709,12 @@
         },
         {
           "birthDate": "1999-02-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 16,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "c1ec2ac4f14fe99bcbe4",
           "ofa": {
             "ENG": true
@@ -649,9 +733,12 @@
         },
         {
           "birthDate": "2000-08-22",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "e13d0e8dddce1ced7dce",
           "ofa": {
             "ENG": true
@@ -670,9 +757,12 @@
         },
         {
           "birthDate": "2002-05-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "7d348e3b11d606c89dd4",
           "ofa": {
             "ENG": true
@@ -691,9 +781,12 @@
         },
         {
           "birthDate": "2003-12-26",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "7113ccbc78b30e37a6fe",
           "ofa": {
             "ENG": false
@@ -712,9 +805,12 @@
         },
         {
           "birthDate": "2000-05-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "27740d21be037742da18",
           "ofa": {
             "ENG": false
@@ -733,9 +829,12 @@
         },
         {
           "birthDate": "2001-11-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "6070b61f4c1f384d3b1a",
           "ofa": {
             "ENG": false
@@ -754,9 +853,12 @@
         },
         {
           "birthDate": "2003-06-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "103fbe24b3b3858f90ce",
           "ofa": {
             "ENG": false
@@ -775,9 +877,12 @@
         },
         {
           "birthDate": "2003-05-22",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "05d1c51b67bd1b79e9a7",
           "ofa": {
             "ENG": false
@@ -796,9 +901,12 @@
         },
         {
           "birthDate": "1999-07-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "1a0dc7297c4555b29cd5",
           "ofa": {
             "ENG": true
@@ -817,9 +925,12 @@
         },
         {
           "birthDate": "2001-12-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "4228877951512ee6dbed",
           "ofa": {
             "ENG": false
@@ -838,9 +949,12 @@
         },
         {
           "birthDate": "1998-10-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "b4a01b3038d4add68bdd",
           "ofa": {
             "ENG": false
@@ -859,9 +973,12 @@
         },
         {
           "birthDate": "2002-09-21",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "7f95f860fde287ba1de5",
           "ofa": {
             "ENG": true
@@ -880,9 +997,12 @@
         },
         {
           "birthDate": "2004-02-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "5a834dd1d1783c9cc6f0",
           "ofa": {
             "ENG": false
@@ -932,9 +1052,12 @@
       "rows": [
         {
           "birthDate": "2002-11-14",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "7c30bad180da34e19128",
           "ofa": {
             "ENG": false
@@ -953,9 +1076,12 @@
         },
         {
           "birthDate": "2002-07-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "8160a51989c849411d96",
           "ofa": {
             "ENG": false
@@ -974,9 +1100,12 @@
         },
         {
           "birthDate": "2003-06-03",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "d4427414f33ac1d737d2",
           "ofa": {
             "ENG": false
@@ -995,9 +1124,12 @@
         },
         {
           "birthDate": "2004-02-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "6feb4e27989552f10a86",
           "ofa": {
             "ENG": false
@@ -1016,9 +1148,12 @@
         },
         {
           "birthDate": "2004-03-26",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "4409dd07c0ad1a70d346",
           "ofa": {
             "ENG": false
@@ -1037,9 +1172,12 @@
         },
         {
           "birthDate": "2003-08-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "416bf2d29a3dea118c78",
           "ofa": {
             "ENG": true
@@ -1058,9 +1196,12 @@
         },
         {
           "birthDate": "2002-11-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "aaabb7dbac9634d7aa02",
           "ofa": {
             "ENG": false
@@ -1079,9 +1220,12 @@
         },
         {
           "birthDate": "1992-02-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "038ae0ec50a9cbf36036",
           "ofa": {
             "ENG": true
@@ -1131,9 +1275,12 @@
       "rows": [
         {
           "birthDate": "2001-04-18",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 16,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "b328b3db0d968b722ad9",
           "ofa": {
             "ENG": true
@@ -1152,9 +1299,12 @@
         },
         {
           "birthDate": "2002-12-14",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "33dcdbf8d6abd33cc582",
           "ofa": {
             "ENG": false
@@ -1173,9 +1323,12 @@
         },
         {
           "birthDate": "2002-12-08",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "2b0acb28660ef83466cb",
           "ofa": {
             "ENG": false
@@ -1194,9 +1347,12 @@
         },
         {
           "birthDate": "2004-12-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "24dc9a8f617a97ffbee3",
           "ofa": {
             "ENG": true
@@ -1215,9 +1371,12 @@
         },
         {
           "birthDate": "2003-06-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "fa90eced848cc6b130db",
           "ofa": {
             "ENG": false
@@ -1236,9 +1395,12 @@
         },
         {
           "birthDate": "2003-06-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "b7d2e42e6634f719f4eb",
           "ofa": {
             "ENG": false
@@ -1257,9 +1419,12 @@
         },
         {
           "birthDate": "1988-01-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "7cf61c92f5490efbbd40",
           "ofa": {
             "ENG": true
@@ -1278,9 +1443,12 @@
         },
         {
           "birthDate": "2004-05-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "6e321638aa402a445562",
           "ofa": {
             "ENG": false
@@ -1299,9 +1467,12 @@
         },
         {
           "birthDate": "1998-01-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "b8b5c229a10ff0bba27a",
           "ofa": {
             "ENG": false
@@ -1320,9 +1491,12 @@
         },
         {
           "birthDate": "2002-01-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "6f39b52b405c7e5698e9",
           "ofa": {
             "ENG": false
@@ -1341,9 +1515,12 @@
         },
         {
           "birthDate": "2003-02-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "ebc1e03bd251b883e1e7",
           "ofa": {
             "ENG": false
@@ -1362,9 +1539,12 @@
         },
         {
           "birthDate": "2004-02-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "ee579a0a1c96a973cf2f",
           "ofa": {
             "ENG": true
@@ -1383,9 +1563,12 @@
         },
         {
           "birthDate": "2003-01-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "050d6965ec35ce89299f",
           "ofa": {
             "ENG": false
@@ -1404,9 +1587,12 @@
         },
         {
           "birthDate": "1998-03-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": "174fa3ff934831f2dfed",
           "ofa": {
             "ENG": false
@@ -1439,9 +1625,12 @@
     "rows": [
       {
         "birthDate": "1999-07-18",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "82ed9de6a0ae041d3b9a",
         "ofa": {
           "ENG": false
@@ -1460,9 +1649,12 @@
       },
       {
         "birthDate": "2003-06-11",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "841404869b5d58ddb5a4",
         "ofa": {
           "ENG": false
@@ -1481,9 +1673,12 @@
       },
       {
         "birthDate": "1999-11-30",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "52139ba52d411b7321e4",
         "ofa": {
           "ENG": false
@@ -1502,9 +1697,12 @@
       },
       {
         "birthDate": "2002-03-31",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "9688edd863c24f34bcd5",
         "ofa": {
           "ENG": false
@@ -1523,9 +1721,12 @@
       },
       {
         "birthDate": "2001-04-18",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 16,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "b328b3db0d968b722ad9",
         "ofa": {
           "ENG": true
@@ -1544,9 +1745,12 @@
       },
       {
         "birthDate": "2002-08-17",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "0d897bfe4f772144aa9b",
         "ofa": {
           "ENG": false
@@ -1565,9 +1769,12 @@
       },
       {
         "birthDate": "2002-07-29",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "3927994558b28e72186a",
         "ofa": {
           "ENG": false
@@ -1586,9 +1793,12 @@
       },
       {
         "birthDate": "2002-12-14",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "33dcdbf8d6abd33cc582",
         "ofa": {
           "ENG": false
@@ -1607,9 +1817,12 @@
       },
       {
         "birthDate": "2002-04-07",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "5d138a0a1d98b51a34bc",
         "ofa": {
           "ENG": false
@@ -1628,9 +1841,12 @@
       },
       {
         "birthDate": "2002-10-28",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "0b1cc9222a60eae8da7e",
         "ofa": {
           "ENG": false
@@ -1649,9 +1865,12 @@
       },
       {
         "birthDate": "2000-05-14",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "13e36ab9220fdd6844d9",
         "ofa": {
           "ENG": true
@@ -1670,9 +1889,12 @@
       },
       {
         "birthDate": "2002-12-08",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "2b0acb28660ef83466cb",
         "ofa": {
           "ENG": false
@@ -1691,9 +1913,12 @@
       },
       {
         "birthDate": "2004-09-09",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "e02e743aeed8681a495b",
         "ofa": {
           "ENG": true
@@ -1712,9 +1937,12 @@
       },
       {
         "birthDate": "2002-01-07",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "d68dd4dc73b86e2a19db",
         "ofa": {
           "ENG": false
@@ -1733,9 +1961,12 @@
       },
       {
         "birthDate": "2004-12-12",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "24dc9a8f617a97ffbee3",
         "ofa": {
           "ENG": true
@@ -1754,9 +1985,12 @@
       },
       {
         "birthDate": "2002-08-10",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "56f98add3bd0be895093",
         "ofa": {
           "ENG": false
@@ -1775,9 +2009,12 @@
       },
       {
         "birthDate": "2002-09-07",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "8f434e2e93acc70f8ff4",
         "ofa": {
           "ENG": false
@@ -1796,9 +2033,12 @@
       },
       {
         "birthDate": "2002-11-14",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "7c30bad180da34e19128",
         "ofa": {
           "ENG": false
@@ -1817,9 +2057,12 @@
       },
       {
         "birthDate": "2002-08-15",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "79ffce4188299a14146e",
         "ofa": {
           "ENG": false
@@ -1838,9 +2081,12 @@
       },
       {
         "birthDate": "2002-11-03",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "962d7fe74be453ef42e0",
         "ofa": {
           "ENG": false
@@ -1859,9 +2105,12 @@
       },
       {
         "birthDate": "2002-07-13",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "8160a51989c849411d96",
         "ofa": {
           "ENG": false
@@ -1880,9 +2129,12 @@
       },
       {
         "birthDate": "2002-06-05",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 19,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "f230749af7d561cd23b2",
         "ofa": {
           "ENG": true
@@ -1901,9 +2153,12 @@
       },
       {
         "birthDate": "2003-11-06",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "dba851eb0f4c9a25cb74",
         "ofa": {
           "ENG": false
@@ -1922,9 +2177,12 @@
       },
       {
         "birthDate": "2003-03-30",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "8a184bd8eb73cc5235e6",
         "ofa": {
           "ENG": false
@@ -1943,9 +2201,12 @@
       },
       {
         "birthDate": "2003-06-25",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "c4ff8d671a6b754b37cf",
         "ofa": {
           "ENG": false
@@ -1964,9 +2225,12 @@
       },
       {
         "birthDate": "2003-06-03",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "d4427414f33ac1d737d2",
         "ofa": {
           "ENG": false
@@ -1985,9 +2249,12 @@
       },
       {
         "birthDate": "2002-08-15",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "ed65ae91f48b3bd6fb2c",
         "ofa": {
           "ENG": false
@@ -2006,9 +2273,12 @@
       },
       {
         "birthDate": "2003-06-12",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "fa90eced848cc6b130db",
         "ofa": {
           "ENG": false
@@ -2027,9 +2297,12 @@
       },
       {
         "birthDate": "2003-06-17",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "b7d2e42e6634f719f4eb",
         "ofa": {
           "ENG": false
@@ -2048,9 +2321,12 @@
       },
       {
         "birthDate": "1999-02-06",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 16,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "c1ec2ac4f14fe99bcbe4",
         "ofa": {
           "ENG": true
@@ -2069,9 +2345,12 @@
       },
       {
         "birthDate": "2000-08-22",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "e13d0e8dddce1ced7dce",
         "ofa": {
           "ENG": true
@@ -2090,9 +2369,12 @@
       },
       {
         "birthDate": "2002-11-18",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 18,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "067ffd6bab006c866366",
         "ofa": {
           "ENG": true
@@ -2111,9 +2393,12 @@
       },
       {
         "birthDate": "2002-05-06",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 20,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "7d348e3b11d606c89dd4",
         "ofa": {
           "ENG": true
@@ -2132,9 +2417,12 @@
       },
       {
         "birthDate": "2003-12-26",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "7113ccbc78b30e37a6fe",
         "ofa": {
           "ENG": false
@@ -2153,9 +2441,12 @@
       },
       {
         "birthDate": "1988-01-28",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 19,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "7cf61c92f5490efbbd40",
         "ofa": {
           "ENG": true
@@ -2174,9 +2465,12 @@
       },
       {
         "birthDate": "2004-05-01",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "6e321638aa402a445562",
         "ofa": {
           "ENG": false
@@ -2195,9 +2489,12 @@
       },
       {
         "birthDate": "2000-05-11",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "27740d21be037742da18",
         "ofa": {
           "ENG": false
@@ -2216,9 +2513,12 @@
       },
       {
         "birthDate": "2002-12-23",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "a44c8ed9529fce579132",
         "ofa": {
           "ENG": false
@@ -2237,9 +2537,12 @@
       },
       {
         "birthDate": "2004-02-12",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "6feb4e27989552f10a86",
         "ofa": {
           "ENG": false
@@ -2258,9 +2561,12 @@
       },
       {
         "birthDate": "2004-03-26",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "4409dd07c0ad1a70d346",
         "ofa": {
           "ENG": false
@@ -2279,9 +2585,12 @@
       },
       {
         "birthDate": "1998-01-16",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "b8b5c229a10ff0bba27a",
         "ofa": {
           "ENG": false
@@ -2300,9 +2609,12 @@
       },
       {
         "birthDate": "2002-01-14",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "6f39b52b405c7e5698e9",
         "ofa": {
           "ENG": false
@@ -2321,9 +2633,12 @@
       },
       {
         "birthDate": "2001-11-09",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "6070b61f4c1f384d3b1a",
         "ofa": {
           "ENG": false
@@ -2342,9 +2657,12 @@
       },
       {
         "birthDate": "2003-06-24",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "103fbe24b3b3858f90ce",
         "ofa": {
           "ENG": false
@@ -2363,9 +2681,12 @@
       },
       {
         "birthDate": "2003-08-29",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "416bf2d29a3dea118c78",
         "ofa": {
           "ENG": true
@@ -2384,9 +2705,12 @@
       },
       {
         "birthDate": "2003-02-20",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "ebc1e03bd251b883e1e7",
         "ofa": {
           "ENG": false
@@ -2405,9 +2729,12 @@
       },
       {
         "birthDate": "2002-11-17",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "aaabb7dbac9634d7aa02",
         "ofa": {
           "ENG": false
@@ -2426,9 +2753,12 @@
       },
       {
         "birthDate": "2003-05-22",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "05d1c51b67bd1b79e9a7",
         "ofa": {
           "ENG": false
@@ -2447,9 +2777,12 @@
       },
       {
         "birthDate": "1999-07-19",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "1a0dc7297c4555b29cd5",
         "ofa": {
           "ENG": true
@@ -2468,9 +2801,12 @@
       },
       {
         "birthDate": "2004-02-28",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 19,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "ee579a0a1c96a973cf2f",
         "ofa": {
           "ENG": true
@@ -2489,9 +2825,12 @@
       },
       {
         "birthDate": "2004-04-13",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 11,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "f331ae5ae158421f73f4",
         "ofa": {
           "ENG": true
@@ -2510,9 +2849,12 @@
       },
       {
         "birthDate": "2003-01-26",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "050d6965ec35ce89299f",
         "ofa": {
           "ENG": false
@@ -2531,9 +2873,12 @@
       },
       {
         "birthDate": "1992-02-19",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 22,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "038ae0ec50a9cbf36036",
         "ofa": {
           "ENG": true
@@ -2552,9 +2897,12 @@
       },
       {
         "birthDate": "2001-12-08",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "4228877951512ee6dbed",
         "ofa": {
           "ENG": false
@@ -2573,9 +2921,12 @@
       },
       {
         "birthDate": "2003-05-14",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 21,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "5afa72ef7f8157d53563",
         "ofa": {
           "ENG": true
@@ -2594,9 +2945,12 @@
       },
       {
         "birthDate": "1998-10-01",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "b4a01b3038d4add68bdd",
         "ofa": {
           "ENG": false
@@ -2615,9 +2969,12 @@
       },
       {
         "birthDate": "2002-09-21",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 21,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "7f95f860fde287ba1de5",
         "ofa": {
           "ENG": true
@@ -2636,9 +2993,12 @@
       },
       {
         "birthDate": "1998-03-25",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "174fa3ff934831f2dfed",
         "ofa": {
           "ENG": false
@@ -2657,9 +3017,12 @@
       },
       {
         "birthDate": "2004-05-29",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "90d8365f1029dfa22abd",
         "ofa": {
           "ENG": false
@@ -2678,9 +3041,12 @@
       },
       {
         "birthDate": "2002-09-27",
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": "6397d32e82aedd9d2d74",
         "ofa": {
           "ENG": false
@@ -2699,9 +3065,12 @@
       },
       {
         "birthDate": "2004-02-17",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "5a834dd1d1783c9cc6f0",
         "ofa": {
           "ENG": false
@@ -2720,9 +3089,12 @@
       },
       {
         "birthDate": "2003-11-22",
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": "e2a9a687a6f052dd2b20",
         "ofa": {
           "ENG": false
@@ -2743,7 +3115,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-08-01T08:41:59.139004Z",
+  "lastUpdate": "2023-08-01T23:05:31.4848748Z",
   "rankingOrder": {
     "anticipata": false,
     "extraEu": true,

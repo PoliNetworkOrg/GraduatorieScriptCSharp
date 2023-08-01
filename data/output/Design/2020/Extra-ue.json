@@ -27,9 +27,12 @@
       "rows": [
         {
           "birthDate": "1995-12-20",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -47,9 +50,12 @@
         },
         {
           "birthDate": "2000-06-23",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -67,9 +73,12 @@
         },
         {
           "birthDate": "2000-11-03",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 15,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -87,9 +96,12 @@
         },
         {
           "birthDate": "2000-09-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -107,9 +119,12 @@
         },
         {
           "birthDate": "1994-10-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -127,9 +142,12 @@
         },
         {
           "birthDate": "2001-04-28",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -147,9 +165,12 @@
         },
         {
           "birthDate": "2000-01-23",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -167,9 +188,12 @@
         },
         {
           "birthDate": "2000-09-01",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": null,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -187,9 +211,12 @@
         },
         {
           "birthDate": "1997-02-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -207,9 +234,12 @@
         },
         {
           "birthDate": "2000-11-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEGLI INTERNI",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEGLI INTERNI",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -227,9 +257,12 @@
         },
         {
           "birthDate": "2000-09-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 9,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -247,9 +280,12 @@
         },
         {
           "birthDate": "2001-11-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -267,9 +303,12 @@
         },
         {
           "birthDate": "1998-04-23",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 16,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -287,9 +326,12 @@
         },
         {
           "birthDate": "2000-07-13",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -307,9 +349,12 @@
         },
         {
           "birthDate": "2001-06-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -327,9 +372,12 @@
         },
         {
           "birthDate": "1999-11-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -347,9 +395,12 @@
         },
         {
           "birthDate": "2000-05-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -367,9 +418,12 @@
         },
         {
           "birthDate": "2000-09-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 17,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -387,9 +441,12 @@
         },
         {
           "birthDate": "1988-11-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -407,9 +464,12 @@
         },
         {
           "birthDate": "2000-10-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -427,9 +487,12 @@
         },
         {
           "birthDate": "2001-05-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -447,9 +510,12 @@
         },
         {
           "birthDate": "1999-12-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 18,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -467,9 +533,12 @@
         },
         {
           "birthDate": "2001-04-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -487,9 +556,12 @@
         },
         {
           "birthDate": "2001-09-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -507,9 +579,12 @@
         },
         {
           "birthDate": "2000-11-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -527,9 +602,12 @@
         },
         {
           "birthDate": "2000-02-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 18,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -547,9 +625,12 @@
         },
         {
           "birthDate": "2000-05-29",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -567,9 +648,12 @@
         },
         {
           "birthDate": "2000-11-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -587,9 +671,12 @@
         },
         {
           "birthDate": "2001-01-14",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 13,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -607,9 +694,12 @@
         },
         {
           "birthDate": "2000-12-04",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -627,9 +717,12 @@
         },
         {
           "birthDate": "2001-08-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 18,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -647,9 +740,12 @@
         },
         {
           "birthDate": "2001-07-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 11,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -667,9 +763,12 @@
         },
         {
           "birthDate": "1998-02-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -715,9 +814,12 @@
       "rows": [
         {
           "birthDate": "2001-01-22",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -735,9 +837,12 @@
         },
         {
           "birthDate": "2000-10-09",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -755,9 +860,12 @@
         },
         {
           "birthDate": "2001-01-11",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -775,9 +883,12 @@
         },
         {
           "birthDate": "2001-10-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -795,9 +906,12 @@
         },
         {
           "birthDate": "1997-04-15",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -815,9 +929,12 @@
         },
         {
           "birthDate": "1999-10-25",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -835,9 +952,12 @@
         },
         {
           "birthDate": "2001-08-04",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -855,9 +975,12 @@
         },
         {
           "birthDate": "2000-10-13",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 13,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -875,9 +998,12 @@
         },
         {
           "birthDate": "2000-01-15",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": null,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -895,9 +1021,12 @@
         },
         {
           "birthDate": "2000-07-23",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -915,9 +1044,12 @@
         },
         {
           "birthDate": "1998-06-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -935,9 +1067,12 @@
         },
         {
           "birthDate": "2001-04-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -955,9 +1090,12 @@
         },
         {
           "birthDate": "1999-01-10",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -975,9 +1113,12 @@
         },
         {
           "birthDate": "2000-01-05",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": null,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -995,9 +1136,12 @@
         },
         {
           "birthDate": "2001-07-26",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1015,9 +1159,12 @@
         },
         {
           "birthDate": "2000-11-03",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1035,9 +1182,12 @@
         },
         {
           "birthDate": "2000-04-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1055,9 +1205,12 @@
         },
         {
           "birthDate": "2000-12-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 2,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1075,9 +1228,12 @@
         },
         {
           "birthDate": "2000-10-17",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1095,9 +1251,12 @@
         },
         {
           "birthDate": "2001-11-30",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1115,9 +1274,12 @@
         },
         {
           "birthDate": "2001-02-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1135,9 +1297,12 @@
         },
         {
           "birthDate": "2001-12-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1155,9 +1320,12 @@
         },
         {
           "birthDate": "2001-09-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1175,9 +1343,12 @@
         },
         {
           "birthDate": "1986-07-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1195,9 +1366,12 @@
         },
         {
           "birthDate": "1999-12-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1215,9 +1389,12 @@
         },
         {
           "birthDate": "2000-11-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1235,9 +1412,12 @@
         },
         {
           "birthDate": "2001-09-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1255,9 +1435,12 @@
         },
         {
           "birthDate": "1999-11-30",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1275,9 +1458,12 @@
         },
         {
           "birthDate": "2001-02-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1295,9 +1481,12 @@
         },
         {
           "birthDate": "2000-10-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1315,9 +1504,12 @@
         },
         {
           "birthDate": "1997-12-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1335,9 +1527,12 @@
         },
         {
           "birthDate": "2001-01-07",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1355,9 +1550,12 @@
         },
         {
           "birthDate": "2000-08-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1375,9 +1573,12 @@
         },
         {
           "birthDate": "1999-01-09",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1395,9 +1596,12 @@
         },
         {
           "birthDate": "1998-03-30",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 2,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1415,9 +1619,12 @@
         },
         {
           "birthDate": "2000-10-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1435,9 +1642,12 @@
         },
         {
           "birthDate": "1999-11-02",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1455,9 +1665,12 @@
         },
         {
           "birthDate": "1999-08-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1475,9 +1688,12 @@
         },
         {
           "birthDate": "2000-07-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1495,9 +1711,12 @@
         },
         {
           "birthDate": "2001-11-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1515,9 +1734,12 @@
         },
         {
           "birthDate": "1998-07-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1535,9 +1757,12 @@
         },
         {
           "birthDate": "2001-08-08",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1555,9 +1780,12 @@
         },
         {
           "birthDate": "1999-07-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1575,9 +1803,12 @@
         },
         {
           "birthDate": "2001-06-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1595,9 +1826,12 @@
         },
         {
           "birthDate": "1999-12-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1615,9 +1849,12 @@
         },
         {
           "birthDate": "2002-05-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1635,9 +1872,12 @@
         },
         {
           "birthDate": "2001-06-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1655,9 +1895,12 @@
         },
         {
           "birthDate": "1993-07-12",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1675,9 +1918,12 @@
         },
         {
           "birthDate": "1999-07-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1695,9 +1941,12 @@
         },
         {
           "birthDate": "2001-11-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1715,9 +1964,12 @@
         },
         {
           "birthDate": "1999-08-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 6,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1763,9 +2015,12 @@
       "rows": [
         {
           "birthDate": "2001-09-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1783,9 +2038,12 @@
         },
         {
           "birthDate": "2000-04-06",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1803,9 +2061,12 @@
         },
         {
           "birthDate": "1999-11-21",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1823,9 +2084,12 @@
         },
         {
           "birthDate": "2000-01-12",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1843,9 +2107,12 @@
         },
         {
           "birthDate": "1994-06-04",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA COMUNICAZIONE",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA COMUNICAZIONE",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1863,9 +2130,12 @@
         },
         {
           "birthDate": "2001-02-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1883,9 +2153,12 @@
         },
         {
           "birthDate": "1999-01-20",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1903,9 +2176,12 @@
         },
         {
           "birthDate": "2000-10-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1923,9 +2199,12 @@
         },
         {
           "birthDate": "1998-02-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 15,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1943,9 +2222,12 @@
         },
         {
           "birthDate": "2001-09-13",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -1963,9 +2245,12 @@
         },
         {
           "birthDate": "1993-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 10,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -1983,9 +2268,12 @@
         },
         {
           "birthDate": "1998-06-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2003,9 +2291,12 @@
         },
         {
           "birthDate": "1999-11-16",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2023,9 +2314,12 @@
         },
         {
           "birthDate": "1998-10-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 8,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2043,9 +2337,12 @@
         },
         {
           "birthDate": "2000-10-27",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2091,9 +2388,12 @@
       "rows": [
         {
           "birthDate": "1996-02-11",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2111,9 +2411,12 @@
         },
         {
           "birthDate": "2001-02-08",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2131,9 +2434,12 @@
         },
         {
           "birthDate": "1999-03-19",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA",
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2151,9 +2457,12 @@
         },
         {
           "birthDate": "2001-05-29",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA",
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2171,9 +2480,12 @@
         },
         {
           "birthDate": "1998-12-25",
-          "canEnroll": true,
-          "canEnrollInto": "DESIGN DELLA MODA",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "DESIGN DELLA MODA",
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2191,9 +2503,12 @@
         },
         {
           "birthDate": "2000-05-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2211,9 +2526,12 @@
         },
         {
           "birthDate": "2001-08-17",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2231,9 +2549,12 @@
         },
         {
           "birthDate": "1997-01-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2251,9 +2572,12 @@
         },
         {
           "birthDate": "2000-08-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2271,9 +2595,12 @@
         },
         {
           "birthDate": "2000-05-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2291,9 +2618,12 @@
         },
         {
           "birthDate": "2001-04-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 18,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2311,9 +2641,12 @@
         },
         {
           "birthDate": "2000-10-24",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2331,9 +2664,12 @@
         },
         {
           "birthDate": "2000-01-03",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2351,9 +2687,12 @@
         },
         {
           "birthDate": "2000-01-22",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": null,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2371,9 +2710,12 @@
         },
         {
           "birthDate": "1997-08-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 22,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2391,9 +2733,12 @@
         },
         {
           "birthDate": "2000-11-06",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2411,9 +2756,12 @@
         },
         {
           "birthDate": "2001-04-15",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 3,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2431,9 +2779,12 @@
         },
         {
           "birthDate": "1998-03-30",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2451,9 +2802,12 @@
         },
         {
           "birthDate": "1998-01-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2471,9 +2825,12 @@
         },
         {
           "birthDate": "2000-09-11",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2491,9 +2848,12 @@
         },
         {
           "birthDate": "1994-05-19",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 16,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2511,9 +2871,12 @@
         },
         {
           "birthDate": "2000-12-18",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2531,9 +2894,12 @@
         },
         {
           "birthDate": "2001-06-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2551,9 +2917,12 @@
         },
         {
           "birthDate": "1994-06-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 11,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2571,9 +2940,12 @@
         },
         {
           "birthDate": "1999-02-01",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": false
@@ -2591,9 +2963,12 @@
         },
         {
           "birthDate": "1999-05-25",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 10,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2611,9 +2986,12 @@
         },
         {
           "birthDate": "2000-12-05",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 9,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2631,9 +3009,12 @@
         },
         {
           "birthDate": "2000-08-28",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 14,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2651,9 +3032,12 @@
         },
         {
           "birthDate": "1999-03-26",
-          "canEnroll": false,
-          "canEnrollInto": null,
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": false,
+            "course": null,
+            "type": null
+          },
           "id": null,
           "ofa": {
             "ENG": true
@@ -2684,9 +3068,12 @@
     "rows": [
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2698,9 +3085,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2712,9 +3102,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2726,9 +3119,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2740,9 +3136,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2754,9 +3153,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2768,9 +3170,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2782,9 +3187,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2796,9 +3204,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2810,9 +3221,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2824,9 +3238,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2838,9 +3255,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2852,9 +3272,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2866,9 +3289,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2880,9 +3306,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2894,9 +3323,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2908,9 +3340,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA MODA (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA MODA (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2922,9 +3357,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2936,9 +3374,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2950,9 +3391,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2964,9 +3408,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -2978,9 +3425,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -2992,9 +3442,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3006,9 +3459,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3020,9 +3476,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3034,9 +3493,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3048,9 +3510,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3062,9 +3527,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3076,9 +3544,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3090,9 +3561,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3104,9 +3578,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3118,9 +3595,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3132,9 +3612,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3146,9 +3629,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3160,9 +3646,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEL PRODOTTO INDUSTRIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3174,9 +3663,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3188,9 +3680,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3202,9 +3697,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3216,9 +3714,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3230,9 +3731,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3244,9 +3748,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3258,9 +3765,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3272,9 +3782,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3286,9 +3799,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3300,9 +3816,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3314,9 +3833,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DEGLI INTERNI (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3328,9 +3850,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3342,9 +3867,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3356,9 +3884,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3370,9 +3901,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3384,9 +3918,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3398,9 +3935,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3412,9 +3952,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3426,9 +3969,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3440,9 +3986,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3454,9 +4003,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3468,9 +4020,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3482,9 +4037,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3496,9 +4054,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3510,9 +4071,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3524,9 +4088,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3538,9 +4105,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3552,9 +4122,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3566,9 +4139,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3580,9 +4156,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3594,9 +4173,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3608,9 +4190,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3622,9 +4207,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3636,9 +4224,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3650,9 +4241,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3664,9 +4258,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3678,9 +4275,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3692,9 +4292,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": true,
-        "canEnrollInto": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "DESIGN DELLA COMUNICAZIONE (MILANO BOVISA)",
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3706,9 +4309,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3720,9 +4326,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3734,9 +4343,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3748,9 +4360,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3762,9 +4377,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3776,9 +4394,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3790,9 +4411,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3804,9 +4428,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3818,9 +4445,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3832,9 +4462,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3846,9 +4479,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3860,9 +4496,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3874,9 +4513,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3888,9 +4530,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3902,9 +4547,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3916,9 +4564,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3930,9 +4581,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -3944,9 +4598,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3958,9 +4615,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3972,9 +4632,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -3986,9 +4649,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4000,9 +4666,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4014,9 +4683,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4028,9 +4700,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4042,9 +4717,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4056,9 +4734,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4070,9 +4751,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4084,9 +4768,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4098,9 +4785,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4112,9 +4802,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4126,9 +4819,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4140,9 +4836,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4154,9 +4853,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4168,9 +4870,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4182,9 +4887,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4196,9 +4904,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4210,9 +4921,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4224,9 +4938,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4238,9 +4955,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4252,9 +4972,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4266,9 +4989,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4280,9 +5006,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4294,9 +5023,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4308,9 +5040,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4322,9 +5057,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4336,9 +5074,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4350,9 +5091,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4364,9 +5108,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": false
@@ -4378,9 +5125,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4392,9 +5142,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4406,9 +5159,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4420,9 +5176,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4434,9 +5193,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4448,9 +5210,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4462,9 +5227,12 @@
       },
       {
         "birthDate": null,
-        "canEnroll": false,
-        "canEnrollInto": null,
         "englishCorrectAnswers": null,
+        "enrollType": {
+          "canEnroll": false,
+          "course": null,
+          "type": null
+        },
         "id": null,
         "ofa": {
           "ENG": true
@@ -4478,7 +5246,7 @@
     "year": 2020
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-08-01T08:42:04.947512Z",
+  "lastUpdate": "2023-08-01T23:05:38.1253682Z",
   "rankingOrder": {
     "anticipata": false,
     "extraEu": true,

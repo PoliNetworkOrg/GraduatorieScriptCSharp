@@ -27,9 +27,12 @@
       "rows": [
         {
           "birthDate": "2003-01-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "dffc55d3843041aaf4d4",
           "ofa": {
             "ENG": false,
@@ -47,9 +50,12 @@
         },
         {
           "birthDate": "1998-05-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "ee79f3fb2df2bec41571",
           "ofa": {
             "ENG": false,
@@ -67,9 +73,12 @@
         },
         {
           "birthDate": "2003-08-04",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "f30577918790df3a13f9",
           "ofa": {
             "ENG": false,
@@ -87,9 +96,12 @@
         },
         {
           "birthDate": "2004-09-19",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "946d34e40ef899f7ad99",
           "ofa": {
             "ENG": false,
@@ -107,9 +119,12 @@
         },
         {
           "birthDate": "2002-02-15",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "0db62e6f42c234e8d520",
           "ofa": {
             "ENG": true,
@@ -155,9 +170,12 @@
       "rows": [
         {
           "birthDate": "2002-12-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "1391160591d80b1cb77a",
           "ofa": {
             "ENG": false,
@@ -175,9 +193,12 @@
         },
         {
           "birthDate": "2003-09-15",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "1d873799dfa17e44e082",
           "ofa": {
             "ENG": true,
@@ -195,9 +216,12 @@
         },
         {
           "birthDate": "1999-02-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "0a08f8a25dadc89e2f9b",
           "ofa": {
             "ENG": false,
@@ -215,9 +239,12 @@
         },
         {
           "birthDate": "2003-03-16",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "e3834b81bd5c8f34d914",
           "ofa": {
             "ENG": true,
@@ -235,9 +262,12 @@
         },
         {
           "birthDate": "2002-04-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 0,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "e6a710953f56f56720cd",
           "ofa": {
             "ENG": true,
@@ -255,9 +285,12 @@
         },
         {
           "birthDate": "2004-02-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "2877d7b81ccbbf571253",
           "ofa": {
             "ENG": false,
@@ -303,9 +336,12 @@
       "rows": [
         {
           "birthDate": "2002-12-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CHIMICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA CHIMICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "715199b349dff54b7b0f",
           "ofa": {
             "ENG": false,
@@ -351,9 +387,12 @@
       "rows": [
         {
           "birthDate": "1995-10-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA CIVILE (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA CIVILE (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "65b6c63b1ad309fa21df",
           "ofa": {
             "ENG": false,
@@ -453,9 +492,12 @@
       "rows": [
         {
           "birthDate": "2003-01-07",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "985fa8656636c5d3b557",
           "ofa": {
             "ENG": false,
@@ -501,9 +543,12 @@
       "rows": [
         {
           "birthDate": "2003-02-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
+            "type": null
+          },
           "id": "061f7ec2fa76ca62ea9c",
           "ofa": {
             "ENG": false,
@@ -576,9 +621,12 @@
       "rows": [
         {
           "birthDate": "2003-09-07",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "bb8ef131979fe3add07e",
           "ofa": {
             "ENG": false,
@@ -596,9 +644,12 @@
         },
         {
           "birthDate": "2004-01-26",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "afa2f2078d3113b44954",
           "ofa": {
             "ENG": false,
@@ -644,9 +695,12 @@
       "rows": [
         {
           "birthDate": "2002-11-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 19,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "af3705367489542ec814",
           "ofa": {
             "ENG": true,
@@ -692,9 +746,12 @@
       "rows": [
         {
           "birthDate": "1994-05-13",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "94428e6148e380970499",
           "ofa": {
             "ENG": false,
@@ -740,9 +797,12 @@
       "rows": [
         {
           "birthDate": "2004-06-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA FISICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "ad0e025580bb0745802b",
           "ofa": {
             "ENG": false,
@@ -760,9 +820,12 @@
         },
         {
           "birthDate": "2003-01-23",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 21,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA FISICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "fbf8a3a4ed0d462a0028",
           "ofa": {
             "ENG": true,
@@ -835,9 +898,12 @@
       "rows": [
         {
           "birthDate": "2001-12-24",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
           "englishCorrectAnswers": 27,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "02e5755ce87682845e59",
           "ofa": {
             "ENG": false,
@@ -855,9 +921,12 @@
         },
         {
           "birthDate": "2003-06-28",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+            "type": null
+          },
           "id": "b7a08f020b93d20fb9c6",
           "ofa": {
             "ENG": false,
@@ -930,9 +999,12 @@
       "rows": [
         {
           "birthDate": "1997-06-11",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 20,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "8fddf6b7d992df1aab43",
           "ofa": {
             "ENG": true,
@@ -950,9 +1022,12 @@
         },
         {
           "birthDate": "2003-01-01",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "f1ef8f695febf5c40668",
           "ofa": {
             "ENG": false,
@@ -970,9 +1045,12 @@
         },
         {
           "birthDate": "1997-08-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "1c63ca2861a9034727e1",
           "ofa": {
             "ENG": false,
@@ -990,9 +1068,12 @@
         },
         {
           "birthDate": "2002-09-10",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "e4c93c8ec20d8a67b99c",
           "ofa": {
             "ENG": false,
@@ -1010,9 +1091,12 @@
         },
         {
           "birthDate": "1996-01-22",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 30,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "babb05748dd73ab16a1a",
           "ofa": {
             "ENG": false,
@@ -1030,9 +1114,12 @@
         },
         {
           "birthDate": "2003-01-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "1e8213113452c5984117",
           "ofa": {
             "ENG": false,
@@ -1050,9 +1137,12 @@
         },
         {
           "birthDate": "2003-05-30",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "778026a82f8be18a2b5d",
           "ofa": {
             "ENG": false,
@@ -1070,9 +1160,12 @@
         },
         {
           "birthDate": "1995-08-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "29ab0f6afbdefe5dd917",
           "ofa": {
             "ENG": true,
@@ -1090,9 +1183,12 @@
         },
         {
           "birthDate": "1998-05-28",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "02b70f4187da95db0b8b",
           "ofa": {
             "ENG": false,
@@ -1110,9 +1206,12 @@
         },
         {
           "birthDate": "2003-12-11",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 28,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "e2f93e7a576f950a28f2",
           "ofa": {
             "ENG": false,
@@ -1130,9 +1229,12 @@
         },
         {
           "birthDate": "2003-06-02",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "acf047c6256e41aee999",
           "ofa": {
             "ENG": false,
@@ -1150,9 +1252,12 @@
         },
         {
           "birthDate": "2002-03-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "548026d7dc789fe05b57",
           "ofa": {
             "ENG": false,
@@ -1170,9 +1275,12 @@
         },
         {
           "birthDate": "2003-02-07",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 25,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "02ea9731dc83861fb1b8",
           "ofa": {
             "ENG": false,
@@ -1190,9 +1298,12 @@
         },
         {
           "birthDate": "2003-01-06",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "770e5a7cf87f7a54e034",
           "ofa": {
             "ENG": false,
@@ -1210,9 +1321,12 @@
         },
         {
           "birthDate": "2002-03-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 13,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "b8e9367830abc19e6614",
           "ofa": {
             "ENG": true,
@@ -1258,9 +1372,12 @@
       "rows": [
         {
           "birthDate": "2003-07-18",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "65b2bf3131ef88dddeff",
           "ofa": {
             "ENG": false,
@@ -1278,9 +1395,12 @@
         },
         {
           "birthDate": "2003-12-25",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 29,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "ca61b8f6900379c9a5c8",
           "ofa": {
             "ENG": false,
@@ -1298,9 +1418,12 @@
         },
         {
           "birthDate": "2002-02-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+            "type": null
+          },
           "id": "c5740c8fbb09721ff669",
           "ofa": {
             "ENG": true,
@@ -1346,9 +1469,12 @@
       "rows": [
         {
           "birthDate": "2003-04-20",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
           "englishCorrectAnswers": 26,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "24906bd378a477157b47",
           "ofa": {
             "ENG": false,
@@ -1366,9 +1492,12 @@
         },
         {
           "birthDate": "2002-10-03",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
           "englishCorrectAnswers": 24,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "c2378f736f9832129246",
           "ofa": {
             "ENG": false,
@@ -1386,9 +1515,12 @@
         },
         {
           "birthDate": "2002-04-14",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
           "englishCorrectAnswers": 23,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "a18f1a17647a41197a84",
           "ofa": {
             "ENG": true,
@@ -1406,9 +1538,12 @@
         },
         {
           "birthDate": "2001-09-08",
-          "canEnroll": true,
-          "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
           "englishCorrectAnswers": 16,
+          "enrollType": {
+            "canEnroll": true,
+            "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+            "type": null
+          },
           "id": "a2b2dd74827456bfe0c0",
           "ofa": {
             "ENG": true,
@@ -1495,9 +1630,12 @@
     "rows": [
       {
         "birthDate": "2003-01-20",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "dffc55d3843041aaf4d4",
         "ofa": {
           "ENG": false,
@@ -1515,9 +1653,12 @@
       },
       {
         "birthDate": "2003-09-07",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "bb8ef131979fe3add07e",
         "ofa": {
           "ENG": false,
@@ -1535,9 +1676,12 @@
       },
       {
         "birthDate": "2002-12-26",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "1391160591d80b1cb77a",
         "ofa": {
           "ENG": false,
@@ -1555,9 +1699,12 @@
       },
       {
         "birthDate": "1997-06-11",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 20,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "8fddf6b7d992df1aab43",
         "ofa": {
           "ENG": true,
@@ -1575,9 +1722,12 @@
       },
       {
         "birthDate": "1995-10-23",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA CIVILE (MILANO LEONARDO)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA CIVILE (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "65b6c63b1ad309fa21df",
         "ofa": {
           "ENG": false,
@@ -1595,9 +1745,12 @@
       },
       {
         "birthDate": "2004-01-26",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA ELETTRICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "afa2f2078d3113b44954",
         "ofa": {
           "ENG": false,
@@ -1615,9 +1768,12 @@
       },
       {
         "birthDate": "1998-05-22",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "ee79f3fb2df2bec41571",
         "ofa": {
           "ENG": false,
@@ -1635,9 +1791,12 @@
       },
       {
         "birthDate": "2003-04-20",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "24906bd378a477157b47",
         "ofa": {
           "ENG": false,
@@ -1655,9 +1814,12 @@
       },
       {
         "birthDate": "2003-01-01",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "f1ef8f695febf5c40668",
         "ofa": {
           "ENG": false,
@@ -1675,9 +1837,12 @@
       },
       {
         "birthDate": "2002-12-08",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA CHIMICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA CHIMICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "715199b349dff54b7b0f",
         "ofa": {
           "ENG": false,
@@ -1695,9 +1860,12 @@
       },
       {
         "birthDate": "2003-08-04",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "f30577918790df3a13f9",
         "ofa": {
           "ENG": false,
@@ -1715,9 +1883,12 @@
       },
       {
         "birthDate": "1997-08-22",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "1c63ca2861a9034727e1",
         "ofa": {
           "ENG": false,
@@ -1735,9 +1906,12 @@
       },
       {
         "birthDate": "2003-07-18",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "65b2bf3131ef88dddeff",
         "ofa": {
           "ENG": false,
@@ -1755,9 +1929,12 @@
       },
       {
         "birthDate": "2002-09-10",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "e4c93c8ec20d8a67b99c",
         "ofa": {
           "ENG": false,
@@ -1775,9 +1952,12 @@
       },
       {
         "birthDate": "2003-12-25",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "ca61b8f6900379c9a5c8",
         "ofa": {
           "ENG": false,
@@ -1795,9 +1975,12 @@
       },
       {
         "birthDate": "2004-09-19",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "946d34e40ef899f7ad99",
         "ofa": {
           "ENG": false,
@@ -1815,9 +1998,12 @@
       },
       {
         "birthDate": "2003-09-15",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "1d873799dfa17e44e082",
         "ofa": {
           "ENG": true,
@@ -1835,9 +2021,12 @@
       },
       {
         "birthDate": "2003-02-08",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA DELLA PRODUZIONE INDUSTRIALE (LECCO)",
+          "type": null
+        },
         "id": "061f7ec2fa76ca62ea9c",
         "ofa": {
           "ENG": false,
@@ -1855,9 +2044,12 @@
       },
       {
         "birthDate": "1994-05-13",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA ENERGETICA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "94428e6148e380970499",
         "ofa": {
           "ENG": false,
@@ -1875,9 +2067,12 @@
       },
       {
         "birthDate": "1996-01-22",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 30,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "babb05748dd73ab16a1a",
         "ofa": {
           "ENG": false,
@@ -1895,9 +2090,12 @@
       },
       {
         "birthDate": "2002-10-03",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "c2378f736f9832129246",
         "ofa": {
           "ENG": false,
@@ -1915,9 +2113,12 @@
       },
       {
         "birthDate": "2003-01-03",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 24,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "1e8213113452c5984117",
         "ofa": {
           "ENG": false,
@@ -1935,9 +2136,12 @@
       },
       {
         "birthDate": "1999-02-26",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "0a08f8a25dadc89e2f9b",
         "ofa": {
           "ENG": false,
@@ -1955,9 +2159,12 @@
       },
       {
         "birthDate": "2001-12-24",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "02e5755ce87682845e59",
         "ofa": {
           "ENG": false,
@@ -1975,9 +2182,12 @@
       },
       {
         "birthDate": "2003-05-30",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "778026a82f8be18a2b5d",
         "ofa": {
           "ENG": false,
@@ -1995,9 +2205,12 @@
       },
       {
         "birthDate": "1995-08-20",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "29ab0f6afbdefe5dd917",
         "ofa": {
           "ENG": true,
@@ -2015,9 +2228,12 @@
       },
       {
         "birthDate": "1998-05-28",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "02b70f4187da95db0b8b",
         "ofa": {
           "ENG": false,
@@ -2035,9 +2251,12 @@
       },
       {
         "birthDate": "2003-12-11",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "e2f93e7a576f950a28f2",
         "ofa": {
           "ENG": false,
@@ -2055,9 +2274,12 @@
       },
       {
         "birthDate": "2003-06-02",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "acf047c6256e41aee999",
         "ofa": {
           "ENG": false,
@@ -2075,9 +2297,12 @@
       },
       {
         "birthDate": "2002-04-14",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "a18f1a17647a41197a84",
         "ofa": {
           "ENG": true,
@@ -2095,9 +2320,12 @@
       },
       {
         "birthDate": "2003-03-16",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "e3834b81bd5c8f34d914",
         "ofa": {
           "ENG": true,
@@ -2115,9 +2343,12 @@
       },
       {
         "birthDate": "2002-02-03",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 23,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MATEMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "c5740c8fbb09721ff669",
         "ofa": {
           "ENG": true,
@@ -2135,9 +2366,12 @@
       },
       {
         "birthDate": "2004-06-20",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 27,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA FISICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "ad0e025580bb0745802b",
         "ofa": {
           "ENG": false,
@@ -2155,9 +2389,12 @@
       },
       {
         "birthDate": "2002-03-03",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "548026d7dc789fe05b57",
         "ofa": {
           "ENG": false,
@@ -2175,9 +2412,12 @@
       },
       {
         "birthDate": "2003-01-07",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA DELL'AUTOMAZIONE (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "985fa8656636c5d3b557",
         "ofa": {
           "ENG": false,
@@ -2195,9 +2435,12 @@
       },
       {
         "birthDate": "2002-04-22",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 0,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "e6a710953f56f56720cd",
         "ofa": {
           "ENG": true,
@@ -2215,9 +2458,12 @@
       },
       {
         "birthDate": "2003-06-28",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
         "englishCorrectAnswers": 28,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA GESTIONALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "b7a08f020b93d20fb9c6",
         "ofa": {
           "ENG": false,
@@ -2235,9 +2481,12 @@
       },
       {
         "birthDate": "2002-02-15",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
         "englishCorrectAnswers": 21,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA AEROSPAZIALE (MILANO BOVISA)",
+          "type": null
+        },
         "id": "0db62e6f42c234e8d520",
         "ofa": {
           "ENG": true,
@@ -2255,9 +2504,12 @@
       },
       {
         "birthDate": "2003-02-07",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 25,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "02ea9731dc83861fb1b8",
         "ofa": {
           "ENG": false,
@@ -2275,9 +2527,12 @@
       },
       {
         "birthDate": "2003-01-06",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 26,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "770e5a7cf87f7a54e034",
         "ofa": {
           "ENG": false,
@@ -2295,9 +2550,12 @@
       },
       {
         "birthDate": "2001-09-08",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA MECCANICA (MILANO BOVISA)",
         "englishCorrectAnswers": 16,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA MECCANICA (MILANO BOVISA)",
+          "type": null
+        },
         "id": "a2b2dd74827456bfe0c0",
         "ofa": {
           "ENG": true,
@@ -2315,9 +2573,12 @@
       },
       {
         "birthDate": "2003-01-23",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA FISICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 21,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA FISICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "fbf8a3a4ed0d462a0028",
         "ofa": {
           "ENG": true,
@@ -2335,9 +2596,12 @@
       },
       {
         "birthDate": "2004-02-20",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 29,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA BIOMEDICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "2877d7b81ccbbf571253",
         "ofa": {
           "ENG": false,
@@ -2355,9 +2619,12 @@
       },
       {
         "birthDate": "2002-11-18",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 19,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA ELETTRONICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "af3705367489542ec814",
         "ofa": {
           "ENG": true,
@@ -2375,9 +2642,12 @@
       },
       {
         "birthDate": "2002-03-18",
-        "canEnroll": true,
-        "canEnrollInto": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
         "englishCorrectAnswers": 13,
+        "enrollType": {
+          "canEnroll": true,
+          "course": "INGEGNERIA INFORMATICA (MILANO LEONARDO)",
+          "type": null
+        },
         "id": "b8e9367830abc19e6614",
         "ofa": {
           "ENG": true,
@@ -2397,7 +2667,7 @@
     "year": 2022
   },
   "extra": "Studenti Extra-UE: Contingente riservato incluso Contingente 'Marco Polo'",
-  "lastUpdate": "2023-08-01T08:42:06.783777Z",
+  "lastUpdate": "2023-08-01T23:05:40.1522242Z",
   "rankingOrder": {
     "anticipata": false,
     "extraEu": true,
