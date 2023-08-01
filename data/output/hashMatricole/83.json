@@ -149,16 +149,6 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": null,
         "phase": "Anticipato",
         "school": "Design",
         "url": {
@@ -176,29 +166,19 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
+      },
+      {
+        "course": null,
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
       }
     ],
     "singleCourseJsons": [
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
       {
         "course": "DESIGN DEGLI INTERNI",
         "phase": "Anticipato",
@@ -248,6 +228,26 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
       }
     ]
   },
@@ -267,21 +267,21 @@
       },
       {
         "course": null,
-        "phase": "Ripescaggio",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": null,
         "phase": "Anticipato",
         "school": "Design",
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20040_html/2022_20040_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": null,
+        "phase": "Ripescaggio",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
         },
         "year": 2022
       }
@@ -308,16 +308,6 @@
         "year": 2022
       },
       {
-        "course": "DESIGN DEGLI INTERNI",
-        "phase": "Ripescaggio",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
-        },
-        "year": 2022
-      },
-      {
         "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
         "phase": "Anticipato",
         "school": "Design",
@@ -334,6 +324,16 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20040_html/2022_20040_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "DESIGN DEGLI INTERNI",
+        "phase": "Ripescaggio",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
         },
         "year": 2022
       }
@@ -601,21 +601,21 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": null,
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
@@ -623,61 +623,61 @@
     "singleCourseJsons": [
       {
         "course": "INGEGNERIA AEROSPAZIALE",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
         },
         "year": 2021
       },
       {
         "course": "INGEGNERIA BIOMEDICA",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
         },
         "year": 2021
       },
       {
         "course": "INGEGNERIA GESTIONALE",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
         },
         "year": 2021
       },
       {
         "course": "INGEGNERIA AEROSPAZIALE",
-        "phase": "Prima Graduatoria Di Seconda Fase",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       },
       {
         "course": "INGEGNERIA BIOMEDICA",
-        "phase": "Prima Graduatoria Di Seconda Fase",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       },
       {
         "course": "INGEGNERIA GESTIONALE",
-        "phase": "Prima Graduatoria Di Seconda Fase",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
@@ -957,21 +957,21 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": null,
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       },
@@ -987,46 +987,6 @@
       }
     ],
     "singleCourseJsons": [
-      {
-        "course": "INGEGNERIA AEROSPAZIALE",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA ELETTRONICA",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA GESTIONALE",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA INFORMATICA",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
       {
         "course": "INGEGNERIA AEROSPAZIALE",
         "phase": "Prima Graduatoria Di Seconda Fase",
@@ -1064,6 +1024,46 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA AEROSPAZIALE",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA ELETTRONICA",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA GESTIONALE",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA INFORMATICA",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       },
@@ -1975,21 +1975,21 @@
       },
       {
         "course": null,
-        "phase": "Ripescaggio",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": null,
         "phase": "Anticipato",
         "school": "Design",
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20040_html/2022_20040_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": null,
+        "phase": "Ripescaggio",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
         },
         "year": 2022
       }
@@ -2037,16 +2037,6 @@
       },
       {
         "course": "DESIGN DEGLI INTERNI",
-        "phase": "Ripescaggio",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "DESIGN DEGLI INTERNI",
         "phase": "Anticipato",
         "school": "Design",
         "url": {
@@ -2082,6 +2072,16 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20040_html/2022_20040_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "DESIGN DEGLI INTERNI",
+        "phase": "Ripescaggio",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20042_5f39_html/2022_20042_generale.html"
         },
         "year": 2022
       }
@@ -2131,11 +2131,11 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Prima Graduatoria",
+        "phase": "Seconda Graduatoria",
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
       },
@@ -2151,11 +2151,11 @@
       },
       {
         "course": null,
-        "phase": "Seconda Graduatoria",
+        "phase": "Prima Graduatoria",
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
       }
@@ -2163,11 +2163,11 @@
     "singleCourseJsons": [
       {
         "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
-        "phase": "Prima Graduatoria",
+        "phase": "Seconda Graduatoria",
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
       },
@@ -2183,11 +2183,11 @@
       },
       {
         "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
-        "phase": "Seconda Graduatoria",
+        "phase": "Prima Graduatoria",
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
       }
@@ -2197,16 +2197,6 @@
     "id": "8362e912cb6766e73ba3",
     "inMeritTable": true,
     "rankingSummaries": [
-      {
-        "course": null,
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
       {
         "course": null,
         "phase": "Terza Fase",
@@ -2226,29 +2216,19 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
+      },
+      {
+        "course": null,
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
       }
     ],
     "singleCourseJsons": [
-      {
-        "course": "INGEGNERIA EDILE - ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
       {
         "course": "INGEGNERIA GESTIONALE",
         "phase": "Terza Fase",
@@ -2266,6 +2246,26 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "INGEGNERIA EDILE - ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
       }
@@ -2571,6 +2571,16 @@
     "rankingSummaries": [
       {
         "course": null,
+        "phase": "Terza Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": null,
         "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
@@ -2588,9 +2598,11 @@
           "url": "http://www.risultati-ammissione.polimi.it/2021_20103_html/2021_20103_generale.html"
         },
         "year": 2021
-      },
+      }
+    ],
+    "singleCourseJsons": [
       {
-        "course": null,
+        "course": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
         "phase": "Terza Fase",
         "school": "Ingegneria",
         "url": {
@@ -2598,9 +2610,17 @@
           "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
         },
         "year": 2021
-      }
-    ],
-    "singleCourseJsons": [
+      },
+      {
+        "course": "INGEGNERIA ENERGETICA",
+        "phase": "Terza Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
+        },
+        "year": 2021
+      },
       {
         "course": "INGEGNERIA AEROSPAZIALE",
         "phase": "Prima Graduatoria Di Seconda Fase",
@@ -2678,26 +2698,6 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20103_html/2021_20103_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
-        "phase": "Terza Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA ENERGETICA",
-        "phase": "Terza Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
         },
         "year": 2021
       }
@@ -3123,16 +3123,6 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Anticipato",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria",
         "school": "Architettura",
         "url": {
@@ -3140,9 +3130,39 @@
           "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
         "year": 2023
+      },
+      {
+        "course": null,
+        "phase": "Anticipato",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
+        },
+        "year": 2023
       }
     ],
     "singleCourseJsons": [
+      {
+        "course": "INGEGNERIA EDILE - ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
+        },
+        "year": 2023
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
+        },
+        "year": 2023
+      },
       {
         "course": "DESIGN DEGLI INTERNI",
         "phase": "Anticipato",
@@ -3170,26 +3190,6 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": "INGEGNERIA EDILE - ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
         "year": 2023
       }
@@ -3457,16 +3457,6 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
@@ -3474,11 +3464,9 @@
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
         },
         "year": 2021
-      }
-    ],
-    "singleCourseJsons": [
+      },
       {
-        "course": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+        "course": null,
         "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
@@ -3486,7 +3474,9 @@
           "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
-      },
+      }
+    ],
+    "singleCourseJsons": [
       {
         "course": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
         "phase": "Prima Graduatoria Di Seconda Fase",
@@ -3524,6 +3514,16 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA DEI MATERIALI E DELLE NANOTECNOLOGIE",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
@@ -3903,19 +3903,9 @@
         "school": "Design",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20041_html/2021_20041_generale.html"
         },
-        "year": 2022
-      },
-      {
-        "course": null,
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
+        "year": 2021
       },
       {
         "course": null,
@@ -3923,9 +3913,9 @@
         "school": "Design",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20041_html/2021_20041_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
         },
-        "year": 2021
+        "year": 2022
       },
       {
         "course": null,
@@ -3956,69 +3946,19 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
+      },
+      {
+        "course": null,
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
       }
     ],
     "singleCourseJsons": [
-      {
-        "course": "DESIGN DEGLI INTERNI",
-        "phase": "Standard",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
-        "phase": "Standard",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "DESIGN DELLA MODA",
-        "phase": "Standard",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "INGEGNERIA EDILE - ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
-        },
-        "year": 2022
-      },
       {
         "course": "DESIGN DEGLI INTERNI",
         "phase": "Standard",
@@ -4050,6 +3990,36 @@
         "year": 2021
       },
       {
+        "course": "DESIGN DEGLI INTERNI",
+        "phase": "Standard",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "DESIGN DEL PRODOTTO INDUSTRIALE",
+        "phase": "Standard",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "DESIGN DELLA MODA",
+        "phase": "Standard",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20041_4a1b_html/2022_20041_generale.html"
+        },
+        "year": 2022
+      },
+      {
         "course": "PROGETTAZIONE DELL'ARCHITETTURA",
         "phase": "Seconda Graduatoria",
         "school": "Architettura",
@@ -4096,6 +4066,36 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "INGEGNERIA EDILE - ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
       }
@@ -4165,16 +4165,6 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
@@ -4182,29 +4172,19 @@
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
         },
         "year": 2021
+      },
+      {
+        "course": null,
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+        },
+        "year": 2021
       }
     ],
     "singleCourseJsons": [
-      {
-        "course": "INGEGNERIA AEROSPAZIALE",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
-      {
-        "course": "INGEGNERIA ELETTRONICA",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
-        "school": "Ingegneria",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
-        },
-        "year": 2021
-      },
       {
         "course": "INGEGNERIA AEROSPAZIALE",
         "phase": "Prima Graduatoria Di Seconda Fase",
@@ -4242,6 +4222,26 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2021_20064_html/2021_20064_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA AEROSPAZIALE",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+        },
+        "year": 2021
+      },
+      {
+        "course": "INGEGNERIA ELETTRONICA",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "school": "Ingegneria",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
@@ -4419,9 +4419,9 @@
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
-        "year": 2022
+        "year": 2023
       },
       {
         "course": null,
@@ -4430,16 +4430,6 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": null,
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
         "year": 2023
       },
@@ -4452,11 +4442,9 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
         },
         "year": 2022
-      }
-    ],
-    "singleCourseJsons": [
+      },
       {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "course": null,
         "phase": "Prima Graduatoria",
         "school": "Architettura",
         "url": {
@@ -4464,17 +4452,9 @@
           "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
-      },
-      {
-        "course": "DESIGN DEGLI INTERNI",
-        "phase": "Anticipato",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
+      }
+    ],
+    "singleCourseJsons": [
       {
         "course": "PROGETTAZIONE DELL'ARCHITETTURA",
         "phase": "Prima Graduatoria",
@@ -4496,12 +4476,32 @@
         "year": 2023
       },
       {
+        "course": "DESIGN DEGLI INTERNI",
+        "phase": "Anticipato",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
+        },
+        "year": 2023
+      },
+      {
         "course": "PROGETTAZIONE DELL'ARCHITETTURA",
         "phase": "Seconda Graduatoria",
         "school": "Architettura",
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2022_20060_37e5_html/2022_20060_generale.html"
+        },
+        "year": 2022
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2022_20002_46h3_html/2022_20002_generale.html"
         },
         "year": 2022
       }
@@ -4947,16 +4947,6 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Anticipato",
-        "school": "Design",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": null,
         "phase": "Prima Graduatoria",
         "school": "Architettura",
         "url": {
@@ -4964,9 +4954,49 @@
           "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
         "year": 2023
+      },
+      {
+        "course": null,
+        "phase": "Anticipato",
+        "school": "Design",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
+        },
+        "year": 2023
       }
     ],
     "singleCourseJsons": [
+      {
+        "course": "INGEGNERIA EDILE - ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
+        },
+        "year": 2023
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
+        },
+        "year": 2023
+      },
+      {
+        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
+        "phase": "Prima Graduatoria",
+        "school": "Architettura",
+        "url": {
+          "pageEnum": 1,
+          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
+        },
+        "year": 2023
+      },
       {
         "course": "DESIGN DEGLI INTERNI",
         "phase": "Anticipato",
@@ -5004,36 +5034,6 @@
         "url": {
           "pageEnum": 1,
           "url": "http://www.risultati-ammissione.polimi.it/2023_20040_32ea_html/2023_20040_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": "INGEGNERIA EDILE - ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
-        },
-        "year": 2023
-      },
-      {
-        "course": "PROGETTAZIONE DELL'ARCHITETTURA - TAUGHT IN ENGLISH",
-        "phase": "Prima Graduatoria",
-        "school": "Architettura",
-        "url": {
-          "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2023_20002_2fee_html/2023_20002_generale.html"
         },
         "year": 2023
       }
@@ -5139,11 +5139,11 @@
     "rankingSummaries": [
       {
         "course": null,
-        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "phase": "Terza Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
         },
         "year": 2021
       },
@@ -5159,11 +5159,11 @@
       },
       {
         "course": null,
-        "phase": "Terza Fase",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
@@ -5171,11 +5171,11 @@
     "singleCourseJsons": [
       {
         "course": "INGEGNERIA INFORMATICA",
-        "phase": "Seconda Graduatoria Di Seconda Fase",
+        "phase": "Terza Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
         },
         "year": 2021
       },
@@ -5191,11 +5191,11 @@
       },
       {
         "course": "INGEGNERIA INFORMATICA",
-        "phase": "Terza Fase",
+        "phase": "Seconda Graduatoria Di Seconda Fase",
         "school": "Ingegneria",
         "url": {
           "pageEnum": 1,
-          "url": "http://www.risultati-ammissione.polimi.it/2021_20091_html/2021_20091_generale.html"
+          "url": "http://www.risultati-ammissione.polimi.it/2021_20102_html/2021_20102_generale.html"
         },
         "year": 2021
       }
