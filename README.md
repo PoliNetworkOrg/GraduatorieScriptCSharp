@@ -1,5 +1,9 @@
 # GraduatorieScriptCSharp
 
+## Info
+
+Sito web live in https://rankings.polinetwork.org/
+
 Rewrite in C# della repo https://github.com/PoliNetworkOrg/GraduatorieScript
 
 ## Requirements
