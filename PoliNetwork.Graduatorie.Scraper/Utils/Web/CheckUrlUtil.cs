@@ -9,7 +9,7 @@ namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public class CheckUrlUtil
 {
-    public static void CheckUrl(RankingUrl variable, HashSet<RankingUrl> final)
+    private static void CheckUrl(RankingUrl variable, HashSet<RankingUrl> final)
     {
         try
         {
