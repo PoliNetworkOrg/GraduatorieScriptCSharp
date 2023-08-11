@@ -129,7 +129,7 @@ public class RankingUrl
         return AreSameRanking(this, urlB);
     }
 
-    public bool AreSameRanking(RankingUrl urlA, RankingUrl urlB)
+    public static bool AreSameRanking(RankingUrl urlA, RankingUrl urlB)
     {
         var a = urlA.Url;
         var b = urlB.Url;

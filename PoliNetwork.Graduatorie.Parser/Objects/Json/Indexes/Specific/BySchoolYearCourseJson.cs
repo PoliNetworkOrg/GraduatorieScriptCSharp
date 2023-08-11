@@ -116,16 +116,17 @@ public class BySchoolYearCourseJson : IndexJsonBase
             var locationDict = courseDict[fixedLocation];
             var singleCourseJson = CreateCourseJson(ranking, course);
 
-            bool IsThisCourse(SingleCourseJson x)
-            {
-                return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
-            }
-
             if (locationDict.Any(IsThisCourse))
                 continue;
 
             locationDict.Add(singleCourseJson);
             locationDict.Sort(Comparison);
+            continue;
+
+            bool IsThisCourse(SingleCourseJson x)
+            {
+                return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
+            }
         }
     }
 
@@ -152,14 +153,14 @@ public class BySchoolYearCourseJson : IndexJsonBase
     {
         var enumerable = yearGroup.Where(v1 => v1.ByCourse != null);
 
+        return enumerable.Any(Predicate);
+
         bool Predicate(Ranking v1)
         {
             return singleCourseJson.School == v1.School
                    && singleCourseJson.Year == v1.Year
                    && v1.RankingOrder?.Phase == singleCourseJson.Name;
         }
-
-        return enumerable.Any(Predicate);
     }
 
     public static RankingsSet? Parse(string dataFolder)
@@ -207,13 +208,14 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var actions = new List<Action>();
         foreach (var filename in year.Value)
         {
+            var collection = filename.Value.Select(Selector);
+            actions.AddRange(collection);
+            continue;
+
             Action Selector(KeyValuePair<string, List<SingleCourseJson>> variable)
             {
                 return () => { RankingAdd(school, year, outFolder, variable, rankings); };
             }
-
-            var collection = filename.Value.Select(Selector);
-            actions.AddRange(collection);
         }
 
         ParallelRun.Run(actions.ToArray());
