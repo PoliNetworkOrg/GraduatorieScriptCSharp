@@ -21,10 +21,7 @@ public static partial class HashMatricola
         if (input.Contains(' ')) input = input.Split(" ").First(x => !string.IsNullOrEmpty(x));
 
         var s = input.Trim().ToUpper();
-        if (string.IsNullOrEmpty(s))
-            return null;
-
-        return NotAlphaNumericRegex().Replace(s, "");
+        return string.IsNullOrEmpty(s) ? null : NotAlphaNumericRegex().Replace(s, "");
     }
 
     public static string? HashMatricolaMethod(string? input)

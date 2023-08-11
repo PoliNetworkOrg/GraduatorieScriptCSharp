@@ -94,7 +94,7 @@ public class Parser
         return savedSet;
     }
 
-    private RankingsSet ParseNewRankings(List<HtmlPage> htmls)
+    private RankingsSet ParseNewRankings(IReadOnlyCollection<HtmlPage> htmls)
     {
         // pseudo
         // new ranking set
@@ -131,9 +131,7 @@ public class Parser
                 .Select(url =>
                 {
                     var found = meritTablePages.Find(h => h.Url.Url == url.Url);
-                    if (found != null)
-                        return found;
-                    return HtmlPage.FromUrl(url, _htmlFolder);
+                    return found ?? HtmlPage.FromUrl(url, _htmlFolder);
                 })
                 .Where(h => h != null)
                 .Select(h => h!)
@@ -144,9 +142,7 @@ public class Parser
                 .Select(url =>
                 {
                     var found = courseTablePages.Find(h => h.Url.Url == url.Url);
-                    if (found != null)
-                        return found;
-                    return HtmlPage.FromUrl(url, _htmlFolder);
+                    return found ?? HtmlPage.FromUrl(url, _htmlFolder);
                 })
                 .Where(h => h != null)
                 .Select(h => h!)
@@ -186,7 +182,7 @@ public class Parser
         return set;
     }
 
-    private Ranking? InitRanking(RankingUrl indexUrl, HtmlNode doc)
+    private static Ranking? InitRanking(RankingUrl indexUrl, HtmlNode doc)
     {
         var ranking = new Ranking();
         // get ranking info
@@ -268,7 +264,7 @@ public class Parser
         return tablesLinks;
     }
 
-    private Table<MeritTableRow> ParseMeritTable(IEnumerable<HtmlPage> pages)
+    private static Table<MeritTableRow> ParseMeritTable(IEnumerable<HtmlPage> pages)
     {
         var table = JoinTables(pages);
         var meritTable = Table<MeritTableRow>.Create(
@@ -282,7 +278,7 @@ public class Parser
         return meritTable;
     }
 
-    private IEnumerable<Table<CourseTableRow>> ParseCoursesTables(IEnumerable<HtmlPage> pages)
+    private static IEnumerable<Table<CourseTableRow>> ParseCoursesTables(IEnumerable<HtmlPage> pages)
     {
         var tables = GetTables(pages);
         var coursesTables = tables.Select(

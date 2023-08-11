@@ -82,6 +82,10 @@ public class RankingOrder
 
     public void Merge(RankingOrder? rankingRankingOrder)
     {
-        throw new NotImplementedException();
+        Anticipata ??= rankingRankingOrder?.Anticipata;
+        Phase ??= rankingRankingOrder?.Phase;
+        Primary ??= rankingRankingOrder?.Primary;
+        Secondary ??= rankingRankingOrder?.Secondary;
+        ExtraEu ??= rankingRankingOrder?.ExtraEu;
     }
 }

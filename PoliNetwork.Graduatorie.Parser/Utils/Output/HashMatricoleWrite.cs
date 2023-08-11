@@ -28,9 +28,8 @@ public static class HashMatricoleWrite
         {
             var byMeritRows = ranking.ByMerit?.Rows;
             if (byMeritRows != null)
-                foreach (var student in byMeritRows)
-                    if (!string.IsNullOrEmpty(student.Id))
-                        AddToDict(dictionary, ranking, student, null);
+                foreach (var student in byMeritRows.Where(student => !string.IsNullOrEmpty(student.Id)))
+                    AddToDict(dictionary, ranking, student, null);
 
             var rankingByCourse = ranking.ByCourse;
             if (rankingByCourse == null) continue;
@@ -38,9 +37,8 @@ public static class HashMatricoleWrite
             {
                 var row = courseTable.Rows;
                 if (row == null) continue;
-                foreach (var studentResult in row)
-                    if (!string.IsNullOrEmpty(studentResult.Id))
-                        AddToDict(dictionary, ranking, studentResult, courseTable);
+                foreach (var studentResult in row.Where(studentResult => !string.IsNullOrEmpty(studentResult.Id)))
+                    AddToDict(dictionary, ranking, studentResult, courseTable);
             }
         }
 

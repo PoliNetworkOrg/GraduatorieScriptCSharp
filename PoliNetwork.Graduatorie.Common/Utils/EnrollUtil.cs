@@ -16,15 +16,20 @@ public class EnrollUtil
         if (string.IsNullOrEmpty(rowCanEnrollInto))
             return new EnrollType { CanEnroll = true, Course = null, Type = null };
 
-        string[] tester = {"assegnato", "prenotato"};
+        string[] tester = { "assegnato", "prenotato" };
         const string sep = " - ";
         if (!rowCanEnrollInto.Contains(sep) || !tester.Any(t => rowCanEnrollInto.ToLower().Contains(t)))
             return new EnrollType { CanEnroll = true, Course = rowCanEnrollInto, Type = null };
 
         var s = rowCanEnrollInto.Split(sep).ToList();
         var type = s.FirstOrDefault(x => tester.Any(t => t == x.ToLower()));
-        s.Remove(type);
-        var course = String.Join(sep, s);
-        return new EnrollType { CanEnroll = true, Course = course, Type = type };
+        if (type != null)
+        {
+            s.Remove(type);
+        }
+
+        var course = string.Join(sep, s);
+            return new EnrollType { CanEnroll = true, Course = course, Type = type };
+        
     }
 }
