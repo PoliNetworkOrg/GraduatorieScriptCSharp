@@ -94,7 +94,7 @@ public class Parser
         return savedSet;
     }
 
-    private RankingsSet ParseNewRankings(List<HtmlPage> htmls)
+    private RankingsSet ParseNewRankings(IReadOnlyCollection<HtmlPage> htmls)
     {
         // pseudo
         // new ranking set

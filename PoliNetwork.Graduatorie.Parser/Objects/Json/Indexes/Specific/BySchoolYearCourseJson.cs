@@ -62,7 +62,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void GetYearsDictSingle(IGrouping<int?, Ranking> yearGroup,
-        SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> d)
+        IDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> d)
     {
         if (yearGroup.Key != null) d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
     }
@@ -87,7 +87,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     }
 
     private static void AddCourseToDict(
-        SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> d,
+        IDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> d,
         Ranking ranking,
         IGrouping<string?, CourseTable> courseGroup
     )

@@ -50,7 +50,7 @@ public class BySchoolYearJson : IndexJsonBase
 
     private static void AddSchool(
         IGrouping<int?, Ranking> yearGroup,
-        SortedDictionary<int, IEnumerable<SingleCourseJson>> schoolDict
+        IDictionary<int, IEnumerable<SingleCourseJson>> schoolDict
     )
     {
         var yearGroupKey = yearGroup.Key;
