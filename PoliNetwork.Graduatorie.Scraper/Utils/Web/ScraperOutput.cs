@@ -66,7 +66,7 @@ public static class ScraperOutput
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
     {
         var output = "";
-        var urls = rankingsUrls.Where(UrlUtils.CheckUrl).Select(x => x.Url).Order();
+        var urls = CheckUrlUtil.GetRankingLinksHashSet(rankingsUrls).Order();
         foreach (var link in urls)
         {
             output += link;

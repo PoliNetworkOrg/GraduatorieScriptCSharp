@@ -33,6 +33,11 @@ public class CheckUrlUtil
             .Select(RankingUrl.From)
             .Where(r => r.PageEnum == PageEnum.Index).ToList();
 
+        return GetRankingLinksHashSet(parallelQuery);
+    }
+
+    public static HashSet<RankingUrl> GetRankingLinksHashSet(IEnumerable<RankingUrl> parallelQuery)
+    {
         var final = new HashSet<RankingUrl>();
 
         var action = parallelQuery.Select((Func<RankingUrl, Action>)Selector).ToArray();
