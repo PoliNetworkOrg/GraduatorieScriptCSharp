@@ -23,13 +23,9 @@ public class EnrollUtil
 
         var s = rowCanEnrollInto.Split(sep).ToList();
         var type = s.FirstOrDefault(x => tester.Any(t => t == x.ToLower()));
-        if (type != null)
-        {
-            s.Remove(type);
-        }
+        if (type != null) s.Remove(type);
 
         var course = string.Join(sep, s);
-            return new EnrollType { CanEnroll = true, Course = course, Type = type };
-        
+        return new EnrollType { CanEnroll = true, Course = course, Type = type };
     }
 }
