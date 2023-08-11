@@ -22,16 +22,46 @@ public static class LinksFind
         var rankingsLinks = new HashSet<string>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
-        var rankingsUrls = rankingsLinks
-            .AsParallel() // from 500ms to 86ms 
-            .Select(RankingUrl.From)
-            .Where(r => r.PageEnum == PageEnum.Index)
-            .Where(UrlUtils.CheckUrl)
-            .ToHashSet();
+        var rankingsUrls = GetRankingLinks(rankingsLinks);
 
         var len = rankingsUrls.ToArray().Length;
         Console.WriteLine($"[INFO] LinksFind.GetAll found {len} links");
         return rankingsUrls;
+    }
+
+    private static HashSet<RankingUrl> GetRankingLinks(IEnumerable<string> rankingsLinks)
+    {
+        var parallelQuery = rankingsLinks
+            .AsParallel()
+            .Select(RankingUrl.From)
+            .Where(r => r.PageEnum == PageEnum.Index).ToList();
+
+        var final = new HashSet<RankingUrl>();
+
+        var action = parallelQuery.Select((Func<RankingUrl, Action>)Selector).ToArray();
+        Parallel.Invoke(action);
+
+        return final;
+
+        Action Selector(RankingUrl variable) =>
+            () => { CheckUrl(variable, final); };
+    }
+
+    private static void CheckUrl(RankingUrl variable, HashSet<RankingUrl> final)
+    {
+        try
+        {
+            var x = UrlUtils.CheckUrl(variable);
+            if (!x) return;
+            lock (final)
+            {
+                final.Add(variable);
+            }
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+        }
     }
 
     private static IEnumerable<string> GetCombinationLinks()
