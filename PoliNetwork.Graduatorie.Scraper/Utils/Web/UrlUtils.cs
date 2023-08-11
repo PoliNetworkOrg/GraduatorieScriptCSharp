@@ -23,13 +23,15 @@ public static class UrlUtils
 
     public static bool CheckUrl(RankingUrl? url)
     {
-        if (string.IsNullOrEmpty(url?.Url))
+        var urlUrl = url?.Url;
+        if (string.IsNullOrEmpty(urlUrl))
             return false;
 
         using var client = new HttpClient();
         try
         {
-            var response = client.GetAsync(url.Url).Result;
+            var async = client.GetAsync(urlUrl);
+            var response = async.Result;
             return response.StatusCode == HttpStatusCode.OK;
         }
         catch (HttpRequestException)
