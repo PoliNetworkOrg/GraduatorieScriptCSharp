@@ -1,5 +1,9 @@
+#region
+
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
+
+#endregion
 
 namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
@@ -36,7 +40,9 @@ public class CheckUrlUtil
 
         return final;
 
-        Action Selector(RankingUrl variable) =>
-            () => { CheckUrlUtil.CheckUrl(variable, final); };
+        Action Selector(RankingUrl variable)
+        {
+            return () => { CheckUrl(variable, final); };
+        }
     }
 }
