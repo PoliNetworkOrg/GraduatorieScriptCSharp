@@ -28,6 +28,5 @@ public class EnrollUtil
 
         var course = string.Join(sep, s);
         return new EnrollType { CanEnroll = true, Course = course, Type = type };
-
     }
 }
