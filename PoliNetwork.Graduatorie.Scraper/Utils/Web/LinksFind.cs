@@ -22,57 +22,25 @@ public static class LinksFind
         var rankingsLinks = new HashSet<string>();
         rankingsLinks.AddRange(polimiNewsLinks, combinationLinks);
 
-        var rankingsUrls = GetRankingLinks(rankingsLinks);
+        var rankingsUrls = CheckUrlUtil.GetRankingLinks(rankingsLinks);
 
         var len = rankingsUrls.ToArray().Length;
         Console.WriteLine($"[INFO] LinksFind.GetAll found {len} links");
         return rankingsUrls;
     }
 
-    private static HashSet<RankingUrl> GetRankingLinks(IEnumerable<string> rankingsLinks)
-    {
-        var parallelQuery = rankingsLinks
-            .AsParallel()
-            .Select(RankingUrl.From)
-            .Where(r => r.PageEnum == PageEnum.Index).ToList();
 
-        var final = new HashSet<RankingUrl>();
 
-        var action = parallelQuery.Select((Func<RankingUrl, Action>)Selector).ToArray();
-        Parallel.Invoke(action);
-
-        return final;
-
-        Action Selector(RankingUrl variable) =>
-            () => { CheckUrl(variable, final); };
-    }
-
-    private static void CheckUrl(RankingUrl variable, HashSet<RankingUrl> final)
-    {
-        try
-        {
-            var x = UrlUtils.CheckUrl(variable);
-            if (!x) return;
-            lock (final)
-            {
-                final.Add(variable);
-            }
-        }
-        catch (Exception exception)
-        {
-            Console.WriteLine(exception);
-        }
-    }
 
     private static IEnumerable<string> GetCombinationLinks()
     {
         var r = new HashSet<string>();
         var nowYear = DateTime.UtcNow.Year;
-        for (var i = 2021; i <= nowYear; i++) r.AddRange(GetYearCominationLinks(i));
+        for (var i = 2021; i <= nowYear; i++) r.AddRange(GetYearCombinationLinks(i));
         return r;
     }
 
-    private static IEnumerable<string> GetYearCominationLinks(int year)
+    private static IEnumerable<string> GetYearCombinationLinks(int year)
     {
         // partial implemented: polimi has recently added 4 hex chars in the first part 
         // of the path (2022_20064_XXXX_html/) which would require 65k combinations for each 
