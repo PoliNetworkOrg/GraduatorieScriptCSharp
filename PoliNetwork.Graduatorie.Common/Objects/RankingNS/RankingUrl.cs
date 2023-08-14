@@ -10,7 +10,7 @@ namespace PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class RankingUrl
+public class RankingUrl :IComparable<RankingUrl>
 {
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
@@ -186,5 +186,13 @@ public class RankingUrl
                 return false;
 
         return true;
+    }
+
+    public int CompareTo(RankingUrl? other)
+    {
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        var pageEnumComparison = PageEnum.CompareTo(other.PageEnum);
+        return pageEnumComparison != 0 ? pageEnumComparison : string.Compare(Url, other.Url, StringComparison.Ordinal);
     }
 }
