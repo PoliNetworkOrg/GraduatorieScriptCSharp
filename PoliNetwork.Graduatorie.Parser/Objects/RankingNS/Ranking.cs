@@ -136,4 +136,14 @@ public class Ranking
     {
         return School + "/" + Year + "/" + RankingOrder?.Phase;
     }
+
+    public MeritTable? GetMerit()
+    {
+        return ByMerit;
+    }
+
+    public List<CourseTable>? GetTableCourse()
+    {
+        return ByCourse;
+    }
 }
