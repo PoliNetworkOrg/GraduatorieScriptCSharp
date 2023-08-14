@@ -10,10 +10,25 @@ namespace PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class RankingUrl
+public class RankingUrl : IComparable<RankingUrl>, IEquatable<RankingUrl>
 {
     public PageEnum PageEnum = PageEnum.Unknown;
     public string Url = "";
+
+    public int CompareTo(RankingUrl? other)
+    {
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        var pageEnumComparison = PageEnum.CompareTo(other.PageEnum);
+        return pageEnumComparison != 0 ? pageEnumComparison : string.Compare(Url, other.Url, StringComparison.Ordinal);
+    }
+
+    public bool Equals(RankingUrl? other)
+    {
+        if (other == null)
+            return false;
+        return PageEnum == other.PageEnum && Url == other.Url;
+    }
 
     public override bool Equals(object? obj)
     {
@@ -27,11 +42,6 @@ public class RankingUrl
         var urlHash = Url.GetHashCode();
         // ReSharper disable once NonReadonlyMemberInGetHashCode
         return PageEnum.GetHashCode() ^ urlHash;
-    }
-
-    protected bool Equals(RankingUrl other)
-    {
-        return PageEnum == other.PageEnum && Url == other.Url;
     }
 
 
@@ -48,7 +58,7 @@ public class RankingUrl
     /// </summary>
     /// <param name="url">
     ///     The full url string
-    ///     prefered input -> http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
+    ///     preferred input -> http://www.risultati-ammissione.polimi.it/2022_20064_html/2022_20064_generale.html
     ///     valid case -> /2022_20064_html/2022_20064_generale.html
     /// </param>
     /// <returns>RankingUrl</returns>
