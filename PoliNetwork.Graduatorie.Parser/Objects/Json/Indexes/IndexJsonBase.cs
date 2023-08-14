@@ -101,24 +101,20 @@ public abstract class IndexJsonBase
 
         var aHash = aTableCourse.Select(variable =>
         {
-            var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+            var hashWithoutLastUpdate = Ranking.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
             return hashWithoutLastUpdate;
         }).ToList();
 
         var bHash = bTableCourse.Select(variable =>
         {
-            var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+            var hashWithoutLastUpdate = Ranking.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
             return hashWithoutLastUpdate;
         }).ToList();
 
-        ;
-        for (var i = 0; i < aHash.Count && i < bHash.Count; i++)
-        {
-            if (aHash[i] != bHash[i])
-                return false;
-        }
+        var ai = Ranking.GetHashFromListHash(aHash);
+        var bi = Ranking.GetHashFromListHash(bHash);
         
-        return true;
+        return (ai ?? 0) == (bi ?? 0);
     }
 
     private static bool SameHashMerit(MeritTable? aTableMerit, MeritTable? bTableMerit)

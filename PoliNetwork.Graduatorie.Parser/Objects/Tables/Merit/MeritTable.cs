@@ -17,9 +17,9 @@ public class MeritTable
     public List<StudentResult>? Rows;
     public int? Year;
 
-    public List<int> GetHashWithoutLastUpdate()
+    public List<int?> GetHashWithoutLastUpdate()
     {
-        var r = new List<int> { "MeritTable".GetHashCode() };
+        var r = new List<int?> { "MeritTable".GetHashCode() };
         if (Headers != null)
             r.Add( Headers.Aggregate("HeadersFull".GetHashCode(), (current, variable) => current ^ variable.GetHashCode()));
         else

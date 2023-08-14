@@ -22,9 +22,9 @@ public class StudentResult
     public decimal? Result;
     public SortedDictionary<string, decimal>? SectionsResults;
 
-    public List<int> GetHashWithoutLastUpdate()
+    public List<int?> GetHashWithoutLastUpdate()
     {
-        List<int> r = new List<int>();
+        List<int?> r = new List<int?>();
         r.Add("StudentResult".GetHashCode());
         r.Add(BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode());
         r.Add(EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode());
