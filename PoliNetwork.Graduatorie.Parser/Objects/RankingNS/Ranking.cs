@@ -136,6 +136,4 @@ public class Ranking
     {
         return School + "/" + Year + "/" + RankingOrder?.Phase;
     }
-
-
 }
