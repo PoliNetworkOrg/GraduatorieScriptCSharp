@@ -33,7 +33,6 @@ public class StudentResult
         r.Add(PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode());
         r.Add(PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode());
         r.Add(Result?.GetHashCode() ?? "Result".GetHashCode());
-        r.Add(EnrollType?.GetHashCode() ?? "EnrollType".GetHashCode());
         if (Ofa == null)
             r.Add("OfaEmpty".GetHashCode());
         else

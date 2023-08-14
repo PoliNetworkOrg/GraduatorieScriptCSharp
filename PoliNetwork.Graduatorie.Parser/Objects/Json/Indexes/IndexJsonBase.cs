@@ -99,9 +99,17 @@ public abstract class IndexJsonBase
             return false;
         ;
 
-        var aHash = aTableCourse.Select(variable => variable.GetHashWithoutLastUpdate()).ToList();
+        var aHash = aTableCourse.Select(variable =>
+        {
+            var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+            return hashWithoutLastUpdate;
+        }).ToList();
 
-        var bHash = bTableCourse.Select(variable => variable.GetHashWithoutLastUpdate()).ToList();
+        var bHash = bTableCourse.Select(variable =>
+        {
+            var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+            return hashWithoutLastUpdate;
+        }).ToList();
 
         ;
         for (var i = 0; i < aHash.Count && i < bHash.Count; i++)
