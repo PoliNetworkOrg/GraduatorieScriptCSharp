@@ -9,6 +9,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 #endregion
@@ -48,7 +49,7 @@ public class Ranking
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+        i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
         
 
         if (ByCourse == null)
@@ -57,28 +58,19 @@ public class Ranking
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                var iList = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
                 return current ^ iList;
             });
 
         return i;
     }
 
-    public static int? GetHashFromListHash(IReadOnlyCollection<int?>? iMerit)
-    {
-        if (iMerit == null)
-            return null;
-        if (iMerit.Count == 0)
-            return null;
-
-        return iMerit.Aggregate(0, (current, variable) => current ^ variable ?? 0);
-    }
 
     public int GetHashWithoutLastUpdateTableMerit()
     {
         var i = "RankingTableMerit".GetHashCode();
 
-        var hashWithoutLastUpdate = GetHashFromListHash(ByMerit?.GetHashWithoutLastUpdate());
+        var hashWithoutLastUpdate = Hashing.GetHashFromListHash(ByMerit?.GetHashWithoutLastUpdate());
         i ^= hashWithoutLastUpdate ?? "ByMerit".GetHashCode();
 
         return i;
@@ -95,7 +87,7 @@ public class Ranking
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var hashFromListHash = GetHashFromListHash(hashWithoutLastUpdate) ?? "empty2".GetHashCode();
+                var hashFromListHash = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty2".GetHashCode();
                 return current ^ hashFromListHash;
             });
 

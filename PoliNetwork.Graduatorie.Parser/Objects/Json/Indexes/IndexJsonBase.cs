@@ -8,6 +8,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Utils;
 
 #endregion
 
@@ -101,18 +102,18 @@ public abstract class IndexJsonBase
 
         var aHash = aTableCourse.Select(variable =>
         {
-            var hashWithoutLastUpdate = Ranking.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
+            var hashWithoutLastUpdate = Hashing.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
             return hashWithoutLastUpdate;
         }).ToList();
 
         var bHash = bTableCourse.Select(variable =>
         {
-            var hashWithoutLastUpdate = Ranking.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
+            var hashWithoutLastUpdate = Hashing.GetHashFromListHash(variable.GetHashWithoutLastUpdate());
             return hashWithoutLastUpdate;
         }).ToList();
 
-        var ai = Ranking.GetHashFromListHash(aHash);
-        var bi = Ranking.GetHashFromListHash(bHash);
+        var ai = Hashing.GetHashFromListHash(aHash);
+        var bi = Hashing.GetHashFromListHash(bHash);
         
         return (ai ?? 0) == (bi ?? 0);
     }
@@ -127,8 +128,8 @@ public abstract class IndexJsonBase
         ;
         var ai = aTableMerit.GetHashWithoutLastUpdate();
         var bi = bTableMerit.GetHashWithoutLastUpdate();
-        var aii = Ranking.GetHashFromListHash(ai) ?? 0;
-        var bii = Ranking.GetHashFromListHash(bi) ?? 0;
+        var aii = Hashing.GetHashFromListHash(ai) ?? 0;
+        var bii = Hashing.GetHashFromListHash(bi) ?? 0;
         return aii == bii;
     }
 

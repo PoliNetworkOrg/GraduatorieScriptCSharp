@@ -3,6 +3,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Utils;
 
 #endregion
 
@@ -29,7 +30,7 @@ public class MeritTable
             r.Add(Rows.Aggregate("RowsFull".GetHashCode(), (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var hashFromListHash = Ranking.GetHashFromListHash( hashWithoutLastUpdate) ?? "empty3".GetHashCode();
+                var hashFromListHash = Hashing.GetHashFromListHash( hashWithoutLastUpdate) ?? "empty3".GetHashCode();
                 return current ^ hashFromListHash;
             }));
         else
