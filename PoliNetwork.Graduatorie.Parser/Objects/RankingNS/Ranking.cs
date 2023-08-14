@@ -64,7 +64,7 @@ public class Ranking
         return i;
     }
 
-    private static int? GetHashFromListHash(IReadOnlyCollection<int>? iMerit)
+    public static int? GetHashFromListHash(IReadOnlyCollection<int>? iMerit)
     {
         if (iMerit == null)
             return null;
