@@ -69,8 +69,10 @@ public abstract class IndexJsonBase
         var j = GetRankingFromFile(path);
         if (j == null)
             return false;
+        
         var hashThis = ranking.GetHashWithoutLastUpdate();
-        var hashJ = j?.GetHashWithoutLastUpdate();
+        var hashJ = j.GetHashWithoutLastUpdate();
+        
         return hashThis == hashJ;
     }
 
