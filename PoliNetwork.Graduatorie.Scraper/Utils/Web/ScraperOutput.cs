@@ -34,20 +34,54 @@ public static class ScraperOutput
         List<RankingUrl> list = new();
         var filePath = GetFilePath(dataFolder);
         if (!File.Exists(filePath)) return list;
-        try
-        {
-            var lines = File.ReadAllLines(filePath);
-            var rankingUrls = from line in lines where !string.IsNullOrEmpty(line) select RankingUrl.From(line);
-            list.AddRange(rankingUrls);
 
-            return list;
-        }
-        catch
+        var lines = GetLines(filePath);
+        if (lines == null)
         {
             // consider to handle them
             Console.WriteLine($"[ERROR] Can't read the ScraperOutput file ({filePath})");
             return list;
         }
+
+        try
+        {
+            foreach (var variable in lines) RankingFromAdd(variable, list);
+        }
+        catch
+        {
+            // consider to handle them
+            Console.WriteLine($"[ERROR] Can't validate the ScraperOutput file ({filePath})");
+        }
+
+        return list;
+    }
+
+    private static void RankingFromAdd(string variable, ICollection<RankingUrl> list)
+    {
+        try
+        {
+            var rankingUrl = RankingUrl.From(variable);
+            list.Add(rankingUrl);
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+        }
+    }
+
+    private static List<string>? GetLines(string filePath)
+    {
+        List<string>? lines = null;
+        try
+        {
+            lines = File.ReadAllLines(filePath).Where(x => !string.IsNullOrEmpty(x)).ToList();
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+        }
+
+        return lines;
     }
 
     public static void Write(List<RankingUrl> rankingsUrls, string? dataFolder)
@@ -65,14 +99,23 @@ public static class ScraperOutput
 
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
     {
-        var output = "";
-        var urls = CheckUrlUtil.GetRankingLinksHashSet(rankingsUrls).Order();
-        foreach (var link in urls)
-        {
-            output += link;
-            output += "\n";
-        }
+        var rankingLinksHashSet = CheckUrlUtil.GetRankingLinksHashSet(rankingsUrls);
+        var rankingUrls = rankingLinksHashSet.Where(PredicateStringUrlNotNullNorEmpty);
+        var urls = rankingUrls.Order();
 
-        return output;
+        var enumerable1 = urls.Select(link => link.Url);
+        var select = enumerable1.Select(SelectorUrlWithEndLine);
+        var enumerable = select.Distinct().Order();
+        return enumerable.Aggregate("", (current, linkUrl) => current + linkUrl);
+    }
+
+    private static bool PredicateStringUrlNotNullNorEmpty(RankingUrl x)
+    {
+        return !string.IsNullOrEmpty(x.Url);
+    }
+
+    private static string SelectorUrlWithEndLine(string url)
+    {
+        return url + "\n";
     }
 }

@@ -22,29 +22,31 @@ public class StudentResult
     public decimal? Result;
     public SortedDictionary<string, decimal>? SectionsResults;
 
-    public int GetHashWithoutLastUpdate()
+    public List<int?> GetHashWithoutLastUpdate()
     {
-        var i = "StudentResult".GetHashCode();
-        i ^= BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode();
-        i ^= EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode();
-        i ^= EnglishCorrectAnswers?.GetHashCode() ?? "EnglishCorrectAnswers".GetHashCode();
-        i ^= Id?.GetHashCode() ?? "Id".GetHashCode();
-        i ^= PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode();
-        i ^= PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode();
-        i ^= Result?.GetHashCode() ?? "Result".GetHashCode();
-        i ^= EnrollType?.GetHashCode() ?? "EnrollType".GetHashCode();
+        var r = new List<int?>
+        {
+            "StudentResult".GetHashCode(),
+            BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode(),
+            EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode(),
+            EnglishCorrectAnswers?.GetHashCode() ?? "EnglishCorrectAnswers".GetHashCode(),
+            Id?.GetHashCode() ?? "Id".GetHashCode(),
+            PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode(),
+            PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode(),
+            Result?.GetHashCode() ?? "Result".GetHashCode()
+        };
         if (Ofa == null)
-            i ^= "Ofa".GetHashCode();
+            r.Add("OfaEmpty".GetHashCode());
         else
-            i = Ofa.Aggregate(i,
-                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
+            r.Add(Ofa.Aggregate("OfaFull".GetHashCode(),
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode()));
 
         if (SectionsResults == null)
-            i ^= "SectionsResults".GetHashCode();
+            r.Add("SectionsResultsEmpty".GetHashCode());
         else
-            i = SectionsResults.Aggregate(i,
-                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode());
+            r.Add(SectionsResults.Aggregate("SectionsResultsFull".GetHashCode(),
+                (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode()));
 
-        return i;
+        return r;
     }
 }

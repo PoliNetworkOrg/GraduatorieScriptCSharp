@@ -9,6 +9,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 #endregion
@@ -47,12 +48,19 @@ public class Ranking
         i ^= School?.GetHashCode() ?? "School".GetHashCode();
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
+        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
+        i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+
 
         if (ByCourse == null)
             i ^= "ByCourse".GetHashCode();
         else
-            i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+            i = ByCourse.Aggregate(i, (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                var iList = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                return current ^ iList;
+            });
 
         return i;
     }
@@ -127,5 +135,15 @@ public class Ranking
     public string GetPath()
     {
         return School + "/" + Year + "/" + RankingOrder?.Phase;
+    }
+
+    public MeritTable? GetMerit()
+    {
+        return ByMerit;
+    }
+
+    public List<CourseTable>? GetTableCourse()
+    {
+        return ByCourse;
     }
 }

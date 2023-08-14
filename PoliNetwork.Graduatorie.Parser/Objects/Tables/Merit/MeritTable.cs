@@ -2,6 +2,7 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Parser.Utils;
 
 #endregion
 
@@ -16,21 +17,27 @@ public class MeritTable
     public List<StudentResult>? Rows;
     public int? Year;
 
-    public int GetHashWithoutLastUpdate()
+    public List<int?> GetHashWithoutLastUpdate()
     {
-        var i = "MeritTable".GetHashCode();
+        var r = new List<int?> { "MeritTable".GetHashCode() };
         if (Headers != null)
-            i = Headers.Aggregate(i, (current, variable) => current ^ variable.GetHashCode());
+            r.Add(Headers.Aggregate("HeadersFull".GetHashCode(),
+                (current, variable) => current ^ variable.GetHashCode()));
         else
-            i ^= "Headers".GetHashCode();
+            r.Add("HeadersEmpty".GetHashCode());
 
         if (Rows != null)
-            i = Rows.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+            r.Add(Rows.Aggregate("RowsFull".GetHashCode(), (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                var hashFromListHash = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty3".GetHashCode();
+                return current ^ hashFromListHash;
+            }));
         else
-            i ^= "Rows".GetHashCode();
+            r.Add("RowsEmpty".GetHashCode());
 
-        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        i ^= Path?.GetHashCode() ?? "Path".GetHashCode();
-        return i;
+        r.Add(Year?.GetHashCode() ?? "Year".GetHashCode());
+        r.Add(Path?.GetHashCode() ?? "Path".GetHashCode());
+        return r;
     }
 }
