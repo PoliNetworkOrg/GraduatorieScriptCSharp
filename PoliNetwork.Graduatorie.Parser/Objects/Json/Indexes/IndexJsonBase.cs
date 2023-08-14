@@ -66,12 +66,18 @@ public abstract class IndexJsonBase
     {
         if (!File.Exists(path)) return false;
 
-        var x = File.ReadAllText(path);
-
-        var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
+        var j = GetRankingFromFile(path);
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
         return hashThis == hashJ;
+    }
+
+    private static Ranking? GetRankingFromFile(string path)
+    {
+        var x = File.ReadAllText(path);
+
+        var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
+        return j;
     }
 
     public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder, ArgsConfig argsConfig)
