@@ -67,6 +67,8 @@ public abstract class IndexJsonBase
         if (!File.Exists(path)) return false;
 
         var j = GetRankingFromFile(path);
+        if (j == null)
+            return false;
         var hashThis = ranking.GetHashWithoutLastUpdate();
         var hashJ = j?.GetHashWithoutLastUpdate();
         return hashThis == hashJ;
