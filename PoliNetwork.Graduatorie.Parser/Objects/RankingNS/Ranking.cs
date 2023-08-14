@@ -56,10 +56,20 @@ public class Ranking
 
         return i;
     }
-    
-    public int GetHashWithoutLastUpdateTable()
+
+    public int GetHashWithoutLastUpdateTableMerit()
     {
-        var i = "RankingTable".GetHashCode();
+        var i = "RankingTableMerit".GetHashCode();
+
+        i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
+
+        return i;
+    }
+
+
+    public int GetHashWithoutLastUpdateTableCourse()
+    {
+        var i = "RankingTableCourse".GetHashCode();
 
         if (ByCourse == null)
             i ^= "ByCourse".GetHashCode();
@@ -68,7 +78,7 @@ public class Ranking
 
         return i;
     }
-    
+
     public int GetHashWithoutLastUpdateInfo()
     {
         var i = "RankingInfo".GetHashCode();

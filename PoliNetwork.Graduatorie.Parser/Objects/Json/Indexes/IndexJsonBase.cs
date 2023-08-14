@@ -73,12 +73,15 @@ public abstract class IndexJsonBase
     {
         var aInfo = a.GetHashWithoutLastUpdateInfo();
         var bInfo = b.GetHashWithoutLastUpdateInfo();
-        var aTable = a.GetHashWithoutLastUpdateTable();
-        var bTable = b.GetHashWithoutLastUpdateTable();
+        var aTableCourse = a.GetHashWithoutLastUpdateTableCourse();
+        var bTableCourse = b.GetHashWithoutLastUpdateTableCourse();
+        var aTableMerit = a.GetHashWithoutLastUpdateTableMerit();
+        var bTableMerit = b.GetHashWithoutLastUpdateTableMerit();
 
         var sameHashInfo = aInfo == bInfo;
-        var sameHashTable = aTable == bTable;
-        return sameHashInfo || sameHashTable;
+        var sameHashTableCourse = aTableCourse == bTableCourse;
+        var sameHashTableMerit = aTableMerit == bTableMerit;
+        return sameHashInfo || sameHashTableCourse || sameHashTableMerit;
     }
 
     private static Ranking? GetRankingFromFile(string path)
