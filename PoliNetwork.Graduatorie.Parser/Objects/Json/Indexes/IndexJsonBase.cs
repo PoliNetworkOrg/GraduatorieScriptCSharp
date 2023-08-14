@@ -125,7 +125,11 @@ public abstract class IndexJsonBase
             return false;
 
         ;
-        return false;
+        var ai = aTableMerit.GetHashWithoutLastUpdate();
+        var bi = bTableMerit.GetHashWithoutLastUpdate();
+        var aii = Ranking.GetHashFromListHash(ai) ?? 0;
+        var bii = Ranking.GetHashFromListHash(bi) ?? 0;
+        return aii == bii;
     }
 
     private static Ranking? GetRankingFromFile(string path)
