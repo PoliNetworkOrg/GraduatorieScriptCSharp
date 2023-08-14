@@ -6,6 +6,8 @@ using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
+using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
 #endregion
 
@@ -73,15 +75,37 @@ public abstract class IndexJsonBase
     {
         var aInfo = a.GetHashWithoutLastUpdateInfo();
         var bInfo = b.GetHashWithoutLastUpdateInfo();
-        var aTableCourse = a.GetHashWithoutLastUpdateTableCourse();
-        var bTableCourse = b.GetHashWithoutLastUpdateTableCourse();
-        var aTableMerit = a.GetHashWithoutLastUpdateTableMerit();
-        var bTableMerit = b.GetHashWithoutLastUpdateTableMerit();
-
+        var aTableCourse = a.GetTableCourse();
+        var bTableCourse = b.GetTableCourse();
+        var aTableMerit = a.GetMerit();
+        var bTableMerit = b.GetMerit();
+        
         var sameHashInfo = aInfo == bInfo;
-        var sameHashTableCourse = aTableCourse == bTableCourse;
-        var sameHashTableMerit = aTableMerit == bTableMerit;
-        return sameHashInfo || sameHashTableCourse || sameHashTableMerit;
+        var sameHashTableCourse = SameHashCourse(aTableCourse, bTableCourse);
+        var sameHashTableMerit = SameHashMerit(aTableMerit, bTableMerit);
+        return sameHashInfo && sameHashTableCourse && sameHashTableMerit;
+    }
+
+    private static bool SameHashCourse(List<CourseTable>? aTableCourse, List<CourseTable>? bTableCourse)
+    {
+        if (aTableCourse == null && bTableCourse == null)
+            return true;
+        if (aTableCourse == null || bTableCourse == null)
+            return false;
+
+        ;
+        return false;
+    }
+
+    private static bool SameHashMerit(MeritTable? aTableMerit, MeritTable? bTableMerit)
+    {
+        if (aTableMerit == null && bTableMerit == null)
+            return true;
+        if (aTableMerit == null || bTableMerit == null)
+            return false;
+
+        ;
+        return false;
     }
 
     private static Ranking? GetRankingFromFile(string path)

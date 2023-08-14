@@ -106,7 +106,9 @@ public static class ScraperOutput
         var rankingUrls = rankingLinksHashSet.Where(PredicateStringUrlNotNullNorEmpty);
         var urls = rankingUrls.Order();
 
-        var enumerable = urls.Select(link => link.Url).Select(SelectorUrlWithEndLine);
+        var enumerable1 = urls.Select(link => link.Url);
+        var select = enumerable1.Select(SelectorUrlWithEndLine);
+        var enumerable = select.Distinct().Order();
         return enumerable.Aggregate("", (current, linkUrl) => current + linkUrl);
     }
 
