@@ -87,11 +87,8 @@ public abstract class IndexJsonBase
         if (aTableCourse == null || bTableCourse == null)
             return false;
 
-        ;
-
         if (aTableCourse.Count != bTableCourse.Count)
             return false;
-        ;
 
         var aHash = aTableCourse.Select(variable =>
         {
@@ -118,7 +115,6 @@ public abstract class IndexJsonBase
         if (aTableMerit == null || bTableMerit == null)
             return false;
 
-        ;
         var ai = aTableMerit.GetHashWithoutLastUpdate();
         var bi = bTableMerit.GetHashWithoutLastUpdate();
         var aii = Hashing.GetHashFromListHash(ai) ?? 0;
