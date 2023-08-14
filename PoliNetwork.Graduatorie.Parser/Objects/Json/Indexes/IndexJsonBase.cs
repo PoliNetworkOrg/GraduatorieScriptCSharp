@@ -86,7 +86,7 @@ public abstract class IndexJsonBase
         return sameHashInfo && sameHashTableCourse && sameHashTableMerit;
     }
 
-    private static bool SameHashCourse(List<CourseTable>? aTableCourse, List<CourseTable>? bTableCourse)
+    private static bool SameHashCourse(IReadOnlyCollection<CourseTable>? aTableCourse, IReadOnlyCollection<CourseTable>? bTableCourse)
     {
         if (aTableCourse == null && bTableCourse == null)
             return true;
@@ -94,7 +94,23 @@ public abstract class IndexJsonBase
             return false;
 
         ;
-        return false;
+
+        if (aTableCourse.Count != bTableCourse.Count)
+            return false;
+        ;
+
+        var aHash = aTableCourse.Select(variable => variable.GetHashWithoutLastUpdate()).ToList();
+
+        var bHash = bTableCourse.Select(variable => variable.GetHashWithoutLastUpdate()).ToList();
+
+        ;
+        for (var i = 0; i < aHash.Count && i < bHash.Count; i++)
+        {
+            if (aHash[i] != bHash[i])
+                return false;
+        }
+        
+        return true;
     }
 
     private static bool SameHashMerit(MeritTable? aTableMerit, MeritTable? bTableMerit)

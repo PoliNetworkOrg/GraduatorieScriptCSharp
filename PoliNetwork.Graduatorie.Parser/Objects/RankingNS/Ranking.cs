@@ -47,21 +47,39 @@ public class Ranking
         i ^= School?.GetHashCode() ?? "School".GetHashCode();
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
+        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
+        i ^= GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+        
 
         if (ByCourse == null)
             i ^= "ByCourse".GetHashCode();
         else
-            i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+            i = ByCourse.Aggregate(i, (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                var iList = GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                return current ^ iList;
+            });
 
         return i;
+    }
+
+    private static int? GetHashFromListHash(IReadOnlyCollection<int>? iMerit)
+    {
+        if (iMerit == null)
+            return null;
+        if (iMerit.Count == 0)
+            return null;
+
+        return iMerit.Aggregate(0, (current, variable) => current ^ variable);
     }
 
     public int GetHashWithoutLastUpdateTableMerit()
     {
         var i = "RankingTableMerit".GetHashCode();
 
-        i ^= ByMerit?.GetHashWithoutLastUpdate() ?? "ByMerit".GetHashCode();
+        var hashWithoutLastUpdate = GetHashFromListHash(ByMerit?.GetHashWithoutLastUpdate());
+        i ^= hashWithoutLastUpdate ?? "ByMerit".GetHashCode();
 
         return i;
     }
@@ -74,7 +92,12 @@ public class Ranking
         if (ByCourse == null)
             i ^= "ByCourse".GetHashCode();
         else
-            i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+            i = ByCourse.Aggregate(i, (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                var hashFromListHash = GetHashFromListHash(hashWithoutLastUpdate) ?? "empty2".GetHashCode();
+                return current ^ hashFromListHash;
+            });
 
         return i;
     }
