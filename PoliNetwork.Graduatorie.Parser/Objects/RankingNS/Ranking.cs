@@ -50,7 +50,7 @@ public class Ranking
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
         i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
-        
+
 
         if (ByCourse == null)
             i ^= "ByCourse".GetHashCode();
@@ -64,8 +64,6 @@ public class Ranking
 
         return i;
     }
-
-
 
 
     public bool IsSimilarTo(Ranking ranking)
@@ -141,11 +139,11 @@ public class Ranking
 
     public MeritTable? GetMerit()
     {
-        return this.ByMerit;
+        return ByMerit;
     }
 
     public List<CourseTable>? GetTableCourse()
     {
-        return this.ByCourse;
+        return ByCourse;
     }
 }

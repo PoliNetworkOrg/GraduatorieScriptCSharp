@@ -79,7 +79,8 @@ public abstract class IndexJsonBase
         return ai == bi;
     }
 
-    private static bool SameHashCourse(IReadOnlyCollection<CourseTable>? aTableCourse, IReadOnlyCollection<CourseTable>? bTableCourse)
+    private static bool SameHashCourse(IReadOnlyCollection<CourseTable>? aTableCourse,
+        IReadOnlyCollection<CourseTable>? bTableCourse)
     {
         if (aTableCourse == null && bTableCourse == null)
             return true;
@@ -106,7 +107,7 @@ public abstract class IndexJsonBase
 
         var ai = Hashing.GetHashFromListHash(aHash);
         var bi = Hashing.GetHashFromListHash(bHash);
-        
+
         return (ai ?? 0) == (bi ?? 0);
     }
 

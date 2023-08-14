@@ -45,10 +45,7 @@ public static class ScraperOutput
 
         try
         {
-            foreach (var variable in lines)
-            {
-                RankingFromAdd(variable, list);
-            }
+            foreach (var variable in lines) RankingFromAdd(variable, list);
         }
         catch
         {
@@ -112,6 +109,13 @@ public static class ScraperOutput
         return enumerable.Aggregate("", (current, linkUrl) => current + linkUrl);
     }
 
-    private static bool PredicateStringUrlNotNullNorEmpty(RankingUrl x) => !string.IsNullOrEmpty(x.Url);
-    private static string SelectorUrlWithEndLine(string url) => url + "\n";
+    private static bool PredicateStringUrlNotNullNorEmpty(RankingUrl x)
+    {
+        return !string.IsNullOrEmpty(x.Url);
+    }
+
+    private static string SelectorUrlWithEndLine(string url)
+    {
+        return url + "\n";
+    }
 }
