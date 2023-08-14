@@ -56,6 +56,30 @@ public class Ranking
 
         return i;
     }
+    
+    public int GetHashWithoutLastUpdateTable()
+    {
+        var i = "RankingTable".GetHashCode();
+
+        if (ByCourse == null)
+            i ^= "ByCourse".GetHashCode();
+        else
+            i = ByCourse.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
+
+        return i;
+    }
+    
+    public int GetHashWithoutLastUpdateInfo()
+    {
+        var i = "RankingInfo".GetHashCode();
+        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
+        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
+        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
+        i ^= School?.GetHashCode() ?? "School".GetHashCode();
+        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
+        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
+        return i;
+    }
 
 
     public bool IsSimilarTo(Ranking ranking)

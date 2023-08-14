@@ -62,18 +62,23 @@ public abstract class IndexJsonBase
         File.WriteAllText(path, rankingJsonString);
     }
 
-    private static bool ExitIfAlreadyExistsAndNotUpdated(Ranking ranking, string path)
+    private static bool ExitIfAlreadyExistsAndNotUpdated(Ranking a, string path)
     {
         if (!File.Exists(path)) return false;
+        var b = GetRankingFromFile(path);
+        return b != null && SameHash(a, b);
+    }
 
-        var j = GetRankingFromFile(path);
-        if (j == null)
-            return false;
-        
-        var hashThis = ranking.GetHashWithoutLastUpdate();
-        var hashJ = j.GetHashWithoutLastUpdate();
-        
-        return hashThis == hashJ;
+    private static bool SameHash(Ranking a, Ranking b)
+    {
+        var aInfo = a.GetHashWithoutLastUpdateInfo();
+        var bInfo = b.GetHashWithoutLastUpdateInfo();
+        var aTable = a.GetHashWithoutLastUpdateTable();
+        var bTable = b.GetHashWithoutLastUpdateTable();
+
+        var sameHashInfo = aInfo == bInfo;
+        var sameHashTable = aTable == bTable;
+        return sameHashInfo || sameHashTable;
     }
 
     private static Ranking? GetRankingFromFile(string path)
