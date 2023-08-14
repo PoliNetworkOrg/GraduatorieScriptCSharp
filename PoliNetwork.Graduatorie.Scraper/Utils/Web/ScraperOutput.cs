@@ -102,14 +102,14 @@ public static class ScraperOutput
 
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
     {
-        var output = "";
-        var urls = CheckUrlUtil.GetRankingLinksHashSet(rankingsUrls).Order();
-        foreach (var link in urls)
-        {
-            output += link;
-            output += "\n";
-        }
+        var rankingLinksHashSet = CheckUrlUtil.GetRankingLinksHashSet(rankingsUrls);
+        var rankingUrls = rankingLinksHashSet.Where(PredicateStringUrlNotNullNorEmpty);
+        var urls = rankingUrls.Order();
 
-        return output;
+        var enumerable = urls.Select(link => link.Url).Select(SelectorUrlWithEndLine);
+        return enumerable.Aggregate("", (current, linkUrl) => current + linkUrl);
     }
+
+    private static bool PredicateStringUrlNotNullNorEmpty(RankingUrl x) => !string.IsNullOrEmpty(x.Url);
+    private static string SelectorUrlWithEndLine(string url) => url + "\n";
 }
