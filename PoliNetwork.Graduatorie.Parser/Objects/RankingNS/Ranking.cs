@@ -66,45 +66,6 @@ public class Ranking
     }
 
 
-    public int GetHashWithoutLastUpdateTableMerit()
-    {
-        var i = "RankingTableMerit".GetHashCode();
-
-        var hashWithoutLastUpdate = Hashing.GetHashFromListHash(ByMerit?.GetHashWithoutLastUpdate());
-        i ^= hashWithoutLastUpdate ?? "ByMerit".GetHashCode();
-
-        return i;
-    }
-
-
-    public int GetHashWithoutLastUpdateTableCourse()
-    {
-        var i = "RankingTableCourse".GetHashCode();
-
-        if (ByCourse == null)
-            i ^= "ByCourse".GetHashCode();
-        else
-            i = ByCourse.Aggregate(i, (current, variable) =>
-            {
-                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var hashFromListHash = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty2".GetHashCode();
-                return current ^ hashFromListHash;
-            });
-
-        return i;
-    }
-
-    public int GetHashWithoutLastUpdateInfo()
-    {
-        var i = "RankingInfo".GetHashCode();
-        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
-        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
-        i ^= School?.GetHashCode() ?? "School".GetHashCode();
-        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
-        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        return i;
-    }
 
 
     public bool IsSimilarTo(Ranking ranking)

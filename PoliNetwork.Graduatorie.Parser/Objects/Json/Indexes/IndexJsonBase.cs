@@ -74,17 +74,9 @@ public abstract class IndexJsonBase
 
     private static bool SameHash(Ranking a, Ranking b)
     {
-        var aInfo = a.GetHashWithoutLastUpdateInfo();
-        var bInfo = b.GetHashWithoutLastUpdateInfo();
-        var aTableCourse = a.GetTableCourse();
-        var bTableCourse = b.GetTableCourse();
-        var aTableMerit = a.GetMerit();
-        var bTableMerit = b.GetMerit();
-        
-        var sameHashInfo = aInfo == bInfo;
-        var sameHashTableCourse = SameHashCourse(aTableCourse, bTableCourse);
-        var sameHashTableMerit = SameHashMerit(aTableMerit, bTableMerit);
-        return sameHashInfo && sameHashTableCourse && sameHashTableMerit;
+        var ai = a.GetHashWithoutLastUpdate();
+        var bi = b.GetHashWithoutLastUpdate();
+        return ai == bi;
     }
 
     private static bool SameHashCourse(IReadOnlyCollection<CourseTable>? aTableCourse, IReadOnlyCollection<CourseTable>? bTableCourse)
