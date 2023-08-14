@@ -24,15 +24,17 @@ public class StudentResult
 
     public List<int?> GetHashWithoutLastUpdate()
     {
-        var r = new List<int?>();
-        r.Add("StudentResult".GetHashCode());
-        r.Add(BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode());
-        r.Add(EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode());
-        r.Add(EnglishCorrectAnswers?.GetHashCode() ?? "EnglishCorrectAnswers".GetHashCode());
-        r.Add(Id?.GetHashCode() ?? "Id".GetHashCode());
-        r.Add(PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode());
-        r.Add(PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode());
-        r.Add(Result?.GetHashCode() ?? "Result".GetHashCode());
+        var r = new List<int?>
+        {
+            "StudentResult".GetHashCode(),
+            BirthDate?.GetHashCode() ?? "BirthDate".GetHashCode(),
+            EnrollType?.GetHashWithoutLastUpdate() ?? "EnrollType".GetHashCode(),
+            EnglishCorrectAnswers?.GetHashCode() ?? "EnglishCorrectAnswers".GetHashCode(),
+            Id?.GetHashCode() ?? "Id".GetHashCode(),
+            PositionAbsolute?.GetHashCode() ?? "PositionAbsolute".GetHashCode(),
+            PositionCourse?.GetHashCode() ?? "PositionCourse".GetHashCode(),
+            Result?.GetHashCode() ?? "Result".GetHashCode()
+        };
         if (Ofa == null)
             r.Add("OfaEmpty".GetHashCode());
         else

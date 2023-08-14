@@ -56,7 +56,7 @@ public static class ScraperOutput
         return list;
     }
 
-    private static void RankingFromAdd(string variable, List<RankingUrl> list)
+    private static void RankingFromAdd(string variable, ICollection<RankingUrl> list)
     {
         try
         {
