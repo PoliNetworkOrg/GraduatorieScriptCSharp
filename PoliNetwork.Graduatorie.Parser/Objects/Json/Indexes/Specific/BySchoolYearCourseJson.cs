@@ -262,17 +262,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     private static void AddToRankings(ICollection<Ranking> rankings, Ranking ranking)
     {
-        if (
-            rankings.Any(
-                x =>
-                    x.School == ranking.School
-                    && x.Year == ranking.Year
-                    && Similar(x.ByCourse, ranking.ByCourse)
-            )
-        )
-            return;
-
-        rankings.Add(ranking);
+        var any = rankings.Any(
+            x =>
+                x.School == ranking.School
+                && x.Year == ranking.Year
+                && Similar(x.ByCourse, ranking.ByCourse)
+        );
+        
+        if (!any) 
+            rankings.Add(ranking);
     }
 
     private static bool Similar(
@@ -282,7 +280,10 @@ public class BySchoolYearCourseJson : IndexJsonBase
     {
         if (a == null || b == null)
             return false;
-        return a.Count == b.Count
-               && a.Select(variable => b.Any(x => x.Title == variable.Title)).All(boolB => boolB);
+        return a.Count == b.Count && a.Select(Selector).All(Predicate);
+        
+        bool Selector(CourseTable variable) => b.Any(x => x.Title == variable.Title);
+        bool Predicate(bool boolB) => boolB;
+  
     }
 }
