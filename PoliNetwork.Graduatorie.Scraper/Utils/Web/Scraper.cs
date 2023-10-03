@@ -42,7 +42,10 @@ public class Scraper
     {
         HashSet<string> links = new();
         var page = _web.Load(HomepageUrl).DocumentNode;
+
         var slides = page.SelectNodes("//section[@id='copertina']//div[contains(@class, 'sp-slides')]/div");
+        if (slides == null) return links;
+
         foreach (var slide in slides)
         {
             var h1 = slide.Descendants("h1");
@@ -61,8 +64,11 @@ public class Scraper
     {
         HashSet<string> links = new();
         var page = _web.Load(FuturiStudentiUrl).DocumentNode;
+
         var slides =
             page.SelectNodes("//section[@id='newsNoThumb' or @id='news']//div[contains(@class, 'sp-slides')]/div");
+        if (slides == null) return links;
+
         foreach (var slide in slides)
         {
             var h1 = slide.Descendants("h1");
@@ -88,7 +94,10 @@ public class Scraper
     {
         HashSet<string> links = new();
         var page = _web.Load(InEvidenzaUrl).DocumentNode;
+
         var liTags = page.SelectNodes("//div[@id='content']//li");
+        if (liTags == null) return links;
+
         foreach (var li in liTags)
         {
             var h3 = li.GetElementsByTagName("h3");
