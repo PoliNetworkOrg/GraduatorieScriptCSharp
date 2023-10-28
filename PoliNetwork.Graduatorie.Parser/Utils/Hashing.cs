@@ -1,6 +1,6 @@
 namespace PoliNetwork.Graduatorie.Parser.Utils;
 
-public class Hashing
+public static class Hashing
 {
     public static int? GetHashFromListHash(IReadOnlyCollection<int?>? iMerit)
     {
