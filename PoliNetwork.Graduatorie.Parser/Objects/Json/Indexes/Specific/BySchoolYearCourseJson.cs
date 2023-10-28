@@ -268,8 +268,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
                 && x.Year == ranking.Year
                 && Similar(x.ByCourse, ranking.ByCourse)
         );
-        
-        if (!any) 
+
+        if (!any)
             rankings.Add(ranking);
     }
 
@@ -281,9 +281,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
         if (a == null || b == null)
             return false;
         return a.Count == b.Count && a.Select(Selector).All(Predicate);
-        
-        bool Selector(CourseTable variable) => b.Any(x => x.Title == variable.Title);
-        bool Predicate(bool boolB) => boolB;
-  
+
+        bool Selector(CourseTable variable)
+        {
+            return b.Any(x => x.Title == variable.Title);
+        }
+
+        bool Predicate(bool boolB)
+        {
+            return boolB;
+        }
     }
 }
