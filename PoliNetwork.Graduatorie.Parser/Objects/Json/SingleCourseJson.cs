@@ -3,6 +3,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
+using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 
 #endregion
@@ -19,6 +20,7 @@ public class SingleCourseJson
     public string? Name;
     public SchoolEnum? School;
     public int? Year;
+    public RankingOrder? RankingOrder;
 
     public int GetHashWithoutLastUpdate()
     {
