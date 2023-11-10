@@ -116,7 +116,8 @@ public class Ranking
             BasePath = schoolString + "/" + Year + "/",
             Year = Year,
             School = School,
-            Location = variable.Location
+            Location = variable.Location,
+            RankingOrder = RankingOrder,
         }));
 
         return result;
