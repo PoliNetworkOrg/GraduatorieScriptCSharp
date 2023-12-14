@@ -44,8 +44,8 @@ public class StudentHashSummary
 
     public void Sort2()
     {
-        this.RankingSummaries.Sort(Compare);
-        this.SingleCourseJsons.Sort(Compare);
+        RankingSummaries.Sort(Compare);
+        SingleCourseJsons.Sort(Compare);
     }
 
     private int Compare(RankingSummaryStudent a, RankingSummaryStudent b)

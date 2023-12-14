@@ -19,42 +19,6 @@ public class RankingSummaryStudent
     public readonly RankingUrl? Url;
     public readonly int? Year;
 
-    public int Compare(RankingSummaryStudent o)
-    {
-        var i = (this.Year ?? 0) - (o.Year ?? 0);
-        if (i != 0)
-        {
-            return i < 0 ? -1 : 1;
-        }
-
-        i = string.CompareOrdinal(this.Course ?? "", o.Course ?? "");
-        if (i != 0)
-        {
-            return i < 0 ? -1 : 1;
-        }
-
-        i = string.CompareOrdinal(this.Phase ?? "", o.Phase ?? "");
-        if (i != 0)
-        {
-            return i < 0 ? -1 : 1;
-        }
-
-        i = ((int)(this.School ?? SchoolEnum.Unknown)) - ((int)(o.School ?? SchoolEnum.Unknown));
-        if (i != 0)
-        {
-            return i < 0 ? -1 : 1;
-        }
-
-        i = this.Url?.CompareTo(o.Url) ?? 0;
-        if (i != 0)
-        {
-            return i < 0 ? -1 : 1;
-        }
-
-
-        return i;
-    }
-
     public RankingSummaryStudent()
     {
     }
@@ -74,6 +38,27 @@ public class RankingSummaryStudent
         School = school;
         Year = year;
         Url = url;
+    }
+
+    public int Compare(RankingSummaryStudent o)
+    {
+        var i = (Year ?? 0) - (o.Year ?? 0);
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = string.CompareOrdinal(Course ?? "", o.Course ?? "");
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = string.CompareOrdinal(Phase ?? "", o.Phase ?? "");
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = (int)(School ?? SchoolEnum.Unknown) - (int)(o.School ?? SchoolEnum.Unknown);
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = Url?.CompareTo(o.Url) ?? 0;
+        if (i != 0) return i < 0 ? -1 : 1;
+
+
+        return i;
     }
 
     public override bool Equals(object? obj)

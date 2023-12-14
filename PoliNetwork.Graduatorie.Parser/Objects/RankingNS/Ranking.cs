@@ -117,7 +117,7 @@ public class Ranking
             Year = Year,
             School = School,
             Location = variable.Location,
-            RankingOrder = RankingOrder,
+            RankingOrder = RankingOrder
         }));
 
         return result;

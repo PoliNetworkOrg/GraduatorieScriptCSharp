@@ -21,7 +21,7 @@ public static class HashMatricoleWrite
         Sort2(dictionary);
         WriteToFile(dictionary, outFolder);
     }
-    
+
     private static void Sort2(SortedDictionary<string, StudentHashSummary> dict)
     {
         var keys = dict.Keys;
