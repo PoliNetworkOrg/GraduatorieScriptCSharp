@@ -18,9 +18,9 @@ public class SingleCourseJson
     public string? Link;
     public string? Location;
     public string? Name;
+    public RankingOrder? RankingOrder;
     public SchoolEnum? School;
     public int? Year;
-    public RankingOrder? RankingOrder;
 
     public int GetHashWithoutLastUpdate()
     {

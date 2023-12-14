@@ -138,8 +138,7 @@ public class Scraper
     private IEnumerable<string> ParseNewsPage(string url)
     {
         HashSet<string> links = new();
-        if (_alreadyVisited.Contains(url)) return links;
-        _alreadyVisited.Add(url);
+        if (!_alreadyVisited.Add(url)) return links;
 
         var page = _web.Load(url).DocumentNode;
 

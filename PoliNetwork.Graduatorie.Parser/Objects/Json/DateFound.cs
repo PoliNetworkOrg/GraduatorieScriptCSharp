@@ -25,10 +25,14 @@ public class DateFound
 
     public static DateTime? MinDateTime(DateTime? date1, DateTime? date2)
     {
-        if (date1 == null && date2 == null)
-            return null;
-        if (date1 == null)
-            return date2;
+        switch (date1)
+        {
+            case null when date2 == null:
+                return null;
+            case null:
+                return date2;
+        }
+
         if (date2 == null)
             return date1;
 

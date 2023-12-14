@@ -40,6 +40,27 @@ public class RankingSummaryStudent
         Url = url;
     }
 
+    public int Compare(RankingSummaryStudent o)
+    {
+        var i = (Year ?? 0) - (o.Year ?? 0);
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = string.CompareOrdinal(Course ?? "", o.Course ?? "");
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = string.CompareOrdinal(Phase ?? "", o.Phase ?? "");
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = (int)(School ?? SchoolEnum.Unknown) - (int)(o.School ?? SchoolEnum.Unknown);
+        if (i != 0) return i < 0 ? -1 : 1;
+
+        i = Url?.CompareTo(o.Url) ?? 0;
+        if (i != 0) return i < 0 ? -1 : 1;
+
+
+        return i;
+    }
+
     public override bool Equals(object? obj)
     {
         if (obj is not RankingSummaryStudent rankingSummaryStudent) return false;

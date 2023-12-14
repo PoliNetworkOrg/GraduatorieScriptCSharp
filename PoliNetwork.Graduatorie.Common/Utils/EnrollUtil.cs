@@ -6,7 +6,7 @@ using PoliNetwork.Graduatorie.Common.Objects;
 
 namespace PoliNetwork.Graduatorie.Common.Utils;
 
-public class EnrollUtil
+public static class EnrollUtil
 {
     public static EnrollType GetEnrollType(string? rowCanEnrollInto, bool rowCanEnroll)
     {
