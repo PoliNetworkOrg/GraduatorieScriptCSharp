@@ -1,5 +1,6 @@
 #region
 
+using Microsoft.VisualBasic.CompilerServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
@@ -18,6 +19,42 @@ public class RankingSummaryStudent
     public readonly SchoolEnum? School;
     public readonly RankingUrl? Url;
     public readonly int? Year;
+
+    public int Compare(RankingSummaryStudent o)
+    {
+        var i = (this.Year ?? 0) - (o.Year ?? 0);
+        if (i != 0)
+        {
+            return i < 0 ? -1 : 1;
+        }
+
+        i = string.CompareOrdinal(this.Course ?? "", o.Course ?? "");
+        if (i != 0)
+        {
+            return i < 0 ? -1 : 1;
+        }
+
+        i = string.CompareOrdinal(this.Phase ?? "", o.Phase ?? "");
+        if (i != 0)
+        {
+            return i < 0 ? -1 : 1;
+        }
+
+        i = ((int)(this.School ?? SchoolEnum.Unknown)) - ((int)(o.School ?? SchoolEnum.Unknown));
+        if (i != 0)
+        {
+            return i < 0 ? -1 : 1;
+        }
+
+        i = this.Url?.CompareTo(o.Url) ?? 0;
+        if (i != 0)
+        {
+            return i < 0 ? -1 : 1;
+        }
+
+
+        return i;
+    }
 
     public RankingSummaryStudent()
     {

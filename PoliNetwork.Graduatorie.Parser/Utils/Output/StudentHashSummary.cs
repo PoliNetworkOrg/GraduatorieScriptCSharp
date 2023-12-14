@@ -41,4 +41,15 @@ public class StudentHashSummary
         if (!present2)
             RankingSummaries.Add(r);
     }
+
+    public void Sort2()
+    {
+        this.RankingSummaries.Sort(Compare);
+        this.SingleCourseJsons.Sort(Compare);
+    }
+
+    private int Compare(RankingSummaryStudent a, RankingSummaryStudent b)
+    {
+        return a.Compare(b);
+    }
 }

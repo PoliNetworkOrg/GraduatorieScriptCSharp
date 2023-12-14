@@ -18,7 +18,18 @@ public static class HashMatricoleWrite
             return;
 
         var dictionary = GetDictToWrite(rankingsSet);
+        Sort2(dictionary);
         WriteToFile(dictionary, outFolder);
+    }
+    
+    private static void Sort2(SortedDictionary<string, StudentHashSummary> dict)
+    {
+        var keys = dict.Keys;
+        foreach (var key in keys)
+        {
+            var item = dict[key];
+            item.Sort2();
+        }
     }
 
     private static SortedDictionary<string, StudentHashSummary> GetDictToWrite(RankingsSet rankingsSet)
