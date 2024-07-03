@@ -21,14 +21,16 @@ public class RankingOrder
     //prima graduatoria di seconda fase:{primary:2, secondary:1}
     public int? Primary;
     public int? Secondary;
+    public bool IsEnglish = false;
 
     public RankingOrder()
     {
     }
 
-    public RankingOrder(string phase)
+    public RankingOrder(string phase, bool isEnglish = false)
     {
         Phase = phase;
+        IsEnglish = isEnglish;
         FixValues();
     }
 
@@ -62,11 +64,38 @@ public class RankingOrder
                 "TERZA" => 3,
                 "QUARTA" => 4,
                 "QUINTA" => 5,
+                "SESTA" => 6,
+                "SETTIMA" => 7,
+                "OTTAVA" => 8,
+                // veramente ci sarà una nona graduatoria?
                 _ => null
             };
         }
 
         return null;
+    }
+
+    public string GetId()
+    {
+        var idList = new List<string>();
+        if (Anticipata == true) idList.Add($"anticipata");
+        if (Primary != null) idList.Add($"{Primary}fase");
+        if (Secondary != null) idList.Add($"{Secondary}grad");
+        
+        var cleanPhase = Phase?.Replace("_", "").Replace("-", "").Replace(" ", "_").ToLower() ?? "";
+        var noOrder = Anticipata == false && Primary == null && Secondary == null; 
+        var isSingleExtraEu = noOrder && cleanPhase.Contains("extraue");
+
+        if (noOrder)
+        { 
+            idList.Add(isSingleExtraEu ? "extraeu" : cleanPhase);
+        }
+        
+        idList.Add(IsEnglish ? "eng" : "ita");
+        if (ExtraEu == true && !isSingleExtraEu) idList.Add("extraeu"); // the second condition is to avoid double extraeu
+        
+        var id = string.Join("_", idList);
+        return id;
     }
 
     public int GetHashWithoutLastUpdate()

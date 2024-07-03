@@ -96,11 +96,29 @@ public class Ranking
             RankingOrder.Merge(ranking.RankingOrder);
     }
 
-    public string ConvertPhaseToFilename()
+    public string GetFilename()
     {
-        var s = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
-        var phase1 = RankingOrder?.Phase ?? s;
-        return $"{phase1}.json".Replace(" ", "_");
+        var id = GetId();
+        return $"{id}.json";
+    }
+
+    public string GetId()
+    {
+        var idList = new List<string>();
+        
+        var schoolShort = School?.ToShortName();
+        if (schoolShort != null) idList.Add(schoolShort);
+
+        var yearStr = Year.ToString();
+        if (yearStr != null) idList.Add(yearStr);
+
+        var orderId = RankingOrder?.GetId();
+        if (orderId != null) idList.Add(orderId);
+        
+        var fallback = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
+        if (idList.Count == 0) idList.Add(fallback);
+
+        return string.Join("_", idList);
     }
 
     public List<SingleCourseJson> ToSingleCourseJson()
@@ -111,8 +129,8 @@ public class Ranking
         if (courseTables == null) return result;
         result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {
-            Link = ConvertPhaseToFilename(),
-            Name = RankingOrder?.Phase,
+            Link = GetFilename(),
+            Id = GetId(),
             BasePath = schoolString + "/" + Year + "/",
             Year = Year,
             School = School,

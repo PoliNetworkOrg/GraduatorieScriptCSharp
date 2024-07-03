@@ -57,7 +57,7 @@ public abstract class IndexJsonBase
 
     private static void WriteSingleJsonRanking(string folder, Ranking ranking, ArgsConfig argsConfig)
     {
-        var path = Path.Join(folder, ranking.ConvertPhaseToFilename());
+        var path = Path.Join(folder, ranking.GetFilename());
 
         if (ExitIfAlreadyExistsAndNotUpdated(ranking, path) && !argsConfig.ForceReparsing) return;
 
