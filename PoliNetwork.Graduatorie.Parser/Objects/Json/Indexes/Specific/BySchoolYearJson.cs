@@ -62,11 +62,10 @@ public class BySchoolYearJson : IndexJsonBase
             .DistinctBy(x => x.Link)
             .ToList();
         var filenames = singleCourseJsons
-            .OrderBy(a => a.Name)
+            .OrderBy(a => a.Id)
             .ThenBy(a => a.Year)
             .ThenBy(a => a.School)
             .ThenBy(a => a.BasePath)
-            .ThenBy(a => a.Link)
             .ToList();
 
         schoolDict.Add(yearGroupKey.Value, filenames);

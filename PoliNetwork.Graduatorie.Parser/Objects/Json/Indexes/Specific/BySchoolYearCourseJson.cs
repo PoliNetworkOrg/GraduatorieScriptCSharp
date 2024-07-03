@@ -132,7 +132,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     private static int Comparison(SingleCourseJson x, SingleCourseJson y)
     {
-        return x.Compare(y);
+        return x.CompareTo(y);
     }
 
     private static SingleCourseJson CreateCourseJson(Ranking ranking, CourseTable course)
@@ -140,8 +140,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
         var basePath = ranking.School + "/" + ranking.Year + "/";
         return new SingleCourseJson
         {
-            Link = ranking.ConvertPhaseToFilename(),
-            Name = ranking.RankingOrder?.Phase,
+            Link = ranking.GetFilename(),
+            Id = ranking.GetId(),
             BasePath = basePath,
             Year = ranking.Year,
             School = ranking.School,
@@ -159,7 +159,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         {
             return singleCourseJson.School == v1.School
                    && singleCourseJson.Year == v1.Year
-                   && v1.RankingOrder?.Phase == singleCourseJson.Name;
+                   && singleCourseJson.RankingOrder?.GetId() == v1.RankingOrder?.GetId();
         }
     }
 

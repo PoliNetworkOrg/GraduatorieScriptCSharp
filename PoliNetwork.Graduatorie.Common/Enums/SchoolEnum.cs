@@ -17,3 +17,18 @@ public enum SchoolEnum
     Design = 4,
     Unknown = 0
 }
+
+public static class SchoolEnumMethods
+{
+    public static string ToShortName(this SchoolEnum s)
+    {
+        return s switch
+        {
+            SchoolEnum.Architettura => "ARC",
+            SchoolEnum.Design => "DES",
+            SchoolEnum.Ingegneria => "ENG",
+            SchoolEnum.Urbanistica => "URB",
+            _ => "UNK",
+        };
+    }
+}
