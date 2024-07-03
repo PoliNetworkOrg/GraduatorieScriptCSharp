@@ -18,7 +18,8 @@ public static class UrlUtils
     /// <returns>The full url</returns>
     public static string UrlifyLocalHref(string href, string? domain)
     {
-        return domain != null && !href.Contains(domain) ? domain + href : href;
+        if (href.StartsWith("https://") || domain == null) return href;
+        return !href.Contains(domain) ? domain + href : href;
     }
 
     public static bool CheckUrl(RankingUrl? url)
