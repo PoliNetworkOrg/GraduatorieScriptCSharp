@@ -145,7 +145,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
             BasePath = basePath,
             Year = ranking.Year,
             School = ranking.School,
-            Location = course.Location
+            Location = course.Location,
+            RankingOrder = ranking.RankingOrder
         };
     }
 
