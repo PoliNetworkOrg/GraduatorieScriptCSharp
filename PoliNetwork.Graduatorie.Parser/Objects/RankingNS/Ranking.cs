@@ -18,7 +18,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class Ranking
+public class Ranking : IComparable<Ranking>
 {
     public List<CourseTable>? ByCourse;
     public MeritTable? ByMerit;
@@ -33,6 +33,14 @@ public class Ranking
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
         return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
+    }
+
+    public int CompareTo(Ranking? other)
+    {
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        
+        return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
     }
 
 
