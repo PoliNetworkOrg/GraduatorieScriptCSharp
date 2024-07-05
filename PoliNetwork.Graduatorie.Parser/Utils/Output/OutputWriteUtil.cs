@@ -20,10 +20,12 @@ public class OutputWriteUtil
         _config = argsConfig;
     }
 
-    public void SaveOutputs(RankingsSet? rankingsSet, DateFound dateFound)
+    public void SaveOutputs(RankingsSet rankingsSet, DateFound dateFound)
     {
         var outFolder = Path.Join(_config.DataFolder, Constants.OutputFolder);
-        IndexJsonBase.IndexesWrite(rankingsSet, outFolder, _config);
+        
+        rankingsSet.WriteAllRankings(outFolder, _config.ForceReparsing);
+        IndexJsonBase.WriteAllIndexes(rankingsSet, outFolder, _config);
         StatsJson.Write(outFolder, rankingsSet, _config);
         HashMatricoleWrite.Write(rankingsSet, outFolder);
 

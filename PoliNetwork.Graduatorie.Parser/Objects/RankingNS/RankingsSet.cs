@@ -39,4 +39,9 @@ public class RankingsSet
     {
         foreach (var ranking in set.Rankings) AddRanking(ranking);
     }
+
+    public void WriteAllRankings(string outFolder, bool forceReparse = false)
+    {
+        foreach (var ranking in Rankings) ranking.WriteAsJson(outFolder, forceReparse);
+    }
 }
