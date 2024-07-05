@@ -24,11 +24,8 @@ public class BySchoolYearCourseJson : IndexJsonBase
     //keys: school, year, course, location
     public SchoolsDict Schools = new();
 
-    public static BySchoolYearCourseJson? From(RankingsSet? set)
+    public static BySchoolYearCourseJson From(RankingsSet set)
     {
-        if (set == null)
-            return null;
-
         var mainJson = new BySchoolYearCourseJson { LastUpdate = set.LastUpdate };
 
         // group rankings by school
