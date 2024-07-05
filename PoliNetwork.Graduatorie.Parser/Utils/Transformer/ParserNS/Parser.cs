@@ -444,7 +444,7 @@ public class Parser
 
         foreach (var row in table.Data)
         {
-            var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
+            var id = HashMatricola.Get(Table.GetFieldByIndex(row, idIndex));
             var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
@@ -528,7 +528,7 @@ public class Parser
         SortedDictionary<string, int>? sectionsIndex
     )
     {
-        var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
+        var id = HashMatricola.Get(Table.GetFieldByIndex(row, idIndex));
         var votoTestString = Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0";
 
         var votoTest = Convert.ToDecimal(votoTestString, Culture.NumberFormatInfo);
