@@ -22,10 +22,10 @@ public static class Program
         var rankingsUrls = Scraper.Main.Program.RankingsUrls(mt, argsConfig);
 
         // esegui ciò che fa il parser (parse + write)
-        ParserDo(argsConfig, rankingsUrls);
+        RunParser(argsConfig, rankingsUrls);
     }
 
-    private static void ParserDo(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsUrls)
+    private static void RunParser(ArgsConfig argsConfig, IEnumerable<RankingUrl> rankingsUrls)
     {
         // ricava un unico set partendo dai file html salvati, dagli url 
         // trovati e dal precedente set salvato nel .json
