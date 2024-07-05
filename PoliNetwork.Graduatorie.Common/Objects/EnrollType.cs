@@ -1,6 +1,5 @@
 #region
 
-using System.Security.Cryptography;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
