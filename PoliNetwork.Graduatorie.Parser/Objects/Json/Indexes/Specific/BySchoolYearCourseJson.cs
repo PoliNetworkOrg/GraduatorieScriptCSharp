@@ -1,16 +1,19 @@
 #region
-
+using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
-using PoliNetwork.Graduatorie.Common.Utils.ParallelNS;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
-
 #endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
+
+using SchoolsDict =
+    SortedDictionary<SchoolEnum,
+        SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>>;
+using YearsDict = SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>;
+using CoursesDict = SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>;
+using CourseDict = SortedDictionary<string, List<SingleCourseJson>>;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
@@ -19,10 +22,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
     internal const string PathCustom = "bySchoolYearCourse.json";
 
     //keys: school, year, course, location
-    public SortedDictionary<
-        SchoolEnum,
-        SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
-    > Schools = new();
+    public SchoolsDict Schools = new();
 
     public static BySchoolYearCourseJson? From(RankingsSet? set)
     {
@@ -30,15 +30,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
             return null;
 
         var mainJson = new BySchoolYearCourseJson { LastUpdate = set.LastUpdate };
+
         // group rankings by school
-        var bySchool = set.Rankings.GroupBy(r => r.School);
+        var bySchool = set.Rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
+
         foreach (var schoolGroup in bySchool)
         {
-            if (schoolGroup.Key is null)
-                continue;
-            var school = schoolGroup.Key.Value;
+            var school = schoolGroup.Key;
 
-            var byYears = schoolGroup.GroupBy(r => r.Year);
+            var byYears = schoolGroup.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
             var yearsDict = GetYearsDict(byYears);
 
             mainJson.Schools.Add(school, yearsDict);
@@ -48,249 +48,67 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return mainJson;
     }
 
-    private static SortedDictionary<
-        int,
-        SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>
-    > GetYearsDict(IEnumerable<IGrouping<int?, Ranking>> byYears)
+    private static YearsDict GetYearsDict(IEnumerable<IGrouping<int, Ranking>> byYears)
     {
-        var d =
-            new SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>();
+        var yearsDict = new YearsDict();
 
-        foreach (var yearGroup in byYears) GetYearsDictSingle(yearGroup, d);
+        foreach (var yearGroup in byYears)
+        {
+            var coursesDict = GetCoursesDict(yearGroup);
+            yearsDict.Add(yearGroup.Key, coursesDict);
+        }
 
-        return d;
+        return yearsDict;
     }
 
-    private static void GetYearsDictSingle(IGrouping<int?, Ranking> yearGroup,
-        IDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> d)
+    private static CoursesDict GetCoursesDict(IGrouping<int, Ranking> yearGroup)
     {
-        if (yearGroup.Key != null) d.Add(yearGroup.Key.Value, GetCoursesDict(yearGroup));
-    }
-
-    private static SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> GetCoursesDict(
-        IEnumerable<Ranking> yearGroup
-    )
-    {
-        var d = new SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>();
+        var coursesDict = new CoursesDict();
 
         foreach (var ranking in yearGroup)
         {
             if (ranking.ByCourse == null)
                 continue;
 
-            var byTitle = ranking.ByCourse.GroupBy(c => c.Title);
+            var byTitle =
+                ranking.ByCourse.Where(c => c.Title != null).GroupBy(c => c.Title!); // e.g. INGEGNERIA AEROSPAZIALE
+
             foreach (var courseGroup in byTitle)
-                AddCourseToDict(d, ranking, courseGroup);
-        }
-
-        return d;
-    }
-
-    private static void AddCourseToDict(
-        IDictionary<string, SortedDictionary<string, List<SingleCourseJson>>> d,
-        Ranking ranking,
-        IGrouping<string?, CourseTable> courseGroup
-    )
-    {
-        var title = courseGroup.Key;
-        if (string.IsNullOrEmpty(title))
-            return;
-
-        if (!d.ContainsKey(title))
-            d[title] = new SortedDictionary<string, List<SingleCourseJson>>();
-
-        var courseDict = d[title];
-        foreach (var course in courseGroup)
-        {
-            var location = course.Location;
-
-            // fixedLocation
-            // esempio: Urbanistica 2022 ha un solo corso senza location, ma anche quello
-            // deve comparire nella lista
-            // fix: se un corso non ha location, si inserisce un valore 0
-            var fixedLocation = string.IsNullOrEmpty(location) ? "0" : location;
-
-            if (!courseDict.ContainsKey(fixedLocation))
-                courseDict[fixedLocation] = new List<SingleCourseJson>();
-
-            var locationDict = courseDict[fixedLocation];
-            var singleCourseJson = CreateCourseJson(ranking, course);
-
-            if (locationDict.Any(IsThisCourse))
-                continue;
-
-            locationDict.Add(singleCourseJson);
-            locationDict.Sort(Comparison);
-            continue;
-
-            bool IsThisCourse(SingleCourseJson x)
             {
-                return x.Link == singleCourseJson.Link && x.Location == singleCourseJson.Location;
-            }
-        }
-    }
+                var alreadyExisted = coursesDict.ContainsKey(courseGroup.Key);
+                var courseDict = alreadyExisted
+                    ? coursesDict[courseGroup.Key]
+                    : new CourseDict();
 
-    private static int Comparison(SingleCourseJson x, SingleCourseJson y)
-    {
-        return x.CompareTo(y);
-    }
+                foreach (var courseTable in courseGroup)
+                {
+                    var location = courseTable.GetFixedLocation();
+                    if (!courseDict.ContainsKey(location))
+                    {
+                        // first time this location is encountered,
+                        // so we instantiate the list for this location
+                        var newLocationList = new List<SingleCourseJson>();
+                        courseDict.Add(location, newLocationList);
+                    }
 
-    private static SingleCourseJson CreateCourseJson(Ranking ranking, CourseTable course)
-    {
-        var basePath = ranking.School + "/" + ranking.Year + "/";
-        return new SingleCourseJson
-        {
-            Link = ranking.GetFilename(),
-            Id = ranking.GetId(),
-            BasePath = basePath,
-            Year = ranking.Year,
-            School = ranking.School,
-            Location = course.Location,
-            RankingOrder = ranking.RankingOrder
-        };
-    }
+                    var locationList = courseDict.GetValueOrDefault(location);
+                    if (locationList == null)
+                        throw new UnreachableException(); // this should never happen at this point
 
-    private static bool IsSimilar(IEnumerable<Ranking> yearGroup, SingleCourseJson singleCourseJson)
-    {
-        var enumerable = yearGroup.Where(v1 => v1.ByCourse != null);
+                    var singleCourseJson = SingleCourseJson.From(ranking, courseTable);
 
-        return enumerable.Any(Predicate);
+                    if (locationList.Any(
+                            x => x.Id == singleCourseJson.Id && x.Location == singleCourseJson.Location))
+                        continue;
 
-        bool Predicate(Ranking v1)
-        {
-            return singleCourseJson.School == v1.School
-                   && singleCourseJson.Year == v1.Year
-                   && singleCourseJson.RankingOrder?.GetId() == v1.RankingOrder?.GetId();
-        }
-    }
+                    locationList.Add(singleCourseJson);
+                    locationList.Sort();
+                }
 
-    public static RankingsSet? Parse(string dataFolder)
-    {
-        var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, PathCustom);
-        try
-        {
-            var mainJson = Utils.Transformer.ParserNS.Parser.ParseJson<BySchoolYearCourseJson>(mainJsonPath);
-            if (mainJson is null)
-                return null;
-
-            var rankings = RankingsAdd(mainJson, outFolder);
-
-            return new RankingsSet { LastUpdate = mainJson.LastUpdate, Rankings = rankings };
-        }
-        catch
-        {
-            // ignored
-        }
-
-        return null;
-    }
-
-    private static List<Ranking> RankingsAdd(BySchoolYearCourseJson mainJson, string outFolder)
-    {
-        List<Ranking> rankings = new();
-        foreach (var school in mainJson.Schools)
-        foreach (var year in school.Value)
-            RankingsAddSingleYearSchool(year, outFolder, school, rankings);
-
-        return rankings;
-    }
-
-    private static void RankingsAddSingleYearSchool(
-        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
-        string outFolder,
-        KeyValuePair<
-            SchoolEnum,
-            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
-        > school,
-        ICollection<Ranking> rankings
-    )
-    {
-        var actions = new List<Action>();
-        foreach (var filename in year.Value)
-        {
-            var collection = filename.Value.Select(Selector);
-            actions.AddRange(collection);
-            continue;
-
-            Action Selector(KeyValuePair<string, List<SingleCourseJson>> variable)
-            {
-                return () => { RankingAdd(school, year, outFolder, variable, rankings); };
+                if (!alreadyExisted) coursesDict.Add(courseGroup.Key, courseDict);
             }
         }
 
-        ParallelRun.Run(actions.ToArray());
-    }
-
-    private static void RankingAdd(
-        KeyValuePair<
-            SchoolEnum,
-            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
-        > school,
-        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
-        string outFolder,
-        KeyValuePair<string, List<SingleCourseJson>> filename,
-        ICollection<Ranking> rankings
-    )
-    {
-        foreach (var variable in filename.Value)
-            RankingAddSingle(school, year, outFolder, rankings, variable);
-    }
-
-    private static void RankingAddSingle(
-        KeyValuePair<
-            SchoolEnum,
-            SortedDictionary<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>>
-        > school,
-        KeyValuePair<int, SortedDictionary<string, SortedDictionary<string, List<SingleCourseJson>>>> year,
-        string outFolder,
-        ICollection<Ranking> rankings,
-        SingleCourseJson variable
-    )
-    {
-        var schoolKey = school.Key.ToString();
-        var yearKey = year.Key.ToString();
-        var path = Path.Join(outFolder, schoolKey, yearKey, variable.Link);
-        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
-        if (ranking == null)
-            return;
-
-        lock (rankings)
-        {
-            AddToRankings(rankings, ranking);
-        }
-    }
-
-    private static void AddToRankings(ICollection<Ranking> rankings, Ranking ranking)
-    {
-        var any = rankings.Any(
-            x =>
-                x.School == ranking.School
-                && x.Year == ranking.Year
-                && Similar(x.ByCourse, ranking.ByCourse)
-        );
-
-        if (!any)
-            rankings.Add(ranking);
-    }
-
-    private static bool Similar(
-        IReadOnlyCollection<CourseTable>? a,
-        IReadOnlyCollection<CourseTable>? b
-    )
-    {
-        if (a == null || b == null)
-            return false;
-        return a.Count == b.Count && a.Select(Selector).All(Predicate);
-
-        bool Selector(CourseTable variable)
-        {
-            return b.Any(x => x.Title == variable.Title);
-        }
-
-        bool Predicate(bool boolB)
-        {
-            return boolB;
-        }
+        return coursesDict;
     }
 }

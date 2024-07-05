@@ -22,6 +22,21 @@ public class SingleCourseJson: IComparable<SingleCourseJson>
     public SchoolEnum? School;
     public int? Year;
 
+    public static SingleCourseJson From(Ranking ranking, CourseTable? course)
+    {
+        var basePath = $"{ranking.School}/{ranking.Year}/"; // "Ingegneria/2023"
+        return new SingleCourseJson
+        {
+            Link = ranking.GetFilename(),
+            Id = ranking.GetId(),
+            BasePath = basePath,
+            Year = ranking.Year,
+            School = ranking.School,
+            Location = course?.Location,
+            RankingOrder = ranking.RankingOrder
+        };
+    }
+
     public int GetHashWithoutLastUpdate()
     {
         var hashWithoutLastUpdate = Link?.GetHashCode() ?? "Link".GetHashCode();
