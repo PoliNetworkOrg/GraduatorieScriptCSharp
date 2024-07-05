@@ -1,6 +1,6 @@
 ﻿#region
 
-using PoliNetwork.Graduatorie.Common.Utils;
+using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
@@ -25,7 +25,7 @@ public static class Converter
             PositionCourse = null,
             SectionsResults = null,
             EnglishCorrectAnswers = null,
-            EnrollType = EnrollUtil.GetEnrollType(rowCanEnrollInto, rowCanEnroll)
+            EnrollType = EnrollType.From(rowCanEnrollInto, rowCanEnroll)
         };
     }
 
@@ -39,7 +39,7 @@ public static class Converter
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = row.BirthDate,
-            EnrollType = EnrollUtil.GetEnrollType(course.CourseTitle, rowCanEnroll),
+            EnrollType = EnrollType.From(course.CourseTitle, rowCanEnroll),
             PositionAbsolute = null,
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
