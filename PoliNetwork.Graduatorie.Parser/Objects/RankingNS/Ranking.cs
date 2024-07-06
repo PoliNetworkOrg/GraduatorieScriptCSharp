@@ -10,7 +10,6 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
-using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 #endregion
@@ -189,7 +188,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+        i ^= iMerit ?? "ByMerit".GetHashCode();
 
 
         if (ByCourse == null)
@@ -198,7 +197,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                var iList = hashWithoutLastUpdate;
                 return current ^ iList;
             });
 

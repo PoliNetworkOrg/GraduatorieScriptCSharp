@@ -27,8 +27,8 @@ public abstract class IndexJsonBase
     public static void WriteAllIndexes(RankingsSet rankingsSet, string outFolder, ArgsConfig argsConfig)
     {
         //now let's write each single different index
-        BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.CustomPath);
+        BySchoolYearJson.From(rankingsSet).WriteToFile(outFolder, BySchoolYearJson.CustomPath);
         ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.CustomPath);
-        BySchoolYearCourseJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearCourseJson.CustomPath);
+        BySchoolYearCourseJson.From(rankingsSet).WriteToFile(outFolder, BySchoolYearCourseJson.CustomPath);
     }
 }

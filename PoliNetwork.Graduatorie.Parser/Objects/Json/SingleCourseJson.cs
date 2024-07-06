@@ -60,7 +60,7 @@ public class SingleCourseJson : IComparable<SingleCourseJson>
 
         return 0;
     }
-
+    
     public int GetHashWithoutLastUpdate()
     {
         var hashWithoutLastUpdate = Link?.GetHashCode() ?? "Link".GetHashCode();
