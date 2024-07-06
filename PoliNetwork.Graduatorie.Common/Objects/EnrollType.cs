@@ -23,7 +23,7 @@ public class EnrollType
 
         return i;
     }
-    
+
     public static EnrollType From(string? rowCanEnrollInto, bool rowCanEnroll)
     {
         if (rowCanEnroll == false)

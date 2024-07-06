@@ -6,7 +6,6 @@ using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
-
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
 
@@ -37,7 +36,6 @@ public abstract class IndexJsonBase
         ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
         BySchoolYearCourseJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearCourseJson.PathCustom);
     }
-
 
 
     public static void WriteSingleJsons(RankingsSet? set, string outFolder, ArgsConfig argsConfig)
@@ -139,6 +137,4 @@ public abstract class IndexJsonBase
         var j = JsonConvert.DeserializeObject<Ranking>(x, Culture.JsonSerializerSettings);
         return j;
     }
-
-
 }

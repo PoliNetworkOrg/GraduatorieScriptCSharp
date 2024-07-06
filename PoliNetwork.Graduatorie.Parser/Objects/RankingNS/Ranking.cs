@@ -31,17 +31,6 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public int? Year;
 
 
-
-    public static Ranking? FromJson(string fullPath)
-    {
-        if (!File.Exists(fullPath)) return null;
-        
-        var str = File.ReadAllText(fullPath);
-        var ranking = JsonConvert.DeserializeObject<Ranking>(str, Culture.JsonSerializerSettings);
-        return ranking;
-    }
-
-
     public int CompareTo(Ranking? other)
     {
         if (ReferenceEquals(this, other)) return 0;
@@ -50,21 +39,28 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
     }
 
+
+    public bool Equals(Ranking? other)
+    {
+        if (other == null) return false;
+        return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
+    }
+
+
+    public static Ranking? FromJson(string fullPath)
+    {
+        if (!File.Exists(fullPath)) return null;
+
+        var str = File.ReadAllText(fullPath);
+        var ranking = JsonConvert.DeserializeObject<Ranking>(str, Culture.JsonSerializerSettings);
+        return ranking;
+    }
+
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
         return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
- 
 
-
-    public bool Equals(Ranking? other)
-    {
-
-        if (other == null) return false;
-        return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
-
-    }
-    
     public override bool Equals(object? obj)
     {
         return Equals(obj as Ranking);
@@ -72,7 +68,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
     public override int GetHashCode()
     {
-        return this.GetHashWithoutLastUpdate();
+        return GetHashWithoutLastUpdate();
     }
 
 
@@ -174,7 +170,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     {
         var folderPath = GetBasePath(outFolder);
         Directory.CreateDirectory(folderPath);
-        
+
         var fullPath = GetFullPath(outFolder);
 
         var savedRanking = FromJson(fullPath);
@@ -186,7 +182,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             File.WriteAllText(fullPath, rankingJsonString);
         }
     }
-    
+
     /***
      * Ottieni l'hash senza considerare il valore di LastUpdate
      */
@@ -200,7 +196,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= (iMerit) ?? "ByMerit".GetHashCode();
+        i ^= iMerit ?? "ByMerit".GetHashCode();
 
 
         if (ByCourse == null)
@@ -209,12 +205,10 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = (hashWithoutLastUpdate);
+                var iList = hashWithoutLastUpdate;
                 return current ^ iList;
             });
 
         return i;
     }
-
-
 }

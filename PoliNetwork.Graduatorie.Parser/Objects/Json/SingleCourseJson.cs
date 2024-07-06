@@ -23,6 +23,31 @@ public class SingleCourseJson : IComparable<SingleCourseJson>
     public int? Year;
 
 
+    public int CompareTo(SingleCourseJson? singleCourseJson)
+    {
+        if (singleCourseJson == null) return 1;
+
+        if (Year != singleCourseJson.Year)
+            return (Year ?? -1) < (singleCourseJson.Year ?? -1) ? -1 : 1;
+
+        if (School != singleCourseJson.School) return School < singleCourseJson.School ? -1 : 1;
+
+        if (BasePath != singleCourseJson.BasePath)
+            return string.Compare(BasePath ?? "", singleCourseJson.BasePath ?? "", StringComparison.InvariantCulture);
+
+        if (Link != singleCourseJson.Link)
+            return string.Compare(Link ?? "", singleCourseJson.Link ?? "", StringComparison.InvariantCulture);
+
+        if (Location != singleCourseJson.Location)
+            return string.Compare(Location ?? "", singleCourseJson.Location ?? "", StringComparison.InvariantCulture);
+
+        if (Id != singleCourseJson.Id)
+            return string.Compare(Id ?? "", singleCourseJson.Id ?? "", StringComparison.InvariantCulture);
+
+        return 0;
+    }
+
+
     public static SingleCourseJson From(Ranking ranking, CourseTable? course)
     {
         var basePath = $"{ranking.School}/{ranking.Year}/"; // "Ingegneria/2023"
@@ -48,32 +73,6 @@ public class SingleCourseJson : IComparable<SingleCourseJson>
         var code = "SingleCourseJson".GetHashCode();
         return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt ^ code;
     }
-
-
-    public int CompareTo(SingleCourseJson? singleCourseJson)
-    {
-        if (singleCourseJson == null) return 1;
-
-        if (Year != singleCourseJson.Year)
-            return (Year ?? -1) < (singleCourseJson.Year ?? -1) ? -1 : 1;
-
-        if (School != singleCourseJson.School) return School < singleCourseJson.School ? -1 : 1;
-
-        if (BasePath != singleCourseJson.BasePath)
-            return string.Compare(BasePath ?? "", singleCourseJson.BasePath ?? "", StringComparison.InvariantCulture);
-
-        if (Link != singleCourseJson.Link)
-            return string.Compare(Link ?? "", singleCourseJson.Link ?? "", StringComparison.InvariantCulture);
-
-        if (Location != singleCourseJson.Location)
-            return string.Compare(Location ?? "", singleCourseJson.Location ?? "", StringComparison.InvariantCulture);
-
-        if (Id != singleCourseJson.Id)
-            return string.Compare(Id ?? "", singleCourseJson.Id ?? "", StringComparison.InvariantCulture);
-
-        return 0;
-    }
-
 
 
     public bool Is(CourseTable courseTable)
