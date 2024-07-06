@@ -52,7 +52,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     {
         if (ReferenceEquals(this, other)) return 0;
         if (ReferenceEquals(null, other)) return 1;
-        
+
         return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
     }
 
@@ -72,6 +72,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
                Extra == ranking.Extra &&
                Url?.Url == ranking.Url?.Url;
     }
+
 
     public void Merge(Ranking ranking)
     {
@@ -102,7 +103,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public string GetId()
     {
         var idList = new List<string>();
-        
+
         var schoolShort = School?.ToShortName();
         if (schoolShort != null) idList.Add(schoolShort);
 
@@ -111,7 +112,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
         var orderId = RankingOrder?.GetId();
         if (orderId != null) idList.Add(orderId);
-        
+
         var fallback = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
         if (idList.Count == 0) idList.Add(fallback);
 

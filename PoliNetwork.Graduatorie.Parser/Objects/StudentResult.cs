@@ -3,6 +3,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Objects;
+using PoliNetwork.Graduatorie.Parser.Utils;
 
 #endregion
 
@@ -22,7 +23,7 @@ public class StudentResult
     public decimal? Result;
     public SortedDictionary<string, decimal>? SectionsResults;
 
-    public List<int?> GetHashWithoutLastUpdate()
+    public int GetHashWithoutLastUpdate()
     {
         var r = new List<int?>
         {
@@ -47,6 +48,6 @@ public class StudentResult
             r.Add(SectionsResults.Aggregate("SectionsResultsFull".GetHashCode(),
                 (current, variable) => current ^ variable.Key.GetHashCode() ^ variable.Value.GetHashCode()));
 
-        return r;
+        return Hashing.GetHashFromListHash(r);
     }
 }
