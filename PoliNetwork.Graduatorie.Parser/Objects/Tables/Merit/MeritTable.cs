@@ -17,7 +17,7 @@ public class MeritTable
     public List<StudentResult>? Rows;
     public int? Year;
 
-    public List<int?> GetHashWithoutLastUpdate()
+    public int GetHashWithoutLastUpdate()
     {
         var r = new List<int?> { "MeritTable".GetHashCode() };
         if (Headers != null)
@@ -30,14 +30,13 @@ public class MeritTable
             r.Add(Rows.Aggregate("RowsFull".GetHashCode(), (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var hashFromListHash = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty3".GetHashCode();
-                return current ^ hashFromListHash;
+                return current ^ hashWithoutLastUpdate;
             }));
         else
             r.Add("RowsEmpty".GetHashCode());
 
         r.Add(Year?.GetHashCode() ?? "Year".GetHashCode());
         r.Add(Path?.GetHashCode() ?? "Path".GetHashCode());
-        return r;
+        return Hashing.GetHashFromListHash(r);
     }
 }

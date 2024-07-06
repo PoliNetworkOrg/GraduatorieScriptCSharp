@@ -9,7 +9,6 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
-using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 #endregion
@@ -30,17 +29,17 @@ public class Ranking : IComparable<Ranking>
     public RankingUrl? Url;
     public int? Year;
 
-    public RankingSummaryStudent GetRankingSummaryStudent()
-    {
-        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
-    }
-
     public int CompareTo(Ranking? other)
     {
         if (ReferenceEquals(this, other)) return 0;
         if (ReferenceEquals(null, other)) return 1;
-        
+
         return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
+    }
+
+    public RankingSummaryStudent GetRankingSummaryStudent()
+    {
+        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
 
 
@@ -57,7 +56,7 @@ public class Ranking : IComparable<Ranking>
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+        i ^= iMerit ?? "ByMerit".GetHashCode();
 
 
         if (ByCourse == null)
@@ -66,7 +65,7 @@ public class Ranking : IComparable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                var iList = hashWithoutLastUpdate;
                 return current ^ iList;
             });
 
@@ -113,7 +112,7 @@ public class Ranking : IComparable<Ranking>
     public string GetId()
     {
         var idList = new List<string>();
-        
+
         var schoolShort = School?.ToShortName();
         if (schoolShort != null) idList.Add(schoolShort);
 
@@ -122,7 +121,7 @@ public class Ranking : IComparable<Ranking>
 
         var orderId = RankingOrder?.GetId();
         if (orderId != null) idList.Add(orderId);
-        
+
         var fallback = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
         if (idList.Count == 0) idList.Add(fallback);
 

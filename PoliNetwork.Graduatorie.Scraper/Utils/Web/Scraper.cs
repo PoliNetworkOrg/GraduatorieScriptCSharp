@@ -40,7 +40,8 @@ public class Scraper
         var page = _web.Load(AvvisiFuturiStudentiUrl).DocumentNode;
 
         var newsCards =
-            page.SelectNodes("//div[contains(@class, 'news')]//div[contains(@class, 'row--card')]//div[contains(@class, 'card__content')]");
+            page.SelectNodes(
+                "//div[contains(@class, 'news')]//div[contains(@class, 'row--card')]//div[contains(@class, 'card__content')]");
         if (newsCards == null) return links;
 
         foreach (var card in newsCards)
@@ -48,7 +49,7 @@ public class Scraper
             var title = card.Descendants("h5").First();
             var titleValid = title != null && IsValidText(title.InnerText);
 
-            var body = card.Descendants("p").Where(el => el.ParentNode.HasClass("news-bodytext")).First();
+            var body = card.Descendants("p").First(el => el.ParentNode.HasClass("news-bodytext"));
             var bodyValid = body != null && IsValidText(body.InnerText);
 
             var aTag = card.Descendants("a").First();
