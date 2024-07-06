@@ -64,6 +64,16 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
 
     }
+    
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Ranking);
+    }
+
+    public override int GetHashCode()
+    {
+        return this.GetHashWithoutLastUpdate();
+    }
 
 
     public bool IsSimilarTo(Ranking ranking)
@@ -205,4 +215,6 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
         return i;
     }
+
+
 }
