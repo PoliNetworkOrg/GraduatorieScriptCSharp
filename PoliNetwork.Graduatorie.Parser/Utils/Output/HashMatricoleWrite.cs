@@ -12,11 +12,8 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 public static class HashMatricoleWrite
 {
-    public static void Write(RankingsSet? rankingsSet, string outFolder)
+    public static void Write(RankingsSet rankingsSet, string outFolder)
     {
-        if (rankingsSet == null)
-            return;
-
         var dictionary = GetDictToWrite(rankingsSet);
         Sort2(dictionary);
         WriteToFile(dictionary, outFolder);
