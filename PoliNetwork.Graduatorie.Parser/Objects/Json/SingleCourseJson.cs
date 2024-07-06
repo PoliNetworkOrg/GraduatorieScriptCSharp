@@ -76,4 +76,9 @@ public class SingleCourseJson: IComparable<SingleCourseJson>
     {
         return (RankingOrder?.Phase ?? "") == courseTable.Title;
     }
+
+    public string GetFullPath(string outFolder = "")
+    {
+        return Path.Join(outFolder, BasePath, Link);
+    }
 }

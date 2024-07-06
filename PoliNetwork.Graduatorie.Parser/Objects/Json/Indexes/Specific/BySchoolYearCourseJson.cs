@@ -19,7 +19,7 @@ using CourseDict = SortedDictionary<string, List<SingleCourseJson>>;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class BySchoolYearCourseJson : IndexJsonBase
 {
-    internal const string PathCustom = "bySchoolYearCourse.json";
+    internal const string CustomPath = "bySchoolYearCourse.json";
 
     //keys: school, year, course, location
     public SchoolsDict Schools = new();

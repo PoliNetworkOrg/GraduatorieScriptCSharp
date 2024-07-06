@@ -14,7 +14,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class ByYearSchoolJson : IndexJsonBase
 {
-    internal const string PathCustom = "byYearSchool.json";
+    internal const string CustomPath = "byYearSchool.json";
 
     public SortedDictionary<int, SortedDictionary<SchoolEnum, IEnumerable<SingleCourseJson>>> Years = new();
 
@@ -56,7 +56,7 @@ public class ByYearSchoolJson : IndexJsonBase
     public static RankingsSet? Parse(string dataFolder)
     {
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, PathCustom);
+        var mainJsonPath = Path.Join(outFolder, CustomPath);
         try
         {
             var mainJson = Utils.Transformer.ParserNS.Parser.ParseJson<ByYearSchoolJson>(mainJsonPath);

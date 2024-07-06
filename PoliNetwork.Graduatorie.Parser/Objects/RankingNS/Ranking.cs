@@ -38,11 +38,14 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     
     public static Ranking? FromJson(string fullPath)
     {
-        if (!File.Exists(fullPath)) return null;
+        // if (!File.Exists(fullPath)) return null;
+        //
+        // var str = File.ReadAllText(fullPath);
+        // var ranking = JsonConvert.DeserializeObject<Ranking>(str, Culture.JsonSerializerSettings);
+        // return ranking;
         
-        var str = File.ReadAllText(fullPath);
-        var ranking = JsonConvert.DeserializeObject<Ranking>(str, Culture.JsonSerializerSettings);
-        return ranking;
+        // consider merging the two functions at some point
+        return Utils.Transformer.ParserNS.Parser.ParseJsonRanking(fullPath);
     }
 
     public int CompareTo(Ranking? other)
