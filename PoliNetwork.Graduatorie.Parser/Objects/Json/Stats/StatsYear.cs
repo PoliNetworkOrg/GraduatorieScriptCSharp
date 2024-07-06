@@ -12,12 +12,12 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class StatsYear
 {
-    public int? NumStudents;
     public SortedDictionary<SchoolEnum, StatsSchool> Schools = new();
+    public int NumStudents;
 
     public int GetHashWithoutLastUpdate()
     {
-        var i = NumStudents ?? "NumStudents".GetHashCode();
+        var i = NumStudents;
 
         var enumerable = from variable in Schools
             let variableKey = (int)variable.Key

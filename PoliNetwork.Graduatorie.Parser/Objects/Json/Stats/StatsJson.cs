@@ -49,7 +49,7 @@ public class StatsJson
             var statsJsonStat = new StatsYear
             {
                 NumStudents = rankingsSet.Rankings.Where(x => x.Year == ranking.Year)
-                    .Select(x => x.RankingSummary?.HowManyStudents).Sum()
+                    .Select(x => (x.RankingSummary ?? x.CreateSummary()).HowManyStudents ?? 0).Sum()
             };
             statsJson.Stats[ranking.Year.Value] = statsJsonStat;
         }
