@@ -28,7 +28,7 @@ public static class SchoolEnumMethods
             SchoolEnum.Design => "DES",
             SchoolEnum.Ingegneria => "ENG",
             SchoolEnum.Urbanistica => "URB",
-            _ => "UNK",
+            _ => "UNK"
         };
     }
 }

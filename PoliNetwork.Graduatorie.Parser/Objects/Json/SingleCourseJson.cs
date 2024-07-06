@@ -12,16 +12,17 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class SingleCourseJson: IComparable<SingleCourseJson>
+public class SingleCourseJson : IComparable<SingleCourseJson>
 {
     public string? BasePath;
+    public string? Id;
     public string? Link;
     public string? Location;
-    public string? Id;
     public RankingOrder? RankingOrder;
     public SchoolEnum? School;
     public int? Year;
 
+<<<<<<< HEAD
     public static SingleCourseJson From(Ranking ranking, CourseTable? course)
     {
         var basePath = $"{ranking.School}/{ranking.Year}/"; // "Ingegneria/2023"
@@ -48,10 +49,12 @@ public class SingleCourseJson: IComparable<SingleCourseJson>
         return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt ^ code;
     }
 
+=======
+>>>>>>> main
     public int CompareTo(SingleCourseJson? singleCourseJson)
     {
         if (singleCourseJson == null) return 1;
-        
+
         if (Year != singleCourseJson.Year)
             return (Year ?? -1) < (singleCourseJson.Year ?? -1) ? -1 : 1;
 
@@ -70,6 +73,17 @@ public class SingleCourseJson: IComparable<SingleCourseJson>
             return string.Compare(Id ?? "", singleCourseJson.Id ?? "", StringComparison.InvariantCulture);
 
         return 0;
+    }
+
+    public int GetHashWithoutLastUpdate()
+    {
+        var hashWithoutLastUpdate = Link?.GetHashCode() ?? "Link".GetHashCode();
+        var hashCode = Id?.GetHashCode() ?? "Id".GetHashCode();
+        var basePathInt = BasePath?.GetHashCode() ?? "BasePath".GetHashCode();
+        var yearInt = Year?.GetHashCode() ?? "Year".GetHashCode();
+        var schoolInt = School?.GetHashCode() ?? "School".GetHashCode();
+        var code = "SingleCourseJson".GetHashCode();
+        return hashWithoutLastUpdate ^ hashCode ^ basePathInt ^ yearInt ^ schoolInt ^ code;
     }
 
     public bool Is(CourseTable courseTable)

@@ -207,26 +207,27 @@ public class Parser
         var extraEuStr = intestazioni[4].Split("\n")[0].ToLower();
         var isExtraEu = extraEuStr.Contains("extra-ue");
 
-        if (ranking.Year < 2024) {
+        if (ranking.Year < 2024)
+        {
             // layout valid until 2023
             var phase = string.Join(" ", intestazioni[3].Split(" - ")[1..]);
             ranking.RankingOrder = new RankingOrder(phase, isExtraEu);
             if (ranking.School == SchoolEnum.Architettura && ranking.RankingOrder.Primary == null &&
                 ranking.RankingOrder.Secondary == null && ranking.RankingOrder.IsExtraEu)
-            {
                 // this is a fallback for 2020-2023:
                 // POLIMI was used to add the ranking number (Secondary, e.g. "Prima Graduatoria") for ExtraEU starting 
                 // from the second ranking. 
                 // e.g. Extra-EU first ranking => phase = "Extra-ue",
                 //      Extra-EU second ranking => phase = "Extra-ue - Seconda Graduatoria"
                 // so this is a fallback to add the equivalent of "Prima Graduatoria" to the first ExtraEU ranking.
-                
                 ranking.RankingOrder.Secondary = 1;
-            }
-        } else {
+        }
+        else
+        {
             // layout valid since 2024 (if the layout changes again, make another else if)
             var phase = intestazioni[3];
-            var isEnglish = intestazioni[2].Contains("taught in english") || intestazioni[2].Contains("erogati in inglese");
+            var isEnglish = intestazioni[2].Contains("taught in english") ||
+                            intestazioni[2].Contains("erogati in inglese");
             ranking.RankingOrder = new RankingOrder(phase, isExtraEu, isEnglish);
         }
 

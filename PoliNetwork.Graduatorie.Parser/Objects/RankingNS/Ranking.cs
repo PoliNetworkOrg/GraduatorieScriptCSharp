@@ -10,7 +10,6 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
-using PoliNetwork.Graduatorie.Parser.Utils;
 using PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 #endregion
@@ -31,6 +30,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public RankingUrl? Url;
     public int? Year;
 
+<<<<<<< HEAD
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
         return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
@@ -45,19 +45,51 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         return ranking;
     }
 
+=======
+>>>>>>> main
     public int CompareTo(Ranking? other)
     {
         if (ReferenceEquals(this, other)) return 0;
         if (ReferenceEquals(null, other)) return 1;
-        
+
         return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
+    }
+
+    public RankingSummaryStudent GetRankingSummaryStudent()
+    {
+        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
 
 
     public bool Equals(Ranking? other)
     {
+<<<<<<< HEAD
         if (other == null) return false;
         return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
+=======
+        var i = "Ranking".GetHashCode();
+        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
+        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
+        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
+        i ^= School?.GetHashCode() ?? "School".GetHashCode();
+        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
+        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
+        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
+        i ^= iMerit ?? "ByMerit".GetHashCode();
+
+
+        if (ByCourse == null)
+            i ^= "ByCourse".GetHashCode();
+        else
+            i = ByCourse.Aggregate(i, (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                var iList = hashWithoutLastUpdate;
+                return current ^ iList;
+            });
+
+        return i;
+>>>>>>> main
     }
 
 
@@ -99,7 +131,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public string GetId()
     {
         var idList = new List<string>();
-        
+
         var schoolShort = School?.ToShortName();
         if (schoolShort != null) idList.Add(schoolShort);
 
@@ -108,7 +140,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
         var orderId = RankingOrder?.GetId();
         if (orderId != null) idList.Add(orderId);
-        
+
         var fallback = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
         if (idList.Count == 0) idList.Add(fallback);
 
