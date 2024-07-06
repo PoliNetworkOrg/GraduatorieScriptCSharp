@@ -20,7 +20,7 @@ public class BySchoolYearJson : IndexJsonBase
     internal const string CustomPath = "bySchoolYear.json";
 
     public SchoolsDict Schools = new();
-    public List<SingleCourseJson> All = new(); // decide whether include it in the json serialization
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public static BySchoolYearJson From(RankingsSet set)
     {

@@ -23,10 +23,15 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
     //keys: school, year, course, location
     public SchoolsDict Schools = new();
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public static BySchoolYearCourseJson From(RankingsSet set)
     {
         var mainJson = new BySchoolYearCourseJson { LastUpdate = set.LastUpdate };
+        
+        var list = set.Rankings.SelectMany(r => r.ToSingleCourseJson()).ToList();
+        list.Sort();
+        mainJson.All = list;
 
         // group rankings by school
         var bySchool = set.Rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
