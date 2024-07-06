@@ -21,11 +21,11 @@ public class StatsJson
 
     public static void Write(string outFolder, RankingsSet rankingsSet, ArgsConfig argsConfig)
     {
-        var statsJson = Generate(rankingsSet);
+        var statsJson = From(rankingsSet);
         foreach (var yearDict in statsJson.Stats) WriteToFileYear(outFolder, yearDict, argsConfig);
     }
 
-    private static StatsJson Generate(RankingsSet rankingsSet)
+    private static StatsJson From(RankingsSet rankingsSet)
     {
         var statsJson = new StatsJson();
         foreach (var ranking in rankingsSet.Rankings) GenerateSingleRanking(rankingsSet, ranking, statsJson);
