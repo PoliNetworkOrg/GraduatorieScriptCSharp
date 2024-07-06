@@ -6,11 +6,9 @@ using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
-<<<<<<< HEAD
-=======
+
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
->>>>>>> main
 
 #endregion
 
@@ -28,11 +26,18 @@ public abstract class IndexJsonBase
         var mainJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
-<<<<<<< HEAD
-    
+
+
     public static void WriteAllIndexes(RankingsSet rankingsSet, string outFolder, ArgsConfig argsConfig)
     {
-=======
+        //let's write all single json files
+        WriteSingleJsons(rankingsSet, outFolder, argsConfig);
+        //now let's write each single different index
+        BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.PathCustom);
+        ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
+        BySchoolYearCourseJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearCourseJson.PathCustom);
+    }
+
 
 
     public static void WriteSingleJsons(RankingsSet? set, string outFolder, ArgsConfig argsConfig)
@@ -135,15 +140,5 @@ public abstract class IndexJsonBase
         return j;
     }
 
-    public static void IndexesWrite(RankingsSet? rankingsSet, string outFolder, ArgsConfig argsConfig)
-    {
-        //let's write all single json files
-        WriteSingleJsons(rankingsSet, outFolder, argsConfig);
 
->>>>>>> main
-        //now let's write each single different index
-        BySchoolYearJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearJson.PathCustom);
-        ByYearSchoolJson.From(rankingsSet)?.WriteToFile(outFolder, ByYearSchoolJson.PathCustom);
-        BySchoolYearCourseJson.From(rankingsSet)?.WriteToFile(outFolder, BySchoolYearCourseJson.PathCustom);
-    }
 }

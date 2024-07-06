@@ -30,12 +30,8 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public RankingUrl? Url;
     public int? Year;
 
-<<<<<<< HEAD
-    public RankingSummaryStudent GetRankingSummaryStudent()
-    {
-        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
-    }
-    
+
+
     public static Ranking? FromJson(string fullPath)
     {
         if (!File.Exists(fullPath)) return null;
@@ -45,8 +41,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         return ranking;
     }
 
-=======
->>>>>>> main
+
     public int CompareTo(Ranking? other)
     {
         if (ReferenceEquals(this, other)) return 0;
@@ -59,37 +54,15 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     {
         return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
+ 
 
 
     public bool Equals(Ranking? other)
     {
-<<<<<<< HEAD
+
         if (other == null) return false;
         return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
-=======
-        var i = "Ranking".GetHashCode();
-        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
-        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
-        i ^= School?.GetHashCode() ?? "School".GetHashCode();
-        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
-        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= iMerit ?? "ByMerit".GetHashCode();
 
-
-        if (ByCourse == null)
-            i ^= "ByCourse".GetHashCode();
-        else
-            i = ByCourse.Aggregate(i, (current, variable) =>
-            {
-                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = hashWithoutLastUpdate;
-                return current ^ iList;
-            });
-
-        return i;
->>>>>>> main
     }
 
 
@@ -217,7 +190,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
         i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
         var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= Hashing.GetHashFromListHash(iMerit) ?? "ByMerit".GetHashCode();
+        i ^= (iMerit) ?? "ByMerit".GetHashCode();
 
 
         if (ByCourse == null)
@@ -226,7 +199,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = Hashing.GetHashFromListHash(hashWithoutLastUpdate) ?? "empty".GetHashCode();
+                var iList = (hashWithoutLastUpdate);
                 return current ^ iList;
             });
 
