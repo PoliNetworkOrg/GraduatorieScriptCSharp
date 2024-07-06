@@ -12,11 +12,11 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Stats;
 public class StatsSchool
 {
     public List<StatsSingleCourseJson> List = new();
-    public int? NumStudents;
-
+    public int NumStudents;
+    
     public int GetHashWithoutLastUpdate()
     {
-        var i = NumStudents ?? "NumStudents".GetHashCode();
+        var i = NumStudents;
         return List.Aggregate(i, (current, variable) => current ^ variable.GetHashWithoutLastUpdate());
     }
 }

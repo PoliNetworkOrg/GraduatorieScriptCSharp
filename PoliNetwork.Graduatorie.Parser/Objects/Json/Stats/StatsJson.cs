@@ -34,7 +34,7 @@ public class StatsJson
         foreach (var school in statsJson.Stats[year].Schools.Keys)
         {
             var statsSingleCourseJsons =
-                statsJson.Stats[year].Schools[school].List.OrderBy(x => x.SingleCourseJson?.Link);
+                statsJson.Stats[year].Schools[school].List.OrderBy(x => x.SingleCourseJson.Link);
             statsJson.Stats[year].Schools[school].List = statsSingleCourseJsons.ToList();
         }
 
@@ -58,18 +58,17 @@ public class StatsJson
         var schools = statsJson.Stats[ranking.Year.Value].Schools;
         if (!schools.ContainsKey(ranking.School.Value))
         {
+            var rankings = rankingsSet.Rankings.Where(r => r.Year == ranking.Year && r.School == ranking.School);
             var statsSchool = new StatsSchool
             {
-                NumStudents = rankingsSet.Rankings
-                    .Where(x => x.Year == ranking.Year && x.School == ranking.School)
-                    .Select(x => x.RankingSummary?.HowManyStudents).Sum()
+                NumStudents = rankings.Select(x => (x.RankingSummary ?? x.CreateSummary()).HowManyStudents ?? 0).Sum()
             };
             schools[ranking.School.Value] = statsSchool;
         }
 
         var statsSingleCourseJsons = ranking.ToStats().DistinctBy(x => new
         {
-            x.SingleCourseJson?.Link, x.SingleCourseJson?.Location
+            x.SingleCourseJson.Link, x.SingleCourseJson.Location
         });
         foreach (var variable in statsSingleCourseJsons) schools[ranking.School.Value].List.Add(variable);
     }
