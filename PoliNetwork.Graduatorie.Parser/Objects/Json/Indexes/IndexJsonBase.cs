@@ -8,6 +8,7 @@ using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 using PoliNetwork.Graduatorie.Parser.Objects.Tables.Merit;
+using PoliNetwork.Graduatorie.Parser.Utils;
 
 #endregion
 
@@ -100,22 +101,21 @@ public abstract class IndexJsonBase
         if (aTableCourse.Count != bTableCourse.Count)
             return false;
 
-        var aHash = aTableCourse.Select(variable =>
+        var aList = aTableCourse.Select(variable =>
         {
             var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
             return hashWithoutLastUpdate;
         }).ToList();
+        var aHash = Hashing.GetHashFromListHash(aList);
 
-        var bHash = bTableCourse.Select(variable =>
+        var bList = bTableCourse.Select(variable =>
         {
             var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
             return hashWithoutLastUpdate;
         }).ToList();
+        var bHash = Hashing.GetHashFromListHash(bList);
 
-        var ai = aHash;
-        var bi = bHash;
-
-        return ai == bi;
+        return aHash == bHash;
     }
 
     private static bool SameHashMerit(MeritTable? aTableMerit, MeritTable? bTableMerit)

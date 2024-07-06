@@ -12,4 +12,13 @@ public static class Hashing
         var hashFromListHash = iMerit.Aggregate(0, (current, variable) => current ^ variable ?? 0);
         return hashFromListHash;
     }
+
+    public static int GetHashFromListHash(List<int> iMerit)
+    {
+        if (iMerit.Count == 0)
+            return 0;
+
+        var hashFromListHash = iMerit.Aggregate(0, (current, variable) => current ^ variable);
+        return hashFromListHash;
+    }
 }

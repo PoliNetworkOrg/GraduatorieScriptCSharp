@@ -205,8 +205,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = hashWithoutLastUpdate;
-                return current ^ iList;
+                return current ^ hashWithoutLastUpdate;
             });
 
         return i;
