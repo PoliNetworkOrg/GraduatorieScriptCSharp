@@ -12,21 +12,21 @@ using IdsDict = SortedDictionary<string, StudentHashSummary>;
 
 public class HashMatricoleWrite
 {
-    internal const string FolderName = "hashMatricole";
-    public IdsDict IdsDict = new();
+    private const string FolderName = "hashMatricole";
+    private IdsDict _idsDict = new();
 
     public static HashMatricoleWrite From(RankingsSet rankingsSet)
     {
         return new HashMatricoleWrite
         {
-            IdsDict = GetIdsDict(rankingsSet)
+            _idsDict = GetIdsDict(rankingsSet)
         };
     }
     
 
     public void Write(string outFolder)
     {
-        Console.WriteLine($"[INFO] Students with id are {IdsDict.Keys.Count}");
+        Console.WriteLine($"[INFO] Students with id are {_idsDict.Keys.Count}");
 
         var groupsDict = GetGroupsDict();
         var hashMatricoleFolder = Path.Join(outFolder, FolderName);
@@ -81,7 +81,7 @@ public class HashMatricoleWrite
     private SortedDictionary<string, IdsDict> GetGroupsDict()
     {
         var groupsDict = new SortedDictionary<string, IdsDict>();
-        var groups = IdsDict.GroupBy(pair => pair.Key[..2]);
+        var groups = _idsDict.GroupBy(pair => pair.Key[..2]);
 
         foreach (var group in groups)
         {

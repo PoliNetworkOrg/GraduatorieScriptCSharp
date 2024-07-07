@@ -67,7 +67,7 @@ public class BySchoolYearCourseJson : IndexJsonBase
         return yearsDict;
     }
 
-    private static CoursesDict GetCoursesDict(IGrouping<int, Ranking> yearGroup)
+    private static CoursesDict GetCoursesDict(IEnumerable<Ranking> yearGroup)
     {
         var coursesDict = new CoursesDict();
 

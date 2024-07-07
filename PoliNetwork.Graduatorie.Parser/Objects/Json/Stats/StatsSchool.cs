@@ -17,7 +17,7 @@ public class StatsSchool
     public List<StatsSingleCourseJson> List = new();
     public int NumStudents;
 
-    public static StatsSchool From(List<Ranking> pRankings)
+    public static StatsSchool From(IEnumerable<Ranking> pRankings)
     {
         var statsSchool = new StatsSchool();
         var rankings = pRankings.Where(r => r is { Year: not null, School: not null }).ToList();

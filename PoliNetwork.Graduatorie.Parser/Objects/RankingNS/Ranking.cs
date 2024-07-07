@@ -148,11 +148,10 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         var savedRanking = FromJson(fullPath);
         var equalsSaved = savedRanking != null && Equals(savedRanking);
 
-        if (forceReparse || equalsSaved || savedRanking == null)
-        {
-            var rankingJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
-            File.WriteAllText(fullPath, rankingJsonString);
-        }
+        if (!forceReparse && !equalsSaved && savedRanking != null) return;
+        
+        var rankingJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
+        File.WriteAllText(fullPath, rankingJsonString);
     }
     
     /***
@@ -190,6 +189,6 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
     public override int GetHashCode()
     {
-        return this.GetHashWithoutLastUpdate();
+        return GetHashWithoutLastUpdate();
     }
 }
