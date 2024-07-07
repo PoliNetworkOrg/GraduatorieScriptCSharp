@@ -57,9 +57,7 @@ public class RankingSummary
                 titleLocation.Location = x.Key.Location;
                 return titleLocation;
             });
-        var tableStatsList =
-            distinctBy
-                ?.ToList();
+        var tableStatsList = distinctBy?.ToList();
         var tableStatsList2 = Get(tableStatsList);
         var resultsSummarized = new SortedDictionary<int, int>(keyValuePairs ?? new Dictionary<int, int>());
         return new RankingSummary
