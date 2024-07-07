@@ -40,6 +40,14 @@ public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>
         Url = url;
     }
 
+    public bool Equals(RankingSummaryStudent? other)
+    {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return Course == other.Course && Phase == other.Phase && School == other.School && Equals(Url, other.Url) &&
+               Year == other.Year;
+    }
+
     public int Compare(RankingSummaryStudent o)
     {
         var i = (Year ?? 0) - (o.Year ?? 0);
@@ -68,13 +76,6 @@ public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>
                      (Url?.Equals(rankingSummaryStudent.Url) ?? false);
         return Phase == rankingSummaryStudent.Phase && School == rankingSummaryStudent.School &&
                Year == rankingSummaryStudent.Year && equals && Course == rankingSummaryStudent.Course;
-    }
-
-    public bool Equals(RankingSummaryStudent? other)
-    {
-        if (ReferenceEquals(null, other)) return false;
-        if (ReferenceEquals(this, other)) return true;
-        return Course == other.Course && Phase == other.Phase && School == other.School && Equals(Url, other.Url) && Year == other.Year;
     }
 
     public override int GetHashCode()

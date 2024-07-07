@@ -11,27 +11,19 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class RankingsSet
 {
-    public DateTime? LastUpdate;
-    public List<Ranking> Rankings;
-
-    public RankingsSet()
-    {
-        Rankings = new List<Ranking>();
-        LastUpdate = DateTime.UtcNow;
-    }
+    public DateTime? LastUpdate = DateTime.UtcNow;
+    public List<Ranking> Rankings = new();
 
     public void Merge(RankingsSet newSet)
     {
         foreach (var ranking in newSet.Rankings)
         {
             var alreadyPresent = Rankings.Any(v => v.IsSimilarTo(ranking));
-            if (!alreadyPresent)
-            {
-                Rankings.Add(ranking);
-                    
-                if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) 
-                    LastUpdate = ranking.LastUpdate;
-            }
+            if (alreadyPresent) continue;
+            Rankings.Add(ranking);
+
+            if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date)
+                LastUpdate = ranking.LastUpdate;
         }
     }
 

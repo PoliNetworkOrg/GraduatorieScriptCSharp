@@ -12,21 +12,21 @@ using IdsDict = SortedDictionary<string, StudentHashSummary>;
 
 public class HashMatricoleWrite
 {
-    internal const string FolderName = "hashMatricole";
-    public IdsDict IdsDict = new();
+    private const string FolderName = "hashMatricole";
+    private IdsDict _idsDict = new();
 
     public static HashMatricoleWrite From(RankingsSet rankingsSet)
     {
         return new HashMatricoleWrite
         {
-            IdsDict = GetIdsDict(rankingsSet)
+            _idsDict = GetIdsDict(rankingsSet)
         };
     }
-    
+
 
     public void Write(string outFolder)
     {
-        Console.WriteLine($"[INFO] Students with id are {IdsDict.Keys.Count}");
+        Console.WriteLine($"[INFO] Students with id are {_idsDict.Keys.Count}");
 
         var groupsDict = GetGroupsDict();
         var hashMatricoleFolder = Path.Join(outFolder, FolderName);
@@ -43,7 +43,7 @@ public class HashMatricoleWrite
 
     private static IdsDict GetIdsDict(RankingsSet rankingsSet)
     {
-        var dictionary = new SortedDictionary<string, StudentHashSummary>();
+        var dictionary = new IdsDict();
         foreach (var ranking in rankingsSet.Rankings)
         {
             var byMeritRows = ranking.ByMerit?.Rows;
@@ -63,17 +63,14 @@ public class HashMatricoleWrite
                 foreach (var student in row.Where(studentResult => !string.IsNullOrEmpty(studentResult.Id)))
                 {
                     var id = student.Id!;
-                    
+
                     if (!dictionary.ContainsKey(id)) dictionary.Add(id, new StudentHashSummary());
                     dictionary[id].Merge(student, ranking, courseTable);
                 }
             }
         }
 
-        foreach (var item in dictionary.Values)
-        {
-            item.Sort();
-        }
+        foreach (var item in dictionary.Values) item.Sort();
 
         return dictionary;
     }
@@ -81,7 +78,7 @@ public class HashMatricoleWrite
     private SortedDictionary<string, IdsDict> GetGroupsDict()
     {
         var groupsDict = new SortedDictionary<string, IdsDict>();
-        var groups = IdsDict.GroupBy(pair => pair.Key[..2]);
+        var groups = _idsDict.GroupBy(pair => pair.Key[..2]);
 
         foreach (var group in groups)
         {
@@ -89,11 +86,8 @@ public class HashMatricoleWrite
             var groupVal = group.ToList();
 
             var groupIdsDict = new IdsDict();
-            foreach (var (id, studentHashSummary) in groupVal)
-            {
-                groupIdsDict.Add(id, studentHashSummary);
-            }
-            
+            foreach (var (id, studentHashSummary) in groupVal) groupIdsDict.Add(id, studentHashSummary);
+
             groupsDict.Add(groupId, groupIdsDict);
         }
 

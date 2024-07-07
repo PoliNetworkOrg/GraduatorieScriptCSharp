@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+
 // ReSharper disable CanSimplifyDictionaryLookupWithTryAdd
 
 #endregion
@@ -41,10 +42,7 @@ public class StatsJson
         var statsFolderPath = Path.Join(outFolder, StatsFolderName);
         if (!Directory.Exists(statsFolderPath)) Directory.CreateDirectory(statsFolderPath);
 
-        foreach (var yearStats in Stats.Values)
-        {
-            yearStats.Write(statsFolderPath, argsConfig);
-        }
+        foreach (var yearStats in Stats.Values) yearStats.Write(statsFolderPath, argsConfig);
     }
 
     public int GetHashWithoutLastUpdate()
