@@ -183,4 +183,9 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
         return i;
     }
+
+    public override bool Equals(object obj)
+    {
+        return Equals(obj as Ranking);
+    }
 }
