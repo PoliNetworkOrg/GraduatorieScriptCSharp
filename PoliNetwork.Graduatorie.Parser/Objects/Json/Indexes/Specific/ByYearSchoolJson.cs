@@ -27,7 +27,7 @@ public class ByYearSchoolJson : IndexJsonBase
         
         var list = set.Rankings
             .SelectMany(r => r.ToSingleCourseJson()).ToList()
-            .DistinctBy(r => new { r.Id, r.Location })
+            .DistinctBy(r => new { r.Id })
             .ToList();
         
         list.Sort();
