@@ -101,11 +101,4 @@ public class RankingOrder
 
         return i;
     }
-
-    public void Merge(RankingOrder? rankingRankingOrder)
-    {
-        Phase ??= rankingRankingOrder?.Phase;
-        Primary ??= rankingRankingOrder?.Primary;
-        Secondary ??= rankingRankingOrder?.Secondary;
-    }
 }
