@@ -26,7 +26,7 @@ public class OutputWriteUtil
         
         rankingsSet.WriteAllRankings(outFolder, _config.ForceReparsing);
         IndexJsonBase.WriteAllIndexes(rankingsSet, outFolder, _config);
-        StatsJson.Write(outFolder, rankingsSet, _config);
+        StatsJson.From(rankingsSet).Write(outFolder, _config);
         HashMatricoleWrite.Write(rankingsSet, outFolder);
 
         dateFound.WriteToFile(_config.DataFolder);

@@ -24,7 +24,7 @@ public class StatsSingleCourseJson
     public static List<StatsSingleCourseJson> From(Ranking ranking)
     {
         var singleCourseJsons = ranking.ToSingleCourseJson();
-        if (ranking.RankingSummary != null) ranking.RankingSummary = ranking.CreateSummary();
+        ranking.RankingSummary ??= ranking.CreateSummary();
         return singleCourseJsons.Select(scj => new StatsSingleCourseJson(scj, ranking.RankingSummary!)).ToList();
     }
 
