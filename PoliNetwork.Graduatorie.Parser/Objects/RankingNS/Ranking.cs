@@ -148,7 +148,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
         var savedRanking = FromJson(fullPath);
         var equalsSaved = savedRanking != null && Equals(savedRanking);
 
-        if (!forceReparse && !equalsSaved && savedRanking != null) return;
+        if (!forceReparse && equalsSaved) return;
 
         var rankingJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
         File.WriteAllText(fullPath, rankingJsonString);
