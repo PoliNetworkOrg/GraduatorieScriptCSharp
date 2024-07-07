@@ -90,15 +90,6 @@ public class BySchoolYearJson : IndexJsonBase
 
     public List<Ranking> GetRankings(string outFolder)
     {
-        List<Ranking> rankings = new();
-
-        foreach (var singleCourseJson in All)
-        {
-            var fullPath = singleCourseJson.GetFullPath(outFolder);
-            var ranking = Ranking.FromJson(fullPath);
-            if (ranking != null) rankings.Add(ranking);
-        }
-
-        return rankings;
+        return All.Select(singleCourseJson => singleCourseJson.GetFullPath(outFolder)).Select(Ranking.FromJson).OfType<Ranking>().ToList();
     }
 }
