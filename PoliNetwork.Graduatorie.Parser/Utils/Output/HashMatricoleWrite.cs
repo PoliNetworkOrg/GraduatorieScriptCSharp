@@ -43,7 +43,7 @@ public class HashMatricoleWrite
 
     private static IdsDict GetIdsDict(RankingsSet rankingsSet)
     {
-        var dictionary = new SortedDictionary<string, StudentHashSummary>();
+        var dictionary = new IdsDict();
         foreach (var ranking in rankingsSet.Rankings)
         {
             var byMeritRows = ranking.ByMerit?.Rows;
