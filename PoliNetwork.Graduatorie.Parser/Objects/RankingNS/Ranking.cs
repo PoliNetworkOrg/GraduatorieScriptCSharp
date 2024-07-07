@@ -73,26 +73,6 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     }
 
 
-    public void Merge(Ranking ranking)
-    {
-        LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
-        Year ??= ranking.Year;
-        Extra ??= ranking.Extra;
-        School ??= ranking.School;
-        MergeRankingOrder(ranking);
-        ByCourse ??= ranking.ByCourse;
-        ByMerit ??= ranking.ByMerit;
-        Url ??= ranking.Url;
-    }
-
-    private void MergeRankingOrder(Ranking ranking)
-    {
-        if (RankingOrder == null)
-            RankingOrder = ranking.RankingOrder;
-        else
-            RankingOrder.Merge(ranking.RankingOrder);
-    }
-
     public string GetFilename()
     {
         var id = GetId();
