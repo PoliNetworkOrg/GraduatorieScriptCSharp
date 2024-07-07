@@ -63,7 +63,7 @@ public class StatsYear
 
             if (string.IsNullOrEmpty(saved) || savedStats == null) return false;
             
-            var savedHash = savedStats?.GetHashWithoutLastUpdate();
+            var savedHash = savedStats.GetHashWithoutLastUpdate();
             var hash = GetHashWithoutLastUpdate();
             return savedHash == hash;
         }

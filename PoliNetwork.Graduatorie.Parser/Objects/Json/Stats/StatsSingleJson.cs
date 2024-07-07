@@ -25,7 +25,7 @@ public class StatsSingleCourseJson
     {
         var singleCourseJsons = ranking.ToSingleCourseJson();
         ranking.RankingSummary ??= ranking.CreateSummary();
-        return singleCourseJsons.Select(scj => new StatsSingleCourseJson(scj, ranking.RankingSummary!)).ToList();
+        return singleCourseJsons.Select(scj => new StatsSingleCourseJson(scj, ranking.RankingSummary)).ToList();
     }
 
     public int GetHashWithoutLastUpdate()
