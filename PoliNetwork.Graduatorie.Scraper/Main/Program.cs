@@ -1,6 +1,5 @@
 ﻿#region
 
-using Newtonsoft.Json;
 using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
