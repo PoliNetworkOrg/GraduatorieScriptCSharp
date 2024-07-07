@@ -72,7 +72,7 @@ public class HashMatricoleWrite
 
         foreach (var item in dictionary.Values)
         {
-            item.Sort2();
+            item.Sort();
         }
 
         return dictionary;

@@ -31,25 +31,18 @@ public class StudentHashSummary
         else
         {
             var s = courseTable.GetRankingSummaryStudent(ranking);
-            var present1 = SingleCourseJsons.Any(x => x.Equals(s));
-            if (!present1)
-                SingleCourseJsons.Add(s);
+            var alreadyPresentJson = SingleCourseJsons.Any(x => x.Equals(s));
+            if (!alreadyPresentJson) SingleCourseJsons.Add(s);
         }
 
         var r = ranking.GetRankingSummaryStudent();
-        var present2 = RankingSummaries.Any(x => x.Equals(r));
-        if (!present2)
-            RankingSummaries.Add(r);
+        var alreadyPresentSummary = RankingSummaries.Any(x => x.Equals(r));
+        if (!alreadyPresentSummary) RankingSummaries.Add(r);
     }
 
-    public void Sort2()
+    public void Sort()
     {
-        RankingSummaries.Sort(Compare);
-        SingleCourseJsons.Sort(Compare);
-    }
-
-    private int Compare(RankingSummaryStudent a, RankingSummaryStudent b)
-    {
-        return a.Compare(b);
+        RankingSummaries.Sort();
+        SingleCourseJsons.Sort();
     }
 }
