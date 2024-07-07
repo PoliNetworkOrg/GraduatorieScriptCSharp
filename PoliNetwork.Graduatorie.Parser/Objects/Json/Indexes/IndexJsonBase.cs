@@ -3,7 +3,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
-using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
@@ -24,7 +23,7 @@ public abstract class IndexJsonBase
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
     
-    public static void WriteAllIndexes(RankingsSet rankingsSet, string outFolder, ArgsConfig argsConfig)
+    public static void WriteAllIndexes(RankingsSet rankingsSet, string outFolder)
     {
         //now let's write each single different index
         BySchoolYearJson.From(rankingsSet).Write(outFolder, BySchoolYearJson.CustomPath);
