@@ -177,15 +177,19 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
             i = ByCourse.Aggregate(i, (current, variable) =>
             {
                 var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = hashWithoutLastUpdate;
-                return current ^ iList;
+                return current ^ hashWithoutLastUpdate;
             });
 
         return i;
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         return Equals(obj as Ranking);
+    }
+
+    public override int GetHashCode()
+    {
+        return this.GetHashWithoutLastUpdate();
     }
 }
