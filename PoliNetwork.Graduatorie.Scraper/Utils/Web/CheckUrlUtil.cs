@@ -9,23 +9,6 @@ namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public static class CheckUrlUtil
 {
-    private static void CheckUrl(RankingUrl variable, HashSet<RankingUrl> final)
-    {
-        try
-        {
-            var x = UrlUtils.CheckUrl(variable);
-            if (!x) return;
-            lock (final)
-            {
-                final.Add(variable);
-            }
-        }
-        catch (Exception exception)
-        {
-            Console.WriteLine(exception);
-        }
-    }
-
     public static HashSet<RankingUrl> GetRankingLinks(IEnumerable<string> rankingsLinks)
     {
         var parallelQuery = rankingsLinks
@@ -36,18 +19,35 @@ public static class CheckUrlUtil
         return GetRankingLinksHashSet(parallelQuery);
     }
 
-    public static HashSet<RankingUrl> GetRankingLinksHashSet(IEnumerable<RankingUrl> parallelQuery)
+    public static HashSet<RankingUrl> GetRankingLinksHashSet(IEnumerable<RankingUrl> urls)
     {
-        var final = new HashSet<RankingUrl>();
+        var hashSet = new HashSet<RankingUrl>();
 
-        var action = parallelQuery.Select((Func<RankingUrl, Action>)Selector).ToArray();
-        Parallel.Invoke(action);
+        var actions = urls.Select((Func<RankingUrl, Action>)Selector).ToArray();
+        Parallel.Invoke(actions);
 
-        return final;
+        return hashSet;
 
-        Action Selector(RankingUrl variable)
+        Action Selector(RankingUrl url)
         {
-            return () => { CheckUrl(variable, final); };
+            return () => { CheckUrl(url, hashSet); };
+        }
+    }
+
+    private static void CheckUrl(RankingUrl url, HashSet<RankingUrl> hashSet)
+    {
+        try
+        {
+            var x = UrlUtils.CheckUrl(url);
+            if (!x) return;
+            lock (hashSet)
+            {
+                hashSet.Add(url);
+            }
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
         }
     }
 }
