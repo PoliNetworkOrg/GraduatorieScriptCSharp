@@ -35,7 +35,6 @@ public static class Program
         var dateFound = DateFoundUtil.GetDateFound(argsConfig, rankingsSet);
 
         // salvare il set
-        var writer = new OutputWriteUtil(argsConfig);
-        writer.SaveOutputs(rankingsSet, dateFound);
+        new OutputWriteUtil(argsConfig).SaveOutputs(rankingsSet, dateFound);
     }
 }
