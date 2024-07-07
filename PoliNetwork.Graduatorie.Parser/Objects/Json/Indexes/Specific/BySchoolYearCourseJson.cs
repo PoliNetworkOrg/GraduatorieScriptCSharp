@@ -29,7 +29,11 @@ public class BySchoolYearCourseJson : IndexJsonBase
     {
         var mainJson = new BySchoolYearCourseJson { LastUpdate = set.LastUpdate };
         
-        var list = set.Rankings.SelectMany(r => r.ToSingleCourseJson()).ToList();
+        var list = set.Rankings
+            .SelectMany(r => r.ToSingleCourseJson())
+            .DistinctBy(r => new { r.Id, r.Location })
+            .ToList();
+        
         list.Sort();
         mainJson.All = list;
 
