@@ -31,8 +31,8 @@ public class CourseTable : MeritTable
     }
 
     /// <summary>
-    /// Get the course location if present, otherwise get the placeholder (constant).
-    /// Useful for index purposes.
+    ///     Get the course location if present, otherwise get the placeholder (constant).
+    ///     Useful for index purposes.
     /// </summary>
     /// <returns>A string with the location or the placeholder</returns>
     public string GetFixedLocation()

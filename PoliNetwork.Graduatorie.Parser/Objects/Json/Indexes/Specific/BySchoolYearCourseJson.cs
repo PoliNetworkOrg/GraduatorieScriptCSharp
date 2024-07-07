@@ -1,9 +1,11 @@
 #region
+
 using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+
 #endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
@@ -20,20 +22,20 @@ using CourseDict = SortedDictionary<string, List<SingleCourseJson>>;
 public class BySchoolYearCourseJson : IndexJsonBase
 {
     internal const string CustomPath = "bySchoolYearCourse.json";
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     //keys: school, year, course, location
     public SchoolsDict Schools = new();
-    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public static BySchoolYearCourseJson From(RankingsSet set)
     {
         var mainJson = new BySchoolYearCourseJson { LastUpdate = set.LastUpdate };
-        
+
         var list = set.Rankings
             .SelectMany(r => r.ToSingleCourseJson())
             .DistinctBy(r => new { r.Id, r.Location })
             .ToList();
-        
+
         list.Sort();
         mainJson.All = list;
 

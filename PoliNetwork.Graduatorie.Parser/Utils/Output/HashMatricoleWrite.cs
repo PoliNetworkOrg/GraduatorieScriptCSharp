@@ -22,7 +22,7 @@ public class HashMatricoleWrite
             _idsDict = GetIdsDict(rankingsSet)
         };
     }
-    
+
 
     public void Write(string outFolder)
     {
@@ -63,17 +63,14 @@ public class HashMatricoleWrite
                 foreach (var student in row.Where(studentResult => !string.IsNullOrEmpty(studentResult.Id)))
                 {
                     var id = student.Id!;
-                    
+
                     if (!dictionary.ContainsKey(id)) dictionary.Add(id, new StudentHashSummary());
                     dictionary[id].Merge(student, ranking, courseTable);
                 }
             }
         }
 
-        foreach (var item in dictionary.Values)
-        {
-            item.Sort();
-        }
+        foreach (var item in dictionary.Values) item.Sort();
 
         return dictionary;
     }
@@ -89,11 +86,8 @@ public class HashMatricoleWrite
             var groupVal = group.ToList();
 
             var groupIdsDict = new IdsDict();
-            foreach (var (id, studentHashSummary) in groupVal)
-            {
-                groupIdsDict.Add(id, studentHashSummary);
-            }
-            
+            foreach (var (id, studentHashSummary) in groupVal) groupIdsDict.Add(id, studentHashSummary);
+
             groupsDict.Add(groupId, groupIdsDict);
         }
 

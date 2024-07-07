@@ -7,6 +7,7 @@ using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
+
 // ReSharper disable CanSimplifyDictionaryLookupWithTryAdd
 
 #endregion
@@ -19,8 +20,8 @@ using SchoolsDict = SortedDictionary<SchoolEnum, StatsSchool>;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class StatsYear
 {
-    public SchoolsDict Schools = new();
     public int NumStudents;
+    public SchoolsDict Schools = new();
     public int Year;
 
     public static StatsYear From(List<Ranking> rankings)
@@ -28,7 +29,8 @@ public class StatsYear
         var statsYear = new StatsYear
         {
             Year = rankings.First(r => r.Year != null).Year!.Value, // just hilarious
-            NumStudents = rankings.Select(r => (r.RankingSummary ?? r.CreateSummary()).HowManyStudents ?? 0).Sum() // this ?? is crazy
+            NumStudents = rankings.Select(r => (r.RankingSummary ?? r.CreateSummary()).HowManyStudents ?? 0)
+                .Sum() // this ?? is crazy
         };
 
         var bySchool = rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
@@ -36,10 +38,11 @@ public class StatsYear
         {
             var statsSchool = StatsSchool.From(schoolGroup.ToList());
 
-            if (statsYear.Schools.ContainsKey(schoolGroup.Key)) throw new UnreachableException(); // should be impossible, right?
+            if (statsYear.Schools.ContainsKey(schoolGroup.Key))
+                throw new UnreachableException(); // should be impossible, right?
             statsYear.Schools.Add(schoolGroup.Key, statsSchool);
         }
-        
+
         return statsYear;
     }
 
@@ -62,7 +65,7 @@ public class StatsYear
             var savedStats = JsonConvert.DeserializeObject<StatsYear>(saved, Culture.JsonSerializerSettings);
 
             if (string.IsNullOrEmpty(saved) || savedStats == null) return false;
-            
+
             var savedHash = savedStats.GetHashWithoutLastUpdate();
             var hash = GetHashWithoutLastUpdate();
             return savedHash == hash;

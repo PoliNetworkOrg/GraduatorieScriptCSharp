@@ -9,7 +9,6 @@ namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public static class ScraperOutput
 {
-
     public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string dataFolder)
     {
         var links = GetSaved(dataFolder);
@@ -84,7 +83,7 @@ public static class ScraperOutput
     {
         return url + "\n";
     }
-    
+
     private static string GetFilePath(string dataFolder)
     {
         return Path.Join(dataFolder, Constants.OutputLinksFilename);
