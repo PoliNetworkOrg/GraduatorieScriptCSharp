@@ -1,5 +1,6 @@
 ﻿#region
 
+using Newtonsoft.Json;
 using PoliNetwork.Core.Utils;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
@@ -27,19 +28,10 @@ public static class Program
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
         rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
 
-        // save result
-        PrintAndWriteResults(rankingsUrls, argsConfig);
+        PrintLinks(rankingsUrls);
+        ScraperOutput.Write(rankingsUrls, argsConfig.DataFolder); // save results
 
         return rankingsUrls;
-    }
-
-    private static void PrintAndWriteResults(List<RankingUrl> rankingsUrls, ArgsConfig argsConfig)
-    {
-        //write results to file
-        ScraperOutput.Write(rankingsUrls, argsConfig.DataFolder);
-
-        //print links found
-        PrintLinks(rankingsUrls);
     }
 
     private static void PrintLinks(List<RankingUrl> rankingsUrls)
