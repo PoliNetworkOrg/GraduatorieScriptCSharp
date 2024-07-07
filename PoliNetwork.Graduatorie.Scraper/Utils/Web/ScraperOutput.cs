@@ -9,79 +9,44 @@ namespace PoliNetwork.Graduatorie.Scraper.Utils.Web;
 
 public static class ScraperOutput
 {
-    private static string GetFilePath(string? docFolder)
-    {
-        return docFolder + "/" + Constants.OutputLinksFilename;
-    }
-
-    public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string? dataFolder)
+    public static List<RankingUrl> GetWithUrlsFromLocalFileLinks(IEnumerable<RankingUrl> urls, string dataFolder)
     {
         var links = GetSaved(dataFolder);
         links.AddRange(urls);
-        return Distinct(links);
+        return links.DistinctBy(r => r.Url).ToList();
     }
 
-    private static List<RankingUrl> Distinct(IEnumerable<RankingUrl> links)
-    {
-        var list = new List<RankingUrl>();
-        var rankingUrls = links.Where(variable => list.All(x => x.Url != variable.Url));
-        list.AddRange(rankingUrls);
-        return list;
-    }
-
-    private static List<RankingUrl> GetSaved(string? dataFolder)
+    private static List<RankingUrl> GetSaved(string dataFolder)
     {
         List<RankingUrl> list = new();
         var filePath = GetFilePath(dataFolder);
         if (!File.Exists(filePath)) return list;
 
-        var lines = GetLines(filePath);
-        if (lines == null)
-        {
-            // consider to handle them
-            Console.WriteLine($"[ERROR] Can't read the ScraperOutput file ({filePath})");
-            return list;
-        }
-
+        var urls = GetLines(filePath);
         try
         {
-            foreach (var variable in lines) RankingFromAdd(variable, list);
+            return urls.Select(RankingUrl.From).ToList();
         }
         catch
         {
             // consider to handle them
             Console.WriteLine($"[ERROR] Can't validate the ScraperOutput file ({filePath})");
+            return new List<RankingUrl>();
         }
-
-        return list;
     }
 
-    private static void RankingFromAdd(string variable, ICollection<RankingUrl> list)
+    private static IEnumerable<string> GetLines(string filePath)
     {
         try
         {
-            var rankingUrl = RankingUrl.From(variable);
-            list.Add(rankingUrl);
+            return File.ReadAllLines(filePath).Where(x => !string.IsNullOrEmpty(x)).ToList();
         }
         catch (Exception exception)
         {
             Console.WriteLine(exception);
+            Console.WriteLine($"[ERROR] Can't read the ScraperOutput file ({filePath})");
+            return new List<string>();
         }
-    }
-
-    private static List<string>? GetLines(string filePath)
-    {
-        List<string>? lines = null;
-        try
-        {
-            lines = File.ReadAllLines(filePath).Where(x => !string.IsNullOrEmpty(x)).ToList();
-        }
-        catch (Exception exception)
-        {
-            Console.WriteLine(exception);
-        }
-
-        return lines;
     }
 
     public static void Write(List<RankingUrl> rankingsUrls, string? dataFolder)
@@ -117,5 +82,10 @@ public static class ScraperOutput
     private static string SelectorUrlWithEndLine(string url)
     {
         return url + "\n";
+    }
+
+    private static string GetFilePath(string dataFolder)
+    {
+        return Path.Join(dataFolder, Constants.OutputLinksFilename);
     }
 }

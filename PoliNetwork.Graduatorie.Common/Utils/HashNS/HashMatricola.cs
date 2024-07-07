@@ -24,7 +24,7 @@ public static partial class HashMatricola
         return string.IsNullOrEmpty(s) ? null : NotAlphaNumericRegex().Replace(s, "");
     }
 
-    public static string? HashMatricolaMethod(string? input)
+    public static string? Get(string? input)
     {
         input = CleanInput(input);
 
@@ -33,9 +33,9 @@ public static partial class HashMatricola
 
         var stringInputWithSalt = input + SaltGlobal;
         var hexHash = GetSha256(stringInputWithSalt);
-        var hashMatricolaMethod = hexHash[..MaxCharHash];
-        var matricolaMethod = hashMatricolaMethod.ToLower();
-        return matricolaMethod;
+        var shortHash = hexHash[..MaxCharHash];
+        var lowerShortHash = shortHash.ToLower();
+        return lowerShortHash;
     }
 
     private static string GetSha256(string stringInputWithSalt)

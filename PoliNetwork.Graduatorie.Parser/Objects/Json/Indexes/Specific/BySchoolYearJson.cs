@@ -10,80 +10,74 @@ using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 namespace PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
 
+using SchoolsDict = SortedDictionary<SchoolEnum, SortedDictionary<int, IEnumerable<SingleCourseJson>>>;
+using YearsDict = SortedDictionary<int, IEnumerable<SingleCourseJson>>;
+
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class BySchoolYearJson : IndexJsonBase
 {
-    internal const string PathCustom = "bySchoolYear.json";
+    internal const string CustomPath = "bySchoolYear.json";
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
-    public SortedDictionary<SchoolEnum, SortedDictionary<int, IEnumerable<SingleCourseJson>>> Schools = new();
+    public SchoolsDict Schools = new();
 
-    public static BySchoolYearJson? From(RankingsSet? set)
+    public static BySchoolYearJson From(RankingsSet set)
     {
-        if (set == null)
-            return null;
-
         var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
+
+        var list = set.Rankings
+            .SelectMany(r => r.ToSingleCourseJson())
+            .DistinctBy(r => new { r.Id })
+            .ToList();
+
+        list.Sort();
+        mainJson.All = list;
+
         // group rankings by school
-        var bySchool = set.Rankings.GroupBy(r => r.School);
+        var bySchool = set.Rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
         foreach (var schoolGroup in bySchool)
         {
-            if (schoolGroup.Key is null)
-                continue;
-            var school = schoolGroup.Key.Value;
+            var school = schoolGroup.Key;
+            var byYears = schoolGroup.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
 
-            var schoolDict = new SortedDictionary<int, IEnumerable<SingleCourseJson>>();
-
-            var byYears = schoolGroup.GroupBy(r => r.Year);
-            foreach (var yearGroup in byYears)
-            {
-                if (yearGroup.Key is null)
-                    continue;
-                AddSchool(yearGroup, schoolDict);
-            }
-
-            mainJson.Schools.Add(school, schoolDict);
+            var yearsDict = GetYearsDict(byYears);
+            mainJson.Schools.Add(school, yearsDict);
         }
 
         return mainJson;
     }
 
-    private static void AddSchool(
-        IGrouping<int?, Ranking> yearGroup,
-        IDictionary<int, IEnumerable<SingleCourseJson>> schoolDict
-    )
+    private static YearsDict GetYearsDict(IEnumerable<IGrouping<int, Ranking>> byYears)
     {
-        var yearGroupKey = yearGroup.Key;
-        if (yearGroupKey == null)
-            return;
+        var yearsDict = new YearsDict();
 
-        var singleCourseJsons = yearGroup
-            .SelectMany(ranking => ranking.ToSingleCourseJson())
-            .DistinctBy(x => x.Link)
-            .ToList();
-        var filenames = singleCourseJsons
-            .OrderBy(a => a.Id)
-            .ThenBy(a => a.Year)
-            .ThenBy(a => a.School)
-            .ThenBy(a => a.BasePath)
-            .ToList();
+        foreach (var yearGroup in byYears)
+        {
+            var singleCourseJsons = yearGroup
+                .SelectMany(r => r.ToSingleCourseJson())
+                .DistinctBy(r => r.Id)
+                .OrderBy(e => e.Id) // Id contains everything (school, year, pri/sec phase, extraeu, lang)
+                .ToList();
 
-        schoolDict.Add(yearGroupKey.Value, filenames);
+            yearsDict.Add(yearGroup.Key, singleCourseJsons);
+        }
+
+        return yearsDict;
     }
-
 
     public static RankingsSet GetAndParse(string dataFolder)
     {
         var set = new RankingsSet();
         var outFolder = Path.Join(dataFolder, Constants.OutputFolder);
-        var mainJsonPath = Path.Join(outFolder, PathCustom);
+        var mainJsonPath = Path.Join(outFolder, CustomPath);
         try
         {
-            var mainJson = Utils.Transformer.ParserNS.Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
-            if (mainJson is null) return set;
+            var index = Utils.Transformer.ParserNS.Parser.ParseJson<BySchoolYearJson>(mainJsonPath);
+            if (index is null) return set;
 
-            set.LastUpdate = mainJson.LastUpdate;
-            set.Rankings = GetRankingsFromIndex(mainJson, outFolder);
+            set.LastUpdate = index.LastUpdate;
+            set.Rankings = index.GetRankings(outFolder);
             set.Rankings.Sort();
             return set;
         }
@@ -94,37 +88,9 @@ public class BySchoolYearJson : IndexJsonBase
         }
     }
 
-    private static List<Ranking> GetRankingsFromIndex(BySchoolYearJson mainJson, string outFolder)
+    public List<Ranking> GetRankings(string outFolder)
     {
-        List<Ranking> rankings = new();
-        var singleCourseJsons = GetSingleCourseJsons(mainJson).ToList();
-        singleCourseJsons.Sort();
-        foreach (var filename in singleCourseJsons)
-            AddRanking(outFolder, filename, rankings);
-
-        return rankings;
-    }
-
-    private static IEnumerable<SingleCourseJson> GetSingleCourseJsons(BySchoolYearJson mainJson)
-    {
-        var singleCourseJsons = mainJson.Schools.SelectMany(
-            school =>
-            {
-                var courseJsons = school.Value.SelectMany(year =>
-                {
-                    var yearValue = year.Value;
-                    return yearValue;
-                });
-                return courseJsons;
-            });
-        return singleCourseJsons;
-    }
-
-    private static void AddRanking(string outFolder, SingleCourseJson filename, ICollection<Ranking> rankings)
-    {
-        var path = Path.Join(outFolder, filename.BasePath, filename.Link);
-        var ranking = Utils.Transformer.ParserNS.Parser.ParseJsonRanking(path);
-        if (ranking == null) return;
-        rankings.Add(ranking);
+        return All.Select(singleCourseJson => singleCourseJson.GetFullPath(outFolder)).Select(Ranking.FromJson)
+            .OfType<Ranking>().ToList();
     }
 }

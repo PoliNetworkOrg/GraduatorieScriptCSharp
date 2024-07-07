@@ -11,7 +11,7 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class RankingSummaryStudent
+public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>
 {
     public readonly string? Course;
     public readonly string? Phase;
@@ -38,6 +38,14 @@ public class RankingSummaryStudent
         School = school;
         Year = year;
         Url = url;
+    }
+
+    public bool Equals(RankingSummaryStudent? other)
+    {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return Course == other.Course && Phase == other.Phase && School == other.School && Equals(Url, other.Url) &&
+               Year == other.Year;
     }
 
     public int Compare(RankingSummaryStudent o)
@@ -70,14 +78,8 @@ public class RankingSummaryStudent
                Year == rankingSummaryStudent.Year && equals && Course == rankingSummaryStudent.Course;
     }
 
-    protected bool Equals(RankingSummaryStudent other)
-    {
-        return Phase == other.Phase && School == other.School && Year == other.Year && Equals(Url, other.Url) &&
-               Course == other.Course;
-    }
-
     public override int GetHashCode()
     {
-        return HashCode.Combine(Phase, School, Year, Url, Course);
+        return HashCode.Combine(Course, Phase, School, Url, Year);
     }
 }

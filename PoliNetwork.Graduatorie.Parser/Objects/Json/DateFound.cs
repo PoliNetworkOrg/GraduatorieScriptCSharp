@@ -39,10 +39,10 @@ public class DateFound
         return date1 < date2 ? date1 : date2;
     }
 
-    public void UpdateDateFound(Ranking variable)
+    public void UpdateDateFound(Ranking ranking)
     {
-        var path = variable.GetPath().Trim();
-        var minDateTime = GetMinTime(variable, path);
+        var path = ranking.GetFullPath().Trim();
+        var minDateTime = GetMinTime(ranking, path);
         SetDate(path, minDateTime);
     }
 

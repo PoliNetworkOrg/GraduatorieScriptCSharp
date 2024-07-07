@@ -8,7 +8,6 @@ using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Extensions;
 using PoliNetwork.Graduatorie.Common.Objects;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Common.Utils;
 using PoliNetwork.Graduatorie.Common.Utils.HashNS;
 using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.Json.Indexes.Specific;
@@ -446,7 +445,7 @@ public class Parser
 
         foreach (var row in table.Data)
         {
-            var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
+            var id = HashMatricola.Get(Table.GetFieldByIndex(row, idIndex));
             var votoTest = Table.GetFieldByIndex(row, votoTestIndex) ?? "0";
             var enrollCourse = Table.GetFieldByIndex(row, corsoIndex) ?? "";
             var position = Table.GetFieldByIndex(row, posIndex) ?? "-1";
@@ -530,7 +529,7 @@ public class Parser
         SortedDictionary<string, int>? sectionsIndex
     )
     {
-        var id = HashMatricola.HashMatricolaMethod(Table.GetFieldByIndex(row, idIndex));
+        var id = HashMatricola.Get(Table.GetFieldByIndex(row, idIndex));
         var votoTestString = Table.GetFieldByIndex(row, votoTestIndex)?.Replace(",", ".") ?? "0";
 
         var votoTest = Convert.ToDecimal(votoTestString, Culture.NumberFormatInfo);
@@ -607,7 +606,7 @@ public class Parser
             Ofa = row.Ofa,
             Result = row.Result,
             BirthDate = row.BirthDate,
-            EnrollType = EnrollUtil.GetEnrollType(course.CourseTitle, canEnroll),
+            EnrollType = EnrollType.From(course.CourseTitle, canEnroll),
             PositionCourse = row.Position,
             SectionsResults = row.SectionsResults,
             EnglishCorrectAnswers = row.EnglishCorrectAnswers
@@ -621,7 +620,7 @@ public class Parser
             return student;
 
         student.PositionAbsolute = meritRow.Position;
-        student.EnrollType = EnrollUtil.GetEnrollType(meritRow.CanEnrollInto, canEnroll);
+        student.EnrollType = EnrollType.From(meritRow.CanEnrollInto, canEnroll);
         return student;
     }
 
@@ -644,7 +643,7 @@ public class Parser
         var canEnroll = row.CanEnroll ?? false;
         var student = new StudentResult
         {
-            EnrollType = EnrollUtil.GetEnrollType(row.CanEnrollInto, canEnroll),
+            EnrollType = EnrollType.From(row.CanEnrollInto, canEnroll),
             Id = row.Id,
             PositionAbsolute = row.Position,
             Result = row.Result,

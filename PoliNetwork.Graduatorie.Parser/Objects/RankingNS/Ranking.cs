@@ -3,6 +3,7 @@
 using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Enums;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 using PoliNetwork.Graduatorie.Parser.Objects.Json;
@@ -17,7 +18,7 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class Ranking : IComparable<Ranking>
+public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 {
     public List<CourseTable>? ByCourse;
     public MeritTable? ByMerit;
@@ -37,39 +38,28 @@ public class Ranking : IComparable<Ranking>
         return string.Compare(GetId(), other.GetId(), StringComparison.Ordinal);
     }
 
+
+    public bool Equals(Ranking? other)
+    {
+        if (other == null) return false;
+        return GetHashWithoutLastUpdate() == other.GetHashWithoutLastUpdate();
+    }
+
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
         return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
     }
 
-
-    /***
-     * Ottieni l'hash senza considerare il valore di LastUpdate
-     */
-    public int GetHashWithoutLastUpdate()
+    public static Ranking? FromJson(string fullPath)
     {
-        var i = "Ranking".GetHashCode();
-        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
-        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
-        i ^= School?.GetHashCode() ?? "School".GetHashCode();
-        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
-        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= iMerit ?? "ByMerit".GetHashCode();
+        // if (!File.Exists(fullPath)) return null;
+        //
+        // var str = File.ReadAllText(fullPath);
+        // var ranking = JsonConvert.DeserializeObject<Ranking>(str, Culture.JsonSerializerSettings);
+        // return ranking;
 
-
-        if (ByCourse == null)
-            i ^= "ByCourse".GetHashCode();
-        else
-            i = ByCourse.Aggregate(i, (current, variable) =>
-            {
-                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                var iList = hashWithoutLastUpdate;
-                return current ^ iList;
-            });
-
-        return i;
+        // consider merging the two functions at some point
+        return Utils.Transformer.ParserNS.Parser.ParseJsonRanking(fullPath);
     }
 
 
@@ -82,26 +72,6 @@ public class Ranking : IComparable<Ranking>
                Url?.Url == ranking.Url?.Url;
     }
 
-
-    public void Merge(Ranking ranking)
-    {
-        LastUpdate = LastUpdate > ranking.LastUpdate ? LastUpdate : ranking.LastUpdate;
-        Year ??= ranking.Year;
-        Extra ??= ranking.Extra;
-        School ??= ranking.School;
-        MergeRankingOrder(ranking);
-        ByCourse ??= ranking.ByCourse;
-        ByMerit ??= ranking.ByMerit;
-        Url ??= ranking.Url;
-    }
-
-    private void MergeRankingOrder(Ranking ranking)
-    {
-        if (RankingOrder == null)
-            RankingOrder = ranking.RankingOrder;
-        else
-            RankingOrder.Merge(ranking.RankingOrder);
-    }
 
     public string GetFilename()
     {
@@ -158,8 +128,67 @@ public class Ranking : IComparable<Ranking>
         return RankingSummary.From(this);
     }
 
-    public string GetPath()
+    public string GetBasePath(string outFolder = "")
     {
-        return School + "/" + Year + "/" + RankingOrder?.Phase;
+        return Path.Join(outFolder, $"{School}/{Year}/");
+    }
+
+    public string GetFullPath(string outFolder = "")
+    {
+        return Path.Join(GetBasePath(outFolder), GetFilename());
+    }
+
+    public void WriteAsJson(string outFolder, bool forceReparse = false)
+    {
+        var folderPath = GetBasePath(outFolder);
+        Directory.CreateDirectory(folderPath);
+
+        var fullPath = GetFullPath(outFolder);
+
+        var savedRanking = FromJson(fullPath);
+        var equalsSaved = savedRanking != null && Equals(savedRanking);
+
+        if (!forceReparse && equalsSaved) return;
+
+        var rankingJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
+        File.WriteAllText(fullPath, rankingJsonString);
+    }
+
+    /***
+     * Ottieni l'hash senza considerare il valore di LastUpdate
+     */
+    public int GetHashWithoutLastUpdate()
+    {
+        var i = "Ranking".GetHashCode();
+        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
+        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
+        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
+        i ^= School?.GetHashCode() ?? "School".GetHashCode();
+        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
+        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
+        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
+        i ^= iMerit ?? "ByMerit".GetHashCode();
+
+
+        if (ByCourse == null)
+            i ^= "ByCourse".GetHashCode();
+        else
+            i = ByCourse.Aggregate(i, (current, variable) =>
+            {
+                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+                return current ^ hashWithoutLastUpdate;
+            });
+
+        return i;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Ranking);
+    }
+
+    public override int GetHashCode()
+    {
+        return GetHashWithoutLastUpdate();
     }
 }

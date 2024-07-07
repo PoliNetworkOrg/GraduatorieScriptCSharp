@@ -2,108 +2,95 @@
 
 using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Common.Data;
-using PoliNetwork.Graduatorie.Parser.Objects;
 using PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
-using PoliNetwork.Graduatorie.Parser.Objects.Tables.Course;
 
 #endregion
 
 namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 
-public static class HashMatricoleWrite
-{
-    public static void Write(RankingsSet? rankingsSet, string outFolder)
-    {
-        if (rankingsSet == null)
-            return;
+using IdsDict = SortedDictionary<string, StudentHashSummary>;
 
-        var dictionary = GetDictToWrite(rankingsSet);
-        Sort2(dictionary);
-        WriteToFile(dictionary, outFolder);
+public class HashMatricoleWrite
+{
+    private const string FolderName = "hashMatricole";
+    private IdsDict _idsDict = new();
+
+    public static HashMatricoleWrite From(RankingsSet rankingsSet)
+    {
+        return new HashMatricoleWrite
+        {
+            _idsDict = GetIdsDict(rankingsSet)
+        };
     }
 
-    private static void Sort2(SortedDictionary<string, StudentHashSummary> dict)
+
+    public void Write(string outFolder)
     {
-        var keys = dict.Keys;
-        foreach (var key in keys)
+        Console.WriteLine($"[INFO] Students with id are {_idsDict.Keys.Count}");
+
+        var groupsDict = GetGroupsDict();
+        var hashMatricoleFolder = Path.Join(outFolder, FolderName);
+        if (!Directory.Exists(hashMatricoleFolder)) Directory.CreateDirectory(hashMatricoleFolder);
+
+        foreach (var (id, idsDict) in groupsDict)
         {
-            var item = dict[key];
-            item.Sort2();
+            var idsDictJson = JsonConvert.SerializeObject(idsDict, Culture.JsonSerializerSettings);
+            var filename = $"{id}.json";
+            var fullPath = Path.Join(hashMatricoleFolder, filename);
+            File.WriteAllText(fullPath, idsDictJson);
         }
     }
 
-    private static SortedDictionary<string, StudentHashSummary> GetDictToWrite(RankingsSet rankingsSet)
+    private static IdsDict GetIdsDict(RankingsSet rankingsSet)
     {
-        var dictionary = new SortedDictionary<string, StudentHashSummary>();
+        var dictionary = new IdsDict();
         foreach (var ranking in rankingsSet.Rankings)
         {
             var byMeritRows = ranking.ByMerit?.Rows;
             if (byMeritRows != null)
                 foreach (var student in byMeritRows.Where(student => !string.IsNullOrEmpty(student.Id)))
-                    AddToDict(dictionary, ranking, student, null);
+                {
+                    var id = student.Id!;
+                    if (!dictionary.ContainsKey(id)) dictionary.Add(id, new StudentHashSummary());
+                    dictionary[id].Merge(student, ranking, null);
+                }
 
             var rankingByCourse = ranking.ByCourse;
             if (rankingByCourse == null) continue;
-            foreach (var courseTable in rankingByCourse)
+            foreach (var courseTable in rankingByCourse.Where(c => c.Rows != null))
             {
-                var row = courseTable.Rows;
-                if (row == null) continue;
-                foreach (var studentResult in row.Where(studentResult => !string.IsNullOrEmpty(studentResult.Id)))
-                    AddToDict(dictionary, ranking, studentResult, courseTable);
+                var row = courseTable.Rows!;
+                foreach (var student in row.Where(studentResult => !string.IsNullOrEmpty(studentResult.Id)))
+                {
+                    var id = student.Id!;
+
+                    if (!dictionary.ContainsKey(id)) dictionary.Add(id, new StudentHashSummary());
+                    dictionary[id].Merge(student, ranking, courseTable);
+                }
             }
         }
+
+        foreach (var item in dictionary.Values) item.Sort();
 
         return dictionary;
     }
 
-    private static void WriteToFile(SortedDictionary<string, StudentHashSummary> dictionary, string outFolder)
+    private SortedDictionary<string, IdsDict> GetGroupsDict()
     {
-        Console.WriteLine($"[INFO] Students with id are {dictionary.Keys.Count}");
+        var groupsDict = new SortedDictionary<string, IdsDict>();
+        var groups = _idsDict.GroupBy(pair => pair.Key[..2]);
 
-
-        var dictResult =
-            new SortedDictionary<string, SortedDictionary<string, StudentHashSummary>>();
-
-        foreach (var variable in dictionary)
+        foreach (var group in groups)
         {
-            var key = variable.Key[..2];
-            if (!dictResult.ContainsKey(key))
-                dictResult[key] = new SortedDictionary<string, StudentHashSummary>();
+            var groupId = group.Key;
+            var groupVal = group.ToList();
 
-            if (!dictResult[key].ContainsKey(variable.Key))
-                dictResult[key][variable.Key] = variable.Value;
+            var groupIdsDict = new IdsDict();
+            foreach (var (id, studentHashSummary) in groupVal) groupIdsDict.Add(id, studentHashSummary);
+
+            groupsDict.Add(groupId, groupIdsDict);
         }
 
-        var hashMatricole = outFolder + "/hashMatricole";
-        if (!Directory.Exists(hashMatricole)) Directory.CreateDirectory(hashMatricole);
-
-        foreach (var variable in dictResult) WriteSingleHashFile(variable, hashMatricole);
-    }
-
-    private static void WriteSingleHashFile(KeyValuePair<string, SortedDictionary<string, StudentHashSummary>> variable,
-        string hashMatricole)
-    {
-        var studentHashSummaries = variable.Value;
-        var toWrite = JsonConvert.SerializeObject(studentHashSummaries, Culture.JsonSerializerSettings);
-        File.WriteAllText(hashMatricole + "/" + variable.Key + ".json", toWrite);
-    }
-
-    private static void AddToDict(IDictionary<string, StudentHashSummary> dictionary, Ranking ranking,
-        StudentResult student, CourseTable? courseTable)
-    {
-        var id = student.Id;
-        if (string.IsNullOrEmpty(id))
-            return;
-
-        if (dictionary.TryGetValue(id, out var studentPresent))
-        {
-            studentPresent.Merge(student, ranking, courseTable);
-        }
-        else
-        {
-            var studentHashSummary = new StudentHashSummary();
-            studentHashSummary.Merge(student, ranking, courseTable);
-            dictionary[id] = studentHashSummary;
-        }
+        return groupsDict;
     }
 }
