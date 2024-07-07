@@ -20,24 +20,19 @@ public class RankingsSet
         LastUpdate = DateTime.UtcNow;
     }
 
-
-    public void AddRanking(Ranking ranking)
+    public void Merge(RankingsSet newSet)
     {
-        var alreadyPresent = Contains(ranking);
-        if (!alreadyPresent)
-            Rankings.Add(ranking);
-
-        if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) LastUpdate = ranking.LastUpdate;
-    }
-
-    public bool Contains(Ranking ranking)
-    {
-        return Rankings.Any(v => v.IsSimilarTo(ranking));
-    }
-
-    public void Merge(RankingsSet set)
-    {
-        foreach (var ranking in set.Rankings) AddRanking(ranking);
+        foreach (var ranking in newSet.Rankings)
+        {
+            var alreadyPresent = Rankings.Any(v => v.IsSimilarTo(ranking));
+            if (!alreadyPresent)
+            {
+                Rankings.Add(ranking);
+                    
+                if (LastUpdate == null || ranking.LastUpdate.Date > LastUpdate?.Date) 
+                    LastUpdate = ranking.LastUpdate;
+            }
+        }
     }
 
     public void WriteAllRankings(string outFolder, bool forceReparse = false)
