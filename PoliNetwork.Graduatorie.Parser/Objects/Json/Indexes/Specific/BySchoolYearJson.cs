@@ -26,10 +26,14 @@ public class BySchoolYearJson : IndexJsonBase
     {
         var mainJson = new BySchoolYearJson { LastUpdate = set.LastUpdate };
 
-        var list = set.Rankings.SelectMany(r => r.ToSingleCourseJson()).ToList();
+        var list = set.Rankings
+            .SelectMany(r => r.ToSingleCourseJson())
+            .DistinctBy(r => new { r.Id, r.Location })
+            .ToList();
+        
         list.Sort();
         mainJson.All = list;
-        
+
         // group rankings by school
         var bySchool = set.Rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
         foreach (var schoolGroup in bySchool)
@@ -47,16 +51,16 @@ public class BySchoolYearJson : IndexJsonBase
     private static YearsDict GetYearsDict(IEnumerable<IGrouping<int, Ranking>> byYears)
     {
         var yearsDict = new YearsDict();
-        
+
         foreach (var yearGroup in byYears)
         {
-           var singleCourseJsons = yearGroup
-               .SelectMany(r => r.ToSingleCourseJson())
-               .DistinctBy(r => r.Id)
-               .OrderBy(e => e.Id) // Id contains everything (school, year, pri/sec phase, extraeu, lang)
-               .ToList();
-           
-           yearsDict.Add(yearGroup.Key, singleCourseJsons);
+            var singleCourseJsons = yearGroup
+                .SelectMany(r => r.ToSingleCourseJson())
+                .DistinctBy(r => r.Id)
+                .OrderBy(e => e.Id) // Id contains everything (school, year, pri/sec phase, extraeu, lang)
+                .ToList();
+
+            yearsDict.Add(yearGroup.Key, singleCourseJsons);
         }
 
         return yearsDict;
@@ -94,7 +98,7 @@ public class BySchoolYearJson : IndexJsonBase
             var ranking = Ranking.FromJson(fullPath);
             if (ranking != null) rankings.Add(ranking);
         }
-        
+
         return rankings;
     }
 }
