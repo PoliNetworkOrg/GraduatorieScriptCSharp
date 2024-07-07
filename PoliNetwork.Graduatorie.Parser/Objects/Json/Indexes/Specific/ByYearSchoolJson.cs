@@ -17,22 +17,22 @@ using SchoolsDict = SortedDictionary<SchoolEnum, IEnumerable<SingleCourseJson>>;
 public class ByYearSchoolJson : IndexJsonBase
 {
     internal const string CustomPath = "byYearSchool.json";
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public YearsDict Years = new();
-    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public static ByYearSchoolJson From(RankingsSet set)
     {
         var mainJson = new ByYearSchoolJson { LastUpdate = set.LastUpdate };
-        
+
         var list = set.Rankings
             .SelectMany(r => r.ToSingleCourseJson()).ToList()
             .DistinctBy(r => new { r.Id })
             .ToList();
-        
+
         list.Sort();
         mainJson.All = list;
-        
+
         // group rankings by year
         var byYear = set.Rankings.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
         foreach (var yearGroup in byYear)
@@ -57,7 +57,7 @@ public class ByYearSchoolJson : IndexJsonBase
                 .DistinctBy(x => x.Link)
                 .OrderBy(r => r.Id)
                 .ToList();
-                
+
             schoolsDict.Add(schoolGroup.Key, filenames);
         }
 

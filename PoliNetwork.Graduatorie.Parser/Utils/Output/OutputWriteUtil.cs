@@ -23,7 +23,7 @@ public class OutputWriteUtil
     public void SaveOutputs(RankingsSet rankingsSet, DateFound dateFound)
     {
         var outFolder = Path.Join(_config.DataFolder, Constants.OutputFolder);
-        
+
         rankingsSet.WriteAllRankings(outFolder, _config.ForceReparsing);
         IndexJsonBase.WriteAllIndexes(rankingsSet, outFolder);
         StatsJson.From(rankingsSet).Write(outFolder, _config);

@@ -22,7 +22,7 @@ public abstract class IndexJsonBase
         var mainJsonString = JsonConvert.SerializeObject(this, Culture.JsonSerializerSettings);
         File.WriteAllText(mainJsonPath, mainJsonString);
     }
-    
+
     public static void WriteAllIndexes(RankingsSet rankingsSet, string outFolder)
     {
         //now let's write each single different index

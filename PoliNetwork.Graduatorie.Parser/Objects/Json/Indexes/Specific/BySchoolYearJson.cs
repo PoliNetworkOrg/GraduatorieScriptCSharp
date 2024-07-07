@@ -18,9 +18,9 @@ using YearsDict = SortedDictionary<int, IEnumerable<SingleCourseJson>>;
 public class BySchoolYearJson : IndexJsonBase
 {
     internal const string CustomPath = "bySchoolYear.json";
+    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public SchoolsDict Schools = new();
-    public List<SingleCourseJson> All = new(); // decide whether to include it in the json serialization
 
     public static BySchoolYearJson From(RankingsSet set)
     {
@@ -30,7 +30,7 @@ public class BySchoolYearJson : IndexJsonBase
             .SelectMany(r => r.ToSingleCourseJson())
             .DistinctBy(r => new { r.Id })
             .ToList();
-        
+
         list.Sort();
         mainJson.All = list;
 
@@ -90,6 +90,7 @@ public class BySchoolYearJson : IndexJsonBase
 
     public List<Ranking> GetRankings(string outFolder)
     {
-        return All.Select(singleCourseJson => singleCourseJson.GetFullPath(outFolder)).Select(Ranking.FromJson).OfType<Ranking>().ToList();
+        return All.Select(singleCourseJson => singleCourseJson.GetFullPath(outFolder)).Select(Ranking.FromJson)
+            .OfType<Ranking>().ToList();
     }
 }
