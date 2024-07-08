@@ -34,11 +34,11 @@ public class ByYearSchoolJson : IndexJsonBase
         mainJson.All = list;
 
         // group rankings by year
-        var byYear = set.Rankings.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
+        var byYear = set.Rankings.GroupBy(r => r.Year);
         foreach (var yearGroup in byYear)
         {
             var year = yearGroup.Key;
-            var bySchools = yearGroup.Where(r => r.School != null).GroupBy(r => r.School!.Value);
+            var bySchools = yearGroup.GroupBy(r => r.School);
 
             var schoolsDict = GetSchoolsDict(bySchools);
             mainJson.Years.Add(year, schoolsDict);

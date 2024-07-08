@@ -26,7 +26,7 @@ public class CourseTable : MeritTable
 
     public RankingSummaryStudent GetRankingSummaryStudent(Ranking ranking)
     {
-        return new RankingSummaryStudent(Title, ranking.RankingOrder?.Phase, ranking.School,
+        return new RankingSummaryStudent(Title, ranking.RankingOrder.Phase, ranking.School,
             ranking.Url, ranking.Year);
     }
 

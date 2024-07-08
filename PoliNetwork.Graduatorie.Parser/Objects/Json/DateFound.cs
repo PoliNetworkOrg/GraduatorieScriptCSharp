@@ -55,7 +55,7 @@ public class DateFound
     private DateTime? GetMinTime(Ranking variable, string path)
     {
         FirstDate ??= new SortedDictionary<string, DateTime?>();
-        var dateTime = new DateTime(variable.Year ?? DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day);
+        var dateTime = new DateTime(variable.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day);
         var tryGetValue = TryGetValue(FirstDate, path);
         var minDateTime = tryGetValue.Item2 switch
         {
