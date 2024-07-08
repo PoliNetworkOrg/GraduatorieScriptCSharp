@@ -11,7 +11,7 @@ namespace PoliNetwork.Graduatorie.Parser.Utils.Output;
 
 [Serializable]
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>
+public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>, IComparable<RankingSummaryStudent>
 {
     public readonly string? Course;
     public readonly string? Phase;
@@ -48,21 +48,24 @@ public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>
                Year == other.Year;
     }
 
-    public int Compare(RankingSummaryStudent o)
+    public int CompareTo(RankingSummaryStudent? other)
     {
-        var i = (Year ?? 0) - (o.Year ?? 0);
+        if (ReferenceEquals(this, other)) return 0;
+        if (ReferenceEquals(null, other)) return 1;
+        
+        var i = (Year ?? 0) - (other.Year ?? 0);
         if (i != 0) return i < 0 ? -1 : 1;
 
-        i = string.CompareOrdinal(Course ?? "", o.Course ?? "");
+        i = string.CompareOrdinal(Course ?? "", other.Course ?? "");
         if (i != 0) return i < 0 ? -1 : 1;
 
-        i = string.CompareOrdinal(Phase ?? "", o.Phase ?? "");
+        i = string.CompareOrdinal(Phase ?? "", other.Phase ?? "");
         if (i != 0) return i < 0 ? -1 : 1;
 
-        i = (int)(School ?? SchoolEnum.Unknown) - (int)(o.School ?? SchoolEnum.Unknown);
+        i = (int)(School ?? SchoolEnum.Unknown) - (int)(other.School ?? SchoolEnum.Unknown);
         if (i != 0) return i < 0 ? -1 : 1;
 
-        i = Url?.CompareTo(o.Url) ?? 0;
+        i = Url?.CompareTo(other.Url) ?? 0;
         if (i != 0) return i < 0 ? -1 : 1;
 
 
