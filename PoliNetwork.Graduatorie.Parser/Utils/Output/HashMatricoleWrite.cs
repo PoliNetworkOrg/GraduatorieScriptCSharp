@@ -46,7 +46,7 @@ public class HashMatricoleWrite
         var dictionary = new IdsDict();
         foreach (var ranking in rankingsSet.Rankings)
         {
-            var byMeritRows = ranking.ByMerit?.Rows;
+            var byMeritRows = ranking.ByMerit.Rows;
             if (byMeritRows != null)
                 foreach (var student in byMeritRows.Where(student => !string.IsNullOrEmpty(student.Id)))
                 {
@@ -56,7 +56,6 @@ public class HashMatricoleWrite
                 }
 
             var rankingByCourse = ranking.ByCourse;
-            if (rankingByCourse == null) continue;
             foreach (var courseTable in rankingByCourse.Where(c => c.Rows != null))
             {
                 var row = courseTable.Rows!;

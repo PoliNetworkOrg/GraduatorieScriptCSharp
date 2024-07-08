@@ -17,15 +17,13 @@ public class StatsSchool
     public List<StatsSingleCourseJson> List = new();
     public int NumStudents;
 
-    public static StatsSchool From(IEnumerable<Ranking> pRankings)
+    public static StatsSchool From(IEnumerable<Ranking> rankings)
     {
         var statsSchool = new StatsSchool();
-        var rankings = pRankings.Where(r => r is { Year: not null, School: not null }).ToList();
 
-        statsSchool.NumStudents =
-            rankings.Select(x => (x.RankingSummary ?? x.CreateSummary()).HowManyStudents ?? 0).Sum();
-
-        statsSchool.List = rankings
+        var rankingsEnumerable = rankings.ToList();
+        statsSchool.NumStudents = rankingsEnumerable.Select(x => x.RankingSummary.HowManyStudents ?? 0).Sum();
+        statsSchool.List = rankingsEnumerable
             .SelectMany(r => r.ToStats())
             .DistinctBy(x => new { x.SingleCourseJson.Id, x.SingleCourseJson.Location })
             .OrderBy(x => x.SingleCourseJson.Id)

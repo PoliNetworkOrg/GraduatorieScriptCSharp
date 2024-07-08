@@ -78,9 +78,6 @@ public class Parser
         // removing urls of rankings found
         foreach (var ranking in savedSet.Rankings)
         {
-            if (ranking.Url == null)
-                continue;
-
             ranking.Url.FixSlashes();
             var relatedHtmls = htmls.Where(h => h.Url.IsSameRanking(ranking.Url)).ToList();
             foreach (var related in relatedHtmls)
@@ -183,7 +180,6 @@ public class Parser
 
     private static Ranking? InitRanking(RankingUrl indexUrl, HtmlNode doc)
     {
-        var ranking = new Ranking();
         // get ranking info
         var intestazioni = doc.GetElementsByClassName("intestazione")
             .Select(i => i.Descendants("#text").ToList()[0].InnerText)
@@ -200,27 +196,27 @@ public class Parser
             return null;
         }
 
-        ranking.Url = indexUrl;
-        ranking.School = school;
-        ranking.Year = Convert.ToInt16(intestazioni[1].Split("Year ")[1].Split("/")[0]);
+        var year = Convert.ToInt16(intestazioni[1].Split("Year ")[1].Split("/")[0]);
 
-        var extraEuStr = intestazioni[4].Split("\n")[0].ToLower();
+        var extra = intestazioni[4];
+        var extraEuStr = extra.Split("\n")[0].ToLower();
         var isExtraEu = extraEuStr.Contains("extra-ue");
 
-        if (ranking.Year < 2024)
+        RankingOrder rankingOrder;
+        if (year < 2024)
         {
             // layout valid until 2023
             var phase = string.Join(" ", intestazioni[3].Split(" - ")[1..]);
-            ranking.RankingOrder = new RankingOrder(phase, isExtraEu);
-            if (ranking.School == SchoolEnum.Architettura && ranking.RankingOrder.Primary == null &&
-                ranking.RankingOrder.Secondary == null && ranking.RankingOrder.IsExtraEu)
+            rankingOrder = new RankingOrder(phase, isExtraEu);
+            if (school == SchoolEnum.Architettura && rankingOrder.Primary == null &&
+                rankingOrder.Secondary == null && rankingOrder.IsExtraEu)
                 // this is a fallback for 2020-2023:
                 // POLIMI was used to add the ranking number (Secondary, e.g. "Prima Graduatoria") for ExtraEU starting 
                 // from the second ranking. 
                 // e.g. Extra-EU first ranking => phase = "Extra-ue",
                 //      Extra-EU second ranking => phase = "Extra-ue - Seconda Graduatoria"
                 // so this is a fallback to add the equivalent of "Prima Graduatoria" to the first ExtraEU ranking.
-                ranking.RankingOrder.Secondary = 1;
+                rankingOrder.Secondary = 1;
         }
         else
         {
@@ -228,14 +224,22 @@ public class Parser
             var phase = intestazioni[3];
             var isEnglish = intestazioni[2].Contains("taught in english") ||
                             intestazioni[2].Contains("erogati in inglese");
-            ranking.RankingOrder = new RankingOrder(phase, isExtraEu, isEnglish);
+            rankingOrder = new RankingOrder(phase, isExtraEu, isEnglish);
         }
 
-        ranking.Extra = intestazioni[4];
-        ranking.LastUpdate = DateTime.UtcNow;
-        ranking.ByCourse = new List<CourseTable>();
 
-        return ranking;
+        return new Ranking
+        {
+            LastUpdate = DateTime.UtcNow,
+            School = school,
+            Year = year,
+            Url = indexUrl,
+            Extra = extra,
+            RankingOrder = rankingOrder,
+            RankingSummary = new RankingSummary(),
+            ByMerit = new MeritTable(),
+            ByCourse = new List<CourseTable>(),
+        };
     }
 
     private (IEnumerable<RankingUrl>, IEnumerable<RankingUrl>) ParseIndexBy(
@@ -756,9 +760,6 @@ public class Parser
             );
             if (obj1 == null)
                 return null;
-
-            if (obj1.RankingOrder != null)
-                return obj1;
 
             var jValue = (JValue)jToken;
             var phase = jValue.Value?.ToString();

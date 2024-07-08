@@ -1,6 +1,5 @@
 ﻿#region
 
-using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PoliNetwork.Graduatorie.Common.Data;
@@ -20,15 +19,15 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 {
-    public List<CourseTable>? ByCourse;
-    public MeritTable? ByMerit;
-    public string? Extra;
-    public DateTime LastUpdate;
-    public RankingOrder? RankingOrder;
-    public RankingSummary? RankingSummary;
-    public SchoolEnum? School;
-    public RankingUrl? Url;
-    public int? Year;
+    public required DateTime LastUpdate;
+    public required SchoolEnum School;
+    public required int Year;
+    public required RankingUrl Url;
+    public required string Extra;
+    public required RankingOrder RankingOrder;
+    public required RankingSummary RankingSummary;
+    public required MeritTable ByMerit;
+    public required List<CourseTable> ByCourse;
 
     public int CompareTo(Ranking? other)
     {
@@ -47,7 +46,7 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 
     public RankingSummaryStudent GetRankingSummaryStudent()
     {
-        return new RankingSummaryStudent(RankingOrder?.Phase, School, Year, Url);
+        return new RankingSummaryStudent(RankingOrder.Phase, School, Year, Url);
     }
 
     public static Ranking? FromJson(string fullPath)
@@ -67,9 +66,9 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     {
         return Year == ranking.Year &&
                School == ranking.School &&
-               RankingOrder?.Phase == ranking.RankingOrder?.Phase &&
+               RankingOrder.Phase == ranking.RankingOrder.Phase &&
                Extra == ranking.Extra &&
-               Url?.Url == ranking.Url?.Url;
+               Url.Url == ranking.Url.Url;
     }
 
 
@@ -83,17 +82,14 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     {
         var idList = new List<string>();
 
-        var schoolShort = School?.ToShortName();
-        if (schoolShort != null) idList.Add(schoolShort);
+        var schoolShort = School.ToShortName();
+        idList.Add(schoolShort);
 
         var yearStr = Year.ToString();
-        if (yearStr != null) idList.Add(yearStr);
+        idList.Add(yearStr);
 
-        var orderId = RankingOrder?.GetId();
-        if (orderId != null) idList.Add(orderId);
-
-        var fallback = DateTime.UtcNow.ToString("yyyyMMddTHHmmss", CultureInfo.InvariantCulture) + "Z";
-        if (idList.Count == 0) idList.Add(fallback);
+        var orderId = RankingOrder.GetId();
+        idList.Add(orderId);
 
         return string.Join("_", idList);
     }
@@ -101,9 +97,8 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public List<SingleCourseJson> ToSingleCourseJson()
     {
         var result = new List<SingleCourseJson>();
-        var schoolString = School == null ? null : Enum.GetName(typeof(SchoolEnum), School);
+        var schoolString = Enum.GetName(typeof(SchoolEnum), School);
         var courseTables = ByCourse;
-        if (courseTables == null) return result;
         result.AddRange(courseTables.Select(variable => new SingleCourseJson
         {
             Link = GetFilename(),
@@ -160,24 +155,18 @@ public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
     public int GetHashWithoutLastUpdate()
     {
         var i = "Ranking".GetHashCode();
-        i ^= Extra?.GetHashCode() ?? "Extra".GetHashCode();
-        i ^= RankingOrder?.GetHashWithoutLastUpdate() ?? "RankingOrder".GetHashCode();
-        i ^= RankingSummary?.GetHashWithoutLastUpdate() ?? "RankingSummary".GetHashCode();
-        i ^= School?.GetHashCode() ?? "School".GetHashCode();
-        i ^= Url?.GetHashWithoutLastUpdate() ?? "Url".GetHashCode();
-        i ^= Year?.GetHashCode() ?? "Year".GetHashCode();
-        var iMerit = ByMerit?.GetHashWithoutLastUpdate();
-        i ^= iMerit ?? "ByMerit".GetHashCode();
-
-
-        if (ByCourse == null)
-            i ^= "ByCourse".GetHashCode();
-        else
-            i = ByCourse.Aggregate(i, (current, variable) =>
-            {
-                var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
-                return current ^ hashWithoutLastUpdate;
-            });
+        i ^= Extra.GetHashCode();
+        i ^= RankingOrder.GetHashWithoutLastUpdate();
+        i ^= RankingSummary.GetHashWithoutLastUpdate();
+        i ^= School.GetHashCode();
+        i ^= Url.GetHashWithoutLastUpdate();
+        i ^= Year.GetHashCode();
+        i ^= ByMerit.GetHashWithoutLastUpdate();
+        i = ByCourse.Aggregate(i, (current, variable) =>
+        {
+            var hashWithoutLastUpdate = variable.GetHashWithoutLastUpdate();
+            return current ^ hashWithoutLastUpdate;
+        });
 
         return i;
     }

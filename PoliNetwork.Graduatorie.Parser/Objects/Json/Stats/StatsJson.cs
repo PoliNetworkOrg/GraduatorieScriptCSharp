@@ -25,7 +25,7 @@ public class StatsJson
     {
         var statsJson = new StatsJson();
 
-        var byYears = rankingsSet.Rankings.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
+        var byYears = rankingsSet.Rankings.GroupBy(r => r.Year);
         foreach (var yearGroup in byYears)
         {
             var statsYear = StatsYear.From(yearGroup.ToList());

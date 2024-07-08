@@ -26,14 +26,14 @@ public class StatsYear
 
     public static StatsYear From(List<Ranking> rankings)
     {
+        if (rankings.Count == 0) return new StatsYear();
         var statsYear = new StatsYear
         {
-            Year = rankings.First(r => r.Year != null).Year!.Value, // just hilarious
-            NumStudents = rankings.Select(r => (r.RankingSummary ?? r.CreateSummary()).HowManyStudents ?? 0)
-                .Sum() // this ?? is crazy
+            Year = rankings.First().Year, // just hilarious
+            NumStudents = rankings.Select(r => r.RankingSummary.HowManyStudents ?? 0).Sum() // this ?? is crazy
         };
 
-        var bySchool = rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
+        var bySchool = rankings.GroupBy(r => r.School);
         foreach (var schoolGroup in bySchool)
         {
             var statsSchool = StatsSchool.From(schoolGroup.ToList());

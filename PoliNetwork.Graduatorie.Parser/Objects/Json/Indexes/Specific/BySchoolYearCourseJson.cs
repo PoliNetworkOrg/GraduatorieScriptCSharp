@@ -40,13 +40,13 @@ public class BySchoolYearCourseJson : IndexJsonBase
         mainJson.All = list;
 
         // group rankings by school
-        var bySchool = set.Rankings.Where(r => r.School != null).GroupBy(r => r.School!.Value);
+        var bySchool = set.Rankings.GroupBy(r => r.School);
 
         foreach (var schoolGroup in bySchool)
         {
             var school = schoolGroup.Key;
 
-            var byYears = schoolGroup.Where(r => r.Year != null).GroupBy(r => r.Year!.Value);
+            var byYears = schoolGroup.GroupBy(r => r.Year);
             var yearsDict = GetYearsDict(byYears);
 
             mainJson.Schools.Add(school, yearsDict);
@@ -75,9 +75,6 @@ public class BySchoolYearCourseJson : IndexJsonBase
 
         foreach (var ranking in yearGroup)
         {
-            if (ranking.ByCourse == null)
-                continue;
-
             var byTitle =
                 ranking.ByCourse.Where(c => c.Title != null).GroupBy(c => c.Title!); // e.g. INGEGNERIA AEROSPAZIALE
 

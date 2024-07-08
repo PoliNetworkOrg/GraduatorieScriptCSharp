@@ -30,19 +30,19 @@ public class RankingSummary
 
     public static RankingSummary From(Ranking ranking)
     {
-        var byMeritRows = ranking.ByMerit?.Rows;
+        var byMeritRows = ranking.ByMerit.Rows;
         var results = CalculateResultsScores(byMeritRows);
 
         var keyValuePairs = results?.OrderBy(x => x.Key)
             .ToDictionary(obj => obj.Key, obj => obj.Value);
 
-        var courseTableStatsList = ranking.ByCourse?.Select(x => x.GetStats())
+        var courseTableStatsList = ranking.ByCourse.Select(x => x.GetStats())
             .OrderBy(x => x.Title).ThenBy(x => x.Location).ToList();
 
         var howManyCanEnroll = byMeritRows?.Count(x => x.EnrollType?.CanEnroll ?? false);
 
 
-        var groupBy = courseTableStatsList?.GroupBy(x =>
+        var groupBy = courseTableStatsList.GroupBy(x =>
         {
             TitleLocation titleLocation;
             titleLocation.Title = x.Title;
@@ -50,14 +50,14 @@ public class RankingSummary
             return titleLocation;
         });
         var distinctBy = groupBy
-            ?.DistinctBy(x =>
+            .DistinctBy(x =>
             {
                 TitleLocation titleLocation;
                 titleLocation.Title = x.Key.Title;
                 titleLocation.Location = x.Key.Location;
                 return titleLocation;
             });
-        var tableStatsList = distinctBy?.ToList();
+        var tableStatsList = distinctBy.ToList();
         var tableStatsList2 = Get(tableStatsList);
         var resultsSummarized = new SortedDictionary<int, int>(keyValuePairs ?? new Dictionary<int, int>());
         return new RankingSummary
