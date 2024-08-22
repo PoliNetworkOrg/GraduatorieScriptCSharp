@@ -27,8 +27,13 @@ public static class Program
         var rankingsUrls = mt.Execute(LinksFind.GetAll).ToList();
         rankingsUrls = ScraperOutput.GetWithUrlsFromLocalFileLinks(rankingsUrls, argsConfig.DataFolder);
 
+        var scraper = new Scraper.Utils.Web.Scraper();
+        var manifesti = mt.Execute(scraper.ScrapeManifesti);
+
         PrintLinks(rankingsUrls);
-        ScraperOutput.Write(rankingsUrls, argsConfig.DataFolder); // save results
+        // save results
+        ScraperOutput.WriteLinks(rankingsUrls, argsConfig.DataFolder);
+        ScraperOutput.WriteManifesti(manifesti, argsConfig.DataFolder);
 
         return rankingsUrls;
     }

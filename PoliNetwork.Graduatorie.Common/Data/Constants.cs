@@ -8,6 +8,7 @@ public static class Constants
     public const string OutputFolder = "output";
     public const string HtmlFolder = "html";
     public const string OutputLinksFilename = "links.txt";
+    public const string OutputManifestiFilename = "manifesti.json";
     public const string DataFolder = "data";
     public const string LocationPlaceholder = "0";
 }

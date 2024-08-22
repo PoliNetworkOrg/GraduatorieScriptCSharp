@@ -1,5 +1,6 @@
 #region
 
+using System.Diagnostics;
 using HtmlAgilityPack;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Extensions;
@@ -25,12 +26,20 @@ public class Scraper
 
     private readonly HtmlWeb _web = new();
 
+    private static readonly HttpClientHandler HttpClientHandler = new()
+    {
+        AllowAutoRedirect = false
+    };
+
+    private readonly HttpClient _httpClient = new(HttpClientHandler);
+
     public IEnumerable<string> GetRankingsLinks()
     {
         // before there were multiple source to get links.
         // atm rankings are published exclusively 
         // on AvvisiFuturiStudentiUrl and on TG channel
         // note: here we are using the web page
+        ScrapeManifesti();
         return ScrapeAvvisiFuturiStudenti();
     }
 
@@ -61,6 +70,96 @@ public class Scraper
         }
 
         return links;
+    }
+
+    public SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>> ScrapeManifesti()
+    {
+        var map = new SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>>();
+
+        var designUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/design-degli-interni";
+        var ingCivileUrl =
+            "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-per-lambiente-e-il-territorio";
+        var ingUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-informatica";
+        var archUrbUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-edile-architettura";
+
+        string[] urls = { designUrl, ingCivileUrl, ingUrl, archUrbUrl };
+
+        foreach (var url in urls)
+        {
+            var page = _web.Load(url).DocumentNode;
+            var aTags = page.SelectNodes("//a/u[contains(text(),'Insegnamenti del piano di studi')]/..");
+            if (aTags is not { Count: 1 }) continue;
+
+            var aTag = aTags.First();
+            if (aTag == null) continue;
+
+            var link = GetHref(aTag);
+            if (string.IsNullOrEmpty(link)) continue;
+
+            var response = _httpClient.GetAsync(link).Result;
+            var finalLink = response.Headers.Location;
+            if (finalLink == null) continue;
+
+            var manPage = _web.Load(finalLink).DocumentNode;
+
+            var groups = manPage.SelectNodes("//*[@id='id_combocds']/tbody/tr[3]/td[2]/select/optgroup");
+            foreach (var group in groups)
+            {
+                if (group == null) continue;
+
+                var name = group.GetAttributeValue("label", string.Empty);
+                if (string.IsNullOrEmpty(name)) continue;
+
+                var cleanName = name.Split(" -").FirstOrDefault(name);
+
+                if (!map.ContainsKey(cleanName)) map.Add(cleanName, new());
+                var groupMap = map[cleanName];
+                if (groupMap == null) throw new UnreachableException();
+
+                var options = group.ChildNodes;
+
+
+                if (options == null) return map;
+
+                foreach (var option in options)
+                {
+                    if (option == null) continue;
+
+                    var value = option.GetAttributeValue("value", "0");
+                    var courseName = option.InnerText.Split(" (").First();
+                    
+                    int intValue;
+                    bool isNumber = int.TryParse(value, out intValue);
+
+                    if (!isNumber) continue;
+                    if (intValue == 0) continue;
+                    
+                    if (!groupMap.ContainsKey(courseName)) groupMap.Add(courseName, new());
+                    var courseDict = groupMap[courseName];
+
+                    var optionLink = new Uri(finalLink.AbsoluteUri).SetQueryVal("k_corso_la", intValue.ToString());
+                    var newPage = _web.Load(optionLink).DocumentNode;
+
+                    var courseLocationTd =
+                        newPage.SelectNodes(
+                            "//td[contains(@class, 'CenterBar')]/table[contains(@class, 'BoxInfoCard')]//tr[4]/td[4]");
+
+                    string[] defaultLocation = { "DEFAULT" };
+                    var courseLocations = (courseLocationTd == null || courseLocationTd.Count == 0)
+                        ? defaultLocation 
+                        : courseLocationTd.First().InnerText.Replace("\t", "").Replace("\n", "").Split(",");
+
+                    foreach (var courseLocation in courseLocations)
+                    {
+                        var cleanCourseLocation = courseLocation.Trim();
+                        var manifestoLink = new Uri(optionLink.AbsoluteUri).RemoveQueryVal("__pj0").RemoveQueryVal("__pj1");
+                        if(!courseDict.ContainsKey(cleanCourseLocation)) courseDict.Add(cleanCourseLocation, manifestoLink.AbsoluteUri);
+                    }
+                }
+            }
+        }
+
+        return map;
     }
 
     private IEnumerable<string> UseHref(string? href)

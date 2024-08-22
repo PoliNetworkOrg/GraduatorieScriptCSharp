@@ -1,5 +1,6 @@
 ﻿#region
 
+using Newtonsoft.Json;
 using PoliNetwork.Graduatorie.Common.Data;
 using PoliNetwork.Graduatorie.Common.Objects.RankingNS;
 
@@ -19,7 +20,7 @@ public static class ScraperOutput
     private static List<RankingUrl> GetSaved(string dataFolder)
     {
         List<RankingUrl> list = new();
-        var filePath = GetFilePath(dataFolder);
+        var filePath = GetLinksFilePath(dataFolder);
         if (!File.Exists(filePath)) return list;
 
         var urls = GetLines(filePath);
@@ -49,17 +50,34 @@ public static class ScraperOutput
         }
     }
 
-    public static void Write(List<RankingUrl> rankingsUrls, string? dataFolder)
+    public static void WriteLinks(List<RankingUrl> rankingsUrls, string? dataFolder)
     {
         if (string.IsNullOrEmpty(dataFolder))
             return;
 
-        var filePath = GetFilePath(dataFolder);
+        var filePath = GetLinksFilePath(dataFolder);
 
         var output = GetOutputLinksString(rankingsUrls);
 
         Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {rankingsUrls.Count} links");
         File.WriteAllText(filePath, output);
+    }
+
+    public static void WriteManifesti(
+        SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>> manifesti, string? dataFolder)
+    {
+        if (string.IsNullOrEmpty(dataFolder))
+            return;
+
+        var filePath = GetManifestiFilePath(dataFolder);
+
+        var jsonString = JsonConvert.SerializeObject(manifesti, Culture.JsonSerializerSettings);
+
+        var count = manifesti.Sum(a => a.Value.Sum(b => b.Value.Count));
+        
+        Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {count} manifesti");
+        File.WriteAllText(filePath, jsonString);
+        
     }
 
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
@@ -84,8 +102,14 @@ public static class ScraperOutput
         return url + "\n";
     }
 
-    private static string GetFilePath(string dataFolder)
+    private static string GetLinksFilePath(string dataFolder)
     {
         return Path.Join(dataFolder, Constants.OutputLinksFilename);
+    }
+
+    private static string GetManifestiFilePath(string dataFolder)
+    {
+        
+        return Path.Join(dataFolder, Constants.OutputFolder, Constants.OutputManifestiFilename);
     }
 }
