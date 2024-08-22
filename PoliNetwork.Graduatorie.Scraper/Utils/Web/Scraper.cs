@@ -76,11 +76,10 @@ public class Scraper
     {
         var map = new SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>>();
 
-        var designUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/design-degli-interni";
-        var ingCivileUrl =
-            "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-per-lambiente-e-il-territorio";
-        var ingUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-informatica";
-        var archUrbUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-edile-architettura";
+        const string designUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/design-degli-interni";
+        const string ingCivileUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-per-lambiente-e-il-territorio";
+        const string ingUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-informatica";
+        const string archUrbUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-edile-architettura";
 
         string[] urls = { designUrl, ingCivileUrl, ingUrl, archUrbUrl };
 
@@ -112,7 +111,7 @@ public class Scraper
 
                 var cleanName = name.Split(" -").FirstOrDefault(name);
 
-                if (!map.ContainsKey(cleanName)) map.Add(cleanName, new());
+                if (!map.ContainsKey(cleanName)) map.Add(cleanName, new SortedDictionary<string, SortedDictionary<string, string>>());
                 var groupMap = map[cleanName];
                 if (groupMap == null) throw new UnreachableException();
 
@@ -127,14 +126,13 @@ public class Scraper
 
                     var value = option.GetAttributeValue("value", "0");
                     var courseName = option.InnerText.Split(" (").First();
-                    
-                    int intValue;
-                    bool isNumber = int.TryParse(value, out intValue);
+
+                    var isNumber = int.TryParse(value, out var intValue);
 
                     if (!isNumber) continue;
                     if (intValue == 0) continue;
                     
-                    if (!groupMap.ContainsKey(courseName)) groupMap.Add(courseName, new());
+                    if (!groupMap.ContainsKey(courseName)) groupMap.Add(courseName, new SortedDictionary<string, string>());
                     var courseDict = groupMap[courseName];
 
                     var optionLink = new Uri(finalLink.AbsoluteUri).SetQueryVal("k_corso_la", intValue.ToString());
@@ -145,7 +143,7 @@ public class Scraper
                             "//td[contains(@class, 'CenterBar')]/table[contains(@class, 'BoxInfoCard')]//tr[4]/td[4]");
 
                     string[] defaultLocation = { "DEFAULT" };
-                    var courseLocations = (courseLocationTd == null || courseLocationTd.Count == 0)
+                    var courseLocations = courseLocationTd == null || courseLocationTd.Count == 0
                         ? defaultLocation 
                         : courseLocationTd.First().InnerText.Replace("\t", "").Replace("\n", "").Split(",");
 
