@@ -40,19 +40,11 @@ public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>, ICompara
         Url = url;
     }
 
-    public bool Equals(RankingSummaryStudent? other)
-    {
-        if (ReferenceEquals(null, other)) return false;
-        if (ReferenceEquals(this, other)) return true;
-        return Course == other.Course && Phase == other.Phase && School == other.School && Equals(Url, other.Url) &&
-               Year == other.Year;
-    }
-
     public int CompareTo(RankingSummaryStudent? other)
     {
         if (ReferenceEquals(this, other)) return 0;
         if (ReferenceEquals(null, other)) return 1;
-        
+
         var i = (Year ?? 0) - (other.Year ?? 0);
         if (i != 0) return i < 0 ? -1 : 1;
 
@@ -70,6 +62,14 @@ public class RankingSummaryStudent : IEquatable<RankingSummaryStudent>, ICompara
 
 
         return i;
+    }
+
+    public bool Equals(RankingSummaryStudent? other)
+    {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
+        return Course == other.Course && Phase == other.Phase && School == other.School && Equals(Url, other.Url) &&
+               Year == other.Year;
     }
 
     public override bool Equals(object? obj)
