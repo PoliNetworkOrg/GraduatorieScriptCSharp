@@ -15,7 +15,14 @@ public class Scraper
     private const string BaseUrl = "https://www.polimi.it";
     private const string AvvisiFuturiStudentiUrl = "https://www.polimi.it/futuri-studenti/avvisi";
 
+    private static readonly HttpClientHandler HttpClientHandler = new()
+    {
+        AllowAutoRedirect = false
+    };
+
     private readonly HashSet<string> _alreadyVisited = new();
+
+    private readonly HttpClient _httpClient = new(HttpClientHandler);
 
     private readonly string[] _newsTesters =
     {
@@ -25,13 +32,6 @@ public class Scraper
     };
 
     private readonly HtmlWeb _web = new();
-
-    private static readonly HttpClientHandler HttpClientHandler = new()
-    {
-        AllowAutoRedirect = false
-    };
-
-    private readonly HttpClient _httpClient = new(HttpClientHandler);
 
     public IEnumerable<string> GetRankingsLinks()
     {
@@ -77,9 +77,11 @@ public class Scraper
         var map = new SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>>();
 
         const string designUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/design-degli-interni";
-        const string ingCivileUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-per-lambiente-e-il-territorio";
+        const string ingCivileUrl =
+            "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-per-lambiente-e-il-territorio";
         const string ingUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-informatica";
-        const string archUrbUrl = "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-edile-architettura";
+        const string archUrbUrl =
+            "https://polimi.it/formazione/corsi-di-laurea/dettaglio-corso/ingegneria-edile-architettura";
 
         string[] urls = { designUrl, ingCivileUrl, ingUrl, archUrbUrl };
 
@@ -111,7 +113,8 @@ public class Scraper
 
                 var cleanName = name.Split(" -").FirstOrDefault(name);
 
-                if (!map.ContainsKey(cleanName)) map.Add(cleanName, new SortedDictionary<string, SortedDictionary<string, string>>());
+                if (!map.ContainsKey(cleanName))
+                    map.Add(cleanName, new SortedDictionary<string, SortedDictionary<string, string>>());
                 var groupMap = map[cleanName];
                 if (groupMap == null) throw new UnreachableException();
 
@@ -131,8 +134,9 @@ public class Scraper
 
                     if (!isNumber) continue;
                     if (intValue == 0) continue;
-                    
-                    if (!groupMap.ContainsKey(courseName)) groupMap.Add(courseName, new SortedDictionary<string, string>());
+
+                    if (!groupMap.ContainsKey(courseName))
+                        groupMap.Add(courseName, new SortedDictionary<string, string>());
                     var courseDict = groupMap[courseName];
 
                     var optionLink = new Uri(finalLink.AbsoluteUri).SetQueryVal("k_corso_la", intValue.ToString());
@@ -144,14 +148,16 @@ public class Scraper
 
                     string[] defaultLocation = { "DEFAULT" };
                     var courseLocations = courseLocationTd == null || courseLocationTd.Count == 0
-                        ? defaultLocation 
+                        ? defaultLocation
                         : courseLocationTd.First().InnerText.Replace("\t", "").Replace("\n", "").Split(",");
 
                     foreach (var courseLocation in courseLocations)
                     {
                         var cleanCourseLocation = courseLocation.Trim();
-                        var manifestoLink = new Uri(optionLink.AbsoluteUri).RemoveQueryVal("__pj0").RemoveQueryVal("__pj1");
-                        if(!courseDict.ContainsKey(cleanCourseLocation)) courseDict.Add(cleanCourseLocation, manifestoLink.AbsoluteUri);
+                        var manifestoLink = new Uri(optionLink.AbsoluteUri).RemoveQueryVal("__pj0")
+                            .RemoveQueryVal("__pj1");
+                        if (!courseDict.ContainsKey(cleanCourseLocation))
+                            courseDict.Add(cleanCourseLocation, manifestoLink.AbsoluteUri);
                     }
                 }
             }

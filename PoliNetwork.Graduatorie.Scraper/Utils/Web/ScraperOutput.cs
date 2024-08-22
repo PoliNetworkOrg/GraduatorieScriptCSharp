@@ -64,7 +64,8 @@ public static class ScraperOutput
     }
 
     public static void WriteManifesti(
-        SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>> manifesti, string? dataFolder)
+        SortedDictionary<string, SortedDictionary<string, SortedDictionary<string, string>>> manifesti,
+        string? dataFolder)
     {
         if (string.IsNullOrEmpty(dataFolder))
             return;
@@ -74,10 +75,9 @@ public static class ScraperOutput
         var jsonString = JsonConvert.SerializeObject(manifesti, Culture.JsonSerializerSettings);
 
         var count = manifesti.Sum(a => a.Value.Sum(b => b.Value.Count));
-        
+
         Console.WriteLine($"[INFO] ScraperOutput writing to file {filePath}: {count} manifesti");
         File.WriteAllText(filePath, jsonString);
-        
     }
 
     private static string GetOutputLinksString(IEnumerable<RankingUrl> rankingsUrls)
@@ -109,7 +109,6 @@ public static class ScraperOutput
 
     private static string GetManifestiFilePath(string dataFolder)
     {
-        
         return Path.Join(dataFolder, Constants.OutputFolder, Constants.OutputManifestiFilename);
     }
 }
