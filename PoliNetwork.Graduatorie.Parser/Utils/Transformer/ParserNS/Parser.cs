@@ -238,7 +238,7 @@ public class Parser
             RankingOrder = rankingOrder,
             RankingSummary = new RankingSummary(),
             ByMerit = new MeritTable(),
-            ByCourse = new List<CourseTable>(),
+            ByCourse = new List<CourseTable>()
         };
     }
 

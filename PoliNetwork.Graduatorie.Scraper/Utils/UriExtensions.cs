@@ -1,21 +1,20 @@
-namespace PoliNetwork.Graduatorie.Scraper.Utils;
+using System.Web;
 
-using System;
-using System.Collections.Specialized;
-using System.Web; // For this you need to reference System.Web assembly from the GAC
+namespace PoliNetwork.Graduatorie.Scraper.Utils;
+// For this you need to reference System.Web assembly from the GAC
 
 public static class UriExtensions
 {
     public static Uri SetQueryVal(this Uri uri, string name, object value)
     {
-        NameValueCollection nvc = HttpUtility.ParseQueryString(uri.Query);
+        var nvc = HttpUtility.ParseQueryString(uri.Query);
         nvc[name] = value.ToString();
-        return new UriBuilder(uri) {Query = nvc.ToString()}.Uri;
+        return new UriBuilder(uri) { Query = nvc.ToString() }.Uri;
     }
-    
+
     public static Uri RemoveQueryVal(this Uri uri, string name)
     {
-        NameValueCollection nvc = HttpUtility.ParseQueryString(uri.Query);
+        var nvc = HttpUtility.ParseQueryString(uri.Query);
         nvc.Remove(name);
         return new UriBuilder(uri) { Query = nvc.ToString() }.Uri;
     }
