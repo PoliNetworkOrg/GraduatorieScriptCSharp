@@ -19,15 +19,15 @@ namespace PoliNetwork.Graduatorie.Parser.Objects.RankingNS;
 [JsonObject(MemberSerialization.Fields, NamingStrategyType = typeof(CamelCaseNamingStrategy))]
 public class Ranking : IComparable<Ranking>, IEquatable<Ranking>
 {
-    public required List<CourseTable> ByCourse;
-    public required MeritTable ByMerit;
-    public required string Extra;
     public required DateTime LastUpdate;
+    public required SchoolEnum School;
+    public required int Year;
+    public required RankingUrl Url;
+    public required string Extra;
     public required RankingOrder RankingOrder;
     public required RankingSummary RankingSummary;
-    public required SchoolEnum School;
-    public required RankingUrl Url;
-    public required int Year;
+    public required MeritTable ByMerit;
+    public required List<CourseTable> ByCourse;
 
     public int CompareTo(Ranking? other)
     {
